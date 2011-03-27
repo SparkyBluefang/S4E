@@ -1,0 +1,57 @@
+<!ENTITY status4evar.window.title "Preferências do Status-4-Evar">
+<!ENTITY status4evar.pane.status "Status">
+<!ENTITY status4evar.pane.progress "Progresso">
+<!ENTITY status4evar.pane.download "Download">
+<!ENTITY status4evar.pane.addonbar "Barra do Add-on">
+<!ENTITY status4evar.tab.general "Geral">
+<!ENTITY status4evar.tab.toolbar "Barra de Ferramentas">
+<!ENTITY status4evar.tab.urlbar "Barra de Endereços">
+<!ENTITY status4evar.tab.popup "Popup">
+<!ENTITY status4evar.tab.tabs "Abas">
+<!ENTITY status4evar.option.none "Nenhum">
+<!ENTITY status4evar.option.toolbar "Barra de Ferramentas">
+<!ENTITY status4evar.option.urlbar "Barra de Endereços">
+<!ENTITY status4evar.option.popup "Popup">
+<!ENTITY status4evar.option.tooltip "Dica de Ferramenta">
+<!ENTITY status4evar.option.bottom "Rodapé">
+<!ENTITY status4evar.option.top "Topo">
+<!ENTITY status4evar.option.fill "Preencher">
+<!ENTITY status4evar.option.dlcount "Contagem de Downloads">
+<!ENTITY status4evar.option.dltime "Tempo restante">
+<!ENTITY status4evar.option.both "Ambos">
+<!ENTITY status4evar.option.right "Direita">
+<!ENTITY status4evar.option.left "Esquerda">
+<!ENTITY status4evar.option.fixed "Fixo">
+<!ENTITY status4evar.option.simple "Simples">
+<!ENTITY status4evar.option.advanced "Avançado">
+<!ENTITY status4evar.option.browse "Caminho">
+<!ENTITY status4evar.option.clear "Limpar">
+<!ENTITY status4evar.unit.seconds "segundos">
+<!ENTITY status4evar.unit.px "px">
+<!ENTITY status4evar.status.general.status.caption "Texto de Status">
+<!ENTITY status4evar.status.label "Mostrar status em:">
+<!ENTITY status4evar.status.timeout.label "Ocultar o status depois de">
+<!ENTITY status4evar.status.default.label "Mostrar status padrão">
+<!ENTITY status4evar.status.network.label "Mostrar status da rede">
+<!ENTITY status4evar.status.network.xhr.label "Mostrar status da rede de background">
+<!ENTITY toolkit.dom.status.change.label "Permitir a mudança do status por páginas da web">
+<!ENTITY status4evar.status.general.linkOver.caption "Links">
+<!ENTITY status4evar.status.linkOver.label "Mostrar links em:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Comprimento máximo do texto de status:">
+<!ENTITY status4evar.status.urlbar.align.label "Alinhamento do status:">
+<!ENTITY status4evar.status.urlbar.color.label "Cor do texto:">
+<!ENTITY status4evar.status.currentUrl "URL atual">
+<!ENTITY status4evar.status.statusText "Texto de Status">
+<!ENTITY status4evar.progress.style.label "Posição:">
+<!ENTITY status4evar.progress.style.editor.label "Editor:">
+<!ENTITY status4evar.progress.style.editor.color.label "Cor:">
+<!ENTITY status4evar.progress.style.editor.image.label "Imagem:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Mostrar progreso na barra de endereços">
+<!ENTITY status4evar.progress.urlbar.line.label "Estilo da linha:">
+<!ENTITY status4evar.progress.toolbar.force.label "Sempre mostrar o item da barra de ferramentas">
+<!ENTITY status4evar.download.force.label "Sempre mostrar o botão de Status do Download">
+<!ENTITY status4evar.download.label.force.label "Sempre mostrar texto">
+<!ENTITY status4evar.download.label.label "Texto do botão de status do download:">
+<!ENTITY status4evar.download.tooltip.label "Texto da dica de ferramenta do botão de status do download:">
+<!ENTITY status4evar.addonbar.windowGripper "Mostrar o gripper de redimensionamento da janela">
+<!ENTITY status4evar.addonbar.closeButton "Mostrar o botão Fechar">

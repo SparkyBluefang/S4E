@@ -1,0 +1,57 @@
+<!ENTITY status4evar.window.title "Status-4-Evar Beállítások">
+<!ENTITY status4evar.pane.status "Állapot">
+<!ENTITY status4evar.pane.progress "Betöltés">
+<!ENTITY status4evar.pane.download "Letöltés">
+<!ENTITY status4evar.pane.addonbar "Kiegészítősáv">
+<!ENTITY status4evar.tab.general "Általános">
+<!ENTITY status4evar.tab.toolbar "Eszköztár">
+<!ENTITY status4evar.tab.urlbar "Címsor">
+<!ENTITY status4evar.tab.popup "Felbukkanóban">
+<!ENTITY status4evar.tab.tabs "Füleken">
+<!ENTITY status4evar.option.none "Sehol">
+<!ENTITY status4evar.option.toolbar "Eszköztáron">
+<!ENTITY status4evar.option.urlbar "Címsorban">
+<!ENTITY status4evar.option.popup "Felbukkanóban">
+<!ENTITY status4evar.option.tooltip "Buboréksúgóban">
+<!ENTITY status4evar.option.bottom "Alul">
+<!ENTITY status4evar.option.top "Felül">
+<!ENTITY status4evar.option.fill "Kitöltés">
+<!ENTITY status4evar.option.dlcount "Letöltések száma">
+<!ENTITY status4evar.option.dltime "Hátralévő idő">
+<!ENTITY status4evar.option.both "Mindkettő">
+<!ENTITY status4evar.option.right "Jobboldalra">
+<!ENTITY status4evar.option.left "Baloldalra">
+<!ENTITY status4evar.option.fixed "Rögzítve">
+<!ENTITY status4evar.option.simple "Egyszerű">
+<!ENTITY status4evar.option.advanced "Haladó">
+<!ENTITY status4evar.option.browse "Tallózás">
+<!ENTITY status4evar.option.clear "Ürítés">
+<!ENTITY status4evar.unit.seconds "másodperc múlva">
+<!ENTITY status4evar.unit.px "px">
+<!ENTITY status4evar.status.general.status.caption "Állapot szöveg">
+<!ENTITY status4evar.status.label "Állapot szöveg mutatása:">
+<!ENTITY status4evar.status.timeout.label "Állapot elrejtése">
+<!ENTITY status4evar.status.default.label "Alapértelmezett állapot mutatása">
+<!ENTITY status4evar.status.network.label "Hálózati állapot mutatása">
+<!ENTITY status4evar.status.network.xhr.label "Bővített hálózati állapot mutatása">
+<!ENTITY toolkit.dom.status.change.label "Weboldalak megváltoztathatják az állapotszöveget">
+<!ENTITY status4evar.status.general.linkOver.caption "Hivatkozások">
+<!ENTITY status4evar.status.linkOver.label "Hivatkozások mutatása:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Maximális állapothossz:">
+<!ENTITY status4evar.status.urlbar.align.label "Állapot igazítása:">
+<!ENTITY status4evar.status.urlbar.color.label "Betűszín:">
+<!ENTITY status4evar.status.currentUrl "Jelenlegi URL">
+<!ENTITY status4evar.status.statusText "Állapot szöveg">
+<!ENTITY status4evar.progress.style.label "Egyéni stílus használata a betöltési csíkon">
+<!ENTITY status4evar.progress.style.editor.label "Szerkesztő:">
+<!ENTITY status4evar.progress.style.editor.color.label "Szín:">
+<!ENTITY status4evar.progress.style.editor.image.label "Kép:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Betöltési állapot mutatása a címsorban">
+<!ENTITY status4evar.progress.urlbar.line.label "Vonal stílusa:">
+<!ENTITY status4evar.progress.toolbar.force.label "Mindig mutassa az eszköztár elemet">
+<!ENTITY status4evar.download.force.label "Mindig mutassa a Letöltési állapot gombot">
+<!ENTITY status4evar.download.label.force.label "Mindig mutassa a címkét">
+<!ENTITY status4evar.download.label.label "Letöltési állapot gomb címkéje:">
+<!ENTITY status4evar.download.tooltip.label "Letöltési állapot gomb buboréksúgója:">
+<!ENTITY status4evar.addonbar.windowGripper "Ablak átméretező mutatása">
+<!ENTITY status4evar.addonbar.closeButton "Bezárás gomb mutatása">

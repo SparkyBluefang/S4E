@@ -1,0 +1,5 @@
+<!ENTITY status4evar.status.widget.title "Tekst statusbalk">
+<!ENTITY status4evar.progress.widget.title "Voortgangsbalk">
+<!ENTITY status4evar.download.widget.title "Downloadstatus">
+<!ENTITY status4evar.options.widget.title "Voorkeuren van Status-4-Evar">
+<!ENTITY status4evar.options.widget.label "Status-4-Evar">

@@ -1,0 +1,57 @@
+<!ENTITY status4evar.window.title "Inställningar för Status-4-Evar">
+<!ENTITY status4evar.pane.status "Status">
+<!ENTITY status4evar.pane.progress "Förlopp">
+<!ENTITY status4evar.pane.download "Filhämtning">
+<!ENTITY status4evar.pane.addonbar "Tilläggsfältet">
+<!ENTITY status4evar.tab.general "Allmänt">
+<!ENTITY status4evar.tab.toolbar "Verktygsfält">
+<!ENTITY status4evar.tab.urlbar "Adressfältet">
+<!ENTITY status4evar.tab.popup "Popup">
+<!ENTITY status4evar.tab.tabs "Flikar">
+<!ENTITY status4evar.option.none "Ingen">
+<!ENTITY status4evar.option.toolbar "Verktygsfält">
+<!ENTITY status4evar.option.urlbar "Adressfältet">
+<!ENTITY status4evar.option.popup "Popup">
+<!ENTITY status4evar.option.tooltip "Verktygstips">
+<!ENTITY status4evar.option.bottom "Nederst">
+<!ENTITY status4evar.option.top "Överst">
+<!ENTITY status4evar.option.fill "Fyllning">
+<!ENTITY status4evar.option.dlcount "Antal nerladdningar">
+<!ENTITY status4evar.option.dltime "Återstående tid">
+<!ENTITY status4evar.option.both "Båda">
+<!ENTITY status4evar.option.right "Höger">
+<!ENTITY status4evar.option.left "Vänster">
+<!ENTITY status4evar.option.fixed "Fast">
+<!ENTITY status4evar.option.simple "Enkel">
+<!ENTITY status4evar.option.advanced "Avancerad">
+<!ENTITY status4evar.option.browse "Bläddra">
+<!ENTITY status4evar.option.clear "Rensa">
+<!ENTITY status4evar.unit.seconds "sekunder">
+<!ENTITY status4evar.unit.px "px">
+<!ENTITY status4evar.status.general.status.caption "Statustext">
+<!ENTITY status4evar.status.label "Visa status i:">
+<!ENTITY status4evar.status.timeout.label "Dölj statusen efter">
+<!ENTITY status4evar.status.default.label "Visa standardstatus">
+<!ENTITY status4evar.status.network.label "Visa nätverksstatus">
+<!ENTITY status4evar.status.network.xhr.label "Visa bakgrundsnätverksstatus">
+<!ENTITY toolkit.dom.status.change.label "Tillåt webbsidor att ändra status">
+<!ENTITY status4evar.status.general.linkOver.caption "Länkar">
+<!ENTITY status4evar.status.linkOver.label "Visa länkar i:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Maxlängd för statustext:">
+<!ENTITY status4evar.status.urlbar.align.label "Justering av statustext:">
+<!ENTITY status4evar.status.urlbar.color.label "Textfärg:">
+<!ENTITY status4evar.status.currentUrl "Aktuell URL">
+<!ENTITY status4evar.status.statusText "Statustext">
+<!ENTITY status4evar.progress.style.label "Placering:">
+<!ENTITY status4evar.progress.style.editor.label "Redigerare:">
+<!ENTITY status4evar.progress.style.editor.color.label "Färg:">
+<!ENTITY status4evar.progress.style.editor.image.label "Bild:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Visa förlopp i adressfältet">
+<!ENTITY status4evar.progress.urlbar.line.label "Linjeformat:">
+<!ENTITY status4evar.progress.toolbar.force.label "Visa alltid verktygsfältsobjektet">
+<!ENTITY status4evar.download.force.label "Visa alltid nerladdningsstatusknappen">
+<!ENTITY status4evar.download.label.force.label "Visa alltid etiketten">
+<!ENTITY status4evar.download.label.label "Nerladdningsstatus-knappens etikett: ">
+<!ENTITY status4evar.download.tooltip.label "Nerladdningsstatus-knappens verktygstips: ">
+<!ENTITY status4evar.addonbar.windowGripper "Visa handtaget för fönsterstorleksändring">
+<!ENTITY status4evar.addonbar.closeButton "Visa stängknappen">

@@ -1,0 +1,57 @@
+<!ENTITY status4evar.window.title "Status-4-Evar – ustawienia">
+<!ENTITY status4evar.pane.status "Status">
+<!ENTITY status4evar.pane.progress "Postęp">
+<!ENTITY status4evar.pane.download "Pobieranie">
+<!ENTITY status4evar.pane.addonbar "Pasek dodatków">
+<!ENTITY status4evar.tab.general "Ogólne">
+<!ENTITY status4evar.tab.toolbar "Pasek dodatków">
+<!ENTITY status4evar.tab.urlbar "Pasek adresu">
+<!ENTITY status4evar.tab.popup "Powiadomienie">
+<!ENTITY status4evar.tab.tabs "Karty">
+<!ENTITY status4evar.option.none "– nie wyświetlaj –">
+<!ENTITY status4evar.option.toolbar "pasku dodatków">
+<!ENTITY status4evar.option.urlbar "pasku adresu">
+<!ENTITY status4evar.option.popup "powiadomieniu">
+<!ENTITY status4evar.option.tooltip "Podpowiedź">
+<!ENTITY status4evar.option.bottom "linia na dole">
+<!ENTITY status4evar.option.top "linia na górze">
+<!ENTITY status4evar.option.fill "wypełnienie paska">
+<!ENTITY status4evar.option.dlcount "liczbę pobrań">
+<!ENTITY status4evar.option.dltime "pozostały czas">
+<!ENTITY status4evar.option.both "oba statusy">
+<!ENTITY status4evar.option.right "do prawej strony">
+<!ENTITY status4evar.option.left "do lewej strony">
+<!ENTITY status4evar.option.fixed "stałe">
+<!ENTITY status4evar.option.simple "Prosty">
+<!ENTITY status4evar.option.advanced "Zaawansowany">
+<!ENTITY status4evar.option.browse "Przeglądaj">
+<!ENTITY status4evar.option.clear "Wyczyść">
+<!ENTITY status4evar.unit.seconds "s">
+<!ENTITY status4evar.unit.px "px">
+<!ENTITY status4evar.status.general.status.caption "Status">
+<!ENTITY status4evar.status.label "Wyświetlaj status w">
+<!ENTITY status4evar.status.timeout.label "Ukryj status po upływie">
+<!ENTITY status4evar.status.default.label "Wyświetlaj domyślny status">
+<!ENTITY status4evar.status.network.label "Wyświetlaj status sieci">
+<!ENTITY status4evar.status.network.xhr.label "Wyświetlaj żądania wykonywane w tle">
+<!ENTITY toolkit.dom.status.change.label "Zezwalaj witrynom na zmianę statusu">
+<!ENTITY status4evar.status.general.linkOver.caption "Adresy odnośników">
+<!ENTITY status4evar.status.linkOver.label "Wyświetlaj adresy odnośników w">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Maksymalna długość tekstu statusu">
+<!ENTITY status4evar.status.urlbar.align.label "Wyrównanie statusu:">
+<!ENTITY status4evar.status.urlbar.color.label "Kolor tekstu:">
+<!ENTITY status4evar.status.currentUrl "Bieżący URL">
+<!ENTITY status4evar.status.statusText "Tekst statusu">
+<!ENTITY status4evar.progress.style.label "Stosuj własny styl wskaźnika postępu">
+<!ENTITY status4evar.progress.style.editor.label "Edytor:">
+<!ENTITY status4evar.progress.style.editor.color.label "Kolor:">
+<!ENTITY status4evar.progress.style.editor.image.label "Obrazek:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Wyświetlaj wskaźnik postępu w pasku adresu">
+<!ENTITY status4evar.progress.urlbar.line.label "Styl wskaźnika:">
+<!ENTITY status4evar.progress.toolbar.force.label "Zawsze wyświetlaj wskaźnik postępu">
+<!ENTITY status4evar.download.force.label "Wyświetlaj przycisk pobierania">
+<!ENTITY status4evar.download.label.force.label "Wyświetlaj opis statusu pobierania">
+<!ENTITY status4evar.download.label.label "W opisie statusu pobierania wyświetlaj">
+<!ENTITY status4evar.download.tooltip.label "W podpowiedzi przycisku pobierania wyświetlaj">
+<!ENTITY status4evar.addonbar.windowGripper "Wyświetlaj uchwyt zmiany rozmiaru okna">
+<!ENTITY status4evar.addonbar.closeButton "Wyświetlaj przycisk zamykania">

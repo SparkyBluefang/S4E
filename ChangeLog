@@ -1,0 +1,188 @@
+Version next
+
+Version 2011.03.21.22
+* Make S4E more robust when dealing with incompatible extensions and missing UI elements.
+* Properly handle location bar deconstruction when it is removed from the UI.
+* Updated translations for: ro
+* Update copyright dates.
+
+Version 2011.03.16.22
+Summary of changes:
+* Rewrote preferences backed and UI
+* Implemented link/status in the location bar, with controls to change its appearance
+* Added support for the chrome-style status popup
+* Advanced controls for changing the styles of the progress bars
+* Updated translations for: da, fr, hu, it-IT, ja-JP, nl, pl, pt-BR, sv-SE, zh-CN, zh-TW (de still needs updates)
+* Added translations for: ro
+
+Version 2011.01.17.02.4
+* Added locales fr, pl, pt-BR and updated various others
+
+Version 2011.03.10.18b
+* Fix some compatibility issues with 3rd party themes.
+* Keep urlbar suggestion dropdown arrow visible.
+* Add option to hide background/async/XHR network status.
+* Implement a simple style editor for selecting progress colors and images.
+* Fix toolbar progress settings.
+* Add annotations to the status elements. #status4evar-status-text, #statusbar-display, and .urlbar-over-link-box will have a "type" attribute set to one of the following: link, network, network_xhr, status_chrome, status_content, status_content_default, or status_chrome_default.
+
+Version 2011.03.06.15b
+* Don't use min-width on location bar link/status text.
+* Better integration with the content pop-up.
+* Simplify link/status handling in pup-up.
+* Fix default status disappearing when switching tabs.
+* Add setting to control urlbar status color.
+* Don't clear the urlbar status when loading a new page (on urlbar location change).
+* Add settings for controlling the position of the urlbar status. When the status alignment is set to "Right", the slider controls the max length of the status text. When the alignment is set to "Fixed", the slider controls the fixed start position.
+
+Version 2011.02.20.23b
+* Remove the ordinal from the status-bar (allow it to be arbitrarily positioned again).
+* Restore the ability to show the default status text.
+* Simplify the location bar overlay.
+* Fix borders/padding/margins on the location bar.
+* Tweak progress bar border styles.
+* Allow the Mac OS X toolbar progress item to have custom styles. Rough implementation.
+
+Version 2011.02.07.01b
+* Rewrite preference service and preference dialog. Rename a number of preferences.
+* Allow location bar and toolbar progress meters to be independently styled.
+* Add support for the status overlay popup
+* Implement link-over/status text in the location bar.
+
+* The advanced progress meter style editor isn't ready yet. Instead, there is a text box where you can manually edit the CSS background property. See <a href="http://www.w3.org/TR/CSS2/colors.html#background">the W3C CSS background property</a> for details.
+* The location bar styling still need a little work. The borders/margins might be a little off.
+
+Version 2011.01.17.02.3
+* The location bar link-over/status text implementation was removed in a recent Firefox nightly. S4E should gracefully handle this until it provides its own implementation.
+
+Version 2011.01.17.02.2
+* Use a period instead of a hyphen in the version number. AMO doesn't like it.
+* Properly persist the S4E toolbar items after adding them on first run after installing. They should now stay there after restarting.
+* Consolidate and simplify toolbar styling
+* Add locale zh-CN and update nl 
+
+Version 2011.01.17.02-1
+* Don't change the bottom borders on Mac.
+* Bottom border shouldn't be visible when all toolbars are hidden.
+* Hide the old statusbar resize gripper on platforms that still have it.
+* status4evar.firstRun really should default to true.
+* Disable native progress styles on the URL bar. Right now, they only look good on Linux.
+* Added locales da, de, hu, it-IT, ja-JP, nl, sv-SE, zh-TW
+
+Version 2011.01.17.02
+* Fix window gripper resize action; dir needs to be set to bottomend.
+* First pass at fixing the top border of the addon bar.
+* Remove line at the bottom of the addon-bar.
+
+Version 2011.01.17.00
+* Add a compatibility shim for extensions that directly modified the old status bar text. This will be removed when the statusbar element is removed.
+* Resize gripper should not be visible in fullscreen mode.
+
+Version 2011.01.16.03
+* Rename "Also apply style to the toolbar item" to "Override native progress styles", and make it also affect the urlbar progress line. By default, use the native style.
+* Preference status4evar.firstRun should default to false, not true.
+* Add an option to make the Download Status button always visible
+* [Mac] Really fix Add-on Bar preference tab.
+* [Mac] Hide the S4E window resize gripper. There's already one.
+* [Mac] Move the gripper overlap prevention padding from the status-bar to the addon-bar. Silly Mozilla.
+
+Version 2010.12.26.22
+* Add the status, progress and download items to the Add-on Bar default set to handle when the toolbars get reset
+* Don't allow the status text or progress items to be hidden in popup windows (assuming they're on a toolbar that's still visible)
+* Add a empty image to the Add-on Bar tab of the preferences window, so the title is aligned correctly
+* On first install, after adding the items to the Add-on Bar, make it visible
+* Work around some preference window bugs by specifying a minimum height for each tab panel
+
+Version 2010.12.19.22
+* Add an optional window re-size gripper to the Add-on Bar
+* Add an option to hide the Add-on Bar close button
+* Add the status, progress and download items to the Add-on Bar on first run/install
+
+Version 2010.11.20.19
+* Fix typo in preference migration
+
+Version 2010.11.20.16
+* Add options to control the contents of the download status button label and tooltip
+* Fix status text resize gripper styling on Windows (and probably Mac)
+* Tweak margins of toolbar items to better fit the default platform themes
+* Show status text widget name in the widget when customizing the toolbar
+
+Version 2010.11.17.21
+* Add setting to hide default status text (i.e. "Done")
+* Make "Clear the status after X seconds" also clear the status widget
+* Use a proper XPCOM interface, rather than wrappedJSObject
+* Rename and migrate a few preferences, in preparation for tab progress changes
+* When the status text widget is placed next to another flexible item (url bar, search bar, tab bar, etc.), allow them to be resized using a gripper
+* Improve download status button appearance and labels - show download count as label and time remaining as tooltip
+* Update download status tooltip even when it's visible
+
+Version 2010.10.20.02
+* Fix location bar progress bar margins on Windows (7) and probably Mac
+
+Version 2010.10.19.22
+* Do not hard code 'fill' progress bar height
+* Remove identity box styling. Now available as http://userstyles.org/styles/38308
+* Refactor preference management service
+* Refactor preference dialog
+* Add option to include progress line styling on the Progress Meter toolbar item
+* Add toolbar button to open preference dialog
+* Disable tab progress setting, as it doesn't do any thing at the moment
+* Properly update progress bars when switching tabs
+
+Version 2010.10.12.19
+* Adjust the style of the location bar identity box (remove the margin)
+* Add option to control the location bar progress bar style (bottom line, top line, fill)
+* Do not show the default status text (i.e. Done) when showing status in the location bar.
+
+Version 2010.10.12.12
+* Fixed extra progress bar appearing
+* Remove unneeded handling of the legacy statusbar element. If you want it on the far right, drag a flexible spacer in front of it. 
+
+Version 2010.10.11.23
+* Add option to keep progress bar item always visible
+* Add items to the Addon-Bar after install (see Bug 599029 (https://bugzilla.mozilla.org/show_bug.cgi?id=599029) about resetting toolbars)
+* Implement our own progress listener (preempt Bug 602964 (https://bugzilla.mozilla.org/show_bug.cgi?id=602964))
+* Use our own location bar progress line (preempt Bug 602964 (https://bugzilla.mozilla.org/show_bug.cgi?id=602964))
+* Add option to control the color of the location bar progress line
+
+Version 2010.10.08.16
+* Fix typo in 'status in location bar' preference handling 
+* Keep the "legacy" status icons over on the far right of the Addon-Bar - TAKE 3 (see bug 602971 (https://bugzilla.mozilla.org/show_bug.cgi?id=602971) for potential caveat).
+
+Version 2010.10.07.16
+* Keep the "legacy" status icons over on the far right of the Addon-Bar - TAKE 2 PART 2 (handle some corner cases)
+* Add an option to show status messages in the location bar (like how hovered links are shown)
+
+Version 2010.10.05.23
+* Keep the "legacy" status icons over on the far right of the Addon-Bar - TAKE 2 
+
+Version 2010.10.03.23
+* Keep the "legacy" status icons over on the far right of the Addon-Bar
+* Fix handling of "Status Text" max-width when first added to the toolbar
+* Simplify code that handles when toolbar items are added to a toolbar. Should help prevent issues in the future.
+* Improve widget styling when customizing toolbars. 
+
+Version 2010.10.03.05
+* Fixed handling "Download Status" item during the session it added to a toolbar.
+
+Version 2010.10.03.03
+* Add an option to limit the length of the Status Text widget (in pixels)
+* Add Download Status widget
+* Make Add-on Bar behave more like a normal toolbar (align widgets left, center & stretch widgets, no margin on status-bar placeholder) 
+
+Version 2010.09.29.00
+* Added progress bar widget
+* Added option to control the progress bar on the location bar
+* Added option to control the progress bars on tabs
+* Improved visual style of widgets while customizing the toolbar
+* Fixed adding widgets to the toolbar. You no longer need to restart Firefox after adding one of the widgets to a toolbar
+* [b]The "Status Text" widget changed slightly. You will need to re-add it to your toolbar[/b]
+
+Version 2010.09.28.05
+* Added option to show hovered links in the status bar, location bar, both, or neither
+* Added option to hide network status messages
+* Added option to control if web pages are allowed to change the status text
+
+Version 2010.09.28.02
+Initial release
+

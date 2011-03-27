@@ -1,0 +1,57 @@
+<!ENTITY status4evar.window.title "Status-4-Evar - Einstellungen">
+<!ENTITY status4evar.pane.status "Status">
+<!ENTITY status4evar.pane.progress "Progress">
+<!ENTITY status4evar.pane.download "Download">
+<!ENTITY status4evar.pane.addonbar "Add-on Bar">
+<!ENTITY status4evar.tab.general "General">
+<!ENTITY status4evar.tab.toolbar "Toolbar">
+<!ENTITY status4evar.tab.urlbar "URL bar">
+<!ENTITY status4evar.tab.popup "Popup">
+<!ENTITY status4evar.tab.tabs "Tabs">
+<!ENTITY status4evar.option.none "None">
+<!ENTITY status4evar.option.toolbar "Toolbar">
+<!ENTITY status4evar.option.urlbar "URL bar">
+<!ENTITY status4evar.option.popup "Popup">
+<!ENTITY status4evar.option.tooltip "Tooltip">
+<!ENTITY status4evar.option.bottom "Bottom">
+<!ENTITY status4evar.option.top "Top">
+<!ENTITY status4evar.option.fill "Fill">
+<!ENTITY status4evar.option.dlcount "Download count">
+<!ENTITY status4evar.option.dltime "Time remaining">
+<!ENTITY status4evar.option.both "Both">
+<!ENTITY status4evar.option.right "Right">
+<!ENTITY status4evar.option.left "Left">
+<!ENTITY status4evar.option.fixed "Fixed">
+<!ENTITY status4evar.option.simple "Simple">
+<!ENTITY status4evar.option.advanced "Advanced">
+<!ENTITY status4evar.option.browse "Browse">
+<!ENTITY status4evar.option.clear "Clear">
+<!ENTITY status4evar.unit.seconds "seconds">
+<!ENTITY status4evar.unit.px "px">
+<!ENTITY status4evar.status.general.status.caption "Status Text">
+<!ENTITY status4evar.status.label "Show status in:">
+<!ENTITY status4evar.status.timeout.label "Hide the status after">
+<!ENTITY status4evar.status.default.label "Show default status">
+<!ENTITY status4evar.status.network.label "Show network status">
+<!ENTITY status4evar.status.network.xhr.label "Show background network status">
+<!ENTITY toolkit.dom.status.change.label "Allow web pages to change the status">
+<!ENTITY status4evar.status.general.linkOver.caption "Links">
+<!ENTITY status4evar.status.linkOver.label "Show links in:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Max status text length:">
+<!ENTITY status4evar.status.urlbar.align.label "Status alignment:">
+<!ENTITY status4evar.status.urlbar.color.label "Text color:">
+<!ENTITY status4evar.status.currentUrl "Current URL">
+<!ENTITY status4evar.status.statusText "Status Text">
+<!ENTITY status4evar.progress.style.label "Anzeige in der Adressleiste:">
+<!ENTITY status4evar.progress.style.editor.label "Editor:">
+<!ENTITY status4evar.progress.style.editor.color.label "Color:">
+<!ENTITY status4evar.progress.style.editor.image.label "Image:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Show progress in the location bar">
+<!ENTITY status4evar.progress.urlbar.line.label "Line style:">
+<!ENTITY status4evar.progress.toolbar.force.label "Always show the toolbar item">
+<!ENTITY status4evar.download.force.label "Download-Status-Schaltfläche immer anzeigen">
+<!ENTITY status4evar.download.label.force.label "Beschriftung immer anzeigen">
+<!ENTITY status4evar.download.label.label "Beschriftung für Download-Status:">
+<!ENTITY status4evar.download.tooltip.label "Tooltip-Text für Download-Status:">
+<!ENTITY status4evar.addonbar.windowGripper "Anfasser zur Fenstergrößenänderung anzeigen">
+<!ENTITY status4evar.addonbar.closeButton "Schließen-Schaltfläche anzeigen">

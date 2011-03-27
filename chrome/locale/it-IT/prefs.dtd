@@ -1,0 +1,57 @@
+<!ENTITY status4evar.window.title "Preferenze di Status-4-Evar">
+<!ENTITY status4evar.pane.status "Stato">
+<!ENTITY status4evar.pane.progress "Avanzamento">
+<!ENTITY status4evar.pane.download "Download">
+<!ENTITY status4evar.pane.addonbar "Barra dei componenti aggiuntivi">
+<!ENTITY status4evar.tab.general "Generale">
+<!ENTITY status4evar.tab.toolbar "Barra degli strumenti">
+<!ENTITY status4evar.tab.urlbar "Barra degli indirizzi">
+<!ENTITY status4evar.tab.popup "Pop-up">
+<!ENTITY status4evar.tab.tabs "Schede">
+<!ENTITY status4evar.option.none "Nessuno">
+<!ENTITY status4evar.option.toolbar "Barra degli strumenti">
+<!ENTITY status4evar.option.urlbar "Barra degli indirizzi">
+<!ENTITY status4evar.option.popup "Pop-up">
+<!ENTITY status4evar.option.tooltip "Riquadro informativo">
+<!ENTITY status4evar.option.bottom "Sotto">
+<!ENTITY status4evar.option.top "Sopra">
+<!ENTITY status4evar.option.fill "Riempi">
+<!ENTITY status4evar.option.dlcount "Numero di download">
+<!ENTITY status4evar.option.dltime "Tempo rimanente">
+<!ENTITY status4evar.option.both "Entrambi">
+<!ENTITY status4evar.option.right "Destra">
+<!ENTITY status4evar.option.left "Sinistra">
+<!ENTITY status4evar.option.fixed "Fisso">
+<!ENTITY status4evar.option.simple "Semplificato">
+<!ENTITY status4evar.option.advanced "Avanzato">
+<!ENTITY status4evar.option.browse "Sfoglia">
+<!ENTITY status4evar.option.clear "Azzera">
+<!ENTITY status4evar.unit.seconds "secondi">
+<!ENTITY status4evar.unit.px "px">
+<!ENTITY status4evar.status.general.status.caption "Messaggio di stato">
+<!ENTITY status4evar.status.label "Mostra messaggio di stato in:">
+<!ENTITY status4evar.status.timeout.label "Nascondi messaggio di stato dopo">
+<!ENTITY status4evar.status.default.label "Mostra stato predefinito">
+<!ENTITY status4evar.status.network.label "Mostra stato di rete">
+<!ENTITY status4evar.status.network.xhr.label "Mostra stato di rete in secondo piano">
+<!ENTITY toolkit.dom.status.change.label "Consenti alle pagine di cambiare il messaggio di stato">
+<!ENTITY status4evar.status.general.linkOver.caption "Collegamenti">
+<!ENTITY status4evar.status.linkOver.label "Mostra destinazione dei collegamenti in:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Lunghezza massima del messaggio di stato:">
+<!ENTITY status4evar.status.urlbar.align.label "Allineamento:">
+<!ENTITY status4evar.status.urlbar.color.label "Colore del testo:">
+<!ENTITY status4evar.status.currentUrl "Indirizzo corrente">
+<!ENTITY status4evar.status.statusText "Messaggio di stato">
+<!ENTITY status4evar.progress.style.label "Usa stile personalizzato per la barra di avanzamento">
+<!ENTITY status4evar.progress.style.editor.label "Editor:">
+<!ENTITY status4evar.progress.style.editor.color.label "Colore:">
+<!ENTITY status4evar.progress.style.editor.image.label "Immagine:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Mostra avanzamento nella barra degli indirizzi">
+<!ENTITY status4evar.progress.urlbar.line.label "Stile della linea:">
+<!ENTITY status4evar.progress.toolbar.force.label "Mostra sempre l'elemento nella barra degli strumenti">
+<!ENTITY status4evar.download.force.label "Mostra sempre il pulsante di stato dei download">
+<!ENTITY status4evar.download.label.force.label "Mostra sempre l'etichetta">
+<!ENTITY status4evar.download.label.label "Etichetta del pulsante di stato dei download:">
+<!ENTITY status4evar.download.tooltip.label "Riquadro informativo del pulsante di stato dei download:">
+<!ENTITY status4evar.addonbar.windowGripper "Mostra la maniglia di ridimensionamento della finestra">
+<!ENTITY status4evar.addonbar.closeButton "Mostra il pulsante di chiusura">

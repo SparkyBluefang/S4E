@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+	<Description about="urn:mozilla:install-manifest">
+
+		<em:type>2</em:type>
+		<em:id>status4evar@caligonstudios.com</em:id>
+		<em:name>Status-4-Evar</em:name>
+		<em:version>@VERSION@</em:version>
+		<em:description>Status widgets and progress indicators for Firefox 4+</em:description>
+		<em:creator>Sparky Bluefang</em:creator>
+
+		<em:optionsURL>chrome://status4evar/content/prefs.xul</em:optionsURL>		
+
+		<em:targetApplication><!-- Firefox -->
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>4.0</em:minVersion>
+				<em:maxVersion>4.2a1pre</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+
+		<em:translator>Joergen (da)</em:translator>
+		<em:translator>Archaeopteryx (de)</em:translator>
+		<em:translator>ReinekeFux (de)</em:translator>
+		<em:translator>jojaba (fr)</em:translator>
+		<em:translator>matthieum (fr)</em:translator>
+		<em:translator>WonderCsabo (hu)</em:translator>
+		<em:translator>Alimonda (it-IT)</em:translator>
+		<em:translator>hosiguma (ja-JP)</em:translator>
+		<em:translator>nirwana (nl)</em:translator>
+		<em:translator>Leepa (pl)</em:translator>
+		<em:translator>momus (pl)</em:translator>
+		<em:translator>teo (pl)</em:translator>
+		<em:translator>gutierrez (pt-BR)</em:translator>
+		<em:translator>x10firefox (ro)</em:translator>
+		<em:translator>Lakrits (sv-SE)</em:translator>
+		<em:translator>Cye3s (zh-CN)</em:translator>
+		<em:translator>yongdong7 (zh-CN)</em:translator>
+		<em:translator>velociraptor (zh-TW)</em:translator>
+
+	</Description>
+</RDF>
+
