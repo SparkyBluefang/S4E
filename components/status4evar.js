@@ -59,6 +59,7 @@ Status_4_Evar.prototype =
 
 	prefs:			null,
 
+	addonbarBorderStyle:	false,
 	addonbarCloseButton:	false,
 	addonbarWindowGripper:	true,
 
@@ -91,6 +92,22 @@ Status_4_Evar.prototype =
 
 	pref_registry:
 	{
+		"addonbar.borderStyle":
+		{
+			update: function()
+			{
+				this.addonbarBorderStyle = this.prefs.getBoolPref("addonbar.borderStyle");
+			},
+			updateWindow: function(win)
+			{
+				let browser_bottom_box = win.caligon.status4evar.getters.browserBottomBox;
+				if(browser_bottom_box)
+				{
+					this.setBoolElementAttribute(browser_bottom_box, "s4eboarder", this.addonbarBorderStyle);
+				}
+			}
+		},
+
 		"addonbar.closeButton":
 		{
 			update: function()

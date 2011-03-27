@@ -1,4 +1,5 @@
 Version next
+* Put S4E style borders (for the Add-on Bar and other bottom toolbars) behind a prefernce. Disable by default.
 
 Version 2011.03.21.22
 * Make S4E more robust when dealing with incompatible extensions and missing UI elements.

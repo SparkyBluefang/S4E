@@ -112,12 +112,12 @@ splitter.status4evar-status-splitter
  * Stop being a derp!
  */
 
-#addon-bar
+#browser-bottombox[s4eboarder="true"] #addon-bar
 {
 	-moz-appearance: none;
 }
 
-#browser-bottombox > *:not([hidden="true"]):not([collapsed="true"])
+#browser-bottombox[s4eboarder="true"] > *:not([hidden="true"]):not([collapsed="true"])
 {
 	box-shadow: none !important;
 	border: none !important;
@@ -125,7 +125,7 @@ splitter.status4evar-status-splitter
 	-moz-border-top-colors: ThreeDShadow ThreeDHighlight !important;
 }
 
-#browser-bottombox > *:not([hidden="true"]):not([collapsed="true"]) ~ *
+#browser-bottombox[s4eboarder="true"] > *:not([hidden="true"]):not([collapsed="true"]) ~ *
 {
 	border: none !important;
 }

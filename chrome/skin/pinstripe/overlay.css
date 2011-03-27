@@ -117,10 +117,10 @@ splitter.status4evar-status-splitter
 	-moz-padding-start: 1px;
 }
 
-
 /*
  * Gripper
  */
+
 #status4evar-window-gripper
 {
 	display: none;
@@ -129,6 +129,7 @@ splitter.status4evar-status-splitter
 /*
  * Status bar
  */
+
 #status-bar
 {
 	padding-right: 0px;

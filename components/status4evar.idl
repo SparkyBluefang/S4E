@@ -41,6 +41,7 @@
 [scriptable, uuid(13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf)]
 interface nsIStatus4Evar : nsISupports
 {
+	readonly attribute boolean addonbarBorderStyle;
 	readonly attribute boolean addonbarCloseButton;
 	readonly attribute boolean addonbarWindowGripper;
 

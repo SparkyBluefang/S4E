@@ -360,9 +360,12 @@
 
 	<prefpane id="status4evar-pane-addonbar" label="&status4evar.pane.addonbar;">
 		<preferences>
+			<preference id="status4evar-pref-addonbar-borderStyle"   name="status4evar.addonbar.borderStyle"   type="bool" />
 			<preference id="status4evar-pref-addonbar-closeButton"   name="status4evar.addonbar.closeButton"   type="bool" />
 			<preference id="status4evar-pref-addonbar-windowGripper" name="status4evar.addonbar.windowGripper" type="bool" />
 		</preferences>
+
+		<checkbox id="status4evar-addonbar-borderStyle-check" preference="status4evar-pref-addonbar-borderStyle" label="&status4evar.addonbar.borderStyle;" />
 
 		<checkbox id="status4evar-addonbar-closeButton-check" preference="status4evar-pref-addonbar-closeButton" label="&status4evar.addonbar.closeButton;" />
 

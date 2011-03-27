@@ -74,6 +74,7 @@
 
 
 
+<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
 <!ENTITY status4evar.addonbar.windowGripper "Show the window re-size gripper">
 <!ENTITY status4evar.addonbar.closeButton "Show the close button">
 

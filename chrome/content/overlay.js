@@ -68,6 +68,13 @@ window.addEventListener("load", function()
 				return this.addonbarCloseButton = document.getElementById("addonbar-closebutton");
 			});
 
+			delete this.browserBottomBox;
+			this.__defineGetter__("browserBottomBox", function()
+			{
+				delete this.browserBottomBox;
+				return this.browserBottomBox = document.getElementById("browser-bottombox");
+			});
+
 			delete this.downloadButton;
 			this.__defineGetter__("downloadButton", function()
 			{
