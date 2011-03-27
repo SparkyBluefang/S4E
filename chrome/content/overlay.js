@@ -151,6 +151,16 @@ window.addEventListener("load", function()
 	XULBrowserWindow.updateStatusField = function() {}
 	XULBrowserWindow.onStatusChange = function() {}
 
+	XULBrowserWindow.getStatusText = function()
+	{
+		return this.s4e_status.val;
+	}
+
+	XULBrowserWindow.getCompositeStatusText = function()
+	{
+		return this.s4e_statusText.val;
+	}
+
 	XULBrowserWindow.setNetworkStatus = function(status)
 	{
 		if(s4e_progressMeter._busyUI)
