@@ -51,7 +51,6 @@
 
 			<destructor><![CDATA[
 				this._overLinkBox.removeEventListener("transitionend", this, false);
-				this._clearOverLinkInterval();
 			]]></destructor>
 
 			<field name="_overLinkLayer" readonly="true"><![CDATA[
@@ -78,19 +77,11 @@
 				document.getAnonymousElementByAttribute(this, "anonid", "over-link-path-label");
 			]]></field>
 
-			<field name="_overLinkIntervalDelay" readonly="true"><![CDATA[
-				100
-			]]></field>
-
 			<field name="_overLinkHostValue"><![CDATA[
 				null
 			]]></field>
 
 			<field name="_overLinkPathValue"><![CDATA[
-				null
-			]]></field>
-
-			<field name="_overLinkInterval"><![CDATA[
 				null
 			]]></field>
 
@@ -160,60 +151,25 @@
 					if((!aURL && (XULBrowserWindow.hideOverLinkImmediately
 					   || this._hideOverLinkImmediately)) || this.focused)
 					{
-						this._clearOverLinkInterval();
 						this._setOverLinkState(null);
 						return;
 					}
 
-					// Update and show it immediately if it's in transition.
-					if(aURL && this._overLinkTransitioning)
+					if(aURL)
 					{
-						this._clearOverLinkInterval();
 						this._updateOverLink(aURL);
-						this._setOverLinkState("showing");
-						return;
-					}
-
-					this._overLinkURL = aURL;
-					this._seenNewOverLink = true;
-
-					// If the user is continually mousing over links, make this method
-					// basically a no-op.
-					if(this._overLinkInterval)
-					{
-						return;
-					}
-
-					// Otherwise, the user has just moused over or focused a single link.
-					// Start the interval and signal that we should potentially show the
-					// over-link the first time it fires by unsetting _seenNewOverLink.
-					this._seenNewOverLink = false;
-					this._overLinkInterval = setInterval(this._overLinkIntervalCallback,
-									 this._overLinkIntervalDelay, this);
-				]]></body>
-			</method>
-
-			<method name="_overLinkIntervalCallback">
-				<parameter name="self"/>
-				<body><![CDATA[
-					// If the user is still mousing over links, bail out early.
-					if(self._seenNewOverLink)
-					{
-						self._seenNewOverLink = false;
-						return;
-					}
-
-					// Otherwise, the user has stopped over a link.  Clear the interval
-					// and update the over-link.
-					self._clearOverLinkInterval();
-					if(self._overLinkURL)
-					{
-						self._updateOverLink(self._overLinkURL);
-						self._setOverLinkState("fade-in");
+						if(this._overLinkTransitioning)
+						{
+							this._setOverLinkState("showing");
+						}
+						else
+						{
+							this._setOverLinkState("fade-in");
+						}
 					}
 					else
 					{
-						self._setOverLinkState("fade-out");
+						this._setOverLinkState("fade-out");
 					}
 				]]></body>
 			</method>
@@ -223,16 +179,6 @@
 					this._hideOverLinkImmediately = true;
 					this.setStatus("");
 					this._hideOverLinkImmediately = false;
-				]]></body>
-			</method>
-
-			<method name="_clearOverLinkInterval">
-				<body><![CDATA[
-					if(this._overLinkInterval)
-					{
-						clearInterval(this._overLinkInterval);
-						this._overLinkInterval = null;
-					}
 				]]></body>
 			</method>
 

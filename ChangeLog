@@ -1,9 +1,10 @@
 Version next
 * Put S4E style borders (for the Add-on Bar and other bottom toolbars) behind a preference. Disable by default.
-* Set urlbar compatibility function shims on the prototype instead of the instance. Fixes compatibility with dynamic bindings (i.e. Smart Text)
+* Set urlbar compatibility function shims on the prototype instead of the instance. Fixes compatibility with dynamic bindings (i.e. Smart Text).
 * If there are only paused downloads, show the paused count in the button and tooltip ('unknown time remaining' is useless).
-* Fix assertion in Firefox 4.2a1pre
-* Add status text getters (better extension integration support)
+* Fix assertion in Firefox 4.2a1pre.
+* Add status text getters (better extension integration support).
+* Remove delay before showing link/status in the urlbar.
 
 Version 2011.03.21.22
 * Make S4E more robust when dealing with incompatible extensions and missing UI elements.
