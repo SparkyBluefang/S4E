@@ -1,3 +1,4 @@
 *.xpi
 install.rdf
 components/*.xpt
+release/
