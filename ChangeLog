@@ -1,6 +1,7 @@
 Version next
 * Put S4E style borders (for the Add-on Bar and other bottom toolbars) behind a preference. Disable by default.
 * Set urlbar compatibility function shims on the prototype instead of the instance. Fixes compatibility with dynamic bindings (i.e. Smart Text)
+* If there are only paused downloads, show the paused count in the button and tooltip ('unknown time remaining' is useless).
 
 Version 2011.03.21.22
 * Make S4E more robust when dealing with incompatible extensions and missing UI elements.

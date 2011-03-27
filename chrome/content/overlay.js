@@ -497,6 +497,7 @@ window.addEventListener("load", function()
 		_dlCountStr:	null,
 		_dlTimeStr:	null,
 		_dlActive:	false,
+		_dlPaused:	false,
 
 		get DownloadUtils()
 		{
@@ -585,10 +586,12 @@ window.addEventListener("load", function()
 
 			let numDls = numActive - numPaused;
 			let dlStatus = this._activeStr;
+			this._dlPaused = false;
 			if(numDls == 0)
 			{
 				numDls = numPaused;
 				dlStatus = this._pausedStr;
+				this._dlPaused = true;
 			}
 
 			dlStatus = PluralForm.get(numDls, dlStatus);
@@ -621,10 +624,15 @@ window.addEventListener("load", function()
 					download_button.label = this._dlCountStr;
 					break;
 				case 1:
-					download_button.label = this._dlTimeStr;
+					download_button.label = ((this._dlPaused) ? this._dlCountStr : this._dlTimeStr);
 					break;
 				default:
-					download_button.label = this._dlCountStr + " (" + this._dlTimeStr + ")";
+					let compStr = this._dlCountStr;
+					if(!this._dlPaused)
+					{
+						compStr += " (" + this._dlTimeStr + ")";
+					}
+					download_button.label = compStr;
 					break;
 			}
 
@@ -634,10 +642,15 @@ window.addEventListener("load", function()
 					download_tooltip.label = this._dlCountStr;
 					break;
 				case 1:
-					download_tooltip.label = this._dlTimeStr;
+					download_tooltip.label = ((this._dlPaused) ? this._dlCountStr : this._dlTimeStr);
 					break;
 				default:
-					download_tooltip.label = this._dlCountStr + " (" + this._dlTimeStr + ")";
+					let compStr = this._dlCountStr;
+					if(!this._dlPaused)
+					{
+						compStr += " (" + this._dlTimeStr + ")";
+					}
+					download_tooltip.label = compStr;
 					break;
 			}
 
