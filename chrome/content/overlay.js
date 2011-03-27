@@ -127,7 +127,7 @@ window.addEventListener("load", function()
 					{
 						if(!(func in ub))
 						{	
-							ub[func] = function() {};
+							ub.__proto__[func] = function() {};
 						}
 					});
 				}
