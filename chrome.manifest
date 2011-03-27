@@ -20,9 +20,8 @@ skin	status4evar-os	classic/1.0	chrome/skin/gnomestripe/
 skin	status4evar-os	classic/1.0	chrome/skin/winstripe/		os=WINNT
 skin	status4evar-os	classic/1.0	chrome/skin/pinstripe/		os=Darwin
 
-overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/overlay.xul	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0b12
-
-style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/overlay.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0b12
+overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/overlay.xul	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
+style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/overlay.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
 
 interfaces	components/status4evar.xpt
 component	{13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf}	components/status4evar.js
