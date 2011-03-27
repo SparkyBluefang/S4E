@@ -853,7 +853,7 @@ window.addEventListener("load", function()
 	XULBrowserWindow.setUpStatusText();
 	s4e_updateWindow();
 
-	gBrowser.addProgressListener(s4e_progressMeter, CI.nsIWebProgress.NOTIFY_ALL);
+	gBrowser.addProgressListener(s4e_progressMeter);
 	gNavToolbox.addEventListener("beforecustomization", s4e_beforeCustomization, false);
 	gNavToolbox.addEventListener("aftercustomization", s4e_updateWindow, false);
 	window.addEventListener("resize", s4e_resizeHandler, false);
