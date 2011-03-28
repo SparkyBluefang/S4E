@@ -5,6 +5,7 @@ Version next
 * Fix assertion in Firefox 4.2a1pre.
 * Add status text getters (better extension integration support).
 * Remove delay before showing link/status in the urlbar.
+* Add options to control the delay before showing/hiding hovered links.
 
 Version 2011.03.21.22
 * Make S4E more robust when dealing with incompatible extensions and missing UI elements.

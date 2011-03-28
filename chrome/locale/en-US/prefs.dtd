@@ -45,6 +45,8 @@
 
 <!ENTITY status4evar.status.general.linkOver.caption "Links">
 <!ENTITY status4evar.status.linkOver.label "Show links in:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
 
 <!ENTITY status4evar.status.toolbar.maxLength.label "Max status text length:">
 

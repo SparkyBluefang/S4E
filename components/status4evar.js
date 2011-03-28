@@ -57,38 +57,40 @@ Status_4_Evar.prototype =
 					CI.nsIStatus4Evar
 				]),
 
-	prefs:			null,
+	prefs:				null,
 
-	addonbarBorderStyle:	false,
-	addonbarCloseButton:	false,
-	addonbarWindowGripper:	true,
+	addonbarBorderStyle:		false,
+	addonbarCloseButton:		false,
+	addonbarWindowGripper:		true,
 
-	downloadForce:		false,
-	downloadLabel:		0,
-	downloadLabelForce:	true,
-	downloadTooltip:	1,
+	downloadForce:			false,
+	downloadLabel:			0,
+	downloadLabelForce:		true,
+	downloadTooltip:		1,
 
-	firstRun:		true,
+	firstRun:			true,
 
-	progressToolbarCSS:	null,
-	progressToolbarForce:	false,
-	progressToolbarStyle:	false,
+	progressToolbarCSS:		null,
+	progressToolbarForce:		false,
+	progressToolbarStyle:		false,
 
-	progressUrlbar:		1,
-	progressUrlbarCSS:	null,
-	progressUrlbarStyle:	true,
+	progressUrlbar:			1,
+	progressUrlbarCSS:		null,
+	progressUrlbarStyle:		true,
 
-	status:			1,
-	statusDefault:		true,
-	statusNetwork:		true,
-	statusTimeout:		0,
-	statusLinkOver:		1,
+	status:				1,
+	statusDefault:			true,
+	statusNetwork:			true,
+	statusTimeout:			0,
+	statusLinkOver:			1,
+	statusLinkOverDelayShow:	70,
+	statusLinkOverDelayHide:	150,
 
-	statusToolbarMaxLength:	0,
+	statusToolbarMaxLength:		0,
 
-	statusUrlbarAlign:	null,
-	statusUrlbarColor:	null,
-	statusUrlbarPosition:	33,
+	statusUrlbarAlign:		null,
+	statusUrlbarColor:		null,
+	statusUrlbarPosition:		33,
 
 	pref_registry:
 	{
@@ -366,6 +368,22 @@ Status_4_Evar.prototype =
 			update: function()
 			{
 				this.statusLinkOver = this.prefs.getIntPref("status.linkOver");
+			}
+		},
+
+		"status.linkOver.delay.show":
+		{
+			update: function()
+			{
+				this.statusLinkOverDelayShow = this.prefs.getIntPref("status.linkOver.delay.show");
+			}
+		},
+
+		"status.linkOver.delay.hide":
+		{
+			update: function()
+			{
+				this.statusLinkOverDelayHide = this.prefs.getIntPref("status.linkOver.delay.hide");
 			}
 		},
 

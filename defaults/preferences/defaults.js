@@ -29,6 +29,8 @@ pref("status4evar.status.network", true);
 pref("status4evar.status.network.xhr", true);
 pref("status4evar.status.timeout", 0);
 pref("status4evar.status.linkOver", 1);
+pref("status4evar.status.linkOver.delay.show", 70);
+pref("status4evar.status.linkOver.delay.hide", 150);
 
 pref("status4evar.status.toolbar.maxLength", 0);
 

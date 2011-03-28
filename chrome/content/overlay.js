@@ -199,7 +199,12 @@ window.addEventListener("load", function()
 		this.updateS4EStatusField();
 	}
 
-	XULBrowserWindow.setOverLink = function(link)
+	XULBrowserWindow.setOverLink = function(link, anchor)
+	{
+		s4e_overLinkService.update(link, anchor);
+	}
+
+	XULBrowserWindow.setOverLinkInternal = function(link, anchor)
 	{
 		let status = s4e_service.status;
 		let statusLinkOver = s4e_service.statusLinkOver;
@@ -352,6 +357,70 @@ window.addEventListener("load", function()
 		this.s4e_defaultStatus = { val: "", type: "" };
 		this.s4e_statusText = { val: "", type: "" };
 	}
+
+//
+// Over Link delay service
+//
+	caligon.status4evar.overLinkService =
+	{
+		_timer: 0,
+		_currentLink: { link: "", anchor: null },
+		_pendingLink: { link: "", anchor: null },
+
+		update: function(aLink, aAnchor)
+		{
+			window.clearTimeout(this._timer);
+			window.removeEventListener("mousemove", this, true);
+			this._pendingLink = { link: aLink, anchor: aAnchor };
+
+			if(!aLink)
+			{
+				if(XULBrowserWindow.hideOverLinkImmediately || !s4e_service.statusLinkOverDelayHide)
+				{
+					this._show();
+				}
+				else
+				{
+					this._timer = window.setTimeout(this._show.bind(this), s4e_service.statusLinkOverDelayHide);
+				}
+			}
+			else if(this._currentLink.link || !s4e_service.statusLinkOverDelayShow)
+			{
+				this._show();
+			}
+			else
+			{
+				this._showDelayed();
+				window.addEventListener("mousemove", this, true);
+			}
+		},
+
+		handleEvent: function(event)
+		{
+			switch(event.type)
+			{
+				case "mousemove":
+					window.clearTimeout(this._timer);
+					this._showDelayed();
+			}
+		},
+
+		_showDelayed: function()
+		{
+			this._timer = setTimeout(function(self)
+			{
+				self._show();
+				window.removeEventListener("mousemove", self, true);
+			}, s4e_service.statusLinkOverDelayShow, this);
+		},
+
+		_show: function()
+		{
+			this._currentLink = this._pendingLink;
+			XULBrowserWindow.setOverLinkInternal(this._currentLink.link, this._currentLink.anchor);
+		}
+	}
+	let s4e_overLinkService = caligon.status4evar.overLinkService;
 
 //
 // Progress meters and network status

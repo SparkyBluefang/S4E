@@ -73,6 +73,8 @@ interface nsIStatus4Evar : nsISupports
 	readonly attribute boolean statusNetworkXHR;
 	readonly attribute long    statusTimeout;
 	readonly attribute long    statusLinkOver;
+	readonly attribute long    statusLinkOverDelayShow;
+	readonly attribute long    statusLinkOverDelayHide;
 
 	readonly attribute long    statusToolbarMaxLength;
 

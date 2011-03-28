@@ -53,21 +53,23 @@
  
 	<prefpane id="status4evar-pane-status" label="&status4evar.pane.status;">
 		<preferences>
-			<preference id="status4evar-pref-status"                   name="status4evar.status"                    type="int" />
-			<preference id="status4evar-pref-status-default"           name="status4evar.status.default"            type="bool" />
-			<preference id="status4evar-pref-status-network"           name="status4evar.status.network"            type="bool"
+			<preference id="status4evar-pref-status"                     name="status4evar.status"                     type="int" />
+			<preference id="status4evar-pref-status-default"             name="status4evar.status.default"             type="bool" />
+			<preference id="status4evar-pref-status-network"             name="status4evar.status.network"             type="bool"
 			            onchange="status4evarPrefs.statusNetworkChanged();" />
-			<preference id="status4evar-pref-status-network-xhr"       name="status4evar.status.network.xhr"        type="bool" />
-			<preference id="status4evar-pref-status-timeout"           name="status4evar.status.timeout"            type="int"
+			<preference id="status4evar-pref-status-network-xhr"         name="status4evar.status.network.xhr"         type="bool" />
+			<preference id="status4evar-pref-status-timeout"             name="status4evar.status.timeout"             type="int"
 			            onchange="status4evarPrefs.statusTimeoutChanged();" />
-			<preference id="status4evar-pref-status-linkOver"          name="status4evar.status.linkOver"           type="int" />
-			<preference id="status4evar-pref-status-toolbar-maxLength" name="status4evar.status.toolbar.maxLength"  type="int"
+			<preference id="status4evar-pref-status-linkOver"            name="status4evar.status.linkOver"            type="int" />
+			<preference id="status4evar-pref-status-linkOver-delay-show" name="status4evar.status.linkOver.delay.show" type="int" />
+			<preference id="status4evar-pref-status-linkOver-delay-hide" name="status4evar.status.linkOver.delay.hide" type="int" />
+			<preference id="status4evar-pref-status-toolbar-maxLength"   name="status4evar.status.toolbar.maxLength"   type="int"
 			            onchange="status4evarPrefs.textLengthChanged();" />
-			<preference id="status4evar-pref-status-urlbar-align"      name="status4evar.status.urlbar.align"       type="int"
+			<preference id="status4evar-pref-status-urlbar-align"        name="status4evar.status.urlbar.align"        type="int"
 			            onchange="status4evarPrefs.urlbarAlignChanged();" />
-			<preference id="status4evar-pref-status-urlbar-color"      name="status4evar.status.urlbar.color"       type="string" />
-			<preference id="status4evar-pref-status-urlbar-position"   name="status4evar.status.urlbar.position"    type="int" />
-			<preference id="toolkit-pref-dom-status-change"            name="dom.disable_window_status_change"      type="bool" inverted="true" />
+			<preference id="status4evar-pref-status-urlbar-color"        name="status4evar.status.urlbar.color"        type="string" />
+			<preference id="status4evar-pref-status-urlbar-position"     name="status4evar.status.urlbar.position"     type="int" />
+			<preference id="toolkit-pref-dom-status-change"              name="dom.disable_window_status_change"       type="bool" inverted="true" />
 		</preferences>
 
 		<commandset id="status4evar-commandset-status">
@@ -135,6 +137,16 @@
 									<menuitem label="&status4evar.option.popup;"   value="3" />
 								</menupopup>
 							</menulist>
+						</hbox>
+
+						<hbox align="center">
+							<label id="status4evar-status-linkOver-delay-show-label" control="status4evar-status-linkOver-delay-show-value">&status4evar.status.linkOver.delay.show.label;</label>
+							<textbox id="status4evar-status-linkOver-delay-show-value" preference="status4evar-pref-status-linkOver-delay-show" type="number" size="5" />
+						</hbox>
+
+						<hbox align="center">
+							<label id="status4evar-status-linkOver-delay-hide-label" control="status4evar-status-linkOver-delay-hide-value">&status4evar.status.linkOver.delay.hide.label;</label>
+							<textbox id="status4evar-status-linkOver-delay-hide-value" preference="status4evar-pref-status-linkOver-delay-hide" type="number" size="5" />
 						</hbox>
 					</groupbox>
 				</tabpanel>
