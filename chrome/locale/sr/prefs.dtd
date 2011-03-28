@@ -1,0 +1,57 @@
+<!ENTITY status4evar.window.title "Поставке">
+<!ENTITY status4evar.pane.status "Статус">
+<!ENTITY status4evar.pane.progress "Напредак">
+<!ENTITY status4evar.pane.download "Преузимање">
+<!ENTITY status4evar.pane.addonbar "Трака с језичцима">
+<!ENTITY status4evar.tab.general "Опште">
+<!ENTITY status4evar.tab.toolbar "Трака с алаткама">
+<!ENTITY status4evar.tab.urlbar "Трака за навигацију">
+<!ENTITY status4evar.tab.popup "Искачући">
+<!ENTITY status4evar.tab.tabs "Језичци">
+<!ENTITY status4evar.option.none "ништа">
+<!ENTITY status4evar.option.toolbar "траци с алаткама">
+<!ENTITY status4evar.option.urlbar "траци за навигацију">
+<!ENTITY status4evar.option.popup "искачућем прозору">
+<!ENTITY status4evar.option.tooltip "Облачић">
+<!ENTITY status4evar.option.bottom "дно">
+<!ENTITY status4evar.option.top "врх">
+<!ENTITY status4evar.option.fill "попуњена">
+<!ENTITY status4evar.option.dlcount "број пријема">
+<!ENTITY status4evar.option.dltime "преостало време">
+<!ENTITY status4evar.option.both "обоје">
+<!ENTITY status4evar.option.right "десно">
+<!ENTITY status4evar.option.left "лево">
+<!ENTITY status4evar.option.fixed "исправљено">
+<!ENTITY status4evar.option.simple "једноставан">
+<!ENTITY status4evar.option.advanced "напредан">
+<!ENTITY status4evar.option.browse "Потражи…">
+<!ENTITY status4evar.option.clear "Очисти">
+<!ENTITY status4evar.unit.seconds "сек.">
+<!ENTITY status4evar.unit.px "тачака">
+<!ENTITY status4evar.status.general.status.caption "Статус текста">
+<!ENTITY status4evar.status.label "Прикажи статус у:">
+<!ENTITY status4evar.status.timeout.label "Сакриј статус након">
+<!ENTITY status4evar.status.default.label "Подразумевани статус">
+<!ENTITY status4evar.status.network.label "Мрежни статус">
+<!ENTITY status4evar.status.network.xhr.label "Позадински мрежни статус">
+<!ENTITY toolkit.dom.status.change.label "Дозволи веб страницама да промене статус">
+<!ENTITY status4evar.status.general.linkOver.caption "Везе">
+<!ENTITY status4evar.status.linkOver.label "Прикажи везе у:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Највећа дужина статуса текста:">
+<!ENTITY status4evar.status.urlbar.align.label "Поравнање статуса:">
+<!ENTITY status4evar.status.urlbar.color.label "Боја текста:">
+<!ENTITY status4evar.status.currentUrl "Текућа адреса">
+<!ENTITY status4evar.status.statusText "Статус текста">
+<!ENTITY status4evar.progress.style.label "Прилагођени стил на траци с напретком">
+<!ENTITY status4evar.progress.style.editor.label "Уређивач:">
+<!ENTITY status4evar.progress.style.editor.color.label "Боја:">
+<!ENTITY status4evar.progress.style.editor.image.label "Слика:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Напредак у траци с локацијом">
+<!ENTITY status4evar.progress.urlbar.line.label "Стил линије:">
+<!ENTITY status4evar.progress.toolbar.force.label "Увек приказуј ставку на траци с алатима">
+<!ENTITY status4evar.download.force.label "Увек приказуј статус преузимања">
+<!ENTITY status4evar.download.label.force.label "Увек приказуј текст дугмића">
+<!ENTITY status4evar.download.label.label "Текст дугмића за статус преузимања:">
+<!ENTITY status4evar.download.tooltip.label "Текст облачића за статус преузимања:">
+<!ENTITY status4evar.addonbar.windowGripper "Простор за измену величине прозора">
+<!ENTITY status4evar.addonbar.closeButton "Дугме за затварање">

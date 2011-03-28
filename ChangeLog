@@ -6,6 +6,8 @@ Version next
 * Add status text getters (better extension integration support).
 * Remove delay before showing link/status in the urlbar.
 * Add options to control the delay before showing/hiding hovered links.
+* Added translations for: sr
+* Updated translations for: de, zh-CN
 
 Version 2011.03.21.22
 * Make S4E more robust when dealing with incompatible extensions and missing UI elements.
