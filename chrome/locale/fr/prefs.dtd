@@ -37,6 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "Autoriser les pages Web à modifier l'état">
 <!ENTITY status4evar.status.general.linkOver.caption "Liens">
 <!ENTITY status4evar.status.linkOver.label "Afficher les liens dans :">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Longueur max du texte d'état :">
 <!ENTITY status4evar.status.urlbar.align.label "Alignement de l'état :">
 <!ENTITY status4evar.status.urlbar.color.label "Couleur du texte :">
@@ -53,5 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "Toujours afficher le texte">
 <!ENTITY status4evar.download.label.label "Texte du bouton d'état de téléchargement :">
 <!ENTITY status4evar.download.tooltip.label "Infobulle du bouton d'état du téléchargement :">
+<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
 <!ENTITY status4evar.addonbar.windowGripper "Afficher le pointeur de redimensionnement de fenêtre">
 <!ENTITY status4evar.addonbar.closeButton "Afficher le bouton de fermeture">

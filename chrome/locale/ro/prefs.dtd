@@ -37,6 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "Permite paginilor web să modifice starea">
 <!ENTITY status4evar.status.general.linkOver.caption "Legături">
 <!ENTITY status4evar.status.linkOver.label "Afișează legăturile în:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Lungime maximă a textului de stare:">
 <!ENTITY status4evar.status.urlbar.align.label "Aliniere a stării:">
 <!ENTITY status4evar.status.urlbar.color.label "Culoare text:">
@@ -53,5 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "Afișează întotdeauna textul butonului">
 <!ENTITY status4evar.download.label.label "Text pe butonul stării de descărcare:">
 <!ENTITY status4evar.download.tooltip.label "Balon instantaneu al butonului stării de descărcare:">
+<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
 <!ENTITY status4evar.addonbar.windowGripper "Afișează glisorul de redimensionare a fereastrei">
 <!ENTITY status4evar.addonbar.closeButton "Afișează butonul de închidere">

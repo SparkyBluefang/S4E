@@ -37,6 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "Weboldalak megváltoztathatják az állapotszöveget">
 <!ENTITY status4evar.status.general.linkOver.caption "Hivatkozások">
 <!ENTITY status4evar.status.linkOver.label "Hivatkozások mutatása:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maximális állapothossz:">
 <!ENTITY status4evar.status.urlbar.align.label "Állapot igazítása:">
 <!ENTITY status4evar.status.urlbar.color.label "Betűszín:">
@@ -53,5 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "Mindig mutassa a címkét">
 <!ENTITY status4evar.download.label.label "Letöltési állapot gomb címkéje:">
 <!ENTITY status4evar.download.tooltip.label "Letöltési állapot gomb buboréksúgója:">
+<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
 <!ENTITY status4evar.addonbar.windowGripper "Ablak átméretező mutatása">
 <!ENTITY status4evar.addonbar.closeButton "Bezárás gomb mutatása">

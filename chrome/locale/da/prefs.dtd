@@ -37,6 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "Tillad websider at ændre statussen">
 <!ENTITY status4evar.status.general.linkOver.caption "Links">
 <!ENTITY status4evar.status.linkOver.label "Vis links i:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maks længde af statustekst:">
 <!ENTITY status4evar.status.urlbar.align.label "Justering af status:">
 <!ENTITY status4evar.status.urlbar.color.label "Tekstfarve:">
@@ -53,5 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "Vis altid etiket">
 <!ENTITY status4evar.download.label.label "Etiket til Filhentningsstatus:">
 <!ENTITY status4evar.download.tooltip.label "Værktøjstip til Filhentningsstatus:">
+<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gribelinjen til ændring af vinduesstørrelse">
 <!ENTITY status4evar.addonbar.closeButton "Vis knappen Luk">

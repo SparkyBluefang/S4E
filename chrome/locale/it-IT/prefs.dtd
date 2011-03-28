@@ -37,6 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "Consenti alle pagine di cambiare il messaggio di stato">
 <!ENTITY status4evar.status.general.linkOver.caption "Collegamenti">
 <!ENTITY status4evar.status.linkOver.label "Mostra destinazione dei collegamenti in:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Lunghezza massima del messaggio di stato:">
 <!ENTITY status4evar.status.urlbar.align.label "Allineamento:">
 <!ENTITY status4evar.status.urlbar.color.label "Colore del testo:">
@@ -53,5 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "Mostra sempre l'etichetta">
 <!ENTITY status4evar.download.label.label "Etichetta del pulsante di stato dei download:">
 <!ENTITY status4evar.download.tooltip.label "Riquadro informativo del pulsante di stato dei download:">
+<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
 <!ENTITY status4evar.addonbar.windowGripper "Mostra la maniglia di ridimensionamento della finestra">
 <!ENTITY status4evar.addonbar.closeButton "Mostra il pulsante di chiusura">

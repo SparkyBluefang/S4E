@@ -37,6 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "Дозволи веб страницама да промене статус">
 <!ENTITY status4evar.status.general.linkOver.caption "Везе">
 <!ENTITY status4evar.status.linkOver.label "Прикажи везе у:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Највећа дужина статуса текста:">
 <!ENTITY status4evar.status.urlbar.align.label "Поравнање статуса:">
 <!ENTITY status4evar.status.urlbar.color.label "Боја текста:">
@@ -53,5 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "Увек приказуј текст дугмића">
 <!ENTITY status4evar.download.label.label "Текст дугмића за статус преузимања:">
 <!ENTITY status4evar.download.tooltip.label "Текст облачића за статус преузимања:">
+<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
 <!ENTITY status4evar.addonbar.windowGripper "Простор за измену величине прозора">
 <!ENTITY status4evar.addonbar.closeButton "Дугме за затварање">
