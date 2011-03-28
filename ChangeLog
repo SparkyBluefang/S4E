@@ -6,6 +6,7 @@ Version next
 * Add status text getters (better extension integration support).
 * Remove delay before showing link/status in the urlbar.
 * Add options to control the delay before showing/hiding hovered links.
+* Add meta.properties locale file for generating install.rdf l10n blocks.
 * Added translations for: sr
 * Updated translations for: de, zh-CN
 
