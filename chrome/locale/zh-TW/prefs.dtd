@@ -37,8 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "允許網頁變更狀態文字">
 <!ENTITY status4evar.status.general.linkOver.caption "連結">
 <!ENTITY status4evar.status.linkOver.label "顯示連結內容於：">
-<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "顯示連結前的延遲時間：">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "隱藏連結的延遲時間：">
 <!ENTITY status4evar.status.toolbar.maxLength.label "狀態文字最大長度：">
 <!ENTITY status4evar.status.urlbar.align.label "狀態對齊方式">
 <!ENTITY status4evar.status.urlbar.color.label "文字色彩：">
@@ -55,6 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "總是顯示標籤">
 <!ENTITY status4evar.download.label.label "下載狀態按鈕標籤：">
 <!ENTITY status4evar.download.tooltip.label "下載狀態的氣泡提示框顯示：">
-<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
+<!ENTITY status4evar.addonbar.borderStyle "使用替代的工具列邊框">
 <!ENTITY status4evar.addonbar.windowGripper "顯示視窗大小調整器">
 <!ENTITY status4evar.addonbar.closeButton "顯示關閉按鈕">

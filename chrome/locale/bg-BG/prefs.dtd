@@ -1,0 +1,60 @@
+<!ENTITY status4evar.window.title "Настройки на Status-4-Evar">
+<!ENTITY status4evar.pane.status "Състояние">
+<!ENTITY status4evar.pane.progress "Напредък">
+<!ENTITY status4evar.pane.download "Изтегляния">
+<!ENTITY status4evar.pane.addonbar "Лента за добавките">
+<!ENTITY status4evar.tab.general "Основни">
+<!ENTITY status4evar.tab.toolbar "Лента с инструменти">
+<!ENTITY status4evar.tab.urlbar "Адресна лента">
+<!ENTITY status4evar.tab.popup "Изскачащ прозорец">
+<!ENTITY status4evar.tab.tabs "Раздели">
+<!ENTITY status4evar.option.none "без показване">
+<!ENTITY status4evar.option.toolbar "лентата с инструменти">
+<!ENTITY status4evar.option.urlbar "адресната лента">
+<!ENTITY status4evar.option.popup "изскачащ прозорец">
+<!ENTITY status4evar.option.tooltip "Подсказка">
+<!ENTITY status4evar.option.bottom "отдолу">
+<!ENTITY status4evar.option.top "отгоре">
+<!ENTITY status4evar.option.fill "запълване">
+<!ENTITY status4evar.option.dlcount "Брой изтегляния">
+<!ENTITY status4evar.option.dltime "Оставащо време">
+<!ENTITY status4evar.option.both "И двете">
+<!ENTITY status4evar.option.right "Отдясно">
+<!ENTITY status4evar.option.left "Отляво">
+<!ENTITY status4evar.option.fixed "Фиксирано">
+<!ENTITY status4evar.option.simple "Стандартен">
+<!ENTITY status4evar.option.advanced "Разширен">
+<!ENTITY status4evar.option.browse "Разглеждане...">
+<!ENTITY status4evar.option.clear "Изчистване">
+<!ENTITY status4evar.unit.seconds "секунди">
+<!ENTITY status4evar.unit.px "px">
+<!ENTITY status4evar.status.general.status.caption "Състояние">
+<!ENTITY status4evar.status.label "Показване на състоянието в:">
+<!ENTITY status4evar.status.timeout.label "Скриване на състоянието след:">
+<!ENTITY status4evar.status.default.label "Показване на стандартното състояние">
+<!ENTITY status4evar.status.network.label "Показване състоянието на мрежата">
+<!ENTITY status4evar.status.network.xhr.label "Показване състоянието на мрежата във фонов режим">
+<!ENTITY toolkit.dom.status.change.label "Интернет страниците могат да променят състоянието">
+<!ENTITY status4evar.status.general.linkOver.caption "Връзки">
+<!ENTITY status4evar.status.linkOver.label "Показване на връзките в:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Забавяне преди показването на връзките:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Забавяне преди скриването на връзките:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Максимална дължина на текста за състоянието">
+<!ENTITY status4evar.status.urlbar.align.label "Подравняване:">
+<!ENTITY status4evar.status.urlbar.color.label "Цвят на текста:">
+<!ENTITY status4evar.status.currentUrl "Текущ адрес">
+<!ENTITY status4evar.status.statusText "Текст за състоянието">
+<!ENTITY status4evar.progress.style.label "Използване на собствен стил за изобразяване на напредъка">
+<!ENTITY status4evar.progress.style.editor.label "Редактор:">
+<!ENTITY status4evar.progress.style.editor.color.label "Цвят:">
+<!ENTITY status4evar.progress.style.editor.image.label "Изображение:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Показване на напредъка в адресната лента">
+<!ENTITY status4evar.progress.urlbar.line.label "Стил на линията:">
+<!ENTITY status4evar.progress.toolbar.force.label "Напредъкът винаги да се показва на лентата с инструменти">
+<!ENTITY status4evar.download.force.label "Винаги да се показва бутонът за състоянието на изтеглянията">
+<!ENTITY status4evar.download.label.force.label "Винаги да се показва текстът на бутона">
+<!ENTITY status4evar.download.label.label "Текст на бутона:">
+<!ENTITY status4evar.download.tooltip.label "Подсказка при посочване на бутона:">
+<!ENTITY status4evar.addonbar.borderStyle "Използване на алтернативни рамки за лентата с инструменти">
+<!ENTITY status4evar.addonbar.windowGripper "Показване на манипулатора за преоразмеряване на прозореца">
+<!ENTITY status4evar.addonbar.closeButton "Показване на бутона &quot;Затвори&quot;">

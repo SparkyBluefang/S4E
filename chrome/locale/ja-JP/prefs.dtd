@@ -37,8 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "ウェブページによるステータスの変更を許可する">
 <!ENTITY status4evar.status.general.linkOver.caption "リンク">
 <!ENTITY status4evar.status.linkOver.label "リンクの表示場所:">
-<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "リンクを表示するまでの間隔:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "リンクを隠すまでの間隔:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "ステータステキストの最大の長さ:">
 <!ENTITY status4evar.status.urlbar.align.label "ステータスの位置:">
 <!ENTITY status4evar.status.urlbar.color.label "文字色:">
@@ -55,6 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "常にラベルを表示">
 <!ENTITY status4evar.download.label.label "ダウンロードステータスボタンのラベル：">
 <!ENTITY status4evar.download.tooltip.label "ダウンロードステータスボタンのツールチップ：">
-<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
+<!ENTITY status4evar.addonbar.borderStyle "別のツールバーの境界を使う">
 <!ENTITY status4evar.addonbar.windowGripper "ウインドウのリサイズパネルを表示">
 <!ENTITY status4evar.addonbar.closeButton "閉じるボタンを表示">

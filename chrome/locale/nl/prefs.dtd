@@ -37,8 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "Webpagina's toestaan statustekst te wijzigen">
 <!ENTITY status4evar.status.general.linkOver.caption "Verwijzingen">
 <!ENTITY status4evar.status.linkOver.label "Verwijzingen tonen in:">
-<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Vertraging voor tonen van verwijzingen:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Vertraging voor verbergen van verwijzingen:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maximale lengte statustekst:">
 <!ENTITY status4evar.status.urlbar.align.label "Uitlijning statustekst:">
 <!ENTITY status4evar.status.urlbar.color.label "Tekstkleur:">
@@ -55,6 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "Tekst altijd tonen">
 <!ENTITY status4evar.download.label.label "Tekst voor status downloads:">
 <!ENTITY status4evar.download.tooltip.label "Tooltip downloadstatus:">
-<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
+<!ENTITY status4evar.addonbar.borderStyle "Alternatieve werkbalkranden gebruiken">
 <!ENTITY status4evar.addonbar.windowGripper "Indicatie voor wijzigen venstergrootte tonen">
 <!ENTITY status4evar.addonbar.closeButton "Sluitknop tonen">

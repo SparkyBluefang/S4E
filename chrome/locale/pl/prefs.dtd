@@ -37,8 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "Zezwalaj witrynom na zmianę statusu">
 <!ENTITY status4evar.status.general.linkOver.caption "Adresy odnośników">
 <!ENTITY status4evar.status.linkOver.label "Wyświetlaj adresy odnośników w">
-<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Opóźnienie przed wyświetleniem odnośnika:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Opóźnienie przed ukryciem odnośnika:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maksymalna długość tekstu statusu">
 <!ENTITY status4evar.status.urlbar.align.label "Wyrównanie statusu:">
 <!ENTITY status4evar.status.urlbar.color.label "Kolor tekstu:">
@@ -55,6 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "Wyświetlaj opis statusu pobierania">
 <!ENTITY status4evar.download.label.label "W opisie statusu pobierania wyświetlaj">
 <!ENTITY status4evar.download.tooltip.label "W podpowiedzi przycisku pobierania wyświetlaj">
-<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
+<!ENTITY status4evar.addonbar.borderStyle "Użyj alternatywnego obramowania dla paska narzędzi">
 <!ENTITY status4evar.addonbar.windowGripper "Wyświetlaj uchwyt zmiany rozmiaru okna">
 <!ENTITY status4evar.addonbar.closeButton "Wyświetlaj przycisk zamykania">

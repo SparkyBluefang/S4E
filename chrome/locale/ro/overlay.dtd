@@ -1,5 +1,5 @@
-<!ENTITY status4evar.status.widget.title "Stare">
-<!ENTITY status4evar.progress.widget.title "Progres">
+<!ENTITY status4evar.status.widget.title "Stare navigator">
+<!ENTITY status4evar.progress.widget.title "Bară de progres">
 <!ENTITY status4evar.download.widget.title "Stare descărcări">
 <!ENTITY status4evar.options.widget.title "Opțiuni Status-4-Evar">
 <!ENTITY status4evar.options.widget.label "Status-4-Evar">

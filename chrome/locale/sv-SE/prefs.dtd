@@ -37,8 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "Tillåt webbsidor att ändra status">
 <!ENTITY status4evar.status.general.linkOver.caption "Länkar">
 <!ENTITY status4evar.status.linkOver.label "Visa länkar i:">
-<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Fördröjning innan länkar visas:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Fördröjning innan länkar döljs:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maxlängd för statustext:">
 <!ENTITY status4evar.status.urlbar.align.label "Justering av statustext:">
 <!ENTITY status4evar.status.urlbar.color.label "Textfärg:">
@@ -55,6 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "Visa alltid etiketten">
 <!ENTITY status4evar.download.label.label "Nerladdningsstatus-knappens etikett: ">
 <!ENTITY status4evar.download.tooltip.label "Nerladdningsstatus-knappens verktygstips: ">
-<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
+<!ENTITY status4evar.addonbar.borderStyle "Använd alternativa verktygsfältskantlinjer">
 <!ENTITY status4evar.addonbar.windowGripper "Visa handtaget för fönsterstorleksändring">
 <!ENTITY status4evar.addonbar.closeButton "Visa stängknappen">

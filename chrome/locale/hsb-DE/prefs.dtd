@@ -1,0 +1,60 @@
+<!ENTITY status4evar.window.title "Nastajenja Status-4-Evar">
+<!ENTITY status4evar.pane.status "Status">
+<!ENTITY status4evar.pane.progress "Postup">
+<!ENTITY status4evar.pane.download "Sćehnjenje">
+<!ENTITY status4evar.pane.addonbar "Lajsta přidatkow">
+<!ENTITY status4evar.tab.general "Powšitkowne">
+<!ENTITY status4evar.tab.toolbar "Gratowa lajsta">
+<!ENTITY status4evar.tab.urlbar "Adresowe polo">
+<!ENTITY status4evar.tab.popup "Wuskakowace wokno">
+<!ENTITY status4evar.tab.tabs "Rajtarki">
+<!ENTITY status4evar.option.none "Žadyn">
+<!ENTITY status4evar.option.toolbar "Gratowa lajsta">
+<!ENTITY status4evar.option.urlbar "Adresowe polo">
+<!ENTITY status4evar.option.popup "Wuskakowace wokno">
+<!ENTITY status4evar.option.tooltip "Infotekst">
+<!ENTITY status4evar.option.bottom "Deleka">
+<!ENTITY status4evar.option.top "Horjeka">
+<!ENTITY status4evar.option.fill "Wupjelnić">
+<!ENTITY status4evar.option.dlcount "Ličba sćehnjenjow">
+<!ENTITY status4evar.option.dltime "Zbytny čas">
+<!ENTITY status4evar.option.both "Wobaj">
+<!ENTITY status4evar.option.right "Naprawo">
+<!ENTITY status4evar.option.left "Nalěwo">
+<!ENTITY status4evar.option.fixed "Kruty">
+<!ENTITY status4evar.option.simple "Jednory">
+<!ENTITY status4evar.option.advanced "Rozšěrjeny">
+<!ENTITY status4evar.option.browse "Přepytać">
+<!ENTITY status4evar.option.clear "Wuprózdnić">
+<!ENTITY status4evar.unit.seconds "sekundow">
+<!ENTITY status4evar.unit.px "pikselow">
+<!ENTITY status4evar.status.general.status.caption "Statusowy tekst">
+<!ENTITY status4evar.status.label "Status pokazać w:">
+<!ENTITY status4evar.status.timeout.label "Status schować po">
+<!ENTITY status4evar.status.default.label "Standardny status pokazać">
+<!ENTITY status4evar.status.network.label "Syćowy status pokazać">
+<!ENTITY status4evar.status.network.xhr.label "Syćowy status pozadka pokazać">
+<!ENTITY toolkit.dom.status.change.label "Webstronam dowolić status změnić">
+<!ENTITY status4evar.status.general.linkOver.caption "Wotkazy">
+<!ENTITY status4evar.status.linkOver.label "Wotkazy pokazać w:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Dlijenje do pokazowanja wotkazow:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Dlijenje do chowanja wotkazow:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Maksimalna dołhosć statusoweho teksta:">
+<!ENTITY status4evar.status.urlbar.align.label "Statusowe wusměrjenje:">
+<!ENTITY status4evar.status.urlbar.color.label "Tekstowa barba:">
+<!ENTITY status4evar.status.currentUrl "Aktualny URL">
+<!ENTITY status4evar.status.statusText "Statusowy tekst">
+<!ENTITY status4evar.progress.style.label "Swójski stil za postupowu hrjadu wužiwać">
+<!ENTITY status4evar.progress.style.editor.label "Editor:">
+<!ENTITY status4evar.progress.style.editor.color.label "Barba:">
+<!ENTITY status4evar.progress.style.editor.image.label "Wobraz:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Postup w adresowym polu pokazać">
+<!ENTITY status4evar.progress.urlbar.line.label "Linijowy stil:">
+<!ENTITY status4evar.progress.toolbar.force.label "Zapisk gratoweje lajsty přeco pokazać">
+<!ENTITY status4evar.download.force.label "Tłóčatko sćehnjenskeho statusa přeco pokazać">
+<!ENTITY status4evar.download.label.force.label "Tekst tłóčatka přeco pokazać">
+<!ENTITY status4evar.download.label.label "Tekst tłóčatka sćehnjenskeho statusa:">
+<!ENTITY status4evar.download.tooltip.label "Infotekst tłóčatka sćehnjenskeho statusa:">
+<!ENTITY status4evar.addonbar.borderStyle "Alternatiwne ramiki za gratowe lajsty wužiwać">
+<!ENTITY status4evar.addonbar.windowGripper "Přimk za změnjenje wulkosće wokna pokazać">
+<!ENTITY status4evar.addonbar.closeButton "Tłóčatko 'začinić' pokazać">

@@ -37,8 +37,8 @@
 <!ENTITY toolkit.dom.status.change.label "Webseiten erlauben, den Statuszeilentext zu ändern">
 <!ENTITY status4evar.status.general.linkOver.caption "Links">
 <!ENTITY status4evar.status.linkOver.label "Anzeige der Link-Adressen:">
-<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Einblenden nach (ms):">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Ausblenden nach (ms):">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maximale Länge der Statusanzeige:">
 <!ENTITY status4evar.status.urlbar.align.label "Anordnung der Statusanzeige:">
 <!ENTITY status4evar.status.urlbar.color.label "Textfarbe:">
@@ -55,6 +55,6 @@
 <!ENTITY status4evar.download.label.force.label "Beschriftung immer anzeigen">
 <!ENTITY status4evar.download.label.label "Beschriftung für Download-Status:">
 <!ENTITY status4evar.download.tooltip.label "Tooltip-Text für Download-Status:">
-<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
+<!ENTITY status4evar.addonbar.borderStyle "Alternativen Symbolleisten-Rand verwenden">
 <!ENTITY status4evar.addonbar.windowGripper "Anfasser zur Fenstergrößenänderung anzeigen">
 <!ENTITY status4evar.addonbar.closeButton "Schließen-Schaltfläche anzeigen">

@@ -8,7 +8,7 @@
 <!ENTITY status4evar.tab.urlbar "URL-linje">
 <!ENTITY status4evar.tab.popup "Pop op">
 <!ENTITY status4evar.tab.tabs "Faneblade">
-<!ENTITY status4evar.option.none "Intet">
+<!ENTITY status4evar.option.none "Ingen">
 <!ENTITY status4evar.option.toolbar "Værktøjslinje">
 <!ENTITY status4evar.option.urlbar "URL-linje">
 <!ENTITY status4evar.option.popup "Pop op">
@@ -24,7 +24,7 @@
 <!ENTITY status4evar.option.fixed "Fast">
 <!ENTITY status4evar.option.simple "Enkel">
 <!ENTITY status4evar.option.advanced "Avanceret">
-<!ENTITY status4evar.option.browse "Gennemse">
+<!ENTITY status4evar.option.browse "Gennemse…">
 <!ENTITY status4evar.option.clear "Ryd">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">
@@ -37,14 +37,14 @@
 <!ENTITY toolkit.dom.status.change.label "Tillad websider at ændre statussen">
 <!ENTITY status4evar.status.general.linkOver.caption "Links">
 <!ENTITY status4evar.status.linkOver.label "Vis links i:">
-<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Forsinkelse før links vises:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Forsinkelse før links skjules:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maks længde af statustekst:">
 <!ENTITY status4evar.status.urlbar.align.label "Justering af status:">
 <!ENTITY status4evar.status.urlbar.color.label "Tekstfarve:">
 <!ENTITY status4evar.status.currentUrl "Nuværende URL">
 <!ENTITY status4evar.status.statusText "Statustekst">
-<!ENTITY status4evar.progress.style.label "Position:">
+<!ENTITY status4evar.progress.style.label "Anvend tilpasset stil på forløbslinje">
 <!ENTITY status4evar.progress.style.editor.label "Editor:">
 <!ENTITY status4evar.progress.style.editor.color.label "Farve:">
 <!ENTITY status4evar.progress.style.editor.image.label "Billede:">
@@ -52,9 +52,9 @@
 <!ENTITY status4evar.progress.urlbar.line.label "Linjestil:">
 <!ENTITY status4evar.progress.toolbar.force.label "Vis altid værktøjslinjeelementet">
 <!ENTITY status4evar.download.force.label "Vis altid knappen Filhentningsstatus">
-<!ENTITY status4evar.download.label.force.label "Vis altid etiket">
-<!ENTITY status4evar.download.label.label "Etiket til Filhentningsstatus:">
-<!ENTITY status4evar.download.tooltip.label "Værktøjstip til Filhentningsstatus:">
-<!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
+<!ENTITY status4evar.download.label.force.label "Vis altid knapteksten">
+<!ENTITY status4evar.download.label.label "Tekst på knappen Filhentningsstatus:">
+<!ENTITY status4evar.download.tooltip.label "Værktøjstip til knappen Filhentningsstatus:">
+<!ENTITY status4evar.addonbar.borderStyle "Anvend alternative kanter til værktøjslinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gribelinjen til ændring af vinduesstørrelse">
 <!ENTITY status4evar.addonbar.closeButton "Vis knappen Luk">
