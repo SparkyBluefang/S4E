@@ -1,4 +1,5 @@
 *.xpi
+install.manifest
 install.rdf
 components/*.xpt
 release/

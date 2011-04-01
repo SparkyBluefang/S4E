@@ -1,0 +1,12 @@
+type=2
+id=status4evar@caligonstudios.com
+version=@VERSION@
+creator=Sparky Bluefang
+optionsURL=chrome://status4evar/content/prefs.xul
+iconURL=chrome://status4evar/skin/s4e32.png
+homepageURL=http://forums.mozillazine.org/viewtopic.php?f=48&t=2001965
+
+defaultLocale=en-US
+
+Firefox=4.0|4.2a1pre
+
