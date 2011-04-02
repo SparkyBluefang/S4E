@@ -48,6 +48,12 @@ window.addEventListener("load", function()
 	let s4e_service = caligon.status4evar.service;
 
 //
+// S4E Strings
+//
+	caligon.status4evar.strings = Services.strings.createBundle("chrome://status4evar/locale/overlay.properties");
+	let s4e_strings = caligon.status4evar.strings;
+
+//
 // Element getters
 //
 	caligon.status4evar.getters =
@@ -495,10 +501,10 @@ window.addEventListener("load", function()
 							switch (aStatus)
 							{
 								case Components.results.NS_BINDING_ABORTED:
-									msg = gNavigatorBundle.getString("nv_stopped");
+									msg = s4e_strings.getString("nv_stopped");
 									break;
 								case Components.results.NS_ERROR_NET_TIMEOUT:
-									msg = gNavigatorBundle.getString("nv_timeout");
+									msg = s4e_strings.getString("nv_timeout");
 									break;
 							}
 						}
@@ -506,7 +512,7 @@ window.addEventListener("load", function()
 
 					if(!msg && (!location || location.spec != "about:blank"))
 					{
-						msg = gNavigatorBundle.getString("nv_done");
+						msg = s4e_strings.getString("nv_done");
 					}
 
 					XULBrowserWindow.setDefaultStatus(msg);
@@ -568,9 +574,9 @@ window.addEventListener("load", function()
 //
 	caligon.status4evar.downloadStatus =
 	{
-		_activeStr:	document.getElementById("bundle_status4evar").getString("activeDownloads"),
-		_pausedStr:	document.getElementById("bundle_status4evar").getString("pausedDownloads"),
-		_noDnldStr:	document.getElementById("bundle_status4evar").getString("noDownloads"),
+		_activeStr:	s4e_strings.getString("activeDownloads"),
+		_pausedStr:	s4e_strings.getString("pausedDownloads"),
+		_noDnldStr:	s4e_strings.getString("noDownloads"),
 		_listening:	false,
 		_lastTime:	Infinity,
 		_dlCountStr:	null,
@@ -862,7 +868,7 @@ window.addEventListener("load", function()
 		let status_label = s4e_getters.statusWidgetLabel;
 		if(status_label)
 		{
-			status_label.value = document.getElementById("bundle_status4evar").getString("statusText");
+			status_label.value = s4e_strings.getString("statusText");
 		}
 	}
 	let s4e_beforeCustomization = caligon.status4evar.beforeCustomization;

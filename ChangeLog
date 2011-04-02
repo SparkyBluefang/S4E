@@ -1,4 +1,6 @@
 Version next
+* Add strings that were removed from Firefox 4.2a1pre.
+* Use nsIStringBundleService rather than making DOM calls.
 
 Version 2011.04.01.00
 * Localize the install manifest

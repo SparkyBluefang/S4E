@@ -44,10 +44,6 @@
 <overlay id="status4evar-overlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<stringbundleset id="stringbundleset">  
-		<stringbundle id="bundle_status4evar" src="chrome://status4evar/locale/overlay.properties" />   
-	</stringbundleset>
-
 	<script type="application/javascript" src="chrome://status4evar/content/overlay.js" />
 
 	<commandset>
