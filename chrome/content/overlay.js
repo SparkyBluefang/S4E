@@ -50,7 +50,7 @@ window.addEventListener("load", function()
 //
 // S4E Strings
 //
-	caligon.status4evar.strings = Services.strings.createBundle("chrome://status4evar/locale/overlay.properties");
+	caligon.status4evar.strings = document.getElementById("bundle_status4evar");
 	let s4e_strings = caligon.status4evar.strings;
 
 //
