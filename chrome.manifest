@@ -4,6 +4,7 @@ locale	status4evar	en-US		chrome/locale/en-US/
 locale	status4evar	bg-BG		chrome/locale/bg-BG/
 locale	status4evar	da		chrome/locale/da/
 locale	status4evar	de		chrome/locale/de/
+locale	status4evar	eo		chrome/locale/eo/
 locale	status4evar	fr		chrome/locale/fr/
 locale	status4evar	hsb-DE		chrome/locale/hsb-DE/
 locale	status4evar	hu		chrome/locale/hu/

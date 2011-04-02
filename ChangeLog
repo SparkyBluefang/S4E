@@ -1,6 +1,8 @@
 Version next
 * Add strings that were removed from Firefox 4.2a1pre.
 * Centralize stringbundle DOM call.
+* Added translations for: eo
+* Updated translations for: bg-BG, hsb-DE
 
 Version 2011.04.01.00
 * Localize the install manifest

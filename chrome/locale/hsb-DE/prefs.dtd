@@ -6,12 +6,12 @@
 <!ENTITY status4evar.tab.general "Powšitkowne">
 <!ENTITY status4evar.tab.toolbar "Gratowa lajsta">
 <!ENTITY status4evar.tab.urlbar "Adresowe polo">
-<!ENTITY status4evar.tab.popup "Wuskakowace wokno">
+<!ENTITY status4evar.tab.popup "Kontekstowy menij">
 <!ENTITY status4evar.tab.tabs "Rajtarki">
 <!ENTITY status4evar.option.none "Žadyn">
-<!ENTITY status4evar.option.toolbar "Gratowa lajsta">
-<!ENTITY status4evar.option.urlbar "Adresowe polo">
-<!ENTITY status4evar.option.popup "Wuskakowace wokno">
+<!ENTITY status4evar.option.toolbar "Gratowej lajsće">
+<!ENTITY status4evar.option.urlbar "Adresowym polu">
+<!ENTITY status4evar.option.popup "Kontekstowym meniju">
 <!ENTITY status4evar.option.tooltip "Infotekst">
 <!ENTITY status4evar.option.bottom "Deleka">
 <!ENTITY status4evar.option.top "Horjeka">
@@ -26,7 +26,7 @@
 <!ENTITY status4evar.option.advanced "Rozšěrjeny">
 <!ENTITY status4evar.option.browse "Přepytać">
 <!ENTITY status4evar.option.clear "Wuprózdnić">
-<!ENTITY status4evar.unit.seconds "sekundow">
+<!ENTITY status4evar.unit.seconds "sekundach">
 <!ENTITY status4evar.unit.px "pikselow">
 <!ENTITY status4evar.status.general.status.caption "Statusowy tekst">
 <!ENTITY status4evar.status.label "Status pokazać w:">

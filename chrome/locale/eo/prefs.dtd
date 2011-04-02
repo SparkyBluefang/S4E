@@ -1,0 +1,60 @@
+<!ENTITY status4evar.window.title "Agordoj de Status-4-Evar">
+<!ENTITY status4evar.pane.status "Stato">
+<!ENTITY status4evar.pane.progress "Plenumado">
+<!ENTITY status4evar.pane.download "Elŝuto">
+<!ENTITY status4evar.pane.addonbar "Breto de aldonaĵoj">
+<!ENTITY status4evar.tab.general "Ĝenerala">
+<!ENTITY status4evar.tab.toolbar "Ilaro">
+<!ENTITY status4evar.tab.urlbar "Adresbreto">
+<!ENTITY status4evar.tab.popup "Ŝprucfenestro">
+<!ENTITY status4evar.tab.tabs "Langetoj">
+<!ENTITY status4evar.option.none "Neniu">
+<!ENTITY status4evar.option.toolbar "Ilaro">
+<!ENTITY status4evar.option.urlbar "Adresbreto">
+<!ENTITY status4evar.option.popup "Ŝprucfenestro">
+<!ENTITY status4evar.option.tooltip "Ŝpruhelpilo">
+<!ENTITY status4evar.option.bottom "Malsupre">
+<!ENTITY status4evar.option.top "Supre">
+<!ENTITY status4evar.option.fill "Plenigi">
+<!ENTITY status4evar.option.dlcount "Nombro de elŝutoj">
+<!ENTITY status4evar.option.dltime "Restanta tempo">
+<!ENTITY status4evar.option.both "Ambaŭ">
+<!ENTITY status4evar.option.right "Dekstre">
+<!ENTITY status4evar.option.left "Maldekstre">
+<!ENTITY status4evar.option.fixed "Fiksita">
+<!ENTITY status4evar.option.simple "Simpla">
+<!ENTITY status4evar.option.advanced "Detala">
+<!ENTITY status4evar.option.browse "Foliumi">
+<!ENTITY status4evar.option.clear "Forigi">
+<!ENTITY status4evar.unit.seconds "sekundoj">
+<!ENTITY status4evar.unit.px "rastrumeroj">
+<!ENTITY status4evar.status.general.status.caption "Statoteksto">
+<!ENTITY status4evar.status.label "Montri staton en:">
+<!ENTITY status4evar.status.timeout.label "Kaŝi staton post">
+<!ENTITY status4evar.status.default.label "Montri defaŭltan staton">
+<!ENTITY status4evar.status.network.label "Montri retstaton">
+<!ENTITY status4evar.status.network.xhr.label "Montri fonan retstaton">
+<!ENTITY toolkit.dom.status.change.label "Permesi al retpaĝoj ŝanĝi la staton">
+<!ENTITY status4evar.status.general.linkOver.caption "Ligiloj">
+<!ENTITY status4evar.status.linkOver.label "Montri ligilojn en:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Prokrasto antaŭ ol ligiloj montriĝas:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Prokrasto antaŭ ol ligiloj kaŝiĝas:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Maksimuma longeco de statoteksto:">
+<!ENTITY status4evar.status.urlbar.align.label "Statoĝisrandigo:">
+<!ENTITY status4evar.status.urlbar.color.label "Tekstokoloro:">
+<!ENTITY status4evar.status.currentUrl "Aktuala URL">
+<!ENTITY status4evar.status.statusText "Statoteksto">
+<!ENTITY status4evar.progress.style.label "Uzi propran stilon por plenumindikilo">
+<!ENTITY status4evar.progress.style.editor.label "Redaktilo:">
+<!ENTITY status4evar.progress.style.editor.color.label "Koloro:">
+<!ENTITY status4evar.progress.style.editor.image.label "Bildo:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Montri plenumadon en la adresbreto">
+<!ENTITY status4evar.progress.urlbar.line.label "Liniostilo:">
+<!ENTITY status4evar.progress.toolbar.force.label "Ĉiam montri la ilaran elementon">
+<!ENTITY status4evar.download.force.label "Ĉiam montri la elŝutostatan butonon">
+<!ENTITY status4evar.download.label.force.label "Ĉiam montri la butontekston">
+<!ENTITY status4evar.download.label.label "Teksto de elŝutostata butono:">
+<!ENTITY status4evar.download.tooltip.label "Ŝpruchelpilo de elŝutostata butono:">
+<!ENTITY status4evar.addonbar.borderStyle "Uzi alternativajn ilaroborderojn">
+<!ENTITY status4evar.addonbar.windowGripper "Montri prenilon por fenestroskalado">
+<!ENTITY status4evar.addonbar.closeButton "Montri butonon 'Fermi'">
