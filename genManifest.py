@@ -66,24 +66,59 @@ def buildManafest():
 	(info, targets, locales) = getConfig()
 	f = codecs.open("install.rdf", mode="w", encoding="utf-8")
 
-	# Print the header and required information
+	#
+	# Print the header
+	#
 	f.write(u"""<?xml version="1.0" encoding="UTF-8"?>
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
-	<Description about="urn:mozilla:install-manifest">
+	<Description about="urn:mozilla:install-manifest">\n""")
 
+	#
+	# Print extension info blocks
+	#
+
+	f.write(u"""
 		<!-- Info -->\n""")
 
-	# Print extension info block
 	keys = info.keys()
 	keys.sort()
 	for prop in keys:
 		f.write(u"""
 		<em:%s>%s</em:%s>""" % (prop, escape(info[prop]), prop))
+	f.write(u"""\n""")
 
-	f.write(u"""\n
+	#
+	# Print the locale blocks
+	#
+
+	f.write(u"""
+		<!-- Localizations -->\n""")
+
+	keys = locales.keys()
+	keys.sort()
+	for locale in keys:
+		l10n = locales[locale]
+		for t in l10n["translator"].split(","):
+			f.write(u"""
+		<em:translator>%s [%s]</em:translator>""" % (escape(t.strip()), locale))
+		f.write(u"""
+		<em:localized><!-- %s -->
+			<Description>
+				<em:locale>%s</em:locale>
+				<em:name>%s</em:name>
+				<em:description>%s</em:description>
+				<em:creator>%s</em:creator>
+				<em:homepageURL>%s</em:homepageURL>
+			</Description>
+		</em:localized>\n""" % (locale, locale, escape(l10n["name"]), escape(l10n["description"]), escape(info["creator"]), escape(info["homepageURL"])))
+
+	#
+	# Print target blocks
+	#
+
+	f.write(u"""
 		<!-- Targets -->\n""")
 
-	# Print target blocks
 	keys = targets.keys()
 	keys.sort()
 	for t in keys:
@@ -97,31 +132,10 @@ def buildManafest():
 			</Description>
 		</em:targetApplication>\n""" % (t, target["id"], target["min"], target["max"]))
 
-	f.write(u"""
-		<!-- Localizations -->\n""")
-
-	# Print the locale blocks
-	keys = locales.keys()
-	keys.sort()
-	for locale in keys:
-		l10n = locales[locale]
-
-		translators = u""
-		for t in l10n["translator"].split(","):
-			translators += u"""
-				<em:translator>%s</em:translator>""" % escape(t.strip())
-
-		f.write(u"""
-		<em:localized><!-- %s -->
-			<Description>
-				<em:locale>%s</em:locale>
-				<em:name>%s</em:name>
-				<em:description>%s</em:description>
-				<em:creator>%s</em:creator>%s
-			</Description>
-		</em:localized>\n""" % (locale, locale, escape(l10n["name"]), escape(l10n["description"]), escape(info["creator"]), translators))
-
+	#
 	# Print the footer
+	#
+
 	f.write("""
 	</Description>
 </RDF>\n""")
