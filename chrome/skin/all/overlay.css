@@ -36,6 +36,7 @@
  * ***** END LICENSE BLOCK ***** */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
 
 /*
  * General styles
@@ -196,6 +197,7 @@ splitter.status4evar-status-splitter:not(:hover)
 }
 
 .urlbar-input-layer[overlinkstate="fade-in"],
+.urlbar-input-layer[overlinkstate="fade-in"] html|input.urlbar-input:-moz-placeholder,
 .urlbar-over-link-layer[overlinkstate="fade-out"]
 {
 	-moz-transition-property: color;
@@ -204,7 +206,8 @@ splitter.status4evar-status-splitter:not(:hover)
 }
 
 .urlbar-over-link-layer[overlinkstate="fade-in"],
-.urlbar-input-layer[overlinkstate="fade-out"]
+.urlbar-input-layer[overlinkstate="fade-out"],
+.urlbar-input-layer[overlinkstate="fade-out"] html|input.urlbar-input:-moz-placeholder
 {
 	-moz-transition-property: color;
 	-moz-transition-duration: 150ms;
@@ -241,7 +244,8 @@ splitter.status4evar-status-splitter:not(:hover)
 	opacity: 1;
 }
 
-.urlbar-input-layer[overlinkstate="showing"]
+.urlbar-input-layer[overlinkstate="showing"],
+.urlbar-input-layer[overlinkstate="showing"] html|input.urlbar-input:-moz-placeholder
 {
 	color: transparent;
 }
