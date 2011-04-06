@@ -1,6 +1,6 @@
 Version next
 * Make sure the urlbar placeholder text is hidden when showing link/status.
-* Add new strings for all translations (except pt-BR, ro).
+* Add new strings for all translations.
 * Added translations for: cs, ru
 
 Version 2011.04.02.18b
