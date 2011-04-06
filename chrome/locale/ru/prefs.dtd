@@ -1,0 +1,60 @@
+<!ENTITY status4evar.window.title "Status-4-Evar — Настройки">
+<!ENTITY status4evar.pane.status "Сообщения">
+<!ENTITY status4evar.pane.progress "Индикатор">
+<!ENTITY status4evar.pane.download "Загрузки">
+<!ENTITY status4evar.pane.addonbar "Панель дополнений">
+<!ENTITY status4evar.tab.general "Общие">
+<!ENTITY status4evar.tab.toolbar "Панель инструментов">
+<!ENTITY status4evar.tab.urlbar "Адресная строка">
+<!ENTITY status4evar.tab.popup "Всплывающая">
+<!ENTITY status4evar.tab.tabs "Вкладки">
+<!ENTITY status4evar.option.none "не показывать">
+<!ENTITY status4evar.option.toolbar "в панели инструментов">
+<!ENTITY status4evar.option.urlbar "в адресной строке">
+<!ENTITY status4evar.option.popup "во всплывающей строке">
+<!ENTITY status4evar.option.tooltip "Всплывающая подсказка">
+<!ENTITY status4evar.option.bottom "полоска внизу">
+<!ENTITY status4evar.option.top "полоска вверху">
+<!ENTITY status4evar.option.fill "заливка строки">
+<!ENTITY status4evar.option.dlcount "счётчик загрузок">
+<!ENTITY status4evar.option.dltime "оставшееся время">
+<!ENTITY status4evar.option.both "и то, и другое">
+<!ENTITY status4evar.option.right "справа">
+<!ENTITY status4evar.option.left "слева">
+<!ENTITY status4evar.option.fixed "закрепить">
+<!ENTITY status4evar.option.simple "простой">
+<!ENTITY status4evar.option.advanced "улучшенный">
+<!ENTITY status4evar.option.browse "Обзор">
+<!ENTITY status4evar.option.clear "Очистка">
+<!ENTITY status4evar.unit.seconds "сек.">
+<!ENTITY status4evar.unit.px "пикс.">
+<!ENTITY status4evar.status.general.status.caption "Текст сообщений">
+<!ENTITY status4evar.status.label "Показывать сообщения:">
+<!ENTITY status4evar.status.timeout.label "Скрывать сообщение через">
+<!ENTITY status4evar.status.default.label "Показывать стандартные сообщения">
+<!ENTITY status4evar.status.network.label "Показывать сообщения сети">
+<!ENTITY status4evar.status.network.xhr.label "Показывать сообщения сети в фоне">
+<!ENTITY toolkit.dom.status.change.label "Разрешить веб-страницам изменять сообщения">
+<!ENTITY status4evar.status.general.linkOver.caption "Ссылки">
+<!ENTITY status4evar.status.linkOver.label "Показывать ссылки:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Задержка перед отображением ссылки:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Задержка перед скрытием ссылки:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Максимальная ширина элемента «Текст сообщения»:">
+<!ENTITY status4evar.status.urlbar.align.label "Расположение сообщения:">
+<!ENTITY status4evar.status.urlbar.color.label "Цвет текста:">
+<!ENTITY status4evar.status.currentUrl "Адрес страницы">
+<!ENTITY status4evar.status.statusText "Сообщение">
+<!ENTITY status4evar.progress.style.label "Собственный стиль индикатора">
+<!ENTITY status4evar.progress.style.editor.label "Редактор:">
+<!ENTITY status4evar.progress.style.editor.color.label "Цвет:">
+<!ENTITY status4evar.progress.style.editor.image.label "Рисунок:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Показывать индикатор в адресной строке">
+<!ENTITY status4evar.progress.urlbar.line.label "Стиль:">
+<!ENTITY status4evar.progress.toolbar.force.label "Всегда показывать элементы панели инструментов">
+<!ENTITY status4evar.download.force.label "Всегда показывать кнопку «Состояние загрузок»">
+<!ENTITY status4evar.download.label.force.label "Всегда показывать текст кнопки">
+<!ENTITY status4evar.download.label.label "В тексте кнопки отображать:">
+<!ENTITY status4evar.download.tooltip.label "Во всплывающей подсказке кнопки отображать:">
+<!ENTITY status4evar.addonbar.borderStyle "Использовать чередующиеся границы панелей инструментов">
+<!ENTITY status4evar.addonbar.windowGripper "Показать захват изменения размера окна">
+<!ENTITY status4evar.addonbar.closeButton "Показать кнопку «Закрыть»">

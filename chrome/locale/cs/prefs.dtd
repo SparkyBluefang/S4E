@@ -1,0 +1,60 @@
+<!ENTITY status4evar.window.title "Možnosti Status-4-Evar">
+<!ENTITY status4evar.pane.status "Stav">
+<!ENTITY status4evar.pane.progress "Činnost">
+<!ENTITY status4evar.pane.download "Stahování">
+<!ENTITY status4evar.pane.addonbar "Lišta doplňků">
+<!ENTITY status4evar.tab.general "Obecné">
+<!ENTITY status4evar.tab.toolbar "nástrojové liště">
+<!ENTITY status4evar.tab.urlbar "adresním řádku">
+<!ENTITY status4evar.tab.popup "vyskakovací">
+<!ENTITY status4evar.tab.tabs "Panely">
+<!ENTITY status4evar.option.none "žádný">
+<!ENTITY status4evar.option.toolbar "nástrojové liště">
+<!ENTITY status4evar.option.urlbar "adresním řádku">
+<!ENTITY status4evar.option.popup "vyskakovací">
+<!ENTITY status4evar.option.tooltip "Místní nápověda">
+<!ENTITY status4evar.option.bottom "dole">
+<!ENTITY status4evar.option.top "nahoře">
+<!ENTITY status4evar.option.fill "vyplnit">
+<!ENTITY status4evar.option.dlcount "Počet stahování">
+<!ENTITY status4evar.option.dltime "Zbývající čas">
+<!ENTITY status4evar.option.both "obojí">
+<!ENTITY status4evar.option.right "vpravo">
+<!ENTITY status4evar.option.left "vlevo">
+<!ENTITY status4evar.option.fixed "pevný">
+<!ENTITY status4evar.option.simple "Jednoduchý">
+<!ENTITY status4evar.option.advanced "Rozšířený">
+<!ENTITY status4evar.option.browse "Vybrat">
+<!ENTITY status4evar.option.clear "Vyčistit">
+<!ENTITY status4evar.unit.seconds "vteřinách">
+<!ENTITY status4evar.unit.px "px">
+<!ENTITY status4evar.status.general.status.caption "Stavový text">
+<!ENTITY status4evar.status.label "Zobrazit stav v:">
+<!ENTITY status4evar.status.timeout.label "Skrýt stav po">
+<!ENTITY status4evar.status.default.label "Zobrazit výchozí stav">
+<!ENTITY status4evar.status.network.label "Zobrazit stav sítě">
+<!ENTITY status4evar.status.network.xhr.label "Zobrazit pozadí stavu sítě">
+<!ENTITY toolkit.dom.status.change.label "Povolit stránkám změnit stavový text">
+<!ENTITY status4evar.status.general.linkOver.caption "Odkazy">
+<!ENTITY status4evar.status.linkOver.label "Zobrazovat adresy odkazů v:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Zpoždění zobrazení odkazů:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Zpoždění skrytí odkazů:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Maximální délka stavu:">
+<!ENTITY status4evar.status.urlbar.align.label "Zarovnání:">
+<!ENTITY status4evar.status.urlbar.color.label "Barva písma:">
+<!ENTITY status4evar.status.currentUrl "Aktuální adresa">
+<!ENTITY status4evar.status.statusText "Stavový text">
+<!ENTITY status4evar.progress.style.label "Použít vlastní styl pro lištu činnosti">
+<!ENTITY status4evar.progress.style.editor.label "Editor:">
+<!ENTITY status4evar.progress.style.editor.color.label "Barva:">
+<!ENTITY status4evar.progress.style.editor.image.label "Obrázek:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Zobrazit činnosti v adresním řádku">
+<!ENTITY status4evar.progress.urlbar.line.label "Styl linky:">
+<!ENTITY status4evar.progress.toolbar.force.label "Vždy zobrazit položku v nástrojové liště">
+<!ENTITY status4evar.download.force.label "Vždy zobrazit tlačítko průběhu stahování">
+<!ENTITY status4evar.download.label.force.label "Vždy zobrazit text tlačítka">
+<!ENTITY status4evar.download.label.label "Text tlačítka průběhu stahování:">
+<!ENTITY status4evar.download.tooltip.label "Nápověda tlačítka průběhu stahování:">
+<!ENTITY status4evar.addonbar.borderStyle "Použít alternativní ohraničení lišty">
+<!ENTITY status4evar.addonbar.windowGripper "Zobrazit chytač změny velikosti okna">
+<!ENTITY status4evar.addonbar.closeButton "Zobrazit tlačítko zavření">

@@ -2,6 +2,7 @@ content	status4evar			chrome/content/
 
 locale	status4evar	en-US		chrome/locale/en-US/
 locale	status4evar	bg-BG		chrome/locale/bg-BG/
+locale	status4evar	cs		chrome/locale/cs/
 locale	status4evar	da		chrome/locale/da/
 locale	status4evar	de		chrome/locale/de/
 locale	status4evar	eo		chrome/locale/eo/
@@ -14,6 +15,7 @@ locale	status4evar	nl		chrome/locale/nl/
 locale	status4evar	pl		chrome/locale/pl/
 locale	status4evar	pt-BR		chrome/locale/pt-BR/
 locale	status4evar	ro		chrome/locale/ro/
+locale	status4evar	ru		chrome/locale/ru/
 locale	status4evar	sr		chrome/locale/sr/
 locale	status4evar	sv-SE		chrome/locale/sv-SE/
 locale	status4evar	zh-CN		chrome/locale/zh-CN/

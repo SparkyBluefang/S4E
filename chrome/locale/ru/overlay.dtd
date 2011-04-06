@@ -1,0 +1,5 @@
+<!ENTITY status4evar.status.widget.title "Текст сообщения">
+<!ENTITY status4evar.progress.widget.title "Индикатор выполнения">
+<!ENTITY status4evar.download.widget.title "Состояние загрузок">
+<!ENTITY status4evar.options.widget.title "Настройки Status-4-Evar">
+<!ENTITY status4evar.options.widget.label "Status-4-Evar">
