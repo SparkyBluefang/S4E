@@ -803,7 +803,7 @@ window.addEventListener("load", function()
 		}
 
 		if((previousSibling && previousSibling.flex > 0)
-		|| (urlbar.getAttribute("combined") && stop && stop == previousSibling))
+		|| (urlbar && stop && urlbar.getAttribute("combined") && stop == previousSibling))
 		{
 			status.parentNode.insertBefore(getSplitter(splitter_before, "before"), status);
 		}
