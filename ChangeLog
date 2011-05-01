@@ -1,4 +1,7 @@
 Version next
+* Firefox 6.0a1 changed the nsIDOMWindow interface ID. Make S4E compatible.
+* Added translations for: el, es-ES, he
+* Updated translations for: ro
 
 Version 2011.04.06.18
 * Make sure the urlbar placeholder text is hidden when showing link/status.

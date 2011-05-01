@@ -1,0 +1,5 @@
+<!ENTITY status4evar.status.widget.title "Mensaje de Estado">
+<!ENTITY status4evar.progress.widget.title "Medidor de Progreso">
+<!ENTITY status4evar.download.widget.title "Estado de las Descargas">
+<!ENTITY status4evar.options.widget.title "Opciones de Status-4-Evar">
+<!ENTITY status4evar.options.widget.label "Status-4-Evar">

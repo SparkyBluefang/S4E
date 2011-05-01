@@ -6,22 +6,22 @@
 <!ENTITY status4evar.tab.general "General">
 <!ENTITY status4evar.tab.toolbar "Bară de suplimente">
 <!ENTITY status4evar.tab.urlbar "Bară de adrese">
-<!ENTITY status4evar.tab.popup "Fereastră instantanee">
+<!ENTITY status4evar.tab.popup "Bară instantanee">
 <!ENTITY status4evar.tab.tabs "File">
 <!ENTITY status4evar.option.none "Nu afișa">
 <!ENTITY status4evar.option.toolbar "Bara de suplimente">
 <!ENTITY status4evar.option.urlbar "Bara de adrese">
-<!ENTITY status4evar.option.popup "Fereastră instantanee">
+<!ENTITY status4evar.option.popup "Bară instantanee">
 <!ENTITY status4evar.option.tooltip "Balon informativ">
-<!ENTITY status4evar.option.bottom "La sfârșit">
-<!ENTITY status4evar.option.top "La început">
-<!ENTITY status4evar.option.fill "În ambele părți">
+<!ENTITY status4evar.option.bottom "În partea de jos a barei de adrese">
+<!ENTITY status4evar.option.top "În partea de sus a barei de adrese">
+<!ENTITY status4evar.option.fill "Pe toată bara de adrese">
 <!ENTITY status4evar.option.dlcount "Număr descărcări">
 <!ENTITY status4evar.option.dltime "Timp rămas">
 <!ENTITY status4evar.option.both "Număr descărcări și timp rămas">
 <!ENTITY status4evar.option.right "La dreapta">
 <!ENTITY status4evar.option.left "La stânga">
-<!ENTITY status4evar.option.fixed "Fixat">
+<!ENTITY status4evar.option.fixed "La o poziție fixă">
 <!ENTITY status4evar.option.simple "Simplu">
 <!ENTITY status4evar.option.advanced "Complex">
 <!ENTITY status4evar.option.browse "Răsfoiește">
@@ -29,32 +29,32 @@
 <!ENTITY status4evar.unit.seconds "secunde">
 <!ENTITY status4evar.unit.px "pixeli">
 <!ENTITY status4evar.status.general.status.caption "Informații de stare">
-<!ENTITY status4evar.status.label "Afișează informațiile de stare în:">
+<!ENTITY status4evar.status.label "Informațiile de stare se afișează în:">
 <!ENTITY status4evar.status.timeout.label "Ascunde informațiile de stare după:">
 <!ENTITY status4evar.status.default.label "Afișează informațiile de stare implicite">
-<!ENTITY status4evar.status.network.label "Afișează starea rețelei">
-<!ENTITY status4evar.status.network.xhr.label "Afișează starea rețelei în fundal">
+<!ENTITY status4evar.status.network.label "Afișează starea conexiunii">
+<!ENTITY status4evar.status.network.xhr.label "Afișează starea interogărilor directe din fundal">
 <!ENTITY toolkit.dom.status.change.label "Permite paginilor web să modifice informațiile de stare">
 <!ENTITY status4evar.status.general.linkOver.caption "Legături">
-<!ENTITY status4evar.status.linkOver.label "Afișează legăturile în:">
+<!ENTITY status4evar.status.linkOver.label "Legăturile se afișează în:">
 <!ENTITY status4evar.status.linkOver.delay.show.label "Întârziere înaintea afișării legăturilor:">
 <!ENTITY status4evar.status.linkOver.delay.hide.label "Întârziere înaintea ascunderii legăturilor:">
-<!ENTITY status4evar.status.toolbar.maxLength.label "Lungime maximă a textului afișat:">
-<!ENTITY status4evar.status.urlbar.align.label "Aliniază informația de stăre:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Limitează lungimea textului afișat la:">
+<!ENTITY status4evar.status.urlbar.align.label "Informația de stăre se aliniază:">
 <!ENTITY status4evar.status.urlbar.color.label "Culoare text:">
-<!ENTITY status4evar.status.currentUrl "Adresă curentă:">
-<!ENTITY status4evar.status.statusText "Stare:">
+<!ENTITY status4evar.status.currentUrl "Adresă curentă">
+<!ENTITY status4evar.status.statusText "Stare">
 <!ENTITY status4evar.progress.style.label "Utilizează un stil particularizat pentru bara de progres">
-<!ENTITY status4evar.progress.style.editor.label "Editor:">
+<!ENTITY status4evar.progress.style.editor.label "Editor de stil:">
 <!ENTITY status4evar.progress.style.editor.color.label "Culoare:">
 <!ENTITY status4evar.progress.style.editor.image.label "Imagine:">
-<!ENTITY status4evar.progress.urlbar.enable.label "Afișează progresul în bara de locații">
-<!ENTITY status4evar.progress.urlbar.line.label "Stil linie:">
-<!ENTITY status4evar.progress.toolbar.force.label "Afișează întotdeauna elementul din bara de unelte">
-<!ENTITY status4evar.download.force.label "Afișează întotdeauna butonul stării de descărcare">
-<!ENTITY status4evar.download.label.force.label "Afișează întotdeauna textul butonului">
-<!ENTITY status4evar.download.label.label "Text pe butonul stării de descărcare:">
-<!ENTITY status4evar.download.tooltip.label "Balon informativ al butonului stării de descărcare:">
-<!ENTITY status4evar.addonbar.borderStyle "Utilizează chenarul alternativ al barei de unelte">
-<!ENTITY status4evar.addonbar.windowGripper "Afișează glisorul de redimensionare a ferestrei">
-<!ENTITY status4evar.addonbar.closeButton "Afișează butonul de închidere">
+<!ENTITY status4evar.progress.urlbar.enable.label "Afișează bara de progres în bara de adrese">
+<!ENTITY status4evar.progress.urlbar.line.label "Mod de afișare:">
+<!ENTITY status4evar.progress.toolbar.force.label "Afișează întotdeauna bara de progres în bara de suplimente">
+<!ENTITY status4evar.download.force.label "Afișează întotdeauna butonul de stare a descărcării">
+<!ENTITY status4evar.download.label.force.label "Afișează întotdeauna textul de pe butonul de stare a descărcării">
+<!ENTITY status4evar.download.label.label "Text pe butonul de stare a descărcării:">
+<!ENTITY status4evar.download.tooltip.label "Text în balonul informativ al butonului de stare a descărcării:">
+<!ENTITY status4evar.addonbar.borderStyle "Utilizează chenarul alternativ al barei de suplimente">
+<!ENTITY status4evar.addonbar.windowGripper "Afișează glisorul de redimensionare a ferestrei navigatorului">
+<!ENTITY status4evar.addonbar.closeButton "Afișează butonul de ascundere al barei de suplimente">

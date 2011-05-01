@@ -1,0 +1,60 @@
+<!ENTITY status4evar.window.title "Προτιμήσεις για το Status-4-Evar">
+<!ENTITY status4evar.pane.status "Κατάσταση">
+<!ENTITY status4evar.pane.progress "Πρόοδος">
+<!ENTITY status4evar.pane.download "Λήψεις">
+<!ENTITY status4evar.pane.addonbar "Εργαλειοθήκη προσθέτου">
+<!ENTITY status4evar.tab.general "Γενικά">
+<!ENTITY status4evar.tab.toolbar "Εργαλειοθήκη">
+<!ENTITY status4evar.tab.urlbar "Γραμμή URL">
+<!ENTITY status4evar.tab.popup "Αναδυόμενο">
+<!ENTITY status4evar.tab.tabs "Καρτέλες">
+<!ENTITY status4evar.option.none "Καμία">
+<!ENTITY status4evar.option.toolbar "Στην εργαλειοθήκη">
+<!ENTITY status4evar.option.urlbar "Στη γραμμή URL">
+<!ENTITY status4evar.option.popup "Σε αναδυόμενο">
+<!ENTITY status4evar.option.tooltip "Με συμβουλή εργαλείου">
+<!ENTITY status4evar.option.bottom "Κάτω μέρος">
+<!ENTITY status4evar.option.top "Κορυφή">
+<!ENTITY status4evar.option.fill "Γέμισμα">
+<!ENTITY status4evar.option.dlcount "Αριθμό λήψεων">
+<!ENTITY status4evar.option.dltime "Υπολειπόμενο χρόνο">
+<!ENTITY status4evar.option.both "Αμφότερα">
+<!ENTITY status4evar.option.right "Δεξιά">
+<!ENTITY status4evar.option.left "Αριστερά">
+<!ENTITY status4evar.option.fixed "Καθορισμένη">
+<!ENTITY status4evar.option.simple "Απλός">
+<!ENTITY status4evar.option.advanced "Προηγμένος">
+<!ENTITY status4evar.option.browse "Αναζήτηση">
+<!ENTITY status4evar.option.clear "Απαλοιφή">
+<!ENTITY status4evar.unit.seconds "δευτερόλεπτα">
+<!ENTITY status4evar.unit.px "px">
+<!ENTITY status4evar.status.general.status.caption "Κείμενο κατάστασης">
+<!ENTITY status4evar.status.label "Εμφάνιση κατάστασης:">
+<!ENTITY status4evar.status.timeout.label "Απόκρυψη της κατάστασης μετά από">
+<!ENTITY status4evar.status.default.label "Εμφάνιση βασικής κατάστασης">
+<!ENTITY status4evar.status.network.label "Εμφάνιση κατάστασης δικτύου">
+<!ENTITY status4evar.status.network.xhr.label "Εμφάνιση παρασκηνιακής κατάστασης δικτύου">
+<!ENTITY toolkit.dom.status.change.label "Να επιτρέπεται στις ιστοσελίδες να αλλάζουν την κατάσταση">
+<!ENTITY status4evar.status.general.linkOver.caption "Δεσμοί">
+<!ENTITY status4evar.status.linkOver.label "Εμφάνιση δεσμών:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Καθυστέρηση πριν την εμφάνιση δεσμών:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Καθυστέρηση πριν την απόκρυψη δεσμών:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Μέγιστο μήκος κειμένου κατάστασης:">
+<!ENTITY status4evar.status.urlbar.align.label "Παράταξη κατάστασης:">
+<!ENTITY status4evar.status.urlbar.color.label "Χρώμα κειμένου:">
+<!ENTITY status4evar.status.currentUrl "Τρέχον URL">
+<!ENTITY status4evar.status.statusText "Κείμενο κατάστασης">
+<!ENTITY status4evar.progress.style.label "Χρήση προσαρμοσμένης τεχνοτροπίας στον ενδείκτη προόδου">
+<!ENTITY status4evar.progress.style.editor.label "Επεξεργαστής:">
+<!ENTITY status4evar.progress.style.editor.color.label "Χρώμα:">
+<!ENTITY status4evar.progress.style.editor.image.label "Εικόνα:">
+<!ENTITY status4evar.progress.urlbar.enable.label "Εμφάνιση προόδου στη γραμμή τοποθεσιών">
+<!ENTITY status4evar.progress.urlbar.line.label "Τεχνοτροπία γραμμής:">
+<!ENTITY status4evar.progress.toolbar.force.label "Πάντα εμφάνιση του στοιχείου της εργαλειοθήκης">
+<!ENTITY status4evar.download.force.label "Πάντα εμφάνιση του κουμπιού κατάστασης λήψεων">
+<!ENTITY status4evar.download.label.force.label "Πάντα εμφάνιση του κειμένου του κουμπιού">
+<!ENTITY status4evar.download.label.label "Κείμενο κουμπιού κατάστασης λήψεων:">
+<!ENTITY status4evar.download.tooltip.label "Συμβουλή εργαλείου κουμπιού κατάστασης λήψεων:">
+<!ENTITY status4evar.addonbar.borderStyle "Χρήση εναλλακτικών ορίων εργαλειοθήκης">
+<!ENTITY status4evar.addonbar.windowGripper "Εμφάνιση της λαβής αλλαγής μεγέθους του παραθύρου">
+<!ENTITY status4evar.addonbar.closeButton "Εμφάνιση του κουμπιού κλεισίματος">

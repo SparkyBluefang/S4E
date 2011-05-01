@@ -1,0 +1,60 @@
+<!ENTITY status4evar.window.title "העדפות Status-4-Evar">
+<!ENTITY status4evar.pane.status "מצב">
+<!ENTITY status4evar.pane.progress "התקדמות">
+<!ENTITY status4evar.pane.download "הורדה">
+<!ENTITY status4evar.pane.addonbar "שורת ההרחבות">
+<!ENTITY status4evar.tab.general "כללי">
+<!ENTITY status4evar.tab.toolbar "סרגל כלים">
+<!ENTITY status4evar.tab.urlbar "סרגל כתובות">
+<!ENTITY status4evar.tab.popup "חלון קופץ">
+<!ENTITY status4evar.tab.tabs "לשוניות">
+<!ENTITY status4evar.option.none "לא כלום">
+<!ENTITY status4evar.option.toolbar "סרגל כלים">
+<!ENTITY status4evar.option.urlbar "סרגל כתובות">
+<!ENTITY status4evar.option.popup "חלון קופץ">
+<!ENTITY status4evar.option.tooltip "חלונית מידע">
+<!ENTITY status4evar.option.bottom "תחתית">
+<!ENTITY status4evar.option.top "ראשית">
+<!ENTITY status4evar.option.fill "מילוי">
+<!ENTITY status4evar.option.dlcount "מניית הורדות">
+<!ENTITY status4evar.option.dltime "זמן שנותר">
+<!ENTITY status4evar.option.both "גם וגם">
+<!ENTITY status4evar.option.right "ימין">
+<!ENTITY status4evar.option.left "שמאל">
+<!ENTITY status4evar.option.fixed "קבוע">
+<!ENTITY status4evar.option.simple "פשוט">
+<!ENTITY status4evar.option.advanced "מתקדם">
+<!ENTITY status4evar.option.browse "דפדוף">
+<!ENTITY status4evar.option.clear "ניקוי">
+<!ENTITY status4evar.unit.seconds "שניות">
+<!ENTITY status4evar.unit.px "פיקסל">
+<!ENTITY status4evar.status.general.status.caption "טקסט מצב">
+<!ENTITY status4evar.status.label "הצגת מצב ב:">
+<!ENTITY status4evar.status.timeout.label "הסתרת המצב לאחר">
+<!ENTITY status4evar.status.default.label "הצגת מצב ברירת מחדל">
+<!ENTITY status4evar.status.network.label "הצגת מצב הרשת">
+<!ENTITY status4evar.status.network.xhr.label "הצגת מצב רשת רקע">
+<!ENTITY toolkit.dom.status.change.label "אפשר לדפי אינטרנט לשנות את המצב">
+<!ENTITY status4evar.status.general.linkOver.caption "קישורים">
+<!ENTITY status4evar.status.linkOver.label "הצגת קישורים ב:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "השהייה לפני הצגת קישורים:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "השהייה לפני הסתרת קישורים:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "אורך מרבי לטקסט המצב:">
+<!ENTITY status4evar.status.urlbar.align.label "יישור המצב:">
+<!ENTITY status4evar.status.urlbar.color.label "צבע הטקסט:">
+<!ENTITY status4evar.status.currentUrl "כתובת נוכחית">
+<!ENTITY status4evar.status.statusText "טקסט מצב">
+<!ENTITY status4evar.progress.style.label "שימוש בסגנון מותאם בסרגל ההתקדמות">
+<!ENTITY status4evar.progress.style.editor.label "עורך:">
+<!ENTITY status4evar.progress.style.editor.color.label "צבע:">
+<!ENTITY status4evar.progress.style.editor.image.label "תמונה:">
+<!ENTITY status4evar.progress.urlbar.enable.label "הצגת התקדמות בסרגל המיקום">
+<!ENTITY status4evar.progress.urlbar.line.label "סגנון קו:">
+<!ENTITY status4evar.progress.toolbar.force.label "להציג תמיד את פריט סרגל הכלים">
+<!ENTITY status4evar.download.force.label "להציג תמיד את כפתור מצב ההורדה">
+<!ENTITY status4evar.download.label.force.label "להציג תמיד טקסט הכפתור">
+<!ENTITY status4evar.download.label.label "טקסט כפתור מצב ההורדה:">
+<!ENTITY status4evar.download.tooltip.label "חלונית מידע כפתור מצב ההורדה:">
+<!ENTITY status4evar.addonbar.borderStyle "שימוש בגבולות סרגל הכלים חלופיים">
+<!ENTITY status4evar.addonbar.windowGripper "הצגת תפסן שינוי גודל החלון">
+<!ENTITY status4evar.addonbar.closeButton "הצגת כפתור הסגירה">
