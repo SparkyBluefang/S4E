@@ -309,8 +309,8 @@ Status_4_Evar.prototype =
 			},
 			updateWindow: function(win)
 			{
-				win.XULBrowserWindow.clearStatusField();
-				win.XULBrowserWindow.updateS4EStatusField(true);
+				win.caligon.status4evar.statusService.clearStatusField();
+				win.caligon.status4evar.statusService.updateStatusField(true);
 			}
 		},
 
@@ -322,8 +322,8 @@ Status_4_Evar.prototype =
 			},
 			updateWindow: function(win)
 			{
-				win.XULBrowserWindow.buildTextOrder();
-				win.XULBrowserWindow.updateS4EStatusField(true);
+				win.caligon.status4evar.statusService.buildTextOrder();
+				win.caligon.status4evar.statusService.updateStatusField(true);
 			}
 		},
 
@@ -335,7 +335,7 @@ Status_4_Evar.prototype =
 			},
 			updateWindow: function(win)
 			{
-				win.XULBrowserWindow.buildTextOrder();
+				win.caligon.status4evar.statusService.buildTextOrder();
 			}
 		},
 
@@ -347,7 +347,7 @@ Status_4_Evar.prototype =
 			},
 			updateWindow: function(win)
 			{
-				win.XULBrowserWindow.buildTextOrder();
+				win.caligon.status4evar.statusService.buildTextOrder();
 			}
 		},
 
@@ -359,7 +359,7 @@ Status_4_Evar.prototype =
 			},
 			updateWindow: function(win)
 			{
-				win.XULBrowserWindow.updateS4EStatusField(true);
+				win.caligon.status4evar.statusService.updateStatusField(true);
 			}
 		},
 

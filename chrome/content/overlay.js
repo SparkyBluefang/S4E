@@ -47,9 +47,6 @@ window.addEventListener("load", function()
 	caligon.status4evar.service = CC["@caligonstudios.com/status4evar;1"].getService(CI.nsIStatus4Evar);
 	let s4e_service = caligon.status4evar.service;
 
-//
-// S4E Strings
-//
 	caligon.status4evar.strings = document.getElementById("bundle_status4evar");
 	let s4e_strings = caligon.status4evar.strings;
 
@@ -152,217 +149,249 @@ window.addEventListener("load", function()
 	let s4e_getters = caligon.status4evar.getters;
 
 //
-// Override status functions
+// Status service
 //
-	XULBrowserWindow.updateStatusField = function() {}
-	XULBrowserWindow.onStatusChange = function() {}
-
-	XULBrowserWindow.getStatusText = function()
+	caligon.status4evar.statusService =
 	{
-		return this.s4e_status.val;
-	}
+		_overLink:		{ val: "", type: "" },
+		_network:		{ val: "", type: "" },
+		_networkXHR:		{ val: "", type: "" },
+		_status:		{ val: "", type: "" },
+		_jsStatus:		{ val: "", type: "" },
+		_jsDefaultStatus:	{ val: "", type: "" },
+		_defaultStatus:		{ val: "", type: "" },
 
-	XULBrowserWindow.getCompositeStatusText = function()
-	{
-		return this.s4e_statusText.val;
-	}
+		_statusText:		{ val: "", type: "" },
+		_noUpdate:		false,
 
-	XULBrowserWindow.setNetworkStatus = function(status)
-	{
-		if(s4e_progressMeter._busyUI)
+		getCompositeStatusText: function()
 		{
-			this.s4e_network = { val: status, type: "network" };
-			this.s4e_networkXHR = { val: "", type: "network_xhr" };
-		}
-		else
+			return this._statusText.val;
+		},
+
+		getStatusText: function()
 		{
-			this.s4e_networkXHR = { val: status, type: "network_xhr" };
-		}
-		this.updateS4EStatusField();
-	}
+			return this._status.val;
+		},
 
-	XULBrowserWindow.setStatusText = function(status)
-	{
-		this.s4e_status = { val: status, type: "status_chrome" };
-		this.updateS4EStatusField();
-	}
-
-	XULBrowserWindow.setJSStatus = function(status)
-	{
-		this.s4e_jsStatus = { val: status, type: "status_content" };
-		this.updateS4EStatusField();
-	}
-
-	XULBrowserWindow.setJSDefaultStatus = function(status)
-	{
-		this.s4e_jsDefaultStatus = { val: status, type: "status_content_default" };
-		this.updateS4EStatusField();
-	}
-
-	XULBrowserWindow.setDefaultStatus = function(status)
-	{
-		this.s4e_defaultStatus = { val: status, type: "status_chrome_default" };
-		this.updateS4EStatusField();
-	}
-
-	XULBrowserWindow.setOverLink = function(link, anchor)
-	{
-		s4e_overLinkService.update(link, anchor);
-	}
-
-	XULBrowserWindow.setOverLinkInternal = function(link, anchor)
-	{
-		let status = s4e_service.status;
-		let statusLinkOver = s4e_service.statusLinkOver;
-
-		if(statusLinkOver)
+		setNetworkStatus: function(status)
 		{
-			link = link.replace(/[\u200e\u200f\u202a\u202b\u202c\u202d\u202e]/g, encodeURIComponent);
-
-			if(status == statusLinkOver)
+			if(s4e_progressMeter._busyUI)
 			{
-				this.s4e_overLink = { val: link, type: "link" };
-				this.updateS4EStatusField();
+				this._network = { val: status, type: "network" };
+				this._networkXHR = { val: "", type: "network_xhr" };
 			}
 			else
 			{
-				this.setStatusField(statusLinkOver, { val: link, type: "link" }, true);
+				this._networkXHR = { val: status, type: "network_xhr" };
 			}
-		}
-	}
+			this.updateStatusField();
+		},
 
-	XULBrowserWindow.setNoUpdate = function(nu)
-	{
-		this.noUpdate = nu;
-	}
-
-	XULBrowserWindow.updateS4EStatusField = function(force)
-	{
-		let text = { val: "", type: "" };
-		for(let i = 0; !text.val && i < this.s4e_textOrder.length; i++)
+		setStatusText: function(status)
 		{
-			text = this[this.s4e_textOrder[i]];
-		}
+			this._status = { val: status, type: "status_chrome" };
+			this.updateStatusField();
+		},
 
-		if(this.s4e_statusText.val != text.val || force)
+		setJSStatus: function(status)
 		{
-			if(this.statusTimeoutID)
+			this._jsStatus = { val: status, type: "status_content" };
+			this.updateStatusField();
+		},
+
+		setJSDefaultStatus: function(status)
+		{
+			this._jsDefaultStatus = { val: status, type: "status_content_default" };
+			this.updateStatusField();
+		},
+
+		setDefaultStatus: function(status)
+		{
+			this._defaultStatus = { val: status, type: "status_chrome_default" };
+			this.updateStatusField();
+		},
+
+		setOverLink: function(link, anchor)
+		{
+			s4e_overLinkService.update(link, anchor);
+		},
+
+		setOverLinkInternal: function(link, anchor)
+		{
+			let status = s4e_service.status;
+			let statusLinkOver = s4e_service.statusLinkOver;
+
+			if(statusLinkOver)
 			{
-				window.clearTimeout(this.statusTimeoutID);
-				delete this.statusTimeoutID;
-			}
+				link = link.replace(/[\u200e\u200f\u202a\u202b\u202c\u202d\u202e]/g, encodeURIComponent);
 
-			if(this.noUpdate)
-			{
-				return;
-			}
-
-			this.s4e_statusText = text;
-
-			this.setStatusField(s4e_service.status, text, false);
-
-			if(text.val && text.type != "link" && s4e_service.statusTimeout)
-			{
-				this.statusTimeoutID = window.setTimeout(function()
+				if(status == statusLinkOver)
 				{
-					XULBrowserWindow.clearStatusField();
-				}, s4e_service.statusTimeout);
-			}
-		}
-	}
-
-	XULBrowserWindow.clearStatusField = function()
-	{
-		s4e_getters.statusOverlay.value = "";
-
-		let status_label = s4e_getters.statusWidgetLabel;
-		if(status_label)
-		{
-			status_label.value = "";
-		}
-
-		let urlbar = s4e_getters.urlbar;
-		if(urlbar)
-		{
-			urlbar.setStatus("");
-		}
-	}
-
-	XULBrowserWindow.setStatusField = function(location, text, allowTooltip)
-	{
-		let label = null;
-
-		switch(location)
-		{
-			case 0:
-				break;
-			case 2:
-				let urlbar = s4e_getters.urlbar;
-				if(urlbar)
-				{
-					urlbar.setStatus(text.val);
-					urlbar.setStatusType(text.type);
+					this._overLink = { val: link, type: "link" };
+					this.updateStatusField();
 				}
-				break;
-			case 3:
-				label = s4e_getters.statusOverlay;
-				break;
-//			case 4:
-//				if(allowTooltip)
-//				{
-//					// set tooltip
-//					break;
-//				}
-			default:
-				label = s4e_getters.statusWidgetLabel;
-				break;
-		}
-
-		if(label)
-		{
-			label.value = text.val;
-			label.setAttribute("previoustype", label.getAttribute("type"));
-			label.setAttribute("type", text.type);
-			label.setAttribute("crop", text.type == "link" ? "center" : "end");
-		}
-	}
-
-	XULBrowserWindow.buildTextOrder = function()
-	{
-		this.__defineGetter__("s4e_textOrder", function()
-		{
-			let textOrder = ["s4e_overLink"];
-			if(s4e_service.statusNetwork)
-			{
-				textOrder.push("s4e_network");
-				if(s4e_service.statusNetworkXHR)
+				else
 				{
-					textOrder.push("s4e_networkXHR");
+					this.setStatusField(statusLinkOver, { val: link, type: "link" }, true);
 				}
 			}
-			textOrder.push("s4e_status", "s4e_jsStatus");
-			if(s4e_service.statusDefault)
-			{
-				textOrder.push("s4e_jsDefaultStatus", "s4e_defaultStatus");
+		},
+
+		setNoUpdate: function(nu)
+		{
+			this._noUpdate = nu;
+		},
+
+		buildBinding: function() {
+			let XULBWPropHandler = function(prop, oldval, newval) {
+				CU.reportError("Attempt to modify XULBrowserWindow." + prop);
+				return oldval;
 			}
 
-			delete this.s4e_textOrder;
-			return this.s4e_textOrder = textOrder;
-		});
-	}
+			let nullProp = ["updateStatusField", "onStatusChange"];
+			for(let i = 0; i < nullProp.length; i++) {
+				XULBrowserWindow.unwatch(nullProp[i]);
+				XULBrowserWindow[nullProp[i]] = function() {};
+				XULBrowserWindow.watch(nullProp[i], XULBWPropHandler);
+			}
 
-	XULBrowserWindow.setUpStatusText = function()
-	{
-		this.buildTextOrder();
-		this.s4e_overLink = { val: "", type: "" };
-		this.s4e_network = { val: "", type: "" };
-		this.s4e_networkXHR = { val: "", type: "" };
-		this.s4e_status = { val: "", type: "" };
-		this.s4e_jsStatus = { val: "", type: "" };
-		this.s4e_jsDefaultStatus = { val: "", type: "" };
-		this.s4e_defaultStatus = { val: "", type: "" };
-		this.s4e_statusText = { val: "", type: "" };
+			let bindProp = ["getCompositeStatusText", "getStatusText", "setStatusText", "setJSStatus",
+			"setJSDefaultStatus", "setDefaultStatus", "setOverLink"];
+			for(let i = 0; i < bindProp.length; i++) {
+				XULBrowserWindow.unwatch(bindProp[i]);
+				XULBrowserWindow[bindProp[i]] = this[bindProp[i]].bind(this);
+				XULBrowserWindow.watch(bindProp[i], XULBWPropHandler);
+			}
+
+			let XULBWHandler = function(prop, oldval, newval) {
+				CU.reportError("Attempt to modify XULBrowserWindow");
+				window.setTimeout(function(self)
+				{
+					self.buildBinding();
+				}, 0, this);
+				return newval;
+			}
+
+			window.watch("XULBrowserWindow", XULBWHandler);
+		},
+
+		buildTextOrder: function()
+		{
+			this.__defineGetter__("_textOrder", function()
+			{
+				let textOrder = ["_overLink"];
+				if(s4e_service.statusNetwork)
+				{
+					textOrder.push("_network");
+					if(s4e_service.statusNetworkXHR)
+					{
+						textOrder.push("_networkXHR");
+					}
+				}
+				textOrder.push("_status", "_jsStatus");
+				if(s4e_service.statusDefault)
+				{
+					textOrder.push("_jsDefaultStatus", "_defaultStatus");
+				}
+
+				delete this._textOrder;
+				return this._textOrder = textOrder;
+			});
+		},
+
+		updateStatusField: function(force)
+		{
+			let text = { val: "", type: "" };
+			for(let i = 0; !text.val && i < this._textOrder.length; i++)
+			{
+				text = this[this._textOrder[i]];
+			}
+
+			if(this._statusText.val != text.val || force)
+			{
+				if(this._statusTimeoutID)
+				{
+					window.clearTimeout(this._statusTimeoutID);
+					delete this._statusTimeoutID;
+				}
+
+				if(this._noUpdate)
+				{
+					return;
+				}
+
+				this._statusText = text;
+
+				this.setStatusField(s4e_service.status, text, false);
+
+				if(text.val && text.type != "link" && s4e_service.statusTimeout)
+				{
+					this._statusTimeoutID = window.setTimeout(function(self)
+					{
+						self.clearStatusField();
+					}, s4e_service.statusTimeout, this);
+				}
+			}
+		},
+
+		clearStatusField: function()
+		{
+			s4e_getters.statusOverlay.value = "";
+
+			let status_label = s4e_getters.statusWidgetLabel;
+			if(status_label)
+			{
+				status_label.value = "";
+			}
+
+			let urlbar = s4e_getters.urlbar;
+			if(urlbar)
+			{
+				urlbar.setStatus("");
+			}
+		},
+
+		setStatusField: function(location, text, allowTooltip)
+		{
+			let label = null;
+
+			switch(location)
+			{
+				case 0:
+					break;
+				case 2:
+					let urlbar = s4e_getters.urlbar;
+					if(urlbar)
+					{
+						urlbar.setStatus(text.val);
+						urlbar.setStatusType(text.type);
+					}
+					break;
+				case 3:
+					label = s4e_getters.statusOverlay;
+					break;
+//				case 4:
+//					if(allowTooltip)
+//					{
+//						// set tooltip
+//						break;
+//					}
+				default:
+					label = s4e_getters.statusWidgetLabel;
+					break;
+			}
+
+			if(label)
+			{
+				label.value = text.val;
+				label.setAttribute("previoustype", label.getAttribute("type"));
+				label.setAttribute("type", text.type);
+				label.setAttribute("crop", text.type == "link" ? "center" : "end");
+			}
+		}
 	}
+	let s4e_statusService = caligon.status4evar.statusService;
 
 //
 // Over Link delay service
@@ -423,7 +452,7 @@ window.addEventListener("load", function()
 		_show: function()
 		{
 			this._currentLink = this._pendingLink;
-			XULBrowserWindow.setOverLinkInternal(this._currentLink.link, this._currentLink.anchor);
+			s4e_statusService.setOverLinkInternal(this._currentLink.link, this._currentLink.anchor);
 		}
 	}
 	let s4e_overLinkService = caligon.status4evar.overLinkService;
@@ -471,7 +500,7 @@ window.addEventListener("load", function()
 
 		onStatusChange: function(aWebProgress, aRequest, aStatus, aMessage)
 		{
-			XULBrowserWindow.setNetworkStatus(aMessage);
+			s4e_statusService.setNetworkStatus(aMessage);
 		},
 
 		onStateChange: function(aWebProgress, aRequest, aStateFlags, aStatus)
@@ -515,8 +544,8 @@ window.addEventListener("load", function()
 						msg = s4e_strings.getString("nv_done");
 					}
 
-					XULBrowserWindow.setDefaultStatus(msg);
-					XULBrowserWindow.setNetworkStatus("");
+					s4e_statusService.setDefaultStatus(msg);
+					s4e_statusService.setNetworkStatus("");
 				}
 
 				if(this._busyUI)
@@ -864,7 +893,7 @@ window.addEventListener("load", function()
 		s4e_updateSplitters(false);
 		s4e_updateWindowGripper(false);
 
-		XULBrowserWindow.setNoUpdate(true);
+		s4e_statusService.setNoUpdate(true);
 		let status_label = s4e_getters.statusWidgetLabel;
 		if(status_label)
 		{
@@ -878,11 +907,11 @@ window.addEventListener("load", function()
 //
 	caligon.status4evar.updateWindow = function()
 	{
-		XULBrowserWindow.setNoUpdate(false);
-
+		s4e_statusService.setNoUpdate(false);
 		s4e_getters.resetGetters();
+		s4e_statusService.buildTextOrder();
+		s4e_statusService.buildBinding();
 		s4e_downloadStatus.init();
-
 		s4e_updateSplitters(true);
 
 		s4e_service.updateWindow(window);
@@ -955,7 +984,6 @@ window.addEventListener("load", function()
 		}
 	}
 
-	XULBrowserWindow.setUpStatusText();
 	s4e_updateWindow();
 
 	gBrowser.addProgressListener(s4e_progressMeter);

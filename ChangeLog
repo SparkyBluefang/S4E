@@ -1,6 +1,7 @@
 Version next
 * Firefox 6.0a1 changed the nsIDOMWindow interface ID. Make S4E compatible.
 * Fix unchecked usage of the urlbar element (causes errors when it's not on a toolbar).
+* Minimize contact with the XULBrowserWindow object, and make bindings on it more robust.
 * Added translations for: el, es-ES, he
 * Updated translations for: ro
 

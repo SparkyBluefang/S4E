@@ -309,11 +309,11 @@
 
 			<property name="label">
 				<setter><![CDATA[
-					XULBrowserWindow.setStatusText(val);
+					window.caligon.status4evar.statusService.setStatusText(val);
 					return undefined;
 				]]></setter>
 				<getter><![CDATA[
-					return undefined;
+					return window.caligon.status4evar.statusService.getStatusText();
 				]]></getter>
 			</property>
 
