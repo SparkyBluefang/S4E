@@ -688,43 +688,28 @@ window.addEventListener("load", function()
 				return;
 			}
 
-			switch(s4e_service.downloadLabel)
-			{
-				case 0:
-					download_button.label = this._dlCountStr;
-					break;
-				case 1:
-					download_button.label = ((this._dlPaused) ? this._dlCountStr : this._dlTimeStr);
-					break;
-				default:
-					let compStr = this._dlCountStr;
-					if(!this._dlPaused)
-					{
-						compStr += " (" + this._dlTimeStr + ")";
-					}
-					download_button.label = compStr;
-					break;
-			}
-
-			switch(s4e_service.downloadTooltip)
-			{
-				case 0:
-					download_tooltip.label = this._dlCountStr;
-					break;
-				case 1:
-					download_tooltip.label = ((this._dlPaused) ? this._dlCountStr : this._dlTimeStr);
-					break;
-				default:
-					let compStr = this._dlCountStr;
-					if(!this._dlPaused)
-					{
-						compStr += " (" + this._dlTimeStr + ")";
-					}
-					download_tooltip.label = compStr;
-					break;
-			}
+			download_button.label = this.buildString(s4e_service.downloadLabel);
+			download_tooltip.label = this.buildString(s4e_service.downloadTooltip);
 
 			download_button.collapsed = false;
+		},
+
+		buildString: function(mode)
+		{
+			switch(mode)
+			{
+				case 0:
+					return this._dlCountStr;
+				case 1:
+					return ((this._dlPaused) ? this._dlCountStr : this._dlTimeStr);
+				default:
+					let compStr = this._dlCountStr;
+					if(!this._dlPaused)
+					{
+						compStr += " (" + this._dlTimeStr + ")";
+					}
+					return compStr;
+			}
 		},
 
 		onProgressChange: function()
