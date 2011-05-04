@@ -57,68 +57,27 @@ window.addEventListener("load", function()
 	{
 		resetGetters: function()
 		{
-			delete this.addonbar;
-			this.__defineGetter__("addonbar", function()
+			[
+				["addonbar",			"addon-bar"],
+				["addonbarCloseButton",		"addonbar-closebutton"],
+				["browserBottomBox",		"browser-bottombox"],
+				["downloadButton",		"status4evar-download-button"],
+				["downloadButtonTooltip",	"status4evar-download-tooltip"],
+				["statusWidget",		"status4evar-status-widget"],
+				["statusWidgetLabel",		"status4evar-status-text"],
+				["statusOverlay",		"statusbar-display"],
+				["toolbarProgress",		"status4evar-progress-bar"],
+				["urlbarProgress",		"urlbar-progress-alt"]
+			].forEach(function(getter)
 			{
-				delete this.addonbar;
-				return this.addonbar = document.getElementById("addon-bar");
-			});
-
-			delete this.addonbarCloseButton;
-			this.__defineGetter__("addonbarCloseButton", function()
-			{
-				delete this.addonbarCloseButton;
-				return this.addonbarCloseButton = document.getElementById("addonbar-closebutton");
-			});
-
-			delete this.browserBottomBox;
-			this.__defineGetter__("browserBottomBox", function()
-			{
-				delete this.browserBottomBox;
-				return this.browserBottomBox = document.getElementById("browser-bottombox");
-			});
-
-			delete this.downloadButton;
-			this.__defineGetter__("downloadButton", function()
-			{
-				delete this.downloadButton;
-				return this.downloadButton = document.getElementById("status4evar-download-button");
-			});
-
-			delete this.downloadButtonTooltip;
-			this.__defineGetter__("downloadButtonTooltip", function()
-			{
-				delete this.downloadButtonTooltip;
-				return this.downloadButtonTooltip = document.getElementById("status4evar-download-tooltip");
-			});
-
-			delete this.statusWidget;
-			this.__defineGetter__("statusWidget", function()
-			{
-				delete this.statusWidget;
-				return this.statusWidget = document.getElementById("status4evar-status-widget");
-			});
-
-			delete this.statusWidgetLabel;
-			this.__defineGetter__("statusWidgetLabel", function()
-			{
-				delete this.statusWidgetLabel;
-				return this.statusWidgetLabel = document.getElementById("status4evar-status-text");
-			});
-
-			delete this.statusOverlay;
-			this.__defineGetter__("statusOverlay", function()
-			{
-				delete this.statusOverlay;
-				return this.statusOverlay = document.getElementById("statusbar-display");
-			});
-
-			delete this.toolbarProgress;
-			this.__defineGetter__("toolbarProgress", function()
-			{
-				delete this.toolbarProgress;
-				return this.toolbarProgress = document.getElementById("status4evar-progress-bar");
-			});
+				let [prop, id] = getter;
+				delete this[prop];
+				this.__defineGetter__(prop, function()
+				{
+					delete this[prop];
+					return this[prop] = document.getElementById(id);
+				});
+			}, this);
 
 			delete this.urlbar;
 			this.__defineGetter__("urlbar", function()
@@ -136,13 +95,6 @@ window.addEventListener("load", function()
 				}
 				delete this.urlbar;
 				return this.urlbar = ub;
-			});
-
-			delete this.urlbarProgress;
-			this.__defineGetter__("urlbarProgress", function()
-			{
-				delete this.urlbarProgress;
-				return this.urlbarProgress = document.getElementById("urlbar-progress-alt");
 			});
 		}
 	}
@@ -247,31 +199,35 @@ window.addEventListener("load", function()
 			let XULBWPropHandler = function(prop, oldval, newval) {
 				CU.reportError("Attempt to modify XULBrowserWindow." + prop);
 				return oldval;
-			}
+			};
 
-			let nullProp = ["updateStatusField", "onStatusChange"];
-			for(let i = 0; i < nullProp.length; i++) {
-				XULBrowserWindow.unwatch(nullProp[i]);
-				XULBrowserWindow[nullProp[i]] = function() {};
-				XULBrowserWindow.watch(nullProp[i], XULBWPropHandler);
-			}
+			["updateStatusField", "onStatusChange"].forEach(function(prop)
+			{
+				XULBrowserWindow.unwatch(prop);
+				XULBrowserWindow[prop] = function() {};
+				XULBrowserWindow.watch(prop, XULBWPropHandler);
+			}, this);
 
-			let bindProp = ["getCompositeStatusText", "getStatusText", "setStatusText", "setJSStatus",
-			"setJSDefaultStatus", "setDefaultStatus", "setOverLink"];
-			for(let i = 0; i < bindProp.length; i++) {
-				XULBrowserWindow.unwatch(bindProp[i]);
-				XULBrowserWindow[bindProp[i]] = this[bindProp[i]].bind(this);
-				XULBrowserWindow.watch(bindProp[i], XULBWPropHandler);
-			}
+			["getCompositeStatusText", "getStatusText", "setStatusText", "setJSStatus",
+			"setJSDefaultStatus", "setDefaultStatus", "setOverLink"].forEach(function(prop)
+			{
+				XULBrowserWindow.unwatch(prop);
+				XULBrowserWindow[prop] = this[prop].bind(this);
+				XULBrowserWindow.watch(prop, XULBWPropHandler);
+			}, this);
 
 			let XULBWHandler = function(prop, oldval, newval) {
-				CU.reportError("Attempt to modify XULBrowserWindow");
+				if(!newval)
+				{
+					return newval;
+				}
+				CU.reportError("XULBrowserWindow changed. Updating S4E bindings.");
 				window.setTimeout(function(self)
 				{
 					self.buildBinding();
 				}, 0, this);
 				return newval;
-			}
+			};
 
 			window.watch("XULBrowserWindow", XULBWHandler);
 		},
