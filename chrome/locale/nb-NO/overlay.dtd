@@ -1,0 +1,5 @@
+<!ENTITY status4evar.status.widget.title "Statustekst">
+<!ENTITY status4evar.progress.widget.title "Fremdriftsindikator">
+<!ENTITY status4evar.download.widget.title "Nedlastingsstatus">
+<!ENTITY status4evar.options.widget.title "Status-4-Evar innstillinger">
+<!ENTITY status4evar.options.widget.label "Status-4-Evar">

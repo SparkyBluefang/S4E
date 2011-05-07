@@ -3,7 +3,7 @@ Version next
 * Fix unchecked usage of the urlbar element (causes errors when it's not on a toolbar).
 * Minimize contact with the XULBrowserWindow object, and make binding to it dynamic and [hopefully] more robust.
 * Refactor some repetitive code, and use array based generation/execution for repetitive tasks.
-* Added translations for: el, es-ES, he
+* Added translations for: el, es-ES, he, nb-NO
 * Updated translations for: ro
 
 Version 2011.04.06.18
