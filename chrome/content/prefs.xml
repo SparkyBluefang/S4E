@@ -515,6 +515,11 @@
 						});
 					}
 
+					if(bgPValues.length == 2 && bgPValues[1].group == 2)
+					{
+						bgPValues[1].group = 4;
+					}
+
 					for(let i = 0; i < 4; i++)
 					{
 						let group = (i + 1);
