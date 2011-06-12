@@ -39,6 +39,10 @@
    - ***** END LICENSE BLOCK ***** -->
 
 <?xml-stylesheet href="chrome://global/skin/" type="text/css" ?>
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://status4evar/content/overlay.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://status4evar/skin/dynamic.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://status4evar/content/prefs.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://status4evar/skin/prefs.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://status4evar-os/skin/prefs.css" type="text/css" ?>
 
@@ -70,6 +74,7 @@
 			<preference id="status4evar-pref-status-urlbar-color"        name="status4evar.status.urlbar.color"        type="string" />
 			<preference id="status4evar-pref-status-urlbar-position"     name="status4evar.status.urlbar.position"     type="int" />
 			<preference id="toolkit-pref-dom-status-change"              name="dom.disable_window_status_change"       type="bool" inverted="true" />
+			<preference id="browser-pref-urlbar-formatting-enabled"      name="browser.urlbar.formatting.enabled"      type="bool" />
 		</preferences>
 
 		<commandset id="status4evar-commandset-status">
@@ -82,9 +87,7 @@
 				<tab id="status4evar-tab-status-general" label="&status4evar.tab.general;" />
 				<tab id="status4evar-tab-status-urlbar"  label="&status4evar.tab.urlbar;" />
 				<tab id="status4evar-tab-status-toolbar" label="&status4evar.tab.toolbar;" />
-<!--
 				<tab id="status4evar-tab-status-popup"   label="&status4evar.tab.popup;" />
--->
 			</tabs>
 
 			<tabpanels id="status4evar-tabpanels-status" flex="1">
@@ -182,6 +185,8 @@
 							</hbox>
 						</hbox>
 					</vbox>
+
+					<checkbox id="browser-urlbar-formatting-enabled-ckeck" preference="browser-pref-urlbar-formatting-enabled" label="&browser.urlbar.formatting.enabled.label;" />
 				</tabpanel>
 
 				<tabpanel id="status4evar-tabpanel-status-toolbar" orient="vertical">
@@ -193,11 +198,11 @@
 						<label id="status4evar-status-toolbar-maxLength-unit">&status4evar.unit.px;</label>
 					</hbox>
 				</tabpanel>
-<!--
+
 				<tabpanel id="status4evar-tabpanel-status-popup" orient="vertical">
 					
 				</tabpanel>
--->
+
 			</tabpanels>
 		</tabbox>
 	</prefpane>
@@ -207,14 +212,12 @@
 			<preference id="status4evar-pref-progress-toolbar-force"          name="status4evar.progress.toolbar.force"          type="bool" />
 			<preference id="status4evar-pref-progress-toolbar-style"          name="status4evar.progress.toolbar.style"          type="bool"
 			            onchange="status4evarPrefs.progressUrlbarStyleChanged();" />
-			<preference id="status4evar-pref-progress-toolbar-style-advanced" name="status4evar.progress.toolbar.style.advanced" type="bool" />
 			<preference id="status4evar-pref-progress-toolbar-css"            name="status4evar.progress.toolbar.css"            type="string"
 			            onchange="status4evarPrefs.progressToolbarCSSChanged();" />
 			<preference id="status4evar-pref-progress-urlbar"                 name="status4evar.progress.urlbar"                 type="int"
 			            onchange="status4evarPrefs.progressUrlbarChanged();" />
 			<preference id="status4evar-pref-progress-urlbar-style"           name="status4evar.progress.urlbar.style"           type="bool"
 			            onchange="status4evarPrefs.progressToolbarStyleChanged();" />
-			<preference id="status4evar-pref-progress-urlbar-style-advanced"  name="status4evar.progress.urlbar.style.advanced"  type="bool" />
 			<preference id="status4evar-pref-progress-urlbar-css"             name="status4evar.progress.urlbar.css"             type="string"
 			            onchange="status4evarPrefs.progressUrlbarCSSChanged();" />
 		</preferences>
@@ -253,38 +256,28 @@
 					<checkbox id="status4evar-progress-urlbar-style-check" preference="status4evar-pref-progress-urlbar-style" label="&status4evar.progress.style.label;"
 						  onsyncfrompreference="return status4evarPrefs.progressUrlbarStyleSync();" />
 
-					<groupbox>
-						<deck id="status4evar-progress-urlbar-editor" selectedIndex="0">
-							<vbox>
-								<hbox align="center">
-									<label id="status4evar-progress-urlbar-editor-color-label">&status4evar.progress.style.editor.color.label;</label>
-									<colorpicker id="status4evar-progress-urlbar-editor-color-picker" type="button"
-									             onchange="status4evarPrefs.progressUrlbarEditorUpdateCSS();" />
-								</hbox>
-								<hbox align="center">
-									<label id="status4evar-progress-urlbar-editor-image-label">&status4evar.progress.style.editor.image.label;</label>
-									<textbox id="status4evar-progress-urlbar-editor-image-input" readonly="true" flex="1" />
-								</hbox>
-								<hbox align="center" flex="1" pack="end">
-									<button label="&status4evar.option.clear;" oncommand="status4evarPrefs.progressUrlbarEditorImageClear();"/>
-									<button label="&status4evar.option.browse;" oncommand="status4evarPrefs.progressUrlbarEditorImageBrowse();"/>
-								</hbox>
-							</vbox>
-							<textbox id="status4evar-progress-urlbar-css-text" preference="status4evar-pref-progress-urlbar-css" multiline="true" rows="6" />
-						</deck>
-					</groupbox>
-
-					<hbox align="center" flex="1" pack="end">
-						<label id="status4evar-progress-urlbar-editor-label" control="status4evar-progress-urlbar-editor-menu">&status4evar.progress.style.editor.label;</label>
-						<menulist id="status4evar-progress-urlbar-editor-menu" preference="status4evar-pref-progress-urlbar-style-advanced" sizetopopup="always"
-						          onsyncfrompreference="return status4evarPrefs.progressUrlbarEditorMenuFrom();"
-						          onsynctopreference="return status4evarPrefs.progressUrlbarEditorMenuTo();">
-							<menupopup>
-								<menuitem label="&status4evar.option.simple;"   value="0" />
-								<menuitem label="&status4evar.option.advanced;" value="1" />
-							</menupopup>
-						</menulist>
-					</hbox>
+					<vbox class="css-bg-editor" preference="status4evar-pref-progress-urlbar-css" preference-editable="true" flex="1">
+						<!-- Mock Nav Bar -->
+						<toolbox id="navigator-toolbox" flex="1">
+							<toolbar id="nav-bar" class="toolbar-primary chromeclass-toolbar" flex="1">
+								<toolbaritem id="urlbar-container" align="center" class="chromeclass-location" removable="false" flex="1">
+									<textbox id="urlbar" pmpack="end" flex="1">
+										<box id="identity-box" role="button" class="unknownIdentity">
+											<hbox id="identity-box-inner" align="center">
+												<stack id="page-proxy-stack">
+													<image id="page-proxy-favicon" validate="never" pageproxystate="valid"
+														src="chrome://status4evar/skin/s4e16.png" />
+												</stack>
+											</hbox>
+										</box>
+										<tooltip id="urlTooltip"/>
+										<!-- Progress bar preview -->
+										<progressmeter id="urlbar-progress-alt" mode="normal" value="75" />
+									</textbox>
+								</toolbaritem>
+							</toolbar>
+						</toolbox>
+					</vbox>
 				</tabpanel>
 
 				<tabpanel id="status4evar-tabpanel-progress-toolbar" orient="vertical">
@@ -293,38 +286,9 @@
 					<checkbox id="status4evar-progress-toolbar-style-check" preference="status4evar-pref-progress-toolbar-style" label="&status4evar.progress.style.label;"
 						  onsyncfrompreference="return status4evarPrefs.progressToolbarStyleSync();" />
 
-					<groupbox>
-						<deck id="status4evar-progress-toolbar-editor" selectedIndex="0">
-							<vbox>
-								<hbox align="center">
-									<label id="status4evar-progress-toolbar-editor-color-label">&status4evar.progress.style.editor.color.label;</label>
-									<colorpicker id="status4evar-progress-toolbar-editor-color-picker" type="button"
-									             onchange="status4evarPrefs.progressToolbarEditorUpdateCSS();" />
-								</hbox>
-								<hbox align="center">
-									<label id="status4evar-progress-toolbar-editor-image-label">&status4evar.progress.style.editor.image.label;</label>
-									<textbox id="status4evar-progress-toolbar-editor-image-input" readonly="true" flex="1" />
-								</hbox>
-								<hbox align="center" flex="1" pack="end">
-									<button label="&status4evar.option.clear;" oncommand="status4evarPrefs.progressToolbarEditorImageClear();"/>
-									<button label="&status4evar.option.browse;" oncommand="status4evarPrefs.progressToolbarEditorImageBrowse();"/>
-								</hbox>
-							</vbox>
-							<textbox id="status4evar-progress-toolbar-css-text" preference="status4evar-pref-progress-toolbar-css" multiline="true" rows="6" />
-						</deck>
-					</groupbox>
-
-					<hbox align="center" flex="1" pack="end">
-						<label id="status4evar-progress-toolbar-editor-label" control="status4evar-progress-toolbar-editor-menu">&status4evar.progress.style.editor.label;</label>
-						<menulist id="status4evar-progress-toolbar-editor-menu" preference="status4evar-pref-progress-toolbar-style-advanced" sizetopopup="always"
-						          onsyncfrompreference="return status4evarPrefs.progressToolbarEditorMenuFrom();"
-						          onsynctopreference="return status4evarPrefs.progressToolbarEditorMenuTo();">
-							<menupopup>
-								<menuitem label="&status4evar.option.simple;"   value="0" />
-								<menuitem label="&status4evar.option.advanced;" value="1" />
-							</menupopup>
-						</menulist>
-					</hbox>
+					<vbox class="css-bg-editor" preference="status4evar-pref-progress-toolbar-css" preference-editable="true" flex="1">
+						<progressmeter id="status4evar-progress-bar" value="75" flex="1" />
+					</vbox>
 				</tabpanel>
 <!--
 				<tabpanel id="status4evar-tabpanel-progress-tabs" orient="vertical">

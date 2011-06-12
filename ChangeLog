@@ -1,4 +1,10 @@
 Version next
+* Tweak some preference UI strings.
+* Rewrite the CSS background editor using XBL.
+* Add support for background-repeat to the simple editor.
+* Add support for background-position to the simple editor.
+* Add preview progress bars to the editor.
+* Add a preference to control Firefox's domain highlighting in the location bar.
 
 Version 2011.05.07.18b
 * Firefox 6.0a1 changed the nsIDOMWindow interface ID. Make S4E compatible.

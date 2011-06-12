@@ -39,13 +39,18 @@ Components.utils.import("resource://gre/modules/Services.jsm");
 
 var status4evarPrefs =
 {
-//
-// String bundle
-//
-	get s4e_strings()
+	get dynamicProgressStyle()
 	{
-		delete this.s4e_strings;
-		return this.s4e_strings = document.getElementById("bundle_status4evar");
+		let styleSheets = window.document.styleSheets;
+		for(let i = 0; i < styleSheets.length; i++)
+		{
+			let styleSheet = styleSheets[i];
+			if(styleSheet.href == "chrome://status4evar/skin/dynamic.css")
+			{
+				delete this.dynamicProgressStyle;
+				return this.dynamicProgressStyle = styleSheet;
+			}
+		}
 	},
 
 //
@@ -203,6 +208,18 @@ var status4evarPrefs =
 //
 // Progress line location management
 //
+	get progressUrlbar()
+	{
+		delete this.progressUrlbar;
+		return this.progressUrlbar = document.getElementById("urlbar");
+	},
+
+	get progressUrlbarProgress()
+	{
+		delete this.progressUrlbarProgress;
+		return this.progressUrlbarProgress = document.getElementById("urlbar-progress-alt");
+	},
+
 	get progressUrlbarPref()
 	{
 		delete this.progressUrlbarPref;
@@ -221,11 +238,25 @@ var status4evarPrefs =
 		{
 			this.progressUrlbarPref.disabled = false;
 			this.progressUrlbarCheckbox.checked = true;
+			switch(this.progressUrlbarPref.value)
+			{
+				case 1:
+					this.progressUrlbar.setAttribute("pmpack", "end");
+					break;
+				case 2:
+					this.progressUrlbar.setAttribute("pmpack", "begin");
+					break;
+				case 3:
+					this.progressUrlbar.setAttribute("pmpack", "center");
+					break;
+			}
+			this.progressUrlbarProgress.hidden = false;
 		}
 		else
 		{
 			this.progressUrlbarPref.disabled = true;
 			this.progressUrlbarCheckbox.checked = false;
+			this.progressUrlbarProgress.hidden = true;
 		}
 	},
 
@@ -271,145 +302,27 @@ var status4evarPrefs =
 		{
 			this.progressUrlbarCSSPref.value = "#33FF33";
 		}
+		this.dynamicProgressStyle.cssRules[1].style.background = this.progressUrlbarCSSPref.value;
 	},
 
 	progressUrlbarStyleChanged: function()
 	{
 		this.progressUrlbarCSSChanged();
 		this.progressUrlbarCSSPref.disabled = !this.progressUrlbarStylePref.value;
+		if(this.progressUrlbarStylePref.value)
+		{
+			this.progressUrlbar.setAttribute("s4estyle", true);
+		}
+		else
+		{
+			this.progressUrlbar.removeAttribute("s4estyle");
+		}
 	},
 
 	progressUrlbarStyleSync: function()
 	{
 		this.progressUrlbarStyleChanged();
 		return undefined;
-	},
-
-//
-// Urlbar progress editor management
-//
-	get progressUrlbarStyleAdvancedPref()
-	{
-		delete this.progressUrlbarStyleAdvancedPref;
-		return this.progressUrlbarStyleAdvancedPref = document.getElementById("status4evar-pref-progress-urlbar-style-advanced");
-	},
-
-	get progressUrlbarEditor()
-	{
-		delete this.progressUrlbarEditor;
-		return this.progressUrlbarEditor = document.getElementById("status4evar-progress-urlbar-editor");
-	},
-
-	get progressUrlbarEditorMenu()
-	{
-		delete this.progressUrlbarEditorMenu;
-		return this.progressUrlbarEditorMenu = document.getElementById("status4evar-progress-urlbar-editor-menu");
-	},
-
-	get progressUrlbarEditorColor()
-	{
-		delete this.progressUrlbarEditorColor;
-		return this.progressUrlbarEditorColor = document.getElementById("status4evar-progress-urlbar-editor-color-picker");
-	},
-
-	get progressUrlbarEditorImage()
-	{
-		delete this.progressUrlbarEditorImage;
-		return this.progressUrlbarEditorImage = document.getElementById("status4evar-progress-urlbar-editor-image-input");
-	},
-
-	disableProgressUrlbarEditorUpdateCSS: true,
-	progressUrlbarEditorFirstRun: true,
-
-	progressUrlbarEditorChanged: function()
-	{
-		let isFirstRun = this.progressUrlbarEditorFirstRun;
-		this.progressUrlbarEditorFirstRun = false;
-
-		if(this.progressUrlbarStyleAdvancedPref.value)
-		{
-			this.progressUrlbarEditor.selectedIndex = 1;
-		}
-		else
-		{
-			let cssParser = document.createElement("div");
-			cssParser.style.background = this.progressUrlbarCSSPref.value;
-
-			let bgI = cssParser.style.backgroundImage;
-			let bgC = cssParser.style.backgroundColor;
-
-			if((bgI != "none" && !urlRE.test(bgI)) || !rgbRE.test(bgC))
-			{
-				var result = isFirstRun ||
-						Services.prompt.confirm(window, this.s4e_strings.getString("simpleEditorTitle"), this.s4e_strings.getString("simpleEditorMessage"));
-				if(isFirstRun || !result)
-				{
-					this.progressUrlbarStyleAdvancedPref.value = true;
-					return;
-				}
-
-				if(bgI != "none" && !urlRE.test(bgI))
-				{
-					bgI = "none";
-				}
-
-				if(!rgbRE.test(bgC))
-				{
-					bgC = "#33FF33";
-				}
-
-				this.progressUrlbarCSSPref.value = bgC + " " + bgI;
-			}
-
-			this.disableProgressUrlbarEditorUpdateCSS = true;
-
-			this.progressUrlbarEditorColor.color = rgbToHex(bgC);
-			this.progressUrlbarEditorImage.value = ((bgI != "none") ? urlRE.exec(bgI)[1].trim() : "none");
-
-			this.disableProgressUrlbarEditorUpdateCSS = false;
-
-			this.progressUrlbarEditor.selectedIndex = 0;
-		}
-	},
-
-	progressUrlbarEditorUpdateCSS: function()
-	{
-		if(this.disableProgressUrlbarEditorUpdateCSS)
-		{
-			return;
-		}
-
-		let cssVal = this.progressUrlbarEditorColor.color;
-		let imageVal = this.progressUrlbarEditorImage.value;
-		if(imageVal && imageVal != "none")
-		{
-			cssVal += " url(\"" + imageVal + "\")";
-		}
-
-		this.progressUrlbarCSSPref.value = cssVal;
-	},
-
-	progressUrlbarEditorMenuFrom: function()
-	{
-		this.progressUrlbarEditorChanged();
-		return ((this.progressUrlbarStyleAdvancedPref.value) ? 1 : 0);
-	},
-
-	progressUrlbarEditorMenuTo: function()
-	{
-		return ((this.progressUrlbarEditorMenu.value == 1) ? true : false);
-	},
-
-	progressUrlbarEditorImageBrowse: function()
-	{
-		this.progressUrlbarEditorImage.value = getImageFileUri();
-		this.progressUrlbarEditorUpdateCSS();
-	},
-
-	progressUrlbarEditorImageClear: function()
-	{
-		this.progressUrlbarEditorImage.value = "none";
-		this.progressUrlbarEditorUpdateCSS();
 	},
 
 //
@@ -427,188 +340,41 @@ var status4evarPrefs =
 		return this.progressToolbarCSSPref = document.getElementById("status4evar-pref-progress-toolbar-css");
 	},
 
+	get progressToolbarProgress()
+	{
+		delete this.progressToolbarProgress;
+		return this.progressToolbarProgress = document.getElementById("status4evar-progress-bar");
+	},
+
 	progressToolbarCSSChanged: function()
 	{
 		if(!this.progressToolbarCSSPref.value)
 		{
 			this.progressToolbarCSSPref.value = "#33FF33";
 		}
+		this.dynamicProgressStyle.cssRules[2].style.background = this.progressToolbarCSSPref.value;
 	},
 
 	progressToolbarStyleChanged: function()
 	{
 		this.progressToolbarCSSChanged();
 		this.progressToolbarCSSPref.disabled = !this.progressToolbarStylePref.value;
+		if(this.progressToolbarStylePref.value)
+		{
+			this.progressToolbarProgress.setAttribute("s4estyle", true);
+		}
+		else
+		{
+			this.progressToolbarProgress.removeAttribute("s4estyle");
+		}
 	},
 
 	progressToolbarStyleSync: function()
 	{
 		this.progressToolbarStyleChanged();
 		return undefined;
-	},
-
-//
-// Toolbar progress editor management
-//
-	get progressToolbarStyleAdvancedPref()
-	{
-		delete this.progressToolbarStyleAdvancedPref;
-		return this.progressToolbarStyleAdvancedPref = document.getElementById("status4evar-pref-progress-toolbar-style-advanced");
-	},
-
-	get progressToolbarEditor()
-	{
-		delete this.progressToolbarEditor;
-		return this.progressToolbarEditor = document.getElementById("status4evar-progress-toolbar-editor");
-	},
-
-	get progressToolbarEditorMenu()
-	{
-		delete this.progressToolbarEditorMenu;
-		return this.progressToolbarEditorMenu = document.getElementById("status4evar-progress-toolbar-editor-menu");
-	},
-
-	get progressToolbarEditorColor()
-	{
-		delete this.progressToolbarEditorColor;
-		return this.progressToolbarEditorColor = document.getElementById("status4evar-progress-toolbar-editor-color-picker");
-	},
-
-	get progressToolbarEditorImage()
-	{
-		delete this.progressToolbarEditorImage;
-		return this.progressToolbarEditorImage = document.getElementById("status4evar-progress-toolbar-editor-image-input");
-	},
-
-	disableProgressToolbarEditorUpdateCSS: true,
-	progressToolbarEditorFirstRun: true,
-
-	progressToolbarEditorChanged: function()
-	{
-		let isFirstRun = this.progressToolbarEditorFirstRun;
-		this.progressToolbarEditorFirstRun = false;
-
-		if(this.progressToolbarStyleAdvancedPref.value)
-		{
-			this.progressToolbarEditor.selectedIndex = 1;
-		}
-		else
-		{
-			let cssParser = document.createElement("div");
-			cssParser.style.background = this.progressToolbarCSSPref.value;
-
-			let bgI = cssParser.style.backgroundImage;
-			let bgC = cssParser.style.backgroundColor;
-
-			if((bgI != "none" && !urlRE.test(bgI)) || !rgbRE.test(bgC))
-			{
-				var result = isFirstRun ||
-						Services.prompt.confirm(window, this.s4e_strings.getString("simpleEditorTitle"), this.s4e_strings.getString("simpleEditorMessage"));
-				if(isFirstRun || !result)
-				{
-					this.progressToolbarStyleAdvancedPref.value = true;
-					return;
-				}
-
-				if(bgI != "none" && !urlRE.test(bgI))
-				{
-					bgI = "none";
-				}
-
-				if(!rgbRE.test(bgC))
-				{
-					bgC = "#33FF33";
-				}
-
-				this.progressToolbarCSSPref.value = bgC + " " + bgI;
-			}
-
-			this.disableProgressToolbarEditorUpdateCSS = true;
-
-			this.progressToolbarEditorColor.color = rgbToHex(bgC);
-			this.progressToolbarEditorImage.value = ((bgI != "none") ? urlRE.exec(bgI)[1].trim() : "none");
-
-			this.disableProgressToolbarEditorUpdateCSS = false;
-
-			this.progressToolbarEditor.selectedIndex = 0;
-		}
-	},
-
-	progressToolbarEditorUpdateCSS: function()
-	{
-		if(this.disableProgressToolbarEditorUpdateCSS)
-		{
-			return;
-		}
-
-		let cssVal = this.progressToolbarEditorColor.color;
-		let imageVal = this.progressToolbarEditorImage.value;
-		if(imageVal && imageVal != "none")
-		{
-			cssVal += " url(\"" + imageVal + "\")";
-		}
-
-		this.progressToolbarCSSPref.value = cssVal;
-	},
-
-	progressToolbarEditorMenuFrom: function()
-	{
-		this.progressToolbarEditorChanged();
-		return ((this.progressToolbarStyleAdvancedPref.value) ? 1 : 0);
-	},
-
-	progressToolbarEditorMenuTo: function()
-	{
-		return ((this.progressToolbarEditorMenu.value == 1) ? true : false);
-	},
-
-	progressToolbarEditorImageBrowse: function()
-	{
-		this.progressToolbarEditorImage.value = getImageFileUri();
-		this.progressToolbarEditorUpdateCSS();
-	},
-
-	progressToolbarEditorImageClear: function()
-	{
-		this.progressToolbarEditorImage.value = "none";
-		this.progressToolbarEditorUpdateCSS();
 	}
 }
 
-//
-// Tools
-//
-
-const rgbRE = /rgb\((\d+), (\d+), (\d+)\)/;
-const urlRE = /url\(\w*['"]?(.*)['"]?\w*\)/;
-
-function rgbToHex(color)
-{
-	if(color.charAt(0) == "#")
-	{
-		return color;
-	}
-
-	var digits = rgbRE.exec(color);
-
-	var red = parseInt(digits[1]);
-	var green = parseInt(digits[2]);
-	var blue = parseInt(digits[3]);
-
-	var rgb = blue | (green << 8) | (red << 16);
-	return '#' + rgb.toString(16);
+var XULBrowserWindow = {
 }
-
-function getImageFileUri()
-{
-	let nsIFilePicker = Components.interfaces.nsIFilePicker;
-	let filePicker = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-	filePicker.init(window, status4evarPrefs.s4e_strings.getString("imageSelectTitle"), nsIFilePicker.modeOpen);
-	filePicker.appendFilters(nsIFilePicker.filterImages);
-	let res = filePicker.show();
-	if (res == nsIFilePicker.returnOK){
-		return Services.io.newFileURI(filePicker.file).spec;
-	}
-	return "none";
-}
-

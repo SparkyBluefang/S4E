@@ -7,13 +7,13 @@
 
 <!ENTITY status4evar.tab.general "General">
 <!ENTITY status4evar.tab.toolbar "Toolbar">
-<!ENTITY status4evar.tab.urlbar "URL bar">
+<!ENTITY status4evar.tab.urlbar "Location Bar">
 <!ENTITY status4evar.tab.popup "Popup">
 <!ENTITY status4evar.tab.tabs "Tabs">
 
 <!ENTITY status4evar.option.none "None">
 <!ENTITY status4evar.option.toolbar "Toolbar">
-<!ENTITY status4evar.option.urlbar "URL bar">
+<!ENTITY status4evar.option.urlbar "Location Bar">
 <!ENTITY status4evar.option.popup "Popup">
 <!ENTITY status4evar.option.tooltip "Tooltip">
 <!ENTITY status4evar.option.bottom "Bottom">
@@ -51,21 +51,26 @@
 <!ENTITY status4evar.status.toolbar.maxLength.label "Max status text length:">
 
 <!ENTITY status4evar.status.urlbar.align.label "Status alignment:">
-<!ENTITY status4evar.status.urlbar.color.label "Text color:">
-<!ENTITY status4evar.status.currentUrl "Current URL">
+<!ENTITY status4evar.status.urlbar.color.label "Status color:">
+<!ENTITY status4evar.status.currentUrl "Current Location">
 <!ENTITY status4evar.status.statusText "Status Text">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
 
 
 
-<!ENTITY status4evar.progress.style.label "Use custom style on progress bar">
-<!ENTITY status4evar.progress.style.editor.label "Editor:">
-<!ENTITY status4evar.progress.style.editor.color.label "Color:">
-<!ENTITY status4evar.progress.style.editor.image.label "Image:">
+<!ENTITY status4evar.progress.style.label "Use a custom style">
 
-<!ENTITY status4evar.progress.urlbar.enable.label "Show progress in the location bar">
+<!ENTITY status4evar.progress.urlbar.enable.label "Show progress in the Location Bar">
 <!ENTITY status4evar.progress.urlbar.line.label "Line style:">
 
 <!ENTITY status4evar.progress.toolbar.force.label "Always show the toolbar item">
+
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 
 
 

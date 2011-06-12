@@ -139,11 +139,6 @@ splitter.status4evar-status-splitter:not(:hover)
 	-moz-box-flex: 1;
 }
 
-#urlbar-progress-alt > *
-{
-	border: none;
-}
-
 #urlbar:not([pmpack="center"]) #urlbar-progress-alt > *
 {
 	border-top: 1px solid rgba(0,0,0,.1);
@@ -165,6 +160,12 @@ splitter.status4evar-status-splitter:not(:hover)
 /*
  * General Progress
  */
+
+#urlbar-progress-alt > *,
+#status4evar-progress-bar[s4estyle="true"] > *
+{
+	border: none;
+}
 
 #urlbar-progress-alt > .progress-remainder,
 #status4evar-progress-bar > .progress-remainder
