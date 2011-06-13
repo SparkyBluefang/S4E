@@ -1,4 +1,6 @@
 Version next
+
+Version 2011.06.13.19b
 * Tweak some preference UI strings.
 * Rewrite the CSS background editor using XBL.
 * Add support for background-repeat to the simple editor.
