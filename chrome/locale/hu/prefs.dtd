@@ -26,6 +26,12 @@
 <!ENTITY status4evar.option.advanced "Haladó">
 <!ENTITY status4evar.option.browse "Tallózás">
 <!ENTITY status4evar.option.clear "Ürítés">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 <!ENTITY status4evar.unit.seconds "másodperc múlva">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Állapot szöveg">
@@ -44,13 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Betűszín:">
 <!ENTITY status4evar.status.currentUrl "Aktuális URL">
 <!ENTITY status4evar.status.statusText "Állapot szöveg">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
 <!ENTITY status4evar.progress.style.label "Egyéni stílus használata a betöltési csíkon">
-<!ENTITY status4evar.progress.style.editor.label "Szerkesztő:">
-<!ENTITY status4evar.progress.style.editor.color.label "Szín:">
-<!ENTITY status4evar.progress.style.editor.image.label "Kép:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Betöltési állapot mutatása a címsorban">
 <!ENTITY status4evar.progress.urlbar.line.label "Vonal stílusa:">
 <!ENTITY status4evar.progress.toolbar.force.label "Mindig mutassa az eszköztár elemet">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Mindig mutassa a Letöltési állapot gombot">
 <!ENTITY status4evar.download.label.force.label "Mindig mutassa a címkét">
 <!ENTITY status4evar.download.label.label "Letöltési állapot gomb címkéje:">

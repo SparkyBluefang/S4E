@@ -26,6 +26,12 @@
 <!ENTITY status4evar.option.advanced "Avanzato">
 <!ENTITY status4evar.option.browse "Sfoglia">
 <!ENTITY status4evar.option.clear "Azzera">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 <!ENTITY status4evar.unit.seconds "secondi">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Messaggio di stato">
@@ -44,13 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Colore del testo:">
 <!ENTITY status4evar.status.currentUrl "Indirizzo corrente">
 <!ENTITY status4evar.status.statusText "Messaggio di stato">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
 <!ENTITY status4evar.progress.style.label "Usa stile personalizzato per la barra di avanzamento">
-<!ENTITY status4evar.progress.style.editor.label "Editor:">
-<!ENTITY status4evar.progress.style.editor.color.label "Colore:">
-<!ENTITY status4evar.progress.style.editor.image.label "Immagine:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Mostra indicatore di avanzamento nella barra degli indirizzi">
 <!ENTITY status4evar.progress.urlbar.line.label "Stile della linea:">
 <!ENTITY status4evar.progress.toolbar.force.label "Mostra sempre l'indicatore di avanzamento nella barra degli strumenti">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Mostra sempre il pulsante di stato dei download">
 <!ENTITY status4evar.download.label.force.label "Mostra sempre l'etichetta del pulsante">
 <!ENTITY status4evar.download.label.label "Etichetta del pulsante di stato dei download:">

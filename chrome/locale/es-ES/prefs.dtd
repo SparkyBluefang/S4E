@@ -26,6 +26,12 @@
 <!ENTITY status4evar.option.advanced "Avanzado">
 <!ENTITY status4evar.option.browse "Buscar">
 <!ENTITY status4evar.option.clear "Borrar">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 <!ENTITY status4evar.unit.seconds "segundos">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Mensajes de Estado">
@@ -44,13 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Color del texto:">
 <!ENTITY status4evar.status.currentUrl "Dirección actual">
 <!ENTITY status4evar.status.statusText "Mensaje de Estado">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
 <!ENTITY status4evar.progress.style.label "Usar estilo personalizado en la barra de progreso">
-<!ENTITY status4evar.progress.style.editor.label "Editor:">
-<!ENTITY status4evar.progress.style.editor.color.label "Color:">
-<!ENTITY status4evar.progress.style.editor.image.label "Imagen:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Mostrar progreso en la barra de direcciones">
 <!ENTITY status4evar.progress.urlbar.line.label "Estilo de línea:">
 <!ENTITY status4evar.progress.toolbar.force.label "Mostrar siempre la barra de progreso en la barra de herramientas">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Mostrar siempre el icono de Descargas">
 <!ENTITY status4evar.download.label.force.label "Mostrar siempre texto con el icono de Descargas">
 <!ENTITY status4evar.download.label.label "Texto del icono de Descargas:">

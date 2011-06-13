@@ -26,6 +26,12 @@
 <!ENTITY status4evar.option.advanced "上級者向け">
 <!ENTITY status4evar.option.browse "参照">
 <!ENTITY status4evar.option.clear "クリア">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 <!ENTITY status4evar.unit.seconds "秒">
 <!ENTITY status4evar.unit.px "ピクセル">
 <!ENTITY status4evar.status.general.status.caption "ステータスのテキスト">
@@ -44,13 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "文字色:">
 <!ENTITY status4evar.status.currentUrl "現在のURL">
 <!ENTITY status4evar.status.statusText "ステータステキスト">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
 <!ENTITY status4evar.progress.style.label "位置：">
-<!ENTITY status4evar.progress.style.editor.label "エディタ:">
-<!ENTITY status4evar.progress.style.editor.color.label "色:">
-<!ENTITY status4evar.progress.style.editor.image.label "画像:">
 <!ENTITY status4evar.progress.urlbar.enable.label "ロケーションバーに進行状態を表示">
 <!ENTITY status4evar.progress.urlbar.line.label "ラインのスタイル:">
 <!ENTITY status4evar.progress.toolbar.force.label "ツールバーのアイテムを常に表示">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "ダウンロードの進行状況を常に表示">
 <!ENTITY status4evar.download.label.force.label "常にラベルを表示">
 <!ENTITY status4evar.download.label.label "ダウンロードステータスボタンのラベル：">

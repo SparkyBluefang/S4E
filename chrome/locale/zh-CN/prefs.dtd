@@ -26,6 +26,12 @@
 <!ENTITY status4evar.option.advanced "高级">
 <!ENTITY status4evar.option.browse "浏览">
 <!ENTITY status4evar.option.clear "清除">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 <!ENTITY status4evar.unit.seconds "秒后">
 <!ENTITY status4evar.unit.px "像素">
 <!ENTITY status4evar.status.general.status.caption "状态文本">
@@ -44,13 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "文本颜色：">
 <!ENTITY status4evar.status.currentUrl "当前URL">
 <!ENTITY status4evar.status.statusText "状态文本">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
 <!ENTITY status4evar.progress.style.label "在进度条上使用自定义样式：">
-<!ENTITY status4evar.progress.style.editor.label "编辑器：">
-<!ENTITY status4evar.progress.style.editor.color.label "颜色：">
-<!ENTITY status4evar.progress.style.editor.image.label "图片：">
 <!ENTITY status4evar.progress.urlbar.enable.label "在地址栏显示进度条">
 <!ENTITY status4evar.progress.urlbar.line.label "线条样式：">
 <!ENTITY status4evar.progress.toolbar.force.label "总是在工具栏显示">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "总是显示下载状态按钮">
 <!ENTITY status4evar.download.label.force.label "总是显示按钮文本">
 <!ENTITY status4evar.download.label.label "下载状态的按钮文本：">

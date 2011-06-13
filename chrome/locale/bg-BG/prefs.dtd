@@ -26,6 +26,12 @@
 <!ENTITY status4evar.option.advanced "Разширен">
 <!ENTITY status4evar.option.browse "Разглеждане...">
 <!ENTITY status4evar.option.clear "Изчистване">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 <!ENTITY status4evar.unit.seconds "секунди">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Състояние">
@@ -44,13 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Цвят на текста:">
 <!ENTITY status4evar.status.currentUrl "Текущ адрес">
 <!ENTITY status4evar.status.statusText "Текст за състоянието">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
 <!ENTITY status4evar.progress.style.label "Използване на собствен стил за изобразяване на напредъка">
-<!ENTITY status4evar.progress.style.editor.label "Редактор:">
-<!ENTITY status4evar.progress.style.editor.color.label "Цвят:">
-<!ENTITY status4evar.progress.style.editor.image.label "Изображение:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Показване на напредъка в адресната лента">
 <!ENTITY status4evar.progress.urlbar.line.label "Стил на линията:">
 <!ENTITY status4evar.progress.toolbar.force.label "Напредъкът винаги да се показва на лентата с инструменти">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Винаги да се показва бутонът за състоянието на изтеглянията">
 <!ENTITY status4evar.download.label.force.label "Винаги да се показва текстът на бутона">
 <!ENTITY status4evar.download.label.label "Текст на бутона:">

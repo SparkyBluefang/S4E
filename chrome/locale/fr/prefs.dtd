@@ -26,6 +26,12 @@
 <!ENTITY status4evar.option.advanced "Avancé">
 <!ENTITY status4evar.option.browse "Parcourir">
 <!ENTITY status4evar.option.clear "Effacer">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 <!ENTITY status4evar.unit.seconds "secondes">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Texte d'état">
@@ -44,13 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Couleur du texte :">
 <!ENTITY status4evar.status.currentUrl "URL courante">
 <!ENTITY status4evar.status.statusText "Texte d'état">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
 <!ENTITY status4evar.progress.style.label "Utiliser un style personnalisé pour la barre de progression">
-<!ENTITY status4evar.progress.style.editor.label "Éditeur :">
-<!ENTITY status4evar.progress.style.editor.color.label "Couleur :">
-<!ENTITY status4evar.progress.style.editor.image.label "Image :">
 <!ENTITY status4evar.progress.urlbar.enable.label "Afficher la progression dans la barre d'adresse">
 <!ENTITY status4evar.progress.urlbar.line.label "Style de la ligne :">
 <!ENTITY status4evar.progress.toolbar.force.label "Toujours afficher l'élément de la barre d'outils">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Toujours afficher le bouton d'état de téléchargement">
 <!ENTITY status4evar.download.label.force.label "Toujours afficher le texte">
 <!ENTITY status4evar.download.label.label "Texte du bouton d'état de téléchargement :">

@@ -26,6 +26,12 @@
 <!ENTITY status4evar.option.advanced "Rozšířený">
 <!ENTITY status4evar.option.browse "Vybrat">
 <!ENTITY status4evar.option.clear "Vyčistit">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 <!ENTITY status4evar.unit.seconds "vteřinách">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Stavový text">
@@ -44,13 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Barva písma:">
 <!ENTITY status4evar.status.currentUrl "Aktuální adresa">
 <!ENTITY status4evar.status.statusText "Stavový text">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
 <!ENTITY status4evar.progress.style.label "Použít vlastní styl pro lištu činnosti">
-<!ENTITY status4evar.progress.style.editor.label "Editor:">
-<!ENTITY status4evar.progress.style.editor.color.label "Barva:">
-<!ENTITY status4evar.progress.style.editor.image.label "Obrázek:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Zobrazit činnosti v adresním řádku">
 <!ENTITY status4evar.progress.urlbar.line.label "Styl linky:">
 <!ENTITY status4evar.progress.toolbar.force.label "Vždy zobrazit položku v nástrojové liště">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Vždy zobrazit tlačítko průběhu stahování">
 <!ENTITY status4evar.download.label.force.label "Vždy zobrazit text tlačítka">
 <!ENTITY status4evar.download.label.label "Text tlačítka průběhu stahování:">

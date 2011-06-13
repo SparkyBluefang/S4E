@@ -26,6 +26,12 @@
 <!ENTITY status4evar.option.advanced "Detala">
 <!ENTITY status4evar.option.browse "Foliumi">
 <!ENTITY status4evar.option.clear "Forigi">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 <!ENTITY status4evar.unit.seconds "sekundoj">
 <!ENTITY status4evar.unit.px "rastrumeroj">
 <!ENTITY status4evar.status.general.status.caption "Statoteksto">
@@ -44,13 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Tekstokoloro:">
 <!ENTITY status4evar.status.currentUrl "Aktuala URL">
 <!ENTITY status4evar.status.statusText "Statoteksto">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
 <!ENTITY status4evar.progress.style.label "Uzi propran stilon por plenumindikilo">
-<!ENTITY status4evar.progress.style.editor.label "Redaktilo:">
-<!ENTITY status4evar.progress.style.editor.color.label "Koloro:">
-<!ENTITY status4evar.progress.style.editor.image.label "Bildo:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Montri plenumadon en la adresbreto">
 <!ENTITY status4evar.progress.urlbar.line.label "Liniostilo:">
 <!ENTITY status4evar.progress.toolbar.force.label "Ĉiam montri la ilaran elementon">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Ĉiam montri la elŝutostatan butonon">
 <!ENTITY status4evar.download.label.force.label "Ĉiam montri la butontekston">
 <!ENTITY status4evar.download.label.label "Teksto de elŝutostata butono:">

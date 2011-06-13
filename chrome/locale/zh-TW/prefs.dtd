@@ -26,6 +26,12 @@
 <!ENTITY status4evar.option.advanced "進階">
 <!ENTITY status4evar.option.browse "瀏覽">
 <!ENTITY status4evar.option.clear "清除">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 <!ENTITY status4evar.unit.seconds "秒後">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "狀態文字">
@@ -44,13 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "文字色彩：">
 <!ENTITY status4evar.status.currentUrl "目前網址">
 <!ENTITY status4evar.status.statusText "狀態文字">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
 <!ENTITY status4evar.progress.style.label "進度列使用自訂樣式">
-<!ENTITY status4evar.progress.style.editor.label "編輯器：">
-<!ENTITY status4evar.progress.style.editor.color.label "色彩：">
-<!ENTITY status4evar.progress.style.editor.image.label "圖片：">
 <!ENTITY status4evar.progress.urlbar.enable.label "在位址列顯示載入進度">
 <!ENTITY status4evar.progress.urlbar.line.label "進度條樣式：">
 <!ENTITY status4evar.progress.toolbar.force.label "總是顯示工具列圖示">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "總是顯示下載狀態按鈕">
 <!ENTITY status4evar.download.label.force.label "總是顯示標籤">
 <!ENTITY status4evar.download.label.label "下載狀態按鈕標籤：">

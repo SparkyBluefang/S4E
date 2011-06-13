@@ -26,6 +26,12 @@
 <!ENTITY status4evar.option.advanced "Rozšěrjeny">
 <!ENTITY status4evar.option.browse "Přepytać">
 <!ENTITY status4evar.option.clear "Wuprózdnić">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 <!ENTITY status4evar.unit.seconds "sekundach">
 <!ENTITY status4evar.unit.px "pikselow">
 <!ENTITY status4evar.status.general.status.caption "Statusowy tekst">
@@ -44,13 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Tekstowa barba:">
 <!ENTITY status4evar.status.currentUrl "Aktualny URL">
 <!ENTITY status4evar.status.statusText "Statusowy tekst">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
 <!ENTITY status4evar.progress.style.label "Swójski stil za postupowu hrjadu wužiwać">
-<!ENTITY status4evar.progress.style.editor.label "Editor:">
-<!ENTITY status4evar.progress.style.editor.color.label "Barba:">
-<!ENTITY status4evar.progress.style.editor.image.label "Wobraz:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Postup w adresowym polu pokazać">
 <!ENTITY status4evar.progress.urlbar.line.label "Linijowy stil:">
 <!ENTITY status4evar.progress.toolbar.force.label "Zapisk gratoweje lajsty přeco pokazać">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Color:">
+<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Tłóčatko sćehnjenskeho statusa přeco pokazać">
 <!ENTITY status4evar.download.label.force.label "Tekst tłóčatka přeco pokazać">
 <!ENTITY status4evar.download.label.label "Tekst tłóčatka sćehnjenskeho statusa:">
