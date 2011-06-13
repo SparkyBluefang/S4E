@@ -73,6 +73,8 @@
 			            onchange="status4evarPrefs.urlbarAlignChanged();" />
 			<preference id="status4evar-pref-status-urlbar-color"        name="status4evar.status.urlbar.color"        type="string" />
 			<preference id="status4evar-pref-status-urlbar-position"     name="status4evar.status.urlbar.position"     type="int" />
+			<preference id="status4evar-pref-status-popup-findMirror"    name="status4evar.status.popup.findMirror"    type="bool" />
+			<preference id="status4evar-pref-status-popup-mouseMirror"   name="status4evar.status.popup.mouseMirror"   type="bool" />
 			<preference id="toolkit-pref-dom-status-change"              name="dom.disable_window_status_change"       type="bool" inverted="true" />
 			<preference id="browser-pref-urlbar-formatting-enabled"      name="browser.urlbar.formatting.enabled"      type="bool" />
 		</preferences>
@@ -200,7 +202,9 @@
 				</tabpanel>
 
 				<tabpanel id="status4evar-tabpanel-status-popup" orient="vertical">
-					
+					<checkbox id="status4evar-status-popup-mouseMirror-check" preference="status4evar-pref-status-popup-mouseMirror" label="&status4evar.status.popup.mouseMirror.label;" />
+
+					<checkbox id="status4evar-status-popup-findMirror-check" preference="status4evar-pref-status-popup-findMirror" label="&status4evar.status.popup.findMirror.label;" />
 				</tabpanel>
 
 			</tabpanels>

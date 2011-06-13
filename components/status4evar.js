@@ -92,6 +92,9 @@ Status_4_Evar.prototype =
 	statusUrlbarColor:		null,
 	statusUrlbarPosition:		33,
 
+	statusUrlbarFindMirror:		true,
+	statusUrlbarMouseMirror:	true,
+
 	pref_registry:
 	{
 		"addonbar.borderStyle":
@@ -327,6 +330,30 @@ Status_4_Evar.prototype =
 			}
 		},
 
+		"status.linkOver":
+		{
+			update: function()
+			{
+				this.statusLinkOver = this.prefs.getIntPref("status.linkOver");
+			}
+		},
+
+		"status.linkOver.delay.show":
+		{
+			update: function()
+			{
+				this.statusLinkOverDelayShow = this.prefs.getIntPref("status.linkOver.delay.show");
+			}
+		},
+
+		"status.linkOver.delay.hide":
+		{
+			update: function()
+			{
+				this.statusLinkOverDelayHide = this.prefs.getIntPref("status.linkOver.delay.hide");
+			}
+		},
+
 		"status.network":
 		{
 			update: function()
@@ -351,6 +378,38 @@ Status_4_Evar.prototype =
 			}
 		},
 
+		"status.popup.findMirror":
+		{
+			update: function()
+			{
+				this.statusUrlbarFindMirror = this.prefs.getBoolPref("status.popup.findMirror");
+			},
+			updateWindow: function(win)
+			{
+				let statusOverlay = win.caligon.status4evar.getters.statusOverlay;
+				if(statusOverlay)
+				{
+					statusOverlay.findMirror = this.statusUrlbarFindMirror;
+				}
+			}
+		},
+
+		"status.popup.mouseMirror":
+		{
+			update: function()
+			{
+				this.statusUrlbarMouseMirror = this.prefs.getBoolPref("status.popup.mouseMirror");
+			},
+			updateWindow: function(win)
+			{
+				let statusOverlay = win.caligon.status4evar.getters.statusOverlay;
+				if(statusOverlay)
+				{
+					statusOverlay.mouseMirror = this.statusUrlbarMouseMirror;
+				}
+			}
+		},
+
 		"status.timeout":
 		{
 			update: function()
@@ -360,30 +419,6 @@ Status_4_Evar.prototype =
 			updateWindow: function(win)
 			{
 				win.caligon.status4evar.statusService.updateStatusField(true);
-			}
-		},
-
-		"status.linkOver":
-		{
-			update: function()
-			{
-				this.statusLinkOver = this.prefs.getIntPref("status.linkOver");
-			}
-		},
-
-		"status.linkOver.delay.show":
-		{
-			update: function()
-			{
-				this.statusLinkOverDelayShow = this.prefs.getIntPref("status.linkOver.delay.show");
-			}
-		},
-
-		"status.linkOver.delay.hide":
-		{
-			update: function()
-			{
-				this.statusLinkOverDelayHide = this.prefs.getIntPref("status.linkOver.delay.hide");
 			}
 		},
 

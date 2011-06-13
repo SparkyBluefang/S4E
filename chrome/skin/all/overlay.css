@@ -310,6 +310,14 @@ splitter.status4evar-status-splitter:not(:hover)
 }
 
 /*
+ * Popup status
+ */
+statuspanel[nomouse="true"]
+{
+	pointer-events: none;
+}
+
+/*
  * Stop being a derp!
  */
 

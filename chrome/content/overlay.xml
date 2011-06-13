@@ -280,11 +280,32 @@
 
 	<binding id="statuspanel" display="xul:hbox" extends="chrome://browser/content/tabbrowser.xml#statuspanel">
 		<implementation>
+			<field name="findMirror"><![CDATA[
+				true
+			]]></field>
+
+			<property name="mouseMirror">
+				<setter><![CDATA[
+					if(val)
+					{
+						this.removeAttribute("nomouse");
+					}
+					else
+					{
+						this.setAttribute("nomouse", "true");
+					}
+					return val;
+				]]></setter>
+				<getter><![CDATA[
+					return this.getAttribute("nomouse") != "true";
+				]]></getter>
+			</property>
+
 			<property name="value">
 				<setter><![CDATA[
-					if(!this.value)
+					if(!val)
 					{
-						if (window.gFindBarInitialized && !window.gFindBar.hidden)
+						if(this.findMirror && window.gFindBarInitialized && !window.gFindBar.hidden)
 						{
 							this.setAttribute("mirror", "true");
 						}
@@ -320,7 +341,7 @@
 			<method name="handleEvent">
 				<parameter name="event"/>
 				<body><![CDATA[
-					if(event.type == "findbaropen" && this.value)
+					if(this.findMirror && event.type == "findbaropen" && this.value)
 					{
 						this.setAttribute("mirror", "true");
 					}

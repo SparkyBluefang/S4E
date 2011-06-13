@@ -82,6 +82,9 @@ interface nsIStatus4Evar : nsISupports
 	readonly attribute string  statusUrlbarColor;
 	readonly attribute long    statusUrlbarPosition;
 
+	readonly attribute boolean statusUrlbarFindMirror;
+	readonly attribute boolean statusUrlbarMouseMirror;
+
 	void updateWindow(in nsIDOMWindow win);
 	void launchOptions(in nsIDOMWindow currentWindow);
 };
