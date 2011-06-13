@@ -7,6 +7,7 @@ Version next
 * Add a preference to control Firefox's domain highlighting in the location bar.
 * Add a preference to control statusbar-display mirroring on mouse-over.
 * Add a preference to control statusbar-display mirroring on find bar open.
+* Updated translations for: sr
 
 Version 2011.05.07.18b
 * Firefox 6.0a1 changed the nsIDOMWindow interface ID. Make S4E compatible.
