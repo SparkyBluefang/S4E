@@ -11,7 +11,7 @@
 				<xul:deck anonid="css-bg-editor-deck" flex="1">
 					<xul:vbox>
 						<xul:hbox align="center">
-							<xul:label flex="1" xbl:inherits="disabled">&status4evar.editor.css.color.label;</xul:label>
+							<xul:label xbl:inherits="disabled">&status4evar.editor.css.color.label;</xul:label>
 							<xul:colorpicker anonid="css-bg-editor-color" type="button" onchange="this._editor._buildCSS();" xbl:inherits="disabled" />
 						</xul:hbox>
 
@@ -21,65 +21,72 @@
 							<xul:button anonid="css-bg-editor-image-browse" label="&status4evar.option.browse;" oncommand="this._editor._imageBrowse();" xbl:inherits="disabled" />
 						</xul:hbox>
 						<xul:hbox align="center" pack="end">
-							<xul:button anonid="css-bg-editor-image-clear" label="&status4evar.option.clear;" oncommand="this._editor._imageClear();" xbl:inherits="disabled=noimage" />
+							<xul:button anonid="css-bg-editor-image-clear" label="&status4evar.option.clear;" oncommand="this._editor._imageClear();" xbl:inherits="disabled=no-image" />
 						</xul:hbox>
 
 						<xul:hbox>
-							<xul:groupbox>
-								<xul:caption label=" " />
-								<xul:label>X</xul:label>
-								<xul:label>Y</xul:label>
+							<xul:groupbox pack="center">
+								<xul:caption label="" />
+								<xul:hbox flex="1" align="center">
+									<xul:label>X</xul:label>
+								</xul:hbox>
+								<xul:separator class="groove" orient="horizontal" />
+								<xul:hbox flex="1" align="center">
+									<xul:label>Y</xul:label>
+								</xul:hbox>
 							</xul:groupbox>
 
 							<xul:groupbox>
-								<xul:caption label="&status4evar.editor.css.image.repeat;" />
-								<xul:menulist anonid="css-bg-editor-image-repeat-x" sizetopopup="always" onselect="this._editor._buildCSS();" xbl:inherits="disabled=noimage">
+								<xul:caption label="&status4evar.editor.css.image.repeat;" xbl:inherits="disabled=no-image" />
+								<xul:menulist anonid="css-bg-editor-image-repeat-x" sizetopopup="always" onselect="this._editor._buildCSS();" xbl:inherits="disabled=no-image">
 									<xul:menupopup>
-										<xul:menuitem label="no-repeat" value="no-repeat" />
-										<xul:menuitem label="repeat" value="repeat" />
+										<xul:menuitem label="&status4evar.option.no-repeat;" value="no-repeat" />
+										<xul:menuitem label="&status4evar.option.repeat;"    value="repeat" />
 <!--
-										<xul:menuitem label="space" value="space" />
-										<xul:menuitem label="round" value="round" />
+										<xul:menuitem label="&status4evar.option.space;"     value="space" />
+										<xul:menuitem label="&status4evar.option.round;"     value="round" />
 -->
 									</xul:menupopup>
 								</xul:menulist>
-								<xul:menulist anonid="css-bg-editor-image-repeat-y" sizetopopup="always" onselect="this._editor._buildCSS();" xbl:inherits="disabled=noimage">
+								<xul:separator class="groove" orient="horizontal" />
+								<xul:menulist anonid="css-bg-editor-image-repeat-y" sizetopopup="always" onselect="this._editor._buildCSS();" xbl:inherits="disabled=no-image">
 									<xul:menupopup>
-										<xul:menuitem label="no-repeat" value="no-repeat" />
-										<xul:menuitem label="repeat" value="repeat" />
+										<xul:menuitem label="&status4evar.option.no-repeat;" value="no-repeat" />
+										<xul:menuitem label="&status4evar.option.repeat;"    value="repeat" />
 <!--
-										<xul:menuitem label="space" value="space" />
-										<xul:menuitem label="round" value="round" />
+										<xul:menuitem label="&status4evar.option.space;"     value="space" />
+										<xul:menuitem label="&status4evar.option.round;"     value="round" />
 -->
 									</xul:menupopup>
 								</xul:menulist>
 							</xul:groupbox>
 
 							<xul:groupbox>
-								<xul:caption label="&status4evar.editor.css.image.position;" />
-								<xul:menulist anonid="css-bg-editor-image-position-x" sizetopopup="always" onselect="this._editor._updatePositionX();" xbl:inherits="disabled=noimage">
+								<xul:caption label="&status4evar.editor.css.image.position;" xbl:inherits="disabled=no-image" />
+								<xul:menulist anonid="css-bg-editor-image-position-x" sizetopopup="always" onselect="this._editor._updatePositionX();" xbl:inherits="disabled=no-image">
 									<xul:menupopup>
-											<xul:menuitem label="left" value="left" />
-											<xul:menuitem label="center" value="center" />
-											<xul:menuitem label="right" value="right" />
-											<xul:menuitem label="offset" value="offset" />
+											<xul:menuitem label="&status4evar.option.left;"   value="left" />
+											<xul:menuitem label="&status4evar.option.center;" value="center" />
+											<xul:menuitem label="&status4evar.option.right;"  value="right" />
+											<xul:menuitem label="&status4evar.option.offset;" value="offset" />
 									</xul:menupopup>
 								</xul:menulist>
-								<xul:menulist anonid="css-bg-editor-image-position-y" sizetopopup="always" onselect="this._editor._updatePositionY();" xbl:inherits="disabled=noimage">
+								<xul:separator class="groove" orient="horizontal" />
+								<xul:menulist anonid="css-bg-editor-image-position-y" sizetopopup="always" onselect="this._editor._updatePositionY();" xbl:inherits="disabled=no-image">
 									<xul:menupopup>
-											<xul:menuitem label="top" value="top" />
-											<xul:menuitem label="center" value="center" />
-											<xul:menuitem label="bottom" value="bottom" />
-											<xul:menuitem label="offset" value="offset" />
+											<xul:menuitem label="&status4evar.option.top;"    value="top" />
+											<xul:menuitem label="&status4evar.option.center;" value="center" />
+											<xul:menuitem label="&status4evar.option.bottom;" value="bottom" />
+											<xul:menuitem label="&status4evar.option.offset;" value="offset" />
 									</xul:menupopup>
 								</xul:menulist>
 							</xul:groupbox>
 
 							<xul:groupbox>
-								<xul:caption label="&status4evar.editor.css.image.offset;" />
+								<xul:caption label="&status4evar.editor.css.image.offset;" xbl:inherits="disabled=no-image" />
 								<xul:hbox>
-									<xul:textbox anonid="css-bg-editor-image-offset-x" type="number" size="4" min="-65535" onchange="this._editor._buildCSS();" xbl:inherits="disabled=noimage" />
-									<xul:menulist anonid="css-bg-editor-image-offset-unit-x" sizetopopup="always" onselect="this._editor._buildCSS();" xbl:inherits="disabled=noimage">
+									<xul:textbox anonid="css-bg-editor-image-offset-x" type="number" size="4" min="-65535" onchange="this._editor._buildCSS();" />
+									<xul:menulist anonid="css-bg-editor-image-offset-unit-x" sizetopopup="always" onselect="this._editor._buildCSS();">
 										<xul:menupopup>
 												<xul:menuitem label="%" value="%" />
 												<xul:menuitem label="px" value="px" />
@@ -92,9 +99,10 @@
 										</xul:menupopup>
 									</xul:menulist>
 								</xul:hbox>
+								<xul:separator class="groove" orient="horizontal" />
 								<xul:hbox>
-									<xul:textbox anonid="css-bg-editor-image-offset-y" type="number" size="4" min="-65535" onchange="this._editor._buildCSS();" xbl:inherits="disabled=noimage" />
-									<xul:menulist anonid="css-bg-editor-image-offset-unit-y" sizetopopup="always" onselect="this._editor._buildCSS();" xbl:inherits="disabled=noimage">
+									<xul:textbox anonid="css-bg-editor-image-offset-y" type="number" size="4" min="-65535" onchange="this._editor._buildCSS();" />
+									<xul:menulist anonid="css-bg-editor-image-offset-unit-y" sizetopopup="always" onselect="this._editor._buildCSS();">
 										<xul:menupopup>
 												<xul:menuitem label="%" value="%" />
 												<xul:menuitem label="px" value="px" />
@@ -118,7 +126,7 @@
 			<xul:hbox align="center" pack="end">
 				<children includes="progressmeter|toolbox" />
 				<xul:label xbl:inherits="disabled">&status4evar.editor.label;</xul:label>
-				<xul:menulist anonid="css-bg-editor-mode-menu" sizetopopup="always" onselect="this._editor.updateMode();" xbl:inherits="disabled">
+				<xul:menulist anonid="css-bg-editor-mode-menu" sizetopopup="always" onselect="this._editor._updateMode();" xbl:inherits="disabled">
 					<xul:menupopup>
 						<xul:menuitem label="&status4evar.option.simple;" />
 						<xul:menuitem label="&status4evar.option.advanced;" />
@@ -266,28 +274,17 @@
 					if(val)
 					{ 
 						this.setAttribute("disabled", "true");
-						this.setAttribute("noimage", "true");
 					}
 					else
 					{
 						this.removeAttribute("disabled");
-						this._updateNoImage();
 					}
+
+					this._updateImageControllDisable();
 
 					return val;
 				]]></setter>
 			</property>
-
-			<method name="updateMode">
-				<body><![CDATA[
-					if(this._editorMode.selectedIndex == this._editorDeck.selectedIndex)
-					{
-						return;
-					}
-
-					this.setAdvanced(((this._editorMode.selectedIndex == 1) ? true : false), true);
-				]]></body>
-			</method>
 
 			<method name="setAdvanced">
 				<parameter name="aVal"/>
@@ -387,50 +384,18 @@
 				]]></body>
 			</method>
 
-			<method name="_imageBrowse">
-				<body><![CDATA[
-					let nsIFilePicker = Components.interfaces.nsIFilePicker;
-					let filePicker = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-					filePicker.init(window, this._strings.getString("imageSelectTitle"), nsIFilePicker.modeOpen);
-					filePicker.appendFilters(nsIFilePicker.filterImages);
-
-					let res = filePicker.show();
-					if(res == nsIFilePicker.returnOK)
-					{
-						this._editorImage.value =  Services.io.newFileURI(filePicker.file).spec;
-						this.removeAttribute("noimage");
-						this._buildCSS();
-					}
-				]]></body>
-			</method>
-
-			<method name="_imageClear">
-				<body><![CDATA[
-					this._editorImage.value =  "";
-					this.setAttribute("noimage", "true");
-					this._editorImageRepeatX.value = "repeat";
-					this._editorImageRepeatY.value = "repeat";
-					this._editorImagePositionX.value = "left";
-					this._editorImagePositionY.value = "top";
-					this._editorImageOffsetX.value = 0;
-					this._editorImageOffsetY.value = 0;
-					this._editorImageOffsetUnitX.value = "px";
-					this._editorImageOffsetUnitY.value = "px";
-					this._buildCSS();
-				]]></body>
-			</method>
-
 			<method name="_parseCSS">
 				<body><![CDATA[
+					let retVal = true;
+
 					let cssParser = document.createElement("div");
 					cssParser.style.background = this._editorCSS.value;
 					if(!cssParser.style.background)
 					{
 						Components.utils.reportError("Error parsing background CSS rule: " + this._editorCSS.value);
-						return false;
+						cssParser.style.background = "#33FF33";
+						retVal = false;
 					}
-
-					let retVal = true;
 
 					//
 					// Parse the background color
@@ -579,11 +544,44 @@
 						}
 					}, this);
 
-					this._updateNoImage();
+					this._updateImageControllDisable();
 
 					this._disableBuildCSS = disableBuildCSS;
 
 					return retVal;
+				]]></body>
+			</method>
+
+			<method name="_imageBrowse">
+				<body><![CDATA[
+					let nsIFilePicker = Components.interfaces.nsIFilePicker;
+					let filePicker = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+					filePicker.init(window, this._strings.getString("imageSelectTitle"), nsIFilePicker.modeOpen);
+					filePicker.appendFilters(nsIFilePicker.filterImages);
+
+					let res = filePicker.show();
+					if(res == nsIFilePicker.returnOK)
+					{
+						this._editorImage.value =  Services.io.newFileURI(filePicker.file).spec;
+						this._updateImageControllDisable();
+						this._buildCSS();
+					}
+				]]></body>
+			</method>
+
+			<method name="_imageClear">
+				<body><![CDATA[
+					this._editorImage.value =  "";
+					this._editorImageRepeatX.value = "repeat";
+					this._editorImageRepeatY.value = "repeat";
+					this._editorImagePositionX.value = "left";
+					this._editorImagePositionY.value = "top";
+					this._editorImageOffsetX.value = 0;
+					this._editorImageOffsetY.value = 0;
+					this._editorImageOffsetUnitX.value = "px";
+					this._editorImageOffsetUnitY.value = "px";
+					this._updateImageControllDisable();
+					this._buildCSS();
 				]]></body>
 			</method>
 
@@ -615,36 +613,64 @@
 				]]></body>
 			</method>
 
-			<method name="_updateNoImage">
-				<parameter name="aVal"/>
+			<method name="_updateImageControllDisable">
 				<body><![CDATA[
-					if(this._editorImage.value)
+					if(this.disabled || !this._editorImage.value)
 					{
-						this.removeAttribute("noimage");
+						this.setAttribute("no-image", "true");
+						this._updatePositionOffsetXDisabled(true);
+						this._updatePositionOffsetYDisabled(true);
 					}
 					else
 					{
-						this.setAttribute("noimage", "true");
+						this.removeAttribute("no-image");
+						this._updatePositionOffsetXDisabled(false);
+						this._updatePositionOffsetYDisabled(false);
 					}
+				]]></body>
+			</method>
+
+			<method name="_updateMode">
+				<body><![CDATA[
+					if(this._editorMode.selectedIndex == this._editorDeck.selectedIndex)
+					{
+						return;
+					}
+
+					this.setAdvanced(((this._editorMode.selectedIndex == 1) ? true : false), true);
+				]]></body>
+			</method>
+
+			<method name="_updatePositionOffsetXDisabled">
+				<parameter name="aVal"/>
+				<body><![CDATA[
+					let bgPX = this._editorImagePositionX.value;
+					let disableOffsetX = aVal || (bgPX != "offset");// || bgPX == "center");
+					this._editorImageOffsetX.disabled = disableOffsetX;
+					this._editorImageOffsetUnitX.disabled = disableOffsetX;
+				]]></body>
+			</method>
+
+			<method name="_updatePositionOffsetYDisabled">
+				<parameter name="aVal"/>
+				<body><![CDATA[
+					let bgPY = this._editorImagePositionY.value;
+					var disableOffsetY = aVal || (bgPY != "offset");// || bgPY == "center");
+					this._editorImageOffsetY.disabled = disableOffsetY;
+					this._editorImageOffsetUnitY.disabled = disableOffsetY;
 				]]></body>
 			</method>
 
 			<method name="_updatePositionX">
 				<body><![CDATA[
-					let bgPX = this._editorImagePositionX.value;
-					let disableOffsetX = (bgPX != "offset");// || bgPX == "center");
-					this._editorImageOffsetX.disabled = disableOffsetX;
-					this._editorImageOffsetUnitX.disabled = disableOffsetX;
+					this._updatePositionOffsetXDisabled(false);
 					this._buildCSS();
 				]]></body>
 			</method>
 
 			<method name="_updatePositionY">
 				<body><![CDATA[
-					let bgPY = this._editorImagePositionY.value;
-					var disableOffsetY = (bgPY != "offset");// || bgPY == "center");
-					this._editorImageOffsetY.disabled = disableOffsetY;
-					this._editorImageOffsetUnitY.disabled = disableOffsetY;
+					this._updatePositionOffsetYDisabled(false);
 					this._buildCSS();
 				]]></body>
 			</method>

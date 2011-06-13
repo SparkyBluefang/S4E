@@ -29,6 +29,12 @@
 <!ENTITY status4evar.option.advanced "Advanced">
 <!ENTITY status4evar.option.browse "Browse">
 <!ENTITY status4evar.option.clear "Clear">
+<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.repeat "Repeat">
+<!ENTITY status4evar.option.no-repeat "No Repeat">
+<!ENTITY status4evar.option.space "Space">
+<!ENTITY status4evar.option.round "Round">
 
 <!ENTITY status4evar.unit.seconds "seconds">
 <!ENTITY status4evar.unit.px "px">
