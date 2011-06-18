@@ -26,12 +26,12 @@
 <!ENTITY status4evar.option.advanced "Avansert">
 <!ENTITY status4evar.option.browse "Bla gjennom">
 <!ENTITY status4evar.option.clear "Tøm">
-<!ENTITY status4evar.option.center "Center">
+<!ENTITY status4evar.option.center "Midtstilt">
 <!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.repeat "Gjenta">
+<!ENTITY status4evar.option.no-repeat "Ingen gjentakelse">
+<!ENTITY status4evar.option.space "Mellomrom">
+<!ENTITY status4evar.option.round "Avrund">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statustekst">
@@ -50,18 +50,18 @@
 <!ENTITY status4evar.status.urlbar.color.label "Tekstfarge:">
 <!ENTITY status4evar.status.currentUrl "Gjeldende URL">
 <!ENTITY status4evar.status.statusText "Statustekst">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
+<!ENTITY browser.urlbar.formatting.enabled.label "Aktiver Firefox' domeneutheving">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Flytt til motsatt side når musepekeren er over">
+<!ENTITY status4evar.status.popup.findMirror.label "Start til høyre når søkelinjen er åpen">
 <!ENTITY status4evar.progress.style.label "Bruk egendefinert stil på fremdriftsindikator">
 <!ENTITY status4evar.progress.urlbar.enable.label "Vis fremdriftsindikator i adresselinjen">
 <!ENTITY status4evar.progress.urlbar.line.label "Linjestil:">
 <!ENTITY status4evar.progress.toolbar.force.label "Vis alltid verktøylinjenelement">
-<!ENTITY status4evar.editor.label "Editor:">
-<!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
-<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.label "Redigeringsprogram">
+<!ENTITY status4evar.editor.css.color.label "Farge:">
+<!ENTITY status4evar.editor.css.image.label "Bilde:">
+<!ENTITY status4evar.editor.css.image.repeat "Gjenta">
+<!ENTITY status4evar.editor.css.image.position "Posisjon">
 <!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Vis alltid nedlastingsstatus-knappen">
 <!ENTITY status4evar.download.label.force.label "Vis alltid knappeteksten">

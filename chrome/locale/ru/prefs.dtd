@@ -26,12 +26,12 @@
 <!ENTITY status4evar.option.advanced "улучшенный">
 <!ENTITY status4evar.option.browse "Обзор">
 <!ENTITY status4evar.option.clear "Очистка">
-<!ENTITY status4evar.option.center "Center">
-<!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.center "по центру">
+<!ENTITY status4evar.option.offset "со смещением">
+<!ENTITY status4evar.option.repeat "повторять">
+<!ENTITY status4evar.option.no-repeat "не повторять">
+<!ENTITY status4evar.option.space "с интервалами">
+<!ENTITY status4evar.option.round "с масштабированием">
 <!ENTITY status4evar.unit.seconds "сек.">
 <!ENTITY status4evar.unit.px "пикс.">
 <!ENTITY status4evar.status.general.status.caption "Текст сообщений">
@@ -50,19 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Цвет текста:">
 <!ENTITY status4evar.status.currentUrl "Адрес страницы">
 <!ENTITY status4evar.status.statusText "Сообщение">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
+<!ENTITY browser.urlbar.formatting.enabled.label "Включить подсветку домена Firefox">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Переместить на противоположную сторону при наведении курсора мыши">
+<!ENTITY status4evar.status.popup.findMirror.label "Когда открыта панель поиска, открывать с правой стороны">
 <!ENTITY status4evar.progress.style.label "Собственный стиль индикатора">
 <!ENTITY status4evar.progress.urlbar.enable.label "Показывать индикатор в адресной строке">
 <!ENTITY status4evar.progress.urlbar.line.label "Стиль:">
 <!ENTITY status4evar.progress.toolbar.force.label "Всегда показывать элементы панели инструментов">
-<!ENTITY status4evar.editor.label "Editor:">
-<!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
-<!ENTITY status4evar.editor.css.image.position "Position">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
+<!ENTITY status4evar.editor.label "Редактор:">
+<!ENTITY status4evar.editor.css.color.label "Цвет:">
+<!ENTITY status4evar.editor.css.image.label "Изображение:">
+<!ENTITY status4evar.editor.css.image.repeat "Повторение">
+<!ENTITY status4evar.editor.css.image.position "Положение">
+<!ENTITY status4evar.editor.css.image.offset "Смещение">
 <!ENTITY status4evar.download.force.label "Всегда показывать кнопку «Состояние загрузок»">
 <!ENTITY status4evar.download.label.force.label "Всегда показывать текст кнопки">
 <!ENTITY status4evar.download.label.label "В тексте кнопки отображать:">

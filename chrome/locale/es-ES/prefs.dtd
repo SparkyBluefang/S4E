@@ -1,11 +1,11 @@
-<!ENTITY status4evar.window.title "Preferencias de Status-4-Evar">
+<!ENTITY status4evar.window.title "Opciones de Status-4-Evar">
 <!ENTITY status4evar.pane.status "Estado">
 <!ENTITY status4evar.pane.progress "Progreso">
 <!ENTITY status4evar.pane.download "Descargas">
-<!ENTITY status4evar.pane.addonbar "Barra de Complementos">
+<!ENTITY status4evar.pane.addonbar "Barra de complementos">
 <!ENTITY status4evar.tab.general "General">
-<!ENTITY status4evar.tab.toolbar "Barra de Herramientas">
-<!ENTITY status4evar.tab.urlbar "Barra de Direcciones">
+<!ENTITY status4evar.tab.toolbar "Barra de herramientas">
+<!ENTITY status4evar.tab.urlbar "Barra de direcciones">
 <!ENTITY status4evar.tab.popup "Cuadro emergente">
 <!ENTITY status4evar.tab.tabs "Pestañas">
 <!ENTITY status4evar.option.none "No mostrar">
@@ -19,30 +19,30 @@
 <!ENTITY status4evar.option.dlcount "Contador de descargas">
 <!ENTITY status4evar.option.dltime "Tiempo restante">
 <!ENTITY status4evar.option.both "Ambos">
-<!ENTITY status4evar.option.right "A la Derecha">
-<!ENTITY status4evar.option.left "A la Izquierda">
+<!ENTITY status4evar.option.right "A la derecha">
+<!ENTITY status4evar.option.left "A la izquierda">
 <!ENTITY status4evar.option.fixed "Fijo">
 <!ENTITY status4evar.option.simple "Simple">
 <!ENTITY status4evar.option.advanced "Avanzado">
-<!ENTITY status4evar.option.browse "Buscar">
+<!ENTITY status4evar.option.browse "Examinar…">
 <!ENTITY status4evar.option.clear "Borrar">
-<!ENTITY status4evar.option.center "Center">
-<!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.center "Centrado">
+<!ENTITY status4evar.option.offset "Desplazamiento">
+<!ENTITY status4evar.option.repeat "Repetir">
+<!ENTITY status4evar.option.no-repeat "No repetir">
+<!ENTITY status4evar.option.space "Espacio">
+<!ENTITY status4evar.option.round "Redondeado">
 <!ENTITY status4evar.unit.seconds "segundos">
 <!ENTITY status4evar.unit.px "px">
-<!ENTITY status4evar.status.general.status.caption "Mensajes de Estado">
+<!ENTITY status4evar.status.general.status.caption "Mensajes de estado">
 <!ENTITY status4evar.status.label "Mostrar en:">
 <!ENTITY status4evar.status.timeout.label "Ocultar después de">
-<!ENTITY status4evar.status.default.label "Mostar estado por defecto">
-<!ENTITY status4evar.status.network.label "Mostar estado de la red">
-<!ENTITY status4evar.status.network.xhr.label "Mostar estado de la red en segundo plano">
-<!ENTITY toolkit.dom.status.change.label "Permitir que páginas web cambien el estado">
+<!ENTITY status4evar.status.default.label "Mostrar el estado por defecto">
+<!ENTITY status4evar.status.network.label "Mostrar el estado de la red">
+<!ENTITY status4evar.status.network.xhr.label "Mostrar el estado de la red en segundo plano">
+<!ENTITY toolkit.dom.status.change.label "Permitir a las páginas web cambiar el estado">
 <!ENTITY status4evar.status.general.linkOver.caption "Enlaces">
-<!ENTITY status4evar.status.linkOver.label "Mostrar enlaces en:">
+<!ENTITY status4evar.status.linkOver.label "Mostrar en:">
 <!ENTITY status4evar.status.linkOver.delay.show.label "Retraso al mostrar los enlaces:">
 <!ENTITY status4evar.status.linkOver.delay.hide.label "Retraso al ocultar los enlaces:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Longitud máxima del mensaje de estado:">
@@ -50,23 +50,23 @@
 <!ENTITY status4evar.status.urlbar.color.label "Color del texto:">
 <!ENTITY status4evar.status.currentUrl "Dirección actual">
 <!ENTITY status4evar.status.statusText "Mensaje de Estado">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
-<!ENTITY status4evar.progress.style.label "Usar estilo personalizado en la barra de progreso">
-<!ENTITY status4evar.progress.urlbar.enable.label "Mostrar progreso en la barra de direcciones">
+<!ENTITY browser.urlbar.formatting.enabled.label "Habilitar el resaltado del dominio de Firefox">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Mover al lado opuesto cuando pase el ratón por encima">
+<!ENTITY status4evar.status.popup.findMirror.label "Comenzar en la derecha cuando la barra de búsqueda está abierta">
+<!ENTITY status4evar.progress.style.label "Usar un estilo personalizado para la barra de progreso">
+<!ENTITY status4evar.progress.urlbar.enable.label "Mostrar el progreso en la barra de direcciones">
 <!ENTITY status4evar.progress.urlbar.line.label "Estilo de línea:">
 <!ENTITY status4evar.progress.toolbar.force.label "Mostrar siempre la barra de progreso en la barra de herramientas">
 <!ENTITY status4evar.editor.label "Editor:">
 <!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
-<!ENTITY status4evar.editor.css.image.position "Position">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
-<!ENTITY status4evar.download.force.label "Mostrar siempre el icono de Descargas">
-<!ENTITY status4evar.download.label.force.label "Mostrar siempre texto con el icono de Descargas">
+<!ENTITY status4evar.editor.css.image.label "Imagen:">
+<!ENTITY status4evar.editor.css.image.repeat "Repetir">
+<!ENTITY status4evar.editor.css.image.position "Posición">
+<!ENTITY status4evar.editor.css.image.offset "Desplazamiento">
+<!ENTITY status4evar.download.force.label "Mostrar siempre el icono de descargas">
+<!ENTITY status4evar.download.label.force.label "Mostrar siempre texto junto al icono de descargas">
 <!ENTITY status4evar.download.label.label "Texto del icono de Descargas:">
 <!ENTITY status4evar.download.tooltip.label "Cuadro informativo del icono de Descargas:">
-<!ENTITY status4evar.addonbar.borderStyle "Usar bordes alternativos para la barra de herramientas">
+<!ENTITY status4evar.addonbar.borderStyle "Usar bordes alternativos">
 <!ENTITY status4evar.addonbar.windowGripper "Mostrar el deslizador para redimensionar la ventana">
-<!ENTITY status4evar.addonbar.closeButton "Mostrar el botón Cerrar">
+<!ENTITY status4evar.addonbar.closeButton "Mostrar el botón «Cerrar»">

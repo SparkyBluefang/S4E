@@ -1,4 +1,4 @@
-<!ENTITY status4evar.window.title "Opțiuni Status-4-Evar">
+<!ENTITY status4evar.window.title "Opțiuni Status-4-Evare">
 <!ENTITY status4evar.pane.status "Stare">
 <!ENTITY status4evar.pane.progress "Progres">
 <!ENTITY status4evar.pane.download "Descărcare">
@@ -26,12 +26,12 @@
 <!ENTITY status4evar.option.advanced "Complex">
 <!ENTITY status4evar.option.browse "Răsfoiește">
 <!ENTITY status4evar.option.clear "Elimină">
-<!ENTITY status4evar.option.center "Center">
-<!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.center "În centru">
+<!ENTITY status4evar.option.offset "Cu decalare">
+<!ENTITY status4evar.option.repeat "Cu repetare">
+<!ENTITY status4evar.option.no-repeat "Fără repetare">
+<!ENTITY status4evar.option.space "Spațiu">
+<!ENTITY status4evar.option.round "Rotund">
 <!ENTITY status4evar.unit.seconds "secunde">
 <!ENTITY status4evar.unit.px "pixeli">
 <!ENTITY status4evar.status.general.status.caption "Informații de stare">
@@ -50,19 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Culoare text:">
 <!ENTITY status4evar.status.currentUrl "Adresă curentă">
 <!ENTITY status4evar.status.statusText "Stare">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
+<!ENTITY browser.urlbar.formatting.enabled.label "Activează evidențierea domeniului Firefox">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Afișează în partea opusă atunci când se survolează cu mausul">
+<!ENTITY status4evar.status.popup.findMirror.label "Afișează la dreapta atunci când bara de căutare este vizibilă">
 <!ENTITY status4evar.progress.style.label "Utilizează un stil particularizat pentru bara de progres">
 <!ENTITY status4evar.progress.urlbar.enable.label "Afișează bara de progres în bara de adrese">
 <!ENTITY status4evar.progress.urlbar.line.label "Mod de afișare:">
 <!ENTITY status4evar.progress.toolbar.force.label "Afișează întotdeauna bara de progres în bara de suplimente">
 <!ENTITY status4evar.editor.label "Editor:">
-<!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
-<!ENTITY status4evar.editor.css.image.position "Position">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
+<!ENTITY status4evar.editor.css.color.label "Culoare:">
+<!ENTITY status4evar.editor.css.image.label "Imagine:">
+<!ENTITY status4evar.editor.css.image.repeat "Repetare">
+<!ENTITY status4evar.editor.css.image.position "Poziție">
+<!ENTITY status4evar.editor.css.image.offset "Decalare">
 <!ENTITY status4evar.download.force.label "Afișează întotdeauna butonul de stare a descărcării">
 <!ENTITY status4evar.download.label.force.label "Afișează întotdeauna textul de pe butonul de stare a descărcării">
 <!ENTITY status4evar.download.label.label "Text pe butonul de stare a descărcării:">

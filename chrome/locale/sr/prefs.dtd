@@ -1,5 +1,5 @@
-<!ENTITY status4evar.window.title "Status-4-Evar - опције">
-<!ENTITY status4evar.pane.status "Статус">
+<!ENTITY status4evar.window.title "Могућности">
+<!ENTITY status4evar.pane.status "Стање">
 <!ENTITY status4evar.pane.progress "Напредак">
 <!ENTITY status4evar.pane.download "Преузимање">
 <!ENTITY status4evar.pane.addonbar "Трака с језичцима">
@@ -26,47 +26,47 @@
 <!ENTITY status4evar.option.advanced "напредан">
 <!ENTITY status4evar.option.browse "Потражи…">
 <!ENTITY status4evar.option.clear "Очисти">
-<!ENTITY status4evar.option.center "Center">
-<!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.center "Средина">
+<!ENTITY status4evar.option.offset "Одступање">
+<!ENTITY status4evar.option.repeat "Понављање">
+<!ENTITY status4evar.option.no-repeat "Без понављања">
+<!ENTITY status4evar.option.space "Простор">
+<!ENTITY status4evar.option.round "Заобљеност">
 <!ENTITY status4evar.unit.seconds "сек.">
 <!ENTITY status4evar.unit.px "тачака">
-<!ENTITY status4evar.status.general.status.caption "Статус текста">
+<!ENTITY status4evar.status.general.status.caption "Текст стања">
 <!ENTITY status4evar.status.label "Прикажи статус у:">
-<!ENTITY status4evar.status.timeout.label "Сакриј статус након">
-<!ENTITY status4evar.status.default.label "Подразумевани статус">
-<!ENTITY status4evar.status.network.label "Мрежни статус">
-<!ENTITY status4evar.status.network.xhr.label "Позадински мрежни статус">
-<!ENTITY toolkit.dom.status.change.label "Дозволи веб страницама да промене статус">
+<!ENTITY status4evar.status.timeout.label "Сакриј стање након">
+<!ENTITY status4evar.status.default.label "Подразумевано стање">
+<!ENTITY status4evar.status.network.label "Мрежно стање">
+<!ENTITY status4evar.status.network.xhr.label "Позадинско мрежно стање">
+<!ENTITY toolkit.dom.status.change.label "Дозволи веб страницама да промене стање">
 <!ENTITY status4evar.status.general.linkOver.caption "Везе">
 <!ENTITY status4evar.status.linkOver.label "Прикажи везе у:">
 <!ENTITY status4evar.status.linkOver.delay.show.label "Застани пре приказивања веза:">
 <!ENTITY status4evar.status.linkOver.delay.hide.label "Застани пре скривања веза:">
-<!ENTITY status4evar.status.toolbar.maxLength.label "Највећа дужина статуса текста:">
-<!ENTITY status4evar.status.urlbar.align.label "Поравнање статуса:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Највећа дужина текста стања:">
+<!ENTITY status4evar.status.urlbar.align.label "Поравнање стања:">
 <!ENTITY status4evar.status.urlbar.color.label "Боја текста:">
-<!ENTITY status4evar.status.currentUrl "Текућа адреса">
-<!ENTITY status4evar.status.statusText "Статус текста">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
-<!ENTITY status4evar.progress.style.label "Прилагођени стил на траци с напретком">
-<!ENTITY status4evar.progress.urlbar.enable.label "Напредак у траци с локацијом">
+<!ENTITY status4evar.status.currentUrl "Тренутна локација">
+<!ENTITY status4evar.status.statusText "Текст стања">
+<!ENTITY browser.urlbar.formatting.enabled.label "Истицање домена">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Помери на супротну страну када се нанесе миш">
+<!ENTITY status4evar.status.popup.findMirror.label "Започни здесна када је трака за претрагу отворена">
+<!ENTITY status4evar.progress.style.label "Користи прилагођени стил">
+<!ENTITY status4evar.progress.urlbar.enable.label "Прикажи напредак у траци с локацијом">
 <!ENTITY status4evar.progress.urlbar.line.label "Стил линије:">
-<!ENTITY status4evar.progress.toolbar.force.label "Увек приказуј ставку на траци с алатима">
-<!ENTITY status4evar.editor.label "Editor:">
-<!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
-<!ENTITY status4evar.editor.css.image.position "Position">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
-<!ENTITY status4evar.download.force.label "Увек приказуј статус преузимања">
-<!ENTITY status4evar.download.label.force.label "Увек приказуј текст дугмића">
-<!ENTITY status4evar.download.label.label "Текст дугмића за статус преузимања:">
-<!ENTITY status4evar.download.tooltip.label "Текст облачића за статус преузимања:">
-<!ENTITY status4evar.addonbar.borderStyle "Користи резервне ивице траке с алаткама">
-<!ENTITY status4evar.addonbar.windowGripper "Простор за измену величине прозора">
+<!ENTITY status4evar.progress.toolbar.force.label "Приказуј ставку на траци с алатима">
+<!ENTITY status4evar.editor.label "Уређивач:">
+<!ENTITY status4evar.editor.css.color.label "Боја:">
+<!ENTITY status4evar.editor.css.image.label "Слика:">
+<!ENTITY status4evar.editor.css.image.repeat "Понављање">
+<!ENTITY status4evar.editor.css.image.position "Положај">
+<!ENTITY status4evar.editor.css.image.offset "Одступање">
+<!ENTITY status4evar.download.force.label "Приказуј дугме за стање преузимања">
+<!ENTITY status4evar.download.label.force.label "Увек приказуј текст на дугмету">
+<!ENTITY status4evar.download.label.label "Текст на дугмету за стање преузимања:">
+<!ENTITY status4evar.download.tooltip.label "Текст облачића за стање преузимања:">
+<!ENTITY status4evar.addonbar.borderStyle "Користи алтернативне ивице трака с алаткама">
+<!ENTITY status4evar.addonbar.windowGripper "Прикажи простор за измену величине прозора">
 <!ENTITY status4evar.addonbar.closeButton "Дугме за затварање">

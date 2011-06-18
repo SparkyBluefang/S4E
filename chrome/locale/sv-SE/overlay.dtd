@@ -1,5 +1,5 @@
 <!ENTITY status4evar.status.widget.title "Statustext">
 <!ENTITY status4evar.progress.widget.title "Förloppsindikator">
-<!ENTITY status4evar.download.widget.title "Nerladdningsstatus">
+<!ENTITY status4evar.download.widget.title "Filhämtningsstatus">
 <!ENTITY status4evar.options.widget.title "Inställningar för Status-4-Evar">
 <!ENTITY status4evar.options.widget.label "Status-4-Evar">

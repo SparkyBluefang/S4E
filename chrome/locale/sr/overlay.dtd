@@ -1,5 +1,5 @@
-<!ENTITY status4evar.status.widget.title "Текст статуса">
+<!ENTITY status4evar.status.widget.title "Текст стања">
 <!ENTITY status4evar.progress.widget.title "Напредак">
-<!ENTITY status4evar.download.widget.title "Статус преузимања">
-<!ENTITY status4evar.options.widget.title "Status-4-Evar - опције">
+<!ENTITY status4evar.download.widget.title "Стање преузимања">
+<!ENTITY status4evar.options.widget.title "Могућности">
 <!ENTITY status4evar.options.widget.label "Status-4-Evar">

@@ -16,7 +16,7 @@
 <!ENTITY status4evar.option.bottom "Nederst">
 <!ENTITY status4evar.option.top "Överst">
 <!ENTITY status4evar.option.fill "Fyllning">
-<!ENTITY status4evar.option.dlcount "Antal nerladdningar">
+<!ENTITY status4evar.option.dlcount "Antal filhämtningar">
 <!ENTITY status4evar.option.dltime "Återstående tid">
 <!ENTITY status4evar.option.both "Båda">
 <!ENTITY status4evar.option.right "Höger">
@@ -26,12 +26,12 @@
 <!ENTITY status4evar.option.advanced "Avancerad">
 <!ENTITY status4evar.option.browse "Bläddra">
 <!ENTITY status4evar.option.clear "Rensa">
-<!ENTITY status4evar.option.center "Center">
-<!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.center "Centrera">
+<!ENTITY status4evar.option.offset "Förskjutning">
+<!ENTITY status4evar.option.repeat "Upprepa">
+<!ENTITY status4evar.option.no-repeat "Upprepa inte">
+<!ENTITY status4evar.option.space "Fyll ut">
+<!ENTITY status4evar.option.round "Sida vid sida">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statustext">
@@ -50,23 +50,23 @@
 <!ENTITY status4evar.status.urlbar.color.label "Textfärg:">
 <!ENTITY status4evar.status.currentUrl "Aktuell URL">
 <!ENTITY status4evar.status.statusText "Statustext">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
+<!ENTITY browser.urlbar.formatting.enabled.label "Aktivera Firefoxs färgmarkering av domäner">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Flytta till motsatt sida vid mushovring">
+<!ENTITY status4evar.status.popup.findMirror.label "Starta till höger när söklisten är öppen">
 <!ENTITY status4evar.progress.style.label "Placering:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Visa förlopp i adressfältet">
 <!ENTITY status4evar.progress.urlbar.line.label "Linjeformat:">
 <!ENTITY status4evar.progress.toolbar.force.label "Visa alltid verktygsfältsobjektet">
-<!ENTITY status4evar.editor.label "Editor:">
-<!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.label "Redigerare:">
+<!ENTITY status4evar.editor.css.color.label "Färg:">
+<!ENTITY status4evar.editor.css.image.label "Bild:">
+<!ENTITY status4evar.editor.css.image.repeat "Upprepa">
 <!ENTITY status4evar.editor.css.image.position "Position">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
-<!ENTITY status4evar.download.force.label "Visa alltid nerladdningsstatusknappen">
+<!ENTITY status4evar.editor.css.image.offset "Förskjutning">
+<!ENTITY status4evar.download.force.label "Visa alltid filhämtningsstatusknappen">
 <!ENTITY status4evar.download.label.force.label "Visa alltid etiketten">
-<!ENTITY status4evar.download.label.label "Nerladdningsstatus-knappens etikett: ">
-<!ENTITY status4evar.download.tooltip.label "Nerladdningsstatus-knappens verktygstips: ">
+<!ENTITY status4evar.download.label.label "Filhämtningsstatusknappens etikett: ">
+<!ENTITY status4evar.download.tooltip.label "Filhämtningsstatusknappens verktygstips: ">
 <!ENTITY status4evar.addonbar.borderStyle "Använd alternativa verktygsfältskantlinjer">
 <!ENTITY status4evar.addonbar.windowGripper "Visa handtaget för fönsterstorleksändring">
 <!ENTITY status4evar.addonbar.closeButton "Visa stängknappen">

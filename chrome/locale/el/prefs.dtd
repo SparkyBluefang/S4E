@@ -26,12 +26,12 @@
 <!ENTITY status4evar.option.advanced "Προηγμένος">
 <!ENTITY status4evar.option.browse "Αναζήτηση">
 <!ENTITY status4evar.option.clear "Απαλοιφή">
-<!ENTITY status4evar.option.center "Center">
-<!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.center "Κέντρο">
+<!ENTITY status4evar.option.offset "Μετατόπιση">
+<!ENTITY status4evar.option.repeat "Επανάληψη">
+<!ENTITY status4evar.option.no-repeat "Χωρίς επανάληψη">
+<!ENTITY status4evar.option.space "Διάστημα">
+<!ENTITY status4evar.option.round "Προσαρμογή">
 <!ENTITY status4evar.unit.seconds "δευτερόλεπτα">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Κείμενο κατάστασης">
@@ -50,19 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Χρώμα κειμένου:">
 <!ENTITY status4evar.status.currentUrl "Τρέχον URL">
 <!ENTITY status4evar.status.statusText "Κείμενο κατάστασης">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
+<!ENTITY browser.urlbar.formatting.enabled.label "Ενεργοποίηση τονισμού τομέα από τον Firefox">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Μετακίνηση στην αντίθετη πλευρά όταν προσεγγίζεται από το ποντίκι">
+<!ENTITY status4evar.status.popup.findMirror.label "Εμφάνιση δεξιά όταν η γραμμή εύρεσης είναι ανοικτή">
 <!ENTITY status4evar.progress.style.label "Χρήση προσαρμοσμένης τεχνοτροπίας στον ενδείκτη προόδου">
 <!ENTITY status4evar.progress.urlbar.enable.label "Εμφάνιση προόδου στη γραμμή τοποθεσιών">
 <!ENTITY status4evar.progress.urlbar.line.label "Τεχνοτροπία γραμμής:">
 <!ENTITY status4evar.progress.toolbar.force.label "Πάντα εμφάνιση του στοιχείου της εργαλειοθήκης">
-<!ENTITY status4evar.editor.label "Editor:">
-<!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
-<!ENTITY status4evar.editor.css.image.position "Position">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
+<!ENTITY status4evar.editor.label "Επεξεργαστής:">
+<!ENTITY status4evar.editor.css.color.label "Χρώμα:">
+<!ENTITY status4evar.editor.css.image.label "Εικόνα:">
+<!ENTITY status4evar.editor.css.image.repeat "Επανάληψη">
+<!ENTITY status4evar.editor.css.image.position "Θέση">
+<!ENTITY status4evar.editor.css.image.offset "Μετατόπιση">
 <!ENTITY status4evar.download.force.label "Πάντα εμφάνιση του κουμπιού κατάστασης λήψεων">
 <!ENTITY status4evar.download.label.force.label "Πάντα εμφάνιση του κειμένου του κουμπιού">
 <!ENTITY status4evar.download.label.label "Κείμενο κουμπιού κατάστασης λήψεων:">

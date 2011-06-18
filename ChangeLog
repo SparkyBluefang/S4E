@@ -1,4 +1,6 @@
 Version next
+* Update locales for new strings
+* Updated translations for: cs, da, es-ES, he, hsb-DE, hu, it-IT, nb-NO, ro, sr, sv-SE
 
 Version 2011.06.13.19b
 * Tweak some preference UI strings.

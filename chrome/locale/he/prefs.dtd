@@ -26,12 +26,12 @@
 <!ENTITY status4evar.option.advanced "מתקדם">
 <!ENTITY status4evar.option.browse "דפדוף">
 <!ENTITY status4evar.option.clear "ניקוי">
-<!ENTITY status4evar.option.center "Center">
-<!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.center "מרכז">
+<!ENTITY status4evar.option.offset "מושווה">
+<!ENTITY status4evar.option.repeat "חזרה">
+<!ENTITY status4evar.option.no-repeat "ללא חזרה">
+<!ENTITY status4evar.option.space "מרווח">
+<!ENTITY status4evar.option.round "עגול">
 <!ENTITY status4evar.unit.seconds "שניות">
 <!ENTITY status4evar.unit.px "פיקסל">
 <!ENTITY status4evar.status.general.status.caption "טקסט מצב">
@@ -50,23 +50,23 @@
 <!ENTITY status4evar.status.urlbar.color.label "צבע הטקסט:">
 <!ENTITY status4evar.status.currentUrl "כתובת נוכחית">
 <!ENTITY status4evar.status.statusText "טקסט מצב">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
+<!ENTITY browser.urlbar.formatting.enabled.label "אפשור הדגשת שמות מתחם של Firefox">
+<!ENTITY status4evar.status.popup.mouseMirror.label "הזזה לצד הנגדי כאשר העכבר עובר מעל">
+<!ENTITY status4evar.status.popup.findMirror.label "התחל בצד ימין כאשר סרגל החיפוש פתוח">
 <!ENTITY status4evar.progress.style.label "שימוש בסגנון מותאם בסרגל ההתקדמות">
 <!ENTITY status4evar.progress.urlbar.enable.label "הצגת התקדמות בסרגל המיקום">
 <!ENTITY status4evar.progress.urlbar.line.label "סגנון קו:">
 <!ENTITY status4evar.progress.toolbar.force.label "להציג תמיד את פריט סרגל הכלים">
-<!ENTITY status4evar.editor.label "Editor:">
-<!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
-<!ENTITY status4evar.editor.css.image.position "Position">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
+<!ENTITY status4evar.editor.label "עורך:">
+<!ENTITY status4evar.editor.css.color.label "צבע:">
+<!ENTITY status4evar.editor.css.image.label "תמונה:">
+<!ENTITY status4evar.editor.css.image.repeat "חזרה">
+<!ENTITY status4evar.editor.css.image.position "מיקום">
+<!ENTITY status4evar.editor.css.image.offset "איזון">
 <!ENTITY status4evar.download.force.label "להציג תמיד את כפתור מצב ההורדה">
 <!ENTITY status4evar.download.label.force.label "להציג תמיד טקסט הכפתור">
 <!ENTITY status4evar.download.label.label "טקסט כפתור מצב ההורדה:">
 <!ENTITY status4evar.download.tooltip.label "חלונית מידע כפתור מצב ההורדה:">
-<!ENTITY status4evar.addonbar.borderStyle "שימוש בגבולות סרגל הכלים חלופיים">
+<!ENTITY status4evar.addonbar.borderStyle "שימוש בגבולות סרגל כלים חלופיים">
 <!ENTITY status4evar.addonbar.windowGripper "הצגת תפסן שינוי גודל החלון">
 <!ENTITY status4evar.addonbar.closeButton "הצגת כפתור הסגירה">

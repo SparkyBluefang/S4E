@@ -5,12 +5,12 @@
 <!ENTITY status4evar.pane.addonbar "Tilføjelseslinje">
 <!ENTITY status4evar.tab.general "Generelt">
 <!ENTITY status4evar.tab.toolbar "Værktøjslinje">
-<!ENTITY status4evar.tab.urlbar "URL-linje">
+<!ENTITY status4evar.tab.urlbar "Adresselinje">
 <!ENTITY status4evar.tab.popup "Pop op">
 <!ENTITY status4evar.tab.tabs "Faneblade">
 <!ENTITY status4evar.option.none "Ingen">
 <!ENTITY status4evar.option.toolbar "Værktøjslinje">
-<!ENTITY status4evar.option.urlbar "URL-linje">
+<!ENTITY status4evar.option.urlbar "Adresselinje">
 <!ENTITY status4evar.option.popup "Pop op">
 <!ENTITY status4evar.option.tooltip "Værktøjstip">
 <!ENTITY status4evar.option.bottom "Nederst">
@@ -26,12 +26,12 @@
 <!ENTITY status4evar.option.advanced "Avanceret">
 <!ENTITY status4evar.option.browse "Gennemse…">
 <!ENTITY status4evar.option.clear "Ryd">
-<!ENTITY status4evar.option.center "Center">
-<!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.center "Midten">
+<!ENTITY status4evar.option.offset "Forskyd">
+<!ENTITY status4evar.option.repeat "Gentag">
+<!ENTITY status4evar.option.no-repeat "Gentag ikke">
+<!ENTITY status4evar.option.space "Mellemrum">
+<!ENTITY status4evar.option.round "Afrund">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statustekst">
@@ -47,22 +47,22 @@
 <!ENTITY status4evar.status.linkOver.delay.hide.label "Forsinkelse før links skjules:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maks længde af statustekst:">
 <!ENTITY status4evar.status.urlbar.align.label "Justering af status:">
-<!ENTITY status4evar.status.urlbar.color.label "Tekstfarve:">
+<!ENTITY status4evar.status.urlbar.color.label "Statusfarve:">
 <!ENTITY status4evar.status.currentUrl "Nuværende URL">
 <!ENTITY status4evar.status.statusText "Statustekst">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
+<!ENTITY browser.urlbar.formatting.enabled.label "Aktiver Firefox domænefremhævning">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Flyt til den modsatte side, når der peges med musen">
+<!ENTITY status4evar.status.popup.findMirror.label "Start til højre når søgebjælken er åben">
 <!ENTITY status4evar.progress.style.label "Anvend tilpasset stil på forløbslinje">
 <!ENTITY status4evar.progress.urlbar.enable.label "Vis forløb i adresselinjen">
 <!ENTITY status4evar.progress.urlbar.line.label "Linjestil:">
 <!ENTITY status4evar.progress.toolbar.force.label "Vis altid værktøjslinjeelementet">
 <!ENTITY status4evar.editor.label "Editor:">
-<!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.color.label "Farve:">
+<!ENTITY status4evar.editor.css.image.label "Billede:">
+<!ENTITY status4evar.editor.css.image.repeat "Gentag">
 <!ENTITY status4evar.editor.css.image.position "Position">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
+<!ENTITY status4evar.editor.css.image.offset "Forskydning">
 <!ENTITY status4evar.download.force.label "Vis altid knappen Filhentningsstatus">
 <!ENTITY status4evar.download.label.force.label "Vis altid knapteksten">
 <!ENTITY status4evar.download.label.label "Tekst på knappen Filhentningsstatus:">

@@ -57,11 +57,11 @@
 <!ENTITY status4evar.progress.urlbar.enable.label "Показване на напредъка в адресната лента">
 <!ENTITY status4evar.progress.urlbar.line.label "Стил на линията:">
 <!ENTITY status4evar.progress.toolbar.force.label "Напредъкът винаги да се показва на лентата с инструменти">
-<!ENTITY status4evar.editor.label "Editor:">
-<!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
+<!ENTITY status4evar.editor.label "Редактор:">
+<!ENTITY status4evar.editor.css.color.label "Цвят:">
+<!ENTITY status4evar.editor.css.image.label "Изображение:">
 <!ENTITY status4evar.editor.css.image.repeat "Repeat">
-<!ENTITY status4evar.editor.css.image.position "Position">
+<!ENTITY status4evar.editor.css.image.position "Позиция">
 <!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Винаги да се показва бутонът за състоянието на изтеглянията">
 <!ENTITY status4evar.download.label.force.label "Винаги да се показва текстът на бутона">

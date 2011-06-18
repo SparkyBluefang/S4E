@@ -4,13 +4,13 @@
 <!ENTITY status4evar.pane.download "Stahování">
 <!ENTITY status4evar.pane.addonbar "Lišta doplňků">
 <!ENTITY status4evar.tab.general "Obecné">
-<!ENTITY status4evar.tab.toolbar "nástrojové liště">
-<!ENTITY status4evar.tab.urlbar "adresním řádku">
-<!ENTITY status4evar.tab.popup "vyskakovací">
+<!ENTITY status4evar.tab.toolbar "Nástrojová lišta">
+<!ENTITY status4evar.tab.urlbar "Adresní řádek">
+<!ENTITY status4evar.tab.popup "Vyskakovací">
 <!ENTITY status4evar.tab.tabs "Panely">
 <!ENTITY status4evar.option.none "žádný">
-<!ENTITY status4evar.option.toolbar "nástrojové liště">
-<!ENTITY status4evar.option.urlbar "adresním řádku">
+<!ENTITY status4evar.option.toolbar "v nástrojové liště">
+<!ENTITY status4evar.option.urlbar "v adresním řádku">
 <!ENTITY status4evar.option.popup "vyskakovací">
 <!ENTITY status4evar.option.tooltip "Místní nápověda">
 <!ENTITY status4evar.option.bottom "dole">
@@ -26,16 +26,16 @@
 <!ENTITY status4evar.option.advanced "Rozšířený">
 <!ENTITY status4evar.option.browse "Vybrat">
 <!ENTITY status4evar.option.clear "Vyčistit">
-<!ENTITY status4evar.option.center "Center">
-<!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.center "Na střed">
+<!ENTITY status4evar.option.offset "Vyrovnat">
+<!ENTITY status4evar.option.repeat "Opakovat">
+<!ENTITY status4evar.option.no-repeat "Neopakovat">
+<!ENTITY status4evar.option.space "Mezera">
+<!ENTITY status4evar.option.round "Kulaté">
 <!ENTITY status4evar.unit.seconds "vteřinách">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Stavový text">
-<!ENTITY status4evar.status.label "Zobrazit stav v:">
+<!ENTITY status4evar.status.label "Zobrazit stav:">
 <!ENTITY status4evar.status.timeout.label "Skrýt stav po">
 <!ENTITY status4evar.status.default.label "Zobrazit výchozí stav">
 <!ENTITY status4evar.status.network.label "Zobrazit stav sítě">
@@ -50,19 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Barva písma:">
 <!ENTITY status4evar.status.currentUrl "Aktuální adresa">
 <!ENTITY status4evar.status.statusText "Stavový text">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
+<!ENTITY browser.urlbar.formatting.enabled.label "Povolit zvýrazňování domény">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Při najetí myší přesunout na druhou stranu">
+<!ENTITY status4evar.status.popup.findMirror.label "Začít vpravo pokud je otevřený panel vyhledávání">
 <!ENTITY status4evar.progress.style.label "Použít vlastní styl pro lištu činnosti">
 <!ENTITY status4evar.progress.urlbar.enable.label "Zobrazit činnosti v adresním řádku">
 <!ENTITY status4evar.progress.urlbar.line.label "Styl linky:">
 <!ENTITY status4evar.progress.toolbar.force.label "Vždy zobrazit položku v nástrojové liště">
 <!ENTITY status4evar.editor.label "Editor:">
-<!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
-<!ENTITY status4evar.editor.css.image.position "Position">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
+<!ENTITY status4evar.editor.css.color.label "Barva:">
+<!ENTITY status4evar.editor.css.image.label "Obrázek:">
+<!ENTITY status4evar.editor.css.image.repeat "Opakovat">
+<!ENTITY status4evar.editor.css.image.position "Umístění">
+<!ENTITY status4evar.editor.css.image.offset "Vyrovnat">
 <!ENTITY status4evar.download.force.label "Vždy zobrazit tlačítko průběhu stahování">
 <!ENTITY status4evar.download.label.force.label "Vždy zobrazit text tlačítka">
 <!ENTITY status4evar.download.label.label "Text tlačítka průběhu stahování:">
