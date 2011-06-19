@@ -2,7 +2,7 @@
 
 # Check for uncommitted changes
 CHANGES=`git diff HEAD --exit-code --name-only`
-if [ $? ]; then
+if [ $? -ne 0 ]; then
 	echo "There are uncommitted changes:"
 	echo $CHANGES
 	exit 1
