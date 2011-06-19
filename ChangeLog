@@ -1,4 +1,5 @@
 Version next
+* Move versioning to release script
 * Update locales for new strings
 * Updated translations for: cs, da, es-ES, he, hsb-DE, hu, it-IT, nb-NO, ro, sr, sv-SE
 

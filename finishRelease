@@ -21,6 +21,6 @@ sed -i "/^Version /s/ next$/ next\n\nVersion ${VERSION}/g" ChangeLog
 git add ChangeLog
 
 # Commit and tag the release
-#git commit -m "Release ${VERSION}"
-#git tag "${VERSION}"
+git commit -m "Release ${VERSION}"
+git tag "${VERSION}"
 
