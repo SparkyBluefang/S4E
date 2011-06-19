@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Check for uncommitted changes
+CHANGES=`git diff HEAD --exit-code --name-only`
+if [ $? ]; then
+	echo "There are uncommitted changes:"
+	echo $CHANGES
+	exit 1
+fi
+
+# Up the release version
+VERSION=`date +%Y.%m.%d.%H`
+if [ "$1" = "-b" ]; then
+	VERSION="${VERSION}b"
+fi
+sed -i "/^version=/s/=.*$/=${VERSION}/g" install.manifest
+git add install.manifest
+
+# Update the ChangeLog
+sed -i "/^Version /s/ next$/ next\n\nVersion ${VERSION}/g" ChangeLog
+git add ChangeLog
+
+# Commit and tag the release
+#git commit -m "Release ${VERSION}"
+#git tag "${VERSION}"
+
