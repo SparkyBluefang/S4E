@@ -1,6 +1,6 @@
 Version next
-* Move versioning to release script
-* Update locales for new strings
+* Fix progress bar when opening a link in a new window.
+* Update locales for new strings.
 * Updated translations for: cs, da, es-ES, he, hsb-DE, hu, it-IT, nb-NO, ro, sr, sv-SE
 
 Version 2011.06.13.19b

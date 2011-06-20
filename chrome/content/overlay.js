@@ -164,12 +164,12 @@ window.addEventListener("load", function()
 			this.updateStatusField();
 		},
 
-		setOverLink: function(link, anchor)
+		setOverLink: function(link, aAnchor)
 		{
-			s4e_overLinkService.update(link, anchor);
+			s4e_overLinkService.update(link, aAnchor);
 		},
 
-		setOverLinkInternal: function(link, anchor)
+		setOverLinkInternal: function(link, aAnchor)
 		{
 			let status = s4e_service.status;
 			let statusLinkOver = s4e_service.statusLinkOver;
@@ -180,12 +180,12 @@ window.addEventListener("load", function()
 
 				if(status == statusLinkOver)
 				{
-					this._overLink = { val: link, type: "link" };
+					this._overLink = { val: link, type: "link", anchor: aAnchor };
 					this.updateStatusField();
 				}
 				else
 				{
-					this.setStatusField(statusLinkOver, { val: link, type: "link" }, true);
+					this.setStatusField(statusLinkOver, { val: link, type: "link", anchor: aAnchor }, true);
 				}
 			}
 		},
@@ -316,6 +316,9 @@ window.addEventListener("load", function()
 			{
 				case 0:
 					break;
+				case 1:
+					label = s4e_getters.statusWidgetLabel;
+					break;
 				case 2:
 					let urlbar = s4e_getters.urlbar;
 					if(urlbar)
@@ -324,17 +327,17 @@ window.addEventListener("load", function()
 						urlbar.setStatusType(text.type);
 					}
 					break;
-				case 3:
-					label = s4e_getters.statusOverlay;
-					break;
 //				case 4:
 //					if(allowTooltip)
 //					{
-//						// set tooltip
+//						if(text.anchor instanceof HTMLAnchorElement)
+//						{
+//							// Set the tooltip for a content link
+//						}
 //						break;
 //					}
 				default:
-					label = s4e_getters.statusWidgetLabel;
+					label = s4e_getters.statusOverlay;
 					break;
 			}
 
@@ -932,5 +935,11 @@ window.addEventListener("load", function()
 	gNavToolbox.addEventListener("aftercustomization", s4e_updateWindow, false);
 	window.addEventListener("resize", s4e_resizeHandler, false);
 
+	// OMFG HAX! If a page is already loading, fake a network start event
+	if(XULBrowserWindow._busyUI)
+	{
+		let nsIWPL = CI.nsIWebProgressListener;
+		s4e_progressMeter.onStateChange(0, null, nsIWPL.STATE_START | nsIWPL.STATE_IS_NETWORK, 0);
+	}
 }, false);
 
