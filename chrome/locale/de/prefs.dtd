@@ -27,11 +27,11 @@
 <!ENTITY status4evar.option.browse "Durchsuchen…">
 <!ENTITY status4evar.option.clear "Entfernen">
 <!ENTITY status4evar.option.center "mittig">
-<!ENTITY status4evar.option.offset "abgesetzt">
-<!ENTITY status4evar.option.repeat "wiederholen">
-<!ENTITY status4evar.option.no-repeat "nicht wiederholen">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.offset "versetzt">
+<!ENTITY status4evar.option.repeat "wiederholt">
+<!ENTITY status4evar.option.no-repeat "nicht wiederholt">
+<!ENTITY status4evar.option.space "verteilt">
+<!ENTITY status4evar.option.round "gerundet">
 <!ENTITY status4evar.unit.seconds "Sekunden">
 <!ENTITY status4evar.unit.px "Pixel">
 <!ENTITY status4evar.status.general.status.caption "Statustext">
@@ -55,14 +55,14 @@
 <!ENTITY status4evar.status.popup.findMirror.label "Rechts einblenden, wenn die Schnellsuchleiste geöffnet ist">
 <!ENTITY status4evar.progress.style.label "Benutzerdefinierten Stil für Fortschrittsanzeige verwenden">
 <!ENTITY status4evar.progress.urlbar.enable.label "Fortschritt in der Adressleiste anzeigen">
-<!ENTITY status4evar.progress.urlbar.line.label "Art der Anzeige:">
+<!ENTITY status4evar.progress.urlbar.line.label "Anzeigeart:">
 <!ENTITY status4evar.progress.toolbar.force.label "Fortschrittsanzeige-Symbol immer anzeigen">
 <!ENTITY status4evar.editor.label "Editor:">
 <!ENTITY status4evar.editor.css.color.label "Farbe:">
 <!ENTITY status4evar.editor.css.image.label "Grafik:">
 <!ENTITY status4evar.editor.css.image.repeat "Wiederholung">
 <!ENTITY status4evar.editor.css.image.position "Position">
-<!ENTITY status4evar.editor.css.image.offset "Abstand">
+<!ENTITY status4evar.editor.css.image.offset "Versatz">
 <!ENTITY status4evar.download.force.label "Download-Status-Schaltfläche immer anzeigen">
 <!ENTITY status4evar.download.label.force.label "Beschriftung immer anzeigen">
 <!ENTITY status4evar.download.label.label "Beschriftung für Download-Status:">
