@@ -1,4 +1,5 @@
 Version next
+* Firefox 7.0a1 changed the nsIDOMWindow interface ID. Make S4E compatible.
 * Fix progress bar when opening a link in a new window.
 * Update locales for new strings.
 * Updated translations for: cs, da, es-ES, he, hsb-DE, hu, it-IT, nb-NO, ro, sr, sv-SE
