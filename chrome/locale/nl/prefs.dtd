@@ -26,12 +26,12 @@
 <!ENTITY status4evar.option.advanced "Geavanceerd">
 <!ENTITY status4evar.option.browse "Bladeren">
 <!ENTITY status4evar.option.clear "Wissen">
-<!ENTITY status4evar.option.center "Center">
-<!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.center "Centreren">
+<!ENTITY status4evar.option.offset "Afstand">
+<!ENTITY status4evar.option.repeat "Herhalen">
+<!ENTITY status4evar.option.no-repeat "Geen herhaling">
+<!ENTITY status4evar.option.space "Ruimte">
+<!ENTITY status4evar.option.round "Rond">
 <!ENTITY status4evar.unit.seconds "seconden">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statustekst">
@@ -50,19 +50,19 @@
 <!ENTITY status4evar.status.urlbar.color.label "Tekstkleur:">
 <!ENTITY status4evar.status.currentUrl "Huidige adres">
 <!ENTITY status4evar.status.statusText "Statustekst">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
+<!ENTITY browser.urlbar.formatting.enabled.label "Domeinweergave van Firefox inschakelen">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Ga naar de andere kant als er met de muis overheen bewogen wordt">
+<!ENTITY status4evar.status.popup.findMirror.label "Rechts beginnen als de zoekbalk geopend is">
 <!ENTITY status4evar.progress.style.label "Positie:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Voortgang tonen in locatiebalk">
 <!ENTITY status4evar.progress.urlbar.line.label "Lijnstijl:">
 <!ENTITY status4evar.progress.toolbar.force.label "Knop in werkbalk altijd tonen">
-<!ENTITY status4evar.editor.label "Editor:">
-<!ENTITY status4evar.editor.css.color.label "Color:">
-<!ENTITY status4evar.editor.css.image.label "Image:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
-<!ENTITY status4evar.editor.css.image.position "Position">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
+<!ENTITY status4evar.editor.label "Bewerken:">
+<!ENTITY status4evar.editor.css.color.label "Kleur:">
+<!ENTITY status4evar.editor.css.image.label "Afbeelding:">
+<!ENTITY status4evar.editor.css.image.repeat "Herhalen">
+<!ENTITY status4evar.editor.css.image.position "Positie">
+<!ENTITY status4evar.editor.css.image.offset "Afstand">
 <!ENTITY status4evar.download.force.label "Altijd de status van downloads tonen">
 <!ENTITY status4evar.download.label.force.label "Tekst altijd tonen">
 <!ENTITY status4evar.download.label.label "Tekst voor status downloads:">

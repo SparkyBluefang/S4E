@@ -7,7 +7,8 @@ from xml.sax.saxutils import escape
 
 propRE = re.compile(ur"^\s*([a-zA-Z.]+)\s*=\s*(.+?)\s*(#.*)?$")
 targetIds = {
-	"Firefox": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+	"Firefox": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+	"SeaMonkey": "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}"
 }
 
 def parsePropFile(filename):
