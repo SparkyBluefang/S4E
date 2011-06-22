@@ -1,5 +1,7 @@
 Version next
 
+Version 2011.06.22.19b
+
 Version 2011.06.22.19
 * Firefox 7.0a1 changed the nsIDOMWindow interface ID. Make S4E compatible.
 * Fix progress bar when opening a link in a new window.
