@@ -1,4 +1,5 @@
 Version next
+* Hide preferences that aren't supported by a particular version of Firefox
 
 Version 2011.06.22.19b
 * Fix version to be a beta release
