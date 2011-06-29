@@ -33,8 +33,8 @@ skin	status4evar-os	classic/1.0	chrome/skin/pinstripe/		os=Darwin
 overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/overlay.xul	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
 style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/overlay.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
 
-style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs5.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<=5.0
-style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs6.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<=6.0a1
+style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs5.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<=5.0.*
+style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs6.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<=6.0.*
 
 interfaces	components/status4evar_7.xpt								application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=7.0a1
 interfaces	components/status4evar_6.xpt								application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=6.0a1
