@@ -60,7 +60,10 @@
 <!ENTITY status4evar.status.urlbar.color.label "Status color:">
 <!ENTITY status4evar.status.currentUrl "Current Location">
 <!ENTITY status4evar.status.statusText "Status Text">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
+
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox features">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable domain highlighting">
+<!ENTITY browser.urlbar.trimming.enabled.label "Enable protocol hiding (http:// and ftp://)">
 
 <!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
 <!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">

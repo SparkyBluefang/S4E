@@ -118,17 +118,6 @@
 				]]></body>
 			</method>
 
-			<method name="onBeforeValueSet">
-				<parameter name="aValue"/>
-				<body><![CDATA[
-					//this._hideOverLink();
-					var action = this._parseActionUrl(aValue);
-					this._originLabel.value = (action ? action.param : aValue) || "";
-
-					return this.__proto__.__proto__.onBeforeValueSet.call(this, aValue);
-				]]></body>
-			</method>
-
 			<method name="setStatusType">
 				<parameter name="aValue"/>
 				<body><![CDATA[
@@ -212,10 +201,15 @@
 			<method name="_updateOverLink">
 				<parameter name="aURL"/>
 				<body><![CDATA[
+					if(typeof this.trimValue == "function")
+					{
+						aURL = this.trimValue(aURL);
+					}
+
 					// Determine the pre-path and path of the over-link.  Include the
 					// path's leading slash in the pre-path so that if the path is
 					// truncated its leading slash is visible.
-					var re = new RegExp("^([a-z0-9+.-]+://[^/]+/)(.*)$");
+					var re = new RegExp("^((?:[a-z0-9+.-]+://)?[^/]+/?)(.*)$");
 					var match = re.exec(aURL);
 					this._overLinkHostValue = match ? match[1] : "";
 					this._overLinkPathValue = match ? match[2] : aURL;
@@ -264,9 +258,6 @@
 					{
 						overLinkBox.minWidth = maxWidth;
 					}
-
-					var action = this._parseActionUrl(this._value);
-					this._originLabel.value = (action ? action.param : this._value) || "";
 				]]></body>
 			</method>
 		</implementation>
@@ -274,6 +265,10 @@
 		<handlers>
 			<handler event="focus" phase="capturing"><![CDATA[
 				this._hideOverLink();
+			]]></handler>
+
+			<handler event="ValueChange" phase="capturing"><![CDATA[
+				this._originLabel.value = this.inputField.value;
 			]]></handler>
 		</handlers>
 	</binding>

@@ -37,7 +37,7 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#browser-urlbar-formatting-enabled-ckeck
+#status4evar-status-urlbar-builtin
 {
 	display: none;
 }

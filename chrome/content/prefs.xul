@@ -77,6 +77,7 @@
 			<preference id="status4evar-pref-status-popup-mouseMirror"   name="status4evar.status.popup.mouseMirror"   type="bool" />
 			<preference id="toolkit-pref-dom-status-change"              name="dom.disable_window_status_change"       type="bool" inverted="true" />
 			<preference id="browser-pref-urlbar-formatting-enabled"      name="browser.urlbar.formatting.enabled"      type="bool" />
+			<preference id="browser-pref-urlbar-trimming-enabled"        name="browser.urlbar.trimURLs"                type="bool" />
 		</preferences>
 
 		<commandset id="status4evar-commandset-status">
@@ -188,7 +189,14 @@
 						</hbox>
 					</vbox>
 
-					<checkbox id="browser-urlbar-formatting-enabled-ckeck" preference="browser-pref-urlbar-formatting-enabled" label="&browser.urlbar.formatting.enabled.label;" />
+					<separator/>
+
+					<groupbox id="status4evar-status-urlbar-builtin">
+						<caption label="&status4evar.status.urlbar.firefox.builtin.caption;" />
+
+						<checkbox id="browser-urlbar-formatting-enabled-ckeck" preference="browser-pref-urlbar-formatting-enabled" label="&browser.urlbar.formatting.enabled.label;" />
+						<checkbox id="browser-urlbar-trimming-enabled-ckeck" preference="browser-pref-urlbar-trimming-enabled" label="&browser.urlbar.trimming.enabled.label;" />
+					</groupbox>
 				</tabpanel>
 
 				<tabpanel id="status4evar-tabpanel-status-toolbar" orient="vertical">

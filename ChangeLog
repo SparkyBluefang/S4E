@@ -1,7 +1,9 @@
 Version next
+* Integrate with Firefox's URL trimming.
+* Separate built-in preferences into their own block.
 
 Version 2011.06.28.22
-* Hide preferences that aren't supported by a particular version of Firefox
+* Hide preferences that aren't supported by a particular version of Firefox.
 
 Version 2011.06.22.19b
 * Fix version to be a beta release
@@ -15,9 +17,9 @@ Version 2011.06.22.19
 Version 2011.06.13.19b
 * Tweak some preference UI strings.
 * Rewrite the CSS background editor using XBL.
-* Add support for background-repeat to the simple editor.
-* Add support for background-position to the simple editor.
-* Add preview progress bars to the editor.
+* Add background-repeat support to the simple editor.
+* Add background-position support to the simple editor.
+* Add preview progress bar to the editor.
 * Add a preference to control Firefox's domain highlighting in the location bar.
 * Add a preference to control statusbar-display mirroring on mouse-over.
 * Add a preference to control statusbar-display mirroring on find bar open.
@@ -236,7 +238,7 @@ Version 2010.09.29.00
 * Added option to control the progress bars on tabs.
 * Improved visual style of widgets while customizing the toolbar.
 * Fixed adding widgets to the toolbar. You no longer need to restart Firefox after adding one of the widgets to a toolbar.
-* [b]The "Status Text" widget changed slightly. You will need to re-add it to your toolbar[/b].
+* The "Status Text" widget changed slightly. You will need to re-add it to your toolbar.
 
 Version 2010.09.28.05
 * Added option to show hovered links in the status bar, location bar, both, or neither.
