@@ -1,4 +1,6 @@
 Version next
+
+Version 2011.07.03.16b
 * Integrate with Firefox's URL trimming.
 * Separate built-in preferences into their own block.
 * Add a progress line to the download button.
