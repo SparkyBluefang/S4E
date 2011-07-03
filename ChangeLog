@@ -1,14 +1,12 @@
 Version next
 * Integrate with Firefox's URL trimming.
 * Separate built-in preferences into their own block.
+* Add a progress line to the download button.
 
 Version 2011.06.28.22
 * Hide preferences that aren't supported by a particular version of Firefox.
 
 Version 2011.06.22.19b
-* Fix version to be a beta release
-
-Version 2011.06.22.19
 * Firefox 7.0a1 changed the nsIDOMWindow interface ID. Make S4E compatible.
 * Fix progress bar when opening a link in a new window.
 * Update locales for new strings.

@@ -63,6 +63,8 @@ Status_4_Evar.prototype =
 	addonbarCloseButton:		false,
 	addonbarWindowGripper:		true,
 
+	downloadColorActive:		null,
+	downloadColorPaused:		null,
 	downloadForce:			false,
 	downloadLabel:			0,
 	downloadLabelForce:		true,
@@ -138,6 +140,30 @@ Status_4_Evar.prototype =
 			updateWindow: function(win)
 			{
 				win.caligon.status4evar.updateWindowGripper(true);
+			}
+		},
+
+		"download.color.active":
+		{
+			update: function()
+			{
+				this.downloadColorActive = this.prefs.getCharPref("download.color.active");
+			},
+			updateDynamicStyle: function(sheet)
+			{
+				sheet.cssRules[4].style.backgroundColor = this.downloadColorActive;
+			}
+		},
+
+		"download.color.paused":
+		{
+			update: function()
+			{
+				this.downloadColorPaused = this.prefs.getCharPref("download.color.paused");
+			},
+			updateDynamicStyle: function(sheet)
+			{
+				sheet.cssRules[5].style.backgroundColor = this.downloadColorPaused;
 			}
 		},
 

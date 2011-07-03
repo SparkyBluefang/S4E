@@ -98,6 +98,33 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
 	display: -moz-box !important;
 }
 
+#status4evar-download-button .dl-progress
+{
+	width: 6px;
+	border: 1px solid gray;
+}
+
+toolbar[iconsize="small"] #status4evar-download-button .dl-progress
+{
+	width: 4px;
+}
+
+#status4evar-download-button[pmValue]:not([pmValue="100"]):not([pmValue="0"]) .dl-progress-bar
+{
+	border-top: 1px solid gray;
+}
+
+#status4evar-download-button .dl-progress-remainder,
+#status4evar-download-button .dl-progress-bar
+{
+	background: #FFFFFF;
+}
+
+#status4evar-download-button[pmType$="unknown"] .dl-progress-bar
+{
+	background-image: url("chrome://status4evar/skin/pulse.png");
+}
+
 /*
  * Splitter
  */

@@ -2,6 +2,8 @@ pref("status4evar.addonbar.borderStyle", false);
 pref("status4evar.addonbar.closeButton", false);
 pref("status4evar.addonbar.windowGripper", true);
 
+pref("status4evar.download.color.active", "#33FF33");
+pref("status4evar.download.color.paused", "#808080");
 pref("status4evar.download.force", false);
 pref("status4evar.download.label", 0);
 pref("status4evar.download.label.force", true);

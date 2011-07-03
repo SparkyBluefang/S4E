@@ -313,10 +313,12 @@
 
 	<prefpane id="status4evar-pane-download" label="&status4evar.pane.download;">
 		<preferences>
-			<preference id="status4evar-pref-download-force"       name="status4evar.download.force"       type="bool" />
-			<preference id="status4evar-pref-download-label"       name="status4evar.download.label"       type="int" />
-			<preference id="status4evar-pref-download-label-force" name="status4evar.download.label.force" type="bool" />
-			<preference id="status4evar-pref-download-tooltip"     name="status4evar.download.tooltip"     type="int" />
+			<preference id="status4evar-pref-download-color-active" name="status4evar.download.color.active" type="string" />
+			<preference id="status4evar-pref-download-color-paused" name="status4evar.download.color.paused" type="string" />
+			<preference id="status4evar-pref-download-force"        name="status4evar.download.force"        type="bool" />
+			<preference id="status4evar-pref-download-label"        name="status4evar.download.label"        type="int" />
+			<preference id="status4evar-pref-download-label-force"  name="status4evar.download.label.force"  type="bool" />
+			<preference id="status4evar-pref-download-tooltip"      name="status4evar.download.tooltip"      type="int" />
 		</preferences>
 
 		<checkbox id="status4evar-download-force-check" preference="status4evar-pref-download-force" label="&status4evar.download.force.label;" />
@@ -343,6 +345,16 @@
 					<menuitem label="&status4evar.option.both;"    value="2" />
 				</menupopup>
 			</menulist>
+		</hbox>
+
+		<hbox align="center">
+			<label id="status4evar-download-color-active-label" control="status4evar-download-color-active-picker">&status4evar.download.color.active.label;</label>
+			<colorpicker id="status4evar-download-color-active-picker" preference="status4evar-pref-download-color-active" type="button" />
+		</hbox>
+
+		<hbox align="center">
+			<label id="status4evar-download-color-paused-label" control="status4evar-download-color-paused-picker">&status4evar.download.color.paused.label;</label>
+			<colorpicker id="status4evar-download-color-paused-picker" preference="status4evar-pref-download-color-paused" type="button" />
 		</hbox>
 	</prefpane>
 

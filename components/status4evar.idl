@@ -45,6 +45,8 @@ interface nsIStatus4Evar : nsISupports
 	readonly attribute boolean addonbarCloseButton;
 	readonly attribute boolean addonbarWindowGripper;
 
+	readonly attribute string  downloadColorActive;
+	readonly attribute string  downloadColorPaused;
 	readonly attribute boolean downloadForce;
 	readonly attribute long    downloadLabel;
 	readonly attribute boolean downloadLabelForce;

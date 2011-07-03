@@ -345,5 +345,98 @@
 		</implementation>
 	</binding>
 
+	<binding id="downloadbutton" display="xul:button" extends="chrome://global/content/bindings/toolbarbutton.xml#toolbarbutton">
+		<content>
+			<children includes="observes|template|menupopup|panel|tooltip"/>
+			<xul:stack>
+				<xul:image class="toolbarbutton-icon" xbl:inherits="validate,src=image,label" />
+				<xul:hbox pack="end" flex="1">
+					<xul:vbox class="dl-progress" xbl:inherits="collapsed=pmCollapsed">
+						<xul:box anonid="dl-progress-remainder" class="dl-progress-remainder" flex="100" />
+						<xul:box anonid="dl-progress-bar" class="dl-progress-bar" flex="0" />
+					</xul:vbox>
+				</xul:hbox>
+			</xul:stack>
+			<xul:label class="toolbarbutton-text" crop="right" flex="1" xbl:inherits="value=label,accesskey,crop" />
+		</content>
+
+		<implementation>
+			<field name="_progressBar" readonly="true"><![CDATA[
+				document.getAnonymousElementByAttribute(this, "anonid", "dl-progress-bar");
+			]]></field>
+
+			<field name="_progressRemainder" readonly="true"><![CDATA[
+				document.getAnonymousElementByAttribute(this, "anonid", "dl-progress-remainder");
+			]]></field>
+
+			<property name="pmValue">
+				<setter><![CDATA[
+					let p = Math.round(val);
+					let max = Math.round(this.pmMax);
+					if(p < 0)
+					{
+						p = 0;
+					}
+					else if(p > max)
+					{
+						p = max;
+					}
+
+					let c = this.pmValue;
+					if(p != c)
+					{
+						let delta = p - c;
+						if(delta < 0)
+						{
+							delta = -delta;
+						}
+
+						if(delta >= 1 || p == 0 || p == max)
+						{
+							this.setAttribute("pmValue", p);
+							this._progressBar.flex = p;
+							this._progressRemainder.flex = max - p;
+						}
+					}
+
+					return val;
+				]]></setter>
+				<getter><![CDATA[
+					return this.getAttribute("pmValue") || "0";
+				]]></getter>
+			</property>
+
+			<property name="pmMax">
+				<setter><![CDATA[
+					this.setAttribute("pmMax", (isNaN(val) ? 100 : Math.max(val, 1)));
+					this.pmValue = this.pmValue;
+					return val;
+				]]></setter>
+				<getter><![CDATA[
+					return this.getAttribute("pmMax") || "100";
+				]]></getter>
+			</property>
+
+			<property name="pmCollapsed">
+				<setter><![CDATA[
+					this.setAttribute("pmCollapsed", val);
+					return val;
+				]]></setter>
+				<getter><![CDATA[
+					return this.getAttribute("pmCollapsed") || "false";
+				]]></getter>
+			</property>
+
+			<property name="pmType">
+				<setter><![CDATA[
+					this.setAttribute("pmType", val);
+					return val;
+				]]></setter>
+				<getter><![CDATA[
+					return this.getAttribute("pmType") || "active";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
 </bindings>
 

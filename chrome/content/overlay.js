@@ -562,15 +562,17 @@ window.addEventListener("load", function()
 //
 	caligon.status4evar.downloadStatus =
 	{
-		_activeStr:	s4e_strings.getString("activeDownloads"),
-		_pausedStr:	s4e_strings.getString("pausedDownloads"),
-		_noDnldStr:	s4e_strings.getString("noDownloads"),
-		_listening:	false,
-		_lastTime:	Infinity,
-		_dlCountStr:	null,
-		_dlTimeStr:	null,
-		_dlActive:	false,
-		_dlPaused:	false,
+		_activeStr:      s4e_strings.getString("activeDownloads"),
+		_pausedStr:      s4e_strings.getString("pausedDownloads"),
+		_noDnldStr:      s4e_strings.getString("noDownloads"),
+		_listening:      false,
+		_lastTime:       Infinity,
+		_dlCountStr:     null,
+		_dlTimeStr:      null,
+		_dlActive:       false,
+		_dlPaused:       false,
+		_dlProgress:     0,
+		_dlProgressType: "active",
 
 		get DownloadUtils()
 		{
@@ -633,6 +635,10 @@ window.addEventListener("load", function()
 			}
 
 			let numPaused = 0;
+			let activeTotalSize = 0;
+			let activeTransferred = 0;
+			let pausedTotalSize = 0;
+			let pausedTransferred = 0;
 			let maxTime = -Infinity;
 			let dls = this.DownloadManager.activeDownloads;
 			while(dls.hasMoreElements())
@@ -640,37 +646,43 @@ window.addEventListener("load", function()
 				let dl = dls.getNext().QueryInterface(CI.nsIDownload);
 				if(dl.state == this.DownloadManager.DOWNLOAD_DOWNLOADING)
 				{
-					if(dl.speed > 0 && dl.size > 0)
+					if(dl.size > 0)
 					{
-						maxTime = Math.max(maxTime, (dl.size - dl.amountTransferred) / dl.speed);
-					}
-					else
-					{
-						maxTime = -1;
+						if(dl.speed > 0)
+						{
+							maxTime = Math.max(maxTime, (dl.size - dl.amountTransferred) / dl.speed);
+						}
+
+						activeTotalSize += dl.size;
+						activeTransferred += dl.amountTransferred;
 					}
 				}
 				else if(dl.state == this.DownloadManager.DOWNLOAD_PAUSED)
 				{
 					numPaused++;
+					if(dl.size > 0)
+					{
+						pausedTotalSize += dl.size;
+						pausedTransferred += dl.amountTransferred;
+					}
 				}
 			}
 
 			[this._dlTimeStr, this._lastTime] = this.DownloadUtils.getTimeLeft(maxTime, this._lastTime);
 
-			let numDls = numActive - numPaused;
-			let dlStatus = this._activeStr;
-			this._dlPaused = false;
-			if(numDls == 0)
-			{
-				numDls = numPaused;
-				dlStatus = this._pausedStr;
-				this._dlPaused = true;
-			}
+			let dlPaused = (numActive == numPaused);
+			let numDls =         ((dlPaused) ? numPaused         : (numActive - numPaused));
+			let dlStatus =       ((dlPaused) ? this._pausedStr   : this._activeStr);
+			let dlTotalSize =    ((dlPaused) ? pausedTotalSize   : activeTotalSize);
+			let dlTransferred =  ((dlPaused) ? pausedTransferred : activeTransferred);
+			let dlProgressType = ((dlPaused) ? "paused"          : "active");
 
-			dlStatus = PluralForm.get(numDls, dlStatus);
-			this._dlCountStr = dlStatus.replace("#1", numDls);
-
+			this._dlCountStr = PluralForm.get(numDls, dlStatus).replace("#1", numDls);
+			this._dlProgress = ((dlTotalSize == 0) ? 100 : ((dlTransferred * 100) / dlTotalSize));
+			this._dlProgressType = dlProgressType + ((dlTotalSize == 0) ? "-unknown" : "");
+			this._dlPaused = dlPaused;
 			this._dlActive = true;
+
 			this.updateButton();
 		},
 
@@ -688,8 +700,16 @@ window.addEventListener("load", function()
 				download_button.collapsed = true;
 				download_button.label = this._noDnldStr;
 				download_tooltip.label = this._noDnldStr;
+
+				download_button.pmCollapsed = true;
+				download_button.pmType = "active";
+				download_button.pmValue = 0;
 				return;
 			}
+
+			download_button.pmType = this._dlProgressType;
+			download_button.pmValue = this._dlProgress;
+			download_button.pmCollapsed = false;
 
 			download_button.label = this.buildString(s4e_service.downloadLabel);
 			download_tooltip.label = this.buildString(s4e_service.downloadTooltip);

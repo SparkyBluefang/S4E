@@ -63,7 +63,7 @@
 		<toolbarbutton id="status4evar-download-button"
 		               title="&status4evar.download.widget.title;"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
-		               removable="true" command="Tools:Downloads" collapsed="true" tooltip="_child">
+		               removable="true" command="Tools:Downloads" collapsed="true" tooltip="_child" pmCollapsed="true">
 			<tooltip id="status4evar-download-tooltip" />
 		</toolbarbutton>
 		<toolbaritem id="status4evar-progress-widget"
