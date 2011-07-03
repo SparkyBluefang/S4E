@@ -50,7 +50,9 @@
 <!ENTITY status4evar.status.urlbar.color.label "文字色彩：">
 <!ENTITY status4evar.status.currentUrl "目前網址">
 <!ENTITY status4evar.status.statusText "狀態文字">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox features">
 <!ENTITY browser.urlbar.formatting.enabled.label "啟用 Firefox 的網域高亮度標示">
+<!ENTITY browser.urlbar.trimming.enabled.label "Enable protocol hiding (http:// and ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "游標經過時移到另一邊">
 <!ENTITY status4evar.status.popup.findMirror.label "尋找列開啟時先顯示在右方">
 <!ENTITY status4evar.progress.style.label "進度列使用自訂樣式">
@@ -67,6 +69,8 @@
 <!ENTITY status4evar.download.label.force.label "總是顯示標籤">
 <!ENTITY status4evar.download.label.label "下載狀態按鈕標籤：">
 <!ENTITY status4evar.download.tooltip.label "下載狀態的氣泡提示框顯示：">
+<!ENTITY status4evar.download.color.active.label "Progress color for active downloads:">
+<!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
 <!ENTITY status4evar.addonbar.borderStyle "使用替代的工具列邊框">
 <!ENTITY status4evar.addonbar.windowGripper "顯示視窗大小調整器">
 <!ENTITY status4evar.addonbar.closeButton "顯示關閉按鈕">

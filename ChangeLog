@@ -2,6 +2,7 @@ Version next
 * Integrate with Firefox's URL trimming.
 * Separate built-in preferences into their own block.
 * Add a progress line to the download button.
+* Update locales for new strings.
 
 Version 2011.06.28.22
 * Hide preferences that aren't supported by a particular version of Firefox.

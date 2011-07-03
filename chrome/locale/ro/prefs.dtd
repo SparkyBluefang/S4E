@@ -50,7 +50,9 @@
 <!ENTITY status4evar.status.urlbar.color.label "Culoare text:">
 <!ENTITY status4evar.status.currentUrl "Adresă curentă">
 <!ENTITY status4evar.status.statusText "Stare">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox features">
 <!ENTITY browser.urlbar.formatting.enabled.label "Activează evidențierea domeniului Firefox">
+<!ENTITY browser.urlbar.trimming.enabled.label "Enable protocol hiding (http:// and ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Afișează în partea opusă atunci când se survolează cu mausul">
 <!ENTITY status4evar.status.popup.findMirror.label "Afișează la dreapta atunci când bara de căutare este vizibilă">
 <!ENTITY status4evar.progress.style.label "Utilizează un stil particularizat pentru bara de progres">
@@ -67,6 +69,8 @@
 <!ENTITY status4evar.download.label.force.label "Afișează întotdeauna textul de pe butonul de stare a descărcării">
 <!ENTITY status4evar.download.label.label "Text pe butonul de stare a descărcării:">
 <!ENTITY status4evar.download.tooltip.label "Text în balonul informativ al butonului de stare a descărcării:">
+<!ENTITY status4evar.download.color.active.label "Progress color for active downloads:">
+<!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
 <!ENTITY status4evar.addonbar.borderStyle "Utilizează chenarul alternativ al barei de suplimente">
 <!ENTITY status4evar.addonbar.windowGripper "Afișează glisorul de redimensionare a ferestrei navigatorului">
 <!ENTITY status4evar.addonbar.closeButton "Afișează butonul de ascundere al barei de suplimente">
