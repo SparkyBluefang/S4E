@@ -1,14 +1,10 @@
 #!/usr/bin/python
 
+import sys
 import re
 import os
 import codecs
 import magic
-
-reReturn = re.compile("\r")
-reNewLine = re.compile("\n+")
-rePROPComment = re.compile("^\s*#.*\n*", re.M)
-reDTDComment = re.compile("[^\S\n]*<!--.*?-->\s*?\n*", re.S)
 
 mdetect = magic.open(magic.MIME_ENCODING)
 mdetect.load()
@@ -32,9 +28,13 @@ def writeFile(filename, contents):
 		f.write(contents)
 
 #
-# Process a file. Read it, strip blank lines and comments, then write it.
+# Clean a file. Read it, strip blank lines and comments, then write it.
 #
-def processFile(filename):
+reReturn	= re.compile("\r")
+reNewLine	= re.compile("\n+")
+rePROPComment	= re.compile("^\s*#.*?\s*\n", re.U | re.M)
+reDTDComment	= re.compile("^\s*<!--.*?-->\s*\n", re.U | re.M | re.S)
+def cleanFile(filename):
 	contents = readFile(filename)
 
 	contents = reReturn.sub("\n", contents)
@@ -48,9 +48,27 @@ def processFile(filename):
 	writeFile(filename, contents)
 
 #
+# Remove a translation from a file
+#
+rePROPStringStr = "^\s*%s=.*?\s*\n"
+reDTDStringStr = "^\s*<!ENTITY %s \".*?\">\s*\n"
+def removeString(filename, tString):
+	reStr = None
+	if filename.endswith(".dtd"):
+		reStr = reDTDStringStr % tString
+	elif filename.endswith(".properties"):
+		reStr = rePROPStringStr % tString
+
+	if reStr:
+		contents = readFile(filename)
+		reString = re.compile(reStr, re.U | re.M)
+		contents = reString.sub("", contents)
+		writeFile(filename, contents)
+
+#
 # Walk though the local directory, processing DTD and property files.
 #
-def processL10N():
+def processL10N(mode, tFile=None, tString=None):
 	for root, dirs, files in os.walk("chrome/locale"):
 		if os.path.basename(root) == "locale":
 			for exclusion in excludeLocals:
@@ -61,9 +79,21 @@ def processL10N():
 		print "Locale %s" % os.path.basename(root)
 
 		files.sort()
-		for filename in files:
-			processFile(os.path.join(root, filename))
+
+		if mode == "clean":
+			for filename in files:
+				cleanFile(os.path.join(root, filename))
+		elif mode == "remove":
+			for filename in files:
+				if filename == tFile:
+					removeString(os.path.join(root, filename), tString)
 
 if __name__ == "__main__":
-	processL10N()
+	mode = sys.argv[1]
+	if mode == "clean":
+		processL10N("clean")
+	elif mode == "remove":
+		processL10N("remove", sys.argv[2], sys.argv[3].replace(".", "\\."))
+	else:
+		print "Unknown option '%s'" % mode
 
