@@ -16,7 +16,7 @@ xpt: components/status4evar.idl
 	$(XRSDK7)/bin/xpidl -m typelib -w -v -I $(XRSDK7)/idl/ -e components/status4evar_7.xpt components/status4evar.idl
 
 rdf: install.manifest
-	./genManifest.py
+	./buildInstallRdf
 
 zip:
 	zip -r status4evar-$(VERSION)-fx.xpi \
