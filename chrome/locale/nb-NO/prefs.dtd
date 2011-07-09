@@ -48,14 +48,14 @@
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maks lengde på statustekst:">
 <!ENTITY status4evar.status.urlbar.align.label "Justering av status:">
 <!ENTITY status4evar.status.urlbar.color.label "Tekstfarge:">
-<!ENTITY status4evar.status.currentUrl "Gjeldende URL">
+<!ENTITY status4evar.status.currentUrl "Gjeldende adresse">
 <!ENTITY status4evar.status.statusText "Statustekst">
-<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox features">
-<!ENTITY browser.urlbar.formatting.enabled.label "Aktiver Firefox' domeneutheving">
-<!ENTITY browser.urlbar.trimming.enabled.label "Enable protocol hiding (http:// and ftp://)">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox-funksjoner">
+<!ENTITY browser.urlbar.formatting.enabled.label "Aktiver domeneutheving">
+<!ENTITY browser.urlbar.trimming.enabled.label "Aktiver protokollskjuling (http:// og ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Flytt til motsatt side når musepekeren er over">
 <!ENTITY status4evar.status.popup.findMirror.label "Start til høyre når søkelinjen er åpen">
-<!ENTITY status4evar.progress.style.label "Bruk egendefinert stil på fremdriftsindikator">
+<!ENTITY status4evar.progress.style.label "Bruk egendefinert stil">
 <!ENTITY status4evar.progress.urlbar.enable.label "Vis fremdriftsindikator i adresselinjen">
 <!ENTITY status4evar.progress.urlbar.line.label "Linjestil:">
 <!ENTITY status4evar.progress.toolbar.force.label "Vis alltid verktøylinjenelement">
@@ -65,12 +65,12 @@
 <!ENTITY status4evar.editor.css.image.repeat "Gjenta">
 <!ENTITY status4evar.editor.css.image.position "Posisjon">
 <!ENTITY status4evar.editor.css.image.offset "Offset">
-<!ENTITY status4evar.download.force.label "Vis alltid nedlastingsstatus-knappen">
+<!ENTITY status4evar.download.force.label "Vis alltid nedlastingsstatusknappen">
 <!ENTITY status4evar.download.label.force.label "Vis alltid knappeteksten">
-<!ENTITY status4evar.download.label.label "Tekst på nedlastingsstatus-knapp:">
-<!ENTITY status4evar.download.tooltip.label "Nedlastingsstatus-knapp verktøytips:">
-<!ENTITY status4evar.download.color.active.label "Progress color for active downloads:">
-<!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
+<!ENTITY status4evar.download.label.label "Tekst på nedlastingsstatusknapp:">
+<!ENTITY status4evar.download.tooltip.label "Nedlastingsstatusknapp verktøytips:">
+<!ENTITY status4evar.download.color.active.label "Farge på fremdriftsindikator for aktive nedlastinger:">
+<!ENTITY status4evar.download.color.paused.label "Farge på fremdriftsindikator for nedlastinger satt på pause:">
 <!ENTITY status4evar.addonbar.borderStyle "Bruk alternative kanter for verktøylinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gripeområdet for endring av vindusstørrelse">
 <!ENTITY status4evar.addonbar.closeButton "Vis knappen lukk">

@@ -50,9 +50,9 @@
 <!ENTITY status4evar.status.urlbar.color.label "Statusfarve:">
 <!ENTITY status4evar.status.currentUrl "Nuværende URL">
 <!ENTITY status4evar.status.statusText "Statustekst">
-<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox features">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox-funktioner">
 <!ENTITY browser.urlbar.formatting.enabled.label "Aktiver Firefox domænefremhævning">
-<!ENTITY browser.urlbar.trimming.enabled.label "Enable protocol hiding (http:// and ftp://)">
+<!ENTITY browser.urlbar.trimming.enabled.label "Skjul protokol (http:// og ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Flyt til den modsatte side, når der peges med musen">
 <!ENTITY status4evar.status.popup.findMirror.label "Start til højre når søgebjælken er åben">
 <!ENTITY status4evar.progress.style.label "Anvend tilpasset stil på forløbslinje">
@@ -69,8 +69,8 @@
 <!ENTITY status4evar.download.label.force.label "Vis altid knapteksten">
 <!ENTITY status4evar.download.label.label "Tekst på knappen Filhentningsstatus:">
 <!ENTITY status4evar.download.tooltip.label "Værktøjstip til knappen Filhentningsstatus:">
-<!ENTITY status4evar.download.color.active.label "Progress color for active downloads:">
-<!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
+<!ENTITY status4evar.download.color.active.label "Forløbsfarve for aktive filhentninger:">
+<!ENTITY status4evar.download.color.paused.label "Forløbsfarve for pausede filhentninger:">
 <!ENTITY status4evar.addonbar.borderStyle "Anvend alternative kanter til værktøjslinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gribelinjen til ændring af vinduesstørrelse">
 <!ENTITY status4evar.addonbar.closeButton "Vis knappen Luk">

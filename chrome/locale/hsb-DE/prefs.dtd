@@ -50,9 +50,9 @@
 <!ENTITY status4evar.status.urlbar.color.label "Tekstowa barba:">
 <!ENTITY status4evar.status.currentUrl "Aktualny URL">
 <!ENTITY status4evar.status.statusText "Statusowy tekst">
-<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox features">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funkcije de Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "Wuzběhnjenje domeny Firefox zmóžnić">
-<!ENTITY browser.urlbar.trimming.enabled.label "Enable protocol hiding (http:// and ftp://)">
+<!ENTITY browser.urlbar.trimming.enabled.label "Protokol schować (http:// a ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Do napřećiwneho boka přesunyć, hdyž je myš nad tym">
 <!ENTITY status4evar.status.popup.findMirror.label "Naprawo započeć, hdyž pytanska lajsta je wočinjena">
 <!ENTITY status4evar.progress.style.label "Swójski stil za postupowu hrjadu wužiwać">
@@ -69,8 +69,8 @@
 <!ENTITY status4evar.download.label.force.label "Tekst tłóčatka přeco pokazać">
 <!ENTITY status4evar.download.label.label "Tekst tłóčatka sćehnjenskeho statusa:">
 <!ENTITY status4evar.download.tooltip.label "Infotekst tłóčatka sćehnjenskeho statusa:">
-<!ENTITY status4evar.download.color.active.label "Progress color for active downloads:">
-<!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
+<!ENTITY status4evar.download.color.active.label "Postupowa barba za aktiwne sćehnjenja:">
+<!ENTITY status4evar.download.color.paused.label "Postupowa barba za zastajene sćehnjenja:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatiwne ramiki za gratowe lajsty wužiwać">
 <!ENTITY status4evar.addonbar.windowGripper "Přimk za změnjenje wulkosće wokna pokazać">
 <!ENTITY status4evar.addonbar.closeButton "Tłóčatko 'Začinić' pokazać">

@@ -50,9 +50,9 @@
 <!ENTITY status4evar.status.urlbar.color.label "Barva písma:">
 <!ENTITY status4evar.status.currentUrl "Aktuální adresa">
 <!ENTITY status4evar.status.statusText "Stavový text">
-<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox features">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Vlastnosti Firefoxu">
 <!ENTITY browser.urlbar.formatting.enabled.label "Povolit zvýrazňování domény">
-<!ENTITY browser.urlbar.trimming.enabled.label "Enable protocol hiding (http:// and ftp://)">
+<!ENTITY browser.urlbar.trimming.enabled.label "Povolit skrývání protokolu (http:// a ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Při najetí myší přesunout na druhou stranu">
 <!ENTITY status4evar.status.popup.findMirror.label "Začít vpravo pokud je otevřený panel vyhledávání">
 <!ENTITY status4evar.progress.style.label "Použít vlastní styl pro lištu činnosti">
@@ -69,8 +69,8 @@
 <!ENTITY status4evar.download.label.force.label "Vždy zobrazit text tlačítka">
 <!ENTITY status4evar.download.label.label "Text tlačítka průběhu stahování:">
 <!ENTITY status4evar.download.tooltip.label "Nápověda tlačítka průběhu stahování:">
-<!ENTITY status4evar.download.color.active.label "Progress color for active downloads:">
-<!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
+<!ENTITY status4evar.download.color.active.label "Barva postupu aktivních stahování:">
+<!ENTITY status4evar.download.color.paused.label "Barva postupu pozastavených stahování:">
 <!ENTITY status4evar.addonbar.borderStyle "Použít alternativní ohraničení lišty">
 <!ENTITY status4evar.addonbar.windowGripper "Zobrazit chytač změny velikosti okna">
 <!ENTITY status4evar.addonbar.closeButton "Zobrazit tlačítko zavření">

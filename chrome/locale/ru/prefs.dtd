@@ -50,10 +50,10 @@
 <!ENTITY status4evar.status.urlbar.color.label "Цвет текста:">
 <!ENTITY status4evar.status.currentUrl "Адрес страницы">
 <!ENTITY status4evar.status.statusText "Сообщение">
-<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox features">
-<!ENTITY browser.urlbar.formatting.enabled.label "Включить подсветку домена Firefox">
-<!ENTITY browser.urlbar.trimming.enabled.label "Enable protocol hiding (http:// and ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Переместить на противоположную сторону при наведении курсора мыши">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Особенности Firefox">
+<!ENTITY browser.urlbar.formatting.enabled.label "Включить подсветку домена">
+<!ENTITY browser.urlbar.trimming.enabled.label "Включить скрытие протокола (http:// и ftp://)">
+<!ENTITY status4evar.status.popup.mouseMirror.label "При наведении курсора мыши переместить на противоположную сторону">
 <!ENTITY status4evar.status.popup.findMirror.label "Когда открыта панель поиска, открывать с правой стороны">
 <!ENTITY status4evar.progress.style.label "Собственный стиль индикатора">
 <!ENTITY status4evar.progress.urlbar.enable.label "Показывать индикатор в адресной строке">
@@ -69,8 +69,8 @@
 <!ENTITY status4evar.download.label.force.label "Всегда показывать текст кнопки">
 <!ENTITY status4evar.download.label.label "В тексте кнопки отображать:">
 <!ENTITY status4evar.download.tooltip.label "Во всплывающей подсказке кнопки отображать:">
-<!ENTITY status4evar.download.color.active.label "Progress color for active downloads:">
-<!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
+<!ENTITY status4evar.download.color.active.label "Цвет индикатора активных загрузок:">
+<!ENTITY status4evar.download.color.paused.label "Цвет индикатора остановленных загрузок:">
 <!ENTITY status4evar.addonbar.borderStyle "Использовать чередующиеся границы панелей инструментов">
 <!ENTITY status4evar.addonbar.windowGripper "Показать захват изменения размера окна">
 <!ENTITY status4evar.addonbar.closeButton "Показать кнопку «Закрыть»">

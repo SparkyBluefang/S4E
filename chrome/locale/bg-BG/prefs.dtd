@@ -26,12 +26,12 @@
 <!ENTITY status4evar.option.advanced "Разширен">
 <!ENTITY status4evar.option.browse "Разглеждане...">
 <!ENTITY status4evar.option.clear "Изчистване">
-<!ENTITY status4evar.option.center "Center">
-<!ENTITY status4evar.option.offset "Offset">
-<!ENTITY status4evar.option.repeat "Repeat">
-<!ENTITY status4evar.option.no-repeat "No Repeat">
-<!ENTITY status4evar.option.space "Space">
-<!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.center "Център">
+<!ENTITY status4evar.option.offset "Отстояние">
+<!ENTITY status4evar.option.repeat "С повторение">
+<!ENTITY status4evar.option.no-repeat "Без повторение">
+<!ENTITY status4evar.option.space "с интервали">
+<!ENTITY status4evar.option.round "с мащабиране">
 <!ENTITY status4evar.unit.seconds "секунди">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Състояние">
@@ -50,11 +50,11 @@
 <!ENTITY status4evar.status.urlbar.color.label "Цвят на текста:">
 <!ENTITY status4evar.status.currentUrl "Текущ адрес">
 <!ENTITY status4evar.status.statusText "Текст за състоянието">
-<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox features">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable Firefox's domain highlighting">
-<!ENTITY browser.urlbar.trimming.enabled.label "Enable protocol hiding (http:// and ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Move to the opposite side when moused over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the right when the Find Bar is open">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Особености на Firefox">
+<!ENTITY browser.urlbar.formatting.enabled.label "Осветяване на домейна">
+<!ENTITY browser.urlbar.trimming.enabled.label "Скриване на протокола (http:// и ftp://)">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Преместване в противоположната страна при посочване с курсора на мишката">
+<!ENTITY status4evar.status.popup.findMirror.label "Стартиране в дясната страна, когато е отворена лентата за търсене">
 <!ENTITY status4evar.progress.style.label "Използване на собствен стил за изобразяване на напредъка">
 <!ENTITY status4evar.progress.urlbar.enable.label "Показване на напредъка в адресната лента">
 <!ENTITY status4evar.progress.urlbar.line.label "Стил на линията:">
@@ -62,15 +62,15 @@
 <!ENTITY status4evar.editor.label "Редактор:">
 <!ENTITY status4evar.editor.css.color.label "Цвят:">
 <!ENTITY status4evar.editor.css.image.label "Изображение:">
-<!ENTITY status4evar.editor.css.image.repeat "Repeat">
+<!ENTITY status4evar.editor.css.image.repeat "Повторение">
 <!ENTITY status4evar.editor.css.image.position "Позиция">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
+<!ENTITY status4evar.editor.css.image.offset "Отстояние">
 <!ENTITY status4evar.download.force.label "Винаги да се показва бутонът за състоянието на изтеглянията">
 <!ENTITY status4evar.download.label.force.label "Винаги да се показва текстът на бутона">
 <!ENTITY status4evar.download.label.label "Текст на бутона:">
 <!ENTITY status4evar.download.tooltip.label "Подсказка при посочване на бутона:">
-<!ENTITY status4evar.download.color.active.label "Progress color for active downloads:">
-<!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
+<!ENTITY status4evar.download.color.active.label "Цвят на напредъка на активните изтегляния:">
+<!ENTITY status4evar.download.color.paused.label "Цвят на напредъка на спрените изтегляния:">
 <!ENTITY status4evar.addonbar.borderStyle "Използване на алтернативни рамки за лентата с инструменти">
 <!ENTITY status4evar.addonbar.windowGripper "Показване на манипулатора за преоразмеряване на прозореца">
 <!ENTITY status4evar.addonbar.closeButton "Показване на бутона &quot;Затвори&quot;">

@@ -16,8 +16,8 @@
 <!ENTITY status4evar.option.bottom "Κάτω μέρος">
 <!ENTITY status4evar.option.top "Κορυφή">
 <!ENTITY status4evar.option.fill "Γέμισμα">
-<!ENTITY status4evar.option.dlcount "Αριθμό λήψεων">
-<!ENTITY status4evar.option.dltime "Υπολειπόμενο χρόνο">
+<!ENTITY status4evar.option.dlcount "Αριθμός λήψεων">
+<!ENTITY status4evar.option.dltime "Υπολειπόμενος χρόνος">
 <!ENTITY status4evar.option.both "Αμφότερα">
 <!ENTITY status4evar.option.right "Δεξιά">
 <!ENTITY status4evar.option.left "Αριστερά">
@@ -50,9 +50,9 @@
 <!ENTITY status4evar.status.urlbar.color.label "Χρώμα κειμένου:">
 <!ENTITY status4evar.status.currentUrl "Τρέχον URL">
 <!ENTITY status4evar.status.statusText "Κείμενο κατάστασης">
-<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox features">
-<!ENTITY browser.urlbar.formatting.enabled.label "Ενεργοποίηση τονισμού τομέα από τον Firefox">
-<!ENTITY browser.urlbar.trimming.enabled.label "Enable protocol hiding (http:// and ftp://)">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Δυνατότητες του Firefox">
+<!ENTITY browser.urlbar.formatting.enabled.label "Ενεργοποίηση τονισμού τομέα">
+<!ENTITY browser.urlbar.trimming.enabled.label "Ενεργοποίηση απόκρυψης πρωτοκόλλου (http:// and ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Μετακίνηση στην αντίθετη πλευρά όταν προσεγγίζεται από το ποντίκι">
 <!ENTITY status4evar.status.popup.findMirror.label "Εμφάνιση δεξιά όταν η γραμμή εύρεσης είναι ανοικτή">
 <!ENTITY status4evar.progress.style.label "Χρήση προσαρμοσμένης τεχνοτροπίας στον ενδείκτη προόδου">
@@ -69,8 +69,8 @@
 <!ENTITY status4evar.download.label.force.label "Πάντα εμφάνιση του κειμένου του κουμπιού">
 <!ENTITY status4evar.download.label.label "Κείμενο κουμπιού κατάστασης λήψεων:">
 <!ENTITY status4evar.download.tooltip.label "Συμβουλή εργαλείου κουμπιού κατάστασης λήψεων:">
-<!ENTITY status4evar.download.color.active.label "Progress color for active downloads:">
-<!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
+<!ENTITY status4evar.download.color.active.label "Χρώμα προόδου ενεργών λήψεων:">
+<!ENTITY status4evar.download.color.paused.label "Χρώμα προόδου λήψεων σε παύση:">
 <!ENTITY status4evar.addonbar.borderStyle "Χρήση εναλλακτικών ορίων εργαλειοθήκης">
 <!ENTITY status4evar.addonbar.windowGripper "Εμφάνιση της λαβής αλλαγής μεγέθους του παραθύρου">
 <!ENTITY status4evar.addonbar.closeButton "Εμφάνιση του κουμπιού κλεισίματος">
