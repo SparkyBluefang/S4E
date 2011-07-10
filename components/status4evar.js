@@ -68,6 +68,7 @@ Status_4_Evar.prototype =
 	downloadForce:			false,
 	downloadLabel:			0,
 	downloadLabelForce:		true,
+	downloadProgress:		1,
 	downloadTooltip:		1,
 
 	firstRun:			true,
@@ -208,6 +209,18 @@ Status_4_Evar.prototype =
 				{
 					this.setBoolElementAttribute(download_button, "forcelabel", this.downloadLabelForce);
 				}
+			}
+		},
+
+		"download.progress":
+		{
+			update: function()
+			{
+				this.downloadProgress = this.prefs.getIntPref("download.progress");
+			},
+			updateWindow: function(win)
+			{
+				win.caligon.status4evar.downloadStatus.updateButton();
 			}
 		},
 

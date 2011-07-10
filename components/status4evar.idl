@@ -50,6 +50,7 @@ interface nsIStatus4Evar : nsISupports
 	readonly attribute boolean downloadForce;
 	readonly attribute long    downloadLabel;
 	readonly attribute boolean downloadLabelForce;
+	readonly attribute long    downloadProgress;
 	readonly attribute long    downloadTooltip;
 
 	readonly attribute boolean firstRun;

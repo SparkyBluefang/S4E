@@ -1,4 +1,5 @@
 Version next
+* Add option to show average/max/min download progress
 * Update locales for new strings.
 * Updated translations for: bg-BG, el, es-ES, it-IT, ja-JP, nb-NO, pl, ro, ru
 

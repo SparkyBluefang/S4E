@@ -373,8 +373,52 @@ var status4evarPrefs =
 	{
 		this.progressToolbarStyleChanged();
 		return undefined;
+	},
+
+//
+// Download progress management
+//
+	get downloadProgressCheck()
+	{
+		delete this.downloadProgressCheck;
+		return this.downloadProgressCheck = document.getElementById("status4evar-download-progress-check");
+	},
+
+	get downloadProgressPref()
+	{
+		delete this.downloadPRogressPref;
+		return this.downloadPRogressPref = document.getElementById("status4evar-pref-download-progress");
+	},
+
+	get downloadProgressColorActivePref()
+	{
+		delete this.downloadProgressActiveColorPref;
+		return this.downloadProgressActiveColorPref = document.getElementById("status4evar-pref-download-color-active");
+	},
+
+	get downloadProgressColorPausedPref()
+	{
+		delete this.downloadProgressPausedColorPref;
+		return this.downloadProgressPausedColorPref = document.getElementById("status4evar-pref-download-color-paused");
+	},
+
+	downloadProgressSync: function()
+	{
+		let val = this.downloadProgressPref.value;
+		this.downloadProgressColorActivePref.disabled = (val == 0);
+		this.downloadProgressColorPausedPref.disabled = (val == 0);
+		this.downloadProgressPref.disabled = (val == 0);
+		this.downloadProgressCheck.checked = (val != 0);
+		return ((val == 0) ? 1 : val);
+	},
+
+	downloadProgressToggle: function()
+	{
+		let enabled = this.downloadProgressCheck.checked;
+		this.downloadProgressPref.value = ((enabled) ? 1 : 0);
 	}
 }
 
 var XULBrowserWindow = {
 }
+

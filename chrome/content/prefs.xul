@@ -318,8 +318,13 @@
 			<preference id="status4evar-pref-download-force"        name="status4evar.download.force"        type="bool" />
 			<preference id="status4evar-pref-download-label"        name="status4evar.download.label"        type="int" />
 			<preference id="status4evar-pref-download-label-force"  name="status4evar.download.label.force"  type="bool" />
+			<preference id="status4evar-pref-download-progress"     name="status4evar.download.progress"     type="int" />
 			<preference id="status4evar-pref-download-tooltip"      name="status4evar.download.tooltip"      type="int" />
 		</preferences>
+
+		<commandset id="status4evar-commandset-download">
+			<command id="status4evar-command-download-progress" oncommand="status4evarPrefs.downloadProgressToggle();" />
+		</commandset>
 
 		<checkbox id="status4evar-download-force-check" preference="status4evar-pref-download-force" label="&status4evar.download.force.label;" />
 
@@ -329,9 +334,9 @@
 			<label id="status4evar-download-label-label" control="status4evar-download-label-menu">&status4evar.download.label.label;</label>
 			<menulist id="status4evar-download-label-menu" preference="status4evar-pref-download-label" sizetopopup="always">
 				<menupopup>
-					<menuitem label="&status4evar.option.dlcount;" value="0" />
-					<menuitem label="&status4evar.option.dltime;"  value="1" />
-					<menuitem label="&status4evar.option.both;"    value="2" />
+					<menuitem value="0" label="&status4evar.option.dlcount;" />
+					<menuitem value="1" label="&status4evar.option.dltime;" />
+					<menuitem value="2" label="&status4evar.option.both;" />
 				</menupopup>
 			</menulist>
 		</hbox>
@@ -340,22 +345,35 @@
 			<label id="status4evar-download-tooltip-label" control="status4evar-download-tooltip-menu">&status4evar.download.tooltip.label;</label>
 			<menulist id="status4evar-download-tooltip-menu" preference="status4evar-pref-download-tooltip" sizetopopup="always">
 				<menupopup>
-					<menuitem label="&status4evar.option.dlcount;" value="0" />
-					<menuitem label="&status4evar.option.dltime;"  value="1" />
-					<menuitem label="&status4evar.option.both;"    value="2" />
+					<menuitem value="0" label="&status4evar.option.dlcount;" />
+					<menuitem value="1" label="&status4evar.option.dltime;" />
+					<menuitem value="2" label="&status4evar.option.both;" />
 				</menupopup>
 			</menulist>
 		</hbox>
 
-		<hbox align="center">
-			<label id="status4evar-download-color-active-label" control="status4evar-download-color-active-picker">&status4evar.download.color.active.label;</label>
-			<colorpicker id="status4evar-download-color-active-picker" preference="status4evar-pref-download-color-active" type="button" />
-		</hbox>
+		<checkbox id="status4evar-download-progress-check" command="status4evar-command-download-progress" label="&status4evar.download.progress.label;" />
 
-		<hbox align="center">
-			<label id="status4evar-download-color-paused-label" control="status4evar-download-color-paused-picker">&status4evar.download.color.paused.label;</label>
-			<colorpicker id="status4evar-download-color-paused-picker" preference="status4evar-pref-download-color-paused" type="button" />
-		</hbox>
+		<vbox class="indent">
+			<hbox align="center">
+				<radiogroup id="status4evar-download-progress-radiogroup" preference="status4evar-pref-download-progress"
+					    onsyncfrompreference="return status4evarPrefs.downloadProgressSync();">
+					<radio value="1" label="&status4evar.download.progress.average.label;" />
+					<radio value="2" label="&status4evar.download.progress.max.label;" />
+					<radio value="3" label="&status4evar.download.progress.min.label;" />
+				</radiogroup>
+			</hbox>
+
+			<hbox align="center">
+				<label id="status4evar-download-color-active-label" control="status4evar-download-color-active-picker">&status4evar.download.color.active.label;</label>
+				<colorpicker id="status4evar-download-color-active-picker" preference="status4evar-pref-download-color-active" type="button" />
+			</hbox>
+
+			<hbox align="center">
+				<label id="status4evar-download-color-paused-label" control="status4evar-download-color-paused-picker">&status4evar.download.color.paused.label;</label>
+				<colorpicker id="status4evar-download-color-paused-picker" preference="status4evar-pref-download-color-paused" type="button" />
+			</hbox>
+		</vbox>
 	</prefpane>
 
 	<prefpane id="status4evar-pane-addonbar" label="&status4evar.pane.addonbar;">

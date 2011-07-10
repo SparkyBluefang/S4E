@@ -567,11 +567,16 @@ window.addEventListener("load", function()
 		_noDnldStr:      s4e_strings.getString("noDownloads"),
 		_listening:      false,
 		_lastTime:       Infinity,
-		_dlCountStr:     null,
-		_dlTimeStr:      null,
+
 		_dlActive:       false,
 		_dlPaused:       false,
-		_dlProgress:     0,
+
+		_dlCountStr:     null,
+		_dlTimeStr:      null,
+
+		_dlProgressAvg:  0,
+		_dlProgressMax:  0,
+		_dlProgressMin:  0,
 		_dlProgressType: "active",
 
 		get DownloadUtils()
@@ -637,8 +642,12 @@ window.addEventListener("load", function()
 			let numPaused = 0;
 			let activeTotalSize = 0;
 			let activeTransferred = 0;
+			let activeMaxProgress = -Infinity;
+			let activeMinProgress = Infinity;
 			let pausedTotalSize = 0;
 			let pausedTransferred = 0;
+			let pausedMaxProgress = -Infinity;
+			let pausedMinProgress = Infinity;
 			let maxTime = -Infinity;
 			let dls = this.DownloadManager.activeDownloads;
 			while(dls.hasMoreElements())
@@ -655,6 +664,10 @@ window.addEventListener("load", function()
 
 						activeTotalSize += dl.size;
 						activeTransferred += dl.amountTransferred;
+
+						let currentProgress = ((dl.amountTransferred * 100) / dl.size);
+						activeMaxProgress = Math.max(activeMaxProgress, currentProgress);
+						activeMinProgress = Math.min(activeMinProgress, currentProgress);
 					}
 				}
 				else if(dl.state == this.DownloadManager.DOWNLOAD_PAUSED)
@@ -664,24 +677,31 @@ window.addEventListener("load", function()
 					{
 						pausedTotalSize += dl.size;
 						pausedTransferred += dl.amountTransferred;
+
+						let currentProgress = ((dl.amountTransferred * 100) / dl.size);
+						pausedMaxProgress = Math.max(pausedMaxProgress, currentProgress);
+						pausedMinProgress = Math.min(pausedMinProgress, currentProgress);
 					}
 				}
 			}
-
-			[this._dlTimeStr, this._lastTime] = this.DownloadUtils.getTimeLeft(maxTime, this._lastTime);
 
 			let dlPaused = (numActive == numPaused);
 			let numDls =         ((dlPaused) ? numPaused         : (numActive - numPaused));
 			let dlStatus =       ((dlPaused) ? this._pausedStr   : this._activeStr);
 			let dlTotalSize =    ((dlPaused) ? pausedTotalSize   : activeTotalSize);
 			let dlTransferred =  ((dlPaused) ? pausedTransferred : activeTransferred);
+			let dlMaxProgress =  ((dlPaused) ? pausedMaxProgress : activeMaxProgress);
+			let dlMinProgress =  ((dlPaused) ? pausedMinProgress : activeMinProgress);
 			let dlProgressType = ((dlPaused) ? "paused"          : "active");
 
-			this._dlCountStr = PluralForm.get(numDls, dlStatus).replace("#1", numDls);
-			this._dlProgress = ((dlTotalSize == 0) ? 100 : ((dlTransferred * 100) / dlTotalSize));
+			[this._dlTimeStr, this._lastTime] = this.DownloadUtils.getTimeLeft(maxTime, this._lastTime);
+			this._dlCountStr =     PluralForm.get(numDls, dlStatus).replace("#1", numDls);
+			this._dlProgressAvg =  ((dlTotalSize == 0) ? 100 : ((dlTransferred * 100) / dlTotalSize));
+			this._dlProgressMax =  ((dlTotalSize == 0) ? 100 : dlMaxProgress);
+			this._dlProgressMin =  ((dlTotalSize == 0) ? 100 : pausedMinProgress);
 			this._dlProgressType = dlProgressType + ((dlTotalSize == 0) ? "-unknown" : "");
-			this._dlPaused = dlPaused;
-			this._dlActive = true;
+			this._dlPaused =       dlPaused;
+			this._dlActive =       true;
 
 			this.updateButton();
 		},
@@ -708,8 +728,19 @@ window.addEventListener("load", function()
 			}
 
 			download_button.pmType = this._dlProgressType;
-			download_button.pmValue = this._dlProgress;
-			download_button.pmCollapsed = false;
+			switch(s4e_service.downloadProgress)
+			{
+				case 2:
+					download_button.pmValue = this._dlProgressMax;
+					break;
+				case 3:
+					download_button.pmValue = this._dlProgressMin;
+					break;
+				default:
+					download_button.pmValue = this._dlProgressAvg;
+					break;
+			}
+			download_button.pmCollapsed = (s4e_service.downloadProgress == 0);
 
 			download_button.label = this.buildString(s4e_service.downloadLabel);
 			download_tooltip.label = this.buildString(s4e_service.downloadTooltip);
