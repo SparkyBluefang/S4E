@@ -36,10 +36,9 @@ style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/
 style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs5.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<=5.0.*
 style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs6.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<=6.0.*
 
-interfaces	components/status4evar_7.xpt								application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=7.0a1
-interfaces	components/status4evar_6.xpt								application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=6.0a1
-interfaces	components/status4evar_4.xpt								application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
+interfaces	components/status4evar_7.xpt								application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=7.0a2
+interfaces	components/status4evar_6.xpt								application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=6.0
+interfaces	components/status4evar_5.xpt								application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
 component	{13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf}	components/status4evar.js
 contract	@caligonstudios.com/status4evar;1	{13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf}
 category	profile-after-change Status-4-Evar	@caligonstudios.com/status4evar;1
-
