@@ -56,9 +56,14 @@
 	-moz-image-region: rect(0, 108px, 18px, 90px);
 }
 
-toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > image
+#status4evar-download-button .dl-progress
 {
-	-moz-margin-end: 5px !important;
+	height: 18px;
+}
+
+toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
+{
+	-moz-margin-start: 5px !important;
 }
 
 /*

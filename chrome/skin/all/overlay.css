@@ -88,7 +88,8 @@ toolbar[iconsize="small"] #status4evar-options-button
 	list-style-image: url("chrome://browser/skin/Toolbar.png");
 }
 
-toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"]
+toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"],
+toolbar[mode="text"] #status4evar-download-button
 {
 	-moz-box-orient: horizontal !important;
 }
@@ -98,10 +99,25 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
 	display: -moz-box !important;
 }
 
+#status4evar-download-button .toolbarbutton-icon
+{
+	margin: 0px !important;
+}
+
+#status4evar-download-button .dl-progress-wrapper
+{
+	min-width: 6px;
+}
+
 #status4evar-download-button .dl-progress
 {
 	width: 6px;
 	border: 1px solid gray;
+}
+
+toolbar[iconsize="small"] #status4evar-download-button .dl-progress-wrapper
+{
+	min-width: 4px;
 }
 
 toolbar[iconsize="small"] #status4evar-download-button .dl-progress

@@ -350,7 +350,7 @@
 			<children includes="observes|template|menupopup|panel|tooltip"/>
 			<xul:stack>
 				<xul:image class="toolbarbutton-icon" xbl:inherits="validate,src=image,label" />
-				<xul:hbox pack="end" flex="1">
+				<xul:hbox class="dl-progress-wrapper" pack="end">
 					<xul:vbox class="dl-progress" xbl:inherits="collapsed=pmCollapsed">
 						<xul:box anonid="dl-progress-remainder" class="dl-progress-remainder" flex="100" />
 						<xul:box anonid="dl-progress-bar" class="dl-progress-bar" flex="0" />

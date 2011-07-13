@@ -56,21 +56,27 @@
 	-moz-image-region: rect(0px 24px 24px 0px);
 }
 
+#status4evar-download-button .dl-progress
+{
+	height: 24px;
+}
+
 toolbar[iconsize="small"] #status4evar-download-button
 {
 	list-style-image: url("chrome://browser/skin/Toolbar-small.png");
 	-moz-image-region: rect(0px 16px 16px 0px);
 }
 
-toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > image
+toolbar[iconsize="small"] #status4evar-download-button .dl-progress
 {
-	-moz-margin-end: 2px !important;
+	height: 16px;
 }
 
 toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
 {
 	margin: 0px 2px !important;
 	margin-top: -1px !important;
+	-moz-margin-start: 4px !important;
 }
 
 /*
