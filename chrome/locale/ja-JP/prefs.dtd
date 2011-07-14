@@ -51,6 +51,7 @@
 <!ENTITY status4evar.status.currentUrl "現在のURL">
 <!ENTITY status4evar.status.statusText "ステータステキスト">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefoxの機能">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable domain highlighting">
 <!ENTITY browser.urlbar.trimming.enabled.label "プロトコルを非表示にする (http:// と ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "カーソルをおいたとき反対の端に移動させる">
 <!ENTITY status4evar.status.popup.findMirror.label "検索バーが開かれたとき右から開始する">
@@ -68,6 +69,10 @@
 <!ENTITY status4evar.download.label.force.label "常にラベルを表示">
 <!ENTITY status4evar.download.label.label "ダウンロードステータスボタンのラベル：">
 <!ENTITY status4evar.download.tooltip.label "ダウンロードステータスボタンのツールチップ：">
+<!ENTITY status4evar.download.progress.label "Show download progress on the button">
+<!ENTITY status4evar.download.progress.average.label "Show average download completion">
+<!ENTITY status4evar.download.progress.max.label "Show most complete download">
+<!ENTITY status4evar.download.progress.min.label "Show least complete download">
 <!ENTITY status4evar.download.color.active.label "進行中のダウンロードの色:">
 <!ENTITY status4evar.download.color.paused.label "停止中のダウンロードの色:">
 <!ENTITY status4evar.addonbar.borderStyle "別のツールバーの境界を使う">

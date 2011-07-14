@@ -51,6 +51,7 @@
 <!ENTITY status4evar.status.currentUrl "Aktualny URL">
 <!ENTITY status4evar.status.statusText "Statusowy tekst">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funkcije de Firefox">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable domain highlighting">
 <!ENTITY browser.urlbar.trimming.enabled.label "Protokol schować (http:// a ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Do napřećiwneho boka přesunyć, hdyž je myš nad tym">
 <!ENTITY status4evar.status.popup.findMirror.label "Naprawo započeć, hdyž pytanska lajsta je wočinjena">
@@ -68,6 +69,10 @@
 <!ENTITY status4evar.download.label.force.label "Tekst tłóčatka přeco pokazać">
 <!ENTITY status4evar.download.label.label "Tekst tłóčatka sćehnjenskeho statusa:">
 <!ENTITY status4evar.download.tooltip.label "Infotekst tłóčatka sćehnjenskeho statusa:">
+<!ENTITY status4evar.download.progress.label "Show download progress on the button">
+<!ENTITY status4evar.download.progress.average.label "Show average download completion">
+<!ENTITY status4evar.download.progress.max.label "Show most complete download">
+<!ENTITY status4evar.download.progress.min.label "Show least complete download">
 <!ENTITY status4evar.download.color.active.label "Postupowa barba za aktiwne sćehnjenja:">
 <!ENTITY status4evar.download.color.paused.label "Postupowa barba za zastajene sćehnjenja:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatiwne ramiki za gratowe lajsty wužiwać">

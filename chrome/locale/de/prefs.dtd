@@ -69,6 +69,10 @@
 <!ENTITY status4evar.download.label.force.label "Beschriftung immer anzeigen">
 <!ENTITY status4evar.download.label.label "Beschriftung für Download-Status:">
 <!ENTITY status4evar.download.tooltip.label "Tooltip-Text für Download-Status:">
+<!ENTITY status4evar.download.progress.label "Show download progress on the button">
+<!ENTITY status4evar.download.progress.average.label "Show average download completion">
+<!ENTITY status4evar.download.progress.max.label "Show most complete download">
+<!ENTITY status4evar.download.progress.min.label "Show least complete download">
 <!ENTITY status4evar.download.color.active.label "Fortschrittsfarbe für aktive Downloads:">
 <!ENTITY status4evar.download.color.paused.label "Fortschrittsfarbe für pausierte Downloads:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternativen Symbolleisten-Rand verwenden">

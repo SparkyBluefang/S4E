@@ -51,6 +51,7 @@
 <!ENTITY status4evar.status.currentUrl "Aktuális URL">
 <!ENTITY status4evar.status.statusText "Állapot szöveg">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox funkciók">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable domain highlighting">
 <!ENTITY browser.urlbar.trimming.enabled.label "Protokoll-elrejtés engedélyezése (http:// és ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Mikor a kurzor fölé kerül, helyezze a túloldalra">
 <!ENTITY status4evar.status.popup.findMirror.label "Indítsa a jobb oldalról, mikor a keresősor nyitva van">
@@ -68,6 +69,10 @@
 <!ENTITY status4evar.download.label.force.label "Mindig mutassa a címkét">
 <!ENTITY status4evar.download.label.label "Letöltési állapot gomb címkéje:">
 <!ENTITY status4evar.download.tooltip.label "Letöltési állapot gomb buboréksúgója:">
+<!ENTITY status4evar.download.progress.label "Show download progress on the button">
+<!ENTITY status4evar.download.progress.average.label "Show average download completion">
+<!ENTITY status4evar.download.progress.max.label "Show most complete download">
+<!ENTITY status4evar.download.progress.min.label "Show least complete download">
 <!ENTITY status4evar.download.color.active.label "Letöltés mérő színe az aktív letöltésekhez:">
 <!ENTITY status4evar.download.color.paused.label "Letöltés mérő színe a felfüggesztett letöltésekhez:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatív eszköztár szegélyek használata">

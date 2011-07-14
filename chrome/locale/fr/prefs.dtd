@@ -51,6 +51,7 @@
 <!ENTITY status4evar.status.currentUrl "URL courante">
 <!ENTITY status4evar.status.statusText "Texte d'état">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Fonctionnalités de Firefox">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable domain highlighting">
 <!ENTITY browser.urlbar.trimming.enabled.label "Activer le masquage du protocole (http:// et ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Déplacer vers le côté opposé quand survolé par la souris">
 <!ENTITY status4evar.status.popup.findMirror.label "Démarrer à droite lorsque la barre de recherche est ouverte">
@@ -68,6 +69,10 @@
 <!ENTITY status4evar.download.label.force.label "Toujours afficher le texte">
 <!ENTITY status4evar.download.label.label "Texte du bouton d'état de téléchargement :">
 <!ENTITY status4evar.download.tooltip.label "Infobulle du bouton d'état de téléchargement :">
+<!ENTITY status4evar.download.progress.label "Show download progress on the button">
+<!ENTITY status4evar.download.progress.average.label "Show average download completion">
+<!ENTITY status4evar.download.progress.max.label "Show most complete download">
+<!ENTITY status4evar.download.progress.min.label "Show least complete download">
 <!ENTITY status4evar.download.color.active.label "Couleur de la barre de progression des téléchargements actifs :">
 <!ENTITY status4evar.download.color.paused.label "Couleur de la barre de progression des téléchargements en pause :">
 <!ENTITY status4evar.addonbar.borderStyle "Utiliser les bordures de barre d'outils alternatives">

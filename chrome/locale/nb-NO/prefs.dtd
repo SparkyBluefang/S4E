@@ -69,6 +69,10 @@
 <!ENTITY status4evar.download.label.force.label "Vis alltid knappeteksten">
 <!ENTITY status4evar.download.label.label "Tekst på nedlastingsstatusknapp:">
 <!ENTITY status4evar.download.tooltip.label "Nedlastingsstatusknapp verktøytips:">
+<!ENTITY status4evar.download.progress.label "Show download progress on the button">
+<!ENTITY status4evar.download.progress.average.label "Show average download completion">
+<!ENTITY status4evar.download.progress.max.label "Show most complete download">
+<!ENTITY status4evar.download.progress.min.label "Show least complete download">
 <!ENTITY status4evar.download.color.active.label "Farge på fremdriftsindikator for aktive nedlastinger:">
 <!ENTITY status4evar.download.color.paused.label "Farge på fremdriftsindikator for nedlastinger satt på pause:">
 <!ENTITY status4evar.addonbar.borderStyle "Bruk alternative kanter for verktøylinje">

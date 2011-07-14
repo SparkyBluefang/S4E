@@ -50,6 +50,9 @@
 <!ENTITY status4evar.status.urlbar.color.label "Tekstkleur:">
 <!ENTITY status4evar.status.currentUrl "Huidige adres">
 <!ENTITY status4evar.status.statusText "Statustekst">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox features">
+<!ENTITY browser.urlbar.formatting.enabled.label "Enable domain highlighting">
+<!ENTITY browser.urlbar.trimming.enabled.label "Enable protocol hiding (http:// and ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Ga naar de andere kant als er met de muis overheen bewogen wordt">
 <!ENTITY status4evar.status.popup.findMirror.label "Rechts beginnen als de zoekbalk geopend is">
 <!ENTITY status4evar.progress.style.label "Positie:">
@@ -66,6 +69,12 @@
 <!ENTITY status4evar.download.label.force.label "Tekst altijd tonen">
 <!ENTITY status4evar.download.label.label "Tekst voor status downloads:">
 <!ENTITY status4evar.download.tooltip.label "Tooltip downloadstatus:">
+<!ENTITY status4evar.download.progress.label "Show download progress on the button">
+<!ENTITY status4evar.download.progress.average.label "Show average download completion">
+<!ENTITY status4evar.download.progress.max.label "Show most complete download">
+<!ENTITY status4evar.download.progress.min.label "Show least complete download">
+<!ENTITY status4evar.download.color.active.label "Progress color for active downloads:">
+<!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatieve werkbalkranden gebruiken">
 <!ENTITY status4evar.addonbar.windowGripper "Indicatie voor wijzigen venstergrootte tonen">
 <!ENTITY status4evar.addonbar.closeButton "Sluitknop tonen">
