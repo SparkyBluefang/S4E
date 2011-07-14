@@ -1,4 +1,6 @@
 Version next
+
+Version 2011.07.13.20b
 * Add option to show average/max/min download progress
 * Fix download progress line margins.
 * Update locales for new strings.
