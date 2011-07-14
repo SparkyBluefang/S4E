@@ -1,5 +1,6 @@
 Version next
 * Add option to show average/max/min download progress
+* Fix download progress line margins.
 * Update locales for new strings.
 * Updated translations for: bg-BG, el, es-ES, it-IT, ja-JP, nb-NO, pl, ro, ru
 
