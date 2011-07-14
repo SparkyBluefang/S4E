@@ -51,7 +51,6 @@
 <!ENTITY status4evar.status.currentUrl "Aktuális URL">
 <!ENTITY status4evar.status.statusText "Állapot szöveg">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox funkciók">
-<!ENTITY browser.urlbar.formatting.enabled.label "Firefox doménnév-kiemelésének engedélyezése">
 <!ENTITY browser.urlbar.trimming.enabled.label "Protokoll-elrejtés engedélyezése (http:// és ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Mikor a kurzor fölé kerül, helyezze a túloldalra">
 <!ENTITY status4evar.status.popup.findMirror.label "Indítsa a jobb oldalról, mikor a keresősor nyitva van">

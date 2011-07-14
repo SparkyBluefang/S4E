@@ -51,7 +51,6 @@
 <!ENTITY status4evar.status.currentUrl "目前網址">
 <!ENTITY status4evar.status.statusText "狀態文字">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox 功能">
-<!ENTITY browser.urlbar.formatting.enabled.label "啟用 Firefox 的網域高亮度標示">
 <!ENTITY browser.urlbar.trimming.enabled.label "啟用協定隱藏 (http:// and ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "游標經過時移到另一邊">
 <!ENTITY status4evar.status.popup.findMirror.label "尋找列開啟時先顯示在右方">

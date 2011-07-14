@@ -51,7 +51,6 @@
 <!ENTITY status4evar.status.currentUrl "現在のURL">
 <!ENTITY status4evar.status.statusText "ステータステキスト">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefoxの機能">
-<!ENTITY browser.urlbar.formatting.enabled.label "Firefoxのドメインハイライト機能を使う">
 <!ENTITY browser.urlbar.trimming.enabled.label "プロトコルを非表示にする (http:// と ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "カーソルをおいたとき反対の端に移動させる">
 <!ENTITY status4evar.status.popup.findMirror.label "検索バーが開かれたとき右から開始する">

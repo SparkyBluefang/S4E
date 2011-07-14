@@ -51,7 +51,6 @@
 <!ENTITY status4evar.status.currentUrl "Bieżący URL">
 <!ENTITY status4evar.status.statusText "Tekst statusu">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funkcje Firefoksa">
-<!ENTITY browser.urlbar.formatting.enabled.label "Wyróżniaj domenę Firefoksa">
 <!ENTITY browser.urlbar.trimming.enabled.label "Ukrywaj protokół (http:// and ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Po umieszczeniu kursora nad powiadomieniem, wyświetlaj je po przeciwnej stronie">
 <!ENTITY status4evar.status.popup.findMirror.label "Gdy jest otwarty pasek szukania, powiadomienie wyświetlaj po prawej stronie">

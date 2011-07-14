@@ -51,7 +51,6 @@
 <!ENTITY status4evar.status.currentUrl "Aktuell URL">
 <!ENTITY status4evar.status.statusText "Statustext">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefoxfunktioner">
-<!ENTITY browser.urlbar.formatting.enabled.label "Aktivera Firefoxs färgmarkering av domäner">
 <!ENTITY browser.urlbar.trimming.enabled.label "Aktivera protokolldöljning (http:// och ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Flytta till motsatt sida vid mushovring">
 <!ENTITY status4evar.status.popup.findMirror.label "Starta till höger när söklisten är öppen">

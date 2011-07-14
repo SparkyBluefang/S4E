@@ -51,7 +51,6 @@
 <!ENTITY status4evar.status.currentUrl "Indirizzo corrente">
 <!ENTITY status4evar.status.statusText "Messaggio di stato">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funzionalità di Firefox">
-<!ENTITY browser.urlbar.formatting.enabled.label "Abilita evidenziazione del dominio di Firefox">
 <!ENTITY browser.urlbar.trimming.enabled.label "Nascondi protocollo (http:// e ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Sposta sul lato opposto quando coperto dal mouse">
 <!ENTITY status4evar.status.popup.findMirror.label "Mostra sul lato destro quando la barra di ricerca è aperta">

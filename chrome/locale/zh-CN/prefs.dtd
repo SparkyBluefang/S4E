@@ -51,7 +51,6 @@
 <!ENTITY status4evar.status.currentUrl "当前URL">
 <!ENTITY status4evar.status.statusText "状态文本">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox功能">
-<!ENTITY browser.urlbar.formatting.enabled.label "启用Firefox域名高亮">
 <!ENTITY browser.urlbar.trimming.enabled.label "启用协议隐藏(http:// 和 ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "当鼠标悬浮时移动到另一侧">
 <!ENTITY status4evar.status.popup.findMirror.label "当搜索栏打开时从右边开始">

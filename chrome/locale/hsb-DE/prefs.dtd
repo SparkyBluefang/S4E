@@ -51,7 +51,6 @@
 <!ENTITY status4evar.status.currentUrl "Aktualny URL">
 <!ENTITY status4evar.status.statusText "Statusowy tekst">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funkcije de Firefox">
-<!ENTITY browser.urlbar.formatting.enabled.label "Wuzběhnjenje domeny Firefox zmóžnić">
 <!ENTITY browser.urlbar.trimming.enabled.label "Protokol schować (http:// a ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Do napřećiwneho boka přesunyć, hdyž je myš nad tym">
 <!ENTITY status4evar.status.popup.findMirror.label "Naprawo započeć, hdyž pytanska lajsta je wočinjena">

@@ -51,7 +51,6 @@
 <!ENTITY status4evar.status.currentUrl "Aktuala URL">
 <!ENTITY status4evar.status.statusText "Statoteksto">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funkcioj de Firefox">
-<!ENTITY browser.urlbar.formatting.enabled.label "Ebligi reliefigadon de retregiono de Firefox">
 <!ENTITY browser.urlbar.trimming.enabled.label "Kasxi protokolon (http:// kaj ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Ŝovi al la kontraŭa flanko, dum muso estas super tio">
 <!ENTITY status4evar.status.popup.findMirror.label "Starti dekstre, kiam la serĉobreto estas malfermita">
