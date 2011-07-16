@@ -51,7 +51,7 @@
 <!ENTITY status4evar.status.currentUrl "Indirizzo corrente">
 <!ENTITY status4evar.status.statusText "Messaggio di stato">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funzionalità di Firefox">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable domain highlighting">
+<!ENTITY browser.urlbar.formatting.enabled.label "Abilita evidenziazione del dominio">
 <!ENTITY browser.urlbar.trimming.enabled.label "Nascondi protocollo (http:// e ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Sposta sul lato opposto quando coperto dal mouse">
 <!ENTITY status4evar.status.popup.findMirror.label "Mostra sul lato destro quando la barra di ricerca è aperta">
@@ -69,10 +69,10 @@
 <!ENTITY status4evar.download.label.force.label "Mostra sempre l'etichetta del pulsante">
 <!ENTITY status4evar.download.label.label "Etichetta del pulsante di stato dei download:">
 <!ENTITY status4evar.download.tooltip.label "Riquadro informativo del pulsante di stato dei download:">
-<!ENTITY status4evar.download.progress.label "Show download progress on the button">
-<!ENTITY status4evar.download.progress.average.label "Show average download completion">
-<!ENTITY status4evar.download.progress.max.label "Show most complete download">
-<!ENTITY status4evar.download.progress.min.label "Show least complete download">
+<!ENTITY status4evar.download.progress.label "Mostra indicatore di avanzamento dei download sul pulsante">
+<!ENTITY status4evar.download.progress.average.label "Mostra completamento medio dei download">
+<!ENTITY status4evar.download.progress.max.label "Mostra il download più completo">
+<!ENTITY status4evar.download.progress.min.label "Mostra il download meno completo">
 <!ENTITY status4evar.download.color.active.label "Colore dell'indicatore di avanzamento per i download attivi:">
 <!ENTITY status4evar.download.color.paused.label "Colore dell'indicatore di avanzamento per i download in pausa:">
 <!ENTITY status4evar.addonbar.borderStyle "Usa bordo alternativo per le barre degli strumenti">

@@ -51,7 +51,7 @@
 <!ENTITY status4evar.status.currentUrl "当前URL">
 <!ENTITY status4evar.status.statusText "状态文本">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox功能">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable domain highlighting">
+<!ENTITY browser.urlbar.formatting.enabled.label "启用域名高亮">
 <!ENTITY browser.urlbar.trimming.enabled.label "启用协议隐藏(http:// 和 ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "当鼠标悬浮时移动到另一侧">
 <!ENTITY status4evar.status.popup.findMirror.label "当搜索栏打开时从右边开始">
@@ -69,10 +69,10 @@
 <!ENTITY status4evar.download.label.force.label "总是显示按钮文本">
 <!ENTITY status4evar.download.label.label "下载状态的按钮文本：">
 <!ENTITY status4evar.download.tooltip.label "下载状态的按钮提示：">
-<!ENTITY status4evar.download.progress.label "Show download progress on the button">
-<!ENTITY status4evar.download.progress.average.label "Show average download completion">
-<!ENTITY status4evar.download.progress.max.label "Show most complete download">
-<!ENTITY status4evar.download.progress.min.label "Show least complete download">
+<!ENTITY status4evar.download.progress.label "在按钮上显示下载进度">
+<!ENTITY status4evar.download.progress.average.label "显示平均下载完成量">
+<!ENTITY status4evar.download.progress.max.label "显示最大下载完成量">
+<!ENTITY status4evar.download.progress.min.label "显示最小下载完成量">
 <!ENTITY status4evar.download.color.active.label "活动下载的进度条颜色:">
 <!ENTITY status4evar.download.color.paused.label "暂停下载的进度条颜色:">
 <!ENTITY status4evar.addonbar.borderStyle "使用备用的工具栏边框">

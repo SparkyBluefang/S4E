@@ -69,10 +69,10 @@
 <!ENTITY status4evar.download.label.force.label "Vždy zobrazit text tlačítka">
 <!ENTITY status4evar.download.label.label "Text tlačítka průběhu stahování:">
 <!ENTITY status4evar.download.tooltip.label "Nápověda tlačítka průběhu stahování:">
-<!ENTITY status4evar.download.progress.label "Show download progress on the button">
-<!ENTITY status4evar.download.progress.average.label "Show average download completion">
-<!ENTITY status4evar.download.progress.max.label "Show most complete download">
-<!ENTITY status4evar.download.progress.min.label "Show least complete download">
+<!ENTITY status4evar.download.progress.label "Zobrazit postup stahování v tlačítku">
+<!ENTITY status4evar.download.progress.average.label "Zobrazit průměrný stav dokončení stahování">
+<!ENTITY status4evar.download.progress.max.label "Zobrazit nejvíce dokončené stahování">
+<!ENTITY status4evar.download.progress.min.label "Zobrazit nejméně dokončené stahování">
 <!ENTITY status4evar.download.color.active.label "Barva postupu aktivních stahování:">
 <!ENTITY status4evar.download.color.paused.label "Barva postupu pozastavených stahování:">
 <!ENTITY status4evar.addonbar.borderStyle "Použít alternativní ohraničení lišty">

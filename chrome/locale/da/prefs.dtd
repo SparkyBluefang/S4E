@@ -51,7 +51,7 @@
 <!ENTITY status4evar.status.currentUrl "Nuværende URL">
 <!ENTITY status4evar.status.statusText "Statustekst">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox-funktioner">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable domain highlighting">
+<!ENTITY browser.urlbar.formatting.enabled.label "Aktiver fremhævning ad domæne">
 <!ENTITY browser.urlbar.trimming.enabled.label "Skjul protokol (http:// og ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Flyt til den modsatte side, når der peges med musen">
 <!ENTITY status4evar.status.popup.findMirror.label "Start til højre når søgebjælken er åben">
@@ -69,7 +69,7 @@
 <!ENTITY status4evar.download.label.force.label "Vis altid knapteksten">
 <!ENTITY status4evar.download.label.label "Tekst på knappen Filhentningsstatus:">
 <!ENTITY status4evar.download.tooltip.label "Værktøjstip til knappen Filhentningsstatus:">
-<!ENTITY status4evar.download.progress.label "Show download progress on the button">
+<!ENTITY status4evar.download.progress.label "Vis filhentningsforløb på knappen">
 <!ENTITY status4evar.download.progress.average.label "Show average download completion">
 <!ENTITY status4evar.download.progress.max.label "Show most complete download">
 <!ENTITY status4evar.download.progress.min.label "Show least complete download">

@@ -47,11 +47,11 @@
 <!ENTITY status4evar.status.linkOver.delay.hide.label "השהייה לפני הסתרת קישורים:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "אורך מרבי לטקסט המצב:">
 <!ENTITY status4evar.status.urlbar.align.label "יישור המצב:">
-<!ENTITY status4evar.status.urlbar.color.label "צבע הטקסט:">
+<!ENTITY status4evar.status.urlbar.color.label "צבע המצב:">
 <!ENTITY status4evar.status.currentUrl "כתובת נוכחית">
 <!ENTITY status4evar.status.statusText "טקסט מצב">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "תכונות Firefox">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable domain highlighting">
+<!ENTITY browser.urlbar.formatting.enabled.label "אפשר הדגשת שמות מתחם">
 <!ENTITY browser.urlbar.trimming.enabled.label "אפשור הסתרת פרוטוקול (http:// ו- ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "הזזה לצד הנגדי כאשר העכבר עובר מעל">
 <!ENTITY status4evar.status.popup.findMirror.label "התחל בצד ימין כאשר סרגל החיפוש פתוח">
@@ -69,10 +69,10 @@
 <!ENTITY status4evar.download.label.force.label "להציג תמיד טקסט הכפתור">
 <!ENTITY status4evar.download.label.label "טקסט כפתור מצב ההורדה:">
 <!ENTITY status4evar.download.tooltip.label "חלונית מידע כפתור מצב ההורדה:">
-<!ENTITY status4evar.download.progress.label "Show download progress on the button">
-<!ENTITY status4evar.download.progress.average.label "Show average download completion">
-<!ENTITY status4evar.download.progress.max.label "Show most complete download">
-<!ENTITY status4evar.download.progress.min.label "Show least complete download">
+<!ENTITY status4evar.download.progress.label "הצגת התקדמות ההורדות על הכפתור">
+<!ENTITY status4evar.download.progress.average.label "הצגת ממוצע השלמת ההורדה">
+<!ENTITY status4evar.download.progress.max.label "הצגת ההורדות השלמות ביותר">
+<!ENTITY status4evar.download.progress.min.label "הצגת ההורדות הפחות שלמות">
 <!ENTITY status4evar.download.color.active.label "צבע ההתקדמות עבור הורדות פעילות:">
 <!ENTITY status4evar.download.color.paused.label "צבע ההתקדמות עבור הורדות מושהות:">
 <!ENTITY status4evar.addonbar.borderStyle "שימוש בגבולות סרגל כלים חלופיים">

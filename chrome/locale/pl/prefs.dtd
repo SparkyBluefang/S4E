@@ -51,7 +51,7 @@
 <!ENTITY status4evar.status.currentUrl "Bieżący URL">
 <!ENTITY status4evar.status.statusText "Tekst statusu">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funkcje Firefoksa">
-<!ENTITY browser.urlbar.formatting.enabled.label "Enable domain highlighting">
+<!ENTITY browser.urlbar.formatting.enabled.label "Wyróżniaj domenę">
 <!ENTITY browser.urlbar.trimming.enabled.label "Ukrywaj protokół (http:// and ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Po umieszczeniu kursora nad powiadomieniem, wyświetlaj je po przeciwnej stronie">
 <!ENTITY status4evar.status.popup.findMirror.label "Gdy jest otwarty pasek szukania, powiadomienie wyświetlaj po prawej stronie">
@@ -69,10 +69,10 @@
 <!ENTITY status4evar.download.label.force.label "Wyświetlaj opis statusu pobierania">
 <!ENTITY status4evar.download.label.label "W opisie statusu pobierania wyświetlaj">
 <!ENTITY status4evar.download.tooltip.label "W podpowiedzi przycisku pobierania wyświetlaj">
-<!ENTITY status4evar.download.progress.label "Show download progress on the button">
-<!ENTITY status4evar.download.progress.average.label "Show average download completion">
-<!ENTITY status4evar.download.progress.max.label "Show most complete download">
-<!ENTITY status4evar.download.progress.min.label "Show least complete download">
+<!ENTITY status4evar.download.progress.label "Wyświetlaj postęp pobierania na przycisku">
+<!ENTITY status4evar.download.progress.average.label "Wyświetlaj średnio zaawansowane pobieranie">
+<!ENTITY status4evar.download.progress.max.label "Wyświetlaj najbardziej zaawansowane pobieranie">
+<!ENTITY status4evar.download.progress.min.label "Wyświetlaj najmniej zaawansowane pobieranie">
 <!ENTITY status4evar.download.color.active.label "Kolor paska postępu aktywnych pobrań:">
 <!ENTITY status4evar.download.color.paused.label "Kolor paska postępu wstrzymanych pobrań:">
 <!ENTITY status4evar.addonbar.borderStyle "Stosuj alternatywne obramowanie dla paska narzędzi">
