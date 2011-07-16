@@ -36,7 +36,8 @@
  * ***** END LICENSE BLOCK ***** */
 
 #include "nsISupports.idl"
-#include "nsIDOMWindow.idl"
+
+interface nsIDOMWindow;
 
 [scriptable, uuid(13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf)]
 interface nsIStatus4Evar : nsISupports
