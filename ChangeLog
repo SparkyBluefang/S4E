@@ -1,4 +1,5 @@
 Version next
+* Fix bug in showing min download progress.
 * Update locales for new strings.
 * Updated translations for: he
 

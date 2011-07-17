@@ -698,7 +698,7 @@ window.addEventListener("load", function()
 			this._dlCountStr =     PluralForm.get(numDls, dlStatus).replace("#1", numDls);
 			this._dlProgressAvg =  ((dlTotalSize == 0) ? 100 : ((dlTransferred * 100) / dlTotalSize));
 			this._dlProgressMax =  ((dlTotalSize == 0) ? 100 : dlMaxProgress);
-			this._dlProgressMin =  ((dlTotalSize == 0) ? 100 : pausedMinProgress);
+			this._dlProgressMin =  ((dlTotalSize == 0) ? 100 : dlMinProgress);
 			this._dlProgressType = dlProgressType + ((dlTotalSize == 0) ? "-unknown" : "");
 			this._dlPaused =       dlPaused;
 			this._dlActive =       true;
