@@ -579,6 +579,13 @@ window.addEventListener("load", function()
 		_dlProgressMin:  0,
 		_dlProgressType: "active",
 
+		get PluralForm()
+		{
+			delete this.PluralForm;
+			CU.import("resource://gre/modules/PluralForm.jsm", this);
+			return this.PluralForm;
+		},
+
 		get DownloadUtils()
 		{
 			delete this.DownloadUtils;
@@ -695,7 +702,7 @@ window.addEventListener("load", function()
 			let dlProgressType = ((dlPaused) ? "paused"          : "active");
 
 			[this._dlTimeStr, this._lastTime] = this.DownloadUtils.getTimeLeft(maxTime, this._lastTime);
-			this._dlCountStr =     PluralForm.get(numDls, dlStatus).replace("#1", numDls);
+			this._dlCountStr =     this.PluralForm.get(numDls, dlStatus).replace("#1", numDls);
 			this._dlProgressAvg =  ((dlTotalSize == 0) ? 100 : ((dlTransferred * 100) / dlTotalSize));
 			this._dlProgressMax =  ((dlTotalSize == 0) ? 100 : dlMaxProgress);
 			this._dlProgressMin =  ((dlTotalSize == 0) ? 100 : dlMinProgress);
