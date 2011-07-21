@@ -1,4 +1,6 @@
 Version next
+
+Version 2011.07.20.20
 * Prevent XPCOM interface (nsIDOMWindow) ID changes from breaking S4E.
 * Fix bug when showing min download progress.
 * Update locales for new strings.
