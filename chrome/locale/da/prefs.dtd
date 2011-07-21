@@ -43,17 +43,17 @@
 <!ENTITY toolkit.dom.status.change.label "Tillad websider at ændre statussen">
 <!ENTITY status4evar.status.general.linkOver.caption "Links">
 <!ENTITY status4evar.status.linkOver.label "Vis links i:">
-<!ENTITY status4evar.status.linkOver.delay.show.label "Forsinkelse før links vises:">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "Forsinkelse før links skjules:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Forsinkelse inden links vises:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Forsinkelse inden links skjules:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maks længde af statustekst:">
 <!ENTITY status4evar.status.urlbar.align.label "Justering af status:">
 <!ENTITY status4evar.status.urlbar.color.label "Statusfarve:">
 <!ENTITY status4evar.status.currentUrl "Nuværende URL">
 <!ENTITY status4evar.status.statusText "Statustekst">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox-funktioner">
-<!ENTITY browser.urlbar.formatting.enabled.label "Aktiver fremhævning ad domæne">
+<!ENTITY browser.urlbar.formatting.enabled.label "Aktiver fremhævning af domæne">
 <!ENTITY browser.urlbar.trimming.enabled.label "Skjul protokol (http:// og ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Flyt til den modsatte side, når der peges med musen">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Flyt til den modsatte side når der peges med musen">
 <!ENTITY status4evar.status.popup.findMirror.label "Start til højre når søgebjælken er åben">
 <!ENTITY status4evar.progress.style.label "Anvend tilpasset stil på forløbslinje">
 <!ENTITY status4evar.progress.urlbar.enable.label "Vis forløb i adresselinjen">
@@ -70,9 +70,9 @@
 <!ENTITY status4evar.download.label.label "Tekst på knappen Filhentningsstatus:">
 <!ENTITY status4evar.download.tooltip.label "Værktøjstip til knappen Filhentningsstatus:">
 <!ENTITY status4evar.download.progress.label "Vis filhentningsforløb på knappen">
-<!ENTITY status4evar.download.progress.average.label "Show average download completion">
-<!ENTITY status4evar.download.progress.max.label "Show most complete download">
-<!ENTITY status4evar.download.progress.min.label "Show least complete download">
+<!ENTITY status4evar.download.progress.average.label "Vis gennemsnitlig fuldførelse af filhentning">
+<!ENTITY status4evar.download.progress.max.label "Vis mest fuldførte filhentning">
+<!ENTITY status4evar.download.progress.min.label "Vis mindst fuldførte filhentning">
 <!ENTITY status4evar.download.color.active.label "Forløbsfarve for aktive filhentninger:">
 <!ENTITY status4evar.download.color.paused.label "Forløbsfarve for pausede filhentninger:">
 <!ENTITY status4evar.addonbar.borderStyle "Anvend alternative kanter til værktøjslinje">
