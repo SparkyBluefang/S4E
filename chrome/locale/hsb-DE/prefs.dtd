@@ -6,7 +6,7 @@
 <!ENTITY status4evar.tab.general "Powšitkowne">
 <!ENTITY status4evar.tab.toolbar "Gratowa lajsta">
 <!ENTITY status4evar.tab.urlbar "Adresowe polo">
-<!ENTITY status4evar.tab.popup "Kontekstowy menij">
+<!ENTITY status4evar.tab.popup "Kontekstowy meni">
 <!ENTITY status4evar.tab.tabs "Rajtarki">
 <!ENTITY status4evar.option.none "Žadyn">
 <!ENTITY status4evar.option.toolbar "Gratowej lajsće">
@@ -50,7 +50,7 @@
 <!ENTITY status4evar.status.urlbar.color.label "Tekstowa barba:">
 <!ENTITY status4evar.status.currentUrl "Aktualny URL">
 <!ENTITY status4evar.status.statusText "Statusowy tekst">
-<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funkcije de Firefox">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funkcije Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "Wuzběhnjenje domeny zmóžnić">
 <!ENTITY browser.urlbar.trimming.enabled.label "Protokol schować (http:// a ftp://)">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Do napřećiwneho boka přesunyć, hdyž je myš nad tym">

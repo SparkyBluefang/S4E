@@ -1,0 +1,80 @@
+<!ENTITY status4evar.window.title "Status-4-Evar Nastajenja">
+<!ENTITY status4evar.pane.status "Status">
+<!ENTITY status4evar.pane.progress "Póstup">
+<!ENTITY status4evar.pane.download "Ześěgnjenje">
+<!ENTITY status4evar.pane.addonbar "Kšoma dodankow">
+<!ENTITY status4evar.tab.general "Powšykny">
+<!ENTITY status4evar.tab.toolbar "Rědowa kšoma">
+<!ENTITY status4evar.tab.urlbar "Adresowe pólo">
+<!ENTITY status4evar.tab.popup "Kontekstowy meni">
+<!ENTITY status4evar.tab.tabs "Rejtarki">
+<!ENTITY status4evar.option.none "Žeden">
+<!ENTITY status4evar.option.toolbar "Rědowej kšomje">
+<!ENTITY status4evar.option.urlbar "Adresowem pólu">
+<!ENTITY status4evar.option.popup "Kontekstowem meniju">
+<!ENTITY status4evar.option.tooltip "Infotekst">
+<!ENTITY status4evar.option.bottom "Dołojce">
+<!ENTITY status4evar.option.top "Górjejce">
+<!ENTITY status4evar.option.fill "Wupołniś">
+<!ENTITY status4evar.option.dlcount "Licba ześěgnjenjow">
+<!ENTITY status4evar.option.dltime "Zbywajucy cas">
+<!ENTITY status4evar.option.both "Wobej">
+<!ENTITY status4evar.option.right "Napšawo">
+<!ENTITY status4evar.option.left "Nalěwo">
+<!ENTITY status4evar.option.fixed "Kšuty">
+<!ENTITY status4evar.option.simple "Jadnory">
+<!ENTITY status4evar.option.advanced "Rozšyrjony">
+<!ENTITY status4evar.option.browse "Pśepytaś">
+<!ENTITY status4evar.option.clear "Wuprozniś">
+<!ENTITY status4evar.option.center "Centrěrowaś">
+<!ENTITY status4evar.option.offset "Wótchylenje">
+<!ENTITY status4evar.option.repeat "Wóspjetowaś">
+<!ENTITY status4evar.option.no-repeat "Njewóspjetowaś">
+<!ENTITY status4evar.option.space "Rum">
+<!ENTITY status4evar.option.round "Wótrownaś">
+<!ENTITY status4evar.unit.seconds "sekundach">
+<!ENTITY status4evar.unit.px "px">
+<!ENTITY status4evar.status.general.status.caption "Statusowy tekst">
+<!ENTITY status4evar.status.label "Status pokazaś w:">
+<!ENTITY status4evar.status.timeout.label "Status schowaś pó">
+<!ENTITY status4evar.status.default.label "Standardny status pokazaś">
+<!ENTITY status4evar.status.network.label "Seśowy status pokazaś">
+<!ENTITY status4evar.status.network.xhr.label "Seśowy status slězyny pokazaś">
+<!ENTITY toolkit.dom.status.change.label "Webbokam dowóliś status změniś">
+<!ENTITY status4evar.status.general.linkOver.caption "Wótkaze">
+<!ENTITY status4evar.status.linkOver.label "Wótkaze pokazaś w:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Wokomuźenje do pokazowanja wótkazow:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Wokomuźenje do chowanja wótkazow:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Maksimalna dłujkosć statusowego teksta:">
+<!ENTITY status4evar.status.urlbar.align.label "Statusowe wusměrjenje:">
+<!ENTITY status4evar.status.urlbar.color.label "Statusowa barwa:">
+<!ENTITY status4evar.status.currentUrl "Aktualne městno">
+<!ENTITY status4evar.status.statusText "Statusowy tekst">
+<!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox funkcije">
+<!ENTITY browser.urlbar.formatting.enabled.label "Wuzwignjenje domenow zmóžniś">
+<!ENTITY browser.urlbar.trimming.enabled.label "Chowanje protokola (http:// a ftp://) zmóžniś">
+<!ENTITY status4evar.status.popup.mouseMirror.label "K napśeśiwnemu bokoju pśejś, gaž myška jo nad tym">
+<!ENTITY status4evar.status.popup.findMirror.label "Napšawo startowaś, gaž pytańske pólo jo wócynjone">
+<!ENTITY status4evar.progress.style.label "Swójski stil wužywaś">
+<!ENTITY status4evar.progress.urlbar.enable.label "Póstup w adresowem pólu pokazaś">
+<!ENTITY status4evar.progress.urlbar.line.label "Linijowy stil:">
+<!ENTITY status4evar.progress.toolbar.force.label "Zapisk rědoweje kšomy pśecej pokazaś">
+<!ENTITY status4evar.editor.label "Editor:">
+<!ENTITY status4evar.editor.css.color.label "Barwa:">
+<!ENTITY status4evar.editor.css.image.label "Wobraz:">
+<!ENTITY status4evar.editor.css.image.repeat "Wóspjetowaś">
+<!ENTITY status4evar.editor.css.image.position "Pozicija">
+<!ENTITY status4evar.editor.css.image.offset "Wótchylenje">
+<!ENTITY status4evar.download.force.label "Tłocašk ześěgnjeńskego statusa pśecej pokazaś">
+<!ENTITY status4evar.download.label.force.label "Tłocaškowy tekst pśecej pokazaś">
+<!ENTITY status4evar.download.label.label "Tekst tłocaška ześěgnjeńskego statusa:">
+<!ENTITY status4evar.download.tooltip.label "Pomocny tekst tłocaška ześěgnjeńskego statusa:">
+<!ENTITY status4evar.download.progress.label "Ześěgnjeński póstup na tłocašku pokazaś">
+<!ENTITY status4evar.download.progress.average.label "Pśerězne ześěgnjenje pokazaś">
+<!ENTITY status4evar.download.progress.max.label "Nejdopołnjejše ześěgnjenje pokazaś">
+<!ENTITY status4evar.download.progress.min.label "Nejmjenjej póstupjone ześěgnjenje pokazaś">
+<!ENTITY status4evar.download.color.active.label "Póstupowa barwa za aktiwne ześěgnjenja:">
+<!ENTITY status4evar.download.color.paused.label "Póstupowa barwa za zastajone ześěgnjenja:">
+<!ENTITY status4evar.addonbar.borderStyle "Alternatiwne ramiki rědoweje kšomy wužywaś">
+<!ENTITY status4evar.addonbar.windowGripper "Pśimk za změnjanje wjelikosći wokna pokazaś">
+<!ENTITY status4evar.addonbar.closeButton "Tłocašk &quot;Zacyniś&quot; pokazaś">
