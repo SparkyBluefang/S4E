@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   - 
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   - 
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   - 
+   - The Original Code is this file as it was released on March 28, 2001.
+   - 
+   - The Initial Developer of the Original Code is
+   - David Hyatt.
+   - 
+   - Portions created by the Initial Developer are Copyright (C) 2001
+   - the Initial Developer. All Rights Reserved.
+   - 
+   - Contributor(s):
+   -   David Hyatt <hyatt@netscape.com> (Original Author of <tabbrowser>)
+   -   Mike Connor <mconnor@steelgryphon.com>
+   -   Peter Parente <parente@cs.unc.edu>
+   -   Giorgio Maone <g.maone@informaction.com>
+   -   Asaf Romano <mozilla.mano@sent.com>
+   -   Seth Spitzer <sspitzer@mozilla.org>
+   -   Simon Bünzli <zeniko@gmail.com>
+   -   Michael Ventnor <ventnor.bugzilla@yahoo.com.au>
+   -   Mark Pilgrim <pilgrim@gmail.com>
+   -   Dão Gottwald <dao@mozilla.com>
+   -   Paul O’Shannessy <paul@oshannessy.com>
+   -   Rob Arnold <tellrob@gmail.com>
+   -   Frank Yan <fyan@mozilla.com>
+   -   Patrick Walton <pcwalton@mozilla.com>
+   -   Matthew Turnbull <sparky@bluefang-logic.com>
+   - 
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the GPL or the LGPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   - 
+   - ***** END LICENSE BLOCK ***** -->
+
+<bindings id="status4evar-bindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl">
+
+	<binding id="statuspanel" display="xul:hbox" extends="chrome://browser/content/tabbrowser.xml#statuspanel">
+		<implementation>
+			<field name="findMirror"><![CDATA[
+				true
+			]]></field>
+
+			<property name="mouseMirror">
+				<setter><![CDATA[
+					if(val)
+					{
+						this.removeAttribute("nomouse");
+					}
+					else
+					{
+						this.setAttribute("nomouse", "true");
+					}
+					return val;
+				]]></setter>
+				<getter><![CDATA[
+					return this.getAttribute("nomouse") != "true";
+				]]></getter>
+			</property>
+
+			<property name="value">
+				<setter><![CDATA[
+					if(!val)
+					{
+						if(this.findMirror && window.gFindBarInitialized && !window.gFindBar.hidden)
+						{
+							this.setAttribute("mirror", "true");
+						}
+						else
+						{
+							this.removeAttribute("mirror");
+						}
+					}
+
+					this.style.minWidth =
+						(this.getAttribute("type") == "network" &&
+						this.getAttribute("previoustype") == "network")
+						? getComputedStyle(this).width : "";
+
+					this.setAttribute("label", val);
+					return val;
+				]]></setter>
+				<getter><![CDATA[
+					return this.getAttribute("label");
+				]]></getter>
+			</property>
+
+			<property name="label">
+				<setter><![CDATA[
+					window.caligon.status4evar.statusService.setStatusText(val);
+					return undefined;
+				]]></setter>
+				<getter><![CDATA[
+					return window.caligon.status4evar.statusService.getStatusText();
+				]]></getter>
+			</property>
+
+			<method name="handleEvent">
+				<parameter name="event"/>
+				<body><![CDATA[
+					if(this.findMirror && event.type == "findbaropen" && this.value)
+					{
+						this.setAttribute("mirror", "true");
+					}
+				]]></body>
+			</method>
+		</implementation>
+	</binding>
+
+</bindings>
+

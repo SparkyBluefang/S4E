@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   - 
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   - 
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   - 
+   - The Original Code is mozilla.org browser.
+   - 
+   - The Initial Developer of the Original Code is
+   - Simon Bünzli <zeniko@gmail.com>
+   - 
+   - Portions created by the Initial Developer are Copyright (C) 2006
+   - the Initial Developer. All Rights Reserved.
+   - 
+   - Contributor(s):
+   -   Dão Gottwald <dao@design-noir.de>
+   -   Drew Willcoxon <adw@mozilla.com>
+   -   Matthew Turnbull <sparky@bluefang-logic.com>
+   - 
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the GPL or the LGPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   - 
+   - ***** END LICENSE BLOCK ***** -->
+
+<bindings id="status4evar-bindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl">
+
+	<binding id="urlbar" extends="chrome://browser/content/urlbarBindings.xml#urlbar">
+		<content sizetopopup="pref">
+			<xul:hbox anonid="textbox-container" class="autocomplete-textbox-container urlbar-textbox-container" flex="1" xbl:inherits="focused">
+				<children includes="image|deck|stack|box">
+					<xul:image class="autocomplete-icon" allowevents="true"/>
+				</children>
+				<xul:stack anonid="stack" class="urlbar-stack" flex="1">
+					<xul:vbox class="urlbar-progress-layer" xbl:inherits="pack=pmpack" flex="1">
+						<children includes="progressmeter"/>
+					</xul:vbox>
+					<xul:scrollbox anonid="over-link-layer" class="urlbar-over-link-layer" xbl:inherits="overlinkstate" flex="1">
+						<xul:hbox anonid="over-origin-box" class="urlbar-over-origin-box" xbl:inherits="overlinkstate" align="center" flex="1">
+							<xul:label anonid="origin-label" class="urlbar-origin-label" flex="1" crop="end"/>
+						</xul:hbox>
+						<xul:hbox anonid="over-link-box" class="urlbar-over-link-box" xbl:inherits="overlinkstate" align="center">
+							<xul:label anonid="over-link-host-label" class="urlbar-over-link-host-label"/>
+							<xul:label anonid="over-link-path-label" class="urlbar-over-link-path-label" flex="1"/>
+						</xul:hbox>
+					</xul:scrollbox>
+					<xul:hbox class="urlbar-textbox-container urlbar-input-layer" xbl:inherits="focused,overlinkstate" flex="1">
+						<xul:hbox anonid="textbox-input-box" class="textbox-input-box urlbar-input-box" flex="1" xbl:inherits="tooltiptext=inputtooltiptext">
+							<xul:hbox class="urlbar-input-layer-children" xbl:inherits="overlinkstate">
+								<children/>
+							</xul:hbox>
+							<html:input anonid="input" class="autocomplete-textbox urlbar-input textbox-input uri-element-right-align" flex="1" allowevents="true"
+								    xbl:inherits="tooltiptext=inputtooltiptext,onfocus,onblur,value,type,maxlength,disabled,size,readonly,placeholder,tabindex,accesskey"/>
+						</xul:hbox>
+						<xul:hbox class="urlbar-input-layer-children" xbl:inherits="overlinkstate">
+							<children includes="hbox"/>
+						</xul:hbox>
+					</xul:hbox>
+				</xul:stack>
+			</xul:hbox>
+			<xul:dropmarker anonid="historydropmarker" class="autocomplete-history-dropmarker urlbar-history-dropmarker"
+			                allowevents="true" xbl:inherits="open,enablehistory,parentfocused=focused"/>
+			<xul:popupset anonid="popupset" class="autocomplete-result-popupset"/>
+			<children includes="toolbarbutton"/>
+		</content>
+
+		<implementation>
+			<constructor><![CDATA[
+				this._overLinkBox.addEventListener("transitionend", this, false);
+			]]></constructor>
+
+			<destructor><![CDATA[
+				this._overLinkBox.removeEventListener("transitionend", this, false);
+			]]></destructor>
+
+			<field name="_overLinkLayer" readonly="true"><![CDATA[
+				document.getAnonymousElementByAttribute(this, "anonid", "over-link-layer");
+			]]></field>
+
+			<field name="_overOriginBox" readonly="true"><![CDATA[
+				document.getAnonymousElementByAttribute(this, "anonid", "over-origin-box");
+			]]></field>
+
+			<field name="_originLabel" readonly="true"><![CDATA[
+				document.getAnonymousElementByAttribute(this, "anonid", "origin-label");
+			]]></field>
+
+			<field name="_overLinkBox" readonly="true"><![CDATA[
+				document.getAnonymousElementByAttribute(this, "anonid", "over-link-box");
+			]]></field>
+
+			<field name="_overLinkHostLabel" readonly="true"><![CDATA[
+				document.getAnonymousElementByAttribute(this, "anonid", "over-link-host-label");
+			]]></field>
+
+			<field name="_overLinkPathLabel" readonly="true"><![CDATA[
+				document.getAnonymousElementByAttribute(this, "anonid", "over-link-path-label");
+			]]></field>
+
+			<field name="_overLinkHostValue"><![CDATA[
+				null
+			]]></field>
+
+			<field name="_overLinkPathValue"><![CDATA[
+				null
+			]]></field>
+
+			<field name="s4espos"><![CDATA[
+				66
+			]]></field>
+
+			<property name="s4esalign">
+				<setter><![CDATA[
+					this.setAttribute("s4esalign", val);
+					return val;
+				]]></setter>
+				<getter><![CDATA[
+					return this.getAttribute("s4esalign");
+				]]></getter>
+			</property>
+
+			<method name="handleEvent">
+				<parameter name="aEvent"/>
+				<body><![CDATA[
+					switch (aEvent.type)
+					{
+						case "transitionend":
+							if(aEvent.target == this._overLinkBox
+							   && aEvent.propertyName == "opacity")
+							{
+								this._overLinkTransitioning = false;
+							}
+							break;
+						default:
+							this.__proto__.__proto__.handleEvent.call(this, aEvent);
+							break;
+					}
+				]]></body>
+			</method>
+
+			<method name="setStatusType">
+				<parameter name="aValue"/>
+				<body><![CDATA[
+					var overLinkBox = this._overLinkBox;
+					overLinkBox.setAttribute("previoustype", overLinkBox.getAttribute("type"));
+					overLinkBox.setAttribute("type", aValue);
+				]]></body>
+			</method>
+
+			<method name="setStatus">
+				<parameter name="aURL"/>
+				<body><![CDATA[
+					// NOTE: This method is called many times in a row very quickly when
+					// the user mouses over a bookmarks menu, tabs menu, or long list of
+					// links in a page, or leaves the cursor over a page with many links
+					// while scrolling.  Therefore it's important that it be fast.  Don't
+					// regress performance when you modify it!
+
+					// Hide the over-link immediately if necessary.
+					if((!aURL && (XULBrowserWindow.hideOverLinkImmediately
+					   || this._hideOverLinkImmediately)) || this.focused)
+					{
+						this._setOverLinkState(null);
+						return;
+					}
+
+					if(aURL)
+					{
+						this._updateOverLink(aURL);
+						if(this._overLinkTransitioning)
+						{
+							this._setOverLinkState("showing");
+						}
+						else
+						{
+							this._setOverLinkState("fade-in");
+						}
+					}
+					else
+					{
+						this._setOverLinkState("fade-out");
+					}
+				]]></body>
+			</method>
+
+			<method name="_hideOverLink">
+				<body><![CDATA[
+					this._hideOverLinkImmediately = true;
+					this.setStatus("");
+					this._hideOverLinkImmediately = false;
+				]]></body>
+			</method>
+
+			<method name="_setOverLinkState">
+				<parameter name="aVal"/>
+				<body><![CDATA[
+					switch(aVal)
+					{
+						case "fade-in":
+							var style = window.getComputedStyle(this._overLinkBox);
+							this._overLinkTransitioning = style.opacity != 1;
+							this.setAttribute("overlinkstate", aVal);
+							break;
+						case "fade-out":
+							style = window.getComputedStyle(this._overLinkBox);
+							this._overLinkTransitioning = style.opacity != 0;
+							this.setAttribute("overlinkstate", aVal);
+							break;
+						case "showing":
+							this._overLinkTransitioning = false;
+							this.setAttribute("overlinkstate", aVal);
+							break;
+						default:
+							this._overLinkTransitioning = false;
+							this.removeAttribute("overlinkstate");
+							break;
+					}
+				]]></body>
+			</method>
+
+			<method name="_updateOverLink">
+				<parameter name="aURL"/>
+				<body><![CDATA[
+					if(typeof this.trimValue == "function")
+					{
+						aURL = this.trimValue(aURL);
+					}
+
+					// Determine the pre-path and path of the over-link.  Include the
+					// path's leading slash in the pre-path so that if the path is
+					// truncated its leading slash is visible.
+					var re = new RegExp("^((?:[a-z0-9+.-]+://)?[^/]+/?)(.*)$");
+					var match = re.exec(aURL);
+					this._overLinkHostValue = match ? match[1] : "";
+					this._overLinkPathValue = match ? match[2] : aURL;
+
+					this.updateOverLinkLayout();
+				]]></body>
+			</method>
+
+			<method name="updateOverLinkLayout">
+				<body><![CDATA[
+					// Reset the overlay state
+					var overLinkHost = this._overLinkHostLabel;
+					overLinkHost.value = "";
+					overLinkHost.flex = 0;
+					overLinkHost.crop = "none";
+
+					var overLinkPath = this._overLinkPathLabel;
+					overLinkPath.value = "";
+					overLinkPath.crop = "none";
+
+					var overLinkBox = this._overLinkBox;
+					overLinkBox.maxWidth = "";
+					overLinkBox.minWidth = "";
+
+					// Calculate the max-width
+					var maxWidth = this._overLinkLayer.boxObject.width;
+					var alignMode = this.s4esalign;
+					if(alignMode != "left")
+					{
+						maxWidth *= (this.s4espos / 100);
+					}
+
+					// Do eet!
+					overLinkHost.value = this._overLinkHostValue;
+					overLinkPath.value = this._overLinkPathValue;
+					overLinkPath.crop = this._overLinkHostValue ? "start" : "end";
+
+					if(overLinkHost.boxObject.width > maxWidth)
+					{
+						overLinkHost.flex = 1;
+						overLinkHost.crop = "end";
+					}
+
+					overLinkBox.maxWidth = maxWidth;
+					if(alignMode == "absolute")
+					{
+						overLinkBox.minWidth = maxWidth;
+					}
+				]]></body>
+			</method>
+		</implementation>
+
+		<handlers>
+			<handler event="focus" phase="capturing"><![CDATA[
+				this._hideOverLink();
+			]]></handler>
+
+			<handler event="ValueChange" phase="capturing"><![CDATA[
+				this._originLabel.value = this.inputField.value;
+			]]></handler>
+		</handlers>
+	</binding>
+
+</bindings>
+
