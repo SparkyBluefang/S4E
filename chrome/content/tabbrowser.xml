@@ -59,8 +59,16 @@
 
 	<binding id="statuspanel" display="xul:hbox" extends="chrome://browser/content/tabbrowser.xml#statuspanel">
 		<implementation>
+			<constructor><![CDATA[
+				this.doMirror(false);
+			]]></constructor>
+
 			<field name="findMirror"><![CDATA[
 				true
+			]]></field>
+
+			<field name="invertMirror"><![CDATA[
+				false
 			]]></field>
 
 			<property name="mouseMirror">
@@ -84,14 +92,7 @@
 				<setter><![CDATA[
 					if(!val)
 					{
-						if(this.findMirror && window.gFindBarInitialized && !window.gFindBar.hidden)
-						{
-							this.setAttribute("mirror", "true");
-						}
-						else
-						{
-							this.removeAttribute("mirror");
-						}
+						this.doMirror(this.findMirror && window.gFindBarInitialized && !window.gFindBar.hidden)
 					}
 
 					this.style.minWidth =
@@ -130,7 +131,26 @@
 				<body><![CDATA[
 					if(this.findMirror && event.type == "findbaropen" && this.value)
 					{
+						this.doMirror(true);
+					}
+				]]></body>
+			</method>
+
+			<method name="doMirror">
+				<parameter name="mirror"/>
+				<body><![CDATA[
+					if(this.invertMirror)
+					{
+						mirror = !mirror;
+					}
+
+					if(mirror)
+					{
 						this.setAttribute("mirror", "true");
+					}
+					else
+					{
+						this.removeAttribute("mirror");
 					}
 				]]></body>
 			</method>

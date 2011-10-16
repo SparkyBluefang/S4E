@@ -79,5 +79,6 @@ pref("status4evar.status.urlbar.color", "GrayText");
 pref("status4evar.status.urlbar.position", 33);
 
 pref("status4evar.status.popup.findMirror", true);
+pref("status4evar.status.popup.invertMirror", false);
 pref("status4evar.status.popup.mouseMirror", true);
 

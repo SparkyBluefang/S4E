@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- *   Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
  *
  * The contents of this file are subject to the Mozilla Public License Version
  * 1.1 (the "License"); you may not use this file except in compliance with
@@ -96,6 +96,7 @@ Status_4_Evar.prototype =
 	statusUrlbarPosition:		33,
 
 	statusUrlbarFindMirror:		true,
+	statusUrlbarInvertMirror:	false,
 	statusUrlbarMouseMirror:	true,
 
 	pref_registry:
@@ -429,6 +430,22 @@ Status_4_Evar.prototype =
 				if(statusOverlay)
 				{
 					statusOverlay.findMirror = this.statusUrlbarFindMirror;
+				}
+			}
+		},
+
+		"status.popup.invertMirror":
+		{
+			update: function()
+			{
+				this.statusUrlbarInvertMirror = this.prefs.getBoolPref("status.popup.invertMirror");
+			},
+			updateWindow: function(win)
+			{
+				let statusOverlay = win.caligon.status4evar.getters.statusOverlay;
+				if(statusOverlay)
+				{
+					statusOverlay.invertMirror = this.statusUrlbarInvertMirror;
 				}
 			}
 		},

@@ -2,7 +2,7 @@
 <!DOCTYPE prefwindow SYSTEM "chrome://status4evar/locale/prefs.dtd">
 
 <!-- ***** BEGIN LICENSE BLOCK *****
-   -   Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
    -
    - The contents of this file are subject to the Mozilla Public License Version
    - 1.1 (the "License"); you may not use this file except in compliance with
@@ -74,6 +74,7 @@
 			<preference id="status4evar-pref-status-urlbar-color"        name="status4evar.status.urlbar.color"        type="string" />
 			<preference id="status4evar-pref-status-urlbar-position"     name="status4evar.status.urlbar.position"     type="int" />
 			<preference id="status4evar-pref-status-popup-findMirror"    name="status4evar.status.popup.findMirror"    type="bool" />
+			<preference id="status4evar-pref-status-popup-invertMirror"  name="status4evar.status.popup.invertMirror"  type="bool" />
 			<preference id="status4evar-pref-status-popup-mouseMirror"   name="status4evar.status.popup.mouseMirror"   type="bool" />
 			<preference id="toolkit-pref-dom-status-change"              name="dom.disable_window_status_change"       type="bool" inverted="true" />
 			<preference id="browser-pref-urlbar-formatting-enabled"      name="browser.urlbar.formatting.enabled"      type="bool" />
@@ -210,9 +211,11 @@
 				</tabpanel>
 
 				<tabpanel id="status4evar-tabpanel-status-popup" orient="vertical">
-					<checkbox id="status4evar-status-popup-mouseMirror-check" preference="status4evar-pref-status-popup-mouseMirror" label="&status4evar.status.popup.mouseMirror.label;" />
+					<checkbox id="status4evar-status-popup-invertMirror-check" preference="status4evar-pref-status-popup-invertMirror" label="&status4evar.status.popup.invertMirror.label;" />
 
 					<checkbox id="status4evar-status-popup-findMirror-check" preference="status4evar-pref-status-popup-findMirror" label="&status4evar.status.popup.findMirror.label;" />
+
+					<checkbox id="status4evar-status-popup-mouseMirror-check" preference="status4evar-pref-status-popup-mouseMirror" label="&status4evar.status.popup.mouseMirror.label;" />
 				</tabpanel>
 
 			</tabpanels>
