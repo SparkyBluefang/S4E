@@ -53,6 +53,9 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox 功能">
 <!ENTITY browser.urlbar.formatting.enabled.label "啟用網域高亮度標示">
 <!ENTITY browser.urlbar.trimming.enabled.label "啟用協定隱藏 (http:// 及 ftp://)">
+<!ENTITY status4evar.status.popup.invertMirror.label "Default to the right side">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the opposite side when the Find Bar is open">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Swap sides when moused over">
 <!ENTITY status4evar.progress.style.label "進度列使用自訂樣式">
 <!ENTITY status4evar.progress.urlbar.enable.label "在位址列顯示載入進度">
 <!ENTITY status4evar.progress.urlbar.line.label "進度條樣式：">
