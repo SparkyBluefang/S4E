@@ -1,4 +1,6 @@
 Version next
+
+Version 2011.10.16.16b
 * Fix content pop-up in Firefox 10.
 * Add option to set the default side of the content pop-up.
 * Fix-up licensing issues.
