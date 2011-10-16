@@ -1,4 +1,8 @@
 Version next
+* Fix content pop-up in Firefox 10.
+* Add option to set the default side of the content pop-up.
+* Fix-up licensing issues.
+* Split up the overlay.xml so that proper license headers can be used.
 * Added translations for: dsb-DE
 * Updated translations for: hsb-DE, zh-TW
 
