@@ -100,6 +100,14 @@
 						? getComputedStyle(this).width : "";
 
 					this.setAttribute("label", val);
+					if(val)
+					{
+						this.removeAttribute("inactive");
+					}
+					else
+					{
+						this.setAttribute("inactive", "true");
+					}
 					return val;
 				]]></setter>
 				<getter><![CDATA[
