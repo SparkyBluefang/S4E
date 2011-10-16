@@ -53,8 +53,6 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox-funksjoner">
 <!ENTITY browser.urlbar.formatting.enabled.label "Aktiver domeneutheving">
 <!ENTITY browser.urlbar.trimming.enabled.label "Aktiver protokollskjuling (http:// og ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Flytt til motsatt side når musepekeren er over">
-<!ENTITY status4evar.status.popup.findMirror.label "Start til høyre når søkelinjen er åpen">
 <!ENTITY status4evar.progress.style.label "Bruk egendefinert stil">
 <!ENTITY status4evar.progress.urlbar.enable.label "Vis fremdriftsindikator i adresselinjen">
 <!ENTITY status4evar.progress.urlbar.line.label "Linjestil:">

@@ -50,8 +50,6 @@
 <!ENTITY status4evar.status.urlbar.color.label "Tekstkleur:">
 <!ENTITY status4evar.status.currentUrl "Huidige adres">
 <!ENTITY status4evar.status.statusText "Statustekst">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Ga naar de andere kant als er met de muis overheen bewogen wordt">
-<!ENTITY status4evar.status.popup.findMirror.label "Rechts beginnen als de zoekbalk geopend is">
 <!ENTITY status4evar.progress.style.label "Positie:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Voortgang tonen in locatiebalk">
 <!ENTITY status4evar.progress.urlbar.line.label "Lijnstijl:">

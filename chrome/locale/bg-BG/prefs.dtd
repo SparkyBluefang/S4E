@@ -53,8 +53,6 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Особености на Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "Осветяване на домейна">
 <!ENTITY browser.urlbar.trimming.enabled.label "Скриване на протокола (http:// и ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Преместване в противоположната страна при посочване с курсора на мишката">
-<!ENTITY status4evar.status.popup.findMirror.label "Стартиране в дясната страна, когато е отворена лентата за търсене">
 <!ENTITY status4evar.progress.style.label "Използване на собствен стил за изобразяване на напредъка">
 <!ENTITY status4evar.progress.urlbar.enable.label "Показване на напредъка в адресната лента">
 <!ENTITY status4evar.progress.urlbar.line.label "Стил на линията:">

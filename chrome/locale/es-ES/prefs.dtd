@@ -53,8 +53,6 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Características de Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "Resaltar el dominio">
 <!ENTITY browser.urlbar.trimming.enabled.label "Ocultar el protocolo (http:// y ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Mover al lado opuesto cuando pase el ratón por encima">
-<!ENTITY status4evar.status.popup.findMirror.label "Mostrar en el lado derecho si la barra de búsqueda es visible">
 <!ENTITY status4evar.progress.style.label "Usar un estilo personalizado para el medidor de progreso">
 <!ENTITY status4evar.progress.urlbar.enable.label "Mostrar el progreso en la barra de direcciones">
 <!ENTITY status4evar.progress.urlbar.line.label "Estilo de línea:">

@@ -53,8 +53,6 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefoxfunktioner">
 <!ENTITY browser.urlbar.formatting.enabled.label "Aktivera domänmarkering">
 <!ENTITY browser.urlbar.trimming.enabled.label "Aktivera protokolldöljning (http:// och ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Flytta till motsatt sida vid mushovring">
-<!ENTITY status4evar.status.popup.findMirror.label "Starta till höger när söklisten är öppen">
 <!ENTITY status4evar.progress.style.label "Placering:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Visa förlopp i adressfältet">
 <!ENTITY status4evar.progress.urlbar.line.label "Linjeformat:">

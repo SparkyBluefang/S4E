@@ -53,8 +53,6 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Vlastnosti Firefoxu">
 <!ENTITY browser.urlbar.formatting.enabled.label "Povolit zvýrazňování domény">
 <!ENTITY browser.urlbar.trimming.enabled.label "Povolit skrývání protokolu (http:// a ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Při najetí myší přesunout na druhou stranu">
-<!ENTITY status4evar.status.popup.findMirror.label "Začít vpravo pokud je otevřený panel vyhledávání">
 <!ENTITY status4evar.progress.style.label "Použít vlastní styl pro lištu činnosti">
 <!ENTITY status4evar.progress.urlbar.enable.label "Zobrazit činnosti v adresním řádku">
 <!ENTITY status4evar.progress.urlbar.line.label "Styl linky:">

@@ -53,8 +53,6 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Особенности Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "Включить подсветку домена">
 <!ENTITY browser.urlbar.trimming.enabled.label "Включить скрытие протокола (http:// и ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "При наведении курсора мыши переместить на противоположную сторону">
-<!ENTITY status4evar.status.popup.findMirror.label "Когда открыта панель поиска, открывать с правой стороны">
 <!ENTITY status4evar.progress.style.label "Собственный стиль индикатора">
 <!ENTITY status4evar.progress.urlbar.enable.label "Показывать индикатор в адресной строке">
 <!ENTITY status4evar.progress.urlbar.line.label "Стиль:">

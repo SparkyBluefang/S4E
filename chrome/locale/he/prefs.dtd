@@ -53,8 +53,6 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "תכונות Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "אפשר הדגשת שמות מתחם">
 <!ENTITY browser.urlbar.trimming.enabled.label "אפשור הסתרת פרוטוקול (http:// ו- ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "הזזה לצד הנגדי כאשר העכבר עובר מעל">
-<!ENTITY status4evar.status.popup.findMirror.label "התחל בצד ימין כאשר סרגל החיפוש פתוח">
 <!ENTITY status4evar.progress.style.label "שימוש בסגנון מותאם בסרגל ההתקדמות">
 <!ENTITY status4evar.progress.urlbar.enable.label "הצגת התקדמות בסרגל המיקום">
 <!ENTITY status4evar.progress.urlbar.line.label "סגנון קו:">

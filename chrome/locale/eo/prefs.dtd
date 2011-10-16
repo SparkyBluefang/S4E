@@ -53,8 +53,6 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funkcioj de Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "Ebligi retregionan reliefigon">
 <!ENTITY browser.urlbar.trimming.enabled.label "Kasxi protokolon (http:// kaj ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Ŝovi al la kontraŭa flanko, dum muso estas super tio">
-<!ENTITY status4evar.status.popup.findMirror.label "Starti dekstre, kiam la serĉobreto estas malfermita">
 <!ENTITY status4evar.progress.style.label "Uzi propran stilon por plenumindikilo">
 <!ENTITY status4evar.progress.urlbar.enable.label "Montri plenumadon en la adresbreto">
 <!ENTITY status4evar.progress.urlbar.line.label "Liniostilo:">

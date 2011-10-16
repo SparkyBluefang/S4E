@@ -53,8 +53,6 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox-Funktionen">
 <!ENTITY browser.urlbar.formatting.enabled.label "Domain-Hervorhebung aktivieren">
 <!ENTITY browser.urlbar.trimming.enabled.label "Protokoll ausblenden (http:// und ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Auf gegenüber liegende Seite verschieben beim Überfahren mit der Maus">
-<!ENTITY status4evar.status.popup.findMirror.label "Rechts einblenden, wenn die Schnellsuchleiste geöffnet ist">
 <!ENTITY status4evar.progress.style.label "Benutzerdefinierten Stil für Fortschrittsanzeige verwenden">
 <!ENTITY status4evar.progress.urlbar.enable.label "Fortschritt in der Adressleiste anzeigen">
 <!ENTITY status4evar.progress.urlbar.line.label "Anzeigeart:">

@@ -53,8 +53,6 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox funkciók">
 <!ENTITY browser.urlbar.formatting.enabled.label "Domén-kiemelés engedélyezése">
 <!ENTITY browser.urlbar.trimming.enabled.label "Protokoll-elrejtés engedélyezése (http:// és ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Mikor a kurzor fölé kerül, helyezze a túloldalra">
-<!ENTITY status4evar.status.popup.findMirror.label "Indítsa a jobb oldalról, mikor a keresősor nyitva van">
 <!ENTITY status4evar.progress.style.label "Egyéni stílus használata a betöltési csíkon">
 <!ENTITY status4evar.progress.urlbar.enable.label "Betöltési állapot mutatása a címsorban">
 <!ENTITY status4evar.progress.urlbar.line.label "Vonal stílusa:">

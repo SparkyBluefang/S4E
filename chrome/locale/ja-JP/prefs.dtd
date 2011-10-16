@@ -53,8 +53,6 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefoxの機能">
 <!ENTITY browser.urlbar.formatting.enabled.label "ドメインをハイライトする">
 <!ENTITY browser.urlbar.trimming.enabled.label "プロトコルを非表示にする (http:// と ftp://)">
-<!ENTITY status4evar.status.popup.mouseMirror.label "カーソルをおいたとき反対の端に移動させる">
-<!ENTITY status4evar.status.popup.findMirror.label "検索バーが開かれたとき右から開始する">
 <!ENTITY status4evar.progress.style.label "位置：">
 <!ENTITY status4evar.progress.urlbar.enable.label "ロケーションバーに進行状態を表示">
 <!ENTITY status4evar.progress.urlbar.line.label "ラインのスタイル:">
