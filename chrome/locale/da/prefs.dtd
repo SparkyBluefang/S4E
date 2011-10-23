@@ -53,9 +53,9 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox-funktioner">
 <!ENTITY browser.urlbar.formatting.enabled.label "Aktiver fremhævning af domæne">
 <!ENTITY browser.urlbar.trimming.enabled.label "Skjul protokol (http:// og ftp://)">
-<!ENTITY status4evar.status.popup.invertMirror.label "Default to the right side">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the opposite side when the Find Bar is open">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Swap sides when moused over">
+<!ENTITY status4evar.status.popup.invertMirror.label "Som standard i højre side">
+<!ENTITY status4evar.status.popup.findMirror.label "Start på den modsatte side når søgebjælken er åben">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Skift side når markøren holdes over">
 <!ENTITY status4evar.progress.style.label "Anvend tilpasset stil på forløbslinje">
 <!ENTITY status4evar.progress.urlbar.enable.label "Vis forløb i adresselinjen">
 <!ENTITY status4evar.progress.urlbar.line.label "Linjestil:">

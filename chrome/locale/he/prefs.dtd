@@ -53,9 +53,9 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "תכונות Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "אפשר הדגשת שמות מתחם">
 <!ENTITY browser.urlbar.trimming.enabled.label "אפשור הסתרת פרוטוקול (http:// ו- ftp://)">
-<!ENTITY status4evar.status.popup.invertMirror.label "Default to the right side">
-<!ENTITY status4evar.status.popup.findMirror.label "Start on the opposite side when the Find Bar is open">
-<!ENTITY status4evar.status.popup.mouseMirror.label "Swap sides when moused over">
+<!ENTITY status4evar.status.popup.invertMirror.label "ברירת מחדל אל הצד הימיני">
+<!ENTITY status4evar.status.popup.findMirror.label "התחלה בצד הנגדי כאשר סרגל החיפוש פתוח">
+<!ENTITY status4evar.status.popup.mouseMirror.label "החלפת צדדים כאשר העכבר חולף מעל">
 <!ENTITY status4evar.progress.style.label "שימוש בסגנון מותאם בסרגל ההתקדמות">
 <!ENTITY status4evar.progress.urlbar.enable.label "הצגת התקדמות בסרגל המיקום">
 <!ENTITY status4evar.progress.urlbar.line.label "סגנון קו:">

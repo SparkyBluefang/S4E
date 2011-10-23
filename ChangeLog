@@ -1,5 +1,7 @@
 Version next
 * Bump max version 10 10.0a1
+* Update locales for new strings.
+* Updated translations for: nb-NO, nl
 
 Version 2011.10.16.16b
 * Fix content pop-up in Firefox 10.
