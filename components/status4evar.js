@@ -63,6 +63,8 @@ Status_4_Evar.prototype =
 	addonbarCloseButton:		false,
 	addonbarWindowGripper:		true,
 
+	advancedUrlbarForceBinding:	false,
+
 	downloadColorActive:		null,
 	downloadColorPaused:		null,
 	downloadForce:			false,
@@ -144,6 +146,22 @@ Status_4_Evar.prototype =
 				win.caligon.status4evar.updateWindowGripper(true);
 			}
 		},
+
+		"advanced.urlbar.forceBinding":
+		{
+			update: function()
+			{
+				this.advancedUrlbarForceBinding = this.prefs.getBoolPref("advanced.urlbar.forceBinding");
+			},
+			updateWindow: function(win)
+			{
+				let urlbar = win.caligon.status4evar.getters.urlbar;
+				if(urlbar)
+				{
+					this.setBoolElementAttribute(urlbar, "s4eforce", this.advancedUrlbarForceBinding);
+				}
+			}
+		}
 
 		"download.color.active":
 		{

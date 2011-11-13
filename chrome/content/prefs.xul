@@ -392,5 +392,16 @@
 
 		<checkbox id="status4evar-addonbar-windowGripper-check" preference="status4evar-pref-addonbar-windowGripper" label="&status4evar.addonbar.windowGripper;" />
 	</prefpane>
+
+	<prefpane id="status4evar-pane-advanced" label="&status4evar.pane.advanced;">
+		<preferences>
+			<preference id="status4evar-pref-advanced-urlbar-forceBinding" name="status4evar.advanced.urlbar.forceBinding" type="bool" />
+		</preferences>
+
+		<checkbox id="status4evar-advanced-urlbar-forceBinding-check" preference="status4evar-pref-advanced-urlbar-forceBinding" label="&status4evar.advanced.urlbar.forceBinding;" />
+		<textbox id="status4evar-advanced-urlbar-forceBinding-desc" class="indent" tabindex="-1"
+		         multiline="true" readonly="true" onoverflow="this.height = this.inputField.scrollHeight;"
+		         value="&status4evar.advanced.urlbar.forceBinding.desc;" />
+	</prefpane>
 </prefwindow>
 
