@@ -1,7 +1,7 @@
 Version next
 
 Version 2011.11.13.22
-* Integrate Firefox 11+ Status Bar styling when customizing the toolbar.
+* [Firefox <= 10] When customizing the toolbar, use the Status Bar styling from Firefox 11 (see Bug 616016 (https://bugzilla.mozilla.org/show_bug.cgi?id=616016)).
 
 Version 2011.11.13.17
 * Bump max version to 11.0a1
