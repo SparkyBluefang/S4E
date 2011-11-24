@@ -35,8 +35,10 @@
 #
 # ***** END LICENSE BLOCK *****
 
+# Content registration
 content	status4evar			chrome/content/
 
+# Locale registration
 locale	status4evar	en-US		chrome/locale/en-US/
 locale	status4evar	bg-BG		chrome/locale/bg-BG/
 locale	status4evar	cs		chrome/locale/cs/
@@ -64,20 +66,28 @@ locale	status4evar	tr		chrome/locale/tr/
 locale	status4evar	zh-CN		chrome/locale/zh-CN/
 locale	status4evar	zh-TW		chrome/locale/zh-TW/
 
+# Skin registration
 skin	status4evar	classic/1.0	chrome/skin/all/
 skin	status4evar-os	classic/1.0	chrome/skin/gnomestripe/
 skin	status4evar-os	classic/1.0	chrome/skin/winstripe/		os=WINNT
 skin	status4evar-os	classic/1.0	chrome/skin/pinstripe/		os=Darwin
 
-overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/overlay.xul	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
-style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/overlay.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
+# Browser overlays
+overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/overlay.xul
+style	chrome://browser/content/browser.xul		chrome://status4evar/skin/version/overlay10.css		appversion<=10.0.*
+style	chrome://browser/content/browser.xul		chrome://status4evar-os/skin/version/overlay8.css	appversion<=8.0.*
 
-style	chrome://browser/content/browser.xul		chrome://status4evar/skin/version/firefox10.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<=10.0.*
+# Pref overlays
+style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs5.css		appversion<=5.0.*
+style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs6.css		appversion<=6.0.*
 
-style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs5.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<=5.0.*
-style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs6.css	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<=6.0.*
+# Toolbar overlays
+style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/overlay.css
+style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/skin/overlay.css
+style	chrome://global/content/customizeToolbar.xul	chrome://status4evar-os/skin/overlay.css
 
-interfaces	components/status4evar.xpt								application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
+# XPCOM registration
+interfaces	components/status4evar.xpt
 component	{13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf}	components/status4evar.js
 contract	@caligonstudios.com/status4evar;1	{13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf}
 category	profile-after-change Status-4-Evar	@caligonstudios.com/status4evar;1
