@@ -1,4 +1,6 @@
 Version next
+* Added translations for: tr (partial)
+* Updated translations for: el
 
 Version 2011.11.13.22
 * [Firefox <= 10] When customizing the toolbar, use the Status Bar styling from Firefox 11 (see Bug 616016 (https://bugzilla.mozilla.org/show_bug.cgi?id=616016)).
