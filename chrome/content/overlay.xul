@@ -39,6 +39,8 @@
    - ***** END LICENSE BLOCK ***** -->
 
 <?xml-stylesheet href="chrome://status4evar/content/overlay.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://status4evar/skin/overlay.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://status4evar-os/skin/overlay.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://status4evar/skin/dynamic.css" type="text/css" ?>
 
 <overlay id="status4evar-overlay"

@@ -201,7 +201,7 @@ splitter.status4evar-status-splitter:not(:hover)
 }
 
 /*
- * General Progress
+ * General progress
  */
 
 #urlbar-progress-alt > *,
@@ -361,26 +361,11 @@ statuspanel[nomouse="true"]
 }
 
 /*
- * Stop being a derp!
+ * Status bar
  */
-
-#status-bar,
-#status-bar > statusbarpanel
-{
-	-moz-appearance: none;
-	margin: 0px;
-	border: none;
-	background-color: transparent;
-	min-height: 0px;
-}
 
 #status-bar > .statusbar-resizerpanel
 {
 	display: none !important;
-}
-
-toolbar[customizing] #status-bar
-{
-	background-color: rgba(0,0,0,0.2);
 }
 

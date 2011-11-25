@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *   Version: MPL 1.1/GPL 2.0/LGPL 2.1
  *
  * The contents of this file are subject to the Mozilla Public License Version
  * 1.1 (the "License"); you may not use this file except in compliance with
@@ -37,34 +37,21 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/*
- * Location bar progress
- */
-
-#urlbar
+#status-bar
 {
-	-moz-binding: url("chrome://status4evar/content/urlbarBindings.xml#urlbar");
+	min-height: 0px;
+	-moz-appearance: none;
+	background-color: transparent;
+	border: none;
+
+	margin: 0px;
 }
 
-#urlbar[s4eforce="true"]
+#addon-bar[customizing] > #status-bar
 {
-	-moz-binding: url("chrome://status4evar/content/urlbarBindings.xml#urlbar") !important;
-}
-
-/*
- * Download progress button
- */
-#status4evar-download-button
-{
-	-moz-binding: url("chrome://status4evar/content/overlay.xml#downloadbutton");
-}
-
-/*
- * Status Popup
- */
-
-statuspanel
-{
-	-moz-binding: url("chrome://status4evar/content/tabbrowser.xml#statuspanel");
+	opacity: .5;
+	background-image: -moz-repeating-linear-gradient(-45deg,
+	                                                 rgba(255,255,255,.3), rgba(255,255,255,.3) 5px,
+	                                                 rgba(0,0,0,.3) 5px, rgba(0,0,0,.3) 10px);
 }
 

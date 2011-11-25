@@ -80,11 +80,6 @@ splitter.status4evar-status-splitter
  * Location bar
  */
 
-.urlbar-stack
-{
-	margin: -2px 0px;
-}
-
 .urlbar-input-layer
 {
 	padding: 2px 0px;
@@ -107,7 +102,7 @@ splitter.status4evar-status-splitter
 }
 
 /*
- * Stop being a derp!
+ * Status bar
  */
 
 #browser-bottombox[s4eboarder="true"] #addon-bar
