@@ -35,28 +35,64 @@
 #
 # ***** END LICENSE BLOCK *****
 
-VERSION := $(shell grep "version=" install.manifest | sed 's/version=//')
-XRSDK := $(shell ls -d /opt/xulrunner-sdk-* | sort -V | tail -1)
+GREP       = grep
+CUT        = cut
+LS         = ls
+SORT       = sort
+TAIL       = tail
+EXPR       = expr
+RM         = rm
+MKDIR      = mkdir
+ZIP        = zip
+ECHO       = echo
 
-all: clean xpt rdf zip
+XRSDK      = $(shell $(LS) -d /opt/xulrunner-sdk-* | $(SORT) -V | $(TAIL) -1)
+XRSDK_VERS = $(shell $(GREP) "^Milestone=" $(XRSDK)/bin/platform.ini | $(CUT) -d"=" -f2 | $(CUT) -d"." -f1)
+TYPELIB_PY = $(shell $(EXPR) $(XRSDK_VERS) \>= 11)
+
+VERSION    = $(shell $(GREP) "^version=" install.manifest | $(CUT) -d"=" -f2)
+XPT_FILES  = $(patsubst %.idl,%.xpt,$(wildcard components/*.idl))
+TLIB_CACHE = components/cache
+
+all: clean xpi
+
+debug:
+	@$(ECHO) "SDK Path: $(XRSDK)"
+	@$(ECHO) "SDK Version: $(XRSDK_VERS)"
+	@$(ECHO) "S4E Version: $(VERSION)"
+	@$(ECHO) "S4E XPT files: $(XPT_FILES)"
 
 clean:
-	rm -f install.rdf
-	rm -f *.xpi
-	rm -f components/*.xpt
+	$(RM) -f *.xpi
+	$(RM) -f install.rdf
+	$(RM) -f components/*.xpt
+	$(RM) -rf components/cache
 
-xpt: components/status4evar.idl
-	$(XRSDK)/bin/xpidl -m typelib -w -v -I $(XRSDK)/idl/ -e components/status4evar.xpt components/status4evar.idl
+$(TLIB_CACHE):
+	$(MKDIR) $@
 
-rdf: install.manifest
+%.xpt: %.idl $(TLIB_CACHE)
+ifeq ($(TYPELIB_PY),1)
+	$(XRSDK)/sdk/bin/typelib.py --cachedir=$(TLIB_CACHE) \
+		-I $(XRSDK)/idl -o $*.xpt $*.idl
+else
+	$(XRSDK)/bin/xpidl -m typelib -w -v \
+		-I $(XRSDK)/idl -e $*.xpt $*.idl
+endif
+
+xpt: $(XPT_FILES)
+
+install.rdf: install.manifest
 	./buildInstallRdf
 
-zip:
-	zip -r status4evar-$(VERSION)-fx.xpi \
+rdf: install.rdf
+
+xpi: xpt rdf
+	$(ZIP) -r status4evar-$(VERSION)-fx.xpi \
 		chrome \
 		defaults \
 		chrome.manifest \
 		install.rdf \
-		components/status4evar.js \
-		components/status4evar.xpt
+		components/*.js \
+		$(XPT_FILES)
 
