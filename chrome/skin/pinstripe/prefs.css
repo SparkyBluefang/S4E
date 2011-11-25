@@ -37,12 +37,6 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-radio[pane="status4evar-pane-addonbar"] > image
-{
-	width: 32px;
-	height: 32px;
-}
-
 #status4evar-addonbar-windowGripper-check
 {
 	display: none;

@@ -1,5 +1,6 @@
 Version next
 * Fix location bar margins on Windows in Firefox 9.
+* Add an icon to the "Add-on bar" preference tab.
 * Added translations for: tr (partial)
 * Updated translations for: el
 

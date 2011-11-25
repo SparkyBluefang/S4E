@@ -59,6 +59,6 @@ radio[pane="status4evar-pane-download"]
 
 radio[pane="status4evar-pane-addonbar"]
 {
-	list-style-image: url("chrome://status4evar/skin/null.png");
+	list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.png");
 }
 
