@@ -39,6 +39,7 @@ pref("status4evar.addonbar.borderStyle", false);
 pref("status4evar.addonbar.closeButton", false);
 pref("status4evar.addonbar.windowGripper", true);
 
+pref("status4evar.advanced.showWarning", true);
 pref("status4evar.advanced.urlbar.forceBinding", false);
 
 pref("status4evar.download.color.active", "#33FF33");

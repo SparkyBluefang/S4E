@@ -77,3 +77,8 @@ radio[pane="status4evar-pane-advanced"]
 	padding: 0px;
 }
 
+#warningInnerBox
+{
+	max-width: 25em;
+}
+

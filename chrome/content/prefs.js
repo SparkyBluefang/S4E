@@ -416,6 +416,59 @@ var status4evarPrefs =
 	{
 		let enabled = this.downloadProgressCheck.checked;
 		this.downloadProgressPref.value = ((enabled) ? 1 : 0);
+	},
+
+//
+// Advanced prefs warning page
+//
+	get advancedDeck()
+	{
+		delete this.advancedDeck;
+		return this.advancedDeck = document.getElementById("status4evar-pref-advanced-deck");
+	},
+
+	get advancedShowWarningPref()
+	{
+		delete this.advancedShowWarningPref;
+		return this.advancedShowWarningPref = document.getElementById("status4evar-pref-advanced-showWarning");
+	},
+
+	get advancedShowWarningCheck()
+	{
+		delete this.advancedShowWarningCheck;
+		return this.advancedShowWarningCheck = document.getElementById("showWarningNextTime");
+	},
+
+	get advancedContinueButton()
+	{
+		delete this.advancedContinueButton;
+		return this.advancedContinueButton = document.getElementById("warningButton");
+	},
+
+	advancedShowPrefs: function()
+	{
+		this.advancedDeck.selectedIndex = 1;
+	},
+
+//
+// Pref Window load
+//
+	onPrefWindowLoad: function()
+	{
+		let showWarning = this.advancedShowWarningPref.value;
+		this.advancedDeck.selectedIndex = ((showWarning) ? 0 : 1);
+		if(showWarning)
+		{
+			this.advancedContinueButton.focus();
+		}
+	},
+
+	onPrefWindowUnLoad: function()
+	{
+		if(this.advancedDeck.selectedIndex == 1 && this.advancedShowWarningPref.value)
+		{
+			this.advancedShowWarningPref.value = this.advancedShowWarningCheck.checked;
+		}
 	}
 }
 

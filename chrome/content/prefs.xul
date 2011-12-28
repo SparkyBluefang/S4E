@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE prefwindow SYSTEM "chrome://status4evar/locale/prefs.dtd">
+<!DOCTYPE prefwindow [
+	<!ENTITY % configDTD SYSTEM "chrome://global/locale/config.dtd">
+	%configDTD;
+	<!ENTITY % prefsDTD SYSTEM "chrome://status4evar/locale/prefs.dtd">
+	%prefsDTD;
+]>
 
 <!-- ***** BEGIN LICENSE BLOCK *****
    - Version: MPL 1.1/GPL 2.0/LGPL 2.1
@@ -38,7 +43,7 @@
    - 
    - ***** END LICENSE BLOCK ***** -->
 
-<?xml-stylesheet href="chrome://global/skin/" type="text/css" ?>
+<?xml-stylesheet href="chrome://global/skin/config.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://status4evar/content/overlay.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://status4evar/skin/dynamic.css" type="text/css" ?>
@@ -46,9 +51,9 @@
 <?xml-stylesheet href="chrome://status4evar/skin/prefs.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://status4evar-os/skin/prefs.css" type="text/css" ?>
 
-<prefwindow id="status4evar-prefs"
-	title="&status4evar.window.title;"
-	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefwindow id="status4evar-prefs" title="&status4evar.window.title;"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+            onload="status4evarPrefs.onPrefWindowLoad();" onunload="status4evarPrefs.onPrefWindowUnLoad();">
 
 	<stringbundleset id="stringbundleset">  
 		<stringbundle id="bundle_status4evar" src="chrome://status4evar/locale/prefs.properties" />   
@@ -113,9 +118,9 @@
 
 						<hbox align="center">
 							<checkbox id="status4evar-status-timeout-check" label="&status4evar.status.timeout.label;"
-								  command="status4evar-command-status-timeout" />
+							          command="status4evar-command-status-timeout" />
 							<textbox id="status4evar-status-timeout-value" preference="status4evar-pref-status-timeout" type="number" size="4" 
-								 onsyncfrompreference="return status4evarPrefs.statusTimeoutSync();" />
+							         onsyncfrompreference="return status4evarPrefs.statusTimeoutSync();" />
 							<label id="status4evar-status-timeout-unit">&status4evar.unit.seconds;</label>
 						</hbox>
 
@@ -203,9 +208,9 @@
 				<tabpanel id="status4evar-tabpanel-status-toolbar" orient="vertical">
 					<hbox align="center">
 						<checkbox id="status4evar-status-toolbar-maxLength-check" label="&status4evar.status.toolbar.maxLength.label;"
-							  command="status4evar-command-status-toolbar-maxLength" />
+						          command="status4evar-command-status-toolbar-maxLength" />
 						<textbox id="status4evar-status-toolbar-maxLength-value" preference="status4evar-pref-status-toolbar-maxLength" type="number" size="4"
-							 onsyncfrompreference="return status4evarPrefs.textLengthSync();" />
+						         onsyncfrompreference="return status4evarPrefs.textLengthSync();" />
 						<label id="status4evar-status-toolbar-maxLength-unit">&status4evar.unit.px;</label>
 					</hbox>
 				</tabpanel>
@@ -245,15 +250,12 @@
 			<tabs id="status4evar-tabs-progress">
 				<tab id="status4evar-tab-progress-urlbar"  label="&status4evar.tab.urlbar;" />
 				<tab id="status4evar-tab-progress-toolbar" label="&status4evar.tab.toolbar;" />
-<!--
-				<tab id="status4evar-tab-status-tabs"  label="&status4evar.tab.tabs;" />
--->
 			</tabs>
 
 			<tabpanels id="status4evar-tabpanels-progress" flex="1">
 				<tabpanel id="status4evar-tabpanel-progress-urlbar" orient="vertical">
 					<checkbox id="status4evar-progress-urlbar-check" label="&status4evar.progress.urlbar.enable.label;"
-						  command="status4evar-command-progress-urlbar" />
+					          command="status4evar-command-progress-urlbar" />
 
 					<hbox align="center" class="indent">
 						<label id="status4evar-progress-urlbar-label" control="status4evar-progress-urlbar-menu">&status4evar.progress.urlbar.line.label;</label>
@@ -269,7 +271,7 @@
 					</hbox>
 
 					<checkbox id="status4evar-progress-urlbar-style-check" preference="status4evar-pref-progress-urlbar-style" label="&status4evar.progress.style.label;"
-						  onsyncfrompreference="return status4evarPrefs.progressUrlbarStyleSync();" />
+					          onsyncfrompreference="return status4evarPrefs.progressUrlbarStyleSync();" />
 
 					<vbox class="css-bg-editor" preference="status4evar-pref-progress-urlbar-css" preference-editable="true" flex="1">
 						<!-- Mock Nav Bar -->
@@ -281,7 +283,7 @@
 											<hbox id="identity-box-inner" align="center">
 												<stack id="page-proxy-stack">
 													<image id="page-proxy-favicon" validate="never" pageproxystate="valid"
-														src="chrome://status4evar/skin/s4e16.png" />
+													       src="chrome://status4evar/skin/s4e16.png" />
 												</stack>
 											</hbox>
 										</box>
@@ -299,17 +301,12 @@
 					<checkbox id="status4evar-progress-toolbar-force-check" preference="status4evar-pref-progress-toolbar-force" label="&status4evar.progress.toolbar.force.label;" />
 
 					<checkbox id="status4evar-progress-toolbar-style-check" preference="status4evar-pref-progress-toolbar-style" label="&status4evar.progress.style.label;"
-						  onsyncfrompreference="return status4evarPrefs.progressToolbarStyleSync();" />
+					          onsyncfrompreference="return status4evarPrefs.progressToolbarStyleSync();" />
 
 					<vbox class="css-bg-editor" preference="status4evar-pref-progress-toolbar-css" preference-editable="true" flex="1">
 						<progressmeter id="status4evar-progress-bar" value="75" flex="1" />
 					</vbox>
 				</tabpanel>
-<!--
-				<tabpanel id="status4evar-tabpanel-progress-tabs" orient="vertical">
-					
-				</tabpanel>
--->
 			</tabpanels>
 		</tabbox>
 	</prefpane>
@@ -360,7 +357,7 @@
 		<vbox class="indent">
 			<hbox align="center">
 				<radiogroup id="status4evar-download-progress-radiogroup" preference="status4evar-pref-download-progress"
-					    onsyncfrompreference="return status4evarPrefs.downloadProgressSync();">
+				            onsyncfrompreference="return status4evarPrefs.downloadProgressSync();">
 					<radio value="1" label="&status4evar.download.progress.average.label;" />
 					<radio value="2" label="&status4evar.download.progress.max.label;" />
 					<radio value="3" label="&status4evar.download.progress.min.label;" />
@@ -395,13 +392,37 @@
 
 	<prefpane id="status4evar-pane-advanced" label="&status4evar.pane.advanced;">
 		<preferences>
+			<preference id="status4evar-pref-advanced-showWarning" name="status4evar.advanced.showWarning" type="bool" />
 			<preference id="status4evar-pref-advanced-urlbar-forceBinding" name="status4evar.advanced.urlbar.forceBinding" type="bool" />
 		</preferences>
 
-		<checkbox id="status4evar-advanced-urlbar-forceBinding-check" preference="status4evar-pref-advanced-urlbar-forceBinding" label="&status4evar.advanced.urlbar.forceBinding;" />
-		<textbox id="status4evar-advanced-urlbar-forceBinding-desc" class="indent" tabindex="-1"
-		         multiline="true" readonly="true" onoverflow="this.height = this.inputField.scrollHeight;"
-		         value="&status4evar.advanced.urlbar.forceBinding.desc;" />
+		<commandset id="status4evar-commandset-advanced">
+			<command id="status4evar-command-advanced-continue" oncommand="status4evarPrefs.advancedShowPrefs();" />
+		</commandset>
+
+		<deck id="status4evar-pref-advanced-deck" flex="1">
+			<vbox flex="1" align="center">
+				<spacer flex="1" />
+				<hbox id="warningBox" align="top">
+					<image id="exclam" />
+					<vbox id="warningInnerBox" flex="1">
+						<label id="warningTitle">&aboutWarningTitle.label;</label>
+						<label id="warningText">&status4evar.advanced.warning;</label>
+						<checkbox id="showWarningNextTime" label="&aboutWarningCheckbox.label;" checked="true" />
+						<hbox pack="center">
+							<button id="warningButton" command="status4evar-command-advanced-continue" label="&aboutWarningButton.label;" />
+						</hbox>
+					</vbox>
+				</hbox>
+				<spacer flex="2" />
+			</vbox>
+			<vbox flex="1">
+				<checkbox id="status4evar-advanced-urlbar-forceBinding-check" preference="status4evar-pref-advanced-urlbar-forceBinding" label="&status4evar.advanced.urlbar.forceBinding;" />
+				<textbox id="status4evar-advanced-urlbar-forceBinding-desc" class="indent" tabindex="-1"
+				         multiline="true" readonly="true" onoverflow="this.height = this.inputField.scrollHeight;"
+				         value="&status4evar.advanced.urlbar.forceBinding.desc;" />
+			</vbox>
+		</deck>
 	</prefpane>
 </prefwindow>
 

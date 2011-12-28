@@ -161,7 +161,7 @@ Status_4_Evar.prototype =
 					this.setBoolElementAttribute(urlbar, "s4eforce", this.advancedUrlbarForceBinding);
 				}
 			}
-		}
+		},
 
 		"download.color.active":
 		{
