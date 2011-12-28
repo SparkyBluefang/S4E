@@ -80,11 +80,6 @@ splitter.status4evar-status-splitter
  * Location bar
  */
 
-.urlbar-input-layer
-{
-	padding: 2px 0px;
-}
-
 #urlbar-container:not([combined]) #urlbar-progress-alt
 {
 	margin-right: -2px;
