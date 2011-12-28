@@ -12,7 +12,7 @@
 <!ENTITY status4evar.option.toolbar "Ilaro">
 <!ENTITY status4evar.option.urlbar "Adresbreto">
 <!ENTITY status4evar.option.popup "Ŝprucfenestro">
-<!ENTITY status4evar.option.tooltip "Ŝpruhelpilo">
+<!ENTITY status4evar.option.tooltip "Ŝpruchelpilo">
 <!ENTITY status4evar.option.bottom "Malsupre">
 <!ENTITY status4evar.option.top "Supre">
 <!ENTITY status4evar.option.fill "Plenigi">
@@ -48,15 +48,15 @@
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maksimuma longeco de statoteksto:">
 <!ENTITY status4evar.status.urlbar.align.label "Statoĝisrandigo:">
 <!ENTITY status4evar.status.urlbar.color.label "Tekstokoloro:">
-<!ENTITY status4evar.status.currentUrl "Aktuala URL">
+<!ENTITY status4evar.status.currentUrl "Aktuala loko">
 <!ENTITY status4evar.status.statusText "Statoteksto">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Funkcioj de Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "Ebligi retregionan reliefigon">
-<!ENTITY browser.urlbar.trimming.enabled.label "Kasxi protokolon (http:// kaj ftp://)">
+<!ENTITY browser.urlbar.trimming.enabled.label "Kaŝi protokolon (http:// kaj ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Defaŭlta dekstre">
 <!ENTITY status4evar.status.popup.findMirror.label "Komenci je la kontraŭe troviĝanta flanko, kiam la serĉbreto estas malfermita">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Ŝanĝi flankojn, se la muso estas super ĝi">
-<!ENTITY status4evar.progress.style.label "Uzi propran stilon por plenumindikilo">
+<!ENTITY status4evar.progress.style.label "Uzi propran stilon">
 <!ENTITY status4evar.progress.urlbar.enable.label "Montri plenumadon en la adresbreto">
 <!ENTITY status4evar.progress.urlbar.line.label "Liniostilo:">
 <!ENTITY status4evar.progress.toolbar.force.label "Ĉiam montri la ilaran elementon">
@@ -75,7 +75,7 @@
 <!ENTITY status4evar.download.progress.max.label "Montri plej kompletan elŝuton">
 <!ENTITY status4evar.download.progress.min.label "Montri malplej kompletan elŝuton">
 <!ENTITY status4evar.download.color.active.label "Progreskoloro por aktivaj elŝutoj">
-<!ENTITY status4evar.download.color.paused.label "Progreskoloro por paŭzitaj elŝutoj">
-<!ENTITY status4evar.addonbar.borderStyle "Uzi alternativajn ilaroborderojn">
+<!ENTITY status4evar.download.color.paused.label "Progreskoloro por haltigitaj elŝutoj:">
+<!ENTITY status4evar.addonbar.borderStyle "Uzi alternativajn ilbretajn borderojn">
 <!ENTITY status4evar.addonbar.windowGripper "Montri prenilon por fenestroskalado">
 <!ENTITY status4evar.addonbar.closeButton "Montri butonon 'Fermi'">
