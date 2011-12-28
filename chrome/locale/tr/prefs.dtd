@@ -27,37 +27,22 @@
 <!ENTITY status4evar.option.browse "Gözat">
 <!ENTITY status4evar.option.clear "Temizle">
 <!ENTITY status4evar.option.center "Merkez">
-<!ENTITY status4evar.option.offset "">
 <!ENTITY status4evar.option.repeat "Tekrar">
 <!ENTITY status4evar.option.no-repeat "Tekrar etme">
 <!ENTITY status4evar.option.space "Boşluk">
-<!ENTITY status4evar.option.round "">
 <!ENTITY status4evar.unit.seconds "saniyeler">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Durum Metni">
 <!ENTITY status4evar.status.label "Durumu göster:">
-<!ENTITY status4evar.status.timeout.label "">
 <!ENTITY status4evar.status.default.label "Varsayılan durumu göster">
 <!ENTITY status4evar.status.network.label "Ağ durumunu göster">
-<!ENTITY status4evar.status.network.xhr.label "">
-<!ENTITY toolkit.dom.status.change.label "">
 <!ENTITY status4evar.status.general.linkOver.caption "Linkler">
 <!ENTITY status4evar.status.linkOver.label "Bağlantıları göster:">
-<!ENTITY status4evar.status.linkOver.delay.show.label "">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "">
-<!ENTITY status4evar.status.toolbar.maxLength.label "">
-<!ENTITY status4evar.status.urlbar.align.label "">
 <!ENTITY status4evar.status.urlbar.color.label "Durum rengi:">
 <!ENTITY status4evar.status.currentUrl "Geçerli Konum">
 <!ENTITY status4evar.status.statusText "Durum Metni">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox özellikleri">
-<!ENTITY browser.urlbar.formatting.enabled.label "">
-<!ENTITY browser.urlbar.trimming.enabled.label "">
-<!ENTITY status4evar.status.popup.invertMirror.label "">
-<!ENTITY status4evar.status.popup.findMirror.label "">
-<!ENTITY status4evar.status.popup.mouseMirror.label "">
 <!ENTITY status4evar.progress.style.label "Özel bir stil kullan.">
-<!ENTITY status4evar.progress.urlbar.enable.label "">
 <!ENTITY status4evar.progress.urlbar.line.label "Satır stili:">
 <!ENTITY status4evar.progress.toolbar.force.label "Araç çubuğu öğesini daima göster">
 <!ENTITY status4evar.editor.label "Editör:">
@@ -65,17 +50,9 @@
 <!ENTITY status4evar.editor.css.image.label "Resim:">
 <!ENTITY status4evar.editor.css.image.repeat "Tekrar">
 <!ENTITY status4evar.editor.css.image.position "Pozisyon">
-<!ENTITY status4evar.editor.css.image.offset "">
-<!ENTITY status4evar.download.force.label "">
-<!ENTITY status4evar.download.label.force.label "">
-<!ENTITY status4evar.download.label.label "">
-<!ENTITY status4evar.download.tooltip.label "">
-<!ENTITY status4evar.download.progress.label "">
-<!ENTITY status4evar.download.progress.average.label "">
 <!ENTITY status4evar.download.progress.max.label "İndirilmesi en çok tamamlananı göster">
 <!ENTITY status4evar.download.progress.min.label "Son indirileni göster">
 <!ENTITY status4evar.download.color.active.label "Aktif indirme için ilerleme rengi:">
 <!ENTITY status4evar.download.color.paused.label "Duraklatılmış yüklemeler için ilerleme rengi:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatif araç çubuğu çerçevesi kullan">
-<!ENTITY status4evar.addonbar.windowGripper "">
 <!ENTITY status4evar.addonbar.closeButton "Kapatma düğmesini göster">
