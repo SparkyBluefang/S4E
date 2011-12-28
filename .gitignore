@@ -2,3 +2,6 @@
 install.rdf
 components/*.xpt
 res/
+components/cache/
+xpidl_debug
+
