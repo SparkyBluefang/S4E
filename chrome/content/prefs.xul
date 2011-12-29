@@ -45,8 +45,12 @@
 
 <?xml-stylesheet href="chrome://global/skin/config.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
+
 <?xml-stylesheet href="chrome://status4evar/content/overlay.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://status4evar/skin/overlay.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://status4evar-os/skin/overlay.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://status4evar/skin/dynamic.css" type="text/css" ?>
+
 <?xml-stylesheet href="chrome://status4evar/content/prefs.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://status4evar/skin/prefs.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://status4evar-os/skin/prefs.css" type="text/css" ?>

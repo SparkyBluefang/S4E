@@ -80,6 +80,7 @@ style	chrome://browser/content/browser.xul		chrome://status4evar-os/skin/version
 # Pref overlays
 style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs5.css		appversion<=5.0.*
 style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs6.css		appversion<=6.0.*
+style	chrome://status4evar/content/prefs.xul		chrome://status4evar-os/skin/version/overlay8.css	appversion<=8.0.*
 
 # Toolbar overlays
 style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/overlay.css
