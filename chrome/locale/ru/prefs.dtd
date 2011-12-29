@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Индикатор">
 <!ENTITY status4evar.pane.download "Загрузки">
 <!ENTITY status4evar.pane.addonbar "Панель дополнений">
+<!ENTITY status4evar.pane.advanced "Advanced">
 <!ENTITY status4evar.tab.general "Общие">
 <!ENTITY status4evar.tab.toolbar "Панель инструментов">
 <!ENTITY status4evar.tab.urlbar "Адресная строка">
@@ -53,6 +54,9 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Особенности Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "Включить подсветку домена">
 <!ENTITY browser.urlbar.trimming.enabled.label "Включить скрытие протокола (http:// и ftp://)">
+<!ENTITY status4evar.status.popup.invertMirror.label "Default to the right side">
+<!ENTITY status4evar.status.popup.findMirror.label "Start on the opposite side when the Find Bar is open">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Swap sides when moused over">
 <!ENTITY status4evar.progress.style.label "Собственный стиль индикатора">
 <!ENTITY status4evar.progress.urlbar.enable.label "Показывать индикатор в адресной строке">
 <!ENTITY status4evar.progress.urlbar.line.label "Стиль:">
@@ -76,3 +80,6 @@
 <!ENTITY status4evar.addonbar.borderStyle "Использовать чередующиеся границы панелей инструментов">
 <!ENTITY status4evar.addonbar.windowGripper "Показать захват изменения размера окна">
 <!ENTITY status4evar.addonbar.closeButton "Показать кнопку «Закрыть»">
+<!ENTITY status4evar.advanced.warning "These advanced settings may cause issues with Status-4-Evar or other extensions. Modify at your own risk.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "Attempt to force the the Location Bar XBL binding.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Only select this if you have problems with the Location Bar progress or status text being displaying correctly. This will potentially break other extensions that try to set an XBL binding on the Location Bar.">
