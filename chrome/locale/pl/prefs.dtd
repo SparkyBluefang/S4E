@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Postęp">
 <!ENTITY status4evar.pane.download "Pobieranie">
 <!ENTITY status4evar.pane.addonbar "Pasek dodatków">
+<!ENTITY status4evar.pane.advanced "Zaawansowane">
 <!ENTITY status4evar.tab.general "Ogólne">
 <!ENTITY status4evar.tab.toolbar "Pasek dodatków">
 <!ENTITY status4evar.tab.urlbar "Pasek adresu">
@@ -79,3 +80,6 @@
 <!ENTITY status4evar.addonbar.borderStyle "Stosuj alternatywne obramowanie dla paska narzędzi">
 <!ENTITY status4evar.addonbar.windowGripper "Wyświetlaj uchwyt zmiany rozmiaru okna">
 <!ENTITY status4evar.addonbar.closeButton "Wyświetlaj przycisk zamykania">
+<!ENTITY status4evar.advanced.warning "Te ustawienia mogą powodować problemy z rozszerzeniem Status-4-Evar lub innymi rozszerzeniami. Zmieniasz je na własną odpowiedzialność.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "Próbuj ustawić wiązania XBL w pasku adresu">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Włącz tę funkcję tylko, gdy masz problemy z paskiem postępu w pasku adresu lub z prawidłowym wyświetlaniem tekstu statusu. Funkcja ta może powodować konflikty z innymi rozszerzeniami, które próbują w pasku adresu ustawić wiązania XBL.">

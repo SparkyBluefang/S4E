@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Progres">
 <!ENTITY status4evar.pane.download "Descărcare">
 <!ENTITY status4evar.pane.addonbar "Bară de suplimente">
+<!ENTITY status4evar.pane.advanced "Complex">
 <!ENTITY status4evar.tab.general "General">
 <!ENTITY status4evar.tab.toolbar "Bară de suplimente">
 <!ENTITY status4evar.tab.urlbar "Bară de adrese">
@@ -11,7 +12,7 @@
 <!ENTITY status4evar.option.none "Nu afișa">
 <!ENTITY status4evar.option.toolbar "Bara de suplimente">
 <!ENTITY status4evar.option.urlbar "Bara de adrese">
-<!ENTITY status4evar.option.popup "Bară instantanee">
+<!ENTITY status4evar.option.popup "Bara instantanee">
 <!ENTITY status4evar.option.tooltip "Balon informativ">
 <!ENTITY status4evar.option.bottom "În partea de jos a barei de adrese">
 <!ENTITY status4evar.option.top "În partea de sus a barei de adrese">
@@ -79,3 +80,6 @@
 <!ENTITY status4evar.addonbar.borderStyle "Utilizează chenarul alternativ al barei de suplimente">
 <!ENTITY status4evar.addonbar.windowGripper "Afișează glisorul de redimensionare a ferestrei navigatorului">
 <!ENTITY status4evar.addonbar.closeButton "Afișează butonul de ascundere al barei de suplimente">
+<!ENTITY status4evar.advanced.warning "Aceste opțiuni complexe pot provoca unele probleme cu Status-4-Evar sau alte suplimentele. Modificați-le pe propriul risc.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "Încearcă forțarea legăturii XBL cu bara de adrese">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Selectați această opțiune doar dacă aveţi probleme de afișare a progresului sau textului pe bara de adrese. Acest lucru poate bloca alte suplimente care încearcă să stabilească legături XBL cu bara de adrese.">

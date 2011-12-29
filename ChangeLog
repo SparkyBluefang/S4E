@@ -3,7 +3,7 @@ Version next
 * Add an icon to the "Add-on bar" preference tab.
 * Add advanced pref to try an override the location bar binding. Defaults to off.
 * Added translations for: tr (partial)
-* Updated translations for: el, eo, ja-JP, sr, sv-SE
+* Updated translations for: el, eo, he, ja-JP, ro, sr, sv-SE
 * Rename dsb-DE to dsb
 * Rename hsb-DE to hsb
 

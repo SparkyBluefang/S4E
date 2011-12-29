@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "התקדמות">
 <!ENTITY status4evar.pane.download "הורדה">
 <!ENTITY status4evar.pane.addonbar "שורת ההרחבות">
+<!ENTITY status4evar.pane.advanced "מתקדם">
 <!ENTITY status4evar.tab.general "כללי">
 <!ENTITY status4evar.tab.toolbar "סרגל כלים">
 <!ENTITY status4evar.tab.urlbar "סרגל כתובות">
@@ -53,7 +54,7 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "תכונות Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "אפשר הדגשת שמות מתחם">
 <!ENTITY browser.urlbar.trimming.enabled.label "אפשור הסתרת פרוטוקול (http:// ו- ftp://)">
-<!ENTITY status4evar.status.popup.invertMirror.label "ברירת מחדל אל הצד הימיני">
+<!ENTITY status4evar.status.popup.invertMirror.label "ברירת מחדל אל הצד הימני">
 <!ENTITY status4evar.status.popup.findMirror.label "התחלה בצד הנגדי כאשר סרגל החיפוש פתוח">
 <!ENTITY status4evar.status.popup.mouseMirror.label "החלפת צדדים כאשר העכבר חולף מעל">
 <!ENTITY status4evar.progress.style.label "שימוש בסגנון מותאם בסרגל ההתקדמות">
@@ -79,3 +80,6 @@
 <!ENTITY status4evar.addonbar.borderStyle "שימוש בגבולות סרגל כלים חלופיים">
 <!ENTITY status4evar.addonbar.windowGripper "הצגת תפסן שינוי גודל החלון">
 <!ENTITY status4evar.addonbar.closeButton "הצגת כפתור הסגירה">
+<!ENTITY status4evar.advanced.warning "הגדרות מתקדמות אלו עלולות לגרום לבעיות עם Status-4-Evar או הרחבות אחרות. שינויים על אחריותכם בלבד.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "ניסיון לאלץ XBL binding על סרגל המיקום.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "בחרו בזה רק אם ישנן בעיות עם התקדמות סרגל המיקום או עם טקסט המצב שמוצג נכונה. ישנה אפשרות שזה יגרום לשבירת הרחבות אחרות אשר מנסות לקבוע XBL binding על סרגל המיקום.">

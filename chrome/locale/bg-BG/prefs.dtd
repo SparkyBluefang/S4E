@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Напредък">
 <!ENTITY status4evar.pane.download "Изтегляния">
 <!ENTITY status4evar.pane.addonbar "Лента на добавките">
+<!ENTITY status4evar.pane.advanced "Разширени">
 <!ENTITY status4evar.tab.general "Основни">
 <!ENTITY status4evar.tab.toolbar "Лента с инструменти">
 <!ENTITY status4evar.tab.urlbar "Адресна лента">
@@ -79,3 +80,4 @@
 <!ENTITY status4evar.addonbar.borderStyle "Използване на алтернативни рамки за лентата с инструменти">
 <!ENTITY status4evar.addonbar.windowGripper "Показване на манипулатора за преоразмеряване на прозореца">
 <!ENTITY status4evar.addonbar.closeButton "Показване на бутона &quot;Затвори&quot;">
+<!ENTITY status4evar.advanced.warning "Разширените настройки може да създадат проблеми при работата на Status-4-Evar или на други добавки. Променяйте ги на Ваша отговорност.">
