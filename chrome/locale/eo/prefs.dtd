@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Plenumado">
 <!ENTITY status4evar.pane.download "Elŝuto">
 <!ENTITY status4evar.pane.addonbar "Breto de aldonaĵoj">
+<!ENTITY status4evar.pane.advanced "Detala">
 <!ENTITY status4evar.tab.general "Ĝenerala">
 <!ENTITY status4evar.tab.toolbar "Ilaro">
 <!ENTITY status4evar.tab.urlbar "Adresbreto">
@@ -79,3 +80,6 @@
 <!ENTITY status4evar.addonbar.borderStyle "Uzi alternativajn ilbretajn borderojn">
 <!ENTITY status4evar.addonbar.windowGripper "Montri prenilon por fenestroskalado">
 <!ENTITY status4evar.addonbar.closeButton "Montri butonon 'Fermi'">
+<!ENTITY status4evar.advanced.warning "Ĉi tiuj detalaj agordoj povas kaŭzi problemojn kun Status-4-Evar aŭ aliaj etendaĵoj. Modifu ilin je via propra risko.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "Provo eldevigi la XBL-bindadon de la adresbreto.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Elektu tion nur, se vi havas problemojn kun  la plenumado de la adresbreto aŭ se la statoteksto ne estas korekte vidigata. Tio povas ĝeni aliajn etendaĵojn, kiuj provas agordi XBL-bindadon en la adresbreto.">

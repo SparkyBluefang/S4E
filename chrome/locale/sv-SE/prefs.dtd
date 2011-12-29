@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Förlopp">
 <!ENTITY status4evar.pane.download "Filhämtning">
 <!ENTITY status4evar.pane.addonbar "Tilläggsfältet">
+<!ENTITY status4evar.pane.advanced "Avancerat">
 <!ENTITY status4evar.tab.general "Allmänt">
 <!ENTITY status4evar.tab.toolbar "Verktygsfält">
 <!ENTITY status4evar.tab.urlbar "Adressfältet">
@@ -48,11 +49,11 @@
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maxlängd för statustext:">
 <!ENTITY status4evar.status.urlbar.align.label "Justering av statustext:">
 <!ENTITY status4evar.status.urlbar.color.label "Textfärg:">
-<!ENTITY status4evar.status.currentUrl "Aktuell URL">
+<!ENTITY status4evar.status.currentUrl "Aktuell plats">
 <!ENTITY status4evar.status.statusText "Statustext">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefoxfunktioner">
-<!ENTITY browser.urlbar.formatting.enabled.label "Aktivera domänmarkering">
-<!ENTITY browser.urlbar.trimming.enabled.label "Aktivera protokolldöljning (http:// och ftp://)">
+<!ENTITY browser.urlbar.formatting.enabled.label "Markera huvuddomänen">
+<!ENTITY browser.urlbar.trimming.enabled.label "Dölj protokollet (http:// och ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "På höger sida som standard">
 <!ENTITY status4evar.status.popup.findMirror.label "Starta på motsatt sida när söklisten är öppen">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Växla sida vid mushovring">
@@ -68,8 +69,8 @@
 <!ENTITY status4evar.editor.css.image.offset "Förskjutning">
 <!ENTITY status4evar.download.force.label "Visa alltid filhämtningsstatusknappen">
 <!ENTITY status4evar.download.label.force.label "Visa alltid etiketten">
-<!ENTITY status4evar.download.label.label "Filhämtningsstatusknappens etikett: ">
-<!ENTITY status4evar.download.tooltip.label "Filhämtningsstatusknappens verktygstips: ">
+<!ENTITY status4evar.download.label.label "Filhämtningsstatusknappens etikett:">
+<!ENTITY status4evar.download.tooltip.label "Filhämtningsstatusknappens verktygstips:">
 <!ENTITY status4evar.download.progress.label "Visa hämtningsförloppet på knappen">
 <!ENTITY status4evar.download.progress.average.label "Visa genomsnittlig färdigställningsgrad för hämtning">
 <!ENTITY status4evar.download.progress.max.label "Visa mest färdigställda hämtning">
@@ -79,3 +80,6 @@
 <!ENTITY status4evar.addonbar.borderStyle "Använd alternativa verktygsfältskantlinjer">
 <!ENTITY status4evar.addonbar.windowGripper "Visa handtaget för fönsterstorleksändring">
 <!ENTITY status4evar.addonbar.closeButton "Visa stängknappen">
+<!ENTITY status4evar.advanced.warning "Dessa avancerade inställningar kan skapa problem med Status-4-Evar eller andra tillägg. Används på egen risk.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "Försök att tvinga XBL-bindningen för adressfältet.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Aktivera detta endast om du har problem med adressfältet eller statustextvisningen. Funktionen kan skapa konflikter med andra tillägg som försöker att ange en XBL-bindning i adressfältet.">

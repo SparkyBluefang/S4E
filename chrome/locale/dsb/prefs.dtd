@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Póstup">
 <!ENTITY status4evar.pane.download "Ześěgnjenje">
 <!ENTITY status4evar.pane.addonbar "Kšoma dodankow">
+<!ENTITY status4evar.pane.advanced "Rozšyrjone">
 <!ENTITY status4evar.tab.general "Powšykny">
 <!ENTITY status4evar.tab.toolbar "Rědowa kšoma">
 <!ENTITY status4evar.tab.urlbar "Adresowe pólo">
@@ -79,3 +80,6 @@
 <!ENTITY status4evar.addonbar.borderStyle "Alternatiwne ramiki rědoweje kšomy wužywaś">
 <!ENTITY status4evar.addonbar.windowGripper "Pśimk za změnjanje wjelikosći wokna pokazaś">
 <!ENTITY status4evar.addonbar.closeButton "Tłocašk &quot;Zacyniś&quot; pokazaś">
+<!ENTITY status4evar.advanced.warning "Toś te rozšyrjone nastajenja mógu problemy z Status-4-Evar abo drugimi rozšyrjenjami zawinowaś. Změńśo je na swójo riziko.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "Wopyt XBL-zwězanje adresowego póla wunuźiś.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Wuběŕśo to jano, jolic maśo problemy z póstupom adresowego póla abo jolic statusowy tekst njezwobraznja se korektnje. To mógło snaź druge rozšyrjenja kazyś, kótarež wopytuju XBL-zwězanje na adresowem pólu stajiś.">

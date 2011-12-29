@@ -3,7 +3,7 @@ Version next
 * Add an icon to the "Add-on bar" preference tab.
 * Add advanced pref to try an override the location bar binding. Defaults to off.
 * Added translations for: tr (partial)
-* Updated translations for: el, eo
+* Updated translations for: el, eo, sr, sv-SE
 
 Version 2011.11.13.22
 * [Firefox <= 10] When customizing the toolbar, use the Status Bar styling from Firefox 11 (see Bug 616016 (https://bugzilla.mozilla.org/show_bug.cgi?id=616016)).
