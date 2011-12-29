@@ -1,4 +1,5 @@
 Version next
+* Fix the mock location bar in the preference window.
 
 Version 2011.12.29.14b
 * Fix location bar margins on Windows in Firefox 9.
