@@ -3,7 +3,6 @@
 <!ENTITY status4evar.pane.progress "Progresso">
 <!ENTITY status4evar.pane.download "Download">
 <!ENTITY status4evar.pane.addonbar "Barra do Add-on">
-<!ENTITY status4evar.pane.advanced "Advanced">
 <!ENTITY status4evar.tab.general "Geral">
 <!ENTITY status4evar.tab.toolbar "Barra de Ferramentas">
 <!ENTITY status4evar.tab.urlbar "Barra de Endereços">
@@ -80,6 +79,3 @@
 <!ENTITY status4evar.addonbar.borderStyle "Usar bordas alternadas na barra de ferramentas">
 <!ENTITY status4evar.addonbar.windowGripper "Mostrar o gripper de redimensionamento da janela">
 <!ENTITY status4evar.addonbar.closeButton "Mostrar o botão Fechar">
-<!ENTITY status4evar.advanced.warning "These advanced settings may cause issues with Status-4-Evar or other extensions. Modify at your own risk.">
-<!ENTITY status4evar.advanced.urlbar.forceBinding "Attempt to force the the Location Bar XBL binding.">
-<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Only select this if you have problems with the Location Bar progress or status text being displaying correctly. This will potentially break other extensions that try to set an XBL binding on the Location Bar.">
