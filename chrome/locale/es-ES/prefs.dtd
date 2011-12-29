@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Progreso">
 <!ENTITY status4evar.pane.download "Descargas">
 <!ENTITY status4evar.pane.addonbar "Barra de complementos">
+<!ENTITY status4evar.pane.advanced "Avanzado">
 <!ENTITY status4evar.tab.general "General">
 <!ENTITY status4evar.tab.toolbar "Barra de herramientas">
 <!ENTITY status4evar.tab.urlbar "Barra de direcciones">
@@ -43,8 +44,8 @@
 <!ENTITY toolkit.dom.status.change.label "Permitir a las páginas web cambiar el estado">
 <!ENTITY status4evar.status.general.linkOver.caption "Enlaces">
 <!ENTITY status4evar.status.linkOver.label "Mostrar en:">
-<!ENTITY status4evar.status.linkOver.delay.show.label "Retraso al mostrar los enlaces:">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "Retraso al ocultar los enlaces:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Retraso al mostrar los enlaces (en ms):">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Retraso al ocultar los enlaces (en ms):">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Limitar la longitud máxima del mensaje de estado a:">
 <!ENTITY status4evar.status.urlbar.align.label "Alineamiento del mensaje de estado:">
 <!ENTITY status4evar.status.urlbar.color.label "Color del texto:">
@@ -57,7 +58,7 @@
 <!ENTITY status4evar.status.popup.findMirror.label "Mostrar en el lado opuesto si la barra de búsqueda es visible">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Mover al lado opuesto cuando pase el ratón por encima">
 <!ENTITY status4evar.progress.style.label "Usar un estilo personalizado para el medidor de progreso">
-<!ENTITY status4evar.progress.urlbar.enable.label "Mostrar el progreso en la barra de direcciones">
+<!ENTITY status4evar.progress.urlbar.enable.label "Mostrar el medidor de progreso en la barra de direcciones">
 <!ENTITY status4evar.progress.urlbar.line.label "Estilo de línea:">
 <!ENTITY status4evar.progress.toolbar.force.label "Siempre mostrar el medidor de progreso en la barra de herramientas">
 <!ENTITY status4evar.editor.label "Editor:">
@@ -66,16 +67,19 @@
 <!ENTITY status4evar.editor.css.image.repeat "Repetir">
 <!ENTITY status4evar.editor.css.image.position "Posición">
 <!ENTITY status4evar.editor.css.image.offset "Desplazamiento">
-<!ENTITY status4evar.download.force.label "Siempre mostrar el icono de descargas">
-<!ENTITY status4evar.download.label.force.label "Siempre mostrar texto junto al icono de descargas">
-<!ENTITY status4evar.download.label.label "Texto junto al icono de descargas:">
+<!ENTITY status4evar.download.force.label "Siempre mostrar el botón de descargas">
+<!ENTITY status4evar.download.label.force.label "Siempre mostrar texto junto al icono del botón de descargas">
+<!ENTITY status4evar.download.label.label "Texto junto al icono del botón de descargas:">
 <!ENTITY status4evar.download.tooltip.label "Cuadro informativo del botón de descargas:">
-<!ENTITY status4evar.download.progress.label "Mostrar el progreso de la descarga sobre el botón">
-<!ENTITY status4evar.download.progress.average.label "Mostrar el promedio de descargas completadas">
-<!ENTITY status4evar.download.progress.max.label "Mostrar la descarga más avanzada">
-<!ENTITY status4evar.download.progress.min.label "Mostrar la descarga menos avanzada">
-<!ENTITY status4evar.download.color.active.label "Color del icono de progreso con las descargas activas:">
-<!ENTITY status4evar.download.color.paused.label "Color del icono de progreso con las descargas pausadas:">
-<!ENTITY status4evar.addonbar.borderStyle "Mostrar bordes alternativos">
+<!ENTITY status4evar.download.progress.label "Mostrar información de las descargas pendientes sobre el icono del botón">
+<!ENTITY status4evar.download.progress.average.label "Mostrar el progreso promedio de todas las descargas">
+<!ENTITY status4evar.download.progress.max.label "Mostrar el progreso de la descarga más avanzada">
+<!ENTITY status4evar.download.progress.min.label "Mostrar el progreso de la descarga menos avanzada">
+<!ENTITY status4evar.download.color.active.label "Color del icono de progreso teniendo al menos una descarga activa:">
+<!ENTITY status4evar.download.color.paused.label "Color del icono de progreso teniendo todas las descargas pausadas:">
+<!ENTITY status4evar.addonbar.borderStyle "Usar un estilo visual alternativo para los bordes">
 <!ENTITY status4evar.addonbar.windowGripper "Mostrar el deslizador para redimensionar la ventana">
 <!ENTITY status4evar.addonbar.closeButton "Mostrar el botón «Cerrar»">
+<!ENTITY status4evar.advanced.warning "Cambiar estas opciones avanzadas puede causar problemas con Status-4-Evar u otras extensiones. Hágalo bajo su propio riesgo.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "Forzar la vinculación (binding) XBL a la barra de direcciones">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Habilite esta opción sólo si el medidor de progreso o el mensaje de estado no son mostrados correctamente en la barra de direcciones. Esto potencialmente romperá otras extensiones que asocian una vinculación XBL a la barra de direcciones.">
