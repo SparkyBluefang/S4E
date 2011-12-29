@@ -2,15 +2,16 @@
 <!ENTITY status4evar.pane.status "Κατάσταση">
 <!ENTITY status4evar.pane.progress "Πρόοδος">
 <!ENTITY status4evar.pane.download "Λήψεις">
-<!ENTITY status4evar.pane.addonbar "Εργαλειοθήκη προσθέτου">
+<!ENTITY status4evar.pane.addonbar "Εργαλειοθήκη πρόσθετων">
+<!ENTITY status4evar.pane.advanced "Προηγμένες">
 <!ENTITY status4evar.tab.general "Γενικά">
 <!ENTITY status4evar.tab.toolbar "Εργαλειοθήκη">
-<!ENTITY status4evar.tab.urlbar "Γραμμή URL">
+<!ENTITY status4evar.tab.urlbar "Γραμμή τοποθεσιών">
 <!ENTITY status4evar.tab.popup "Αναδυόμενο">
 <!ENTITY status4evar.tab.tabs "Καρτέλες">
 <!ENTITY status4evar.option.none "Καμία">
 <!ENTITY status4evar.option.toolbar "Στην εργαλειοθήκη">
-<!ENTITY status4evar.option.urlbar "Στη γραμμή URL">
+<!ENTITY status4evar.option.urlbar "Στη γραμμή τοποθεσιών">
 <!ENTITY status4evar.option.popup "Σε αναδυόμενο">
 <!ENTITY status4evar.option.tooltip "Με συμβουλή εργαλείου">
 <!ENTITY status4evar.option.bottom "Κάτω μέρος">
@@ -48,7 +49,7 @@
 <!ENTITY status4evar.status.toolbar.maxLength.label "Μέγιστο μήκος κειμένου κατάστασης:">
 <!ENTITY status4evar.status.urlbar.align.label "Παράταξη κατάστασης:">
 <!ENTITY status4evar.status.urlbar.color.label "Χρώμα κειμένου:">
-<!ENTITY status4evar.status.currentUrl "Τρέχον URL">
+<!ENTITY status4evar.status.currentUrl "Τρέχουσα τοποθεσία">
 <!ENTITY status4evar.status.statusText "Κείμενο κατάστασης">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Δυνατότητες του Firefox">
 <!ENTITY browser.urlbar.formatting.enabled.label "Ενεργοποίηση τονισμού τομέα">
@@ -79,3 +80,6 @@
 <!ENTITY status4evar.addonbar.borderStyle "Χρήση εναλλακτικών ορίων εργαλειοθήκης">
 <!ENTITY status4evar.addonbar.windowGripper "Εμφάνιση της λαβής αλλαγής μεγέθους του παραθύρου">
 <!ENTITY status4evar.addonbar.closeButton "Εμφάνιση του κουμπιού κλεισίματος">
+<!ENTITY status4evar.advanced.warning "Αυτές οι προηγμένες ρυθμίσεις μπορεί να προκαλέσουν προβλήματα με την επέκταση 'Status-4-EVAR' ή άλλες επεκτάσεις. Τροποποιήστε τις με δικό σας ρίσκο.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "Προσπάθεια επιβολής της διάδεσης XBL γραμμής τοποθεσιών.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Δοκιμάστε αυτήν την επιλογή μόνο εάν έχετε προβλήματα σωστής εμφάνισης της προόδου ή του κειμένου κατάστασης στη γραμμή τοποθεσιών. Αυτό εν δυνάμει διασπάει άλλες επεκτάσεις που προσπαθούν να θέσουν κάποια διάδεση XBL στη γραμμή τοποθεσιών.">
