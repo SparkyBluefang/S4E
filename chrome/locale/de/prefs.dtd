@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Fortschritt">
 <!ENTITY status4evar.pane.download "Download">
 <!ENTITY status4evar.pane.addonbar "Add-on-Leiste">
+<!ENTITY status4evar.pane.advanced "Erweitert">
 <!ENTITY status4evar.tab.general "Allgemein">
 <!ENTITY status4evar.tab.toolbar "Symbolleiste">
 <!ENTITY status4evar.tab.urlbar "Adressleiste">
@@ -53,6 +54,9 @@
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox-Funktionen">
 <!ENTITY browser.urlbar.formatting.enabled.label "Domain-Hervorhebung aktivieren">
 <!ENTITY browser.urlbar.trimming.enabled.label "Protokoll ausblenden (http:// und ftp://)">
+<!ENTITY status4evar.status.popup.invertMirror.label "Standardmäßig auf der rechten Seite">
+<!ENTITY status4evar.status.popup.findMirror.label "Bei geöffneter Suchleiste, auf gegenüberliegender Seite starten.">
+<!ENTITY status4evar.status.popup.mouseMirror.label "Beim Überfahren mit der Maus, Seite wechseln">
 <!ENTITY status4evar.progress.style.label "Benutzerdefinierten Stil für Fortschrittsanzeige verwenden">
 <!ENTITY status4evar.progress.urlbar.enable.label "Fortschritt in der Adressleiste anzeigen">
 <!ENTITY status4evar.progress.urlbar.line.label "Anzeigeart:">
@@ -67,8 +71,15 @@
 <!ENTITY status4evar.download.label.force.label "Beschriftung immer anzeigen">
 <!ENTITY status4evar.download.label.label "Beschriftung für Download-Status:">
 <!ENTITY status4evar.download.tooltip.label "Tooltip-Text für Download-Status:">
+<!ENTITY status4evar.download.progress.label "Download Fortschritt in der Schaltfläche anzeigen">
+<!ENTITY status4evar.download.progress.average.label "Zeige durchschnittliche Download Komplettierung">
+<!ENTITY status4evar.download.progress.max.label "Zeige am meisten komplettierten Download">
+<!ENTITY status4evar.download.progress.min.label "Zeige am wenigsten komplettierten Download">
 <!ENTITY status4evar.download.color.active.label "Fortschrittsfarbe für aktive Downloads:">
 <!ENTITY status4evar.download.color.paused.label "Fortschrittsfarbe für pausierte Downloads:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternativen Symbolleisten-Rand verwenden">
 <!ENTITY status4evar.addonbar.windowGripper "Anfasser zur Fenstergrößenänderung anzeigen">
 <!ENTITY status4evar.addonbar.closeButton "Schließen-Schaltfläche anzeigen">
+<!ENTITY status4evar.advanced.warning "Diese erweiterten Einstellungen können Probleme mit Status-4-Evar oder anderen Erweiterungen verursachen. Änderungen nur auf eigene Gefahr!">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "XBL-Bindung der Adressleiste erzwingen.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Nur auswählen wenn Sie Probleme mit der Darstellung der Fortschrittsanzeige in der Adressleiste oder dem Statustext haben. Dies kann möglicherweise Probleme mit andere Erweiterungen die eine XBL Bindung auf die Adressleiste setzen, verursachen.">
