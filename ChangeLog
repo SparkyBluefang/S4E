@@ -1,4 +1,6 @@
 Version next
+
+Version 2012.01.14.17
 * Fix the mock location bar in the preference window.
 * Updated translations for: de, sr, tr
 
