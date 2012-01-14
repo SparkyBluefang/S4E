@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Progresso">
 <!ENTITY status4evar.pane.download "Download">
 <!ENTITY status4evar.pane.addonbar "Barra do Add-on">
+<!ENTITY status4evar.pane.advanced "Avançado">
 <!ENTITY status4evar.tab.general "Geral">
 <!ENTITY status4evar.tab.toolbar "Barra de Ferramentas">
 <!ENTITY status4evar.tab.urlbar "Barra de Endereços">
@@ -79,3 +80,6 @@
 <!ENTITY status4evar.addonbar.borderStyle "Usar bordas alternadas na barra de ferramentas">
 <!ENTITY status4evar.addonbar.windowGripper "Mostrar o gripper de redimensionamento da janela">
 <!ENTITY status4evar.addonbar.closeButton "Mostrar o botão Fechar">
+<!ENTITY status4evar.advanced.warning "Essas configurações avançadas podem causar problemas com o Status-4-Evar ou outras extensões. Modifique por sua própria conta e risco.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "Tentar forçar a integração da Barra de Endereços XBL.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Selecione isso somente se tiver problemas de exibição com o progresso da Barra de Endereços ou com o texto de status. Isso tem grande possibilidade de impedir outras extensões de configurar uma integração do XBL com a Barra de Endereços.">

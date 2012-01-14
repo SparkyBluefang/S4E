@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Fremdrift">
 <!ENTITY status4evar.pane.download "Nedlasting">
 <!ENTITY status4evar.pane.addonbar "Utvidelseslinje">
+<!ENTITY status4evar.pane.advanced "Avansert">
 <!ENTITY status4evar.tab.general "Generelt">
 <!ENTITY status4evar.tab.toolbar "Verktøylinje">
 <!ENTITY status4evar.tab.urlbar "Adresselinje">
@@ -79,3 +80,6 @@
 <!ENTITY status4evar.addonbar.borderStyle "Bruk alternative kanter for verktøylinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gripeområdet for endring av vindusstørrelse">
 <!ENTITY status4evar.addonbar.closeButton "Vis knappen lukk">
+<!ENTITY status4evar.advanced.warning "Disse avanserte innstillinger kan forårsake problemer med Status-4-Evar eller andre utvidelser. Modifiser på din egen risiko.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "Forsøk å tvinge XBL bindingen for adresselinjen.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Bare velg dette hvis du har problemer med at adresselinje-fremdriftsindikatoren eller statusteksten ikke blir vist riktig. Dette vil potensielt bryte andre utvidelser som forsøker å sette en XBL binding på adresselinjen.">

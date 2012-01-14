@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "İlerleme">
 <!ENTITY status4evar.pane.download "İndir">
 <!ENTITY status4evar.pane.addonbar "Çubuğa ekle">
+<!ENTITY status4evar.pane.advanced "Gelişmiş">
 <!ENTITY status4evar.tab.general "Genel">
 <!ENTITY status4evar.tab.toolbar "Araç Çubuğu">
 <!ENTITY status4evar.tab.urlbar "Konum Çubuğu">
@@ -27,6 +28,7 @@
 <!ENTITY status4evar.option.browse "Gözat">
 <!ENTITY status4evar.option.clear "Temizle">
 <!ENTITY status4evar.option.center "Merkez">
+<!ENTITY status4evar.option.offset "Baskı">
 <!ENTITY status4evar.option.repeat "Tekrar">
 <!ENTITY status4evar.option.no-repeat "Tekrar etme">
 <!ENTITY status4evar.option.space "Boşluk">
