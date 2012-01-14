@@ -67,20 +67,29 @@ def writeFile(filename, contents):
 #
 # Clean a file. Read it, strip blank lines and comments, then write it.
 #
-reReturn	= re.compile("\r")
-reNewLine	= re.compile("\n+")
-rePROPComment	= re.compile("^\s*#.*?\s*\n", re.U | re.M)
-reDTDComment	= re.compile("^\s*<!--.*?-->\s*\n", re.U | re.M | re.S)
+reNewLine     = re.compile(r'''[\r\n]+''')
+
+rePROPComment = re.compile(r'''^\s*#.*?\s*\n''', re.M)
+rePROPEscapes = re.compile(r'''\\(\\n|'|")''')
+rePROPNewLine = re.compile(r'''\\\\\n''', re.M)
+
+reDTDComment  = re.compile(r'''^\s*<!--.*?-->\s*\n''', re.M | re.S)
+reDTDEscapes  = re.compile(r'''\\(\\n|'|"|&)''')
+reDTDNewLine  = re.compile(r'''\s*(\\\n|\\n)\s*''', re.M)
+
 def cleanFile(filename):
 	contents = readFile(filename)
 
-	contents = reReturn.sub("\n", contents)
 	contents = reNewLine.sub("\n", contents)
 
 	if filename.endswith(".dtd"):
 		contents = reDTDComment.sub("", contents)
+		contents = reDTDEscapes.sub("\\1", contents)
+		contents = reDTDNewLine.sub("\n", contents)
 	elif filename.endswith(".properties"):
 		contents = rePROPComment.sub("", contents)
+		contents = rePROPEscapes.sub("\\1", contents)
+		contents = rePROPNewLine.sub("\\\n", contents)
 
 	writeFile(filename, contents)
 
