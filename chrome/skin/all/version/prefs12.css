@@ -37,17 +37,8 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/*
- * Location bar
- */
-
-.urlbar-stack
+#status4evar-status-popup-findMirror-check
 {
-	margin: -2px 0px;
-}
-
-.urlbar-input-layer
-{
-	padding: 2px 0px;
+	display: none;
 }
 

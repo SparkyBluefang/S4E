@@ -1,4 +1,5 @@
 Version next
+* Re-write status pop-up binding to support Firefox 12+
 
 Version 2012.01.14.17
 * Fix the mock location bar in the preference window.
@@ -22,8 +23,8 @@ Version 2011.11.13.17
 * Updated translations for: nb-NO, nl
 
 Version 2011.10.16.16b
-* Fix content pop-up in Firefox 10.
-* Add option to set the default side of the content pop-up.
+* Fix status pop-up in Firefox 10.
+* Add option to set the default side of the status pop-up.
 * Fix-up licensing issues.
 * Split up the overlay.xml so that proper license headers can be used.
 * Added translations for: dsb-DE
@@ -118,7 +119,7 @@ Version 2011.03.16.22
 Summary of changes:
 * Rewrote preferences backed and UI.
 * Implemented link/status in the location bar, with controls to change its appearance.
-* Added support for the chrome-style status popup.
+* Added support for the chrome-style status pop-up.
 * Advanced controls for changing the styles of the progress bars.
 * Updated translations for: da, fr, hu, it-IT, ja-JP, nl, pl, pt-BR, sv-SE, zh-CN, zh-TW (de still needs updates)
 * Added translations for: ro
@@ -136,7 +137,7 @@ Version 2011.03.10.18b
 
 Version 2011.03.06.15b
 * Don't use min-width on location bar link/status text.
-* Better integration with the content pop-up.
+* Better integration with the status pop-up.
 * Simplify link/status handling in pup-up.
 * Fix default status disappearing when switching tabs.
 * Add setting to control urlbar status color.
@@ -154,7 +155,7 @@ Version 2011.02.20.23b
 Version 2011.02.07.01b
 * Rewrite preference service and preference dialog. Rename a number of preferences.
 * Allow location bar and toolbar progress meters to be independently styled.
-* Add support for the status overlay popup.
+* Add support for the status pop-up.
 * Implement link-over/status text in the location bar.
 
 * The advanced progress meter style editor isn't ready yet. Instead, there is a text box where you can manually edit the CSS background property. See <a href="http://www.w3.org/TR/CSS2/colors.html#background">the W3C CSS background property</a> for details.

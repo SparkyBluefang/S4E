@@ -38,16 +38,16 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /*
- * Location bar
+ * Status pop-up
  */
 
-.urlbar-stack
+statuspanel
 {
-	margin: -2px 0px;
+	-moz-binding: url("chrome://status4evar/content/tabbrowser.xml#statuspanel-11");
 }
 
-.urlbar-input-layer
+statuspanel[nomouse="true"]
 {
-	padding: 2px 0px;
+	pointer-events: none;
 }
 

@@ -75,11 +75,13 @@ skin	status4evar-os	classic/1.0	chrome/skin/pinstripe/		os=Darwin
 # Browser overlays
 overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/overlay.xul
 style	chrome://browser/content/browser.xul		chrome://status4evar/skin/version/overlay10.css		appversion<=10.0.*
+style	chrome://browser/content/browser.xul		chrome://status4evar/skin/version/overlay11.css		appversion<=11.0.*
 style	chrome://browser/content/browser.xul		chrome://status4evar-os/skin/version/overlay8.css	appversion<=8.0.*
 
 # Pref overlays
 style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs5.css		appversion<=5.0.*
 style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs6.css		appversion<=6.0.*
+style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs12.css		appversion>=12.0a2
 style	chrome://status4evar/content/prefs.xul		chrome://status4evar-os/skin/version/overlay8.css	appversion<=8.0.*
 
 # Toolbar overlays
