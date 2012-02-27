@@ -38,37 +38,40 @@
 if(!caligon) var caligon = {};
 if(!caligon.status4evar) caligon.status4evar = {};
 
-window.addEventListener("load", function()
+window.addEventListener("load", function buildS4E()
 {
+	window.removeEventListener("load", buildS4E, false);
+
 	let CC = Components.classes;
 	let CI = Components.interfaces;
 	let CU = Components.utils;
 
-	caligon.status4evar.service = CC["@caligonstudios.com/status4evar;1"].getService(CI.nsIStatus4Evar);
-	let s4e_service = caligon.status4evar.service;
-
-	caligon.status4evar.strings = document.getElementById("bundle_status4evar");
-	let s4e_strings = caligon.status4evar.strings;
+	let s4e_service = CC["@caligonstudios.com/status4evar;1"].getService(CI.nsIStatus4Evar);
+	caligon.status4evar.service = s4e_service;
 
 //
 // Element getters
 //
-	caligon.status4evar.getters =
+	let s4e_getters =
 	{
+		getterMap:
+		[
+			["addonbar",              "addon-bar"],
+			["addonbarCloseButton",   "addonbar-closebutton"],
+			["browserBottomBox",      "browser-bottombox"],
+			["downloadButton",        "status4evar-download-button"],
+			["downloadButtonTooltip", "status4evar-download-tooltip"],
+			["statusWidget",          "status4evar-status-widget"],
+			["statusWidgetLabel",     "status4evar-status-text"],
+			["statusOverlay",         "statusbar-display"],
+			["strings",               "bundle_status4evar"],
+			["toolbarProgress",       "status4evar-progress-bar"],
+			["urlbarProgress",        "urlbar-progress-alt"]
+		],
+
 		resetGetters: function()
 		{
-			[
-				["addonbar",			"addon-bar"],
-				["addonbarCloseButton",		"addonbar-closebutton"],
-				["browserBottomBox",		"browser-bottombox"],
-				["downloadButton",		"status4evar-download-button"],
-				["downloadButtonTooltip",	"status4evar-download-tooltip"],
-				["statusWidget",		"status4evar-status-widget"],
-				["statusWidgetLabel",		"status4evar-status-text"],
-				["statusOverlay",		"statusbar-display"],
-				["toolbarProgress",		"status4evar-progress-bar"],
-				["urlbarProgress",		"urlbar-progress-alt"]
-			].forEach(function(getter)
+			this.getterMap.forEach(function(getter)
 			{
 				let [prop, id] = getter;
 				delete this[prop];
@@ -96,25 +99,37 @@ window.addEventListener("load", function()
 				delete this.urlbar;
 				return this.urlbar = ub;
 			});
+		},
+
+		destroy: function()
+		{
+			this.getterMap.forEach(function(getter)
+			{
+				let [prop, id] = getter;
+				delete this[prop];
+			}, this);
+
+			delete this.urlbar;
 		}
 	}
-	let s4e_getters = caligon.status4evar.getters;
+	caligon.status4evar.getters = s4e_getters;
 
 //
 // Status service
 //
-	caligon.status4evar.statusService =
+	let s4e_statusService =
 	{
-		_overLink:		{ val: "", type: "" },
-		_network:		{ val: "", type: "" },
-		_networkXHR:		{ val: "", type: "" },
-		_status:		{ val: "", type: "" },
-		_jsStatus:		{ val: "", type: "" },
-		_jsDefaultStatus:	{ val: "", type: "" },
-		_defaultStatus:		{ val: "", type: "" },
+		_overLink:        { val: "", type: "" },
+		_network:         { val: "", type: "" },
+		_networkXHR:      { val: "", type: "" },
+		_status:          { val: "", type: "" },
+		_jsStatus:        { val: "", type: "" },
+		_jsDefaultStatus: { val: "", type: "" },
+		_defaultStatus:   { val: "", type: "" },
 
-		_statusText:		{ val: "", type: "" },
-		_noUpdate:		false,
+		_statusText:      { val: "", type: "" },
+		_noUpdate:        false,
+		_statusTimeoutID: 0,
 
 		getCompositeStatusText: function()
 		{
@@ -232,6 +247,20 @@ window.addEventListener("load", function()
 			window.watch("XULBrowserWindow", XULBWHandler);
 		},
 
+		destroy: function()
+		{
+			// No need to unbind from the XULBrowserWindow, it's already null at this point
+
+			s4e_overLinkService.destroy();
+			this.clearTimer();
+
+			["_overLink", "_network", "_networkXHR", "_status", "_jsStatus", "_jsDefaultStatus", "_defaultStatus",
+			"_statusText"].forEach(function(prop)
+			{
+				delete this[prop];
+			}, this);
+		},
+
 		buildTextOrder: function()
 		{
 			this.__defineGetter__("_textOrder", function()
@@ -266,11 +295,7 @@ window.addEventListener("load", function()
 
 			if(this._statusText.val != text.val || force)
 			{
-				if(this._statusTimeoutID)
-				{
-					window.clearTimeout(this._statusTimeoutID);
-					delete this._statusTimeoutID;
-				}
+				this.clearTimer();
 
 				if(this._noUpdate)
 				{
@@ -285,9 +310,19 @@ window.addEventListener("load", function()
 				{
 					this._statusTimeoutID = window.setTimeout(function(self)
 					{
+						self._statusTimeoutID = 0;
 						self.clearStatusField();
 					}, s4e_service.statusTimeout, this);
 				}
+			}
+		},
+
+		clearTimer: function()
+		{
+			if(this._statusTimeoutID != 0)
+			{
+				window.clearTimeout(this._statusTimeoutID);
+				this._statusTimeoutID = 0;
 			}
 		},
 
@@ -327,15 +362,6 @@ window.addEventListener("load", function()
 						urlbar.setStatusType(text.type);
 					}
 					break;
-//				case 4:
-//					if(allowTooltip)
-//					{
-//						if(text.anchor instanceof HTMLAnchorElement)
-//						{
-//							// Set the tooltip for a content link
-//						}
-//						break;
-//					}
 				default:
 					label = s4e_getters.statusOverlay;
 					break;
@@ -350,21 +376,22 @@ window.addEventListener("load", function()
 			}
 		}
 	}
-	let s4e_statusService = caligon.status4evar.statusService;
+	caligon.status4evar.statusService = s4e_statusService;
 
 //
 // Over Link delay service
 //
-	caligon.status4evar.overLinkService =
+	let s4e_overLinkService =
 	{
 		_timer: 0,
 		_currentLink: { link: "", anchor: null },
 		_pendingLink: { link: "", anchor: null },
+		_listening: false,
 
 		update: function(aLink, aAnchor)
 		{
-			window.clearTimeout(this._timer);
-			window.removeEventListener("mousemove", this, true);
+			this.clearTimer();
+			this.stopListen();
 			this._pendingLink = { link: aLink, anchor: aAnchor };
 
 			if(!aLink)
@@ -375,7 +402,7 @@ window.addEventListener("load", function()
 				}
 				else
 				{
-					this._timer = window.setTimeout(this._show.bind(this), s4e_service.statusLinkOverDelayHide);
+					this._showDelayed();
 				}
 			}
 			else if(this._currentLink.link || !s4e_service.statusLinkOverDelayShow)
@@ -385,7 +412,45 @@ window.addEventListener("load", function()
 			else
 			{
 				this._showDelayed();
+				this.startListen();
+			}
+		},
+
+		destroy: function()
+		{
+			this.clearTimer();
+			this.stopListen();
+
+			["_currentLink", "_pendingLink"].forEach(function(prop)
+			{
+				delete this[prop];
+			}, this);
+		},
+
+		startListen: function()
+		{
+			if(!this._listening)
+			{
 				window.addEventListener("mousemove", this, true);
+				this._listening = true;
+			}
+		},
+
+		stopListen: function()
+		{
+			if(this._listening)
+			{
+				window.removeEventListener("mousemove", this, true);
+				this._listening = false;
+			}
+		},
+
+		clearTimer: function()
+		{
+			if(this._timer != 0)
+			{
+				window.clearTimeout(this._timer);
+				this._timer = 0;
 			}
 		},
 
@@ -394,18 +459,23 @@ window.addEventListener("load", function()
 			switch(event.type)
 			{
 				case "mousemove":
-					window.clearTimeout(this._timer);
+					this.clearTimer();
 					this._showDelayed();
 			}
 		},
 
 		_showDelayed: function()
 		{
-			this._timer = setTimeout(function(self)
+			let delay = ((this._pendingLink.link)
+				? s4e_service.statusLinkOverDelayShow
+				: s4e_service.statusLinkOverDelayHide);
+
+			this._timer = window.setTimeout(function(self)
 			{
+				self._timer = 0;
 				self._show();
-				window.removeEventListener("mousemove", self, true);
-			}, s4e_service.statusLinkOverDelayShow, this);
+				self.stopListen();
+			}, delay, this);
 		},
 
 		_show: function()
@@ -414,12 +484,12 @@ window.addEventListener("load", function()
 			s4e_statusService.setOverLinkInternal(this._currentLink.link, this._currentLink.anchor);
 		}
 	}
-	let s4e_overLinkService = caligon.status4evar.overLinkService;
+	caligon.status4evar.overLinkService = s4e_overLinkService;
 
 //
 // Progress meters and network status
 //
-	caligon.status4evar.progressMeter =
+	let s4e_progressMeter =
 	{
 		_busyUI: false,
 
@@ -457,6 +527,16 @@ window.addEventListener("load", function()
 			}
 		},
 
+		setup: function()
+		{
+			gBrowser.addProgressListener(s4e_progressMeter);
+		},
+
+		destroy: function()
+		{
+			gBrowser.removeProgressListener(s4e_progressMeter);
+		},
+
 		onStatusChange: function(aWebProgress, aRequest, aStatus, aMessage)
 		{
 			s4e_statusService.setNetworkStatus(aMessage);
@@ -489,10 +569,10 @@ window.addEventListener("load", function()
 							switch (aStatus)
 							{
 								case Components.results.NS_BINDING_ABORTED:
-									msg = s4e_strings.getString("nv_stopped");
+									msg = s4e_getters.strings.getString("nv_stopped");
 									break;
 								case Components.results.NS_ERROR_NET_TIMEOUT:
-									msg = s4e_strings.getString("nv_timeout");
+									msg = s4e_getters.strings.getString("nv_timeout");
 									break;
 							}
 						}
@@ -500,7 +580,7 @@ window.addEventListener("load", function()
 
 					if(!msg && (!location || location.spec != "about:blank"))
 					{
-						msg = s4e_strings.getString("nv_done");
+						msg = s4e_getters.strings.getString("nv_done");
 					}
 
 					s4e_statusService.setDefaultStatus(msg);
@@ -552,19 +632,15 @@ window.addEventListener("load", function()
 			return this.onProgressChange(aWebProgress, aRequest, aCurSelfProgress, aMaxSelfProgress, aCurTotalProgress, aMaxTotalProgress);
 		},
 
-		QueryInterface: XPCOMUtils.generateQI([ CI.nsIWebProgressListener,
-		                                        CI.nsIWebProgressListener2 ])
+		QueryInterface: XPCOMUtils.generateQI([ CI.nsIWebProgressListener, CI.nsIWebProgressListener2 ])
 	}
-	let s4e_progressMeter = caligon.status4evar.progressMeter;
+	caligon.status4evar.progressMeter = s4e_progressMeter;
 
 //
 // Implement download status
 //
-	caligon.status4evar.downloadStatus =
+	let s4e_downloadStatus =
 	{
-		_activeStr:      s4e_strings.getString("activeDownloads"),
-		_pausedStr:      s4e_strings.getString("pausedDownloads"),
-		_noDnldStr:      s4e_strings.getString("noDownloads"),
 		_listening:      false,
 		_lastTime:       Infinity,
 
@@ -627,6 +703,14 @@ window.addEventListener("load", function()
 				this._listening = false;
 				this.DownloadManager.removeListener(this);
 			}
+		},
+
+		destroy: function()
+		{
+			this.uninit();
+			delete this.PluralForm;
+			delete this.DownloadUtils;
+			delete this.DownloadManager;
 		},
 
 		updateStatus: function()
@@ -693,8 +777,9 @@ window.addEventListener("load", function()
 			}
 
 			let dlPaused = (numActive == numPaused);
-			let numDls =         ((dlPaused) ? numPaused         : (numActive - numPaused));
-			let dlStatus =       ((dlPaused) ? this._pausedStr   : this._activeStr);
+			let dlStatus =       ((dlPaused) ? s4e_getters.strings.getString("pausedDownloads")
+			                                 : s4e_getters.strings.getString("activeDownloads"));
+			let dlCount =        ((dlPaused) ? numPaused         : (numActive - numPaused));
 			let dlTotalSize =    ((dlPaused) ? pausedTotalSize   : activeTotalSize);
 			let dlTransferred =  ((dlPaused) ? pausedTransferred : activeTransferred);
 			let dlMaxProgress =  ((dlPaused) ? pausedMaxProgress : activeMaxProgress);
@@ -702,7 +787,7 @@ window.addEventListener("load", function()
 			let dlProgressType = ((dlPaused) ? "paused"          : "active");
 
 			[this._dlTimeStr, this._lastTime] = this.DownloadUtils.getTimeLeft(maxTime, this._lastTime);
-			this._dlCountStr =     this.PluralForm.get(numDls, dlStatus).replace("#1", numDls);
+			this._dlCountStr =     this.PluralForm.get(dlCount, dlStatus).replace("#1", dlCount);
 			this._dlProgressAvg =  ((dlTotalSize == 0) ? 100 : ((dlTransferred * 100) / dlTotalSize));
 			this._dlProgressMax =  ((dlTotalSize == 0) ? 100 : dlMaxProgress);
 			this._dlProgressMin =  ((dlTotalSize == 0) ? 100 : dlMinProgress);
@@ -725,8 +810,7 @@ window.addEventListener("load", function()
 			if(!this._dlActive)
 			{
 				download_button.collapsed = true;
-				download_button.label = this._noDnldStr;
-				download_tooltip.label = this._noDnldStr;
+				download_button.label = download_tooltip.label = s4e_getters.strings.getString("noDownloads");
 
 				download_button.pmCollapsed = true;
 				download_button.pmType = "active";
@@ -788,12 +872,12 @@ window.addEventListener("load", function()
 
 		QueryInterface: XPCOMUtils.generateQI([ CI.nsIDownloadProgressListener ])
 	}
-	let s4e_downloadStatus = caligon.status4evar.downloadStatus;
+	caligon.status4evar.downloadStatus = s4e_downloadStatus;
 
 //
 // Update status text flexible splitters
 //
-	caligon.status4evar.updateSplitters = function(action)
+	let s4e_updateSplitters = function(action)
 	{
 		let splitter_before = document.getElementById("status4evar-status-splitter-before");
 		if(splitter_before)
@@ -844,70 +928,84 @@ window.addEventListener("load", function()
 			status.parentNode.insertBefore(getSplitter(splitter_after, "after"), nextSibling);
 		}
 	}
-	let s4e_updateSplitters = caligon.status4evar.updateSplitters;
+	caligon.status4evar.updateSplitters = s4e_updateSplitters;
 
 //
 // Update window re-size gripper
 //
-	let s4e_lastwindowState = null;
-
-	caligon.status4evar.updateWindowGripper = function(action)
+	let s4e_windowGripper =
 	{
-		let gripper = document.getElementById("status4evar-window-gripper");
-		let addon_bar = s4e_getters.addonbar;
-		s4e_lastwindowState = window.windowState;
+		lastwindowState: null,
 
-		if(!action || !addon_bar || !s4e_service.addonbarWindowGripper
-		|| window.windowState != window.STATE_NORMAL || addon_bar.toolbox.customizing)
+		update: function(action)
 		{
-			if(gripper)
+			let gripper = document.getElementById("status4evar-window-gripper");
+			let addon_bar = s4e_getters.addonbar;
+			this.lastwindowState = window.windowState;
+
+			if(!action || !addon_bar || !s4e_service.addonbarWindowGripper
+			|| window.windowState != window.STATE_NORMAL || addon_bar.toolbox.customizing)
 			{
-				gripper.parentNode.removeChild(gripper);
+				if(gripper)
+				{
+					gripper.parentNode.removeChild(gripper);
+				}
+				return;
 			}
-			return;
-		}
 
-		if(!gripper)
+			if(!gripper)
+			{
+				gripper = document.createElement("resizer");
+				gripper.id = "status4evar-window-gripper";
+				gripper.dir = "bottomend";
+			}
+
+			addon_bar.appendChild(gripper);
+		},
+
+		handleEvent: function(e)
 		{
-			gripper = document.createElement("resizer");
-			gripper.id = "status4evar-window-gripper";
-			gripper.dir = "bottomend";
-		}
+			if(window.windowState != this.lastwindowState)
+			{
+				s4e_windowGripper.update(true);
+			}
+		},
 
-		addon_bar.appendChild(gripper);
-	}
-	let s4e_updateWindowGripper = caligon.status4evar.updateWindowGripper;
-
-	caligon.status4evar.resizeHandler = function(e)
-	{
-		if(window.windowState != s4e_lastwindowState)
+		setup: function()
 		{
-			s4e_updateWindowGripper(true);
-		}
+			window.addEventListener("resize", this, false);
+		},
+
+		destroy: function()
+		{
+			window.removeEventListener("resize", this, false);
+		},
+
+		QueryInterface: XPCOMUtils.generateQI([ CI.nsIDOMEventListener ])
 	}
-	let s4e_resizeHandler = caligon.status4evar.resizeHandler;
+	caligon.status4evar.windowGripper = s4e_windowGripper;
 
 //
 // Prepare the window before customization
 //
-	caligon.status4evar.beforeCustomization = function()
+	let s4e_beforeCustomization = function()
 	{
 		s4e_updateSplitters(false);
-		s4e_updateWindowGripper(false);
+		s4e_windowGripper.update(false);
 
 		s4e_statusService.setNoUpdate(true);
 		let status_label = s4e_getters.statusWidgetLabel;
 		if(status_label)
 		{
-			status_label.value = s4e_strings.getString("statusText");
+			status_label.value = s4e_getters.strings.getString("statusText");
 		}
 	}
-	let s4e_beforeCustomization = caligon.status4evar.beforeCustomization;
+	caligon.status4evar.beforeCustomization = s4e_beforeCustomization;
 
 //
 // Update the window after customization
 //
-	caligon.status4evar.updateWindow = function()
+	let s4e_updateWindow = function()
 	{
 		s4e_statusService.setNoUpdate(false);
 		s4e_getters.resetGetters();
@@ -920,9 +1018,48 @@ window.addEventListener("load", function()
 		// This also handles the following:
 		// * buildTextOrder()
 		// * updateStatusField(true)
-		// * updateWindowGripper(true)
+		// * windowGripper.update(true)
 	}
-	let s4e_updateWindow = caligon.status4evar.updateWindow;
+	caligon.status4evar.updateWindow = s4e_updateWindow;
+
+//
+// Setup and register S4E components on window creation
+//
+	let s4e_setupWindow = function()
+	{
+		s4e_updateWindow();
+
+		s4e_progressMeter.setup();
+		s4e_windowGripper.setup();
+		gNavToolbox.addEventListener("beforecustomization", s4e_beforeCustomization, false);
+		gNavToolbox.addEventListener("aftercustomization", s4e_updateWindow, false);
+		window.addEventListener("unload", s4e_destroyWindow, false);
+
+		// OMFG HAX! If a page is already loading, fake a network start event
+		if(XULBrowserWindow._busyUI)
+		{
+			let nsIWPL = CI.nsIWebProgressListener;
+			s4e_progressMeter.onStateChange(0, null, nsIWPL.STATE_START | nsIWPL.STATE_IS_NETWORK, 0);
+		}
+	}
+	caligon.status4evar.setupWindow = s4e_setupWindow;
+
+//
+// Destroy and unregister S4E components on window destruction
+//
+	let s4e_destroyWindow = function()
+	{
+		window.removeEventListener("unload", s4e_destroyWindow, false);
+		gNavToolbox.removeEventListener("aftercustomization", s4e_updateWindow, false);
+		gNavToolbox.removeEventListener("beforecustomization", s4e_beforeCustomization, false);
+
+		s4e_statusService.destroy();
+		s4e_downloadStatus.destroy();
+		s4e_progressMeter.destroy();
+		s4e_windowGripper.destroy();
+		s4e_getters.destroy();
+	}
+	caligon.status4evar.destroyWindow = s4e_destroyWindow;
 
 //
 // Setup
@@ -986,18 +1123,6 @@ window.addEventListener("load", function()
 		}
 	}
 
-	s4e_updateWindow();
-
-	gBrowser.addProgressListener(s4e_progressMeter);
-	gNavToolbox.addEventListener("beforecustomization", s4e_beforeCustomization, false);
-	gNavToolbox.addEventListener("aftercustomization", s4e_updateWindow, false);
-	window.addEventListener("resize", s4e_resizeHandler, false);
-
-	// OMFG HAX! If a page is already loading, fake a network start event
-	if(XULBrowserWindow._busyUI)
-	{
-		let nsIWPL = CI.nsIWebProgressListener;
-		s4e_progressMeter.onStateChange(0, null, nsIWPL.STATE_START | nsIWPL.STATE_IS_NETWORK, 0);
-	}
+	s4e_setupWindow();
 }, false);
 
