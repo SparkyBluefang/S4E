@@ -689,6 +689,7 @@ window.addEventListener("load", function buildS4E()
 			}
 
 			this.DownloadManager.addListener(this);
+			Services.obs.addObserver(this, "private-browsing", true);
 
 			this._listening = true;
 			this._lastTime = Infinity;
@@ -702,6 +703,7 @@ window.addEventListener("load", function buildS4E()
 			{
 				this._listening = false;
 				this.DownloadManager.removeListener(this);
+				Services.obs.removeObserver(this, "private-browsing");
 			}
 		},
 
@@ -870,7 +872,18 @@ window.addEventListener("load", function buildS4E()
 		onStateChange: function(aWebProgress, aRequest, aStateFlags, aStatus, aDownload) {},
 		onSecurityChange: function(aWebProgress, aRequest, aState, aDownload) {},
 
-		QueryInterface: XPCOMUtils.generateQI([ CI.nsIDownloadProgressListener ])
+		observe: function(subject, topic, data)
+		{
+			if(topic == "private-browsing" && (data == "enter" || data == "exit"))
+			{
+				window.setTimeout(function(self)
+				{
+					self.updateStatus();
+				}, 0, this);
+			}
+		},
+
+		QueryInterface: XPCOMUtils.generateQI([ CI.nsIDownloadProgressListener, CI.nsISupportsWeakReference, CI.nsIObserver ])
 	}
 	caligon.status4evar.downloadStatus = s4e_downloadStatus;
 
