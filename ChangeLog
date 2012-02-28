@@ -1,4 +1,6 @@
 Version next
+
+Version 2012.02.28.00b
 * Re-write status pop-up binding to support Firefox 12+.
 * Tear down S4E bindings on window destruction. I don't know of there being any reported memory leaks, so this is a 'just in case' measure.
 * Disable domain highlighting when showing links/status in the location bar.
