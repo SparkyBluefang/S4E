@@ -146,10 +146,15 @@
 					switch (aEvent.type)
 					{
 						case "transitionend":
-							if(aEvent.target == this._overLinkBox
-							   && aEvent.propertyName == "opacity")
+							if(aEvent.target == this._overLinkBox && aEvent.propertyName == "opacity")
 							{
 								this._overLinkTransitioning = false;
+
+								let style = window.getComputedStyle(this._overLinkBox);
+								if(style.opacity == 0)
+								{
+									this.formatValue();
+								}
 							}
 							break;
 						default:
@@ -215,25 +220,33 @@
 			<method name="_setOverLinkState">
 				<parameter name="aVal"/>
 				<body><![CDATA[
+					let style = null;
 					switch(aVal)
 					{
 						case "fade-in":
-							var style = window.getComputedStyle(this._overLinkBox);
+							style = window.getComputedStyle(this._overLinkBox);
 							this._overLinkTransitioning = style.opacity != 1;
+							this._clearFormatting();
 							this.setAttribute("overlinkstate", aVal);
 							break;
 						case "fade-out":
 							style = window.getComputedStyle(this._overLinkBox);
 							this._overLinkTransitioning = style.opacity != 0;
 							this.setAttribute("overlinkstate", aVal);
+							if(!this._overLinkTransitioning)
+							{
+								this.formatValue();
+							}
 							break;
 						case "showing":
 							this._overLinkTransitioning = false;
 							this.setAttribute("overlinkstate", aVal);
+							this._clearFormatting();
 							break;
 						default:
 							this._overLinkTransitioning = false;
 							this.removeAttribute("overlinkstate");
+							this.formatValue();
 							break;
 					}
 				]]></body>
