@@ -42,55 +42,50 @@ interface nsIDOMWindow;
 [scriptable, uuid(13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf)]
 interface nsIStatus4Evar : nsISupports
 {
-	readonly attribute boolean addonbarBorderStyle;
-	readonly attribute boolean addonbarCloseButton;
-	readonly attribute boolean addonbarWindowGripper;
+	readonly attribute boolean   addonbarBorderStyle;
+	readonly attribute boolean   addonbarCloseButton;
+	readonly attribute boolean   addonbarWindowGripper;
 
-	readonly attribute boolean advancedUrlbarForceBinding;
+	readonly attribute boolean   advancedUrlbarForceBinding;
 
-	readonly attribute string  downloadColorActive;
-	readonly attribute string  downloadColorPaused;
-	readonly attribute boolean downloadForce;
-	readonly attribute long    downloadLabel;
-	readonly attribute boolean downloadLabelForce;
-	readonly attribute long    downloadProgress;
-	readonly attribute long    downloadTooltip;
+	readonly attribute ACString  downloadColorActive;
+	readonly attribute ACString  downloadColorPaused;
+	readonly attribute boolean   downloadForce;
+	readonly attribute long      downloadLabel;
+	readonly attribute boolean   downloadLabelForce;
+	readonly attribute long      downloadProgress;
+	readonly attribute long      downloadTooltip;
 
-	readonly attribute boolean firstRun;
+	readonly attribute boolean   firstRun;
 
-//	readonly attribute long    tabProgress;
-//	readonly attribute string  tabProgressCSS;
-//	readonly attribute boolean tabProgressStyle;
-//	readonly attribute boolean tabProgressStyleAdvanced;
+	readonly attribute ACString  progressToolbarCSS;
+	readonly attribute boolean   progressToolbarForce;
+	readonly attribute boolean   progressToolbarStyle;
+	readonly attribute boolean   progressToolbarStyleAdvanced;
 
-	readonly attribute string  progressToolbarCSS;
-	readonly attribute boolean progressToolbarForce;
-	readonly attribute boolean progressToolbarStyle;
-	readonly attribute boolean progressToolbarStyleAdvanced;
+	readonly attribute ACString  progressUrlbar;
+	readonly attribute ACString  progressUrlbarCSS;
+	readonly attribute boolean   progressUrlbarStyle;
+	readonly attribute boolean   progressUrlbarStyleAdvanced;
 
-	readonly attribute string  progressUrlbar;
-	readonly attribute string  progressUrlbarCSS;
-	readonly attribute boolean progressUrlbarStyle;
-	readonly attribute boolean progressUrlbarStyleAdvanced;
+	readonly attribute long      status;
+	readonly attribute boolean   statusDefault;
+	readonly attribute boolean   statusNetwork;
+	readonly attribute boolean   statusNetworkXHR;
+	readonly attribute long      statusTimeout;
+	readonly attribute long      statusLinkOver;
+	readonly attribute long      statusLinkOverDelayShow;
+	readonly attribute long      statusLinkOverDelayHide;
 
-	readonly attribute long    status;
-	readonly attribute boolean statusDefault;
-	readonly attribute boolean statusNetwork;
-	readonly attribute boolean statusNetworkXHR;
-	readonly attribute long    statusTimeout;
-	readonly attribute long    statusLinkOver;
-	readonly attribute long    statusLinkOverDelayShow;
-	readonly attribute long    statusLinkOverDelayHide;
+	readonly attribute long      statusToolbarMaxLength;
 
-	readonly attribute long    statusToolbarMaxLength;
+	readonly attribute ACString  statusUrlbarAlign;
+	readonly attribute ACString  statusUrlbarColor;
+	readonly attribute long      statusUrlbarPosition;
 
-	readonly attribute string  statusUrlbarAlign;
-	readonly attribute string  statusUrlbarColor;
-	readonly attribute long    statusUrlbarPosition;
-
-	readonly attribute boolean statusUrlbarFindMirror;
-	readonly attribute boolean statusUrlbarInvertMirror;
-	readonly attribute boolean statusUrlbarMouseMirror;
+	readonly attribute boolean   statusUrlbarFindMirror;
+	readonly attribute boolean   statusUrlbarInvertMirror;
+	readonly attribute boolean   statusUrlbarMouseMirror;
 
 	void updateWindow(in nsIDOMWindow win);
 	void launchOptions(in nsIDOMWindow currentWindow);
