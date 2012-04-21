@@ -37,7 +37,7 @@
 
 type=2
 id=status4evar@caligonstudios.com
-version=2012.02.28.00b
+version=2012.04.21.13
 creator=Sparky Bluefang
 optionsURL=chrome://status4evar/content/prefs.xul
 iconURL=chrome://status4evar/skin/s4e32.png
