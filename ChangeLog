@@ -5,7 +5,7 @@ Version 2012.04.21.13
 
 Version 2012.02.28.00b
 * Re-write status pop-up binding to support Firefox 12+.
-* Tear down S4E bindings on window destruction. I don't know of there being any reported memory leaks, so this is a 'just in case' measure.
+* Tear down S4E bindings on window destruction (some users have reported performance issues when opening and closing many windows).
 * Un-highlight the domain when showing a link or status text in the location bar.
 * Properly reset the download button when entering and exiting private browsing mode.
 
