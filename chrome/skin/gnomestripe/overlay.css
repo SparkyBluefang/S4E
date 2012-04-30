@@ -108,12 +108,6 @@ splitter.status4evar-status-splitter
 	margin-right: -2px;
 }
 
-.urlbar-origin-label,
-#urlbar[s4esalign="left"] .urlbar-over-link-box
-{
-	-moz-padding-start: 4px;
-}
-
 /*
  * Add-on bar
  */

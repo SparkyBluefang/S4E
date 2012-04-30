@@ -56,15 +56,15 @@
 					<xul:vbox class="urlbar-progress-layer" xbl:inherits="pack=pmpack" flex="1">
 						<children includes="progressmeter"/>
 					</xul:vbox>
-					<xul:scrollbox anonid="over-link-layer" class="urlbar-over-link-layer" xbl:inherits="overlinkstate" flex="1">
-						<xul:hbox anonid="over-origin-box" class="urlbar-over-origin-box" xbl:inherits="overlinkstate" align="center" flex="1">
+					<xul:hbox anonid="over-link-layer" class="urlbar-textbox-container urlbar-over-link-layer" xbl:inherits="overlinkstate" flex="1">
+						<xul:hbox class="urlbar-origin-box" align="center" flex="1">
 							<xul:label anonid="origin-label" class="urlbar-origin-label" flex="1" crop="end"/>
 						</xul:hbox>
-						<xul:hbox anonid="over-link-box" class="urlbar-over-link-box" xbl:inherits="overlinkstate" align="center">
+						<xul:hbox anonid="over-link-box" class="urlbar-over-link-box" align="center">
 							<xul:label anonid="over-link-host-label" class="urlbar-over-link-host-label"/>
 							<xul:label anonid="over-link-path-label" class="urlbar-over-link-path-label" flex="1"/>
 						</xul:hbox>
-					</xul:scrollbox>
+					</xul:hbox>
 					<xul:hbox class="urlbar-textbox-container urlbar-input-layer" xbl:inherits="focused,overlinkstate" flex="1">
 						<xul:hbox anonid="textbox-input-box" class="textbox-input-box urlbar-input-box" flex="1" xbl:inherits="tooltiptext=inputtooltiptext">
 							<xul:hbox class="urlbar-input-layer-children" xbl:inherits="overlinkstate">
@@ -87,19 +87,15 @@
 
 		<implementation>
 			<constructor><![CDATA[
-				this._overLinkBox.addEventListener("transitionend", this, false);
+				this._overLinkLayer.addEventListener("transitionend", this, false);
 			]]></constructor>
 
 			<destructor><![CDATA[
-				this._overLinkBox.removeEventListener("transitionend", this, false);
+				this._overLinkLayer.removeEventListener("transitionend", this, false);
 			]]></destructor>
 
 			<field name="_overLinkLayer" readonly="true"><![CDATA[
 				document.getAnonymousElementByAttribute(this, "anonid", "over-link-layer");
-			]]></field>
-
-			<field name="_overOriginBox" readonly="true"><![CDATA[
-				document.getAnonymousElementByAttribute(this, "anonid", "over-origin-box");
 			]]></field>
 
 			<field name="_originLabel" readonly="true"><![CDATA[
@@ -146,11 +142,11 @@
 					switch (aEvent.type)
 					{
 						case "transitionend":
-							if(aEvent.target == this._overLinkBox && aEvent.propertyName == "opacity")
+							if(aEvent.target == this._overLinkLayer && aEvent.propertyName == "opacity")
 							{
 								this._overLinkTransitioning = false;
 
-								let style = window.getComputedStyle(this._overLinkBox);
+								let style = window.getComputedStyle(this._overLinkLayer);
 								if(style.opacity == 0)
 								{
 									this.formatValue();
@@ -224,13 +220,13 @@
 					switch(aVal)
 					{
 						case "fade-in":
-							style = window.getComputedStyle(this._overLinkBox);
+							style = window.getComputedStyle(this._overLinkLayer);
 							this._overLinkTransitioning = style.opacity != 1;
 							this._clearFormatting();
 							this.setAttribute("overlinkstate", aVal);
 							break;
 						case "fade-out":
-							style = window.getComputedStyle(this._overLinkBox);
+							style = window.getComputedStyle(this._overLinkLayer);
 							this._overLinkTransitioning = style.opacity != 0;
 							this.setAttribute("overlinkstate", aVal);
 							if(!this._overLinkTransitioning)
