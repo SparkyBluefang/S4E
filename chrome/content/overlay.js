@@ -146,36 +146,36 @@ window.addEventListener("load", function buildS4E()
 			if(s4e_progressMeter._busyUI)
 			{
 				this._network = { val: status, type: "network" };
-				this._networkXHR = { val: "", type: "network_xhr" };
+				this._networkXHR = { val: "", type: "network xhr" };
 			}
 			else
 			{
-				this._networkXHR = { val: status, type: "network_xhr" };
+				this._networkXHR = { val: status, type: "network xhr" };
 			}
 			this.updateStatusField();
 		},
 
 		setStatusText: function(status)
 		{
-			this._status = { val: status, type: "status_chrome" };
+			this._status = { val: status, type: "status chrome" };
 			this.updateStatusField();
 		},
 
 		setJSStatus: function(status)
 		{
-			this._jsStatus = { val: status, type: "status_content" };
+			this._jsStatus = { val: status, type: "status content" };
 			this.updateStatusField();
 		},
 
 		setJSDefaultStatus: function(status)
 		{
-			this._jsDefaultStatus = { val: status, type: "status_content_default" };
+			this._jsDefaultStatus = { val: status, type: "status content default" };
 			this.updateStatusField();
 		},
 
 		setDefaultStatus: function(status)
 		{
-			this._defaultStatus = { val: status, type: "status_chrome_default" };
+			this._defaultStatus = { val: status, type: "status chrome default" };
 			this.updateStatusField();
 		},
 
@@ -195,12 +195,12 @@ window.addEventListener("load", function buildS4E()
 
 				if(status == statusLinkOver)
 				{
-					this._overLink = { val: link, type: "link", anchor: aAnchor };
+					this._overLink = { val: link, type: "overLink", anchor: aAnchor };
 					this.updateStatusField();
 				}
 				else
 				{
-					this.setStatusField(statusLinkOver, { val: link, type: "link", anchor: aAnchor }, true);
+					this.setStatusField(statusLinkOver, { val: link, type: "overLink", anchor: aAnchor }, true);
 				}
 			}
 		},
@@ -306,7 +306,7 @@ window.addEventListener("load", function buildS4E()
 
 				this.setStatusField(s4e_service.status, text, false);
 
-				if(text.val && text.type != "link" && s4e_service.statusTimeout)
+				if(text.val && text.type != "overLink" && s4e_service.statusTimeout)
 				{
 					this._statusTimeoutID = window.setTimeout(function(self)
 					{
@@ -358,8 +358,8 @@ window.addEventListener("load", function buildS4E()
 					let urlbar = s4e_getters.urlbar;
 					if(urlbar)
 					{
-						urlbar.setStatus(text.val);
 						urlbar.setStatusType(text.type);
+						urlbar.setStatus(text.val);
 					}
 					break;
 				default:
@@ -369,10 +369,10 @@ window.addEventListener("load", function buildS4E()
 
 			if(label)
 			{
-				label.value = text.val;
 				label.setAttribute("previoustype", label.getAttribute("type"));
 				label.setAttribute("type", text.type);
-				label.setAttribute("crop", text.type == "link" ? "center" : "end");
+				label.value = text.val;
+				label.setAttribute("crop", text.type == "overLink" ? "center" : "end");
 			}
 		}
 	}

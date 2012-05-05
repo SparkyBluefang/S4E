@@ -192,14 +192,14 @@
 					return val;
 				]]></setter>
 				<getter><![CDATA[
-					return this.getAttribute("label");
+					return ((this.hasAttribute("inactive")) ? "" : this.getAttribute("label"));
 				]]></getter>
 			</property>
 
 			<method name="setValue">
 				<parameter name="val"/>
 				<body><![CDATA[
-					if(this.getAttribute("type") == "network" && this.getAttribute("previoustype") == "network")
+					if((this.getAttribute("type") || "").indexOf("network") > -1 && (this.getAttribute("previoustype") || "").indexOf("network") > -1)
 					{
 						this.style.minWidth = getComputedStyle(this).width;
 					}
@@ -208,8 +208,15 @@
 						this.style.minWidth = "";
 					}
 
-					this.setAttribute("label", val);
-					this.setBooleanAttr("inactive", !val);
+					if(val)
+					{
+						this.setAttribute("label", val);
+						this.setBooleanAttr("inactive", false);
+					}
+					else
+					{
+						this.setBooleanAttr("inactive", true);
+					}
 				]]></body>
 			</method>
 

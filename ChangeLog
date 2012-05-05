@@ -1,5 +1,6 @@
 Version next
 * Fix alignment issues with the new identity box in Firefox 14+.
+* Fix content pop-up fade in/out effects when displaying links.
 
 Version 2012.04.21.13
 * Updated translations for: fr
