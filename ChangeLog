@@ -1,4 +1,6 @@
 Version next
+
+Version 2012.05.05.00b
 * Fix alignment issues with the new identity box in Firefox 14+.
 * Fix content pop-up fade in/out effects when displaying links.
 
