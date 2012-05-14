@@ -37,16 +37,16 @@
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Durum Metni">
 <!ENTITY status4evar.status.label "Durumu göster:">
-<!ENTITY status4evar.status.timeout.label "Hide the status after">
+<!ENTITY status4evar.status.timeout.label "Sonra durumu gizle">
 <!ENTITY status4evar.status.default.label "Varsayılan durumu göster">
 <!ENTITY status4evar.status.network.label "Ağ durumunu göster">
-<!ENTITY status4evar.status.network.xhr.label "Show background network status">
-<!ENTITY toolkit.dom.status.change.label "Allow web pages to change the status">
+<!ENTITY status4evar.status.network.xhr.label "Arka planda ağ durumunu göster">
+<!ENTITY toolkit.dom.status.change.label "Web sayfalarının durumu değiştirmesine izin ver">
 <!ENTITY status4evar.status.general.linkOver.caption "Linkler">
 <!ENTITY status4evar.status.linkOver.label "Bağlantıları göster:">
-<!ENTITY status4evar.status.linkOver.delay.show.label "Delay before showing links:">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "Delay before hiding links:">
-<!ENTITY status4evar.status.toolbar.maxLength.label "Max status text length:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "Bağlantıları göstermeden önceki gecikme süresi:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "Bağlantıları gizlemeden önceki gecikme süresi:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "Azami durum metin uzunluğu:">
 <!ENTITY status4evar.status.urlbar.align.label "Status alignment:">
 <!ENTITY status4evar.status.urlbar.color.label "Durum rengi:">
 <!ENTITY status4evar.status.currentUrl "Geçerli Konum">
@@ -58,7 +58,7 @@
 <!ENTITY status4evar.status.popup.findMirror.label "Start on the opposite side when the Find Bar is open">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Swap sides when moused over">
 <!ENTITY status4evar.progress.style.label "Özel bir stil kullan.">
-<!ENTITY status4evar.progress.urlbar.enable.label "Show progress in the Location Bar">
+<!ENTITY status4evar.progress.urlbar.enable.label "Konum Çubuğunda ilerlemeyi göster">
 <!ENTITY status4evar.progress.urlbar.line.label "Satır stili:">
 <!ENTITY status4evar.progress.toolbar.force.label "Araç çubuğu öğesini daima göster">
 <!ENTITY status4evar.editor.label "Editör:">
@@ -66,13 +66,13 @@
 <!ENTITY status4evar.editor.css.image.label "Resim:">
 <!ENTITY status4evar.editor.css.image.repeat "Tekrar">
 <!ENTITY status4evar.editor.css.image.position "Pozisyon">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
-<!ENTITY status4evar.download.force.label "Always show the Download Status button">
-<!ENTITY status4evar.download.label.force.label "Always show the button text">
-<!ENTITY status4evar.download.label.label "Download status button text:">
-<!ENTITY status4evar.download.tooltip.label "Download status button tooltip:">
-<!ENTITY status4evar.download.progress.label "Show download progress on the button">
-<!ENTITY status4evar.download.progress.average.label "Show average download completion">
+<!ENTITY status4evar.editor.css.image.offset "Baskı">
+<!ENTITY status4evar.download.force.label "İndirme Durum düğmesini daima göster">
+<!ENTITY status4evar.download.label.force.label "Düğme metnini daima göster">
+<!ENTITY status4evar.download.label.label "İndirme durum düğmesi metni:">
+<!ENTITY status4evar.download.tooltip.label "İndirme durum düğmesi ipucu:">
+<!ENTITY status4evar.download.progress.label "Düğmede indirme ilerlemesini göster">
+<!ENTITY status4evar.download.progress.average.label "Ortalama indirme tamamlanmasını göster">
 <!ENTITY status4evar.download.progress.max.label "İndirilmesi en çok tamamlananı göster">
 <!ENTITY status4evar.download.progress.min.label "Son indirileni göster">
 <!ENTITY status4evar.download.color.active.label "Aktif indirme için ilerleme rengi:">
