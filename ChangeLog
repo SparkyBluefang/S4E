@@ -1,4 +1,5 @@
 Version next
+* Drop support for versions older than Firefox 10.0
 
 Version 2012.07.08.17
 * Updated translations for: de, hu, tr
