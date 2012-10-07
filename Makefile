@@ -46,7 +46,7 @@ MKDIR      = mkdir
 ZIP        = zip
 ECHO       = echo
 
-XRSDK      = $(shell $(LS) -d /opt/xulrunner-sdk-* | $(SORT) -V | $(TAIL) -1)
+XRSDK      = $(shell $(LS) -d /opt/mozilla/xulrunner-sdk-* | $(SORT) -V | $(TAIL) -1)
 XRSDK_VERS = $(shell $(GREP) "^Milestone=" $(XRSDK)/bin/platform.ini | $(CUT) -d"=" -f2 | $(CUT) -d"." -f1)
 TYPELIB_PY = $(shell $(EXPR) $(XRSDK_VERS) \>= 11)
 
