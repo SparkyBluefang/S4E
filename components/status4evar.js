@@ -611,11 +611,6 @@ Status_4_Evar.prototype =
 		if(this.firstRun)
 		{
 			this.prefs.setBoolPref("firstRun", false);
-
-			if(!this.prefs.prefHasUserValue("migration"))
-			{
-				this.prefs.setIntPref("migration", CURRENT_MIGRATION);
-			}
 		}
 
 		this.migrate();
@@ -656,17 +651,20 @@ Status_4_Evar.prototype =
 
 	migrate: function()
 	{
-		let migration = 0;
-		try
+		if(!this.firstRun)
 		{
-			migration = this.prefs.getIntPref("migration");
-		}
-		catch(e) {}
+			let migration = 0;
+			try
+			{
+				migration = this.prefs.getIntPref("migration");
+			}
+			catch(e) {}
 
-		switch(migration)
-		{
-			case CURRENT_MIGRATION:
-				break;
+			switch(migration)
+			{
+				case CURRENT_MIGRATION:
+					break;
+			}
 		}
 
 		this.prefs.setIntPref("migration", CURRENT_MIGRATION);
