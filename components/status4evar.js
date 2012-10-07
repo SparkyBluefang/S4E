@@ -667,77 +667,6 @@ Status_4_Evar.prototype =
 		{
 			case CURRENT_MIGRATION:
 				break;
-			case 0:
-				// Reset the preferences
-				let childPrefs = this.prefs.getChildList("");
-				childPrefs.forEach(function(pref)
-				{
-					if(this.prefs.prefHasUserValue(pref))
-					{
-						this.prefs.clearUserPref(pref);
-					}
-				}, this);
-				break;
-			case 1:
-				this.migrateBoolPref("forceDownloadLabel",	"downloadLabelForce");
-			case 2:
-				this.migrateBoolPref("styleProgressItem",	"progressStyle");
-			case 3:
-				this.migrateBoolPref("forceDownloadVisible",	"download.force");
-				this.migrateIntPref( "downloadLabel",		"download.label");
-				this.migrateBoolPref("downloadLabelForce",	"download.label.force");
-				this.migrateIntPref( "downloadTooltip",		"download.tooltip");
-
-				this.migrateBoolPref("forceProgressVisible",	"progress.toolbar.force");
-
-				this.migrateBoolPref("default",			"status.default");
-				this.migrateBoolPref("network",			"status.network");
-				this.migrateIntPref( "statusTimeout",		"status.timeout");
-				this.migrateIntPref( "linkOver",		"status.linkOver");
-				this.migrateIntPref( "textMaxLength",		"status.maxLength");
-
-				if(this.prefs.getIntPref("status.linkOver") == 3)
-				{
-					this.prefs.setIntPref("status.linkOver", 1);
-				}
-
-				if(this.prefs.prefHasUserValue("statusInUrlBar"))
-				{
-					this.prefs.setIntPref("status", 2);
-					this.prefs.clearUserPref("statusInUrlBar");
-				}
-
-				let urlbarProgress = true;
-				if(this.prefs.prefHasUserValue("urlbarProgress"))
-				{
-					urlbarProgress = false;
-					this.prefs.setIntPref("progress.urlbar", 0);
-					this.prefs.clearUserPref("urlbarProgress");
-				}
-				
-				if(this.prefs.prefHasUserValue("urlbarProgressStyle"))
-				{
-					if(urlbarProgress)
-					{
-						this.prefs.setIntPref("progress.urlbar", this.prefs.getIntPref("urlbarProgressStyle") + 1);
-					}
-					this.prefs.clearUserPref("urlbarProgressStyle");
-				}
-
-				if(this.prefs.prefHasUserValue("progressColor"))
-				{
-					let oldPrefVal = this.prefs.getCharPref("progressColor");
-					this.prefs.setCharPref("progress.toolbar.css", oldPrefVal);
-					this.prefs.setCharPref("progress.urlbar.css", oldPrefVal);
-					this.prefs.clearUserPref("progressColor");
-				}
-
-				if(this.prefs.prefHasUserValue("progressStyle"))
-				{
-					this.prefs.clearUserPref("progressStyle");
-				}
-			case 4:
-				this.migrateIntPref( "status.maxLength", "status.toolbar.maxLength");
 		}
 
 		this.prefs.setIntPref("migration", CURRENT_MIGRATION);
@@ -864,6 +793,18 @@ Status_4_Evar.prototype =
 		{
 			elem.removeAttribute(attr);
 		}
+	},
+
+	resetPrefs: function()
+	{
+		let childPrefs = this.prefs.getChildList("");
+		childPrefs.forEach(function(pref)
+		{
+			if(this.prefs.prefHasUserValue(pref))
+			{
+				this.prefs.clearUserPref(pref);
+			}
+		}, this);
 	},
 
 	launchOptions: function(currentWindow)

@@ -87,6 +87,7 @@ interface nsIStatus4Evar : nsISupports
 	readonly attribute boolean   statusUrlbarInvertMirror;
 	readonly attribute boolean   statusUrlbarMouseMirror;
 
+	void resetPrefs();
 	void updateWindow(in nsIDOMWindow win);
 	void launchOptions(in nsIDOMWindow currentWindow);
 };

@@ -1,5 +1,6 @@
 Version next
 * Drop support for versions older than Firefox 10.0
+* Drop preference migration support for versions 2011.03.21.22 and older
 
 Version 2012.07.08.17
 * Updated translations for: de, hu, tr
