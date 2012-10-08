@@ -85,6 +85,7 @@ Status_4_Evar.prototype =
 
 	status:				1,
 	statusDefault:			true,
+	statusDetectFullScreen:		true,
 	statusNetwork:			true,
 	statusTimeout:			0,
 	statusLinkOver:			1,
@@ -143,7 +144,7 @@ Status_4_Evar.prototype =
 			},
 			updateWindow: function(win)
 			{
-				win.caligon.status4evar.windowGripper.update(true);
+				win.caligon.status4evar.updateWindowGripper(true);
 			}
 		},
 
@@ -385,6 +386,14 @@ Status_4_Evar.prototype =
 			{
 				win.caligon.status4evar.statusService.buildTextOrder();
 				win.caligon.status4evar.statusService.updateStatusField(true);
+			}
+		},
+
+		"status.detectFullScreen":
+		{
+			update: function()
+			{
+				this.statusDetectFullScreen = this.prefs.getBoolPref("status.detectFullScreen");
 			}
 		},
 

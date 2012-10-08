@@ -347,14 +347,30 @@ window.addEventListener("load", function buildS4E()
 		{
 			let label = null;
 
+			if(window.fullScreen && s4e_service.statusDetectFullScreen)
+			{
+				switch(location)
+				{
+					case 1: // Toolbar
+						location = 3
+						break;
+					case 2: // URL bar
+						if(Services.prefs.getBoolPref("browser.fullscreen.autohide"))
+						{
+							location = 3
+						}
+						break;
+				}
+			}
+
 			switch(location)
 			{
-				case 0:
+				case 0: // Disable
 					break;
-				case 1:
+				case 1: // Toolbar
 					label = s4e_getters.statusWidgetLabel;
 					break;
-				case 2:
+				case 2: // URL Bar
 					let urlbar = s4e_getters.urlbar;
 					if(urlbar)
 					{
@@ -362,6 +378,7 @@ window.addEventListener("load", function buildS4E()
 						urlbar.setStatus(text.val);
 					}
 					break;
+				case 3: // Popup
 				default:
 					label = s4e_getters.statusOverlay;
 					break;
@@ -946,57 +963,31 @@ window.addEventListener("load", function buildS4E()
 //
 // Update window re-size gripper
 //
-	let s4e_windowGripper =
+	let s4e_updateWindowGripper = function(action)
 	{
-		lastwindowState: null,
+		let gripper = document.getElementById("status4evar-window-gripper");
+		let addon_bar = s4e_getters.addonbar;
 
-		update: function(action)
+		if(!action || !addon_bar || !s4e_service.addonbarWindowGripper
+		|| window.windowState != window.STATE_NORMAL || addon_bar.toolbox.customizing)
 		{
-			let gripper = document.getElementById("status4evar-window-gripper");
-			let addon_bar = s4e_getters.addonbar;
-			this.lastwindowState = window.windowState;
-
-			if(!action || !addon_bar || !s4e_service.addonbarWindowGripper
-			|| window.windowState != window.STATE_NORMAL || addon_bar.toolbox.customizing)
+			if(gripper)
 			{
-				if(gripper)
-				{
-					gripper.parentNode.removeChild(gripper);
-				}
-				return;
+				gripper.parentNode.removeChild(gripper);
 			}
+			return;
+		}
 
-			if(!gripper)
-			{
-				gripper = document.createElement("resizer");
-				gripper.id = "status4evar-window-gripper";
-				gripper.dir = "bottomend";
-			}
-
-			addon_bar.appendChild(gripper);
-		},
-
-		handleEvent: function(e)
+		if(!gripper)
 		{
-			if(window.windowState != this.lastwindowState)
-			{
-				s4e_windowGripper.update(true);
-			}
-		},
+			gripper = document.createElement("resizer");
+			gripper.id = "status4evar-window-gripper";
+			gripper.dir = "bottomend";
+		}
 
-		setup: function()
-		{
-			window.addEventListener("resize", this, false);
-		},
-
-		destroy: function()
-		{
-			window.removeEventListener("resize", this, false);
-		},
-
-		QueryInterface: XPCOMUtils.generateQI([ CI.nsIDOMEventListener ])
+		addon_bar.appendChild(gripper);
 	}
-	caligon.status4evar.windowGripper = s4e_windowGripper;
+	caligon.status4evar.updateWindowGripper = s4e_updateWindowGripper;
 
 //
 // Prepare the window before customization
@@ -1004,7 +995,7 @@ window.addEventListener("load", function buildS4E()
 	let s4e_beforeCustomization = function()
 	{
 		s4e_updateSplitters(false);
-		s4e_windowGripper.update(false);
+		s4e_updateWindowGripper(false);
 
 		s4e_statusService.setNoUpdate(true);
 		let status_label = s4e_getters.statusWidgetLabel;
@@ -1031,9 +1022,49 @@ window.addEventListener("load", function buildS4E()
 		// This also handles the following:
 		// * buildTextOrder()
 		// * updateStatusField(true)
-		// * windowGripper.update(true)
+		// * updateWindowGripper(true)
 	}
 	caligon.status4evar.updateWindow = s4e_updateWindow;
+
+//
+// Window resize listener
+//
+	let s4e_sizeModeListener =
+	{
+		lastFullScreen: null,
+		lastwindowState: null,
+
+		setup: function()
+		{
+			lastFullScreen = window.fullScreen;
+			lastwindowState = window.windowState;
+			window.addEventListener("sizemodechange", this, false);
+		},
+
+		destroy: function()
+		{
+			window.removeEventListener("sizemodechange", this, false);
+		},
+
+		handleEvent: function(e)
+		{
+			if(window.fullScreen != this.lastFullScreen)
+			{
+				this.lastFullScreen = window.fullScreen;
+				s4e_statusService.clearStatusField();
+				s4e_statusService.updateStatusField(true);
+			}
+
+			if(window.windowState != this.lastwindowState)
+			{
+				this.lastwindowState = window.windowState;
+				s4e_updateWindowGripper(true);
+			}
+		},
+
+		QueryInterface: XPCOMUtils.generateQI([ CI.nsIDOMEventListener ])
+	}
+	caligon.status4evar.sizeModeListener = s4e_sizeModeListener;
 
 //
 // Setup and register S4E components on window creation
@@ -1043,7 +1074,7 @@ window.addEventListener("load", function buildS4E()
 		s4e_updateWindow();
 
 		s4e_progressMeter.setup();
-		s4e_windowGripper.setup();
+		s4e_sizeModeListener.setup();
 		gNavToolbox.addEventListener("beforecustomization", s4e_beforeCustomization, false);
 		gNavToolbox.addEventListener("aftercustomization", s4e_updateWindow, false);
 		window.addEventListener("unload", s4e_destroyWindow, false);
@@ -1069,7 +1100,7 @@ window.addEventListener("load", function buildS4E()
 		s4e_statusService.destroy();
 		s4e_downloadStatus.destroy();
 		s4e_progressMeter.destroy();
-		s4e_windowGripper.destroy();
+		s4e_sizeModeListener.destroy();
 		s4e_getters.destroy();
 	}
 	caligon.status4evar.destroyWindow = s4e_destroyWindow;

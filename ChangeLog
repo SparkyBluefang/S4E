@@ -1,6 +1,7 @@
 Version next
-* Drop support for versions older than Firefox 10.0
-* Drop preference migration support for versions 2011.03.21.22 and older
+* Drop support for Firefox 9.0 and older.
+* Drop preference migration from S4E 2011.03.21.22 and older.
+* Detect full-screen mode and display the status/link messages in the content pop-up when appropriate.
 
 Version 2012.07.08.17
 * Updated translations for: de, hu, tr

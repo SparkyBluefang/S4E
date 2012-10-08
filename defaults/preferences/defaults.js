@@ -68,6 +68,7 @@ pref("status4evar.progress.urlbar.style.advanced", false);
 
 pref("status4evar.status", 1);
 pref("status4evar.status.default", true);
+pref("status4evar.status.detectFullScreen", true);
 pref("status4evar.status.network", true);
 pref("status4evar.status.network.xhr", true);
 pref("status4evar.status.timeout", 0);
