@@ -43,10 +43,38 @@ import codecs
 from xml.sax.saxutils import escape
 
 propRE = re.compile(ur"^\s*([a-zA-Z.]+)\s*=\s*(.+?)\s*(#.*)?$")
+
 targetIds = {
 	"Firefox": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
 	"SeaMonkey": "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}"
 }
+
+rdfProps = [
+	"id",
+	"version",
+	"creator",
+	"developer",
+	"translator",
+	"contributor",
+	"type",
+	"bootstrap",
+	"unpack",
+	"strictCompatibility"
+	"aboutURL",
+	"homepageURL",
+	"icon64URL",
+	"iconURL",
+	"optionsType",
+	"optionsURL",
+	"updateKey",
+	"updateURL"
+]
+
+rdfPropsMulti = [
+	"developer",
+	"translator",
+	"contributor"
+]
 
 def parsePropFile(filename):
 	props = {}
@@ -83,17 +111,22 @@ def getConfig():
 	targets = {}
 
 	for prop in props:
+			val = props[prop]
 			if prop in targetIds:
-				v = props[prop].split('|')
+				val = val.split('|')
 				target = {
 					"id": targetIds[prop],
-					"min": v[0],
-					"max": v[1]
+					"min": val[0],
+					"max": val[1]
 				}
 				targets[prop] = target
 				continue;
 
-			info[prop] = props[prop]
+			if prop in rdfPropsMulti:
+				val = val.split('|')
+
+			if prop in rdfProps:
+				info[prop] = val
 
 	info["name"] = defaultLocale["name"]
 	info["description"] = defaultLocale["description"]
@@ -158,8 +191,14 @@ def buildManafest():
 
 	keys = info.keys()
 	keys.sort()
-	for prop in keys:
-		f.write(u"""
+	for prop in rdfProps:
+		if prop in info:
+			if prop in rdfPropsMulti:
+				for val in info[prop]:
+					f.write(u"""
+		<em:%s>%s</em:%s>""" % (prop, escape(val), prop))
+			else:
+				f.write(u"""
 		<em:%s>%s</em:%s>""" % (prop, escape(info[prop]), prop))
 	f.write(u"""\n""")
 
@@ -174,9 +213,9 @@ def buildManafest():
 	keys.sort()
 	for locale in keys:
 		l10n = locales[locale]
+		translators = ""
 		for t in l10n["translator"].split(","):
-			f.write(u"""
-		<em:translator>%s [%s]</em:translator>""" % (escape(t.strip()), locale))
+			translators += u"""<em:translator>%s [%s]</em:translator>""" % (escape(t.strip()), locale)
 		f.write(u"""
 		<em:localized><!-- %s -->
 			<Description>
@@ -185,8 +224,9 @@ def buildManafest():
 				<em:description>%s</em:description>
 				<em:creator>%s</em:creator>
 				<em:homepageURL>%s</em:homepageURL>
+				%s
 			</Description>
-		</em:localized>\n""" % (locale, locale, escape(l10n["name"]), escape(l10n["description"]), escape(info["creator"]), escape(info["homepageURL"])))
+		</em:localized>\n""" % (locale, locale, escape(l10n["name"]), escape(l10n["description"]), escape(info["creator"]), escape(info["homepageURL"]), translators))
 
 	#
 	# Print target blocks

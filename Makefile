@@ -50,10 +50,12 @@ PY         = env python2
 XRSDK      = $(shell $(LS) -d /opt/mozilla/xulrunner-sdk-* | $(SORT) -V | $(TAIL) -1)
 XRSDK_VERS = $(shell $(GREP) "^Milestone=" $(XRSDK)/bin/platform.ini | $(CUT) -d"=" -f2 | $(CUT) -d"." -f1)
 TYPELIB_PY = $(shell $(EXPR) $(XRSDK_VERS) \>= 11)
-
-VERSION    = $(shell $(GREP) "^version=" install.manifest | $(CUT) -d"=" -f2)
-XPT_FILES  = $(patsubst %.idl,%.xpt,$(wildcard components/*.idl))
 TLIB_CACHE = components/cache
+
+NAME       = $(shell $(GREP) "^name=" install.manifest | $(CUT) -d"=" -f2)
+VERSION    = $(shell $(GREP) "^version=" install.manifest | $(CUT) -d"=" -f2)
+FILES      = $(shell $(GREP) "^files=" install.manifest | $(CUT) -d"=" -f2)
+XPT_FILES  = $(patsubst %.idl,%.xpt,$(wildcard components/*.idl))
 
 all: clean xpi
 
@@ -68,6 +70,7 @@ clean:
 	$(RM) -f install.rdf
 	$(RM) -f components/*.xpt
 	$(RM) -rf components/cache
+	$(RM) -f xpidl_debug
 
 $(TLIB_CACHE):
 	$(MKDIR) $@
@@ -89,11 +92,5 @@ install.rdf: install.manifest
 rdf: install.rdf
 
 xpi: xpt rdf
-	$(ZIP) -r status4evar-$(VERSION)-fx.xpi \
-		chrome \
-		defaults \
-		chrome.manifest \
-		install.rdf \
-		components/*.js \
-		$(XPT_FILES)
+	$(ZIP) -r $(NAME)-$(VERSION).xpi $(FILES) $(XPT_FILES)
 
