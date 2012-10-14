@@ -50,6 +50,8 @@ targetIds = {
 }
 
 rdfProps = [
+	"name",
+	"description",
 	"id",
 	"version",
 	"creator",
