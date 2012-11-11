@@ -1,4 +1,5 @@
 Version next
+* Make compatible with Firefox 19 CSS parser changes.
 
 Version 2012.10.13.20b
 * Drop support for Firefox 9.0 and older.
