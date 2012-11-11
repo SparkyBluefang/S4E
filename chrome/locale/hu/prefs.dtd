@@ -83,3 +83,4 @@
 <!ENTITY status4evar.advanced.warning "Ezek a haladók beállítások problémákat okozhatnak a Status-4-Evar-ben, vagy más kiegészítőkben. Csak saját felelősségre változtassa!">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Kísérlet a címsor XBL kötésének erőltetésére.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Csak akkor válassza ezt az opciót, ha problémái vannak a címsor betöltési csík vagy a státusz szöveg megjelenítésével. Ez potenciálisan elronthat más kiegészítőket, amelyek a címsor XBL kötését használják.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">

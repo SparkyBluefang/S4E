@@ -83,3 +83,4 @@
 <!ENTITY status4evar.advanced.warning "Ове напредне поставке могу да стварају проблеме с овим или другим додацима. Користите их на сопствени ризик.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Приморај XBL повезивање траке за путању.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Изаберите ово само ако имате проблема с напретком траке за путању или се текст стања не приказује исправно. Ово може да онеспособи друге додатке који покушају да користе XBL повезивање на траку за путању.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">

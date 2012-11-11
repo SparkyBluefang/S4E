@@ -83,3 +83,4 @@
 <!ENTITY status4evar.advanced.warning "Cambiar estas opciones avanzadas puede causar problemas con Status-4-Evar u otras extensiones. Hágalo bajo su propia responsabilidad.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Forzar la vinculación (binding) XBL a la barra de direcciones">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Habilite esta opción sólo si el medidor de progreso o el mensaje de estado no son mostrados correctamente en la barra de direcciones. Esto corromperá potencialmente otras extensiones que asocian una vinculación XBL a la barra de direcciones.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">

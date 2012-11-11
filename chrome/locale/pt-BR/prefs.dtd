@@ -83,3 +83,4 @@
 <!ENTITY status4evar.advanced.warning "Essas configurações avançadas podem causar problemas com o Status-4-Evar ou outras extensões. Modifique por sua própria conta e risco.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Tentar forçar a integração da Barra de Endereços XBL.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Selecione isso somente se tiver problemas de exibição com o progresso da Barra de Endereços ou com o texto de status. Isso tem grande possibilidade de impedir outras extensões de configurar uma integração do XBL com a Barra de Endereços.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">

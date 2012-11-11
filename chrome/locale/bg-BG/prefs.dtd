@@ -83,3 +83,4 @@
 <!ENTITY status4evar.advanced.warning "Разширените настройки може да създадат проблеми при работата на Status-4-Evar или на други добавки. Променяйте ги на Ваша отговорност.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Пробвай принудително XBL привързване на адресната лента.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Изберете тази настройка само ако имате проблеми с лентата за напредък, или ако текстът за състоянието не се показва правилно. Това може да спре други разширения, които се опитват да установят XBL привързване на адресната лента.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">

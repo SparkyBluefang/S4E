@@ -83,3 +83,4 @@
 <!ENTITY status4evar.advanced.warning "Ces paramètres avancés peuvent entraîner des problèmes avec Status-4-Evar ou d'autres extensions. Modifications à vos propre risques.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Tentative de forcer le binding XBL de la barre de navigation.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Ne sélectionnez ceci que si vous avez des problèmes avec l'affichage du texte de progression ou d'état de la barre de navigation. Cela pourra potentiellement endommager d'autres extensions qui tentent de définir le binding XBL sur la barre de navigation.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">

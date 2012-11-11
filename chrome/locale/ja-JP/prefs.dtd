@@ -83,3 +83,4 @@
 <!ENTITY status4evar.advanced.warning "詳細設定を誤ると、Status-4-Evar はもとより他の拡張機能に対しても問題を発生させることがあります。設定は自己責任で行うこと">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "ロケーションバーで強制的に XBL binding を試みる">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "ロケーションバーの進行状態やテキスト表示に異常がある場合にだけ選択すること（他の拡張機能がロケーションバーで XBL Binding するのを妨げる可能性があるため）">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">

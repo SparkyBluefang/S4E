@@ -83,3 +83,4 @@
 <!ENTITY status4evar.advanced.warning "Tute rozšěrjene nastajenja móža problemy z Status-4-Evar abo druhimi rozšěrjenjemi zawinować. Změńće je na swoje riziko.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Pospyt XBL-zwjazanje adresoweho pola wunuzować.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Wubjerće to jenož, jeli maće problemy z postupom adresoweho pola abo jeli statusowy tekst so korektnje njezwobraznja. To móhło snano druhim rozšěrjenjam haćić, kotrež pospytuja XBL-zwjazanje na adresowym polu stajić.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">

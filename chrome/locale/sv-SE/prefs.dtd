@@ -83,3 +83,4 @@
 <!ENTITY status4evar.advanced.warning "Dessa avancerade inställningar kan skapa problem med Status-4-Evar eller andra tillägg. Används på egen risk.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Försök att tvinga XBL-bindningen för adressfältet.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Aktivera detta endast om du har problem med adressfältet eller statustextvisningen. Funktionen kan skapa konflikter med andra tillägg som försöker att ange en XBL-bindning i adressfältet.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">

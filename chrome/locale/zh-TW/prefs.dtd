@@ -83,3 +83,4 @@
 <!ENTITY status4evar.advanced.warning "進階設定可能會使 Status-4-Evar 或其他套件出問題。修改時請自負風險。">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "嘗試強制位址列 XBL binding。">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "只有在位址列進度條或狀態文字顯示有誤時才勾選此設定。另外這也有可能與其他試圖對位址列設定 XBL binding 的套件產生衝突。">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">

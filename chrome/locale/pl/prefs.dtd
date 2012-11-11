@@ -83,3 +83,4 @@
 <!ENTITY status4evar.advanced.warning "Te ustawienia mogą powodować problemy z rozszerzeniem Status-4-Evar lub innymi rozszerzeniami. Zmieniasz je na własną odpowiedzialność.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Próbuj ustawić wiązania XBL w pasku adresu">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Włącz tę funkcję tylko, gdy masz problemy z paskiem postępu w pasku adresu lub z prawidłowym wyświetlaniem tekstu statusu. Funkcja ta może powodować konflikty z innymi rozszerzeniami, które próbują w pasku adresu ustawić wiązania XBL.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
