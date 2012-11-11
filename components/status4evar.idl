@@ -46,6 +46,7 @@ interface nsIStatus4Evar : nsISupports
 	readonly attribute boolean   addonbarCloseButton;
 	readonly attribute boolean   addonbarWindowGripper;
 
+	readonly attribute boolean   advancedStatusDetectFullScreen;
 	readonly attribute boolean   advancedUrlbarForceBinding;
 
 	readonly attribute ACString  downloadColorActive;
@@ -70,7 +71,6 @@ interface nsIStatus4Evar : nsISupports
 
 	readonly attribute long      status;
 	readonly attribute boolean   statusDefault;
-	readonly attribute boolean   statusDetectFullScreen;
 	readonly attribute boolean   statusNetwork;
 	readonly attribute boolean   statusNetworkXHR;
 	readonly attribute long      statusTimeout;

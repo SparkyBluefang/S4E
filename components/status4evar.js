@@ -44,7 +44,7 @@ CU.import("resource://gre/modules/XPCOMUtils.jsm");
 CU.import("resource://gre/modules/Services.jsm");
 CU.import("resource://gre/modules/AddonManager.jsm");
 
-const CURRENT_MIGRATION = 5;
+const CURRENT_MIGRATION = 6;
 
 function Status_4_Evar(){}
 
@@ -63,6 +63,7 @@ Status_4_Evar.prototype =
 	addonbarCloseButton:		false,
 	addonbarWindowGripper:		true,
 
+	advancedStatusDetectFullScreen: true,
 	advancedUrlbarForceBinding:	false,
 
 	downloadColorActive:		null,
@@ -85,7 +86,6 @@ Status_4_Evar.prototype =
 
 	status:				1,
 	statusDefault:			true,
-	statusDetectFullScreen:		true,
 	statusNetwork:			true,
 	statusTimeout:			0,
 	statusLinkOver:			1,
@@ -145,6 +145,14 @@ Status_4_Evar.prototype =
 			updateWindow: function(win)
 			{
 				win.caligon.status4evar.updateWindowGripper(true);
+			}
+		},
+
+		"advanced.status.detectFullScreen":
+		{
+			update: function()
+			{
+				this.advancedStatusDetectFullScreen = this.prefs.getBoolPref("advanced.status.detectFullScreen");
 			}
 		},
 
@@ -386,14 +394,6 @@ Status_4_Evar.prototype =
 			{
 				win.caligon.status4evar.statusService.buildTextOrder();
 				win.caligon.status4evar.statusService.updateStatusField(true);
-			}
-		},
-
-		"status.detectFullScreen":
-		{
-			update: function()
-			{
-				this.statusDetectFullScreen = this.prefs.getBoolPref("status.detectFullScreen");
 			}
 		},
 
@@ -671,6 +671,9 @@ Status_4_Evar.prototype =
 
 			switch(migration)
 			{
+				case 5:
+					this.migrateBoolPref("status.detectFullScreen", "advanced.status.detectFullScreen");
+					break;
 				case CURRENT_MIGRATION:
 					break;
 			}

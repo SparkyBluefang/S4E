@@ -40,6 +40,7 @@ pref("status4evar.addonbar.closeButton", false);
 pref("status4evar.addonbar.windowGripper", true);
 
 pref("status4evar.advanced.showWarning", true);
+pref("status4evar.advanced.status.detectFullScreen", true);
 pref("status4evar.advanced.urlbar.forceBinding", false);
 
 pref("status4evar.download.color.active", "#33FF33");
@@ -68,7 +69,6 @@ pref("status4evar.progress.urlbar.style.advanced", false);
 
 pref("status4evar.status", 1);
 pref("status4evar.status.default", true);
-pref("status4evar.status.detectFullScreen", true);
 pref("status4evar.status.network", true);
 pref("status4evar.status.network.xhr", true);
 pref("status4evar.status.timeout", 0);

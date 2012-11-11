@@ -347,7 +347,7 @@ window.addEventListener("load", function buildS4E()
 		{
 			let label = null;
 
-			if(window.fullScreen && s4e_service.statusDetectFullScreen)
+			if(window.fullScreen && s4e_service.advancedStatusDetectFullScreen)
 			{
 				switch(location)
 				{

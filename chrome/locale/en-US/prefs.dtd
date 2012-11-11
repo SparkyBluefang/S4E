@@ -112,3 +112,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Attempt to force the the Location Bar XBL binding.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Only select this if you have problems with the Location Bar progress or status text being displaying correctly. This will potentially break other extensions that try to set an XBL binding on the Location Bar.">
 
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
+

@@ -51,6 +51,8 @@ var status4evarPrefs =
 				return this.dynamicProgressStyle = styleSheet;
 			}
 		}
+
+		return null;
 	},
 
 //
