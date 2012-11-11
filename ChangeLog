@@ -1,5 +1,7 @@
 Version next
 
+Version 2012.11.11.15b
+
 Version 2012.10.13.20b
 * Drop support for Firefox 9.0 and older.
 * Drop preference migration from S4E 2011.03.21.22 and older.
