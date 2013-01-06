@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Povolit zvýrazňování domény">
 <!ENTITY browser.urlbar.trimming.enabled.label "Povolit skrývání protokolu (http:// a ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Výchozí na pravé straně">
-<!ENTITY status4evar.status.popup.findMirror.label "Při otevřené liště hledání na opačné straně">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Změnit strany při najetí myší">
 <!ENTITY status4evar.progress.style.label "Použít vlastní styl pro lištu činnosti">
 <!ENTITY status4evar.progress.urlbar.enable.label "Zobrazit činnosti v adresním řádku">

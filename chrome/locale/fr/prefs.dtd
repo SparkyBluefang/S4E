@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Activer la mise en évidence du domaine">
 <!ENTITY browser.urlbar.trimming.enabled.label "Activer le masquage du protocole (http:// et ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Côté droit par défaut">
-<!ENTITY status4evar.status.popup.findMirror.label "Commencer du côté opposé lorsque la barre de recherche est ouverte">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Échanger les côtés lors du survol de la souris">
 <!ENTITY status4evar.progress.style.label "Utiliser un style personnalisé pour la barre de progression">
 <!ENTITY status4evar.progress.urlbar.enable.label "Afficher la progression dans la barre d'adresse">

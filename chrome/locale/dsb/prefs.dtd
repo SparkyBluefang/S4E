@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Wuzwignjenje domenow zmóžniś">
 <!ENTITY browser.urlbar.trimming.enabled.label "Chowanje protokola (http:// a ftp://) zmóžniś">
 <!ENTITY status4evar.status.popup.invertMirror.label "Standard napšawo">
-<!ENTITY status4evar.status.popup.findMirror.label "Na napśeśiwnem boku startowaś, gaž pytańska kšoma jo wócynjona">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Boki pśeměniś, gaž myš jo nad tym">
 <!ENTITY status4evar.progress.style.label "Swójski stil wužywaś">
 <!ENTITY status4evar.progress.urlbar.enable.label "Póstup w adresowem pólu pokazaś">

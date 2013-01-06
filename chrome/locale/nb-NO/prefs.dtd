@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Aktiver domeneutheving">
 <!ENTITY browser.urlbar.trimming.enabled.label "Aktiver protokollskjuling (http:// og ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Standard på høyre side">
-<!ENTITY status4evar.status.popup.findMirror.label "Start på motsatt side når søkelinjen er åpen">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Bytt sider når musepekeren er over">
 <!ENTITY status4evar.progress.style.label "Bruk egendefinert stil">
 <!ENTITY status4evar.progress.urlbar.enable.label "Vis fremdriftsindikator i adresselinjen">

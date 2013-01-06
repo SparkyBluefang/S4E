@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "启用域名高亮">
 <!ENTITY browser.urlbar.trimming.enabled.label "启用协议隐藏(http:// 和 ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "默认为右侧">
-<!ENTITY status4evar.status.popup.findMirror.label "搜索栏打开时在另一侧打开">
 <!ENTITY status4evar.status.popup.mouseMirror.label "鼠标悬停时移动到另一侧">
 <!ENTITY status4evar.progress.style.label "在进度条上使用自定义样式：">
 <!ENTITY status4evar.progress.urlbar.enable.label "在地址栏显示进度条">

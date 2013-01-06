@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Habilitar destaque de domínio">
 <!ENTITY browser.urlbar.trimming.enabled.label "Habilitar supressão do protocolo (http:// e ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Padrão no lado direito">
-<!ENTITY status4evar.status.popup.findMirror.label "Iniciar no lado oposto quando a barra de busca estiver aberta">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Trocar lados ao passar o mouse">
 <!ENTITY status4evar.progress.style.label "Posição:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Mostrar progreso na barra de endereços">

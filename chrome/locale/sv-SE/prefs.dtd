@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Markera huvuddomänen">
 <!ENTITY browser.urlbar.trimming.enabled.label "Dölj protokollet (http:// och ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "På höger sida som standard">
-<!ENTITY status4evar.status.popup.findMirror.label "Starta på motsatt sida när söklisten är öppen">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Växla sida vid mushovring">
 <!ENTITY status4evar.progress.style.label "Placering:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Visa förlopp i adressfältet">

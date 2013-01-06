@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Domain-Hervorhebung aktivieren">
 <!ENTITY browser.urlbar.trimming.enabled.label "Protokoll ausblenden (http:// und ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Standardmäßig auf der rechten Seite">
-<!ENTITY status4evar.status.popup.findMirror.label "Bei geöffneter Suchleiste, auf gegenüberliegender Seite starten.">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Beim Überfahren mit der Maus, Seite wechseln">
 <!ENTITY status4evar.progress.style.label "Benutzerdefinierten Stil für Fortschrittsanzeige verwenden">
 <!ENTITY status4evar.progress.urlbar.enable.label "Fortschritt in der Adressleiste anzeigen">

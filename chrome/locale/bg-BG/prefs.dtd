@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Осветяване на домейна">
 <!ENTITY browser.urlbar.trimming.enabled.label "Скриване на протокола (http:// и ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Продравняване вдясно по подразбиране">
-<!ENTITY status4evar.status.popup.findMirror.label "Стартиране в противоположния ъгъл, когато лентата за търсене е активна">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Преместване в противоположния ъгъл при посочване с курсора на мишката">
 <!ENTITY status4evar.progress.style.label "Използване на собствен стил за изобразяване на напредъка">
 <!ENTITY status4evar.progress.urlbar.enable.label "Показване на напредъка в адресната лента">

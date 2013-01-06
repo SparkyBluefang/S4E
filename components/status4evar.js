@@ -98,7 +98,6 @@ Status_4_Evar.prototype =
 	statusUrlbarColor:		null,
 	statusUrlbarPosition:		33,
 
-	statusUrlbarFindMirror:		true,
 	statusUrlbarInvertMirror:	false,
 	statusUrlbarMouseMirror:	true,
 
@@ -442,22 +441,6 @@ Status_4_Evar.prototype =
 			updateWindow: function(win)
 			{
 				win.caligon.status4evar.statusService.buildTextOrder();
-			}
-		},
-
-		"status.popup.findMirror":
-		{
-			update: function()
-			{
-				this.statusUrlbarFindMirror = this.prefs.getBoolPref("status.popup.findMirror");
-			},
-			updateWindow: function(win)
-			{
-				let statusOverlay = win.caligon.status4evar.getters.statusOverlay;
-				if(statusOverlay)
-				{
-					statusOverlay.findMirror = this.statusUrlbarFindMirror;
-				}
 			}
 		},
 

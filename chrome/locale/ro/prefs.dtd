@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Activează evidențierea domeniului">
 <!ENTITY browser.urlbar.trimming.enabled.label "Activează mascarea protocolului (http:// și ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Afișează implicit în partea dreaptă">
-<!ENTITY status4evar.status.popup.findMirror.label "Afișează în partea opusă când bara de căutare este afișată">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Afișează în partea opusă la survolarea cu mausul">
 <!ENTITY status4evar.progress.style.label "Utilizează un stil particularizat pentru bara de progres">
 <!ENTITY status4evar.progress.urlbar.enable.label "Afișează bara de progres în bara de adrese">

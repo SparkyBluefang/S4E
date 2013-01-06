@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Ενεργοποίηση τονισμού τομέα">
 <!ENTITY browser.urlbar.trimming.enabled.label "Ενεργοποίηση απόκρυψης πρωτοκόλλου (http:// και ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Εμφάνιση στη δεξιά πλευρά κατά προεπιλογή">
-<!ENTITY status4evar.status.popup.findMirror.label "Εμφάνιση στην αντίθετη πλευρά όταν η γραμμή εύρεσης είναι ανοικτή">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Εναλλαγή πλευρών όταν προσεγγίζεται από το δείκτη του ποντικιού">
 <!ENTITY status4evar.progress.style.label "Χρήση προσαρμοσμένης τεχνοτροπίας στον ενδείκτη προόδου">
 <!ENTITY status4evar.progress.urlbar.enable.label "Εμφάνιση προόδου στη γραμμή τοποθεσιών">

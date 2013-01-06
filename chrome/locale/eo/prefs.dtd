@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Ebligi retregionan reliefigon">
 <!ENTITY browser.urlbar.trimming.enabled.label "Kaŝi protokolon (http:// kaj ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Defaŭlta dekstre">
-<!ENTITY status4evar.status.popup.findMirror.label "Komenci je la kontraŭe troviĝanta flanko, kiam la serĉbreto estas malfermita">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Ŝanĝi flankojn, se la muso estas super ĝi">
 <!ENTITY status4evar.progress.style.label "Uzi propran stilon">
 <!ENTITY status4evar.progress.urlbar.enable.label "Montri plenumadon en la adresbreto">

@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Markeren van domeinnaam inschakelen">
 <!ENTITY browser.urlbar.trimming.enabled.label "Verbergen van protocol inschakelen (http:// en ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Standaard aan de rechterkant">
-<!ENTITY status4evar.status.popup.findMirror.label "Begin aan de andere kant als de Zoekbalk geopend is">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Naar de andere kant verplaatsen als de muis erover beweegt">
 <!ENTITY status4evar.progress.style.label "Positie:">
 <!ENTITY status4evar.progress.urlbar.enable.label "Voortgang tonen in locatiebalk">

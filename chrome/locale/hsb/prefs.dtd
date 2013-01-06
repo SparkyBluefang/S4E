@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "Wuzběhnjenje domeny zmóžnić">
 <!ENTITY browser.urlbar.trimming.enabled.label "Protokol schować (http:// a ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Standard naprawo">
-<!ENTITY status4evar.status.popup.findMirror.label "Na napřećiwnym boku startować, hdyž pytanska lajsta je wočinjena">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Boki přeměnić, hdyž myš je nad tym">
 <!ENTITY status4evar.progress.style.label "Swójski stil za postupowu hrjadu wužiwać">
 <!ENTITY status4evar.progress.urlbar.enable.label "Postup w adresowym polu pokazać">

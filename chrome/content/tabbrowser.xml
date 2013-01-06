@@ -240,45 +240,5 @@
 			</method>
 		</implementation>
 	</binding>
-
-	<binding id="statuspanel-11" display="xul:hbox" extends="chrome://status4evar/content/tabbrowser.xml#statuspanel">
-		<implementation>
-			<field name="findMirror"><![CDATA[
-				true
-			]]></field>
-
-			<property name="value">
-				<setter><![CDATA[
-					if(!val)
-					{
-						this.mirror = (this.findMirror && window.gFindBarInitialized && !window.gFindBar.hidden);
-					}
-
-					this.setValue(val);
-					return val;
-				]]></setter>
-				<getter><![CDATA[
-					return this.getAttribute("label");
-				]]></getter>
-			</property>
-
-			<method name="setupMouseMirror">
-				<parameter name="val"/>
-				<body><![CDATA[
-					this.setBooleanAttr("nomouse", !this._mouseMirror);
-				]]></body>
-			</method>
-
-			<method name="handleEvent">
-				<parameter name="event"/>
-				<body><![CDATA[
-					if(this.findMirror && event.type == "findbaropen" && this.value)
-					{
-						this.mirror = true;
-					}
-				]]></body>
-			</method>
-		</implementation>
-	</binding>
 </bindings>
 

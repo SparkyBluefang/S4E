@@ -55,7 +55,6 @@
 <!ENTITY browser.urlbar.formatting.enabled.label "啟用網域高亮度標示">
 <!ENTITY browser.urlbar.trimming.enabled.label "啟用協定隱藏 (http:// 及 ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "預設靠右顯示">
-<!ENTITY status4evar.status.popup.findMirror.label "尋找列開啟時從另一邊彈出">
 <!ENTITY status4evar.status.popup.mouseMirror.label "滑鼠經過時改變位置">
 <!ENTITY status4evar.progress.style.label "進度列使用自訂樣式">
 <!ENTITY status4evar.progress.urlbar.enable.label "在位址列顯示載入進度">
