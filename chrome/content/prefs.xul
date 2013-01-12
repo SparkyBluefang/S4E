@@ -321,6 +321,7 @@
 			<preference id="status4evar-pref-download-label-force"  name="status4evar.download.label.force"  type="bool" />
 			<preference id="status4evar-pref-download-progress"     name="status4evar.download.progress"     type="int" />
 			<preference id="status4evar-pref-download-tooltip"      name="status4evar.download.tooltip"      type="int" />
+			<preference id="toolkit-pref-classic-download-window"   name="browser.download.useToolkitUI"     type="bool" />
 		</preferences>
 
 		<commandset id="status4evar-commandset-download">
@@ -375,6 +376,14 @@
 				<colorpicker id="status4evar-download-color-paused-picker" preference="status4evar-pref-download-color-paused" type="button" />
 			</hbox>
 		</vbox>
+
+		<separator/>
+
+		<groupbox id="status4evar-download-builtin">
+			<caption label="&status4evar.status.urlbar.firefox.builtin.caption;" />
+
+			<checkbox id="toolkit-classic-download-window-check" preference="toolkit-pref-classic-download-window" label="&toolkit.classic.download.window.label;" />
+		</groupbox>
 	</prefpane>
 
 	<prefpane id="status4evar-pane-addonbar" label="&status4evar.pane.addonbar;">
