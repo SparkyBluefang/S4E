@@ -164,6 +164,12 @@
 							<textbox id="status4evar-status-linkOver-delay-hide-value" preference="status4evar-pref-status-linkOver-delay-hide" type="number" size="5" />
 						</hbox>
 					</groupbox>
+
+					<groupbox id="status4evar-status-urlbar-builtin">
+						<caption label="&status4evar.status.urlbar.firefox.builtin.caption;" />
+
+						<checkbox id="browser-urlbar-trimming-enabled-ckeck" preference="browser-pref-urlbar-trimming-enabled" label="&browser.urlbar.trimming.enabled.label;" />
+					</groupbox>
 				</tabpanel>
 
 				<tabpanel id="status4evar-tabpanel-status-urlbar" orient="vertical">
@@ -204,7 +210,6 @@
 						<caption label="&status4evar.status.urlbar.firefox.builtin.caption;" />
 
 						<checkbox id="browser-urlbar-formatting-enabled-ckeck" preference="browser-pref-urlbar-formatting-enabled" label="&browser.urlbar.formatting.enabled.label;" />
-						<checkbox id="browser-urlbar-trimming-enabled-ckeck" preference="browser-pref-urlbar-trimming-enabled" label="&browser.urlbar.trimming.enabled.label;" />
 					</groupbox>
 				</tabpanel>
 

@@ -1,5 +1,6 @@
 Version next
 * Drop support for Firefox 16.0 and older.
+* Fix protocol hiding in the toolbar and pop-up.
 
 Version 2012.11.11.16b
 * Make compatible with Firefox 19 CSS parser changes.

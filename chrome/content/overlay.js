@@ -192,6 +192,10 @@ window.addEventListener("load", function buildS4E()
 			if(statusLinkOver)
 			{
 				link = link.replace(/[\u200e\u200f\u202a\u202b\u202c\u202d\u202e]/g, encodeURIComponent);
+				if(s4e_getters.urlbar && s4e_getters.urlbar._mayTrimURLs)
+				{
+					link = trimURL(link);
+				}
 
 				if(status == statusLinkOver)
 				{

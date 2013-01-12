@@ -251,11 +251,6 @@
 			<method name="_updateOverLink">
 				<parameter name="aURL"/>
 				<body><![CDATA[
-					if(typeof this.trimValue == "function")
-					{
-						aURL = this.trimValue(aURL);
-					}
-
 					// Determine the pre-path and path of the over-link.  Include the
 					// path's leading slash in the pre-path so that if the path is
 					// truncated its leading slash is visible.
