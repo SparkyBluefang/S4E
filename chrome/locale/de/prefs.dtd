@@ -76,6 +76,7 @@
 <!ENTITY status4evar.download.progress.min.label "Am wenigsten fortgeschrittenen Download anzeigen">
 <!ENTITY status4evar.download.color.active.label "Fortschrittsfarbe für aktive Downloads:">
 <!ENTITY status4evar.download.color.paused.label "Fortschrittsfarbe für pausierte Downloads:">
+<!ENTITY toolkit.classic.download.window.label "Use classic download window">
 <!ENTITY status4evar.addonbar.borderStyle "Alternativen Symbolleisten-Rand verwenden">
 <!ENTITY status4evar.addonbar.windowGripper "Anfasser zur Fenstergrößenänderung anzeigen">
 <!ENTITY status4evar.addonbar.closeButton "Schließen-Schaltfläche anzeigen">

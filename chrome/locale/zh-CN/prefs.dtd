@@ -76,6 +76,7 @@
 <!ENTITY status4evar.download.progress.min.label "显示最小下载完成量">
 <!ENTITY status4evar.download.color.active.label "活动下载的进度条颜色:">
 <!ENTITY status4evar.download.color.paused.label "暂停下载的进度条颜色:">
+<!ENTITY toolkit.classic.download.window.label "Use classic download window">
 <!ENTITY status4evar.addonbar.borderStyle "使用备用的工具栏边框">
 <!ENTITY status4evar.addonbar.windowGripper "显示窗口大小调整控件">
 <!ENTITY status4evar.addonbar.closeButton "显示关闭按钮">

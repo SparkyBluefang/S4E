@@ -76,6 +76,7 @@
 <!ENTITY status4evar.download.progress.min.label "Visa minst färdigställda hämtning">
 <!ENTITY status4evar.download.color.active.label "Förloppsfärg för aktiva hämtningar:">
 <!ENTITY status4evar.download.color.paused.label "Förloppsfärg för pausade hämtningar:">
+<!ENTITY toolkit.classic.download.window.label "Use classic download window">
 <!ENTITY status4evar.addonbar.borderStyle "Använd alternativa verktygsfältskantlinjer">
 <!ENTITY status4evar.addonbar.windowGripper "Visa handtaget för fönsterstorleksändring">
 <!ENTITY status4evar.addonbar.closeButton "Visa stängknappen">
