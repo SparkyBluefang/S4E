@@ -1,5 +1,5 @@
-<!ENTITY status4evar.status.widget.title "ステータスのテキスト">
-<!ENTITY status4evar.progress.widget.title "進行メーター">
-<!ENTITY status4evar.download.widget.title "ダウンロードの状態">
-<!ENTITY status4evar.options.widget.title "オプション">
-<!ENTITY status4evar.options.widget.label "ステータスバー">
+<!ENTITY status4evar.status.widget.title "ステータスのテキスト表示">
+<!ENTITY status4evar.progress.widget.title "プログレスメーター">
+<!ENTITY status4evar.download.widget.title "ダウンロード状況">
+<!ENTITY status4evar.options.widget.title "Status-4-Evar オプション">
+<!ENTITY status4evar.options.widget.label "Status-4-Evar">

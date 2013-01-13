@@ -82,4 +82,4 @@
 <!ENTITY status4evar.advanced.warning "Tyto rozšířené možnosti mohou způsobit problémy se S-4-E nebo jinými rozšířeními. Změny ne vlastní nebezpečí.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Pokusit se vynutit XBL vazby adresního řádku.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Zvolte pouze pokud máte problémy se zobrazením činnosti nebo stavu v adresním řádku. Toto může potenciálně poškodit jiné rozšíření, které nastavuje XBL vazby adresního řádku.">
-<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Přizpůsobit zobrazení odkazů/stavu v režimu celé obrazovky.">

@@ -82,4 +82,4 @@
 <!ENTITY status4evar.advanced.warning "Disse avanserte innstillinger kan forårsake problemer med Status-4-Evar eller andre utvidelser. Modifiser på din egen risiko.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Forsøk å tvinge XBL bindingen for adresselinjen.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Bare velg dette hvis du har problemer med at adresselinje-fremdriftsindikatoren eller statusteksten ikke blir vist riktig. Dette vil potensielt bryte andre utvidelser som forsøker å sette en XBL binding på adresselinjen.">
-<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Oppdag fullskjermmodus og vis lenker/status riktig.">

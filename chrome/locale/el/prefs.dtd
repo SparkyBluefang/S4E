@@ -82,4 +82,4 @@
 <!ENTITY status4evar.advanced.warning "Αυτές οι προηγμένες ρυθμίσεις μπορεί να προκαλέσουν προβλήματα με την επέκταση 'Status-4-EVAR' ή άλλες επεκτάσεις. Τροποποιήστε τις με δικό σας ρίσκο.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Προσπάθεια επιβολής της διάδεσης XBL γραμμής τοποθεσιών.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Δοκιμάστε αυτήν την επιλογή μόνο εάν έχετε προβλήματα σωστής εμφάνισης της προόδου ή του κειμένου κατάστασης στη γραμμή τοποθεσιών. Αυτό εν δυνάμει διασπάει άλλες επεκτάσεις που προσπαθούν να θέσουν κάποια διάδεση XBL στη γραμμή τοποθεσιών.">
-<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Ανίχνευση λειτουργίας πλήρους οθόνης και εμφάνιση δεσμών/κατάστασης κατάλληλα.">

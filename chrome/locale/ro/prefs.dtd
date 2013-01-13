@@ -82,4 +82,4 @@
 <!ENTITY status4evar.advanced.warning "Aceste opțiuni complexe pot provoca unele probleme cu Status-4-Evar sau alte suplimentele. Modificați-le pe propriul risc.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Încearcă forțarea legăturii XBL cu bara de adrese">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Selectați această opțiune doar dacă aveţi probleme de afișare a progresului sau textului pe bara de adrese. Acest lucru poate bloca alte suplimente care încearcă să stabilească legături XBL cu bara de adrese.">
-<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Detectează modul ecran-complet și afișează legăturile/starea corespunzătoare">

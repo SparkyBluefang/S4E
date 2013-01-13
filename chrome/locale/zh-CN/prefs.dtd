@@ -82,4 +82,4 @@
 <!ENTITY status4evar.advanced.warning "高级设置可能导致Status-4-Evar或者其它扩展出现问题。修改后出现问题后果自负。">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "尝试强制为地址栏绑定XBL">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "请仅在地址栏进度条或者状态文字显示有误的时候选中此项。这样做可能会导致其它扩展为地址栏绑定的XBL失效。">
-<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "检测全屏模式并正确显示链接/状态.">

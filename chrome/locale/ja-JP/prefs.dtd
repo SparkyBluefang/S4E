@@ -1,6 +1,6 @@
-<!ENTITY status4evar.window.title "Status-4-Evar設定">
+<!ENTITY status4evar.window.title "Status-4-Evar 設定">
 <!ENTITY status4evar.pane.status "ステータス">
-<!ENTITY status4evar.pane.progress "進行">
+<!ENTITY status4evar.pane.progress "プログレス">
 <!ENTITY status4evar.pane.download "ダウンロード">
 <!ENTITY status4evar.pane.addonbar "アドオンバー">
 <!ENTITY status4evar.pane.advanced "詳細">
@@ -16,13 +16,13 @@
 <!ENTITY status4evar.option.tooltip "ツールチップ">
 <!ENTITY status4evar.option.bottom "下">
 <!ENTITY status4evar.option.top "上">
-<!ENTITY status4evar.option.fill "埋める">
+<!ENTITY status4evar.option.fill "塗りつぶす">
 <!ENTITY status4evar.option.dlcount "ダウンロード数">
 <!ENTITY status4evar.option.dltime "残り時間">
 <!ENTITY status4evar.option.both "両方">
 <!ENTITY status4evar.option.right "右">
 <!ENTITY status4evar.option.left "左">
-<!ENTITY status4evar.option.fixed "絶対位置">
+<!ENTITY status4evar.option.fixed "位置固定">
 <!ENTITY status4evar.option.simple "簡易">
 <!ENTITY status4evar.option.advanced "上級者向け">
 <!ENTITY status4evar.option.browse "参照">
@@ -35,13 +35,13 @@
 <!ENTITY status4evar.option.round "丸">
 <!ENTITY status4evar.unit.seconds "秒">
 <!ENTITY status4evar.unit.px "ピクセル">
-<!ENTITY status4evar.status.general.status.caption "ステータスのテキスト">
+<!ENTITY status4evar.status.general.status.caption "ステータスのテキスト表示">
 <!ENTITY status4evar.status.label "ステータスの表示場所:">
 <!ENTITY status4evar.status.timeout.label "ステータスの表示時間:">
 <!ENTITY status4evar.status.default.label "デフォルトのステータスを表示">
 <!ENTITY status4evar.status.network.label "ネットワークのステータスを表示">
-<!ENTITY status4evar.status.network.xhr.label "背景のネットワークのステータスを表示">
-<!ENTITY toolkit.dom.status.change.label "ウェブページによるステータスの変更を許可する">
+<!ENTITY status4evar.status.network.xhr.label "バックグラウンド（XHR）のネットワークのステータスを表示">
+<!ENTITY toolkit.dom.status.change.label "ウェブページによるステータスの変更を許可">
 <!ENTITY status4evar.status.general.linkOver.caption "リンク">
 <!ENTITY status4evar.status.linkOver.label "リンクの表示場所:">
 <!ENTITY status4evar.status.linkOver.delay.show.label "リンクを表示するまでの間隔:">
@@ -50,14 +50,14 @@
 <!ENTITY status4evar.status.urlbar.align.label "ステータスの位置:">
 <!ENTITY status4evar.status.urlbar.color.label "文字色:">
 <!ENTITY status4evar.status.currentUrl "現在のURL">
-<!ENTITY status4evar.status.statusText "ステータステキスト">
+<!ENTITY status4evar.status.statusText "ステータスのテキスト表示">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefoxの機能">
-<!ENTITY browser.urlbar.formatting.enabled.label "ドメインをハイライトする">
-<!ENTITY browser.urlbar.trimming.enabled.label "プロトコルを非表示にする (http:// と ftp://)">
+<!ENTITY browser.urlbar.formatting.enabled.label "ドメインをハイライト">
+<!ENTITY browser.urlbar.trimming.enabled.label "プロトコルを非表示 (http:// と ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "右側を標準にする">
 <!ENTITY status4evar.status.popup.mouseMirror.label "マウスオーバーしたとき逆側にする">
 <!ENTITY status4evar.progress.style.label "位置：">
-<!ENTITY status4evar.progress.urlbar.enable.label "ロケーションバーに進行状態を表示">
+<!ENTITY status4evar.progress.urlbar.enable.label "ロケーションバーでプログレス表示">
 <!ENTITY status4evar.progress.urlbar.line.label "ラインのスタイル:">
 <!ENTITY status4evar.progress.toolbar.force.label "ツールバーのアイテムを常に表示">
 <!ENTITY status4evar.editor.label "エディタ:">
@@ -66,20 +66,20 @@
 <!ENTITY status4evar.editor.css.image.repeat "繰り返し">
 <!ENTITY status4evar.editor.css.image.position "位置">
 <!ENTITY status4evar.editor.css.image.offset "オフセット">
-<!ENTITY status4evar.download.force.label "ダウンロードの進行状況を常に表示">
-<!ENTITY status4evar.download.label.force.label "常にラベルを表示">
+<!ENTITY status4evar.download.force.label "ダウンロードステータスボタンを常に表示">
+<!ENTITY status4evar.download.label.force.label "常にボタンテキストも表示">
 <!ENTITY status4evar.download.label.label "ダウンロードステータスボタンのラベル：">
 <!ENTITY status4evar.download.tooltip.label "ダウンロードステータスボタンのツールチップ：">
-<!ENTITY status4evar.download.progress.label "ボタンにダウンロードの進行状況を表示する">
-<!ENTITY status4evar.download.progress.average.label "平均ダウンロード完了時間を表示する">
-<!ENTITY status4evar.download.progress.max.label "ほぼ完了しているダウンロードを表示">
-<!ENTITY status4evar.download.progress.min.label "未完了のダウンロードを表示">
+<!ENTITY status4evar.download.progress.label "ボタンにダウンロードをプログレス表示">
+<!ENTITY status4evar.download.progress.average.label "平均したダウンロードのプログレスを表示">
+<!ENTITY status4evar.download.progress.max.label "最も進んでいるダウンロードのプログレスを表示">
+<!ENTITY status4evar.download.progress.min.label "最も遅れているダウンロードのプログレスを表示">
 <!ENTITY status4evar.download.color.active.label "進行中のダウンロードの色:">
 <!ENTITY status4evar.download.color.paused.label "停止中のダウンロードの色:">
-<!ENTITY status4evar.addonbar.borderStyle "別のツールバーの境界を使う">
-<!ENTITY status4evar.addonbar.windowGripper "ウインドウのリサイズパネルを表示">
+<!ENTITY status4evar.addonbar.borderStyle "別のボーダースタイルを使用">
+<!ENTITY status4evar.addonbar.windowGripper "ウインドウをリサイズするグリップを表示">
 <!ENTITY status4evar.addonbar.closeButton "閉じるボタンを表示">
 <!ENTITY status4evar.advanced.warning "詳細設定を誤ると、Status-4-Evar はもとより他の拡張機能に対しても問題を発生させることがあります。設定は自己責任で行うこと">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "ロケーションバーで強制的に XBL binding を試みる">
-<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "ロケーションバーの進行状態やテキスト表示に異常がある場合にだけ選択すること（他の拡張機能がロケーションバーで XBL Binding するのを妨げる可能性があるため）">
-<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "ロケーションバーでのプログレス表示やテキスト表示に異常がある場合にだけ選択。他の拡張機能がロケーションバーで XBL Binding するのを妨げる可能性があるため">
+<!ENTITY status4evar.advanced.status.detectFullScreen "全画面表示でリンク／ステータスを適切に表示">
