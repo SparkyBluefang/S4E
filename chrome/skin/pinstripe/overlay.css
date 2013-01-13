@@ -78,6 +78,15 @@ splitter.status4evar-status-splitter
 }
 
 /*
+ * Location bar
+ */
+
+#urlbar-progress-alt
+{
+       margin-right: -1px;
+}
+
+/*
  * Toolbar progress
  */
 
@@ -90,26 +99,6 @@ splitter.status4evar-status-splitter
 #status4evar-progress-bar[s4estyle="true"] > .progress-remainder
 {
 	background-color: white;
-}
-
-/*
- * Location bar
- */
-
-.urlbar-stack
-{
-	margin: 0px;
-	-moz-margin-end: -2px;
-}
-
-#urlbar-container:not([combined]) #urlbar-progress-alt
-{
-	margin-right: -1px;
-}
-
-#urlbar-container:not([combined]) #urlbar:not([pmpack="center"]) #urlbar-progress-alt
-{
-	margin-right: -2px;
 }
 
 /*

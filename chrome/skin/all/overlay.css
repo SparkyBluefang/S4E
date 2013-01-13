@@ -191,12 +191,14 @@ splitter.status4evar-status-splitter:not(:hover)
 #urlbar-container:not([combined]) #urlbar:not([pmpack="begin"]) #urlbar-progress-alt,
 #urlbar-container:not([combined]) #urlbar:not([pmpack="begin"]) #urlbar-progress-alt > *
 {
+	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 }
 
 #urlbar-container:not([combined]) #urlbar:not([pmpack="end"]) #urlbar-progress-alt,
 #urlbar-container:not([combined]) #urlbar:not([pmpack="end"]) #urlbar-progress-alt > *
 {
+	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }
 

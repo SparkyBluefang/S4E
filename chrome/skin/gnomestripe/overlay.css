@@ -93,19 +93,14 @@ splitter.status4evar-status-splitter
  * Location bar
  */
 
-.urlbar-stack
+#urlbar-progress-alt
 {
-	margin: -1px 0px
+	margin: -1px;
 }
 
-#urlbar-container:not([combined]) #urlbar-progress-alt
+#notification-popup-box
 {
-	margin-right: -1px;
-}
-
-#urlbar-container:not([combined]) #urlbar:not([pmpack="center"]) #urlbar-progress-alt
-{
-	margin-right: -2px;
+	-moz-margin-start: -1px;
 }
 
 /*

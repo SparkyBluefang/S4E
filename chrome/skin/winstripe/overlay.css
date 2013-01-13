@@ -80,14 +80,9 @@ splitter.status4evar-status-splitter
  * Location bar
  */
 
-#urlbar-container:not([combined]) #urlbar-progress-alt
+#urlbar-progress-alt
 {
-	margin-right: -2px;
-}
-
-#urlbar-container:not([combined]) #urlbar:not([pmpack="center"]) #urlbar-progress-alt
-{
-	margin-right: -3px;
+	-moz-margin-end: -2px;
 }
 
 /*
