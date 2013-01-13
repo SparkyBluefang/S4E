@@ -37,55 +37,56 @@
 #
 # ***** END LICENSE BLOCK *****
 
-VALID=""
-HELP=""
 VERSION=`date +%Y.%m.%d.%H`
-VERSION_BUMP=""
+RELEASE=""
+FORCE=""
 
-case "$1" in
-	-a|--alpha)
-		VERSION="${VERSION}a"
-		VERSION_BUMP="1"
-		VALID="1"
-		;;
-	-b|--beta)
-		VERSION="${VERSION}b"
-		VALID="1"
-		;;
-	-p|--pre)
-		VERSION="${VERSION}pre"
-		VERSION_BUMP="1"
-		VALID="1"
-		;;
-	-r|--release)
-		VALID="1"
-		;;
-	-h|--help)
-		HELP="1"
-		VALID="1"
-		;;
-esac
-
-EXIT=0
-if [ -z "${VALID}" ]; then
-	echo "Invalid action: '${1}'"
-	EXIT=1
-fi
-if [ -z "${VALID}" ] || [ -n "${HELP}" ]; then
+usage() {
 	echo "Options:"
 	echo " -a --alpha   Alpha version bump"
 	echo " -b --beta    Beta release"
 	echo " -p --pre     Pre version bump"
 	echo " -r --release Final release"
+	echo " -f --force   Continue even with uncommitted changes (alpha/pre only)"
 	echo " -h --help    Print this help message"
 	echo ""
 	echo "Version bumps will just modify the install.manifest and commit the changes. Releases will also modify the ChangeLog and tag the commit."
-	exit $EXIT
-fi
+	exit $1
+}
+
+while [ -n "$1" ]; do
+	case "$1" in
+		-a|--alpha)
+			VERSION="${VERSION}a"
+			;;
+		-b|--beta)
+			VERSION="${VERSION}b"
+			RELEASE="1"
+			;;
+		-p|--pre)
+			VERSION="${VERSION}pre"
+			;;
+		-r|--release)
+			RELEASE="1"
+			;;
+		-f|--force)
+			FORCE="1"
+			;;
+		-h|--help)
+			usage 0
+			;;
+		default)
+			echo "Invalid action: '$1'"
+			usage 1
+			;;
+	esac
+
+	shift
+done
 
 # Check for uncommitted changes
 CHANGES=`git diff HEAD --exit-code --name-only`
-if [ $? -ne 0 ]; then
+if [ $? -ne 0 ] && ( [ -n "$RELEASE" ] || [ -z "$FORCE" ] ); then
 	echo "There are uncommitted changes:"
 	echo "${CHANGES}"
 	exit 1
@@ -95,7 +96,7 @@ fi
 sed -i "/^version=/s/=.*$/=${VERSION}/g" install.manifest
 git add install.manifest
 
-if [ -z "${VERSION_BUMP}" ]; then
+if [ -n "${RELEASE}" ]; then
 	# Update the ChangeLog
 	sed -i "/^Version /s/ next$/ next\n\nVersion ${VERSION}/g" ChangeLog
 	git add ChangeLog
