@@ -1040,8 +1040,8 @@ window.addEventListener("load", function buildS4E()
 
 		setup: function()
 		{
-			lastFullScreen = window.fullScreen;
-			lastwindowState = window.windowState;
+			this.lastFullScreen = window.fullScreen;
+			this.lastwindowState = window.windowState;
 			window.addEventListener("sizemodechange", this, false);
 		},
 
