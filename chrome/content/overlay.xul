@@ -65,14 +65,24 @@
 		<toolbarbutton id="status4evar-download-button"
 		               title="&status4evar.download.widget.title;"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
-		               removable="true" command="Tools:Downloads" collapsed="true" tooltip="_child" pmCollapsed="true">
+		               removable="true" collapsed="true" tooltip="_child"
+		               oncommand="caligon.status4evar.downloadStatus.openPanel(event)">
+			<stack id="status4evar-download-anchor" class="toolbarbutton-icon">
+				<vbox id="status4evar-download-icon" />
+				<hbox pack="end">
+					<progressmeter id="status4evar-download-progress-bar" mode="normal" value="0" collapsed="true"
+					               min="0" max="100" orient="vertical" />
+				</hbox>
+				<vbox id="status4evar-download-notification-icon" />
+			</stack>
 			<tooltip id="status4evar-download-tooltip" />
+			<label id="status4evar-download-label" value="&status4evar.download.widget.title;" class="toolbarbutton-text" crop="right" flex="1" />
 		</toolbarbutton>
 		<toolbaritem id="status4evar-progress-widget"
 		             title="&status4evar.progress.widget.title;"
 		             removable="true">
 			<progressmeter id="status4evar-progress-bar" class="progressmeter-statusbar"
-			               mode="normal" value="0" collapsed="true" />
+			               mode="normal" value="0" collapsed="true" min="0" max="100" />
 		</toolbaritem>
 		<toolbarbutton id="status4evar-options-button"
 		               title="&status4evar.options.widget.title;"

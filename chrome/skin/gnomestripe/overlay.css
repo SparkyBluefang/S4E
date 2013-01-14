@@ -51,25 +51,36 @@
  * Download status
  */
 
-#status4evar-download-button
+#status4evar-download-anchor
 {
-	-moz-image-region: rect(0px 24px 24px 0px);
+	position: relative;
+	min-width: 24px;
+	min-height: 24px;
 }
 
-#status4evar-download-button .dl-progress
+toolbar[iconsize="small"] #status4evar-download-anchor
 {
-	height: 24px;
+	min-width: 16px;
+	min-height: 16px;
 }
 
-toolbar[iconsize="small"] #status4evar-download-button
+#status4evar-download-button #status4evar-download-icon
 {
-	list-style-image: url("chrome://browser/skin/Toolbar-small.png");
-	-moz-image-region: rect(0px 16px 16px 0px);
+	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 24, 24, 0) center no-repeat;
 }
 
-toolbar[iconsize="small"] #status4evar-download-button .dl-progress
+#status4evar-download-button[attention] #status4evar-download-icon
 {
-	height: 16px;
+	background-image: url("chrome://browser/skin/downloads/download-glow.png");
+}
+
+toolbar[iconsize="small"] #status4evar-download-button #status4evar-download-icon
+{
+	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"), 0, 16, 16, 0) center no-repeat;
+}
+
+toolbar[iconsize="small"] > #status4evar-download-button[attention] #status4evar-download-icon {
+	background-image: url("chrome://browser/skin/downloads/download-glow-small.png");
 }
 
 toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label

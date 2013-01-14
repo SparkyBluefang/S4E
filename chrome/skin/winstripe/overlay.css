@@ -51,14 +51,26 @@
  * Download status
  */
 
-#status4evar-download-button
+#status4evar-download-anchor
 {
-	-moz-image-region: rect(0, 108px, 18px, 90px);
+	position: relative;
+	min-width: 18px;
+	min-height: 18px;
 }
 
-#status4evar-download-button .dl-progress
+#status4evar-download-button #status4evar-icon
 {
-	height: 18px;
+	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 108, 18, 90) center no-repeat;
+}
+
+#status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon
+{
+	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 108, 18, 90) center no-repeat;
+}
+
+#status4evar-download-button[attention] #status4evar-download-icon
+{
+	background-image: url("chrome://browser/skin/downloads/download-glow.png");
 }
 
 toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label

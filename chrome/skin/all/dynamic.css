@@ -57,12 +57,12 @@
 	color: GrayText;
 }
 
-#status4evar-download-button[pmType^="active"] .dl-progress-bar
+#status4evar-download-progress-bar[pmType^="active"] > .progress-bar
 {
 	background-color: #33FF33;
 }
 
-#status4evar-download-button[pmType^="paused"] .dl-progress-bar
+#status4evar-download-progress-bar[pmType^="paused"] > .progress-bar
 {
 	background-color: gray;
 }

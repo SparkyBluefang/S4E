@@ -52,14 +52,6 @@
 }
 
 /*
- * Download progress button
- */
-#status4evar-download-button
-{
-	-moz-binding: url("chrome://status4evar/content/overlay.xml#downloadbutton");
-}
-
-/*
  * Status Popup
  */
 

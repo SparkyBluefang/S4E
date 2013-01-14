@@ -83,11 +83,6 @@ toolbar[iconsize="small"] #status4evar-options-button
  * Download status
  */
 
-#status4evar-download-button
-{
-	list-style-image: url("chrome://browser/skin/Toolbar.png");
-}
-
 toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"],
 toolbar[mode="text"] #status4evar-download-button
 {
@@ -99,46 +94,52 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
 	display: -moz-box !important;
 }
 
-#status4evar-download-button .toolbarbutton-icon
-{
-	margin: 0px !important;
-}
-
-#status4evar-download-button .dl-progress-wrapper
-{
-	min-width: 6px;
-}
-
-#status4evar-download-button .dl-progress
+#status4evar-download-progress-bar
 {
 	width: 6px;
+	min-width: 6px;
 	border: 1px solid gray;
+	-moz-appearance: none;
+	margin: 0px;
 }
 
-toolbar[iconsize="small"] #status4evar-download-button .dl-progress-wrapper
+#status4evar-download-progress-bar > *
 {
-	min-width: 4px;
-}
-
-toolbar[iconsize="small"] #status4evar-download-button .dl-progress
-{
-	width: 4px;
-}
-
-#status4evar-download-button[pmValue]:not([pmValue="100"]):not([pmValue="0"]) .dl-progress-bar
-{
-	border-top: 1px solid gray;
-}
-
-#status4evar-download-button .dl-progress-remainder,
-#status4evar-download-button .dl-progress-bar
-{
+	-moz-appearance: none;
 	background: #FFFFFF;
 }
 
-#status4evar-download-button[pmType$="unknown"] .dl-progress-bar
+toolbar[iconsize="small"] #status4evar-download-progress-bar
+{
+	width: 4px;
+	min-width: 4px;
+}
+
+#status4evar-download-progress-bar[pmType$="unknown"] > .progress-bar
 {
 	background-image: url("chrome://status4evar/skin/pulse.png");
+}
+
+#status4evar-download-notification-icon
+{
+	opacity: 0;
+	background-size: 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@keyframes status4evar-download-button-finish
+{
+	from { opacity: 0; transform: scale(1); }
+	20%  { opacity: .65; animation-timing-function: ease-in; }
+	to   { opacity: 0; transform: scale(8); }
+}
+
+#status4evar-download-button[notification="finish"][forcevisible="true"] #status4evar-download-notification-icon
+{
+	background-image: url("chrome://browser/skin/downloads/download-notification-finish.png");
+	animation-name: status4evar-download-button-finish;
+	animation-duration: 1s;
 }
 
 /*
