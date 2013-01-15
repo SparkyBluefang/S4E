@@ -665,6 +665,7 @@ window.addEventListener("load", function buildS4E()
 //
 	let s4e_downloadStatus =
 	{
+		_hasPBAPI:            false,
 		_listening:           false,
 		_lastTime:            Infinity,
 
@@ -707,14 +708,7 @@ window.addEventListener("load", function buildS4E()
 		get PrivateBrowsingUtils()
 		{
 			delete this.PrivateBrowsingUtils;
-			try
-			{
-				CU.import("resource://gre/modules/PrivateBrowsingUtils.jsm", this);
-			}
-			catch(e)
-			{
-				this.PrivateBrowsingUtils = null;
-			}
+			CU.import("resource://gre/modules/PrivateBrowsingUtils.jsm", this);
 			return this.PrivateBrowsingUtils;
 		},
 
@@ -731,14 +725,16 @@ window.addEventListener("load", function buildS4E()
 				return;
 			}
 
-			if(this.PrivateBrowsingUtils == null)
+			this._hasPBAPI = ('addPrivacyAwareListener' in this.DownloadManager);
+
+			if(this._hasPBAPI)
 			{
-				this.DownloadManager.addListener(this);
-				Services.obs.addObserver(this, "private-browsing", true);
+				this.DownloadManager.addPrivacyAwareListener(this);
 			}
 			else
 			{
-				this.DownloadManager.addPrivacyAwareListener(this);
+				this.DownloadManager.addListener(this);
+				Services.obs.addObserver(this, "private-browsing", true);
 			}
 
 			this._listening = true;
@@ -760,7 +756,7 @@ window.addEventListener("load", function buildS4E()
 				this._listening = false;
 
 				this.DownloadManager.removeListener(this);
-				if(this.PrivateBrowsingUtils == null)
+				if(!this._hasPBAPI)
 				{
 					Services.obs.removeObserver(this, "private-browsing");
 				}
@@ -792,7 +788,7 @@ window.addEventListener("load", function buildS4E()
 				return;
 			}
 
-			let isPBW = (this.PrivateBrowsingUtils != null && this.PrivateBrowsingUtils.isWindowPrivate(window))
+			let isPBW = (this._hasPBAPI && this.PrivateBrowsingUtils.isWindowPrivate(window))
 
 			let numActive = ((isPBW) ? this.DownloadManager.activePrivateDownloadCount : this.DownloadManager.activeDownloadCount);
 			if(numActive == 0)
@@ -893,7 +889,7 @@ window.addEventListener("load", function buildS4E()
 				download_progress.collapsed = true;
 				download_progress.value = 0;
 
-				if(this._dlFinished)
+				if(this._dlFinished && this._hasPBAPI)
 				{
 					download_button.setAttribute("attention", "true");
 				}
@@ -989,7 +985,7 @@ window.addEventListener("load", function buildS4E()
 			if(aDownload.state == CI.nsIDownloadManager.DOWNLOAD_FINISHED && this._dlNotifyFinishTimer == 0)
 			{
 				let download_button = s4e_getters.downloadButton;
-				if(download_button)
+				if(download_button && this._hasPBAPI)
 				{
 					download_button.setAttribute("notification", "finish");
 					this._dlNotifyFinishTimer = window.setTimeout(function(self, button)
