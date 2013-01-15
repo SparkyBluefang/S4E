@@ -80,6 +80,9 @@ style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/
 style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/skin/overlay.css
 style	chrome://global/content/customizeToolbar.xul	chrome://status4evar-os/skin/overlay.css
 
+# Pref overlays
+style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs19.css		appversion<=19.0.*
+
 # XPCOM registration
 interfaces	components/status4evar.xpt
 component	{13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf}	components/status4evar.js
