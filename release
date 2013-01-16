@@ -37,7 +37,8 @@
 #
 # ***** END LICENSE BLOCK *****
 
-VERSION=`date +%Y.%m.%d.%H`
+TS=`date +%Y.%m.%d.%H`
+VERSION=""
 RELEASE=""
 FORCE=""
 
@@ -57,16 +58,17 @@ usage() {
 while [ -n "$1" ]; do
 	case "$1" in
 		-a|--alpha)
-			VERSION="${VERSION}a"
+			VERSION="${TS}a"
 			;;
 		-b|--beta)
-			VERSION="${VERSION}b"
+			VERSION="${TS}b"
 			RELEASE="1"
 			;;
 		-p|--pre)
-			VERSION="${VERSION}pre"
+			VERSION="${TS}pre"
 			;;
 		-r|--release)
+			VERSION="${TS}"
 			RELEASE="1"
 			;;
 		-f|--force)
@@ -83,6 +85,10 @@ while [ -n "$1" ]; do
 
 	shift
 done
+
+if [ -z "$VERSION" ]; then
+	usage 1
+fi
 
 # Check for uncommitted changes
 CHANGES=`git diff HEAD --exit-code --name-only`
