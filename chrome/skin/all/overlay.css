@@ -96,23 +96,17 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
 
 #status4evar-download-progress-bar
 {
-	width: 6px;
-	min-width: 6px;
 	border: 1px solid gray;
 	-moz-appearance: none;
 	margin: 0px;
+	min-height: 0px;
+	min-width: 0px;
 }
 
 #status4evar-download-progress-bar > *
 {
 	-moz-appearance: none;
 	background: #FFFFFF;
-}
-
-toolbar[iconsize="small"] #status4evar-download-progress-bar
-{
-	width: 4px;
-	min-width: 4px;
 }
 
 #status4evar-download-progress-bar[pmType$="unknown"] > .progress-bar

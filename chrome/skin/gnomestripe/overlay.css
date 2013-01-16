@@ -64,6 +64,16 @@ toolbar[iconsize="small"] #status4evar-download-anchor
 	min-height: 16px;
 }
 
+#status4evar-download-progress-bar
+{
+	height: 6px;
+}
+
+toolbar[iconsize="small"] #status4evar-download-progress-bar
+{
+	height: 4px;
+}
+
 #status4evar-download-button #status4evar-download-icon
 {
 	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 24, 24, 0) center no-repeat;

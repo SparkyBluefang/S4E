@@ -69,10 +69,9 @@
 		               oncommand="caligon.status4evar.downloadStatus.openPanel(event)">
 			<stack id="status4evar-download-anchor" class="toolbarbutton-icon">
 				<vbox id="status4evar-download-icon" />
-				<hbox pack="end">
-					<progressmeter id="status4evar-download-progress-bar" mode="normal" value="0" collapsed="true"
-					               min="0" max="100" orient="vertical" />
-				</hbox>
+				<vbox pack="end">
+					<progressmeter id="status4evar-download-progress-bar" mode="normal" value="0" collapsed="true" min="0" max="100" />
+				</vbox>
 				<vbox id="status4evar-download-notification-icon" />
 			</stack>
 			<tooltip id="status4evar-download-tooltip" />
