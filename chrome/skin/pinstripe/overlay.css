@@ -55,8 +55,6 @@
 {
 	position: relative;
 	z-index: 1;
-	min-width: 20px;
-	min-height: 20px;
 }
 
 #status4evar-download-progress-bar
@@ -67,6 +65,8 @@
 #status4evar-download-button #status4evar-download-icon
 {
 	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 140, 20, 120) center no-repeat;
+	min-width: 20px;
+	min-height: 20px;
 }
 
 #status4evar-download-button[attention] #status4evar-download-icon

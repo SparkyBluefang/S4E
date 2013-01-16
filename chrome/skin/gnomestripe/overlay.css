@@ -54,14 +54,6 @@
 #status4evar-download-anchor
 {
 	position: relative;
-	min-width: 24px;
-	min-height: 24px;
-}
-
-toolbar[iconsize="small"] #status4evar-download-anchor
-{
-	min-width: 16px;
-	min-height: 16px;
 }
 
 #status4evar-download-progress-bar
@@ -77,6 +69,8 @@ toolbar[iconsize="small"] #status4evar-download-progress-bar
 #status4evar-download-button #status4evar-download-icon
 {
 	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 24, 24, 0) center no-repeat;
+	min-width: 24px;
+	min-height: 24px;
 }
 
 #status4evar-download-button[attention] #status4evar-download-icon
@@ -87,6 +81,8 @@ toolbar[iconsize="small"] #status4evar-download-progress-bar
 toolbar[iconsize="small"] #status4evar-download-button #status4evar-download-icon
 {
 	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"), 0, 16, 16, 0) center no-repeat;
+	min-width: 16px;
+	min-height: 16px;
 }
 
 toolbar[iconsize="small"] > #status4evar-download-button[attention] #status4evar-download-icon {
