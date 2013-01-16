@@ -76,7 +76,7 @@
 <!ENTITY status4evar.download.progress.min.label "Montri malplej kompletan elŝuton">
 <!ENTITY status4evar.download.color.active.label "Progreskoloro por aktivaj elŝutoj">
 <!ENTITY status4evar.download.color.paused.label "Progreskoloro por haltigitaj elŝutoj:">
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
+<!ENTITY toolkit.classic.download.window.label "Uzi klasikan elŝutfenestron">
 <!ENTITY status4evar.addonbar.borderStyle "Uzi alternativajn ilbretajn borderojn">
 <!ENTITY status4evar.addonbar.windowGripper "Montri prenilon por fenestroskalado">
 <!ENTITY status4evar.addonbar.closeButton "Montri butonon 'Fermi'">

@@ -76,7 +76,7 @@
 <!ENTITY status4evar.download.progress.min.label "הצגת ההורדות הפחות שלמות">
 <!ENTITY status4evar.download.color.active.label "צבע ההתקדמות עבור הורדות פעילות:">
 <!ENTITY status4evar.download.color.paused.label "צבע ההתקדמות עבור הורדות מושהות:">
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
+<!ENTITY toolkit.classic.download.window.label "שימוש בחלון ההורדות הקלאסי">
 <!ENTITY status4evar.addonbar.borderStyle "שימוש בגבולות סרגל כלים חלופיים">
 <!ENTITY status4evar.addonbar.windowGripper "הצגת תפסן שינוי גודל החלון">
 <!ENTITY status4evar.addonbar.closeButton "הצגת כפתור הסגירה">

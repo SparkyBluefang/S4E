@@ -76,7 +76,7 @@
 <!ENTITY status4evar.download.progress.min.label "最も遅れているダウンロードのプログレスを表示">
 <!ENTITY status4evar.download.color.active.label "進行中のダウンロードの色:">
 <!ENTITY status4evar.download.color.paused.label "停止中のダウンロードの色:">
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
+<!ENTITY toolkit.classic.download.window.label "旧来のダウンロードマネージャを使用">
 <!ENTITY status4evar.addonbar.borderStyle "別のボーダースタイルを使用">
 <!ENTITY status4evar.addonbar.windowGripper "ウインドウをリサイズするグリップを表示">
 <!ENTITY status4evar.addonbar.closeButton "閉じるボタンを表示">

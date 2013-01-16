@@ -76,7 +76,7 @@
 <!ENTITY status4evar.download.progress.min.label "De minst complete download tonen">
 <!ENTITY status4evar.download.color.active.label "Voortgangskleur voor actieve downloads:">
 <!ENTITY status4evar.download.color.paused.label "Voortgangskleur voor gepauzeerde downloads:">
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
+<!ENTITY toolkit.classic.download.window.label "Gebruik het oude download-venster">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatieve werkbalkranden gebruiken">
 <!ENTITY status4evar.addonbar.windowGripper "Indicatie voor wijzigen venstergrootte tonen">
 <!ENTITY status4evar.addonbar.closeButton "Sluitknop tonen">

@@ -59,15 +59,15 @@
 <!ENTITY status4evar.progress.style.label "Usar un estilo personalizado para el medidor de progreso">
 <!ENTITY status4evar.progress.urlbar.enable.label "Mostrar el medidor de progreso en la barra de direcciones">
 <!ENTITY status4evar.progress.urlbar.line.label "Estilo de línea:">
-<!ENTITY status4evar.progress.toolbar.force.label "Siempre mostrar el medidor de progreso en la barra de herramientas">
+<!ENTITY status4evar.progress.toolbar.force.label "Mostrar siempre el medidor de progreso en la barra de herramientas">
 <!ENTITY status4evar.editor.label "Editor:">
 <!ENTITY status4evar.editor.css.color.label "Color:">
 <!ENTITY status4evar.editor.css.image.label "Imagen:">
 <!ENTITY status4evar.editor.css.image.repeat "Repetir">
 <!ENTITY status4evar.editor.css.image.position "Posición">
 <!ENTITY status4evar.editor.css.image.offset "Desplazamiento">
-<!ENTITY status4evar.download.force.label "Siempre mostrar el botón de descargas">
-<!ENTITY status4evar.download.label.force.label "Siempre mostrar texto junto al icono del botón de descargas">
+<!ENTITY status4evar.download.force.label "Mostrar siempre el botón de descargas">
+<!ENTITY status4evar.download.label.force.label "Mostrar siempre el texto junto al icono del botón de descargas">
 <!ENTITY status4evar.download.label.label "Texto junto al icono del botón de descargas:">
 <!ENTITY status4evar.download.tooltip.label "Cuadro informativo del botón de descargas:">
 <!ENTITY status4evar.download.progress.label "Mostrar información de las descargas pendientes sobre el icono del botón">
@@ -76,7 +76,7 @@
 <!ENTITY status4evar.download.progress.min.label "Mostrar el progreso de la descarga menos avanzada">
 <!ENTITY status4evar.download.color.active.label "Color del icono de progreso teniendo al menos una descarga activa:">
 <!ENTITY status4evar.download.color.paused.label "Color del icono de progreso teniendo todas las descargas pausadas:">
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
+<!ENTITY toolkit.classic.download.window.label "Usar la ventana de descargas clásica">
 <!ENTITY status4evar.addonbar.borderStyle "Usar un estilo visual alternativo para los bordes">
 <!ENTITY status4evar.addonbar.windowGripper "Mostrar el deslizador para redimensionar la ventana">
 <!ENTITY status4evar.addonbar.closeButton "Mostrar el botón «Cerrar»">

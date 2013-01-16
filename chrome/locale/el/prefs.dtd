@@ -76,7 +76,7 @@
 <!ENTITY status4evar.download.progress.min.label "Εμφάνιση της λιγότερο ολοκληρωμένης λήψης">
 <!ENTITY status4evar.download.color.active.label "Χρώμα προόδου ενεργών λήψεων:">
 <!ENTITY status4evar.download.color.paused.label "Χρώμα προόδου λήψεων σε παύση:">
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
+<!ENTITY toolkit.classic.download.window.label "Χρήση κλασικού παραθύρου λήψεων">
 <!ENTITY status4evar.addonbar.borderStyle "Χρήση εναλλακτικών ορίων εργαλειοθήκης">
 <!ENTITY status4evar.addonbar.windowGripper "Εμφάνιση της λαβής αλλαγής μεγέθους του παραθύρου">
 <!ENTITY status4evar.addonbar.closeButton "Εμφάνιση του κουμπιού κλεισίματος">

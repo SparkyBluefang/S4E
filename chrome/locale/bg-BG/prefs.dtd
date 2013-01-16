@@ -76,7 +76,7 @@
 <!ENTITY status4evar.download.progress.min.label "Показване на най-малко напредналото изтегляне">
 <!ENTITY status4evar.download.color.active.label "Цвят на напредъка на активните изтегляния:">
 <!ENTITY status4evar.download.color.paused.label "Цвят на напредъка на спрените изтегляния:">
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
+<!ENTITY toolkit.classic.download.window.label "Класически прозорец за изтеглянията">
 <!ENTITY status4evar.addonbar.borderStyle "Използване на алтернативни рамки за лентата с инструменти">
 <!ENTITY status4evar.addonbar.windowGripper "Показване на манипулатора за преоразмеряване на прозореца">
 <!ENTITY status4evar.addonbar.closeButton "Показване на бутона &quot;Затвори&quot;">
