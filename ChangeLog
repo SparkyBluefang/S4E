@@ -1,5 +1,7 @@
 Version next
 
+Version 2013.01.16.00b
+
 Version 2013.01.16.00
 * Drop support for Firefox 16.0 and older.
 * Fix protocol hiding in the toolbar and pop-up.
