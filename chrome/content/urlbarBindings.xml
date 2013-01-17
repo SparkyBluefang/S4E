@@ -130,6 +130,14 @@
 				66
 			]]></field>
 
+			<field name="_overLinkState"><![CDATA[
+				null
+			]]></field>
+
+			<field name="_reOverLinkURL" readonly="true"><![CDATA[
+				/^((?:[a-z0-9+.-]+:\/\/)?[^\/]+\/?)(.*)$/
+			]]></field>
+
 			<property name="s4esalign">
 				<setter><![CDATA[
 					this.setAttribute("s4esalign", val);
@@ -143,17 +151,18 @@
 			<method name="handleEvent">
 				<parameter name="aEvent"/>
 				<body><![CDATA[
-					switch (aEvent.type)
+					switch(aEvent.type)
 					{
 						case "transitionend":
 							if(aEvent.target == this._overLinkLayer && aEvent.propertyName == "opacity")
 							{
-								this._overLinkTransitioning = false;
-
-								let style = window.getComputedStyle(this._overLinkLayer);
-								if(style.opacity == 0)
+								if(this._overLinkState == "fade-in")
 								{
-									this.formatValue();
+									this._setOverLinkState("showing");
+								}
+								else if(this._overLinkState == "fade-out")
+								{
+									this._setOverLinkState(null);
 								}
 							}
 							break;
@@ -193,14 +202,7 @@
 					if(aURL)
 					{
 						this._updateOverLink(aURL);
-						if(this._overLinkTransitioning)
-						{
-							this._setOverLinkState("showing");
-						}
-						else
-						{
-							this._setOverLinkState("fade-in");
-						}
+						this._setOverLinkState("fade-in");
 					}
 					else
 					{
@@ -220,31 +222,34 @@
 			<method name="_setOverLinkState">
 				<parameter name="aVal"/>
 				<body><![CDATA[
-					let style = null;
+					if(this._overLinkState == aVal)
+					{
+						return;
+					}
+					let aValOld = this._overLinkState;
+					this._overLinkState = aVal;
+
 					switch(aVal)
 					{
 						case "fade-in":
-							style = window.getComputedStyle(this._overLinkLayer);
-							this._overLinkTransitioning = style.opacity != 1;
-							this._clearFormatting();
-							this.setAttribute("overlinkstate", aVal);
+							if(aValOld != "showing")
+							{
+								this._clearFormatting();
+								this.setAttribute("overlinkstate", aVal);
+							}
 							break;
 						case "fade-out":
-							style = window.getComputedStyle(this._overLinkLayer);
-							this._overLinkTransitioning = style.opacity != 0;
-							this.setAttribute("overlinkstate", aVal);
-							if(!this._overLinkTransitioning)
+							if(aValOld != null)
 							{
-								this.formatValue();
+								this.setAttribute("overlinkstate", aVal);
 							}
 							break;
 						case "showing":
-							this._overLinkTransitioning = false;
-							this.setAttribute("overlinkstate", aVal);
 							this._clearFormatting();
+							this.setAttribute("overlinkstate", aVal);
 							break;
 						default:
-							this._overLinkTransitioning = false;
+							aVal = null;
 							this.removeAttribute("overlinkstate");
 							this.formatValue();
 							break;
@@ -258,8 +263,7 @@
 					// Determine the pre-path and path of the over-link.  Include the
 					// path's leading slash in the pre-path so that if the path is
 					// truncated its leading slash is visible.
-					var re = new RegExp("^((?:[a-z0-9+.-]+://)?[^/]+/?)(.*)$");
-					var match = re.exec(aURL);
+					var match = this._reOverLinkURL.exec(aURL);
 					this._overLinkHostValue = match ? match[1] : "";
 					this._overLinkPathValue = match ? match[2] : aURL;
 
@@ -307,6 +311,17 @@
 					{
 						overLinkBox.minWidth = maxWidth;
 					}
+				]]></body>
+			</method>
+
+			<method name="formatValue">
+				<body><![CDATA[
+					if(this._overLinkState != null)
+					{
+						return;
+					}
+
+					this.__proto__.__proto__.formatValue.call(this);
 				]]></body>
 			</method>
 		</implementation>
