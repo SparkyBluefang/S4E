@@ -455,6 +455,12 @@ var status4evarPrefs =
 //
 // Pref Window load
 //
+	get statusUrlbarPositionValue()
+	{
+		delete this.statusUrlbarPositionValue;
+		return this.statusUrlbarPositionValue = document.getElementById("status4evar-status-urlbar-position-value");
+	},
+
 	onPrefWindowLoad: function()
 	{
 		let showWarning = this.advancedShowWarningPref.value;
@@ -462,6 +468,11 @@ var status4evarPrefs =
 		if(showWarning)
 		{
 			this.advancedContinueButton.focus();
+		}
+
+		if(window.getComputedStyle(this.statusUrlbarPositionValue).direction == "ltr")
+		{
+			this.statusUrlbarPositionValue.setAttribute("dir", "reverse");
 		}
 	},
 

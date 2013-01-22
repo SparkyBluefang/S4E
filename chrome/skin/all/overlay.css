@@ -157,11 +157,6 @@ splitter.status4evar-status-splitter:not(:hover)
  * Location bar progress
  */
 
-#urlbar-progress-alt:-moz-locale-dir(rtl)
-{
-	-moz-box-direction: reverse;
-}
-
 #urlbar-progress-alt
 {
 	margin: 0px;
@@ -229,20 +224,15 @@ splitter.status4evar-status-splitter:not(:hover)
 }
 
 /*
- * Location bar status
+ * Location bar status transisions
  */
 
-.urlbar-over-link-layer
+#urlbar .urlbar-over-link-layer
 {
 	opacity: 0;
 }
 
-.urlbar-over-link-box:-moz-locale-dir(rtl)
-{
-	-moz-box-direction: reverse;
-}
-
-.urlbar-input-layer[overlinkstate="fade-in"]
+#urlbar .urlbar-input-layer[overlinkstate="fade-in"]
 {
 	-moz-transition-property: color;
 	-moz-transition-duration: 150ms;
@@ -250,7 +240,7 @@ splitter.status4evar-status-splitter:not(:hover)
 }
 
 /* < Firefox 19 */
-.urlbar-input-layer[overlinkstate="fade-in"] html|input.urlbar-input:-moz-placeholder
+#urlbar .urlbar-input-layer[overlinkstate="fade-in"] html|input.urlbar-input:-moz-placeholder
 {
 	-moz-transition-property: color;
 	-moz-transition-duration: 150ms;
@@ -258,14 +248,14 @@ splitter.status4evar-status-splitter:not(:hover)
 }
 
 /* >= Firefox 19 */
-.urlbar-input-layer[overlinkstate="fade-in"] html|input.urlbar-input::-moz-placeholder
+#urlbar .urlbar-input-layer[overlinkstate="fade-in"] html|input.urlbar-input::-moz-placeholder
 {
 	-moz-transition-property: color;
 	-moz-transition-duration: 150ms;
 	color: transparent;
 }
 
-.urlbar-input-layer[overlinkstate="fade-out"]
+#urlbar .urlbar-input-layer[overlinkstate="fade-out"]
 {
 	-moz-transition-property: color;
 	-moz-transition-duration: 150ms;
@@ -273,7 +263,7 @@ splitter.status4evar-status-splitter:not(:hover)
 }
 
 /* < Firefox 19 */
-.urlbar-input-layer[overlinkstate="fade-out"] html|input.urlbar-input:-moz-placeholder
+#urlbar .urlbar-input-layer[overlinkstate="fade-out"] html|input.urlbar-input:-moz-placeholder
 {
 	-moz-transition-property: color;
 	-moz-transition-duration: 150ms;
@@ -281,100 +271,111 @@ splitter.status4evar-status-splitter:not(:hover)
 }
 
 /* >= Firefox 19 */
-.urlbar-input-layer[overlinkstate="fade-out"] html|input.urlbar-input::-moz-placeholder
+#urlbar .urlbar-input-layer[overlinkstate="fade-out"] html|input.urlbar-input::-moz-placeholder
 {
 	-moz-transition-property: color;
 	-moz-transition-duration: 150ms;
 	-moz-transition-timing-function: cubic-bezier(0.0, 1.0, 1.0, 1.0);
 }
 
-.urlbar-input-layer[overlinkstate="showing"]
+#urlbar .urlbar-input-layer[overlinkstate="showing"]
 {
 	color: transparent;
 }
 
 /* < Firefox 19 */
-.urlbar-input-layer[overlinkstate="showing"] html|input.urlbar-input:-moz-placeholder
+#urlbar .urlbar-input-layer[overlinkstate="showing"] html|input.urlbar-input:-moz-placeholder
 {
 	color: transparent;
 }
 
 /* >= Firefox 19 */
-.urlbar-input-layer[overlinkstate="showing"] html|input.urlbar-input::-moz-placeholder
+#urlbar .urlbar-input-layer[overlinkstate="showing"] html|input.urlbar-input::-moz-placeholder
 {
 	color: transparent;
 }
 
-.urlbar-over-link-layer[overlinkstate="fade-in"]
+#urlbar .urlbar-over-link-layer[overlinkstate="fade-in"]
 {
 	-moz-transition-property: opacity;
 	-moz-transition-duration: 150ms;
 	opacity: 1;
 }
 
-.urlbar-over-link-layer[overlinkstate="fade-out"]
+#urlbar .urlbar-over-link-layer[overlinkstate="fade-out"]
 {
 	-moz-transition-property: opacity;
 	-moz-transition-duration: 150ms;
 	-moz-transition-timing-function: cubic-bezier(0.0, 1.0, 1.0, 1.0);
 }
 
-.urlbar-over-link-layer[overlinkstate="showing"]
+#urlbar .urlbar-over-link-layer[overlinkstate="showing"]
 {
 	opacity: 1;
 }
 
-.urlbar-input-layer-children[overlinkstate="fade-in"]
+#urlbar .urlbar-input-layer-children[overlinkstate="fade-in"]
 {
 	-moz-transition-property: opacity;
 	-moz-transition-duration: 150ms;
 	opacity: 0;
 }
 
-.urlbar-input-layer-children[overlinkstate="fade-out"]
+#urlbar .urlbar-input-layer-children[overlinkstate="fade-out"]
 {
 	-moz-transition-property: opacity;
 	-moz-transition-duration: 150ms;
 	-moz-transition-timing-function: cubic-bezier(0.0, 1.0, 1.0, 1.0);
 }
 
-.urlbar-input-layer-children[overlinkstate="showing"]
+#urlbar .urlbar-input-layer-children[overlinkstate="showing"]
 {
 	opacity: 0;
 }
 
-.urlbar-origin-label
-{
-	padding-top: 0;
-	padding-bottom: 0;
-	-moz-padding-end: 0;
-	margin: 0;
-}
+/*
+ * Location bar status layout
+ */
 
 #urlbar[s4esalign="left"] .urlbar-origin-box
 {
 	display: none;
 }
 
-.urlbar-over-link-box
+#urlbar .urlbar-origin-label,
+#urlbar .urlbar-over-link-host-label,
+#urlbar .urlbar-over-link-path-label
 {
-	padding-top: 0;
-	padding-bottom: 0;
-	-moz-padding-start: 18px;
-	-moz-padding-end: 2px;
+	padding: 0;
+	margin: 0;
+	border: none;
 }
 
-.urlbar-origin-label,
-#urlbar[s4esalign="left"] .urlbar-over-link-box
+#urlbar .urlbar-origin-label
 {
 	-moz-padding-start: 1px;
 }
 
-.urlbar-over-link-host-label,
-.urlbar-over-link-path-label
+#urlbar .urlbar-over-link-box:-moz-locale-dir(ltr)
 {
-	padding: 0;
-	margin: 0;
+	-moz-padding-start: 18px;
+	-moz-padding-end: 2px;
+}
+
+#urlbar .urlbar-over-link-box:-moz-locale-dir(rtl)
+{
+	-moz-padding-end: 18px;
+	-moz-padding-start: 2px;
+}
+
+#urlbar[s4esalign="left"] .urlbar-over-link-box:-moz-locale-dir(ltr)
+{
+	-moz-padding-start: 1px;
+}
+
+#urlbar[s4esalign="left"] .urlbar-over-link-box:-moz-locale-dir(rtl)
+{
+	-moz-padding-end: 1px;
 }
 
 #urlbar:not([s4esalign="left"]) .urlbar-over-link-box:-moz-locale-dir(ltr)

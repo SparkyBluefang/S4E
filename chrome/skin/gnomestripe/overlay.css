@@ -120,6 +120,12 @@ splitter.status4evar-status-splitter
 	-moz-margin-start: -1px;
 }
 
+#urlbar .urlbar-over-link-box
+{
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
 /*
  * Add-on bar
  */

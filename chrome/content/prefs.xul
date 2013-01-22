@@ -192,7 +192,7 @@
 
 					<vbox id="status4evar-status-urlbar-position-vbox">
 						<scale id="status4evar-status-urlbar-position-value" preference="status4evar-pref-status-urlbar-position" min="0" max="100"
-						       movetoclick="true" preference-editable="true" dir="reverse" />
+						       movetoclick="true" preference-editable="true" />
 
 						<hbox align="center">
 							<hbox pack="start" flex="1">
