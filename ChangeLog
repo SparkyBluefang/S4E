@@ -1,4 +1,6 @@
 Version next
+
+Version 2013.02.16.23
 * Fix potential incorrect formatting of the location bar status display after clicking on a link.
 * Fix RTL locale support.
 * Updated translations for: de, nb-NO, sr, sv-SE, zh-TW
