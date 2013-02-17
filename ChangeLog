@@ -1,5 +1,7 @@
 Version next
 * Fix potential incorrect formatting of the location bar status display after clicking on a link.
+* Fix RTL locale support.
+* Updated translations for: de, nb-NO, sr, sv-SE, zh-TW
 
 Version 2013.01.16.00b
 * Drop support for Firefox 16.0 and older.

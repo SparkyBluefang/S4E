@@ -41,7 +41,7 @@
 <!ENTITY status4evar.status.default.label "Visa standardstatus">
 <!ENTITY status4evar.status.network.label "Visa nätverksstatus">
 <!ENTITY status4evar.status.network.xhr.label "Visa bakgrundsnätverksstatus">
-<!ENTITY toolkit.dom.status.change.label "Tillåt webbsidor att ändra status">
+<!ENTITY toolkit.dom.status.change.label "Tillåt webbsidor att ändra statusen">
 <!ENTITY status4evar.status.general.linkOver.caption "Länkar">
 <!ENTITY status4evar.status.linkOver.label "Visa länkar i:">
 <!ENTITY status4evar.status.linkOver.delay.show.label "Fördröjning innan länkar visas:">
@@ -76,11 +76,11 @@
 <!ENTITY status4evar.download.progress.min.label "Visa minst färdigställda hämtning">
 <!ENTITY status4evar.download.color.active.label "Förloppsfärg för aktiva hämtningar:">
 <!ENTITY status4evar.download.color.paused.label "Förloppsfärg för pausade hämtningar:">
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
+<!ENTITY toolkit.classic.download.window.label "Använd klassiskt filhämtningsfönster">
 <!ENTITY status4evar.addonbar.borderStyle "Använd alternativa verktygsfältskantlinjer">
 <!ENTITY status4evar.addonbar.windowGripper "Visa handtaget för fönsterstorleksändring">
 <!ENTITY status4evar.addonbar.closeButton "Visa stängknappen">
 <!ENTITY status4evar.advanced.warning "Dessa avancerade inställningar kan skapa problem med Status-4-Evar eller andra tillägg. Används på egen risk.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Försök att tvinga XBL-bindningen för adressfältet.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Aktivera detta endast om du har problem med adressfältet eller statustextvisningen. Funktionen kan skapa konflikter med andra tillägg som försöker att ange en XBL-bindning i adressfältet.">
-<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Upptäck helskärmsläge och visa länkar/status i enlighet med det.">

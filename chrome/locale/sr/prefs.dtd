@@ -53,7 +53,7 @@
 <!ENTITY status4evar.status.statusText "Текст стања">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Могућности Фајерфокса">
 <!ENTITY browser.urlbar.formatting.enabled.label "Истицање домена">
-<!ENTITY browser.urlbar.trimming.enabled.label "Сакривање протокола">
+<!ENTITY browser.urlbar.trimming.enabled.label "Сакривање протокола (http:// и ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "Подразумевано с десне стране">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Замени стране при преласку мишем">
 <!ENTITY status4evar.progress.style.label "Користи прилагођени стил">
@@ -76,11 +76,11 @@
 <!ENTITY status4evar.download.progress.min.label "Прикажи најмање завршених пријема">
 <!ENTITY status4evar.download.color.active.label "Боја напретка за активне пријеме:">
 <!ENTITY status4evar.download.color.paused.label "Боја напретка за паузиране пријеме:">
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
+<!ENTITY toolkit.classic.download.window.label "Користи  класични прозор са преузимањима">
 <!ENTITY status4evar.addonbar.borderStyle "Користи алтернативне ивице трака с алаткама">
 <!ENTITY status4evar.addonbar.windowGripper "Прикажи простор за измену величине прозора">
 <!ENTITY status4evar.addonbar.closeButton "Дугме за затварање">
 <!ENTITY status4evar.advanced.warning "Ове напредне поставке могу да стварају проблеме с овим или другим додацима. Користите их на сопствени ризик.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Приморај XBL повезивање траке за путању.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Изаберите ово само ако имате проблема с напретком траке за путању или се текст стања не приказује исправно. Ово може да онеспособи друге додатке који покушају да користе XBL повезивање на траку за путању.">
-<!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
+<!ENTITY status4evar.advanced.status.detectFullScreen "Препознај када је прозор развучен преко целог екрана и прикажи одговарајуће везе/стања.">

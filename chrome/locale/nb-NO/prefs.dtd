@@ -1,6 +1,6 @@
 <!ENTITY status4evar.window.title "Status-4-Evar innstillinger">
 <!ENTITY status4evar.pane.status "Status">
-<!ENTITY status4evar.pane.progress "Fremdrift">
+<!ENTITY status4evar.pane.progress "Framdrift">
 <!ENTITY status4evar.pane.download "Nedlasting">
 <!ENTITY status4evar.pane.addonbar "Utvidelseslinje">
 <!ENTITY status4evar.pane.advanced "Avansert">
@@ -13,7 +13,7 @@
 <!ENTITY status4evar.option.toolbar "Verktøylinje">
 <!ENTITY status4evar.option.urlbar "Adresselinje">
 <!ENTITY status4evar.option.popup "Sprettopp">
-<!ENTITY status4evar.option.tooltip "Verktøytips">
+<!ENTITY status4evar.option.tooltip "Hjelpeboble">
 <!ENTITY status4evar.option.bottom "Bunn">
 <!ENTITY status4evar.option.top "Topp">
 <!ENTITY status4evar.option.fill "Fyll">
@@ -38,7 +38,7 @@
 <!ENTITY status4evar.status.general.status.caption "Statustekst">
 <!ENTITY status4evar.status.label "Vis status i:">
 <!ENTITY status4evar.status.timeout.label "Skjul status etter">
-<!ENTITY status4evar.status.default.label "Vis standard status">
+<!ENTITY status4evar.status.default.label "Vis standardstatus">
 <!ENTITY status4evar.status.network.label "Vis nettverksstatus">
 <!ENTITY status4evar.status.network.xhr.label "Vis bakgrunnsnettverksstatus">
 <!ENTITY toolkit.dom.status.change.label "Tillat nettsider å endre teksten på statuslinjen">
@@ -57,7 +57,7 @@
 <!ENTITY status4evar.status.popup.invertMirror.label "Standard på høyre side">
 <!ENTITY status4evar.status.popup.mouseMirror.label "Bytt sider når musepekeren er over">
 <!ENTITY status4evar.progress.style.label "Bruk egendefinert stil">
-<!ENTITY status4evar.progress.urlbar.enable.label "Vis fremdriftsindikator i adresselinjen">
+<!ENTITY status4evar.progress.urlbar.enable.label "Vis framdriftsviser i adresselinjen">
 <!ENTITY status4evar.progress.urlbar.line.label "Linjestil:">
 <!ENTITY status4evar.progress.toolbar.force.label "Vis alltid verktøylinjenelement">
 <!ENTITY status4evar.editor.label "Redigeringsprogram:">
@@ -69,8 +69,8 @@
 <!ENTITY status4evar.download.force.label "Vis alltid nedlastingsstatusknappen">
 <!ENTITY status4evar.download.label.force.label "Vis alltid knappeteksten">
 <!ENTITY status4evar.download.label.label "Tekst på nedlastingsstatusknapp:">
-<!ENTITY status4evar.download.tooltip.label "Nedlastingsstatusknapp verktøytips:">
-<!ENTITY status4evar.download.progress.label "Vis nedlastingsfremgang på knappen">
+<!ENTITY status4evar.download.tooltip.label "Hjelpeboble for nedlastingsstatusknapp:">
+<!ENTITY status4evar.download.progress.label "Vis nedlastingsframgang på knappen">
 <!ENTITY status4evar.download.progress.average.label "Vis gjennomsnittlig nedlastingsfullføring">
 <!ENTITY status4evar.download.progress.max.label "Vis mest fullførte nedlasting">
 <!ENTITY status4evar.download.progress.min.label "Vist minst fullførte nedlasting">
@@ -80,7 +80,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Bruk alternative kanter for verktøylinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gripeområdet for endring av vindusstørrelse">
 <!ENTITY status4evar.addonbar.closeButton "Vis knappen lukk">
-<!ENTITY status4evar.advanced.warning "Disse avanserte innstillinger kan forårsake problemer med Status-4-Evar eller andre utvidelser. Modifiser på din egen risiko.">
-<!ENTITY status4evar.advanced.urlbar.forceBinding "Forsøk å tvinge XBL bindingen for adresselinjen.">
-<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Bare velg dette hvis du har problemer med at adresselinje-fremdriftsindikatoren eller statusteksten ikke blir vist riktig. Dette vil potensielt bryte andre utvidelser som forsøker å sette en XBL binding på adresselinjen.">
+<!ENTITY status4evar.advanced.warning "Disse avanserte innstillinger kan forårsake problemer med Status-4-Evar eller andre utvidelser. Endre på din egen risiko.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding "Forsøk å tvinge XBL-bindingen for adresselinjen.">
+<!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Velg kun dette hvis du har problemer med at adresselinje-framdriftsviser eller statusteksten ikke blir vist riktig. Dette vil potensielt bryte andre utvidelser som forsøker å sette en XBL-binding på adresselinjen.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Oppdag fullskjermmodus og vis lenker/status riktig.">
