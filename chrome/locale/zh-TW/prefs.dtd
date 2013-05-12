@@ -10,6 +10,7 @@
 <!ENTITY status4evar.tab.popup "彈出視窗">
 <!ENTITY status4evar.tab.tabs "分頁">
 <!ENTITY status4evar.option.none "不顯示">
+<!ENTITY status4evar.option.nothing "Nothing">
 <!ENTITY status4evar.option.toolbar "附加元件列">
 <!ENTITY status4evar.option.urlbar "網址列">
 <!ENTITY status4evar.option.popup "彈出提示">
@@ -33,6 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "不重複">
 <!ENTITY status4evar.option.space "空白">
 <!ENTITY status4evar.option.round "圓角">
+<!ENTITY status4evar.option.firefoxdefault "Firefox default">
+<!ENTITY status4evar.option.download.panel "Panel">
+<!ENTITY status4evar.option.download.library "Library">
+<!ENTITY status4evar.option.download.classic "Classic">
+<!ENTITY status4evar.unit.miliseconds "miliseconds">
 <!ENTITY status4evar.unit.seconds "秒後">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "狀態文字">
@@ -66,7 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "重複">
 <!ENTITY status4evar.editor.css.image.position "位置">
 <!ENTITY status4evar.editor.css.image.offset "偏移">
+<!ENTITY status4evar.download.button.action.label "Download status button action:">
 <!ENTITY status4evar.download.force.label "總是顯示下載狀態按鈕">
+<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
 <!ENTITY status4evar.download.label.label "下載狀態按鈕標籤：">
 <!ENTITY status4evar.download.tooltip.label "下載狀態的氣泡提示框顯示：">
 <!ENTITY status4evar.download.progress.label "在按鈕上顯示下載進度">
@@ -75,7 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "顯示完成最少的下載">
 <!ENTITY status4evar.download.color.active.label "進行中下載的進度條色彩">
 <!ENTITY status4evar.download.color.paused.label "已暫停下載的進度條色彩">
-<!ENTITY toolkit.classic.download.window.label "使用傳統的下載視窗">
+<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
+<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
 <!ENTITY status4evar.addonbar.borderStyle "使用替代的工具列邊框">
 <!ENTITY status4evar.addonbar.windowGripper "顯示視窗大小調整器">
 <!ENTITY status4evar.addonbar.closeButton "顯示關閉按鈕">
@@ -83,3 +92,4 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "嘗試強制位址列 XBL binding。">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "只有在位址列進度條或狀態文字顯示有誤時才勾選此設定。另外這也有可能與其他試圖對位址列設定 XBL binding 的套件產生衝突。">
 <!ENTITY status4evar.advanced.status.detectFullScreen "偵測全螢幕模式並調整連結／狀態的顯示">
+<!ENTITY toolkit.classic.download.window.label "使用傳統的下載視窗">

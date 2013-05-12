@@ -10,6 +10,7 @@
 <!ENTITY status4evar.tab.popup "Vyskakovací">
 <!ENTITY status4evar.tab.tabs "Panely">
 <!ENTITY status4evar.option.none "žádný">
+<!ENTITY status4evar.option.nothing "Nothing">
 <!ENTITY status4evar.option.toolbar "v nástrojové liště">
 <!ENTITY status4evar.option.urlbar "v adresním řádku">
 <!ENTITY status4evar.option.popup "vyskakovací">
@@ -33,6 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "Neopakovat">
 <!ENTITY status4evar.option.space "Mezera">
 <!ENTITY status4evar.option.round "Kulaté">
+<!ENTITY status4evar.option.firefoxdefault "Firefox default">
+<!ENTITY status4evar.option.download.panel "Panel">
+<!ENTITY status4evar.option.download.library "Library">
+<!ENTITY status4evar.option.download.classic "Classic">
+<!ENTITY status4evar.unit.miliseconds "miliseconds">
 <!ENTITY status4evar.unit.seconds "vteřinách">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Stavový text">
@@ -66,7 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Opakovat">
 <!ENTITY status4evar.editor.css.image.position "Umístění">
 <!ENTITY status4evar.editor.css.image.offset "Vyrovnat">
+<!ENTITY status4evar.download.button.action.label "Download status button action:">
 <!ENTITY status4evar.download.force.label "Vždy zobrazit tlačítko průběhu stahování">
+<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
 <!ENTITY status4evar.download.label.label "Text tlačítka průběhu stahování:">
 <!ENTITY status4evar.download.tooltip.label "Nápověda tlačítka průběhu stahování:">
 <!ENTITY status4evar.download.progress.label "Zobrazit postup stahování v tlačítku">
@@ -75,7 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "Zobrazit nejméně dokončené stahování">
 <!ENTITY status4evar.download.color.active.label "Barva postupu aktivních stahování:">
 <!ENTITY status4evar.download.color.paused.label "Barva postupu pozastavených stahování:">
-<!ENTITY toolkit.classic.download.window.label "Použít klasické okno stahování">
+<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
+<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
 <!ENTITY status4evar.addonbar.borderStyle "Použít alternativní ohraničení lišty">
 <!ENTITY status4evar.addonbar.windowGripper "Zobrazit chytač změny velikosti okna">
 <!ENTITY status4evar.addonbar.closeButton "Zobrazit tlačítko zavření">
@@ -83,3 +92,4 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Pokusit se vynutit XBL vazby adresního řádku.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Zvolte pouze pokud máte problémy se zobrazením činnosti nebo stavu v adresním řádku. Toto může potenciálně poškodit jiné rozšíření, které nastavuje XBL vazby adresního řádku.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Přizpůsobit zobrazení odkazů/stavu v režimu celé obrazovky.">
+<!ENTITY toolkit.classic.download.window.label "Použít klasické okno stahování">

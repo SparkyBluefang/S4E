@@ -10,6 +10,7 @@
 <!ENTITY status4evar.tab.popup "Kontekstowy meni">
 <!ENTITY status4evar.tab.tabs "Rejtarki">
 <!ENTITY status4evar.option.none "Žeden">
+<!ENTITY status4evar.option.nothing "Nothing">
 <!ENTITY status4evar.option.toolbar "Rědowej kšomje">
 <!ENTITY status4evar.option.urlbar "Adresowem pólu">
 <!ENTITY status4evar.option.popup "Kontekstowem meniju">
@@ -33,6 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "Njewóspjetowaś">
 <!ENTITY status4evar.option.space "Rum">
 <!ENTITY status4evar.option.round "Wótrownaś">
+<!ENTITY status4evar.option.firefoxdefault "Firefox default">
+<!ENTITY status4evar.option.download.panel "Panel">
+<!ENTITY status4evar.option.download.library "Library">
+<!ENTITY status4evar.option.download.classic "Classic">
+<!ENTITY status4evar.unit.miliseconds "miliseconds">
 <!ENTITY status4evar.unit.seconds "sekundach">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statusowy tekst">
@@ -66,7 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Wóspjetowaś">
 <!ENTITY status4evar.editor.css.image.position "Pozicija">
 <!ENTITY status4evar.editor.css.image.offset "Wótchylenje">
+<!ENTITY status4evar.download.button.action.label "Download status button action:">
 <!ENTITY status4evar.download.force.label "Tłocašk ześěgnjeńskego statusa pśecej pokazaś">
+<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
 <!ENTITY status4evar.download.label.label "Tekst tłocaška ześěgnjeńskego statusa:">
 <!ENTITY status4evar.download.tooltip.label "Pomocny tekst tłocaška ześěgnjeńskego statusa:">
 <!ENTITY status4evar.download.progress.label "Ześěgnjeński póstup na tłocašku pokazaś">
@@ -75,7 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "Nejmjenjej póstupjone ześěgnjenje pokazaś">
 <!ENTITY status4evar.download.color.active.label "Póstupowa barwa za aktiwne ześěgnjenja:">
 <!ENTITY status4evar.download.color.paused.label "Póstupowa barwa za zastajone ześěgnjenja:">
-<!ENTITY toolkit.classic.download.window.label "Klasiske ześěgnjeńske wokno wužywaś">
+<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
+<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatiwne ramiki rědoweje kšomy wužywaś">
 <!ENTITY status4evar.addonbar.windowGripper "Pśimk za změnjanje wjelikosći wokna pokazaś">
 <!ENTITY status4evar.addonbar.closeButton "Tłocašk &quot;Zacyniś&quot; pokazaś">
@@ -83,3 +92,4 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Wopyt XBL-zwězanje adresowego póla wunuźiś.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Wuběŕśo to jano, jolic maśo problemy z póstupom adresowego póla abo jolic statusowy tekst njezwobraznja se korektnje. To mógło snaź druge rozšyrjenja kazyś, kótarež wopytuju XBL-zwězanje na adresowem pólu stajiś.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Modus połneje wobrazowki namakaś a wótkaze/status pśigódnje pokazaś.">
+<!ENTITY toolkit.classic.download.window.label "Klasiske ześěgnjeńske wokno wužywaś">

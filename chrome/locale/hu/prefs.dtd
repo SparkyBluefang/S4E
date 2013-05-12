@@ -10,6 +10,7 @@
 <!ENTITY status4evar.tab.popup "Felbukkanóban">
 <!ENTITY status4evar.tab.tabs "Füleken">
 <!ENTITY status4evar.option.none "Sehol">
+<!ENTITY status4evar.option.nothing "Nothing">
 <!ENTITY status4evar.option.toolbar "Eszköztáron">
 <!ENTITY status4evar.option.urlbar "Címsorban">
 <!ENTITY status4evar.option.popup "Felbukkanóban">
@@ -33,6 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "Nincs ismétlés">
 <!ENTITY status4evar.option.space "Hely">
 <!ENTITY status4evar.option.round "Kerekítés">
+<!ENTITY status4evar.option.firefoxdefault "Firefox default">
+<!ENTITY status4evar.option.download.panel "Panel">
+<!ENTITY status4evar.option.download.library "Library">
+<!ENTITY status4evar.option.download.classic "Classic">
+<!ENTITY status4evar.unit.miliseconds "miliseconds">
 <!ENTITY status4evar.unit.seconds "másodperc múlva">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Állapot szöveg">
@@ -66,7 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Ismétlés">
 <!ENTITY status4evar.editor.css.image.position "Helyzet">
 <!ENTITY status4evar.editor.css.image.offset "Eltolás">
+<!ENTITY status4evar.download.button.action.label "Download status button action:">
 <!ENTITY status4evar.download.force.label "Mindig mutassa a Letöltési állapot gombot">
+<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
 <!ENTITY status4evar.download.label.label "Letöltési állapot gomb címkéje:">
 <!ENTITY status4evar.download.tooltip.label "Letöltési állapot gomb buboréksúgója:">
 <!ENTITY status4evar.download.progress.label "Letöltés mérő mutatása a gombon">
@@ -75,7 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "A legkevésbé elkészült letöltést mutassa">
 <!ENTITY status4evar.download.color.active.label "Letöltés mérő színe az aktív letöltésekhez:">
 <!ENTITY status4evar.download.color.paused.label "Letöltés mérő színe a felfüggesztett letöltésekhez:">
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
+<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
+<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatív eszköztár szegélyek használata">
 <!ENTITY status4evar.addonbar.windowGripper "Ablak átméretező mutatása">
 <!ENTITY status4evar.addonbar.closeButton "Bezárás gomb mutatása">
@@ -83,3 +92,4 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Kísérlet a címsor XBL kötésének erőltetésére.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Csak akkor válassza ezt az opciót, ha problémái vannak a címsor betöltési csík vagy a státusz szöveg megjelenítésével. Ez potenciálisan elronthat más kiegészítőket, amelyek a címsor XBL kötését használják.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
+<!ENTITY toolkit.classic.download.window.label "Use classic download window">

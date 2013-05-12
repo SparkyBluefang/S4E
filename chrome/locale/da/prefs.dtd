@@ -10,6 +10,7 @@
 <!ENTITY status4evar.tab.popup "Pop op">
 <!ENTITY status4evar.tab.tabs "Faneblade">
 <!ENTITY status4evar.option.none "Ingen">
+<!ENTITY status4evar.option.nothing "Nothing">
 <!ENTITY status4evar.option.toolbar "Værktøjslinje">
 <!ENTITY status4evar.option.urlbar "Adresselinje">
 <!ENTITY status4evar.option.popup "Pop op">
@@ -33,6 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "Gentag ikke">
 <!ENTITY status4evar.option.space "Mellemrum">
 <!ENTITY status4evar.option.round "Afrund">
+<!ENTITY status4evar.option.firefoxdefault "Firefox default">
+<!ENTITY status4evar.option.download.panel "Panel">
+<!ENTITY status4evar.option.download.library "Library">
+<!ENTITY status4evar.option.download.classic "Classic">
+<!ENTITY status4evar.unit.miliseconds "miliseconds">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statustekst">
@@ -66,7 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Gentag">
 <!ENTITY status4evar.editor.css.image.position "Position">
 <!ENTITY status4evar.editor.css.image.offset "Forskydning">
+<!ENTITY status4evar.download.button.action.label "Download status button action:">
 <!ENTITY status4evar.download.force.label "Vis altid knappen Filhentningsstatus">
+<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
 <!ENTITY status4evar.download.label.label "Tekst på knappen Filhentningsstatus:">
 <!ENTITY status4evar.download.tooltip.label "Værktøjstip til knappen Filhentningsstatus:">
 <!ENTITY status4evar.download.progress.label "Vis filhentningsforløb på knappen">
@@ -75,7 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "Vis mindst fuldførte filhentning">
 <!ENTITY status4evar.download.color.active.label "Forløbsfarve for aktive filhentninger:">
 <!ENTITY status4evar.download.color.paused.label "Forløbsfarve for pausede filhentninger:">
-<!ENTITY toolkit.classic.download.window.label "Brug klassisk filhentningsvindue">
+<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
+<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
 <!ENTITY status4evar.addonbar.borderStyle "Anvend alternative kanter til værktøjslinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gribelinjen til ændring af vinduesstørrelse">
 <!ENTITY status4evar.addonbar.closeButton "Vis knappen Luk">
@@ -83,3 +92,4 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Forsøg af tvinge adresselinjen XBL-binding.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Vælg kun denne indstilling, hvis du har problemer med, at forløbet i adresselinjen eller statusteksten vises forkert. Den kan muligvis ødelægge andre udvidelser, som prøver at sætte en XBL-binding på adresselinjen.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Registrer fuldskærmstilstand og vis links/status korrekt.">
+<!ENTITY toolkit.classic.download.window.label "Brug klassisk filhentningsvindue">

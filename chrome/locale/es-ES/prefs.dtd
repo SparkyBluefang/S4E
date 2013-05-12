@@ -10,6 +10,7 @@
 <!ENTITY status4evar.tab.popup "Cuadro emergente">
 <!ENTITY status4evar.tab.tabs "Pestañas">
 <!ENTITY status4evar.option.none "No mostrar">
+<!ENTITY status4evar.option.nothing "Nothing">
 <!ENTITY status4evar.option.toolbar "Barra de herramientas">
 <!ENTITY status4evar.option.urlbar "Barra de direcciones">
 <!ENTITY status4evar.option.popup "Cuadro emergente">
@@ -33,6 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "No repetir">
 <!ENTITY status4evar.option.space "Espacio">
 <!ENTITY status4evar.option.round "Redondeado">
+<!ENTITY status4evar.option.firefoxdefault "Firefox default">
+<!ENTITY status4evar.option.download.panel "Panel">
+<!ENTITY status4evar.option.download.library "Library">
+<!ENTITY status4evar.option.download.classic "Classic">
+<!ENTITY status4evar.unit.miliseconds "miliseconds">
 <!ENTITY status4evar.unit.seconds "segundos">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Mensajes de estado">
@@ -66,7 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Repetir">
 <!ENTITY status4evar.editor.css.image.position "Posición">
 <!ENTITY status4evar.editor.css.image.offset "Desplazamiento">
+<!ENTITY status4evar.download.button.action.label "Download status button action:">
 <!ENTITY status4evar.download.force.label "Mostrar siempre el botón de descargas">
+<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
 <!ENTITY status4evar.download.label.label "Texto junto al icono del botón de descargas:">
 <!ENTITY status4evar.download.tooltip.label "Cuadro informativo del botón de descargas:">
 <!ENTITY status4evar.download.progress.label "Mostrar información de las descargas pendientes sobre el icono del botón">
@@ -75,7 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "Mostrar el progreso de la descarga menos avanzada">
 <!ENTITY status4evar.download.color.active.label "Color del icono de progreso teniendo al menos una descarga activa:">
 <!ENTITY status4evar.download.color.paused.label "Color del icono de progreso teniendo todas las descargas pausadas:">
-<!ENTITY toolkit.classic.download.window.label "Usar la ventana de descargas clásica">
+<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
+<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
 <!ENTITY status4evar.addonbar.borderStyle "Usar un estilo visual alternativo para los bordes">
 <!ENTITY status4evar.addonbar.windowGripper "Mostrar el deslizador para redimensionar la ventana">
 <!ENTITY status4evar.addonbar.closeButton "Mostrar el botón «Cerrar»">
@@ -83,3 +92,4 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Forzar la vinculación (binding) XBL a la barra de direcciones">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Habilite esta opción sólo si el medidor de progreso o el mensaje de estado no son mostrados correctamente en la barra de direcciones. Esto corromperá potencialmente otras extensiones que asocian una vinculación XBL a la barra de direcciones.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Detectar el modo de pantalla completa y mostrar correctamente los enlaces y mensajes de estado.">
+<!ENTITY toolkit.classic.download.window.label "Usar la ventana de descargas clásica">

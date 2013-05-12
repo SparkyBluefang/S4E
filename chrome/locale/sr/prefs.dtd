@@ -10,6 +10,7 @@
 <!ENTITY status4evar.tab.popup "Искачући">
 <!ENTITY status4evar.tab.tabs "Језичци">
 <!ENTITY status4evar.option.none "ништа">
+<!ENTITY status4evar.option.nothing "Nothing">
 <!ENTITY status4evar.option.toolbar "Алатна трака">
 <!ENTITY status4evar.option.urlbar "траци за навигацију">
 <!ENTITY status4evar.option.popup "искачућем прозору">
@@ -33,6 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "Без понављања">
 <!ENTITY status4evar.option.space "Простор">
 <!ENTITY status4evar.option.round "Заобљеност">
+<!ENTITY status4evar.option.firefoxdefault "Firefox default">
+<!ENTITY status4evar.option.download.panel "Panel">
+<!ENTITY status4evar.option.download.library "Library">
+<!ENTITY status4evar.option.download.classic "Classic">
+<!ENTITY status4evar.unit.miliseconds "miliseconds">
 <!ENTITY status4evar.unit.seconds "сек.">
 <!ENTITY status4evar.unit.px "тачака">
 <!ENTITY status4evar.status.general.status.caption "Текст стања">
@@ -66,7 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Понављање">
 <!ENTITY status4evar.editor.css.image.position "Положај">
 <!ENTITY status4evar.editor.css.image.offset "Одступ">
+<!ENTITY status4evar.download.button.action.label "Download status button action:">
 <!ENTITY status4evar.download.force.label "Приказуј дугме за стање преузимања">
+<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
 <!ENTITY status4evar.download.label.label "Текст на дугмету за стање преузимања:">
 <!ENTITY status4evar.download.tooltip.label "Текст облачића за стање преузимања:">
 <!ENTITY status4evar.download.progress.label "Прикажи напредак пријема на дугмићу">
@@ -75,7 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "Прикажи најмање завршених пријема">
 <!ENTITY status4evar.download.color.active.label "Боја напретка за активне пријеме:">
 <!ENTITY status4evar.download.color.paused.label "Боја напретка за паузиране пријеме:">
-<!ENTITY toolkit.classic.download.window.label "Користи  класични прозор са преузимањима">
+<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
+<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
 <!ENTITY status4evar.addonbar.borderStyle "Користи алтернативне ивице трака с алаткама">
 <!ENTITY status4evar.addonbar.windowGripper "Прикажи простор за измену величине прозора">
 <!ENTITY status4evar.addonbar.closeButton "Дугме за затварање">
@@ -83,3 +92,4 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Приморај XBL повезивање траке за путању.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Изаберите ово само ако имате проблема с напретком траке за путању или се текст стања не приказује исправно. Ово може да онеспособи друге додатке који покушају да користе XBL повезивање на траку за путању.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Препознај када је прозор развучен преко целог екрана и прикажи одговарајуће везе/стања.">
+<!ENTITY toolkit.classic.download.window.label "Користи  класични прозор са преузимањима">

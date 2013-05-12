@@ -10,6 +10,7 @@
 <!ENTITY status4evar.tab.popup "Açılır pencere">
 <!ENTITY status4evar.tab.tabs "Sekmeler">
 <!ENTITY status4evar.option.none "Hiçbiri">
+<!ENTITY status4evar.option.nothing "Nothing">
 <!ENTITY status4evar.option.toolbar "Araç Çubuğu">
 <!ENTITY status4evar.option.urlbar "Konum Çubuğu">
 <!ENTITY status4evar.option.popup "Açılır menü">
@@ -33,6 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "Tekrar etme">
 <!ENTITY status4evar.option.space "Boşluk">
 <!ENTITY status4evar.option.round "Round">
+<!ENTITY status4evar.option.firefoxdefault "Firefox default">
+<!ENTITY status4evar.option.download.panel "Panel">
+<!ENTITY status4evar.option.download.library "Library">
+<!ENTITY status4evar.option.download.classic "Classic">
+<!ENTITY status4evar.unit.miliseconds "miliseconds">
 <!ENTITY status4evar.unit.seconds "saniyeler">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Durum Metni">
@@ -66,7 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Tekrar">
 <!ENTITY status4evar.editor.css.image.position "Pozisyon">
 <!ENTITY status4evar.editor.css.image.offset "Baskı">
+<!ENTITY status4evar.download.button.action.label "Download status button action:">
 <!ENTITY status4evar.download.force.label "İndirme Durum düğmesini daima göster">
+<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
 <!ENTITY status4evar.download.label.label "İndirme durum düğmesi metni:">
 <!ENTITY status4evar.download.tooltip.label "İndirme durum düğmesi ipucu:">
 <!ENTITY status4evar.download.progress.label "Düğmede indirme ilerlemesini göster">
@@ -75,7 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "Son indirileni göster">
 <!ENTITY status4evar.download.color.active.label "Aktif indirme için ilerleme rengi:">
 <!ENTITY status4evar.download.color.paused.label "Duraklatılmış yüklemeler için ilerleme rengi:">
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
+<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
+<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatif araç çubuğu çerçevesi kullan">
 <!ENTITY status4evar.addonbar.windowGripper "Show the window re-size gripper">
 <!ENTITY status4evar.addonbar.closeButton "Kapatma düğmesini göster">
@@ -83,3 +92,4 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Attempt to force the the Location Bar XBL binding.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Only select this if you have problems with the Location Bar progress or status text being displaying correctly. This will potentially break other extensions that try to set an XBL binding on the Location Bar.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
+<!ENTITY toolkit.classic.download.window.label "Use classic download window">
