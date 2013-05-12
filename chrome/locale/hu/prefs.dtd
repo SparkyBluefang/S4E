@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Helyzet">
 <!ENTITY status4evar.editor.css.image.offset "Eltolás">
 <!ENTITY status4evar.download.force.label "Mindig mutassa a Letöltési állapot gombot">
-<!ENTITY status4evar.download.label.force.label "Mindig mutassa a címkét">
 <!ENTITY status4evar.download.label.label "Letöltési állapot gomb címkéje:">
 <!ENTITY status4evar.download.tooltip.label "Letöltési állapot gomb buboréksúgója:">
 <!ENTITY status4evar.download.progress.label "Letöltés mérő mutatása a gombon">

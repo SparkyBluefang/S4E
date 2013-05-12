@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Pozicija">
 <!ENTITY status4evar.editor.css.image.offset "Přesadźeny wo">
 <!ENTITY status4evar.download.force.label "Tłóčatko sćehnjenskeho statusa přeco pokazać">
-<!ENTITY status4evar.download.label.force.label "Tekst tłóčatka přeco pokazać">
 <!ENTITY status4evar.download.label.label "Tekst tłóčatka sćehnjenskeho statusa:">
 <!ENTITY status4evar.download.tooltip.label "Infotekst tłóčatka sćehnjenskeho statusa:">
 <!ENTITY status4evar.download.progress.label "Sćehnjenski postup na tłóčatce pokazać">

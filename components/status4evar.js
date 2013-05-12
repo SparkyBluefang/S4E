@@ -66,11 +66,14 @@ Status_4_Evar.prototype =
 	advancedStatusDetectFullScreen: true,
 	advancedUrlbarForceBinding:	false,
 
+	downloadButtonAction:		1,
 	downloadColorActive:		null,
 	downloadColorPaused:		null,
 	downloadForce:			false,
 	downloadLabel:			0,
 	downloadLabelForce:		true,
+	downloadNotifyAnimate:		true,
+	downloadNotifyTimeout:		60000,
 	downloadProgress:		1,
 	downloadTooltip:		1,
 
@@ -171,6 +174,18 @@ Status_4_Evar.prototype =
 			}
 		},
 
+		"download.button.action":
+		{
+			update: function()
+			{
+				this.downloadButtonAction = this.prefs.getIntPref("download.button.action");
+			},
+			updateWindow: function(win)
+			{
+				win.caligon.status4evar.downloadStatus.updateBinding();
+			}
+		},
+
 		"download.color.active":
 		{
 			update: function()
@@ -236,6 +251,22 @@ Status_4_Evar.prototype =
 				{
 					this.setBoolElementAttribute(download_button, "forcelabel", this.downloadLabelForce);
 				}
+			}
+		},
+
+		"download.notify.animate":
+		{
+			update: function()
+			{
+				this.downloadNotifyAnimate = this.prefs.getBoolPref("download.notify.animate");
+			}
+		},
+
+		"download.notify.timeout":
+		{
+			update: function()
+			{
+				this.downloadNotifyTimeout = (this.prefs.getIntPref("download.notify.timeout") * 1000);
 			}
 		},
 

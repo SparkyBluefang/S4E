@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "מיקום">
 <!ENTITY status4evar.editor.css.image.offset "איזון">
 <!ENTITY status4evar.download.force.label "להציג תמיד את כפתור מצב ההורדה">
-<!ENTITY status4evar.download.label.force.label "להציג תמיד טקסט הכפתור">
 <!ENTITY status4evar.download.label.label "טקסט כפתור מצב ההורדה:">
 <!ENTITY status4evar.download.tooltip.label "חלונית מידע כפתור מצב ההורדה:">
 <!ENTITY status4evar.download.progress.label "הצגת התקדמות ההורדות על הכפתור">

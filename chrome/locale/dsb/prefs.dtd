@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Pozicija">
 <!ENTITY status4evar.editor.css.image.offset "Wótchylenje">
 <!ENTITY status4evar.download.force.label "Tłocašk ześěgnjeńskego statusa pśecej pokazaś">
-<!ENTITY status4evar.download.label.force.label "Tłocaškowy tekst pśecej pokazaś">
 <!ENTITY status4evar.download.label.label "Tekst tłocaška ześěgnjeńskego statusa:">
 <!ENTITY status4evar.download.tooltip.label "Pomocny tekst tłocaška ześěgnjeńskego statusa:">
 <!ENTITY status4evar.download.progress.label "Ześěgnjeński póstup na tłocašku pokazaś">

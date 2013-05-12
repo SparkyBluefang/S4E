@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Umístění">
 <!ENTITY status4evar.editor.css.image.offset "Vyrovnat">
 <!ENTITY status4evar.download.force.label "Vždy zobrazit tlačítko průběhu stahování">
-<!ENTITY status4evar.download.label.force.label "Vždy zobrazit text tlačítka">
 <!ENTITY status4evar.download.label.label "Text tlačítka průběhu stahování:">
 <!ENTITY status4evar.download.tooltip.label "Nápověda tlačítka průběhu stahování:">
 <!ENTITY status4evar.download.progress.label "Zobrazit postup stahování v tlačítku">

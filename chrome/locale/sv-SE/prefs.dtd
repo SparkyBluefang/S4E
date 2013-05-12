@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Position">
 <!ENTITY status4evar.editor.css.image.offset "Förskjutning">
 <!ENTITY status4evar.download.force.label "Visa alltid filhämtningsstatusknappen">
-<!ENTITY status4evar.download.label.force.label "Visa alltid etiketten">
 <!ENTITY status4evar.download.label.label "Filhämtningsstatusknappens etikett:">
 <!ENTITY status4evar.download.tooltip.label "Filhämtningsstatusknappens verktygstips:">
 <!ENTITY status4evar.download.progress.label "Visa hämtningsförloppet på knappen">

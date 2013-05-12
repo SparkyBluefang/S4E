@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Θέση">
 <!ENTITY status4evar.editor.css.image.offset "Μετατόπιση">
 <!ENTITY status4evar.download.force.label "Πάντα εμφάνιση του κουμπιού κατάστασης λήψεων">
-<!ENTITY status4evar.download.label.force.label "Πάντα εμφάνιση του κειμένου του κουμπιού">
 <!ENTITY status4evar.download.label.label "Κείμενο κουμπιού κατάστασης λήψεων:">
 <!ENTITY status4evar.download.tooltip.label "Συμβουλή εργαλείου κουμπιού κατάστασης λήψεων:">
 <!ENTITY status4evar.download.progress.label "Εμφάνιση προόδου λήψεων στο κουμπί">

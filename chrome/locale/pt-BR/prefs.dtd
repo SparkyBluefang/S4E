@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Posição">
 <!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Sempre mostrar o botão de Status do Download">
-<!ENTITY status4evar.download.label.force.label "Sempre mostrar texto">
 <!ENTITY status4evar.download.label.label "Texto do botão de status do download:">
 <!ENTITY status4evar.download.tooltip.label "Texto da dica de ferramenta do botão de status do download:">
 <!ENTITY status4evar.download.progress.label "Mostrar progresso do download no botão">

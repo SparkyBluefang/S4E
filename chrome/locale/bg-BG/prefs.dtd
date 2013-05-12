@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Позиция">
 <!ENTITY status4evar.editor.css.image.offset "Отстояние">
 <!ENTITY status4evar.download.force.label "Винаги да се показва бутонът за състоянието на изтеглянията">
-<!ENTITY status4evar.download.label.force.label "Винаги да се показва текстът на бутона">
 <!ENTITY status4evar.download.label.label "Текст на бутона:">
 <!ENTITY status4evar.download.tooltip.label "Подсказка при посочване на бутона:">
 <!ENTITY status4evar.download.progress.label "Показване на напредъка на изтеглянията върху бутона">

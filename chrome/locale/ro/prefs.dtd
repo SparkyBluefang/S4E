@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Poziție">
 <!ENTITY status4evar.editor.css.image.offset "Decalare">
 <!ENTITY status4evar.download.force.label "Afișează întotdeauna butonul de stare a descărcării">
-<!ENTITY status4evar.download.label.force.label "Afișează întotdeauna textul de pe butonul de stare a descărcării">
 <!ENTITY status4evar.download.label.label "Text pe butonul de stare a descărcării:">
 <!ENTITY status4evar.download.tooltip.label "Text în balonul informativ al butonului de stare a descărcării:">
 <!ENTITY status4evar.download.progress.label "Afișează progresul descărcării pe butonul de stare a descărcării">

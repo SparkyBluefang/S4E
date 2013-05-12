@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Positie">
 <!ENTITY status4evar.editor.css.image.offset "Afstand">
 <!ENTITY status4evar.download.force.label "Altijd de status van downloads tonen">
-<!ENTITY status4evar.download.label.force.label "Tekst altijd tonen">
 <!ENTITY status4evar.download.label.label "Tekst voor status downloads:">
 <!ENTITY status4evar.download.tooltip.label "Tooltip downloadstatus:">
 <!ENTITY status4evar.download.progress.label "Voortgang van downloads op de knop tonen">

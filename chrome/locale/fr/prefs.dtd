@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Position">
 <!ENTITY status4evar.editor.css.image.offset "Décalage">
 <!ENTITY status4evar.download.force.label "Toujours afficher le bouton d'état de téléchargement">
-<!ENTITY status4evar.download.label.force.label "Toujours afficher le texte">
 <!ENTITY status4evar.download.label.label "Texte du bouton d'état de téléchargement :">
 <!ENTITY status4evar.download.tooltip.label "Infobulle du bouton d'état de téléchargement :">
 <!ENTITY status4evar.download.progress.label "Afficher la progression du téléchargement sur le bouton">

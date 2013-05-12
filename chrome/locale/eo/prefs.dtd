@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Pozicio">
 <!ENTITY status4evar.editor.css.image.offset "Deŝovita je">
 <!ENTITY status4evar.download.force.label "Ĉiam montri la elŝutostatan butonon">
-<!ENTITY status4evar.download.label.force.label "Ĉiam montri la butontekston">
 <!ENTITY status4evar.download.label.label "Teksto de elŝutostata butono:">
 <!ENTITY status4evar.download.tooltip.label "Ŝpruchelpilo de elŝutostata butono:">
 <!ENTITY status4evar.download.progress.label "Montri elŝutprogreson sur butono">

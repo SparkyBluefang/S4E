@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "位置">
 <!ENTITY status4evar.editor.css.image.offset "偏移">
 <!ENTITY status4evar.download.force.label "总是显示下载状态按钮">
-<!ENTITY status4evar.download.label.force.label "总是显示按钮文本">
 <!ENTITY status4evar.download.label.label "下载状态的按钮文本：">
 <!ENTITY status4evar.download.tooltip.label "下载状态的按钮提示：">
 <!ENTITY status4evar.download.progress.label "在按钮上显示下载进度">

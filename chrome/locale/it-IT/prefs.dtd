@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Posizione">
 <!ENTITY status4evar.editor.css.image.offset "Spostamento">
 <!ENTITY status4evar.download.force.label "Mostra sempre il pulsante di stato dei download">
-<!ENTITY status4evar.download.label.force.label "Mostra sempre l'etichetta del pulsante">
 <!ENTITY status4evar.download.label.label "Etichetta del pulsante di stato dei download:">
 <!ENTITY status4evar.download.tooltip.label "Riquadro informativo del pulsante di stato dei download:">
 <!ENTITY status4evar.download.progress.label "Mostra indicatore di avanzamento dei download sul pulsante">

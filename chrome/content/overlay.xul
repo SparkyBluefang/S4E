@@ -66,7 +66,7 @@
 		               title="&status4evar.download.widget.title;"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               removable="true" collapsed="true" tooltip="_child"
-		               oncommand="caligon.status4evar.downloadStatus.openPanel(event)">
+		               oncommand="caligon.status4evar.downloadStatus.openUI(event)">
 			<stack id="status4evar-download-anchor" class="toolbarbutton-icon">
 				<vbox id="status4evar-download-icon" />
 				<vbox pack="end">

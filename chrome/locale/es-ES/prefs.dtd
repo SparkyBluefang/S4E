@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Posición">
 <!ENTITY status4evar.editor.css.image.offset "Desplazamiento">
 <!ENTITY status4evar.download.force.label "Mostrar siempre el botón de descargas">
-<!ENTITY status4evar.download.label.force.label "Mostrar siempre el texto junto al icono del botón de descargas">
 <!ENTITY status4evar.download.label.label "Texto junto al icono del botón de descargas:">
 <!ENTITY status4evar.download.tooltip.label "Cuadro informativo del botón de descargas:">
 <!ENTITY status4evar.download.progress.label "Mostrar información de las descargas pendientes sobre el icono del botón">

@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Pozisyon">
 <!ENTITY status4evar.editor.css.image.offset "Baskı">
 <!ENTITY status4evar.download.force.label "İndirme Durum düğmesini daima göster">
-<!ENTITY status4evar.download.label.force.label "Düğme metnini daima göster">
 <!ENTITY status4evar.download.label.label "İndirme durum düğmesi metni:">
 <!ENTITY status4evar.download.tooltip.label "İndirme durum düğmesi ipucu:">
 <!ENTITY status4evar.download.progress.label "Düğmede indirme ilerlemesini göster">

@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Position">
 <!ENTITY status4evar.editor.css.image.offset "Versatz">
 <!ENTITY status4evar.download.force.label "Download-Status-Schaltfläche immer anzeigen">
-<!ENTITY status4evar.download.label.force.label "Beschriftung immer anzeigen">
 <!ENTITY status4evar.download.label.label "Beschriftung für Download-Status:">
 <!ENTITY status4evar.download.tooltip.label "Tooltip-Text für Download-Status:">
 <!ENTITY status4evar.download.progress.label "Download-Fortschritt in der Schaltfläche anzeigen">

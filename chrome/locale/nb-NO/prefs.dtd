@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Posisjon">
 <!ENTITY status4evar.editor.css.image.offset "Offset">
 <!ENTITY status4evar.download.force.label "Vis alltid nedlastingsstatusknappen">
-<!ENTITY status4evar.download.label.force.label "Vis alltid knappeteksten">
 <!ENTITY status4evar.download.label.label "Tekst på nedlastingsstatusknapp:">
 <!ENTITY status4evar.download.tooltip.label "Hjelpeboble for nedlastingsstatusknapp:">
 <!ENTITY status4evar.download.progress.label "Vis nedlastingsframgang på knappen">

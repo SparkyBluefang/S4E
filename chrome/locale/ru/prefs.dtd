@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Положение">
 <!ENTITY status4evar.editor.css.image.offset "Смещение">
 <!ENTITY status4evar.download.force.label "Всегда показывать кнопку «Состояние загрузок»">
-<!ENTITY status4evar.download.label.force.label "Всегда показывать текст кнопки">
 <!ENTITY status4evar.download.label.label "В тексте кнопки отображать:">
 <!ENTITY status4evar.download.tooltip.label "Во всплывающей подсказке кнопки отображать:">
 <!ENTITY status4evar.download.progress.label "Показывать индикатор загрузки на кнопке">

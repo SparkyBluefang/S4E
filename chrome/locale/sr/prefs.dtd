@@ -67,7 +67,6 @@
 <!ENTITY status4evar.editor.css.image.position "Положај">
 <!ENTITY status4evar.editor.css.image.offset "Одступ">
 <!ENTITY status4evar.download.force.label "Приказуј дугме за стање преузимања">
-<!ENTITY status4evar.download.label.force.label "Увек приказуј текст на дугмету">
 <!ENTITY status4evar.download.label.label "Текст на дугмету за стање преузимања:">
 <!ENTITY status4evar.download.tooltip.label "Текст облачића за стање преузимања:">
 <!ENTITY status4evar.download.progress.label "Прикажи напредак пријема на дугмићу">

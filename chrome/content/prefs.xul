@@ -157,11 +157,13 @@
 						<hbox align="center">
 							<label id="status4evar-status-linkOver-delay-show-label" control="status4evar-status-linkOver-delay-show-value">&status4evar.status.linkOver.delay.show.label;</label>
 							<textbox id="status4evar-status-linkOver-delay-show-value" preference="status4evar-pref-status-linkOver-delay-show" type="number" size="5" />
+							<label id="status4evar-status-linkOver-delay-show-unit">&status4evar.unit.miliseconds;</label>
 						</hbox>
 
 						<hbox align="center">
 							<label id="status4evar-status-linkOver-delay-hide-label" control="status4evar-status-linkOver-delay-hide-value">&status4evar.status.linkOver.delay.hide.label;</label>
 							<textbox id="status4evar-status-linkOver-delay-hide-value" preference="status4evar-pref-status-linkOver-delay-hide" type="number" size="5" />
+							<label id="status4evar-status-linkOver-delay-hide-unit">&status4evar.unit.miliseconds;</label>
 						</hbox>
 					</groupbox>
 
@@ -319,14 +321,16 @@
 
 	<prefpane id="status4evar-pane-download" label="&status4evar.pane.download;">
 		<preferences>
-			<preference id="status4evar-pref-download-color-active" name="status4evar.download.color.active" type="string" />
-			<preference id="status4evar-pref-download-color-paused" name="status4evar.download.color.paused" type="string" />
-			<preference id="status4evar-pref-download-force"        name="status4evar.download.force"        type="bool" />
-			<preference id="status4evar-pref-download-label"        name="status4evar.download.label"        type="int" />
-			<preference id="status4evar-pref-download-label-force"  name="status4evar.download.label.force"  type="bool" />
-			<preference id="status4evar-pref-download-progress"     name="status4evar.download.progress"     type="int" />
-			<preference id="status4evar-pref-download-tooltip"      name="status4evar.download.tooltip"      type="int" />
-			<preference id="toolkit-pref-classic-download-window"   name="browser.download.useToolkitUI"     type="bool" />
+			<preference id="status4evar-pref-download-button-action"  name="status4evar.download.button.action"  type="int" />
+			<preference id="status4evar-pref-download-color-active"   name="status4evar.download.color.active"   type="string" />
+			<preference id="status4evar-pref-download-color-paused"   name="status4evar.download.color.paused"   type="string" />
+			<preference id="status4evar-pref-download-force"          name="status4evar.download.force"          type="bool" />
+			<preference id="status4evar-pref-download-label"          name="status4evar.download.label"          type="int" />
+			<preference id="status4evar-pref-download-label-force"    name="status4evar.download.label.force"    type="bool" />
+			<preference id="status4evar-pref-download-notify-animate" name="status4evar.download.notify.animate" type="bool" />
+			<preference id="status4evar-pref-download-notify-timeout" name="status4evar.download.notify.timeout" type="int" />
+			<preference id="status4evar-pref-download-progress"       name="status4evar.download.progress"       type="int" />
+			<preference id="status4evar-pref-download-tooltip"        name="status4evar.download.tooltip"        type="int" />
 		</preferences>
 
 		<commandset id="status4evar-commandset-download">
@@ -359,6 +363,27 @@
 			</menulist>
 		</hbox>
 
+		<hbox align="center">
+			<label id="status4evar-download-button-action-label" control="status4evar-download-button-action-menu">&status4evar.download.button.action.label;</label>
+			<menulist id="status4evar-download-button-action-menu" preference="status4evar-pref-download-button-action" sizetopopup="always">
+				<menupopup>
+					<menuitem value="0" label="&status4evar.option.nothing;" />
+					<menuitem value="1" label="&status4evar.option.firefoxdefault;" />
+					<menuitem value="2" label="&status4evar.option.download.panel;" />
+					<menuitem value="3" label="&status4evar.option.download.library;" />
+					<menuitem value="4" label="&status4evar.option.download.classic;" />
+				</menupopup>
+			</menulist>
+		</hbox>
+
+		<hbox align="center">
+			<label id="status4evar-download-notify-timeout-label" control="status4evar-download-notify-timeout-value">&status4evar.download.notify.timeout.label;</label>
+			<textbox id="status4evar-download-notify-timeout-value" preference="status4evar-pref-download-notify-timeout" type="number" size="3" />
+			<label id="status4evar-download-notify-timeout-unit">&status4evar.unit.seconds;</label>
+		</hbox>
+
+		<checkbox id="status4evar-download-notify-animate-check" preference="status4evar-pref-download-notify-animate" label="&status4evar.download.notify.animate.label;" />
+
 		<checkbox id="status4evar-download-progress-check" command="status4evar-command-download-progress" label="&status4evar.download.progress.label;" />
 
 		<vbox class="indent">
@@ -381,14 +406,6 @@
 				<colorpicker id="status4evar-download-color-paused-picker" preference="status4evar-pref-download-color-paused" type="button" />
 			</hbox>
 		</vbox>
-
-		<separator/>
-
-		<groupbox id="status4evar-download-builtin">
-			<caption label="&status4evar.status.urlbar.firefox.builtin.caption;" />
-
-			<checkbox id="toolkit-classic-download-window-check" preference="toolkit-pref-classic-download-window" label="&toolkit.classic.download.window.label;" />
-		</groupbox>
 	</prefpane>
 
 	<prefpane id="status4evar-pane-addonbar" label="&status4evar.pane.addonbar;">
@@ -407,9 +424,10 @@
 
 	<prefpane id="status4evar-pane-advanced" label="&status4evar.pane.advanced;">
 		<preferences>
-			<preference id="status4evar-pref-advanced-showWarning" name="status4evar.advanced.showWarning" type="bool" />
+			<preference id="status4evar-pref-advanced-showWarning"             name="status4evar.advanced.showWarning"             type="bool" />
 			<preference id="status4evar-pref-advanced-status-detectFullScreen" name="status4evar.advanced.status.detectFullScreen" type="bool" />
-			<preference id="status4evar-pref-advanced-urlbar-forceBinding" name="status4evar.advanced.urlbar.forceBinding" type="bool" />
+			<preference id="status4evar-pref-advanced-urlbar-forceBinding"     name="status4evar.advanced.urlbar.forceBinding"     type="bool" />
+			<preference id="toolkit-pref-classic-download-window"              name="browser.download.useToolkitUI"                type="bool" />
 		</preferences>
 
 		<commandset id="status4evar-commandset-advanced">
@@ -446,6 +464,12 @@
 					<caption label="&status4evar.pane.status;" />
 
 					<checkbox id="status4evar-advanced-status-detectFullScreen-check" preference="status4evar-pref-advanced-status-detectFullScreen" label="&status4evar.advanced.status.detectFullScreen;" />
+				</groupbox>
+
+				<groupbox id="status4evar-advanced-download">
+					<caption label="&status4evar.pane.download;" />
+
+					<checkbox id="toolkit-classic-download-window-check" preference="toolkit-pref-classic-download-window" label="&toolkit.classic.download.window.label;" />
 				</groupbox>
 			</vbox>
 		</deck>

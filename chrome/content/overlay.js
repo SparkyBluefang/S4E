@@ -667,6 +667,8 @@ window.addEventListener("load", function buildS4E()
 	{
 		_hasPBAPI:            false,
 		_listening:           false,
+		_binding:             false,
+
 		_lastTime:            Infinity,
 
 		_dlActive:            false,
@@ -682,6 +684,7 @@ window.addEventListener("load", function buildS4E()
 		_dlProgressType:      "active",
 
 		_dlNotifyFinishTimer: 0,
+		_dlNotifyGlowTimer:   0,
 
 		_customizing:         false,
 
@@ -703,6 +706,12 @@ window.addEventListener("load", function buildS4E()
 		{
 			delete this.DownloadManager;
 			return this.DownloadManager = CC["@mozilla.org/download-manager;1"].getService(CI.nsIDownloadManager);
+		},
+
+		get DownloadManagerUIClassic()
+		{
+			delete this.DownloadManagerUIClassic;
+			return this.DownloadManagerUIClassic = Components.classesByID["{7dfdf0d1-aff6-4a34-bad1-d0fe74601642}"].getService(CI.nsIDownloadManagerUI)
 		},
 
 		get PrivateBrowsingUtils()
@@ -740,12 +749,7 @@ window.addEventListener("load", function buildS4E()
 			this._listening = true;
 			this._lastTime = Infinity;
 
-			DownloadsButton._getAnchorInternal = DownloadsButton.getAnchor;
-			DownloadsButton.getAnchor = this.getAnchor;
-
-			DownloadsButton._releaseAnchorInternal = DownloadsButton.releaseAnchor;
-			DownloadsButton.releaseAnchor = function() {};
-
+			this.updateBinding();
 			this.updateStatus();
 		},
 
@@ -761,8 +765,7 @@ window.addEventListener("load", function buildS4E()
 					Services.obs.removeObserver(this, "private-browsing");
 				}
 
-				DownloadsButton.getAnchor = DownloadsButton._getAnchorInternal;
-				DownloadsButton.releaseAnchor = DownloadsButton._releaseAnchorInternal;
+				this.releaseBinding();
 			}
 		},
 
@@ -773,6 +776,40 @@ window.addEventListener("load", function buildS4E()
 			delete this.DownloadUtils;
 			delete this.DownloadManager;
 			delete this.PrivateBrowsingUtils;
+		},
+
+		updateBinding: function()
+		{
+			switch(s4e_service.downloadButtonAction)
+			{
+				case 1: // Default
+				case 2: // Show Panel
+					if(!this._binding)
+					{
+						DownloadsButton._getAnchorInternal = DownloadsButton.getAnchor;
+						DownloadsButton.getAnchor = this.getAnchor;
+
+						DownloadsButton._releaseAnchorInternal = DownloadsButton.releaseAnchor;
+						DownloadsButton.releaseAnchor = function() {};
+
+						this._binding = true;
+					}
+					break;
+				default:
+					this.releaseBinding();
+					break;
+			}
+		},
+
+		releaseBinding: function()
+		{
+			if(this._binding)
+			{
+				DownloadsButton.getAnchor = DownloadsButton._getAnchorInternal;
+				DownloadsButton.releaseAnchor = DownloadsButton._releaseAnchorInternal;
+
+				this._binding = false;
+			}
 		},
 
 		customizing: function(val)
@@ -889,9 +926,9 @@ window.addEventListener("load", function buildS4E()
 				download_progress.collapsed = true;
 				download_progress.value = 0;
 
-				if(this._dlFinished && this._hasPBAPI)
+				if(this._dlFinished && this._hasPBAPI && !this.isUIShowing)
 				{
-					download_button.setAttribute("attention", "true");
+					this.callAttention(download_button);
 				}
 				return;
 			}
@@ -914,8 +951,39 @@ window.addEventListener("load", function buildS4E()
 			download_label.value = this.buildString(s4e_service.downloadLabel);
 			download_tooltip.label = this.buildString(s4e_service.downloadTooltip);
 
-			download_button.removeAttribute("attention");
+			this.clearAttention(download_button);
 			download_button.collapsed = false;
+		},
+
+		callAttention: function(download_button)
+		{
+			if(this._dlNotifyGlowTimer != 0)
+			{
+				window.clearTimeout(this._dlNotifyGlowTimer);
+				this._dlNotifyGlowTimer = 0;
+			}
+
+			download_button.setAttribute("attention", "true");
+
+			if(s4e_service.downloadNotifyTimeout)
+			{
+				this._dlNotifyGlowTimer = window.setTimeout(function(self, button)
+				{
+					self._dlNotifyGlowTimer = 0;
+					button.removeAttribute("attention");
+				}, s4e_service.downloadNotifyTimeout, this, download_button);
+			}
+		},
+
+		clearAttention: function(download_button)
+		{
+			if(this._dlNotifyGlowTimer != 0)
+			{
+				window.clearTimeout(this._dlNotifyGlowTimer);
+				this._dlNotifyGlowTimer = 0;
+			}
+
+			download_button.removeAttribute("attention");
 		},
 
 		clearFinished: function()
@@ -924,7 +992,7 @@ window.addEventListener("load", function buildS4E()
 			let download_button = s4e_getters.downloadButton;
 			if(download_button)
 			{
-				download_button.removeAttribute("attention");
+				this.clearAttention(download_button);
 			}
 		},
 
@@ -939,20 +1007,67 @@ window.addEventListener("load", function buildS4E()
 			aCallback(s4e_getters.downloadButtonAnchor);
 		},
 
-		openPanel: function(aEvent)
+		openUI: function(aEvent)
 		{
 			this.clearFinished();
 
-			if(DownloadsCommon.useToolkitUI)
+			switch(s4e_service.downloadButtonAction)
 			{
-				BrowserDownloadsUI();
-			}
-			else
-			{
-				DownloadsPanel.showPanel();
+				case 1: // Default
+					if(DownloadsCommon.useToolkitUI)
+					{
+						this.DownloadManagerUIClassic.show(window);
+					}
+					else
+					{
+						DownloadsPanel.showPanel();
+					}
+					break;
+				case 2: // Show Panel
+					DownloadsPanel.showPanel();
+					break;
+				case 3: // Show Library
+					PlacesCommandHook.showPlacesOrganizer("Downloads");
+					break;
+				case 4: // Show Classic
+					this.DownloadManagerUIClassic.show(window);
+					break;
+				default: // Nothing
+					break;
 			}
 
 			aEvent.stopPropagation();
+		},
+
+		get isUIShowing()
+		{
+			switch(s4e_service.downloadButtonAction)
+			{
+				case 1: // Default
+					if(DownloadsCommon.useToolkitUI)
+					{
+						return this.DownloadManagerUIClassic.visible;
+					}
+					else
+					{
+						return DownloadsPanel.isPanelShowing;
+					}
+				case 2: // Show Panel
+					return DownloadsPanel.isPanelShowing;
+				case 3: // Show Library
+					var organizer = Services.wm.getMostRecentWindow("Places:Organizer");
+					if(organizer)
+					{
+						let selectedNode = organizer.PlacesOrganizer._places.selectedNode;
+						let downloadsItemId = organizer.PlacesUIUtils.leftPaneQueries["Downloads"];
+						return selectedNode && selectedNode.itemId === downloadsItemId;
+					}
+					return false;
+				case 4: // Show Classic
+					return this.DownloadManagerUIClassic.visible;
+				default: // Nothing
+					return false;
+			}
 		},
 
 		buildString: function(mode)
@@ -982,10 +1097,10 @@ window.addEventListener("load", function buildS4E()
 		{
 			this.updateStatus(aDownload.state);
 
-			if(aDownload.state == CI.nsIDownloadManager.DOWNLOAD_FINISHED && this._dlNotifyFinishTimer == 0)
+			if(aDownload.state == CI.nsIDownloadManager.DOWNLOAD_FINISHED && this._hasPBAPI && this._dlNotifyFinishTimer == 0 && s4e_service.downloadNotifyAnimate)
 			{
 				let download_button = s4e_getters.downloadButton;
-				if(download_button && this._hasPBAPI)
+				if(download_button)
 				{
 					download_button.setAttribute("notification", "finish");
 					this._dlNotifyFinishTimer = window.setTimeout(function(self, button)

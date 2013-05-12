@@ -43,11 +43,14 @@ pref("status4evar.advanced.showWarning", true);
 pref("status4evar.advanced.status.detectFullScreen", true);
 pref("status4evar.advanced.urlbar.forceBinding", false);
 
+pref("status4evar.download.button.action", 1);
 pref("status4evar.download.color.active", "#33FF33");
 pref("status4evar.download.color.paused", "#808080");
 pref("status4evar.download.force", true);
 pref("status4evar.download.label", 0);
 pref("status4evar.download.label.force", false);
+pref("status4evar.download.notify.animate", true);
+pref("status4evar.download.notify.timeout", 60);
 pref("status4evar.download.progress", 1);
 pref("status4evar.download.tooltip", 1);
 

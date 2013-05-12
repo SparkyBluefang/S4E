@@ -49,11 +49,14 @@ interface nsIStatus4Evar : nsISupports
 	readonly attribute boolean   advancedStatusDetectFullScreen;
 	readonly attribute boolean   advancedUrlbarForceBinding;
 
+	readonly attribute long      downloadButtonAction;
 	readonly attribute ACString  downloadColorActive;
 	readonly attribute ACString  downloadColorPaused;
 	readonly attribute boolean   downloadForce;
 	readonly attribute long      downloadLabel;
 	readonly attribute boolean   downloadLabelForce;
+	readonly attribute boolean   downloadNotifyAnimate;
+	readonly attribute long      downloadNotifyTimeout;
 	readonly attribute long      downloadProgress;
 	readonly attribute long      downloadTooltip;
 
