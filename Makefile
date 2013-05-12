@@ -49,7 +49,6 @@ PY         = env python2
 
 XRSDK      = $(shell $(LS) -d /opt/mozilla/xulrunner-sdk-* | $(SORT) -V | $(TAIL) -1)
 XRSDK_VERS = $(shell $(GREP) "^Milestone=" $(XRSDK)/bin/platform.ini | $(CUT) -d"=" -f2 | $(CUT) -d"." -f1)
-TYPELIB_PY = $(shell $(EXPR) $(XRSDK_VERS) \>= 11)
 TLIB_CACHE = components/cache
 
 NAME       = $(shell $(GREP) "^name=" install.manifest | $(CUT) -d"=" -f2)
@@ -76,13 +75,8 @@ $(TLIB_CACHE):
 	$(MKDIR) $@
 
 %.xpt: %.idl $(TLIB_CACHE)
-ifeq ($(TYPELIB_PY),1)
 	$(PY) $(XRSDK)/sdk/bin/typelib.py --cachedir=$(TLIB_CACHE) \
 		-I $(XRSDK)/idl -o $*.xpt $*.idl
-else
-	$(XRSDK)/bin/xpidl -m typelib -w -v \
-		-I $(XRSDK)/idl -e $*.xpt $*.idl
-endif
 
 xpt: $(XPT_FILES)
 
