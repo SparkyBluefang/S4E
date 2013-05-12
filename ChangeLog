@@ -1,4 +1,6 @@
 Version next
+
+Version 2013.05.12.17b
 * Add option to control the download button action (Firefox default / panel / library / classic window).
 * Add an option to disable the download complete animation.
 * Add an option to automatically clear the download complete button highlight.
