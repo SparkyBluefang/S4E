@@ -1,8 +1,8 @@
 Version next
 * Add option to control the download button action (Firefox default / panel / library / classic window).
 * Add an option to disable the download complete animation.
-* Add an option to automatically clear the download complete button hilight.
-* Do not hilight the download button if the panel/library/window is already open.
+* Add an option to automatically clear the download complete button highlight.
+* Do not highlight the download button if the panel/library/window is already open.
 
 Version 2013.02.16.23
 * Fix potential incorrect formatting of the location bar status display after clicking on a link.
