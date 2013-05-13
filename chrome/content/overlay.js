@@ -127,7 +127,6 @@ window.addEventListener("load", function buildS4E()
 		_networkXHR:      { val: "", type: "" },
 		_status:          { val: "", type: "" },
 		_jsStatus:        { val: "", type: "" },
-		_jsDefaultStatus: { val: "", type: "" },
 		_defaultStatus:   { val: "", type: "" },
 
 		_statusText:      { val: "", type: "" },
@@ -172,8 +171,7 @@ window.addEventListener("load", function buildS4E()
 
 		setJSDefaultStatus: function(status)
 		{
-			this._jsDefaultStatus = { val: status, type: "status content default" };
-			this.updateStatusField();
+			// This was removed from Firefox in Bug 862917
 		},
 
 		setDefaultStatus: function(status)
@@ -261,7 +259,7 @@ window.addEventListener("load", function buildS4E()
 			s4e_overLinkService.destroy();
 			this.clearTimer();
 
-			["_overLink", "_network", "_networkXHR", "_status", "_jsStatus", "_jsDefaultStatus", "_defaultStatus",
+			["_overLink", "_network", "_networkXHR", "_status", "_jsStatus", "_defaultStatus",
 			"_statusText"].forEach(function(prop)
 			{
 				delete this[prop];
@@ -284,7 +282,7 @@ window.addEventListener("load", function buildS4E()
 				textOrder.push("_status", "_jsStatus");
 				if(s4e_service.statusDefault)
 				{
-					textOrder.push("_jsDefaultStatus", "_defaultStatus");
+					textOrder.push("_defaultStatus");
 				}
 
 				delete this._textOrder;
