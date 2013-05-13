@@ -103,7 +103,6 @@
 <!ENTITY status4evar.download.progress.min.label "Show least complete download">
 <!ENTITY status4evar.download.color.active.label "Progress color for active downloads:">
 <!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
-<!ENTITY status4evar.download.color.paused.label "Progress color for paused downloads:">
 <!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
 <!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
 
