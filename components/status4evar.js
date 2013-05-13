@@ -90,7 +90,7 @@ Status_4_Evar.prototype =
 	status:				1,
 	statusDefault:			true,
 	statusNetwork:			true,
-	statusTimeout:			0,
+	statusTimeout:			10000,
 	statusLinkOver:			1,
 	statusLinkOverDelayShow:	70,
 	statusLinkOverDelayHide:	150,

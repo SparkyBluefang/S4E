@@ -1,4 +1,5 @@
 Version next
+* Fix sticky extension status messages. Instead of simply hiding the status text, actually clear the saved status messages.
 
 Version 2013.05.12.17b
 * Add option to control the download button action (Firefox default / panel / library / classic window).

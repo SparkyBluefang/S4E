@@ -122,16 +122,17 @@ window.addEventListener("load", function buildS4E()
 //
 	let s4e_statusService =
 	{
-		_overLink:        { val: "", type: "" },
-		_network:         { val: "", type: "" },
-		_networkXHR:      { val: "", type: "" },
-		_status:          { val: "", type: "" },
-		_jsStatus:        { val: "", type: "" },
-		_defaultStatus:   { val: "", type: "" },
+		_overLink:               { val: "", type: "" },
+		_network:                { val: "", type: "" },
+		_networkXHR:             { val: "", type: "" },
+		_status:                 { val: "", type: "" },
+		_jsStatus:               { val: "", type: "" },
+		_defaultStatus:          { val: "", type: "" },
 
-		_statusText:      { val: "", type: "" },
-		_noUpdate:        false,
-		_statusTimeoutID: 0,
+		_statusText:             { val: "", type: "" },
+		_noUpdate:               false,
+		_statusChromeTimeoutID:  0,
+		_statusContentTimeoutID: 0,
 
 		getCompositeStatusText: function()
 		{
@@ -257,7 +258,8 @@ window.addEventListener("load", function buildS4E()
 			// No need to unbind from the XULBrowserWindow, it's already null at this point
 
 			s4e_overLinkService.destroy();
-			this.clearTimer();
+			this.clearTimer("_statusChromeTimeoutID");
+			this.clearTimer("_statusContentTimeoutID");
 
 			["_overLink", "_network", "_networkXHR", "_status", "_jsStatus", "_defaultStatus",
 			"_statusText"].forEach(function(prop)
@@ -300,8 +302,6 @@ window.addEventListener("load", function buildS4E()
 
 			if(this._statusText.val != text.val || force)
 			{
-				this.clearTimer();
-
 				if(this._noUpdate)
 				{
 					return;
@@ -311,23 +311,55 @@ window.addEventListener("load", function buildS4E()
 
 				this.setStatusField(s4e_service.status, text, false);
 
-				if(text.val && text.type != "overLink" && s4e_service.statusTimeout)
+				if(text.val && s4e_service.statusTimeout)
 				{
-					this._statusTimeoutID = window.setTimeout(function(self)
-					{
-						self._statusTimeoutID = 0;
-						self.clearStatusField();
-					}, s4e_service.statusTimeout, this);
+					this.setTimer(text.type);
 				}
 			}
 		},
 
-		clearTimer: function()
+		setTimer: function(type)
 		{
-			if(this._statusTimeoutID != 0)
+			let typeArgs = type.split(" ", 3);
+
+			if(typeArgs.length < 2 || typeArgs[0] != "status")
 			{
-				window.clearTimeout(this._statusTimeoutID);
-				this._statusTimeoutID = 0;
+				return;
+			}
+
+			if(typeArgs[1] == "chrome")
+			{
+				this.clearTimer("_statusChromeTimeoutID");
+				this._statusChromeTimeoutID = window.setTimeout(function(self, isDefault)
+				{
+					self._statusChromeTimeoutID = 0;
+					if(isDefault)
+					{
+						self.clearStatusField();
+					}
+					else
+					{
+						self.setStatusText("");
+					}
+				}, s4e_service.statusTimeout, this, (typeArgs.length == 3 && typeArgs[2] == "default"));
+			}
+			else
+			{
+				this.clearTimer("_statusContentTimeoutID");
+				this._statusContentTimeoutID = window.setTimeout(function(self)
+				{
+					self._statusContentTimeoutID = 0;
+					self.setJSStatus("");
+				}, s4e_service.statusTimeout, this);
+			}
+		},
+
+		clearTimer: function(timerName)
+		{
+			if(this[timerName] != 0)
+			{
+				window.clearTimeout(this[timerName]);
+				this[timerName] = 0;
 			}
 		},
 
