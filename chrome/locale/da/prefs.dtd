@@ -10,7 +10,7 @@
 <!ENTITY status4evar.tab.popup "Pop op">
 <!ENTITY status4evar.tab.tabs "Faneblade">
 <!ENTITY status4evar.option.none "Ingen">
-<!ENTITY status4evar.option.nothing "Nothing">
+<!ENTITY status4evar.option.nothing "Ingen">
 <!ENTITY status4evar.option.toolbar "Værktøjslinje">
 <!ENTITY status4evar.option.urlbar "Adresselinje">
 <!ENTITY status4evar.option.popup "Pop op">
@@ -34,11 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "Gentag ikke">
 <!ENTITY status4evar.option.space "Mellemrum">
 <!ENTITY status4evar.option.round "Afrund">
-<!ENTITY status4evar.option.firefoxdefault "Firefox default">
+<!ENTITY status4evar.option.firefoxdefault "Firefox standard">
 <!ENTITY status4evar.option.download.panel "Panel">
-<!ENTITY status4evar.option.download.library "Library">
-<!ENTITY status4evar.option.download.classic "Classic">
-<!ENTITY status4evar.unit.miliseconds "miliseconds">
+<!ENTITY status4evar.option.download.library "Bogmærker og historik">
+<!ENTITY status4evar.option.download.classic "Klassisk">
+<!ENTITY status4evar.unit.miliseconds "millisekunder">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statustekst">
@@ -72,9 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Gentag">
 <!ENTITY status4evar.editor.css.image.position "Position">
 <!ENTITY status4evar.editor.css.image.offset "Forskydning">
-<!ENTITY status4evar.download.button.action.label "Download status button action:">
+<!ENTITY status4evar.download.button.action.label "Handling ved klik på knappen Filhentningsstatus:">
 <!ENTITY status4evar.download.force.label "Vis altid knappen Filhentningsstatus">
-<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
+<!ENTITY status4evar.download.label.force.label "Vis knaptekst i Vis kun ikoner-tilstand">
 <!ENTITY status4evar.download.label.label "Tekst på knappen Filhentningsstatus:">
 <!ENTITY status4evar.download.tooltip.label "Værktøjstip til knappen Filhentningsstatus:">
 <!ENTITY status4evar.download.progress.label "Vis filhentningsforløb på knappen">
@@ -83,8 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "Vis mindst fuldførte filhentning">
 <!ENTITY status4evar.download.color.active.label "Forløbsfarve for aktive filhentninger:">
 <!ENTITY status4evar.download.color.paused.label "Forløbsfarve for pausede filhentninger:">
-<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
-<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
+<!ENTITY status4evar.download.notify.animate.label "Animer knap når filhentning er fuldført">
+<!ENTITY status4evar.download.notify.timeout.label "Fremhæv knap når filhentning er færdig:">
 <!ENTITY status4evar.addonbar.borderStyle "Anvend alternative kanter til værktøjslinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gribelinjen til ændring af vinduesstørrelse">
 <!ENTITY status4evar.addonbar.closeButton "Vis knappen Luk">

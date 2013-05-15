@@ -1,6 +1,8 @@
 Version next
 * Fix sticky extension status messages. Instead of simply hiding the status text, actually clear the saved status messages.
 * Fix download button panel when the S4E download button is not present on a toolbar.
+* Update locales for new strings.
+* Updated translations for: el, es-ES, he, ja-JP, tr, zh-TW
 
 Version 2013.05.12.17b
 * Add option to control the download button action (Firefox default / panel / library / classic window).

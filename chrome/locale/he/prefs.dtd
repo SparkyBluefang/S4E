@@ -9,8 +9,8 @@
 <!ENTITY status4evar.tab.urlbar "סרגל כתובות">
 <!ENTITY status4evar.tab.popup "חלון קופץ">
 <!ENTITY status4evar.tab.tabs "לשוניות">
-<!ENTITY status4evar.option.none "לא כלום">
-<!ENTITY status4evar.option.nothing "Nothing">
+<!ENTITY status4evar.option.none "אף אחד">
+<!ENTITY status4evar.option.nothing "כלום">
 <!ENTITY status4evar.option.toolbar "סרגל כלים">
 <!ENTITY status4evar.option.urlbar "סרגל כתובות">
 <!ENTITY status4evar.option.popup "חלון קופץ">
@@ -34,11 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "ללא חזרה">
 <!ENTITY status4evar.option.space "מרווח">
 <!ENTITY status4evar.option.round "עגול">
-<!ENTITY status4evar.option.firefoxdefault "Firefox default">
-<!ENTITY status4evar.option.download.panel "Panel">
-<!ENTITY status4evar.option.download.library "Library">
-<!ENTITY status4evar.option.download.classic "Classic">
-<!ENTITY status4evar.unit.miliseconds "miliseconds">
+<!ENTITY status4evar.option.firefoxdefault "ברירת מחדל Firefox">
+<!ENTITY status4evar.option.download.panel "פנל">
+<!ENTITY status4evar.option.download.library "ספרייה">
+<!ENTITY status4evar.option.download.classic "קלאסי">
+<!ENTITY status4evar.unit.miliseconds "מילישניות">
 <!ENTITY status4evar.unit.seconds "שניות">
 <!ENTITY status4evar.unit.px "פיקסל">
 <!ENTITY status4evar.status.general.status.caption "טקסט מצב">
@@ -62,7 +62,7 @@
 <!ENTITY browser.urlbar.trimming.enabled.label "אפשור הסתרת פרוטוקול (http:// ו- ftp://)">
 <!ENTITY status4evar.status.popup.invertMirror.label "ברירת מחדל אל הצד הימני">
 <!ENTITY status4evar.status.popup.mouseMirror.label "החלפת צדדים כאשר העכבר חולף מעל">
-<!ENTITY status4evar.progress.style.label "שימוש בסגנון מותאם בסרגל ההתקדמות">
+<!ENTITY status4evar.progress.style.label "שימוש בסגנון מותאם">
 <!ENTITY status4evar.progress.urlbar.enable.label "הצגת התקדמות בסרגל המיקום">
 <!ENTITY status4evar.progress.urlbar.line.label "סגנון קו:">
 <!ENTITY status4evar.progress.toolbar.force.label "להציג תמיד את פריט סרגל הכלים">
@@ -72,9 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "חזרה">
 <!ENTITY status4evar.editor.css.image.position "מיקום">
 <!ENTITY status4evar.editor.css.image.offset "איזון">
-<!ENTITY status4evar.download.button.action.label "Download status button action:">
+<!ENTITY status4evar.download.button.action.label "פעולת כפתור מצב ההורדה:">
 <!ENTITY status4evar.download.force.label "להציג תמיד את כפתור מצב ההורדה">
-<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
+<!ENTITY status4evar.download.label.force.label "הצגת טקסט הכפתור במצב רק-אייקונים">
 <!ENTITY status4evar.download.label.label "טקסט כפתור מצב ההורדה:">
 <!ENTITY status4evar.download.tooltip.label "חלונית מידע כפתור מצב ההורדה:">
 <!ENTITY status4evar.download.progress.label "הצגת התקדמות ההורדות על הכפתור">
@@ -83,8 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "הצגת ההורדות הפחות שלמות">
 <!ENTITY status4evar.download.color.active.label "צבע ההתקדמות עבור הורדות פעילות:">
 <!ENTITY status4evar.download.color.paused.label "צבע ההתקדמות עבור הורדות מושהות:">
-<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
-<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
+<!ENTITY status4evar.download.notify.animate.label "הנפשת כפתור כאשר הורדה מסתיימת">
+<!ENTITY status4evar.download.notify.timeout.label "הבלטת כפתור כאשר הורדה מסתיימת:">
 <!ENTITY status4evar.addonbar.borderStyle "שימוש בגבולות סרגל כלים חלופיים">
 <!ENTITY status4evar.addonbar.windowGripper "הצגת תפסן שינוי גודל החלון">
 <!ENTITY status4evar.addonbar.closeButton "הצגת כפתור הסגירה">

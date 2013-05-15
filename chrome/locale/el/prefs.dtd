@@ -10,7 +10,7 @@
 <!ENTITY status4evar.tab.popup "Αναδυόμενο">
 <!ENTITY status4evar.tab.tabs "Καρτέλες">
 <!ENTITY status4evar.option.none "Καμία">
-<!ENTITY status4evar.option.nothing "Nothing">
+<!ENTITY status4evar.option.nothing "Καμία">
 <!ENTITY status4evar.option.toolbar "Στην εργαλειοθήκη">
 <!ENTITY status4evar.option.urlbar "Στη γραμμή τοποθεσιών">
 <!ENTITY status4evar.option.popup "Σε αναδυόμενο">
@@ -34,13 +34,13 @@
 <!ENTITY status4evar.option.no-repeat "Χωρίς επανάληψη">
 <!ENTITY status4evar.option.space "Διάστημα">
 <!ENTITY status4evar.option.round "Προσαρμογή">
-<!ENTITY status4evar.option.firefoxdefault "Firefox default">
-<!ENTITY status4evar.option.download.panel "Panel">
-<!ENTITY status4evar.option.download.library "Library">
-<!ENTITY status4evar.option.download.classic "Classic">
-<!ENTITY status4evar.unit.miliseconds "miliseconds">
+<!ENTITY status4evar.option.firefoxdefault "Προεπιλεγμένη του Firefox">
+<!ENTITY status4evar.option.download.panel "Πίνακας λήψεων">
+<!ENTITY status4evar.option.download.library "Βιβλιοθήκη">
+<!ENTITY status4evar.option.download.classic "Κλασσικό παράθυρο λήψεων">
+<!ENTITY status4evar.unit.miliseconds "μιλιδευτερόλεπτα">
 <!ENTITY status4evar.unit.seconds "δευτερόλεπτα">
-<!ENTITY status4evar.unit.px "px">
+<!ENTITY status4evar.unit.px "εικονοψηφίδες">
 <!ENTITY status4evar.status.general.status.caption "Κείμενο κατάστασης">
 <!ENTITY status4evar.status.label "Εμφάνιση κατάστασης:">
 <!ENTITY status4evar.status.timeout.label "Απόκρυψη της κατάστασης μετά από">
@@ -72,9 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Επανάληψη">
 <!ENTITY status4evar.editor.css.image.position "Θέση">
 <!ENTITY status4evar.editor.css.image.offset "Μετατόπιση">
-<!ENTITY status4evar.download.button.action.label "Download status button action:">
+<!ENTITY status4evar.download.button.action.label "Ενέργεια κουμπιού κατάστασης λήψεων:">
 <!ENTITY status4evar.download.force.label "Πάντα εμφάνιση του κουμπιού κατάστασης λήψεων">
-<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
+<!ENTITY status4evar.download.label.force.label "Εμφάνιση κειμένου του κουμπιού σε λειτουργία μόνο-εικονίδια">
 <!ENTITY status4evar.download.label.label "Κείμενο κουμπιού κατάστασης λήψεων:">
 <!ENTITY status4evar.download.tooltip.label "Συμβουλή εργαλείου κουμπιού κατάστασης λήψεων:">
 <!ENTITY status4evar.download.progress.label "Εμφάνιση προόδου λήψεων στο κουμπί">
@@ -83,9 +83,9 @@
 <!ENTITY status4evar.download.progress.min.label "Εμφάνιση της λιγότερο ολοκληρωμένης λήψης">
 <!ENTITY status4evar.download.color.active.label "Χρώμα προόδου ενεργών λήψεων:">
 <!ENTITY status4evar.download.color.paused.label "Χρώμα προόδου λήψεων σε παύση:">
-<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
-<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
-<!ENTITY status4evar.addonbar.borderStyle "Χρήση εναλλακτικών ορίων εργαλειοθήκης">
+<!ENTITY status4evar.download.notify.animate.label "Κινησιομοίωση κουμπιού κατά την ολοκλήρωση λήψης">
+<!ENTITY status4evar.download.notify.timeout.label "Επισήμανση κουμπιού κατά την ολοκλήρωση λήψης:">
+<!ENTITY status4evar.addonbar.borderStyle "Χρήση εναλλακτικού περιγράμματος εργαλειοθήκης">
 <!ENTITY status4evar.addonbar.windowGripper "Εμφάνιση της λαβής αλλαγής μεγέθους του παραθύρου">
 <!ENTITY status4evar.addonbar.closeButton "Εμφάνιση του κουμπιού κλεισίματος">
 <!ENTITY status4evar.advanced.warning "Αυτές οι προηγμένες ρυθμίσεις μπορεί να προκαλέσουν προβλήματα με την επέκταση 'Status-4-EVAR' ή άλλες επεκτάσεις. Τροποποιήστε τις με δικό σας ρίσκο.">

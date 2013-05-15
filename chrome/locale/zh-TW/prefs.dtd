@@ -10,7 +10,7 @@
 <!ENTITY status4evar.tab.popup "彈出視窗">
 <!ENTITY status4evar.tab.tabs "分頁">
 <!ENTITY status4evar.option.none "不顯示">
-<!ENTITY status4evar.option.nothing "Nothing">
+<!ENTITY status4evar.option.nothing "無動作">
 <!ENTITY status4evar.option.toolbar "附加元件列">
 <!ENTITY status4evar.option.urlbar "網址列">
 <!ENTITY status4evar.option.popup "彈出提示">
@@ -34,27 +34,27 @@
 <!ENTITY status4evar.option.no-repeat "不重複">
 <!ENTITY status4evar.option.space "空白">
 <!ENTITY status4evar.option.round "圓角">
-<!ENTITY status4evar.option.firefoxdefault "Firefox default">
-<!ENTITY status4evar.option.download.panel "Panel">
-<!ENTITY status4evar.option.download.library "Library">
-<!ENTITY status4evar.option.download.classic "Classic">
-<!ENTITY status4evar.unit.miliseconds "miliseconds">
+<!ENTITY status4evar.option.firefoxdefault "Firefox 預設動作">
+<!ENTITY status4evar.option.download.panel "彈出下載面板">
+<!ENTITY status4evar.option.download.library "打開收藏庫">
+<!ENTITY status4evar.option.download.classic "打開傳統下載視窗">
+<!ENTITY status4evar.unit.miliseconds "毫秒">
 <!ENTITY status4evar.unit.seconds "秒後">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "狀態文字">
-<!ENTITY status4evar.status.label "顯示狀態於：">
+<!ENTITY status4evar.status.label "顯示狀態於:">
 <!ENTITY status4evar.status.timeout.label "隱藏狀態於">
 <!ENTITY status4evar.status.default.label "顯示預設狀態">
 <!ENTITY status4evar.status.network.label "顯示網路狀態">
 <!ENTITY status4evar.status.network.xhr.label "顯示背景網路狀態">
 <!ENTITY toolkit.dom.status.change.label "允許網頁變更狀態文字">
 <!ENTITY status4evar.status.general.linkOver.caption "連結">
-<!ENTITY status4evar.status.linkOver.label "顯示連結內容於：">
-<!ENTITY status4evar.status.linkOver.delay.show.label "顯示連結前的延遲時間：">
-<!ENTITY status4evar.status.linkOver.delay.hide.label "隱藏連結的延遲時間：">
-<!ENTITY status4evar.status.toolbar.maxLength.label "狀態文字最大長度：">
+<!ENTITY status4evar.status.linkOver.label "顯示連結內容於:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "顯示連結前的延遲時間:">
+<!ENTITY status4evar.status.linkOver.delay.hide.label "隱藏連結的延遲時間:">
+<!ENTITY status4evar.status.toolbar.maxLength.label "狀態文字最大長度:">
 <!ENTITY status4evar.status.urlbar.align.label "狀態對齊方式">
-<!ENTITY status4evar.status.urlbar.color.label "文字色彩：">
+<!ENTITY status4evar.status.urlbar.color.label "文字色彩:">
 <!ENTITY status4evar.status.currentUrl "目前網址">
 <!ENTITY status4evar.status.statusText "狀態文字">
 <!ENTITY status4evar.status.urlbar.firefox.builtin.caption "Firefox 功能">
@@ -64,32 +64,32 @@
 <!ENTITY status4evar.status.popup.mouseMirror.label "滑鼠經過時改變位置">
 <!ENTITY status4evar.progress.style.label "進度列使用自訂樣式">
 <!ENTITY status4evar.progress.urlbar.enable.label "在位址列顯示載入進度">
-<!ENTITY status4evar.progress.urlbar.line.label "進度條樣式：">
+<!ENTITY status4evar.progress.urlbar.line.label "進度條樣式:">
 <!ENTITY status4evar.progress.toolbar.force.label "總是顯示工具列圖示">
-<!ENTITY status4evar.editor.label "編輯器：">
-<!ENTITY status4evar.editor.css.color.label "色彩：">
-<!ENTITY status4evar.editor.css.image.label "圖片：">
+<!ENTITY status4evar.editor.label "編輯器:">
+<!ENTITY status4evar.editor.css.color.label "色彩:">
+<!ENTITY status4evar.editor.css.image.label "圖片:">
 <!ENTITY status4evar.editor.css.image.repeat "重複">
 <!ENTITY status4evar.editor.css.image.position "位置">
 <!ENTITY status4evar.editor.css.image.offset "偏移">
-<!ENTITY status4evar.download.button.action.label "Download status button action:">
+<!ENTITY status4evar.download.button.action.label "下載狀態按鈕功能:">
 <!ENTITY status4evar.download.force.label "總是顯示下載狀態按鈕">
-<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
-<!ENTITY status4evar.download.label.label "下載狀態按鈕標籤：">
-<!ENTITY status4evar.download.tooltip.label "下載狀態的氣泡提示框顯示：">
+<!ENTITY status4evar.download.label.force.label "圖示模式下也顯示按鈕文字">
+<!ENTITY status4evar.download.label.label "下載狀態按鈕標籤:">
+<!ENTITY status4evar.download.tooltip.label "下載狀態的氣泡提示框顯示:">
 <!ENTITY status4evar.download.progress.label "在按鈕上顯示下載進度">
 <!ENTITY status4evar.download.progress.average.label "顯示平均下載完成度">
 <!ENTITY status4evar.download.progress.max.label "顯示完成最多的下載">
 <!ENTITY status4evar.download.progress.min.label "顯示完成最少的下載">
 <!ENTITY status4evar.download.color.active.label "進行中下載的進度條色彩">
 <!ENTITY status4evar.download.color.paused.label "已暫停下載的進度條色彩">
-<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
-<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
+<!ENTITY status4evar.download.notify.animate.label "下載完成時顯示按鈕動畫">
+<!ENTITY status4evar.download.notify.timeout.label "下載完成後按鈕繼續亮到:">
 <!ENTITY status4evar.addonbar.borderStyle "使用替代的工具列邊框">
 <!ENTITY status4evar.addonbar.windowGripper "顯示視窗大小調整器">
 <!ENTITY status4evar.addonbar.closeButton "顯示關閉按鈕">
 <!ENTITY status4evar.advanced.warning "進階設定可能會使 Status-4-Evar 或其他套件出問題。修改時請自負風險。">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "嘗試強制位址列 XBL binding。">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "只有在位址列進度條或狀態文字顯示有誤時才勾選此設定。另外這也有可能與其他試圖對位址列設定 XBL binding 的套件產生衝突。">
-<!ENTITY status4evar.advanced.status.detectFullScreen "偵測全螢幕模式並調整連結／狀態的顯示">
+<!ENTITY status4evar.advanced.status.detectFullScreen "偵測全螢幕模式並調整連結/狀態的顯示。">
 <!ENTITY toolkit.classic.download.window.label "使用傳統的下載視窗">

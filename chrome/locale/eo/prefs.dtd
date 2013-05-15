@@ -10,7 +10,7 @@
 <!ENTITY status4evar.tab.popup "Ŝprucfenestro">
 <!ENTITY status4evar.tab.tabs "Langetoj">
 <!ENTITY status4evar.option.none "Neniu">
-<!ENTITY status4evar.option.nothing "Nothing">
+<!ENTITY status4evar.option.nothing "Nenio">
 <!ENTITY status4evar.option.toolbar "Ilaro">
 <!ENTITY status4evar.option.urlbar "Adresbreto">
 <!ENTITY status4evar.option.popup "Ŝprucfenestro">
@@ -34,11 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "Ne ripeti">
 <!ENTITY status4evar.option.space "Spaco">
 <!ENTITY status4evar.option.round "Rondigi">
-<!ENTITY status4evar.option.firefoxdefault "Firefox default">
-<!ENTITY status4evar.option.download.panel "Panel">
-<!ENTITY status4evar.option.download.library "Library">
-<!ENTITY status4evar.option.download.classic "Classic">
-<!ENTITY status4evar.unit.miliseconds "miliseconds">
+<!ENTITY status4evar.option.firefoxdefault "Firefox defaŭlta">
+<!ENTITY status4evar.option.download.panel "Panelo">
+<!ENTITY status4evar.option.download.library "Biblioteko">
+<!ENTITY status4evar.option.download.classic "Klasika">
+<!ENTITY status4evar.unit.miliseconds "milisekundoj">
 <!ENTITY status4evar.unit.seconds "sekundoj">
 <!ENTITY status4evar.unit.px "rastrumeroj">
 <!ENTITY status4evar.status.general.status.caption "Statoteksto">
@@ -72,9 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Ripeti">
 <!ENTITY status4evar.editor.css.image.position "Pozicio">
 <!ENTITY status4evar.editor.css.image.offset "Deŝovita je">
-<!ENTITY status4evar.download.button.action.label "Download status button action:">
+<!ENTITY status4evar.download.button.action.label "Ago de la elŝutostata butono:">
 <!ENTITY status4evar.download.force.label "Ĉiam montri la elŝutostatan butonon">
-<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
+<!ENTITY status4evar.download.label.force.label "Montri butontekston en la nursimbola reĝimo">
 <!ENTITY status4evar.download.label.label "Teksto de elŝutostata butono:">
 <!ENTITY status4evar.download.tooltip.label "Ŝpruchelpilo de elŝutostata butono:">
 <!ENTITY status4evar.download.progress.label "Montri elŝutprogreson sur butono">
@@ -83,8 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "Montri malplej kompletan elŝuton">
 <!ENTITY status4evar.download.color.active.label "Progreskoloro por aktivaj elŝutoj">
 <!ENTITY status4evar.download.color.paused.label "Progreskoloro por haltigitaj elŝutoj:">
-<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
-<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
+<!ENTITY status4evar.download.notify.animate.label "Movi bildon, kiam elŝuto finiĝas">
+<!ENTITY status4evar.download.notify.timeout.label "Reliefigi butonon, kiam elŝuto finiĝas:">
 <!ENTITY status4evar.addonbar.borderStyle "Uzi alternativajn ilbretajn borderojn">
 <!ENTITY status4evar.addonbar.windowGripper "Montri prenilon por fenestroskalado">
 <!ENTITY status4evar.addonbar.closeButton "Montri butonon 'Fermi'">

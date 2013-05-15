@@ -10,7 +10,7 @@
 <!ENTITY status4evar.tab.popup "Изскачащ прозорец">
 <!ENTITY status4evar.tab.tabs "Раздели">
 <!ENTITY status4evar.option.none "без показване">
-<!ENTITY status4evar.option.nothing "Nothing">
+<!ENTITY status4evar.option.nothing "Без">
 <!ENTITY status4evar.option.toolbar "лентата с инструменти">
 <!ENTITY status4evar.option.urlbar "адресната лента">
 <!ENTITY status4evar.option.popup "изскачащ прозорец">
@@ -34,11 +34,11 @@
 <!ENTITY status4evar.option.no-repeat "Без повторение">
 <!ENTITY status4evar.option.space "с интервали">
 <!ENTITY status4evar.option.round "с мащабиране">
-<!ENTITY status4evar.option.firefoxdefault "Firefox default">
-<!ENTITY status4evar.option.download.panel "Panel">
-<!ENTITY status4evar.option.download.library "Library">
-<!ENTITY status4evar.option.download.classic "Classic">
-<!ENTITY status4evar.unit.miliseconds "miliseconds">
+<!ENTITY status4evar.option.firefoxdefault "По подразбиране">
+<!ENTITY status4evar.option.download.panel "Панел">
+<!ENTITY status4evar.option.download.library "Библиотека">
+<!ENTITY status4evar.option.download.classic "Класически">
+<!ENTITY status4evar.unit.miliseconds "милисекунди">
 <!ENTITY status4evar.unit.seconds "секунди">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Състояние">
@@ -72,9 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Повторение">
 <!ENTITY status4evar.editor.css.image.position "Позиция">
 <!ENTITY status4evar.editor.css.image.offset "Отстояние">
-<!ENTITY status4evar.download.button.action.label "Download status button action:">
+<!ENTITY status4evar.download.button.action.label "Бутон за състоянието на изтеглянията:">
 <!ENTITY status4evar.download.force.label "Винаги да се показва бутонът за състоянието на изтеглянията">
-<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
+<!ENTITY status4evar.download.label.force.label "При използване на режим само с икони, текстът на бутона да се показва">
 <!ENTITY status4evar.download.label.label "Текст на бутона:">
 <!ENTITY status4evar.download.tooltip.label "Подсказка при посочване на бутона:">
 <!ENTITY status4evar.download.progress.label "Показване на напредъка на изтеглянията върху бутона">
@@ -83,8 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "Показване на най-малко напредналото изтегляне">
 <!ENTITY status4evar.download.color.active.label "Цвят на напредъка на активните изтегляния:">
 <!ENTITY status4evar.download.color.paused.label "Цвят на напредъка на спрените изтегляния:">
-<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
-<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
+<!ENTITY status4evar.download.notify.animate.label "Анимиране на бутона при завършване на изтеглянето">
+<!ENTITY status4evar.download.notify.timeout.label "Подсветка на бутона при завършване на изтеглянето:">
 <!ENTITY status4evar.addonbar.borderStyle "Използване на алтернативни рамки за лентата с инструменти">
 <!ENTITY status4evar.addonbar.windowGripper "Показване на манипулатора за преоразмеряване на прозореца">
 <!ENTITY status4evar.addonbar.closeButton "Показване на бутона &quot;Затвори&quot;">
