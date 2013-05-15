@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "Pixel">
 <!ENTITY status4evar.status.general.status.caption "Statustext">
 <!ENTITY status4evar.status.label "Anzeige des Status:">
-<!ENTITY status4evar.status.timeout.label "Statusanzeige ausblenden nach">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Standardstatus anzeigen">
 <!ENTITY status4evar.status.network.label "Netzwerkstatus anzeigen">
 <!ENTITY status4evar.status.network.xhr.label "Hintergrund-Netzwerkstatus anzeigen">

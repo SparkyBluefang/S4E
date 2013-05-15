@@ -50,7 +50,7 @@
 
 <!ENTITY status4evar.status.general.status.caption "Status Text">
 <!ENTITY status4evar.status.label "Show status in:">
-<!ENTITY status4evar.status.timeout.label "Hide the status after">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Show default status">
 <!ENTITY status4evar.status.network.label "Show network status">
 <!ENTITY status4evar.status.network.xhr.label "Show background network status">

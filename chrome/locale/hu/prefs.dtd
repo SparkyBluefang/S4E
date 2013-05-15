@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Állapot szöveg">
 <!ENTITY status4evar.status.label "Állapot szöveg mutatása:">
-<!ENTITY status4evar.status.timeout.label "Állapot elrejtése">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Alapértelmezett állapot mutatása">
 <!ENTITY status4evar.status.network.label "Hálózati állapot mutatása">
 <!ENTITY status4evar.status.network.xhr.label "Bővített hálózati állapot mutatása">

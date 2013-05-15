@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "тачака">
 <!ENTITY status4evar.status.general.status.caption "Текст стања">
 <!ENTITY status4evar.status.label "Прикажи статус у:">
-<!ENTITY status4evar.status.timeout.label "Сакриј стање након">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Подразумевано стање">
 <!ENTITY status4evar.status.network.label "Мрежно стање">
 <!ENTITY status4evar.status.network.xhr.label "Позадинско мрежно стање">

@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "像素">
 <!ENTITY status4evar.status.general.status.caption "状态文本">
 <!ENTITY status4evar.status.label "显示状态于:">
-<!ENTITY status4evar.status.timeout.label "隐藏状态在">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "显示默认状态">
 <!ENTITY status4evar.status.network.label "显示网络状态">
 <!ENTITY status4evar.status.network.xhr.label "显示后台网络状态">

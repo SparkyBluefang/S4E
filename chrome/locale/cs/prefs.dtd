@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Stavový text">
 <!ENTITY status4evar.status.label "Zobrazit stav:">
-<!ENTITY status4evar.status.timeout.label "Skrýt stav po">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Zobrazit výchozí stav">
 <!ENTITY status4evar.status.network.label "Zobrazit stav sítě">
 <!ENTITY status4evar.status.network.xhr.label "Zobrazit pozadí stavu sítě">

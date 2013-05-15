@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "ピクセル">
 <!ENTITY status4evar.status.general.status.caption "ステータスのテキスト表示">
 <!ENTITY status4evar.status.label "ステータスの表示場所:">
-<!ENTITY status4evar.status.timeout.label "ステータスの表示時間:">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "デフォルトのステータスを表示">
 <!ENTITY status4evar.status.network.label "ネットワークのステータスを表示">
 <!ENTITY status4evar.status.network.xhr.label "バックグラウンド（XHR）のネットワークのステータスを表示">

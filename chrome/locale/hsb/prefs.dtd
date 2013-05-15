@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "pikselow">
 <!ENTITY status4evar.status.general.status.caption "Statusowy tekst">
 <!ENTITY status4evar.status.label "Status pokazać w:">
-<!ENTITY status4evar.status.timeout.label "Status schować po">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Standardny status pokazać">
 <!ENTITY status4evar.status.network.label "Syćowy status pokazać">
 <!ENTITY status4evar.status.network.xhr.label "Syćowy status pozadka pokazać">

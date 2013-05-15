@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Texte d'état">
 <!ENTITY status4evar.status.label "Afficher l'état dans :">
-<!ENTITY status4evar.status.timeout.label "Masquer l'état après">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Afficher l'état par défaut">
 <!ENTITY status4evar.status.network.label "Afficher l'état du réseau">
 <!ENTITY status4evar.status.network.xhr.label "Afficher l'état du réseau en arrière-plan">

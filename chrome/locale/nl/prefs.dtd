@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statustekst">
 <!ENTITY status4evar.status.label "Status tonen in:">
-<!ENTITY status4evar.status.timeout.label "Status verbergen na">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Standaardstatus tonen">
 <!ENTITY status4evar.status.network.label "Netwerkstatus tonen">
 <!ENTITY status4evar.status.network.xhr.label "Achtergrond netwerkstatus tonen">

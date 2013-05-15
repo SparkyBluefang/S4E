@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Mensajes de estado">
 <!ENTITY status4evar.status.label "Mostrar en:">
-<!ENTITY status4evar.status.timeout.label "Ocultar después de:">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Mostrar el mensaje por defecto">
 <!ENTITY status4evar.status.network.label "Mostrar mensajes de conectividad">
 <!ENTITY status4evar.status.network.xhr.label "Mostrar mensajes de conectividad en segundo plano">

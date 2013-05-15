@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statustekst">
 <!ENTITY status4evar.status.label "Vis status i:">
-<!ENTITY status4evar.status.timeout.label "Skjul status etter">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Vis standardstatus">
 <!ENTITY status4evar.status.network.label "Vis nettverksstatus">
 <!ENTITY status4evar.status.network.xhr.label "Vis bakgrunnsnettverksstatus">

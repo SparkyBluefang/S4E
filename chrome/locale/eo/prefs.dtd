@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "rastrumeroj">
 <!ENTITY status4evar.status.general.status.caption "Statoteksto">
 <!ENTITY status4evar.status.label "Montri staton en:">
-<!ENTITY status4evar.status.timeout.label "Kaŝi staton post">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Montri defaŭltan staton">
 <!ENTITY status4evar.status.network.label "Montri retstaton">
 <!ENTITY status4evar.status.network.xhr.label "Montri fonan retstaton">

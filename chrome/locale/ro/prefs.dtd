@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "pixeli">
 <!ENTITY status4evar.status.general.status.caption "Informații de stare">
 <!ENTITY status4evar.status.label "Informațiile de stare se afișează în:">
-<!ENTITY status4evar.status.timeout.label "Ascunde informațiile de stare după:">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Afișează informațiile de stare implicite">
 <!ENTITY status4evar.status.network.label "Afișează starea conexiunii">
 <!ENTITY status4evar.status.network.xhr.label "Afișează starea interogărilor directe din fundal">

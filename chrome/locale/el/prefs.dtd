@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "εικονοψηφίδες">
 <!ENTITY status4evar.status.general.status.caption "Κείμενο κατάστασης">
 <!ENTITY status4evar.status.label "Εμφάνιση κατάστασης:">
-<!ENTITY status4evar.status.timeout.label "Απόκρυψη της κατάστασης μετά από">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Εμφάνιση βασικής κατάστασης">
 <!ENTITY status4evar.status.network.label "Εμφάνιση κατάστασης δικτύου">
 <!ENTITY status4evar.status.network.xhr.label "Εμφάνιση παρασκηνιακής κατάστασης δικτύου">

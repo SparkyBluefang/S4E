@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Състояние">
 <!ENTITY status4evar.status.label "Показване на състоянието в:">
-<!ENTITY status4evar.status.timeout.label "Скриване на състоянието след:">
+<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
 <!ENTITY status4evar.status.default.label "Показване на стандартното състояние">
 <!ENTITY status4evar.status.network.label "Показване състоянието на мрежата">
 <!ENTITY status4evar.status.network.xhr.label "Показване състоянието на мрежата във фонов режим">
