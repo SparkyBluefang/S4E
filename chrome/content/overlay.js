@@ -698,6 +698,7 @@ window.addEventListener("load", function buildS4E()
 		_hasPBAPI:            false,
 		_listening:           false,
 		_binding:             false,
+		_customizing:         false,
 
 		_lastTime:            Infinity,
 
@@ -715,8 +716,6 @@ window.addEventListener("load", function buildS4E()
 
 		_dlNotifyFinishTimer: 0,
 		_dlNotifyGlowTimer:   0,
-
-		_customizing:         false,
 
 		get PluralForm()
 		{
@@ -785,18 +784,20 @@ window.addEventListener("load", function buildS4E()
 
 		uninit: function()
 		{
-			if(this._listening)
+			if(!this._listening)
 			{
-				this._listening = false;
-
-				this.DownloadManager.removeListener(this);
-				if(!this._hasPBAPI)
-				{
-					Services.obs.removeObserver(this, "private-browsing");
-				}
-
-				this.releaseBinding();
+				return;
 			}
+
+			this._listening = false;
+
+			this.DownloadManager.removeListener(this);
+			if(!this._hasPBAPI)
+			{
+				Services.obs.removeObserver(this, "private-browsing");
+			}
+
+			this.releaseBinding();
 		},
 
 		destroy: function()
@@ -810,20 +811,17 @@ window.addEventListener("load", function buildS4E()
 
 		updateBinding: function()
 		{
+			if(!this._listening)
+			{
+				this.releaseBinding();
+				return;
+			}
+
 			switch(s4e_service.downloadButtonAction)
 			{
 				case 1: // Default
 				case 2: // Show Panel
-					if(!this._binding)
-					{
-						DownloadsButton._getAnchorInternal = DownloadsButton.getAnchor;
-						DownloadsButton.getAnchor = this.getAnchor;
-
-						DownloadsButton._releaseAnchorInternal = DownloadsButton.releaseAnchor;
-						DownloadsButton.releaseAnchor = function() {};
-
-						this._binding = true;
-					}
+					this.attachBinding();
 					break;
 				default:
 					this.releaseBinding();
@@ -831,15 +829,33 @@ window.addEventListener("load", function buildS4E()
 			}
 		},
 
-		releaseBinding: function()
+		attachBinding: function()
 		{
 			if(this._binding)
 			{
-				DownloadsButton.getAnchor = DownloadsButton._getAnchorInternal;
-				DownloadsButton.releaseAnchor = DownloadsButton._releaseAnchorInternal;
-
-				this._binding = false;
+				return;
 			}
+
+			DownloadsButton._getAnchorInternal = DownloadsButton.getAnchor;
+			DownloadsButton.getAnchor = this.getAnchor.bind(this);
+
+			DownloadsButton._releaseAnchorInternal = DownloadsButton.releaseAnchor;
+			DownloadsButton.releaseAnchor = function() {};
+
+			this._binding = true;
+		},
+
+		releaseBinding: function()
+		{
+			if(!this._binding)
+			{
+				return;
+			}
+
+			DownloadsButton.getAnchor = DownloadsButton._getAnchorInternal;
+			DownloadsButton.releaseAnchor = DownloadsButton._releaseAnchorInternal;
+
+			this._binding = false;
 		},
 
 		customizing: function(val)
