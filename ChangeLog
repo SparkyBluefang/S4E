@@ -1,4 +1,6 @@
 Version next
+
+Version 2013.05.14.21b
 * Fix sticky extension status messages. Instead of simply hiding the status text, actually clear the saved status messages.
 * Fix download button panel when the S4E download button is not present on a toolbar.
 * Update locales for new strings.
