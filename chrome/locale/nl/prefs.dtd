@@ -38,12 +38,12 @@
 <!ENTITY status4evar.option.download.panel "Paneel">
 <!ENTITY status4evar.option.download.library "Bibliotheek">
 <!ENTITY status4evar.option.download.classic "Klassiek">
-<!ENTITY status4evar.unit.miliseconds "milliseconden">
+<!ENTITY status4evar.unit.milliseconds "milliseconden">
 <!ENTITY status4evar.unit.seconds "seconden">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statustekst">
 <!ENTITY status4evar.status.label "Status tonen in:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "Vertraging voordat berichten in de statusbalk verdwijnen:">
 <!ENTITY status4evar.status.default.label "Standaardstatus tonen">
 <!ENTITY status4evar.status.network.label "Netwerkstatus tonen">
 <!ENTITY status4evar.status.network.xhr.label "Achtergrond netwerkstatus tonen">

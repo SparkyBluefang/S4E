@@ -38,12 +38,12 @@
 <!ENTITY status4evar.option.download.panel "Панел">
 <!ENTITY status4evar.option.download.library "Библиотека">
 <!ENTITY status4evar.option.download.classic "Класически">
-<!ENTITY status4evar.unit.miliseconds "милисекунди">
+<!ENTITY status4evar.unit.milliseconds "милисекунди">
 <!ENTITY status4evar.unit.seconds "секунди">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Състояние">
 <!ENTITY status4evar.status.label "Показване на състоянието в:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "Изчистване на статусните съобщения след:">
 <!ENTITY status4evar.status.default.label "Показване на стандартното състояние">
 <!ENTITY status4evar.status.network.label "Показване състоянието на мрежата">
 <!ENTITY status4evar.status.network.xhr.label "Показване състоянието на мрежата във фонов режим">

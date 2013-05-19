@@ -38,12 +38,12 @@
 <!ENTITY status4evar.option.download.panel "Panelo">
 <!ENTITY status4evar.option.download.library "Biblioteko">
 <!ENTITY status4evar.option.download.classic "Klasika">
-<!ENTITY status4evar.unit.miliseconds "milisekundoj">
+<!ENTITY status4evar.unit.milliseconds "milisekundoj">
 <!ENTITY status4evar.unit.seconds "sekundoj">
 <!ENTITY status4evar.unit.px "rastrumeroj">
 <!ENTITY status4evar.status.general.status.caption "Statoteksto">
 <!ENTITY status4evar.status.label "Montri staton en:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "Prokrato antaŭ forigo de statomesaĝoj:">
 <!ENTITY status4evar.status.default.label "Montri defaŭltan staton">
 <!ENTITY status4evar.status.network.label "Montri retstaton">
 <!ENTITY status4evar.status.network.xhr.label "Montri fonan retstaton">

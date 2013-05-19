@@ -38,12 +38,12 @@
 <!ENTITY status4evar.option.download.panel "Panel">
 <!ENTITY status4evar.option.download.library "Bogmærker og historik">
 <!ENTITY status4evar.option.download.classic "Klassisk">
-<!ENTITY status4evar.unit.miliseconds "millisekunder">
+<!ENTITY status4evar.unit.milliseconds "millisekunder">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statustekst">
 <!ENTITY status4evar.status.label "Vis status på:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "Forsinkelse inden statusmeddelelse forsvinder:">
 <!ENTITY status4evar.status.default.label "Vis standardstatus">
 <!ENTITY status4evar.status.network.label "Vis netværksstatus">
 <!ENTITY status4evar.status.network.xhr.label "Vis baggrundsnetværksstatus">

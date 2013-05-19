@@ -10,7 +10,7 @@
 <!ENTITY status4evar.tab.popup "Popup">
 <!ENTITY status4evar.tab.tabs "Abas">
 <!ENTITY status4evar.option.none "Nenhum">
-<!ENTITY status4evar.option.nothing "Nothing">
+<!ENTITY status4evar.option.nothing "Nada">
 <!ENTITY status4evar.option.toolbar "Barra de Ferramentas">
 <!ENTITY status4evar.option.urlbar "Barra de Endereços">
 <!ENTITY status4evar.option.popup "Popup">
@@ -34,16 +34,16 @@
 <!ENTITY status4evar.option.no-repeat "Não Repetir">
 <!ENTITY status4evar.option.space "Espaço">
 <!ENTITY status4evar.option.round "Redondo">
-<!ENTITY status4evar.option.firefoxdefault "Firefox default">
-<!ENTITY status4evar.option.download.panel "Panel">
-<!ENTITY status4evar.option.download.library "Library">
-<!ENTITY status4evar.option.download.classic "Classic">
-<!ENTITY status4evar.unit.miliseconds "miliseconds">
+<!ENTITY status4evar.option.firefoxdefault "Padrão do Firefox">
+<!ENTITY status4evar.option.download.panel "Painel">
+<!ENTITY status4evar.option.download.library "Biblioteca">
+<!ENTITY status4evar.option.download.classic "Clássico">
+<!ENTITY status4evar.unit.milliseconds "milisegundos">
 <!ENTITY status4evar.unit.seconds "segundos">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Texto de Status">
 <!ENTITY status4evar.status.label "Mostrar status em:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "Esperar antes de remover mensagens de status:">
 <!ENTITY status4evar.status.default.label "Mostrar status padrão">
 <!ENTITY status4evar.status.network.label "Mostrar status da rede">
 <!ENTITY status4evar.status.network.xhr.label "Mostrar status da rede de background">
@@ -72,9 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Repetir">
 <!ENTITY status4evar.editor.css.image.position "Posição">
 <!ENTITY status4evar.editor.css.image.offset "Offset">
-<!ENTITY status4evar.download.button.action.label "Download status button action:">
+<!ENTITY status4evar.download.button.action.label "Ação do botão de download da barra de status:">
 <!ENTITY status4evar.download.force.label "Sempre mostrar o botão de Status do Download">
-<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
+<!ENTITY status4evar.download.label.force.label "Mostrar texto do botão apenas em modo ícones">
 <!ENTITY status4evar.download.label.label "Texto do botão de status do download:">
 <!ENTITY status4evar.download.tooltip.label "Texto da dica de ferramenta do botão de status do download:">
 <!ENTITY status4evar.download.progress.label "Mostrar progresso do download no botão">
@@ -83,8 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "Mostrar menor parte dos downloads completos">
 <!ENTITY status4evar.download.color.active.label "Cor da barra de progresso para downloads ativos:">
 <!ENTITY status4evar.download.color.paused.label "Cor da barra de progresso para os downloads suspensos:">
-<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
-<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
+<!ENTITY status4evar.download.notify.animate.label "Animar o botão quando o download terminar">
+<!ENTITY status4evar.download.notify.timeout.label "Destacar botão quando o download terminar:">
 <!ENTITY status4evar.addonbar.borderStyle "Usar bordas alternadas na barra de ferramentas">
 <!ENTITY status4evar.addonbar.windowGripper "Mostrar o gripper de redimensionamento da janela">
 <!ENTITY status4evar.addonbar.closeButton "Mostrar o botão Fechar">

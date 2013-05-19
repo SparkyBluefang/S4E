@@ -38,12 +38,12 @@
 <!ENTITY status4evar.option.download.panel "Panel">
 <!ENTITY status4evar.option.download.library "Bibliothek">
 <!ENTITY status4evar.option.download.classic "Klassisch">
-<!ENTITY status4evar.unit.miliseconds "Millisekunden">
+<!ENTITY status4evar.unit.milliseconds "Millisekunden">
 <!ENTITY status4evar.unit.seconds "Sekunden">
 <!ENTITY status4evar.unit.px "Pixel">
 <!ENTITY status4evar.status.general.status.caption "Statustext">
 <!ENTITY status4evar.status.label "Anzeige des Status:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "Verzögerung vor dem Löschen der Statusmeldungen:">
 <!ENTITY status4evar.status.default.label "Standardstatus anzeigen">
 <!ENTITY status4evar.status.network.label "Netzwerkstatus anzeigen">
 <!ENTITY status4evar.status.network.xhr.label "Hintergrund-Netzwerkstatus anzeigen">

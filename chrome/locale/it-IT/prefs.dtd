@@ -38,12 +38,12 @@
 <!ENTITY status4evar.option.download.panel "Pannello">
 <!ENTITY status4evar.option.download.library "Libreria">
 <!ENTITY status4evar.option.download.classic "Classica">
-<!ENTITY status4evar.unit.miliseconds "millisecondi">
+<!ENTITY status4evar.unit.milliseconds "millisecondi">
 <!ENTITY status4evar.unit.seconds "secondi">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Messaggio di stato">
 <!ENTITY status4evar.status.label "Mostra messaggio di stato in:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "Attesa prima di svuotare il messaggio di stato:">
 <!ENTITY status4evar.status.default.label "Mostra stato predefinito">
 <!ENTITY status4evar.status.network.label "Mostra stato di connessione">
 <!ENTITY status4evar.status.network.xhr.label "Mostra stato delle connessioni in background">

@@ -10,7 +10,7 @@
 <!ENTITY status4evar.tab.popup "Sprettopp">
 <!ENTITY status4evar.tab.tabs "Faner">
 <!ENTITY status4evar.option.none "Ingen">
-<!ENTITY status4evar.option.nothing "Nothing">
+<!ENTITY status4evar.option.nothing "Ingenting">
 <!ENTITY status4evar.option.toolbar "Verktøylinje">
 <!ENTITY status4evar.option.urlbar "Adresselinje">
 <!ENTITY status4evar.option.popup "Sprettopp">
@@ -34,16 +34,16 @@
 <!ENTITY status4evar.option.no-repeat "Ingen gjentakelse">
 <!ENTITY status4evar.option.space "Mellomrom">
 <!ENTITY status4evar.option.round "Avrund">
-<!ENTITY status4evar.option.firefoxdefault "Firefox default">
+<!ENTITY status4evar.option.firefoxdefault "Firefox standard">
 <!ENTITY status4evar.option.download.panel "Panel">
-<!ENTITY status4evar.option.download.library "Library">
-<!ENTITY status4evar.option.download.classic "Classic">
-<!ENTITY status4evar.unit.miliseconds "miliseconds">
+<!ENTITY status4evar.option.download.library "Bibliotek">
+<!ENTITY status4evar.option.download.classic "Klassisk">
+<!ENTITY status4evar.unit.milliseconds "millisekund">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statustekst">
 <!ENTITY status4evar.status.label "Vis status i:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "Forsinkelse før tømming av statusmeldinger:">
 <!ENTITY status4evar.status.default.label "Vis standardstatus">
 <!ENTITY status4evar.status.network.label "Vis nettverksstatus">
 <!ENTITY status4evar.status.network.xhr.label "Vis bakgrunnsnettverksstatus">
@@ -72,9 +72,9 @@
 <!ENTITY status4evar.editor.css.image.repeat "Gjenta">
 <!ENTITY status4evar.editor.css.image.position "Posisjon">
 <!ENTITY status4evar.editor.css.image.offset "Offset">
-<!ENTITY status4evar.download.button.action.label "Download status button action:">
+<!ENTITY status4evar.download.button.action.label "Handling for nedlastingsstatusknapp:">
 <!ENTITY status4evar.download.force.label "Vis alltid nedlastingsstatusknappen">
-<!ENTITY status4evar.download.label.force.label "Show button text in icons-only mode">
+<!ENTITY status4evar.download.label.force.label "Vis knappetekst i bare-ikoner-modus">
 <!ENTITY status4evar.download.label.label "Tekst på nedlastingsstatusknapp:">
 <!ENTITY status4evar.download.tooltip.label "Hjelpeboble for nedlastingsstatusknapp:">
 <!ENTITY status4evar.download.progress.label "Vis nedlastingsframgang på knappen">
@@ -83,8 +83,8 @@
 <!ENTITY status4evar.download.progress.min.label "Vist minst fullførte nedlasting">
 <!ENTITY status4evar.download.color.active.label "Farge på fremdriftsindikator for aktive nedlastinger:">
 <!ENTITY status4evar.download.color.paused.label "Farge på fremdriftsindikator for nedlastinger satt på pause:">
-<!ENTITY status4evar.download.notify.animate.label "Animate button when download completes">
-<!ENTITY status4evar.download.notify.timeout.label "Hilight button when download completes:">
+<!ENTITY status4evar.download.notify.animate.label "Animer knappen når nedlastingen er fullført">
+<!ENTITY status4evar.download.notify.timeout.label "Fremhev knappen når nedlastingen er fullført:">
 <!ENTITY status4evar.addonbar.borderStyle "Bruk alternative kanter for verktøylinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gripeområdet for endring av vindusstørrelse">
 <!ENTITY status4evar.addonbar.closeButton "Vis knappen lukk">

@@ -157,13 +157,13 @@
 						<hbox align="center">
 							<label id="status4evar-status-linkOver-delay-show-label" control="status4evar-status-linkOver-delay-show-value">&status4evar.status.linkOver.delay.show.label;</label>
 							<textbox id="status4evar-status-linkOver-delay-show-value" preference="status4evar-pref-status-linkOver-delay-show" type="number" size="5" />
-							<label id="status4evar-status-linkOver-delay-show-unit">&status4evar.unit.miliseconds;</label>
+							<label id="status4evar-status-linkOver-delay-show-unit">&status4evar.unit.milliseconds;</label>
 						</hbox>
 
 						<hbox align="center">
 							<label id="status4evar-status-linkOver-delay-hide-label" control="status4evar-status-linkOver-delay-hide-value">&status4evar.status.linkOver.delay.hide.label;</label>
 							<textbox id="status4evar-status-linkOver-delay-hide-value" preference="status4evar-pref-status-linkOver-delay-hide" type="number" size="5" />
-							<label id="status4evar-status-linkOver-delay-hide-unit">&status4evar.unit.miliseconds;</label>
+							<label id="status4evar-status-linkOver-delay-hide-unit">&status4evar.unit.milliseconds;</label>
 						</hbox>
 					</groupbox>
 

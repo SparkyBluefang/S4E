@@ -38,12 +38,12 @@
 <!ENTITY status4evar.option.download.panel "Wobcerk">
 <!ENTITY status4evar.option.download.library "Biblioteka">
 <!ENTITY status4evar.option.download.classic "Klasiski">
-<!ENTITY status4evar.unit.miliseconds "milisekundach">
+<!ENTITY status4evar.unit.milliseconds "milisekundach">
 <!ENTITY status4evar.unit.seconds "sekundach">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Statusowy tekst">
 <!ENTITY status4evar.status.label "Status pokazaś w:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "Cakański cas do wuproznjenja statusowych powěźeńkow:">
 <!ENTITY status4evar.status.default.label "Standardny status pokazaś">
 <!ENTITY status4evar.status.network.label "Seśowy status pokazaś">
 <!ENTITY status4evar.status.network.xhr.label "Seśowy status slězyny pokazaś">

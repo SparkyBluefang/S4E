@@ -38,12 +38,12 @@
 <!ENTITY status4evar.option.download.panel "Panel">
 <!ENTITY status4evar.option.download.library "Kütüphane">
 <!ENTITY status4evar.option.download.classic "Klasik">
-<!ENTITY status4evar.unit.miliseconds "milisaniye">
+<!ENTITY status4evar.unit.milliseconds "milisaniye">
 <!ENTITY status4evar.unit.seconds "saniyeler">
 <!ENTITY status4evar.unit.px "px">
 <!ENTITY status4evar.status.general.status.caption "Durum Metni">
 <!ENTITY status4evar.status.label "Durumu göster:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "Durum mesajları temizlenmeden önceki gecikme:">
 <!ENTITY status4evar.status.default.label "Varsayılan durumu göster">
 <!ENTITY status4evar.status.network.label "Ağ durumunu göster">
 <!ENTITY status4evar.status.network.xhr.label "Arka planda ağ durumunu göster">

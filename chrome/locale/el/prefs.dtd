@@ -38,12 +38,12 @@
 <!ENTITY status4evar.option.download.panel "Πίνακας λήψεων">
 <!ENTITY status4evar.option.download.library "Βιβλιοθήκη">
 <!ENTITY status4evar.option.download.classic "Κλασσικό παράθυρο λήψεων">
-<!ENTITY status4evar.unit.miliseconds "μιλιδευτερόλεπτα">
+<!ENTITY status4evar.unit.milliseconds "μιλιδευτερόλεπτα">
 <!ENTITY status4evar.unit.seconds "δευτερόλεπτα">
 <!ENTITY status4evar.unit.px "εικονοψηφίδες">
 <!ENTITY status4evar.status.general.status.caption "Κείμενο κατάστασης">
 <!ENTITY status4evar.status.label "Εμφάνιση κατάστασης:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "Καθυστέρηση πριν την εκκαθάριση μηνυμάτων κατάστασης:">
 <!ENTITY status4evar.status.default.label "Εμφάνιση βασικής κατάστασης">
 <!ENTITY status4evar.status.network.label "Εμφάνιση κατάστασης δικτύου">
 <!ENTITY status4evar.status.network.xhr.label "Εμφάνιση παρασκηνιακής κατάστασης δικτύου">
