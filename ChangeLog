@@ -1,4 +1,5 @@
 Version next
+* Fix download button after Bug 653881 (https://bugzilla.mozilla.org/show_bug.cgi?id=653881) landed.
 * Update locales for new strings.
 * Updated translations for: en-US, pl, sr
 
