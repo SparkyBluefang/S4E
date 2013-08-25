@@ -38,6 +38,8 @@
 # Content registration
 content	status4evar			chrome/content/
 
+resource status4evar			modules/
+
 # Locale registration
 locale	status4evar	en-US		chrome/locale/en-US/
 locale	status4evar	bg-BG		chrome/locale/bg-BG/

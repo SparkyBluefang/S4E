@@ -35,6 +35,8 @@
  * 
  * ***** END LICENSE BLOCK ***** */
 
+"use strict";
+
 // Component constants
 const CC = Components.classes;
 const CI = Components.interfaces;
@@ -607,7 +609,7 @@ Status_4_Evar.prototype =
 	{
 		try
 		{
-			switch (topic)
+			switch(topic)
 			{
 				case "profile-after-change":
 					this.startup();

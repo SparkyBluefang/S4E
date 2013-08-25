@@ -50,5 +50,5 @@ Firefox=17.0|24.0a1
 
 # Build data
 name=status4evar
-files=chrome defaults chrome.manifest install.rdf components/*.js
+files=chrome defaults chrome.manifest install.rdf components/*.js modules
 
