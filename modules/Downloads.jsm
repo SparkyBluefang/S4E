@@ -43,7 +43,6 @@ const CC = Components.classes;
 const CI = Components.interfaces;
 const CU = Components.utils;
 
-const DownloadManager = CC["@mozilla.org/download-manager;1"].getService(CI.nsIDownloadManager);
 const DownloadManagerUIClassic = Components.classesByID["{7dfdf0d1-aff6-4a34-bad1-d0fe74601642}"].getService(CI.nsIDownloadManagerUI);
 
 CU.import("resource://gre/modules/Services.jsm");
@@ -57,6 +56,26 @@ function S4EDownloadService(window, service, getters)
 	this._window = window;
 	this._service = service;
 	this._getters = getters;
+
+	let tryJSTransfer = true;
+	try
+	{
+		tryJSTransfer = Services.prefs.getBoolPref("browser.download.useJSTransfer");
+	} catch(e) {}
+	if(tryJSTransfer)
+	{
+		try
+		{
+			this._handler = new JSTransferHandler(this);
+			Services.console.logStringMessage("S4EDownloadService using JSTransferHandler backend")
+		} catch(e) {}
+	}
+
+	if(this._handler == null)
+	{
+		this._handler = new DownloadManagerHandler(this);
+		Services.console.logStringMessage("S4EDownloadService using DownloadManagerHandler backend")
+	}
 }
 
 S4EDownloadService.prototype =
@@ -65,8 +84,9 @@ S4EDownloadService.prototype =
 	_service:             null,
 	_getters:             null,
 
-	_hasPBAPI:            false,
+	_handler:             null,
 	_listening:           false,
+
 	_binding:             false,
 	_customizing:         false,
 
@@ -84,7 +104,7 @@ S4EDownloadService.prototype =
 	_dlProgressMin:       0,
 	_dlProgressType:      "active",
 
-	_dlNotifyFinishTimer: 0,
+	_dlNotifyTimer:       0,
 	_dlNotifyGlowTimer:   0,
 
 	init: function()
@@ -100,19 +120,9 @@ S4EDownloadService.prototype =
 			return;
 		}
 
-		this._hasPBAPI = ('addPrivacyAwareListener' in DownloadManager);
-
-		if(this._hasPBAPI)
-		{
-			DownloadManager.addPrivacyAwareListener(this);
-		}
-		else
-		{
-			DownloadManager.addListener(this);
-			Services.obs.addObserver(this, "private-browsing", true);
-		}
-
+		this._handler.start();
 		this._listening = true;
+
 		this._lastTime = Infinity;
 
 		this.updateBinding();
@@ -127,12 +137,7 @@ S4EDownloadService.prototype =
 		}
 
 		this._listening = false;
-
-		DownloadManager.removeListener(this);
-		if(!this._hasPBAPI)
-		{
-			Services.obs.removeObserver(this, "private-browsing");
-		}
+		this._handler.stop();
 
 		this.releaseBinding();
 	},
@@ -140,8 +145,9 @@ S4EDownloadService.prototype =
 	destroy: function()
 	{
 		this.uninit();
+		this._handler.destroy();
 
-		["_window", "_service", "_getters"].forEach(function(prop)
+		["_window", "_service", "_getters", "_handler"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);
@@ -201,7 +207,7 @@ S4EDownloadService.prototype =
 		this._customizing = val;
 	},
 
-	updateStatus: function(lastState)
+	updateStatus: function(lastFinished)
 	{
 		if(!this._getters.downloadButton)
 		{
@@ -209,18 +215,7 @@ S4EDownloadService.prototype =
 			return;
 		}
 
-		let isPBW = (this._hasPBAPI && PrivateBrowsingUtils.isWindowPrivate(this._window))
-
-		let numActive = ((isPBW) ? DownloadManager.activePrivateDownloadCount : DownloadManager.activeDownloadCount);
-		if(numActive == 0)
-		{
-			this._dlActive = false;
-			this._dlFinished = (lastState && lastState == CI.nsIDownloadManager.DOWNLOAD_FINISHED);
-			this.updateButton();
-			this._lastTime = Infinity;
-			return;
-		}
-
+		let numActive = 0;
 		let numPaused = 0;
 		let activeTotalSize = 0;
 		let activeTransferred = 0;
@@ -232,23 +227,23 @@ S4EDownloadService.prototype =
 		let pausedMinProgress = Infinity;
 		let maxTime = -Infinity;
 
-		let dls = ((isPBW) ? DownloadManager.activePrivateDownloads : DownloadManager.activeDownloads);
-		while(dls.hasMoreElements())
+		let dls = ((this.isPrivateWindow) ? this._handler.activePrivateEntries : this._handler.activeEntries);
+		for(let dl in dls)
 		{
-			let dl = dls.getNext().QueryInterface(CI.nsIDownload);
 			if(dl.state == CI.nsIDownloadManager.DOWNLOAD_DOWNLOADING)
 			{
+				numActive++;
 				if(dl.size > 0)
 				{
 					if(dl.speed > 0)
 					{
-						maxTime = Math.max(maxTime, (dl.size - dl.amountTransferred) / dl.speed);
+						maxTime = Math.max(maxTime, (dl.size - dl.transferred) / dl.speed);
 					}
 
 					activeTotalSize += dl.size;
-					activeTransferred += dl.amountTransferred;
+					activeTransferred += dl.transferred;
 
-					let currentProgress = ((dl.amountTransferred * 100) / dl.size);
+					let currentProgress = ((dl.transferred * 100) / dl.size);
 					activeMaxProgress = Math.max(activeMaxProgress, currentProgress);
 					activeMinProgress = Math.min(activeMinProgress, currentProgress);
 				}
@@ -259,19 +254,28 @@ S4EDownloadService.prototype =
 				if(dl.size > 0)
 				{
 					pausedTotalSize += dl.size;
-					pausedTransferred += dl.amountTransferred;
+					pausedTransferred += dl.transferred;
 
-					let currentProgress = ((dl.amountTransferred * 100) / dl.size);
+					let currentProgress = ((dl.transferred * 100) / dl.size);
 					pausedMaxProgress = Math.max(pausedMaxProgress, currentProgress);
 					pausedMinProgress = Math.min(pausedMinProgress, currentProgress);
 				}
 			}
 		}
 
-		let dlPaused = (numActive == numPaused);
+		if((numActive + numPaused) == 0)
+		{
+			this._dlActive = false;
+			this._dlFinished = lastFinished;
+			this.updateButton();
+			this._lastTime = Infinity;
+			return;
+		}
+
+		let dlPaused =       (numActive == 0);
 		let dlStatus =       ((dlPaused) ? this._getters.strings.getString("pausedDownloads")
 		                                 : this._getters.strings.getString("activeDownloads"));
-		let dlCount =        ((dlPaused) ? numPaused         : (numActive - numPaused));
+		let dlCount =        ((dlPaused) ? numPaused         : numActive);
 		let dlTotalSize =    ((dlPaused) ? pausedTotalSize   : activeTotalSize);
 		let dlTransferred =  ((dlPaused) ? pausedTransferred : activeTransferred);
 		let dlMaxProgress =  ((dlPaused) ? pausedMaxProgress : activeMaxProgress);
@@ -310,7 +314,7 @@ S4EDownloadService.prototype =
 			download_progress.collapsed = true;
 			download_progress.value = 0;
 
-			if(this._dlFinished && this._hasPBAPI && !this.isUIShowing)
+			if(this._dlFinished && this._handler.hasPBAPI && !this.isUIShowing)
 			{
 				this.callAttention(download_button);
 			}
@@ -370,6 +374,23 @@ S4EDownloadService.prototype =
 		download_button.removeAttribute("attention");
 	},
 
+	notify: function()
+	{
+		if(this._dlNotifyTimer == 0 && this._service.downloadNotifyAnimate)
+		{
+			let download_button = this._getters.downloadButton;
+			if(download_button)
+			{
+				download_button.setAttribute("notification", "finish");
+				this._dlNotifyTimer = this._window.setTimeout(function(self, button)
+				{
+					self._dlNotifyTimer = 0;
+					button.removeAttribute("notification");
+				}, 1000, this, download_button);
+			}
+		}
+	},
+
 	clearFinished: function()
 	{
 		this._dlFinished = false;
@@ -423,6 +444,11 @@ S4EDownloadService.prototype =
 		aEvent.stopPropagation();
 	},
 
+	get isPrivateWindow()
+	{
+		return this._handler.hasPBAPI && PrivateBrowsingUtils.isWindowPrivate(this._window)
+	}
+
 	get isUIShowing()
 	{
 		switch(this._service.downloadButtonAction)
@@ -470,29 +496,94 @@ S4EDownloadService.prototype =
 				}
 				return compStr;
 		}
+	}
+};
+
+function DownloadManagerHandler(downloadService)
+{
+	this._downloadService = downloadService;
+	this._api = CC["@mozilla.org/download-manager;1"].getService(CI.nsIDownloadManager);
+}
+
+DownloadManagerHandler.prototype =
+{
+	_downloadService: null,
+	_api:             null,
+
+	destroy: function()
+	{
+		delete this._downloadService;
+		delete this._api;
+	},
+
+	start: function()
+	{
+		if(this.hasPBAPI)
+		{
+			this._api.addPrivacyAwareListener(this);
+		}
+		else
+		{
+			this._api.addListener(this);
+			Services.obs.addObserver(this, "private-browsing", true);
+		}
+	},
+
+	stop: function()
+	{
+		this._api.removeListener(this);
+		if(!this.hasPBAPI)
+		{
+			Services.obs.removeObserver(this, "private-browsing");
+		}
+	},
+
+	get hasPBAPI()
+	{
+		return ('addPrivacyAwareListener' in this._api);
+	},
+
+	activeEntries: function()
+	{
+		return this.generate(this._api.activeDownloads);
+	},
+
+	activePrivateEntries: function()
+	{
+		return this.generate(this._api.activePrivateDownloads);
+	},
+
+	generate: function(dls)
+	{
+		while(dls.hasMoreElements())
+		{
+			let dl = dls.getNext().QueryInterface(CI.nsIDownload);
+			yield { state: dl.state, size: dl.size, speed: dl.speed, transferred: dl.amountTransferred };
+		}
 	},
 
 	onProgressChange: function(aWebProgress, aRequest, aCurSelfProgress, aMaxSelfProgress, aCurTotalProgress, aMaxTotalProgress, aDownload)
 	{
-		this.updateStatus(aDownload.state);
+		if(this.hasPBAPI && (aDownload.isPrivate != this._downloadService.isPrivateWindow))
+		{
+			return;
+		}
+
+		this._downloadService.updateStatus(aDownload.state == CI.nsIDownloadManager.DOWNLOAD_FINISHED);
 	},
 
 	onDownloadStateChange: function(aState, aDownload)
 	{
-		this.updateStatus(aDownload.state);
-
-		if(aDownload.state == CI.nsIDownloadManager.DOWNLOAD_FINISHED && this._hasPBAPI && this._dlNotifyFinishTimer == 0 && this._service.downloadNotifyAnimate)
+		if(this.hasPBAPI && (aDownload.isPrivate != this._downloadService.isPrivateWindow))
 		{
-			let download_button = this._getters.downloadButton;
-			if(download_button)
-			{
-				download_button.setAttribute("notification", "finish");
-				this._dlNotifyFinishTimer = this._window.setTimeout(function(self, button)
-				{
-					self._dlNotifyFinishTimer = 0;
-					button.removeAttribute("notification");
-				}, 1000, this, download_button);
-			}
+			return;
+		}
+
+		this._downloadService.updateStatus(aDownload.state == CI.nsIDownloadManager.DOWNLOAD_FINISHED);
+
+		if(aDownload.state == CI.nsIDownloadManager.DOWNLOAD_FINISHED && this.hasPBAPI)
+		{
+			this._downloadService.notify()
 		}
 	},
 
@@ -503,13 +594,199 @@ S4EDownloadService.prototype =
 	{
 		if(topic == "private-browsing" && (data == "enter" || data == "exit"))
 		{
-			this._window.setTimeout(function(self)
+			self._downloadService._window.setTimeout(function(self)
 			{
 				self.updateStatus();
-			}, 0, this);
+			}, 0, this._downloadService);
 		}
 	},
 
 	QueryInterface: XPCOMUtils.generateQI([ CI.nsIDownloadProgressListener, CI.nsISupportsWeakReference, CI.nsIObserver ])
 };
 
+function JSTransferHandler(downloadService)
+{
+	let api = CU.import("resource://gre/modules/Downloads.jsm", {}).Downloads;
+
+	this._activePublic = new JSTransferListener(downloadService, api.getPublicDownloadList(), false);
+	this._activePrivate = new JSTransferListener(downloadService, api.getPrivateDownloadList(), true);
+}
+
+JSTransferHandler.prototype =
+{
+	_activePublic:    null,
+	_activePrivate:   null,
+
+	destroy: function()
+	{
+		this._activePublic.destroy();
+		this._activePrivate.destroy();
+	},
+
+	start: function()
+	{
+		this._activePublic.start();
+		this._activePrivate.start();
+	},
+
+	stop: function()
+	{
+		this._activePublic.stop();
+		this._activePrivate.stop();
+	},
+
+	get hasPBAPI()
+	{
+		return true;
+	},
+
+	activeEntries: function()
+	{
+		this._activePublic.generator();
+	},
+
+	activePrivateEntries: function()
+	{
+		this._activePrivate.generator();
+	}
+};
+
+function JSTransferListener(downloadService, listPromise, isPrivate)
+{
+	this._downloadService = downloadService;
+	this._isPrivate = isPrivate;
+	this._downloads = {};
+
+	listPromise.then(list => this.initList(list)).then(null, CU.reportError);
+}
+
+JSTransferListener.prototype =
+{
+	_downloadService: null,
+	_list:            null,
+	_downloads:       {},
+	_isPrivate:       false,
+	_wantsStart:      false,
+
+	initList: function(list)
+	{
+		this._list = list;
+		if(this._wantsStart) {
+			this.start();
+		}
+
+		this._list.getAll().then(downloads => this.initDownloads(downloads)).then(null, CU.reportError);
+	},
+
+	initDownloads: function(downloads)
+	{
+		downloads.forEach(function(download)
+		{
+			this.onDownloadAdded(download);
+		}, this);
+	},
+
+	destroy: function()
+	{
+		["_downloadService", "_list", "_downloads"].forEach(function(prop)
+		{
+			delete this[prop];
+		}, this);
+	},
+
+	start: function()
+	{
+		if(!this._list)
+		{
+			this._wantsStart = true;
+			return;
+		}
+
+		this._list.addView(this);
+	},
+
+	stop: function()
+	{
+		if(!this._list)
+		{
+			this._wantsStart = false;
+			return;
+		}
+
+		this._list.removeView(this);
+	},
+
+	generator: function()
+	{
+		for(let dl in this._downloads)
+		{
+			yield this._downloads[dl];
+		}
+	},
+
+	convertToState: function(dl)
+	{
+		if(dl.succeeded)
+		{
+			return CI.nsIDownloadManager.DOWNLOAD_FINISHED;
+		}
+		if(dl.error && dl.error.becauseBlockedByParentalControls)
+		{
+			return CI.nsIDownloadManager.DOWNLOAD_BLOCKED_PARENTAL;
+		}
+		if(dl.error)
+		{
+			return CI.nsIDownloadManager.DOWNLOAD_FAILED;
+		}
+		if(dl.canceled && dl.hasPartialData)
+		{
+			return CI.nsIDownloadManager.DOWNLOAD_PAUSED;
+		}
+		if(dl.canceled)
+		{
+			return CI.nsIDownloadManager.DOWNLOAD_CANCELED;
+		}
+		if(dl.stopped)
+		{
+			return CI.nsIDownloadManager.DOWNLOAD_NOTSTARTED;
+		}
+		return CI.nsIDownloadManager.DOWNLOAD_DOWNLOADING;
+	},
+
+	onDownloadAdded: function(aDownload)
+	{
+		let dl = this._downloads[aDownload];
+		if(!dl)
+		{
+			dl = {};
+			this._downloads[aDownload] = dl;
+		}
+
+		dl.state = this.convertToState(aDownload);
+		dl.size = aDownload.totalBytes;
+		dl.speed = aDownload.speed;
+		dl.transferred = aDownload.currentBytes;
+	},
+
+	onDownloadChanged: function(aDownload)
+	{
+		this.onDownloadAdded(aDownload);
+
+		if(this._isPrivate != this._downloadService.isPrivateWindow)
+		{
+			return;
+		}
+
+		this._downloadService.updateStatus(aDownload.succeeded);
+
+		if(aDownload.succeeded)
+		{
+			this._downloadService.notify()
+		}
+	},
+
+	onDownloadRemoved: function(aDownload)
+	{
+		delete this._downloads[aDownload];
+	}
+}
