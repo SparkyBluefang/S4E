@@ -92,6 +92,5 @@ interface nsIStatus4Evar : nsISupports
 
 	void resetPrefs();
 	void updateWindow(in nsIDOMWindow win);
-	void launchOptions(in nsIDOMWindow currentWindow);
 };
 

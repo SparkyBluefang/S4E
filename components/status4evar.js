@@ -44,7 +44,6 @@ const CU = Components.utils;
 
 CU.import("resource://gre/modules/XPCOMUtils.jsm");
 CU.import("resource://gre/modules/Services.jsm");
-CU.import("resource://gre/modules/AddonManager.jsm");
 
 const CURRENT_MIGRATION = 6;
 
@@ -831,36 +830,6 @@ Status_4_Evar.prototype =
 				this.prefs.clearUserPref(pref);
 			}
 		}, this);
-	},
-
-	launchOptions: function(currentWindow)
-	{
-		AddonManager.getAddonByID("status4evar@caligonstudios.com", function(aAddon)
-		{
-			let optionsURL = aAddon.optionsURL;
-			let windows = Services.wm.getEnumerator(null);
-			while (windows.hasMoreElements())
-			{
-				let win = windows.getNext();
-				if (win.document.documentURI == optionsURL)
-				{
-					win.focus();
-					return;
-				}
-			}
-
-			let features = "chrome,titlebar,toolbar,centerscreen";
-			try
-			{
-				let instantApply = Services.prefs.getBoolPref("browser.preferences.instantApply");
-				features += instantApply ? ",dialog=no" : ",modal";
-			}
-			catch(e)
-			{
-				features += ",modal";
-			}
-			currentWindow.openDialog(optionsURL, "", features);
-		});
 	}
 };
 

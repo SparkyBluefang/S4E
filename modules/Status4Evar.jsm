@@ -45,7 +45,10 @@ const CU = Components.utils;
 
 const s4e_service = CC["@caligonstudios.com/status4evar;1"].getService(CI.nsIStatus4Evar);
 
+CU.import("resource://gre/modules/Services.jsm");
 CU.import("resource://gre/modules/XPCOMUtils.jsm");
+CU.import("resource://gre/modules/AddonManager.jsm");
+
 CU.import("resource://status4evar/Status.jsm");
 CU.import("resource://status4evar/Progress.jsm");
 CU.import("resource://status4evar/Downloads.jsm");
@@ -230,6 +233,36 @@ Status4Evar.prototype =
 		// * buildTextOrder()
 		// * updateStatusField(true)
 		// * updateWindowGripper(true)
+	},
+
+	launchOptions: function(currentWindow)
+	{
+		AddonManager.getAddonByID("status4evar@caligonstudios.com", function(aAddon)
+		{
+			let optionsURL = aAddon.optionsURL;
+			let windows = Services.wm.getEnumerator(null);
+			while (windows.hasMoreElements())
+			{
+				let win = windows.getNext();
+				if (win.document.documentURI == optionsURL)
+				{
+					win.focus();
+					return;
+				}
+			}
+
+			let features = "chrome,titlebar,toolbar,centerscreen";
+			try
+			{
+				let instantApply = Services.prefs.getBoolPref("browser.preferences.instantApply");
+				features += instantApply ? ",dialog=no" : ",modal";
+			}
+			catch(e)
+			{
+				features += ",modal";
+			}
+			currentWindow.openDialog(optionsURL, "", features);
+		});
 	}
 
 };

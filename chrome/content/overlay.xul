@@ -53,7 +53,7 @@
 	<script type="application/javascript" src="chrome://status4evar/content/overlay.js" />
 
 	<commandset>
-		<command id="S4E:Options" oncommand="caligon.status4evar.service.launchOptions(window);"/>
+		<command id="S4E:Options" oncommand="caligon.status4evar.launchOptions(window);"/>
 	</commandset>
 
 	<toolbarpalette id="BrowserToolbarPalette">
