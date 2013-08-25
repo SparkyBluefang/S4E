@@ -80,7 +80,6 @@ style	chrome://browser/content/browser.xul		chrome://status4evar/skin/version/ov
 style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/overlay.css
 style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/skin/overlay.css
 style	chrome://global/content/customizeToolbar.xul	chrome://status4evar-os/skin/overlay.css
-style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/skin/version/overlay25.css		appversion>=25.0a1
 
 # Pref overlays
 style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs19.css		appversion<=19.0.*
