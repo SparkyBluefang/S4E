@@ -177,11 +177,18 @@
 
 			<property name="label">
 				<setter><![CDATA[
-					window.caligon.status4evar.statusService.setStatusText(val);
+					if(window.caligon && window.caligon.status4evar)
+					{
+						window.caligon.status4evar.statusService.setStatusText(val);
+					}
 					return undefined;
 				]]></setter>
 				<getter><![CDATA[
-					return window.caligon.status4evar.statusService.getStatusText();
+					if(window.caligon && window.caligon.status4evar)
+					{
+						return window.caligon.status4evar.statusService.getStatusText();
+					{
+					return "";
 				]]></getter>
 			</property>
 
