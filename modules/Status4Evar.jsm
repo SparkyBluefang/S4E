@@ -59,7 +59,7 @@ function Status4Evar(window, gBrowser, gNavToolbox)
 	this._window = window;
 	this._gNavToolbox = gNavToolbox;
 
-	S4EToolbars.setup(this._window, s4e_service);
+	S4EToolbars.setup(this._window, this._gNavToolbox, s4e_service);
 
 	this.getters = new S4EWindowGetters(this._window);
 	this.statusService = new S4EStatusService(this._window, s4e_service, this.getters);
@@ -184,7 +184,7 @@ Status4Evar.prototype =
 		let addon_bar = this.getters.addonbar;
 
 		if(!action || !addon_bar || !s4e_service.addonbarWindowGripper
-		|| window.windowState != window.STATE_NORMAL || addon_bar.toolbox.customizing)
+		|| this._window.windowState != CI.nsIDOMChromeWindow.STATE_NORMAL || addon_bar.toolbox.customizing)
 		{
 			if(gripper)
 			{
@@ -372,7 +372,7 @@ SizeModeService.prototype =
 			this._statusService.updateStatusField(true);
 		}
 
-		if(window.windowState != this.lastwindowState)
+		if(this._window.windowState != this.lastwindowState)
 		{
 			this.lastwindowState = this._window.windowState;
 			this._updateWindowGripper(true);

@@ -180,11 +180,13 @@ S4EDownloadService.prototype =
 			return;
 		}
 
-		DownloadsButton._getAnchorInternal = DownloadsButton.getAnchor;
-		DownloadsButton.getAnchor = this.getAnchor.bind(this);
+		let db = this._window.DownloadsButton;
 
-		DownloadsButton._releaseAnchorInternal = DownloadsButton.releaseAnchor;
-		DownloadsButton.releaseAnchor = function() {};
+		db._getAnchorInternal = db.getAnchor;
+		db.getAnchor = this.getAnchor.bind(this);
+
+		db._releaseAnchorInternal = db.releaseAnchor;
+		db.releaseAnchor = function() {};
 
 		this._binding = true;
 	},
@@ -196,8 +198,10 @@ S4EDownloadService.prototype =
 			return;
 		}
 
-		DownloadsButton.getAnchor = DownloadsButton._getAnchorInternal;
-		DownloadsButton.releaseAnchor = DownloadsButton._releaseAnchorInternal;
+		let db = this._window.DownloadsButton;
+
+		db.getAnchor = db._getAnchorInternal;
+		db.releaseAnchor = db._releaseAnchorInternal;
 
 		this._binding = false;
 	},
@@ -419,17 +423,17 @@ S4EDownloadService.prototype =
 		switch(this._service.downloadButtonAction)
 		{
 			case 1: // Default
-				if(DownloadsCommon.useToolkitUI)
+				if(this._window.DownloadsCommon.useToolkitUI)
 				{
 					DownloadManagerUIClassic.show(this._window);
 				}
 				else
 				{
-					DownloadsPanel.showPanel();
+					this._window.DownloadsPanel.showPanel();
 				}
 				break;
 			case 2: // Show Panel
-				DownloadsPanel.showPanel();
+				this._window.DownloadsPanel.showPanel();
 				break;
 			case 3: // Show Library
 				this._window.PlacesCommandHook.showPlacesOrganizer("Downloads");
@@ -446,24 +450,24 @@ S4EDownloadService.prototype =
 
 	get isPrivateWindow()
 	{
-		return this._handler.hasPBAPI && PrivateBrowsingUtils.isWindowPrivate(this._window)
-	}
+		return this._handler.hasPBAPI && PrivateBrowsingUtils.isWindowPrivate(this._window);
+	},
 
 	get isUIShowing()
 	{
 		switch(this._service.downloadButtonAction)
 		{
 			case 1: // Default
-				if(DownloadsCommon.useToolkitUI)
+				if(this._window.DownloadsCommon.useToolkitUI)
 				{
 					return DownloadManagerUIClassic.visible;
 				}
 				else
 				{
-					return DownloadsPanel.isPanelShowing;
+					return this._window.DownloadsPanel.isPanelShowing;
 				}
 			case 2: // Show Panel
-				return DownloadsPanel.isPanelShowing;
+				return this._window.DownloadsPanel.isPanelShowing;
 			case 3: // Show Library
 				var organizer = Services.wm.getMostRecentWindow("Places:Organizer");
 				if(organizer)

@@ -133,7 +133,7 @@ S4EStatusService.prototype =
 			link = link.replace(/[\u200e\u200f\u202a\u202b\u202c\u202d\u202e]/g, encodeURIComponent);
 			if(this._getters.urlbar && this._getters.urlbar._mayTrimURLs)
 			{
-				link = trimURL(link);
+				link = this._window.trimURL(link);
 			}
 
 			if(status == statusLinkOver)

@@ -173,16 +173,16 @@ S4EProgressService.prototype =
 		let loadingDone = aStateFlags & nsIWPL.STATE_STOP;
 
 		this.onStateChange(
-			gBrowser.webProgress,
-			{ URI: gBrowser.currentURI },
+			this._gBrowser.webProgress,
+			{ URI: this._gBrowser.currentURI },
 			((loadingDone ? nsIWPL.STATE_STOP : nsIWPL.STATE_START) | (aStateFlags & nsIWPL.STATE_IS_NETWORK)),
 			aStatus
 		);
 
 		if(!loadingDone)
 		{
-			this.onProgressChange(gBrowser.webProgress, null, 0, 0, aTotalProgress, 1);
-			this.onStatusChange(gBrowser.webProgress, null, 0, aMessage);
+			this.onProgressChange(this._gBrowser.webProgress, null, 0, 0, aTotalProgress, 1);
+			this.onStatusChange(this._gBrowser.webProgress, null, 0, aMessage);
 		}
 	},
 

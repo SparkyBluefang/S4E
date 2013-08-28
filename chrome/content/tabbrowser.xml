@@ -187,7 +187,7 @@
 					if(window.caligon && window.caligon.status4evar)
 					{
 						return window.caligon.status4evar.statusService.getStatusText();
-					{
+					}
 					return "";
 				]]></getter>
 			</property>

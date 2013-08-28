@@ -41,7 +41,7 @@ const EXPORTED_SYMBOLS = ["S4EToolbars"];
 
 const S4EToolbars =
 {
-	setup: function(window, service)
+	setup: function(window, gNavToolbox, service)
 	{
 		let document = window.document;
 		let addon_bar = document.getElementById("addon-bar");
@@ -98,13 +98,13 @@ const S4EToolbars =
 					addon_bar.currentSet = currentSet;
 					addon_bar.setAttribute("currentset", currentSet);
 					document.persist(addon_bar.id, "currentset");
-					setToolbarVisibility(addon_bar, true);
+					window.setToolbarVisibility(addon_bar, true);
 				}
 			}
 		}
 	},
 
-	restore: function(window)
+	restore: function(window, gNavToolbox)
 	{
 		
 	}
