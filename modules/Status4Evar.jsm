@@ -65,7 +65,7 @@ function Status4Evar(window, gBrowser, gNavToolbox)
 	this.statusService = new S4EStatusService(this._window, s4e_service, this.getters);
 	this.progressMeter = new S4EProgressService(gBrowser, s4e_service, this.getters, this.statusService);
 	this.downloadStatus = new S4EDownloadService(this._window, s4e_service, this.getters);
-	this.sizeModeService = new SizeModeService(this._window, this.statusService);
+	this.sizeModeService = new SizeModeService(this._window, this);
 
 	this.__bound_beforeCustomization = this.beforeCustomization.bind(this)
 	this.__bound_updateWindow = this.updateWindow.bind(this);
@@ -116,7 +116,7 @@ Status4Evar.prototype =
 		this.sizeModeService.destroy();
 
 		["_window", "_gNavToolbox", "getters", "statusService", "downloadStatus", "progressMeter", "sizeModeService",
-		"__bound_beforeCustomization", "__bound_destroy", "__bound_updateWindow" ].forEach(function(prop)
+		"__bound_beforeCustomization", "__bound_destroy", "__bound_updateWindow"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);
@@ -335,15 +335,17 @@ S4EWindowGetters.prototype =
 			delete this[prop];
 		}, this);
 
-		delete this.urlbar;
-		delete this._window;
+		["urlbar", "_window"].forEach(function(prop)
+		{
+			delete this[prop];
+		}, this);
 	}
 };
 
-function SizeModeService(window, statusService)
+function SizeModeService(window, s4e)
 {
 	this._window = window;
-	this._statusService = statusService;
+	this._s4e = s4e;
 
 	this.lastFullScreen = this._window.fullScreen;
 	this.lastwindowState = this._window.windowState;
@@ -353,7 +355,7 @@ function SizeModeService(window, statusService)
 SizeModeService.prototype =
 {
 	_window:         null,
-	_statusService:  null,
+	_s4e:            null,
 
 	lastFullScreen:  null,
 	lastwindowState: null,
@@ -361,6 +363,11 @@ SizeModeService.prototype =
 	destroy: function()
 	{
 		this._window.removeEventListener("sizemodechange", this, false);
+
+		["_window", "_s4e"].forEach(function(prop)
+		{
+			delete this[prop];
+		}, this);
 	},
 
 	handleEvent: function(e)
@@ -368,14 +375,14 @@ SizeModeService.prototype =
 		if(this._window.fullScreen != this.lastFullScreen)
 		{
 			this.lastFullScreen = this._window.fullScreen;
-			this._statusService.clearStatusField();
-			this._statusService.updateStatusField(true);
+			this._s4e.statusService.clearStatusField();
+			this._s4e.statusService.updateStatusField(true);
 		}
 
 		if(this._window.windowState != this.lastwindowState)
 		{
 			this.lastwindowState = this._window.windowState;
-			this._updateWindowGripper(true);
+			this._s4e.updateWindowGripper(true);
 		}
 	},
 

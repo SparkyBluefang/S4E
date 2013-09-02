@@ -67,14 +67,14 @@ function S4EDownloadService(window, service, getters)
 		try
 		{
 			this._handler = new JSTransferHandler(this);
-			Services.console.logStringMessage("S4EDownloadService using JSTransferHandler backend")
+			Services.console.logStringMessage("S4EDownloadService using JSTransferHandler backend");
 		} catch(e) {}
 	}
 
 	if(this._handler == null)
 	{
 		this._handler = new DownloadManagerHandler(this);
-		Services.console.logStringMessage("S4EDownloadService using DownloadManagerHandler backend")
+		Services.console.logStringMessage("S4EDownloadService using DownloadManagerHandler backend");
 	}
 }
 
@@ -231,7 +231,7 @@ S4EDownloadService.prototype =
 		let pausedMinProgress = Infinity;
 		let maxTime = -Infinity;
 
-		let dls = ((this.isPrivateWindow) ? this._handler.activePrivateEntries : this._handler.activeEntries);
+		let dls = ((this.isPrivateWindow) ? this._handler.activePrivateEntries() : this._handler.activeEntries());
 		for(let dl in dls)
 		{
 			if(dl.state == CI.nsIDownloadManager.DOWNLOAD_DOWNLOADING)
@@ -516,8 +516,10 @@ DownloadManagerHandler.prototype =
 
 	destroy: function()
 	{
-		delete this._downloadService;
-		delete this._api;
+		["_downloadService", "_api"].forEach(function(prop)
+		{
+			delete this[prop];
+		}, this);
 	},
 
 	start: function()
@@ -646,12 +648,12 @@ JSTransferHandler.prototype =
 
 	activeEntries: function()
 	{
-		this._activePublic.generator();
+		return this._activePublic.generator();
 	},
 
 	activePrivateEntries: function()
 	{
-		this._activePrivate.generator();
+		return this._activePrivate.generator();
 	}
 };
 
