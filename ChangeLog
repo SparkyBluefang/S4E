@@ -1,4 +1,6 @@
 Version next
+
+Version 2013.09.14.15b
 * Support new Downloads.jsm API in Firefox 26+.
 * Support UI changes in Firefox 26.
 * Update locales for new strings.
