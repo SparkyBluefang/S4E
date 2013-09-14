@@ -57,12 +57,19 @@ function S4EDownloadService(window, service, getters)
 	this._service = service;
 	this._getters = getters;
 
+	let supportsJSTransfer = false;
+	try
+	{
+		supportsJSTransfer = (Services.vc.compare("25.*", Services.appinfo.version) < 0);
+	} catch(e) {}
+
 	let tryJSTransfer = true;
 	try
 	{
 		tryJSTransfer = Services.prefs.getBoolPref("browser.download.useJSTransfer");
 	} catch(e) {}
-	if(tryJSTransfer)
+
+	if(supportsJSTransfer && tryJSTransfer)
 	{
 		try
 		{
