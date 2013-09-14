@@ -1,5 +1,6 @@
 Version next
 * Support new Downloads.jsm API in Firefox 26+.
+* Support UI changes in Firefox 26.
 * Update locales for new strings.
 * Updated translations for: en-US, pl, sr
 

@@ -287,7 +287,6 @@ S4EWindowGetters.prototype =
 			["downloadButtonAnchor",   "status4evar-download-anchor"],
 			["statusWidget",           "status4evar-status-widget"],
 			["statusWidgetLabel",      "status4evar-status-text"],
-			["statusOverlay",          "statusbar-display"],
 			["strings",                "bundle_status4evar"],
 			["toolbarProgress",        "status4evar-progress-bar"],
 			["urlbarProgress",         "urlbar-progress-alt"]
@@ -312,18 +311,34 @@ S4EWindowGetters.prototype =
 		this.__defineGetter__("urlbar", function()
 		{
 			let ub = document.getElementById("urlbar");
-			if(ub)
+			if(!ub)
 			{
-				["setStatus", "setStatusType", "updateOverLinkLayout"].forEach(function(func)
-				{
-					if(!(func in ub))
-					{	
-						ub.__proto__[func] = function() {};
-					}
-				});
+				return null;
 			}
+
+			["setStatus", "setStatusType", "updateOverLinkLayout"].forEach(function(func)
+			{
+				if(!(func in ub))
+				{
+					ub.__proto__[func] = function() {};
+				}
+			});
+
 			delete this.urlbar;
 			return this.urlbar = ub;
+		});
+
+		delete this.statusOverlay;
+		this.__defineGetter__("statusOverlay", function()
+		{
+			let so = this._window.XULBrowserWindow.statusTextField;
+			if(!so)
+			{
+				return null;
+			}
+
+			delete this.statusOverlay;
+			return this.statusOverlay = so;
 		});
 	},
 

@@ -68,7 +68,11 @@ function S4EDownloadService(window, service, getters)
 		{
 			this._handler = new JSTransferHandler(this);
 			Services.console.logStringMessage("S4EDownloadService using JSTransferHandler backend");
-		} catch(e) {}
+		}
+		catch(e)
+		{
+			CU.reportError(e);
+		}
 	}
 
 	if(this._handler == null)
@@ -614,8 +618,8 @@ function JSTransferHandler(downloadService)
 {
 	let api = CU.import("resource://gre/modules/Downloads.jsm", {}).Downloads;
 
-	this._activePublic = new JSTransferListener(downloadService, api.getPublicDownloadList(), false);
-	this._activePrivate = new JSTransferListener(downloadService, api.getPrivateDownloadList(), true);
+	this._activePublic = new JSTransferListener(downloadService, api.getList(api.PUBLIC), false);
+	this._activePrivate = new JSTransferListener(downloadService, api.getList(api.PRIVATE), true);
 }
 
 JSTransferHandler.prototype =
