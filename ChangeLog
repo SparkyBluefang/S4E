@@ -1,4 +1,5 @@
 Version next
+* Don't use Firefox 22 JavaScript syntax in new Downloads implementation.
 
 Version 2013.09.14.15b
 * Support new Downloads.jsm API in Firefox 26+.

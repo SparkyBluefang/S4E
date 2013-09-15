@@ -674,7 +674,7 @@ function JSTransferListener(downloadService, listPromise, isPrivate)
 	this._isPrivate = isPrivate;
 	this._downloads = {};
 
-	listPromise.then(list => this.initList(list)).then(null, CU.reportError);
+	listPromise.then(this.initList.bind(this)).then(null, CU.reportError);
 }
 
 JSTransferListener.prototype =
@@ -692,7 +692,7 @@ JSTransferListener.prototype =
 			this.start();
 		}
 
-		this._list.getAll().then(downloads => this.initDownloads(downloads)).then(null, CU.reportError);
+		this._list.getAll().then(this.initDownloads.bind(this)).then(null, CU.reportError);
 	},
 
 	initDownloads: function(downloads)
