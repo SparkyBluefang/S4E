@@ -43,7 +43,7 @@
 <!ENTITY status4evar.unit.px "פיקסל">
 <!ENTITY status4evar.status.general.status.caption "טקסט מצב">
 <!ENTITY status4evar.status.label "הצגת מצב ב:">
-<!ENTITY status4evar.status.timeout.label "Delay before clearing status messages:">
+<!ENTITY status4evar.status.timeout.label "השהייה לפני מחיקת הודעות המצב:">
 <!ENTITY status4evar.status.default.label "הצגת מצב ברירת מחדל">
 <!ENTITY status4evar.status.network.label "הצגת מצב הרשת">
 <!ENTITY status4evar.status.network.xhr.label "הצגת מצב רשת רקע">
