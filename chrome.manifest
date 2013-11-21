@@ -76,6 +76,7 @@ skin	status4evar-os	classic/1.0	chrome/skin/pinstripe/		os=Darwin
 
 # Browser overlays
 overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/overlay.xul
+overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/australis.xul	appversion>=28.0a1
 
 # Toolbar overlays
 style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/overlay.css
@@ -83,7 +84,7 @@ style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/skin/ove
 style	chrome://global/content/customizeToolbar.xul	chrome://status4evar-os/skin/overlay.css
 
 # Pref overlays
-style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs19.css		appversion<=19.0.*
+style	chrome://status4evar/content/prefs.xul		chrome://status4evar/skin/version/prefs19.css	appversion<=19.0.*
 
 # XPCOM registration
 interfaces	components/status4evar.xpt

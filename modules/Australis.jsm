@@ -35,92 +35,17 @@
  * 
  * ***** END LICENSE BLOCK ***** */
 
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+"use strict";
 
-/*
- * General
- */
+const EXPORTED_SYMBOLS = [];
 
-#status4evar-status-text,
-#status4evar-progress-bar
-{
-	margin: 0px 3px;
-}
+const CU = Components.utils;
 
-/*
- * Download status
- */
+CU.import("resource:///modules/CustomizableUI.jsm");
 
-#status4evar-download-anchor
-{
-	position: relative;
-}
-
-#status4evar-download-progress-bar
-{
-	height: 4px;
-}
-
-#status4evar-download-button #status4evar-download-icon
-{
-	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 108, 18, 90) center no-repeat;
-	min-width: 18px;
-	min-height: 18px;
-}
-
-#status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon
-{
-	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 108, 18, 90) center no-repeat;
-}
-
-#status4evar-download-button[attention] #status4evar-download-icon
-{
-	background-image: url("chrome://browser/skin/downloads/download-glow.png");
-}
-
-toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
-{
-	-moz-margin-start: 5px !important;
-}
-
-/*
- * Splitter
- */
-
-splitter.status4evar-status-splitter
-{
-	width: 6px;
-	margin: 0px -3px;
-}
-
-/*
- * Location bar
- */
-
-#urlbar-progress-alt
-{
-	-moz-margin-end: -2px;
-}
-
-/*
- * Status bar
- */
-
-#browser-bottombox[s4eboarder="true"] :-moz-any(#status4evar-status-bar, #addon-bar)
-{
-	-moz-appearance: none;
-}
-
-#browser-bottombox[s4eboarder="true"] > *:not([hidden="true"]):not([collapsed="true"])
-{
-	box-shadow: none !important;
-	border: none !important;
-	border-top: 2px solid !important;
-	-moz-border-top-colors: ThreeDShadow ThreeDHighlight !important;
-}
-
-#browser-bottombox[s4eboarder="true"] > *:not([hidden="true"]):not([collapsed="true"]) ~ *
-{
-	border: none !important;
-}
+CustomizableUI.registerArea("status4evar-status-bar", {
+	type: CustomizableUI.TYPE_TOOLBAR,
+	legacy: true,
+	defaultPlacements: ["status4evar-status-widget", "status4evar-download-button", "status4evar-progress-widget"]
+});
 

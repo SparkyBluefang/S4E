@@ -130,7 +130,7 @@ splitter.status4evar-status-splitter
  * Add-on bar
  */
 
-#browser-bottombox[s4eboarder="true"] #addon-bar
+#browser-bottombox[s4eboarder="true"] :-moz-any(#status4evar-status-bar, #addon-bar)
 {
 	-moz-appearance: none;
 }

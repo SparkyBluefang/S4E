@@ -37,90 +37,15 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/*
- * General
- */
-
-#status4evar-status-text,
-#status4evar-progress-bar
-{
-	margin: 0px 3px;
-}
-
-/*
- * Download status
- */
-
-#status4evar-download-anchor
-{
-	position: relative;
-}
-
-#status4evar-download-progress-bar
-{
-	height: 4px;
-}
-
-#status4evar-download-button #status4evar-download-icon
-{
-	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 108, 18, 90) center no-repeat;
-	min-width: 18px;
-	min-height: 18px;
-}
-
-#status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon
-{
-	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 108, 18, 90) center no-repeat;
-}
-
-#status4evar-download-button[attention] #status4evar-download-icon
-{
-	background-image: url("chrome://browser/skin/downloads/download-glow.png");
-}
-
-toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
-{
-	-moz-margin-start: 5px !important;
-}
-
-/*
- * Splitter
- */
-
-splitter.status4evar-status-splitter
-{
-	width: 6px;
-	margin: 0px -3px;
-}
-
-/*
- * Location bar
- */
-
-#urlbar-progress-alt
-{
-	-moz-margin-end: -2px;
-}
-
-/*
- * Status bar
- */
-
-#browser-bottombox[s4eboarder="true"] :-moz-any(#status4evar-status-bar, #addon-bar)
+#status4evar-status-bar
 {
 	-moz-appearance: none;
-}
-
-#browser-bottombox[s4eboarder="true"] > *:not([hidden="true"]):not([collapsed="true"])
-{
-	box-shadow: none !important;
-	border: none !important;
-	border-top: 2px solid !important;
-	-moz-border-top-colors: ThreeDShadow ThreeDHighlight !important;
-}
-
-#browser-bottombox[s4eboarder="true"] > *:not([hidden="true"]):not([collapsed="true"]) ~ *
-{
-	border: none !important;
+	min-height: 20px;
+	border-top-style: none;
+	border-bottom-style: none;
+	padding-top: 1px;
+	background-image: linear-gradient(rgba(0,0,0,.15) 1px, rgba(255,255,255,.15) 1px);
+	background-size: 100% 2px;
+	background-repeat: no-repeat;
 }
 

@@ -39,11 +39,49 @@
 
 const EXPORTED_SYMBOLS = ["S4EToolbars"];
 
+const CU = Components.utils;
+
+CU.import("resource://gre/modules/Services.jsm");
+
 const S4EToolbars =
+{
+	get handler()
+	{
+		delete this.handler;
+
+		try
+		{
+			this.handler = new AustralisS4EToolbars();
+			Services.console.logStringMessage("S4EToolbars using AustralisS4EToolbars backend");
+		}
+		catch(e)
+		{
+			this.handler = new ClassicS4EToolbars();
+			Services.console.logStringMessage("S4EToolbars using ClassicS4EToolbars backend");
+		}
+
+		return this.handler;
+	},
+
+	setup: function(window, gNavToolbox, service)
+	{
+		this.handler.setup(window, gNavToolbox, service);
+	}
+};
+
+function ClassicS4EToolbars() {}
+
+ClassicS4EToolbars.prototype =
 {
 	setup: function(window, gNavToolbox, service)
 	{
 		let document = window.document;
+		let status_bar = document.getElementById("status-bar");
+		if(status_bar)
+		{
+			status_bar.setAttribute("ordinal", "1");
+		}
+
 		let addon_bar = document.getElementById("addon-bar");
 		if(addon_bar)
 		{
@@ -102,11 +140,18 @@ const S4EToolbars =
 				}
 			}
 		}
-	},
-
-	restore: function(window, gNavToolbox)
-	{
-		
 	}
+};
+
+function AustralisS4EToolbars()
+{
+	this._api = CU.import("resource:///modules/CustomizableUI.jsm", {}).CustomizableUI;
+}
+
+AustralisS4EToolbars.prototype =
+{
+	_api: null,
+
+	setup: function(window, gNavToolbox, service) {}
 };
 

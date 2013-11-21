@@ -181,7 +181,7 @@ Status4Evar.prototype =
 		let document = this._window.document;
 
 		let gripper = document.getElementById("status4evar-window-gripper");
-		let addon_bar = this.getters.addonbar;
+		let addon_bar = this.getters.statusBar || this.getters.addonbar;
 
 		if(!action || !addon_bar || !s4e_service.addonbarWindowGripper
 		|| this._window.windowState != CI.nsIDOMChromeWindow.STATE_NORMAL || addon_bar.toolbox.customizing)
@@ -285,6 +285,7 @@ S4EWindowGetters.prototype =
 			["downloadButtonProgress", "status4evar-download-progress-bar"],
 			["downloadButtonLabel",    "status4evar-download-label"],
 			["downloadButtonAnchor",   "status4evar-download-anchor"],
+			["statusBar",              "status4evar-status-bar"],
 			["statusWidget",           "status4evar-status-widget"],
 			["statusWidgetLabel",      "status4evar-status-text"],
 			["strings",                "bundle_status4evar"],
@@ -350,7 +351,7 @@ S4EWindowGetters.prototype =
 			delete this[prop];
 		}, this);
 
-		["urlbar", "_window"].forEach(function(prop)
+		["urlbar", "statusOverlay", "statusOverlay", "_window"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);

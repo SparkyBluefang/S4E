@@ -62,6 +62,7 @@
 		             removable="true" flex="1" persist="width" width="100">
 			<label id="status4evar-status-text" flex="1" crop="end" value="&status4evar.status.widget.title;" />
 		</toolbaritem>
+
 		<toolbarbutton id="status4evar-download-button"
 		               title="&status4evar.download.widget.title;"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
@@ -77,12 +78,14 @@
 			<tooltip id="status4evar-download-tooltip" />
 			<label id="status4evar-download-label" value="&status4evar.download.widget.title;" class="toolbarbutton-text" crop="right" flex="1" />
 		</toolbarbutton>
+
 		<toolbaritem id="status4evar-progress-widget"
 		             title="&status4evar.progress.widget.title;"
 		             removable="true">
 			<progressmeter id="status4evar-progress-bar" class="progressmeter-statusbar"
 			               mode="normal" value="0" collapsed="true" min="0" max="100" />
 		</toolbaritem>
+
 		<toolbarbutton id="status4evar-options-button"
 		               title="&status4evar.options.widget.title;"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
@@ -93,7 +96,5 @@
 	<textbox id="urlbar" pmpack="end">
 		<progressmeter id="urlbar-progress-alt"  mode="normal" value="0" collapsed="true" />
 	</textbox>
-
-	<statusbar id="status-bar" ordinal="1" />
 </overlay>
 
