@@ -232,22 +232,7 @@ splitter.status4evar-status-splitter:not(:hover)
 	opacity: 0;
 }
 
-#urlbar .urlbar-input-layer[overlinkstate="fade-in"]
-{
-	-moz-transition-property: color;
-	-moz-transition-duration: 150ms;
-	color: transparent;
-}
-
-/* < Firefox 19 */
-#urlbar .urlbar-input-layer[overlinkstate="fade-in"] html|input.urlbar-input:-moz-placeholder
-{
-	-moz-transition-property: color;
-	-moz-transition-duration: 150ms;
-	color: transparent;
-}
-
-/* >= Firefox 19 */
+#urlbar .urlbar-input-layer[overlinkstate="fade-in"],
 #urlbar .urlbar-input-layer[overlinkstate="fade-in"] html|input.urlbar-input::-moz-placeholder
 {
 	-moz-transition-property: color;
@@ -255,22 +240,7 @@ splitter.status4evar-status-splitter:not(:hover)
 	color: transparent;
 }
 
-#urlbar .urlbar-input-layer[overlinkstate="fade-out"]
-{
-	-moz-transition-property: color;
-	-moz-transition-duration: 150ms;
-	-moz-transition-timing-function: cubic-bezier(0.0, 1.0, 1.0, 1.0);
-}
-
-/* < Firefox 19 */
-#urlbar .urlbar-input-layer[overlinkstate="fade-out"] html|input.urlbar-input:-moz-placeholder
-{
-	-moz-transition-property: color;
-	-moz-transition-duration: 150ms;
-	-moz-transition-timing-function: cubic-bezier(0.0, 1.0, 1.0, 1.0);
-}
-
-/* >= Firefox 19 */
+#urlbar .urlbar-input-layer[overlinkstate="fade-out"],
 #urlbar .urlbar-input-layer[overlinkstate="fade-out"] html|input.urlbar-input::-moz-placeholder
 {
 	-moz-transition-property: color;
@@ -278,18 +248,7 @@ splitter.status4evar-status-splitter:not(:hover)
 	-moz-transition-timing-function: cubic-bezier(0.0, 1.0, 1.0, 1.0);
 }
 
-#urlbar .urlbar-input-layer[overlinkstate="showing"]
-{
-	color: transparent;
-}
-
-/* < Firefox 19 */
-#urlbar .urlbar-input-layer[overlinkstate="showing"] html|input.urlbar-input:-moz-placeholder
-{
-	color: transparent;
-}
-
-/* >= Firefox 19 */
+#urlbar .urlbar-input-layer[overlinkstate="showing"],
 #urlbar .urlbar-input-layer[overlinkstate="showing"] html|input.urlbar-input::-moz-placeholder
 {
 	color: transparent;
