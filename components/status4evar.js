@@ -45,7 +45,7 @@ const CU = Components.utils;
 CU.import("resource://gre/modules/XPCOMUtils.jsm");
 CU.import("resource://gre/modules/Services.jsm");
 
-const CURRENT_MIGRATION = 6;
+const CURRENT_MIGRATION = 7;
 
 function Status_4_Evar(){}
 
@@ -689,8 +689,36 @@ Status_4_Evar.prototype =
 				case 5:
 					this.migrateBoolPref("status.detectFullScreen", "advanced.status.detectFullScreen");
 					break;
+				case 6:
+					let oldDownloadAction = this.prefs.getIntPref("download.button.action");
+					let newDownloadAction = 1;
+					switch(oldDownloadAction)
+					{
+						case 1:
+							newDownloadAction = 4;
+							break;
+						case 2:
+							newDownloadAction = 1;
+							break;
+						case 3:
+							newDownloadAction = 2;
+							break;
+						case 4:
+							newDownloadAction = 3;
+							break;
+					}
+					this.prefs.setIntPref("download.button.action", newDownloadAction);
+					break;
 				case CURRENT_MIGRATION:
 					break;
+			}
+
+			if(Services.vc.compare("26.0", Services.appinfo.version) <= 0)
+			{
+				if(this.prefs.getIntPref("download.button.action") >= 3)
+				{
+					this.prefs.clearUserPref("download.button.action");
+				}
 			}
 		}
 

@@ -368,10 +368,10 @@
 			<menulist id="status4evar-download-button-action-menu" preference="status4evar-pref-download-button-action" sizetopopup="always">
 				<menupopup>
 					<menuitem value="0" label="&status4evar.option.nothing;" />
-					<menuitem value="1" label="&status4evar.option.firefoxdefault;" />
-					<menuitem value="2" label="&status4evar.option.download.panel;" />
-					<menuitem value="3" label="&status4evar.option.download.library;" />
-					<menuitem value="4" label="&status4evar.option.download.classic;" />
+					<menuitem value="1" label="&status4evar.option.download.panel;" />
+					<menuitem value="2" label="&status4evar.option.download.library;" />
+					<menuitem value="3" label="&status4evar.option.download.classic;" />
+					<menuitem value="4" label="&status4evar.option.firefoxdefault;" />
 				</menupopup>
 			</menulist>
 		</hbox>
