@@ -39,43 +39,152 @@
 
 const EXPORTED_SYMBOLS = ["S4EToolbars"];
 
+const CI = Components.interfaces;
 const CU = Components.utils;
 
 CU.import("resource://gre/modules/Services.jsm");
 
-const S4EToolbars =
+function S4EToolbars(window, toolbox, service, getters)
 {
-	get handler()
+	this._window = window;
+	this._toolbox = toolbox;
+	this._service = service;
+	this._getters = getters;
+
+	try
 	{
-		delete this.handler;
+		this._handler = new AustralisS4EToolbars(this._window, this._toolbox);
+		Services.console.logStringMessage("S4EToolbars using AustralisS4EToolbars backend");
+	}
+	catch(e)
+	{
+		this._handler = new ClassicS4EToolbars(this._window, this._toolbox);
+		Services.console.logStringMessage("S4EToolbars using ClassicS4EToolbars backend");
+	}
+}
 
-		try
-		{
-			this.handler = new AustralisS4EToolbars();
-			Services.console.logStringMessage("S4EToolbars using AustralisS4EToolbars backend");
-		}
-		catch(e)
-		{
-			this.handler = new ClassicS4EToolbars();
-			Services.console.logStringMessage("S4EToolbars using ClassicS4EToolbars backend");
-		}
+S4EToolbars.prototype =
+{
+	_window:  null,
+	_toolbox: null,
+	_service: null,
+	_getters: null,
 
-		return this.handler;
+	_handler: null,
+
+	setup: function()
+	{
+		this.updateSplitters(false);
+		this.updateWindowGripper(false);
+		this._handler.setup(this._service.firstRun);
 	},
 
-	setup: function(window, gNavToolbox, service)
+	destroy: function()
 	{
-		this.handler.setup(window, gNavToolbox, service);
+		this._handler.destroy();
+
+		["_window", "_toolbox",  "_service", "_getters", "_handler"].forEach(function(prop)
+		{
+			delete this[prop];
+		}, this);
+	},
+
+	updateSplitters: function(action)
+	{
+		let document = this._window.document;
+
+		let splitter_before = document.getElementById("status4evar-status-splitter-before");
+		if(splitter_before)
+		{
+			splitter_before.parentNode.removeChild(splitter_before);
+		}
+
+		let splitter_after = document.getElementById("status4evar-status-splitter-after");
+		if(splitter_after)
+		{
+			splitter_after.parentNode.removeChild(splitter_after);
+		}
+
+		let status = this._getters.statusWidget;
+		if(!action || !status)
+		{
+			return;
+		}
+
+		let urlbar = document.getElementById("urlbar-container");
+		let stop = document.getElementById("stop-button");
+		let fullscreenflex = document.getElementById("fullscreenflex");
+
+		let nextSibling = status.nextSibling;
+		let previousSibling = status.previousSibling;
+
+		function getSplitter(splitter, suffix)
+		{
+			if(!splitter)
+			{
+				splitter = document.createElement("splitter");
+				splitter.id = "status4evar-status-splitter-" + suffix;
+				splitter.setAttribute("resizebefore", "flex");
+				splitter.setAttribute("resizeafter", "flex");
+				splitter.className = "chromeclass-toolbar-additional status4evar-status-splitter";
+			}
+			return splitter;
+		}
+
+		if((previousSibling && previousSibling.flex > 0)
+		|| (urlbar && stop && urlbar.getAttribute("combined") && stop == previousSibling))
+		{
+			status.parentNode.insertBefore(getSplitter(splitter_before, "before"), status);
+		}
+
+		if(nextSibling && nextSibling.flex > 0 && nextSibling != fullscreenflex)
+		{
+			status.parentNode.insertBefore(getSplitter(splitter_after, "after"), nextSibling);
+		}
+	},
+
+	updateWindowGripper: function(action)
+	{
+		let document = this._window.document;
+
+		let gripper = document.getElementById("status4evar-window-gripper");
+		let toolbar = this._getters.statusBar || this._getters.addonbar;
+
+		if(!action || !toolbar || !this._service.addonbarWindowGripper
+		|| this._window.windowState != CI.nsIDOMChromeWindow.STATE_NORMAL || toolbar.toolbox.customizing)
+		{
+			if(gripper)
+			{
+				gripper.parentNode.removeChild(gripper);
+			}
+			return;
+		}
+
+		if(!gripper)
+		{
+			gripper = document.createElement("resizer");
+			gripper.id = "status4evar-window-gripper";
+			gripper.dir = "bottomend";
+		}
+
+		toolbar.appendChild(gripper);
 	}
 };
 
-function ClassicS4EToolbars() {}
+function ClassicS4EToolbars(window, toolbox)
+{
+	this._window = window;
+	this._toolbox = toolbox;
+}
 
 ClassicS4EToolbars.prototype =
 {
-	setup: function(window, gNavToolbox, service)
+	_window:  null,
+	_toolbox: null,
+
+	setup: function(firstRun)
 	{
-		let document = window.document;
+		let document = this._window.document;
 		let status_bar = document.getElementById("status-bar");
 		if(status_bar)
 		{
@@ -104,7 +213,7 @@ ClassicS4EToolbars.prototype =
 			addon_bar.setAttribute("defaultset", defaultSet);
 
 			// Update the currentSet
-			if(service.firstRun)
+			if(firstRun)
 			{
 				let isCustomizableToolbar = function(aElt)
 				{
@@ -112,8 +221,8 @@ ClassicS4EToolbars.prototype =
 				}
 
 				let isCustomizedAlready = false;
-				let toolbars = Array.filter(gNavToolbox.childNodes, isCustomizableToolbar).concat(
-					       Array.filter(gNavToolbox.externalToolbars, isCustomizableToolbar));
+				let toolbars = Array.filter(this._toolbox.childNodes, isCustomizableToolbar).concat(
+					       Array.filter(this._toolbox.externalToolbars, isCustomizableToolbar));
 				toolbars.forEach(function(toolbar)
 				{
 					if(toolbar.currentSet.indexOf("status4evar") > -1)
@@ -136,22 +245,47 @@ ClassicS4EToolbars.prototype =
 					addon_bar.currentSet = currentSet;
 					addon_bar.setAttribute("currentset", currentSet);
 					document.persist(addon_bar.id, "currentset");
-					window.setToolbarVisibility(addon_bar, true);
+					this._window.setToolbarVisibility(addon_bar, true);
 				}
 			}
 		}
+	},
+
+	destroy: function()
+	{
+		["_window", "_toolbox"].forEach(function(prop)
+		{
+			delete this[prop];
+		}, this);
 	}
 };
 
-function AustralisS4EToolbars()
+function AustralisS4EToolbars(window, toolbox)
 {
+	this._window = window;
+	this._toolbox = toolbox;
+
 	this._api = CU.import("resource:///modules/CustomizableUI.jsm", {}).CustomizableUI;
 }
 
 AustralisS4EToolbars.prototype =
 {
+	_window:  null,
+	_toolbox: null,
+
 	_api: null,
 
-	setup: function(window, gNavToolbox, service) {}
+	setup: function(firstRun)
+	{
+		
+	},
+
+	destroy: function()
+	{
+		["_window", "_toolbox",  "_api"].forEach(function(prop)
+		{
+			delete this[prop];
+		}, this);
+	}
 };
 

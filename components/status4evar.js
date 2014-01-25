@@ -147,7 +147,7 @@ Status_4_Evar.prototype =
 			},
 			updateWindow: function(win)
 			{
-				win.caligon.status4evar.updateWindowGripper(true);
+				win.caligon.status4evar.toolbars.updateWindowGripper(true);
 			}
 		},
 

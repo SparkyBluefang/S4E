@@ -806,4 +806,5 @@ JSTransferListener.prototype =
 	{
 		delete this._downloads[aDownload];
 	}
-}
+};
+

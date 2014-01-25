@@ -44,7 +44,8 @@ const CU = Components.utils;
 CU.import("resource://gre/modules/Services.jsm");
 CU.import("resource://gre/modules/XPCOMUtils.jsm");
 
-function S4EStatusService(window, service, getters) {
+function S4EStatusService(window, service, getters)
+{
 	this._window = window;
 	this._service = service;
 	this._getters = getters;

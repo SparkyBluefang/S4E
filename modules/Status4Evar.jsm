@@ -54,14 +54,13 @@ CU.import("resource://status4evar/Progress.jsm");
 CU.import("resource://status4evar/Downloads.jsm");
 CU.import("resource://status4evar/Toolbars.jsm");
 
-function Status4Evar(window, gBrowser, gNavToolbox)
+function Status4Evar(window, gBrowser, toolbox)
 {
 	this._window = window;
-	this._gNavToolbox = gNavToolbox;
-
-	S4EToolbars.setup(this._window, this._gNavToolbox, s4e_service);
+	this._toolbox = toolbox;
 
 	this.getters = new S4EWindowGetters(this._window);
+	this.toolbars = new S4EToolbars(this._window, this._toolbox, s4e_service, this.getters);
 	this.statusService = new S4EStatusService(this._window, s4e_service, this.getters);
 	this.progressMeter = new S4EProgressService(gBrowser, s4e_service, this.getters, this.statusService);
 	this.downloadStatus = new S4EDownloadService(this._window, s4e_service, this.getters);
@@ -71,21 +70,22 @@ function Status4Evar(window, gBrowser, gNavToolbox)
 	this.__bound_updateWindow = this.updateWindow.bind(this);
 	this.__bound_destroy = this.destroy.bind(this)
 
-	this._gNavToolbox.addEventListener("beforecustomization", this.__bound_beforeCustomization, false);
-	this._gNavToolbox.addEventListener("aftercustomization", this.__bound_updateWindow, false);
+	this._toolbox.addEventListener("beforecustomization", this.__bound_beforeCustomization, false);
+	this._toolbox.addEventListener("aftercustomization", this.__bound_updateWindow, false);
 	this._window.addEventListener("unload", this.__bound_destroy, false);
 }
 
 Status4Evar.prototype =
 {
-	_window:         null,
-	_gNavToolbox:    null,
+	_window:  null,
+	_toolbox: null,
 
 	__bound_beforeCustomization: null,
 	__bound_updateWindow:        null,
 	__bound_destroy:             null,
 
 	getters:         null,
+	toolbars:        null,
 	statusService:   null,
 	progressMeter:   null,
 	downloadStatus:  null,
@@ -93,6 +93,7 @@ Status4Evar.prototype =
 
 	setup: function()
 	{
+		this.toolbars.setup();
 		this.updateWindow();
 
 		// OMFG HAX! If a page is already loading, fake a network start event
@@ -106,107 +107,27 @@ Status4Evar.prototype =
 	destroy: function()
 	{
 		this._window.removeEventListener("unload", this.__bound_destroy, false);
-		this._gNavToolbox.removeEventListener("aftercustomization", this.__bound_updateWindow, false);
-		this._gNavToolbox.removeEventListener("beforecustomization", this.__bound_beforeCustomization, false);
+		this._toolbox.removeEventListener("aftercustomization", this.__bound_updateWindow, false);
+		this._toolbox.removeEventListener("beforecustomization", this.__bound_beforeCustomization, false);
 
 		this.getters.destroy();
 		this.statusService.destroy();
 		this.downloadStatus.destroy();
 		this.progressMeter.destroy();
+		this.toolbars.destroy();
 		this.sizeModeService.destroy();
 
-		["_window", "_gNavToolbox", "getters", "statusService", "downloadStatus", "progressMeter", "sizeModeService",
-		"__bound_beforeCustomization", "__bound_destroy", "__bound_updateWindow"].forEach(function(prop)
+		["_window", "_toolbox", "getters", "statusService", "downloadStatus", "progressMeter", "toolbars",
+		"sizeModeService", "__bound_beforeCustomization", "__bound_destroy", "__bound_updateWindow"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);
 	},
 
-	updateSplitters: function(action)
-	{
-		let document = this._window.document;
-
-		let splitter_before = document.getElementById("status4evar-status-splitter-before");
-		if(splitter_before)
-		{
-			splitter_before.parentNode.removeChild(splitter_before);
-		}
-
-		let splitter_after = document.getElementById("status4evar-status-splitter-after");
-		if(splitter_after)
-		{
-			splitter_after.parentNode.removeChild(splitter_after);
-		}
-
-		let status = this.getters.statusWidget;
-		if(!action || !status)
-		{
-			return;
-		}
-
-		let urlbar = document.getElementById("urlbar-container");
-		let stop = document.getElementById("stop-button");
-		let fullscreenflex = document.getElementById("fullscreenflex");
-
-		let nextSibling = status.nextSibling;
-		let previousSibling = status.previousSibling;
-
-		function getSplitter(splitter, suffix)
-		{
-			if(!splitter)
-			{
-				splitter = document.createElement("splitter");
-				splitter.id = "status4evar-status-splitter-" + suffix;
-				splitter.setAttribute("resizebefore", "flex");
-				splitter.setAttribute("resizeafter", "flex");
-				splitter.className = "chromeclass-toolbar-additional status4evar-status-splitter";
-			}
-			return splitter;
-		}
-
-		if((previousSibling && previousSibling.flex > 0)
-		|| (urlbar && stop && urlbar.getAttribute("combined") && stop == previousSibling))
-		{
-			status.parentNode.insertBefore(getSplitter(splitter_before, "before"), status);
-		}
-
-		if(nextSibling && nextSibling.flex > 0 && nextSibling != fullscreenflex)
-		{
-			status.parentNode.insertBefore(getSplitter(splitter_after, "after"), nextSibling);
-		}
-	},
-
-	updateWindowGripper: function(action)
-	{
-		let document = this._window.document;
-
-		let gripper = document.getElementById("status4evar-window-gripper");
-		let addon_bar = this.getters.statusBar || this.getters.addonbar;
-
-		if(!action || !addon_bar || !s4e_service.addonbarWindowGripper
-		|| this._window.windowState != CI.nsIDOMChromeWindow.STATE_NORMAL || addon_bar.toolbox.customizing)
-		{
-			if(gripper)
-			{
-				gripper.parentNode.removeChild(gripper);
-			}
-			return;
-		}
-
-		if(!gripper)
-		{
-			gripper = document.createElement("resizer");
-			gripper.id = "status4evar-window-gripper";
-			gripper.dir = "bottomend";
-		}
-
-		addon_bar.appendChild(gripper);
-	},
-
 	beforeCustomization: function()
 	{
-		this.updateSplitters(false);
-		this.updateWindowGripper(false);
+		this.toolbars.updateSplitters(false);
+		this.toolbars.updateWindowGripper(false);
 
 		this.statusService.setNoUpdate(true);
 		let status_label = this.getters.statusWidgetLabel;
@@ -226,7 +147,7 @@ Status4Evar.prototype =
 		this.statusService.buildBinding();
 		this.downloadStatus.init();
 		this.downloadStatus.customizing(false);
-		this.updateSplitters(true);
+		this.toolbars.updateSplitters(true);
 
 		s4e_service.updateWindow(this._window);
 		// This also handles the following:
@@ -398,7 +319,7 @@ SizeModeService.prototype =
 		if(this._window.windowState != this.lastwindowState)
 		{
 			this.lastwindowState = this._window.windowState;
-			this._s4e.updateWindowGripper(true);
+			this._s4e.toolbars.updateWindowGripper(true);
 		}
 	},
 
