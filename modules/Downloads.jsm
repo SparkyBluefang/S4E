@@ -57,32 +57,12 @@ function S4EDownloadService(window, service, getters)
 	this._service = service;
 	this._getters = getters;
 
-	let supportsJSTransfer = false;
-	try
+	if(Services.vc.compare("26.0", Services.appinfo.version) <= 0)
 	{
-		supportsJSTransfer = (Services.vc.compare("25.0", Services.appinfo.version) <= 0);
-	} catch(e) {}
-
-	let tryJSTransfer = true;
-	try
-	{
-		tryJSTransfer = Services.prefs.getBoolPref("browser.download.useJSTransfer");
-	} catch(e) {}
-
-	if(supportsJSTransfer && tryJSTransfer)
-	{
-		try
-		{
-			this._handler = new JSTransferHandler(this);
-			Services.console.logStringMessage("S4EDownloadService using JSTransferHandler backend");
-		}
-		catch(e)
-		{
-			CU.reportError(e);
-		}
+		this._handler = new JSTransferHandler(this);
+		Services.console.logStringMessage("S4EDownloadService using JSTransferHandler backend");
 	}
-
-	if(this._handler == null)
+	else
 	{
 		this._handler = new DownloadManagerHandler(this);
 		Services.console.logStringMessage("S4EDownloadService using DownloadManagerHandler backend");
