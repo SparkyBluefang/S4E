@@ -1,4 +1,6 @@
 Version next
+
+Version 2014.01.25.23b
 * Initial Australis support.
 * Drop support for Firefox 23.0 and older.
 * Classic download manager is not available in Firefox 26.0 and newer.
