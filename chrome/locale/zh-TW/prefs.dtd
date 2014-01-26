@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "空白">
 <!ENTITY status4evar.option.round "圓角">
 <!ENTITY status4evar.option.firefoxdefault "Firefox 預設動作">
-<!ENTITY status4evar.option.download.panel "彈出下載面板">
 <!ENTITY status4evar.option.download.library "打開收藏庫">
-<!ENTITY status4evar.option.download.classic "打開傳統下載視窗">
 <!ENTITY status4evar.unit.milliseconds "毫秒">
 <!ENTITY status4evar.unit.seconds "秒後">
 <!ENTITY status4evar.unit.px "px">

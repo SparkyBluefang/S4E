@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "Mezera">
 <!ENTITY status4evar.option.round "Kulaté">
 <!ENTITY status4evar.option.firefoxdefault "Firefox default">
-<!ENTITY status4evar.option.download.panel "Panel">
 <!ENTITY status4evar.option.download.library "Library">
-<!ENTITY status4evar.option.download.classic "Classic">
 <!ENTITY status4evar.unit.milliseconds "milliseconds">
 <!ENTITY status4evar.unit.seconds "vteřinách">
 <!ENTITY status4evar.unit.px "px">

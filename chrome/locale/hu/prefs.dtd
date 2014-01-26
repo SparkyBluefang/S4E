@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "Hely">
 <!ENTITY status4evar.option.round "Kerekítés">
 <!ENTITY status4evar.option.firefoxdefault "Firefox default">
-<!ENTITY status4evar.option.download.panel "Panel">
 <!ENTITY status4evar.option.download.library "Library">
-<!ENTITY status4evar.option.download.classic "Classic">
 <!ENTITY status4evar.unit.milliseconds "milliseconds">
 <!ENTITY status4evar.unit.seconds "másodperc múlva">
 <!ENTITY status4evar.unit.px "px">

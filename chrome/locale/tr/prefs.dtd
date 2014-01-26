@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "Boşluk">
 <!ENTITY status4evar.option.round "Daire">
 <!ENTITY status4evar.option.firefoxdefault "Firefox varsayılan">
-<!ENTITY status4evar.option.download.panel "Panel">
 <!ENTITY status4evar.option.download.library "Kütüphane">
-<!ENTITY status4evar.option.download.classic "Klasik">
 <!ENTITY status4evar.unit.milliseconds "milisaniye">
 <!ENTITY status4evar.unit.seconds "saniyeler">
 <!ENTITY status4evar.unit.px "px">

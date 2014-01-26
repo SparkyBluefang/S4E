@@ -35,8 +35,8 @@
  * 
  * ***** END LICENSE BLOCK ***** */
 
-#status4evar-download-button-action-menu menuitem[value="3"],
-#status4evar-download-button-action-menu menuitem[value="4"]
+#status4evar-advanced-download
 {
 	display: none;
 }
+

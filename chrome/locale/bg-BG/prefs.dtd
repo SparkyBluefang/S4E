@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "с интервали">
 <!ENTITY status4evar.option.round "с мащабиране">
 <!ENTITY status4evar.option.firefoxdefault "По подразбиране">
-<!ENTITY status4evar.option.download.panel "Панел">
 <!ENTITY status4evar.option.download.library "Библиотека">
-<!ENTITY status4evar.option.download.classic "Класически">
 <!ENTITY status4evar.unit.milliseconds "милисекунди">
 <!ENTITY status4evar.unit.seconds "секунди">
 <!ENTITY status4evar.unit.px "px">

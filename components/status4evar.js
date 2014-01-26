@@ -694,9 +694,6 @@ Status_4_Evar.prototype =
 					let newDownloadAction = 1;
 					switch(oldDownloadAction)
 					{
-						case 1:
-							newDownloadAction = 4;
-							break;
 						case 2:
 							newDownloadAction = 1;
 							break;
@@ -704,21 +701,18 @@ Status_4_Evar.prototype =
 							newDownloadAction = 2;
 							break;
 						case 4:
-							newDownloadAction = 3;
+							newDownloadAction = 1;
 							break;
 					}
 					this.prefs.setIntPref("download.button.action", newDownloadAction);
+
+					if(oldDownloadAction == 4 && Services.vc.compare("26.0", Services.appinfo.version) > 0)
+					{
+						this.prefs.setBoolPref("browser.download.useToolkitUI", true);
+					}
 					break;
 				case CURRENT_MIGRATION:
 					break;
-			}
-
-			if(Services.vc.compare("26.0", Services.appinfo.version) <= 0)
-			{
-				if(this.prefs.getIntPref("download.button.action") >= 3)
-				{
-					this.prefs.clearUserPref("download.button.action");
-				}
 			}
 		}
 

@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "verteilt">
 <!ENTITY status4evar.option.round "gerundet">
 <!ENTITY status4evar.option.firefoxdefault "Firefox Standard">
-<!ENTITY status4evar.option.download.panel "Panel">
 <!ENTITY status4evar.option.download.library "Bibliothek">
-<!ENTITY status4evar.option.download.classic "Klassisch">
 <!ENTITY status4evar.unit.milliseconds "Millisekunden">
 <!ENTITY status4evar.unit.seconds "Sekunden">
 <!ENTITY status4evar.unit.px "Pixel">

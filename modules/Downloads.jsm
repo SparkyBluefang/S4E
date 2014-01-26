@@ -175,7 +175,6 @@ S4EDownloadService.prototype =
 		switch(this._service.downloadButtonAction)
 		{
 			case 1: // Default
-			case 2: // Show Panel
 				this.attachBinding();
 				break;
 			default:
@@ -433,16 +432,7 @@ S4EDownloadService.prototype =
 
 		switch(this._service.downloadButtonAction)
 		{
-			case 1: // Show Panel
-				this._window.DownloadsPanel.showPanel();
-				break;
-			case 2: // Show Library
-				this._window.PlacesCommandHook.showPlacesOrganizer("Downloads");
-				break;
-			case 3: // Show Classic
-				DownloadManagerUIClassic.show(this._window);
-				break;
-			case 4: // Firefox Default
+			case 1: // Firefox Default
 				if(this._window.DownloadsCommon.useToolkitUI)
 				{
 					DownloadManagerUIClassic.show(this._window);
@@ -451,6 +441,9 @@ S4EDownloadService.prototype =
 				{
 					this._window.DownloadsPanel.showPanel();
 				}
+				break;
+			case 2: // Show Library
+				this._window.PlacesCommandHook.showPlacesOrganizer("Downloads");
 				break;
 			default: // Nothing
 				break;
@@ -468,8 +461,15 @@ S4EDownloadService.prototype =
 	{
 		switch(this._service.downloadButtonAction)
 		{
-			case 1: // Show Panel
-				return this._window.DownloadsPanel.isPanelShowing;
+			case 1: // Firefox Default
+				if(this._window.DownloadsCommon.useToolkitUI)
+				{
+					return DownloadManagerUIClassic.visible;
+				}
+				else
+				{
+					return this._window.DownloadsPanel.isPanelShowing;
+				}
 			case 2: // Show Library
 				var organizer = Services.wm.getMostRecentWindow("Places:Organizer");
 				if(organizer)
@@ -479,17 +479,6 @@ S4EDownloadService.prototype =
 					return selectedNode && selectedNode.itemId === downloadsItemId;
 				}
 				return false;
-			case 3: // Show Classic
-				return DownloadManagerUIClassic.visible;
-			case 4: // Firefox Default
-				if(this._window.DownloadsCommon.useToolkitUI)
-				{
-					return DownloadManagerUIClassic.visible;
-				}
-				else
-				{
-					return this._window.DownloadsPanel.isPanelShowing;
-				}
 			default: // Nothing
 				return false;
 		}

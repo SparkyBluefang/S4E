@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "Διάστημα">
 <!ENTITY status4evar.option.round "Προσαρμογή">
 <!ENTITY status4evar.option.firefoxdefault "Προεπιλεγμένη του Firefox">
-<!ENTITY status4evar.option.download.panel "Πίνακας λήψεων">
 <!ENTITY status4evar.option.download.library "Βιβλιοθήκη">
-<!ENTITY status4evar.option.download.classic "Κλασσικό παράθυρο λήψεων">
 <!ENTITY status4evar.unit.milliseconds "μιλιδευτερόλεπτα">
 <!ENTITY status4evar.unit.seconds "δευτερόλεπτα">
 <!ENTITY status4evar.unit.px "εικονοψηφίδες">

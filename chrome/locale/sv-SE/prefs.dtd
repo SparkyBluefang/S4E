@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "Fyll ut">
 <!ENTITY status4evar.option.round "Sida vid sida">
 <!ENTITY status4evar.option.firefoxdefault "Firefox standardval">
-<!ENTITY status4evar.option.download.panel "Panel">
 <!ENTITY status4evar.option.download.library "Bibliotek">
-<!ENTITY status4evar.option.download.classic "Klassisk">
 <!ENTITY status4evar.unit.milliseconds "ms">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">

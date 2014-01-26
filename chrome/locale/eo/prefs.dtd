@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "Spaco">
 <!ENTITY status4evar.option.round "Rondigi">
 <!ENTITY status4evar.option.firefoxdefault "Firefox defaŭlta">
-<!ENTITY status4evar.option.download.panel "Panelo">
 <!ENTITY status4evar.option.download.library "Biblioteko">
-<!ENTITY status4evar.option.download.classic "Klasika">
 <!ENTITY status4evar.unit.milliseconds "milisekundoj">
 <!ENTITY status4evar.unit.seconds "sekundoj">
 <!ENTITY status4evar.unit.px "rastrumeroj">

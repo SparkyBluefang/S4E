@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "Rum">
 <!ENTITY status4evar.option.round "Wótrownaś">
 <!ENTITY status4evar.option.firefoxdefault "Firefox standard">
-<!ENTITY status4evar.option.download.panel "Wobcerk">
 <!ENTITY status4evar.option.download.library "Biblioteka">
-<!ENTITY status4evar.option.download.classic "Klasiski">
 <!ENTITY status4evar.unit.milliseconds "milisekundach">
 <!ENTITY status4evar.unit.seconds "sekundach">
 <!ENTITY status4evar.unit.px "px">

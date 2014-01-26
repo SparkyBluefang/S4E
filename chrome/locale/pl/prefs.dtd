@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "Odstęp">
 <!ENTITY status4evar.option.round "Zaokrąglenie">
 <!ENTITY status4evar.option.firefoxdefault "domyślne Firefoksa">
-<!ENTITY status4evar.option.download.panel "panel">
 <!ENTITY status4evar.option.download.library "biblioteka">
-<!ENTITY status4evar.option.download.classic "klasyczne">
 <!ENTITY status4evar.unit.milliseconds "ms">
 <!ENTITY status4evar.unit.seconds "s">
 <!ENTITY status4evar.unit.px "px">

@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "Espaço">
 <!ENTITY status4evar.option.round "Redondo">
 <!ENTITY status4evar.option.firefoxdefault "Padrão do Firefox">
-<!ENTITY status4evar.option.download.panel "Painel">
 <!ENTITY status4evar.option.download.library "Biblioteca">
-<!ENTITY status4evar.option.download.classic "Clássico">
 <!ENTITY status4evar.unit.milliseconds "milisegundos">
 <!ENTITY status4evar.unit.seconds "segundos">
 <!ENTITY status4evar.unit.px "px">

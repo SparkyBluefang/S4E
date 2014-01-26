@@ -35,9 +35,7 @@
 <!ENTITY status4evar.option.space "Ruimte">
 <!ENTITY status4evar.option.round "Rond">
 <!ENTITY status4evar.option.firefoxdefault "Standaard van Firefox">
-<!ENTITY status4evar.option.download.panel "Paneel">
 <!ENTITY status4evar.option.download.library "Bibliotheek">
-<!ENTITY status4evar.option.download.classic "Klassiek">
 <!ENTITY status4evar.unit.milliseconds "milliseconden">
 <!ENTITY status4evar.unit.seconds "seconden">
 <!ENTITY status4evar.unit.px "px">
