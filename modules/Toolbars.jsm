@@ -160,12 +160,7 @@ S4EToolbars.prototype =
 			return;
 		}
 
-		if(!gripper)
-		{
-			gripper = document.createElement("resizer");
-			gripper.id = "status4evar-window-gripper";
-			gripper.dir = "bottomend";
-		}
+		gripper = this._handler.buildGripper(toolbar, gripper, "status4evar-window-gripper");
 
 		toolbar.appendChild(gripper);
 	}
@@ -257,6 +252,20 @@ ClassicS4EToolbars.prototype =
 		{
 			delete this[prop];
 		}, this);
+	},
+
+	buildGripper: function(toolbar, gripper, id)
+	{
+		if(!gripper)
+		{
+			let document = this._window.document;
+
+			gripper = document.createElement("resizer");
+			gripper.id = id;
+			gripper.dir = "bottomend";
+		}
+
+		return gripper;
 	}
 };
 
@@ -286,6 +295,36 @@ AustralisS4EToolbars.prototype =
 		{
 			delete this[prop];
 		}, this);
+	},
+
+	buildGripper: function(toolbar, container, id)
+	{
+		if(!container)
+		{
+			let document = this._window.document;
+
+			let gripper = document.createElement("resizer");
+			gripper.dir = "bottomend";
+
+			container = document.createElement("hbox");
+			container.id = id;
+			container.pack = "end";
+			container.ordinal = 1000;
+			container.appendChild(gripper);
+		}
+
+		let needFlex = 1;
+		for(let node of toolbar.childNodes)
+		{
+			if(node.hasAttribute("flex") || node.flex)
+			{
+				needFlex = 0;
+				break;
+			}
+		}
+		container.flex = needFlex;
+
+		return container;
 	}
 };
 
