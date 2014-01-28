@@ -222,7 +222,7 @@ S4EDownloadService.prototype =
 		let maxTime = -Infinity;
 
 		let dls = ((this.isPrivateWindow) ? this._handler.activePrivateEntries() : this._handler.activeEntries());
-		for(let dl in dls)
+		for(let dl of dls)
 		{
 			if(dl.state == CI.nsIDownloadManager.DOWNLOAD_DOWNLOADING)
 			{
@@ -628,12 +628,12 @@ JSTransferHandler.prototype =
 
 	activeEntries: function()
 	{
-		return this._activePublic.generator();
+		return this._activePublic.downloads();
 	},
 
 	activePrivateEntries: function()
 	{
-		return this._activePrivate.generator();
+		return this._activePrivate.downloads();
 	}
 };
 
@@ -641,7 +641,7 @@ function JSTransferListener(downloadService, listPromise, isPrivate)
 {
 	this._downloadService = downloadService;
 	this._isPrivate = isPrivate;
-	this._downloads = {};
+	this._downloads = new Map();
 
 	listPromise.then(this.initList.bind(this)).then(null, CU.reportError);
 }
@@ -650,7 +650,7 @@ JSTransferListener.prototype =
 {
 	_downloadService: null,
 	_list:            null,
-	_downloads:       {},
+	_downloads:       null,
 	_isPrivate:       false,
 	_wantsStart:      false,
 
@@ -674,6 +674,8 @@ JSTransferListener.prototype =
 
 	destroy: function()
 	{
+		this._downloads.clear();
+
 		["_downloadService", "_list", "_downloads"].forEach(function(prop)
 		{
 			delete this[prop];
@@ -702,12 +704,9 @@ JSTransferListener.prototype =
 		this._list.removeView(this);
 	},
 
-	generator: function()
+	downloads: function()
 	{
-		for(let dl in this._downloads)
-		{
-			yield this._downloads[dl];
-		}
+		return this._downloads.values();
 	},
 
 	convertToState: function(dl)
@@ -741,11 +740,11 @@ JSTransferListener.prototype =
 
 	onDownloadAdded: function(aDownload)
 	{
-		let dl = this._downloads[aDownload];
+		let dl = this._downloads.get(aDownload);
 		if(!dl)
 		{
 			dl = {};
-			this._downloads[aDownload] = dl;
+			this._downloads.set(aDownload, dl);
 		}
 
 		dl.state = this.convertToState(aDownload);
@@ -773,7 +772,7 @@ JSTransferListener.prototype =
 
 	onDownloadRemoved: function(aDownload)
 	{
-		delete this._downloads[aDownload];
+		this._downloads.delete(aDownload);
 	}
 };
 
