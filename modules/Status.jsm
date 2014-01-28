@@ -321,9 +321,15 @@ S4EStatusService.prototype =
 
 	setStatusField: function(location, text, allowTooltip)
 	{
-		let label = null;
+		if(!location)
+		{
+			return;
+		}
 
-		if(this._window.fullScreen && this._service.advancedStatusDetectFullScreen)
+		let label = null;
+		let isFullScreen = this._window.fullScreen;
+
+		if(isFullScreen && this._service.advancedStatusDetectFullScreen)
 		{
 			switch(location)
 			{
@@ -341,8 +347,6 @@ S4EStatusService.prototype =
 
 		switch(location)
 		{
-			case 0: // Disable
-				break;
 			case 1: // Toolbar
 				label = this._getters.statusWidgetLabel;
 				break;
@@ -356,6 +360,11 @@ S4EStatusService.prototype =
 				break;
 			case 3: // Popup
 			default:
+				let fsElement = ((isFullScreen) ? this._window.content.document.mozFullScreenElement : null);
+				if(fsElement && fsElement.nodeName == 'VIDEO' && this._service.advancedStatusDetectVideo)
+				{
+					return;
+				}
 				label = this._getters.statusOverlay;
 				break;
 		}

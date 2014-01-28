@@ -51,59 +51,60 @@ function Status_4_Evar(){}
 
 Status_4_Evar.prototype =
 {
-	classID:		Components.ID("{13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf}"),
-	QueryInterface:		XPCOMUtils.generateQI([
-					CI.nsISupportsWeakReference,
-					CI.nsIObserver,
-					CI.nsIStatus4Evar
-				]),
+	classID:        Components.ID("{13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf}"),
+	QueryInterface: XPCOMUtils.generateQI([
+	                     CI.nsISupportsWeakReference,
+	                     CI.nsIObserver,
+	                     CI.nsIStatus4Evar
+	                ]),
 
-	prefs:				null,
+	prefs:          null,
 
-	addonbarBorderStyle:		false,
-	addonbarCloseButton:		false,
-	addonbarWindowGripper:		true,
+	addonbarBorderStyle:            false,
+	addonbarCloseButton:            false,
+	addonbarWindowGripper:          true,
 
 	advancedStatusDetectFullScreen: true,
-	advancedUrlbarForceBinding:	false,
+	advancedStatusDetectVideo:      true,
+	advancedUrlbarForceBinding:     false,
 
-	downloadButtonAction:		1,
-	downloadColorActive:		null,
-	downloadColorPaused:		null,
-	downloadForce:			false,
-	downloadLabel:			0,
-	downloadLabelForce:		true,
-	downloadNotifyAnimate:		true,
-	downloadNotifyTimeout:		60000,
-	downloadProgress:		1,
-	downloadTooltip:		1,
+	downloadButtonAction:           1,
+	downloadColorActive:            null,
+	downloadColorPaused:            null,
+	downloadForce:                  false,
+	downloadLabel:                  0,
+	downloadLabelForce:             true,
+	downloadNotifyAnimate:          true,
+	downloadNotifyTimeout:          60000,
+	downloadProgress:               1,
+	downloadTooltip:                1,
 
-	firstRun:			true,
+	firstRun:                       true,
 
-	progressToolbarCSS:		null,
-	progressToolbarForce:		false,
-	progressToolbarStyle:		false,
+	progressToolbarCSS:             null,
+	progressToolbarForce:           false,
+	progressToolbarStyle:           false,
 
-	progressUrlbar:			1,
-	progressUrlbarCSS:		null,
-	progressUrlbarStyle:		true,
+	progressUrlbar:                 1,
+	progressUrlbarCSS:              null,
+	progressUrlbarStyle:            true,
 
-	status:				1,
-	statusDefault:			true,
-	statusNetwork:			true,
-	statusTimeout:			10000,
-	statusLinkOver:			1,
-	statusLinkOverDelayShow:	70,
-	statusLinkOverDelayHide:	150,
+	status:                         1,
+	statusDefault:                  true,
+	statusNetwork:                  true,
+	statusTimeout:                  10000,
+	statusLinkOver:                 1,
+	statusLinkOverDelayShow:        70,
+	statusLinkOverDelayHide:        150,
 
-	statusToolbarMaxLength:		0,
+	statusToolbarMaxLength:         0,
 
-	statusUrlbarAlign:		null,
-	statusUrlbarColor:		null,
-	statusUrlbarPosition:		33,
+	statusUrlbarAlign:              null,
+	statusUrlbarColor:              null,
+	statusUrlbarPosition:           33,
 
-	statusUrlbarInvertMirror:	false,
-	statusUrlbarMouseMirror:	true,
+	statusUrlbarInvertMirror:       false,
+	statusUrlbarMouseMirror:        true,
 
 	pref_registry:
 	{
@@ -156,6 +157,14 @@ Status_4_Evar.prototype =
 			update: function()
 			{
 				this.advancedStatusDetectFullScreen = this.prefs.getBoolPref("advanced.status.detectFullScreen");
+			}
+		},
+
+		"advanced.status.detectVideo":
+		{
+			update: function()
+			{
+				this.advancedStatusDetectVideo = this.prefs.getBoolPref("advanced.status.detectVideo");
 			}
 		},
 

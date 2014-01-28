@@ -41,6 +41,7 @@ pref("status4evar.addonbar.windowGripper", true);
 
 pref("status4evar.advanced.showWarning", true);
 pref("status4evar.advanced.status.detectFullScreen", true);
+pref("status4evar.advanced.status.detectVideo", true);
 pref("status4evar.advanced.urlbar.forceBinding", false);
 
 pref("status4evar.download.button.action", 1);
