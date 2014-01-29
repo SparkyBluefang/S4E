@@ -90,4 +90,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Försök att tvinga XBL-bindningen för adressfältet.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Aktivera detta endast om du har problem med adressfältet eller statustextvisningen. Funktionen kan skapa konflikter med andra tillägg som försöker att ange en XBL-bindning i adressfältet.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Upptäck helskärmsläge och visa länkar/status i enlighet med det.">
+<!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
 <!ENTITY toolkit.classic.download.window.label "Använd klassiskt filhämtningsfönster">

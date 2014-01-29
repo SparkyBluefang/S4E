@@ -90,4 +90,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Se încearcă forțarea conexiunii XBL cu bara de adrese">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Selectați această opțiune doar dacă aveţi probleme de afișare a progresului sau textului pe bara de adrese. Acest lucru poate bloca alte suplimente care încearcă să stabilească o conexiune XBL cu bara de adrese.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Se detectează modul ecran-complet și se afișează legăturile/starea corespunzătoare">
+<!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
 <!ENTITY toolkit.classic.download.window.label "Se folosește fereastra clasică de descărcare">

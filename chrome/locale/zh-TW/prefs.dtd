@@ -90,4 +90,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "嘗試強制位址列 XBL binding。">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "只有在位址列進度條或狀態文字顯示有誤時才勾選此設定。另外這也有可能與其他試圖對位址列設定 XBL binding 的套件產生衝突。">
 <!ENTITY status4evar.advanced.status.detectFullScreen "偵測全螢幕模式並調整連結/狀態的顯示。">
+<!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
 <!ENTITY toolkit.classic.download.window.label "使用傳統的下載視窗">

@@ -90,4 +90,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Tentar forçar a integração da Barra de Endereços XBL.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Selecione isso somente se tiver problemas de exibição com o progresso da Barra de Endereços ou com o texto de status. Isso tem grande possibilidade de impedir outras extensões de configurar uma integração do XBL com a Barra de Endereços.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Detectar modo tela cheia e mostrar links/status corretamente.">
+<!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
 <!ENTITY toolkit.classic.download.window.label "Usar a janela de downloads clássica">

@@ -90,4 +90,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Provo eldevigi la XBL-bindadon de la adresbreto.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Elektu tion nur, se vi havas problemojn kun  la plenumado de la adresbreto aŭ se la statoteksto ne estas korekte vidigata. Tio povas ĝeni aliajn etendaĵojn, kiuj provas agordi XBL-bindadon en la adresbreto.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Trovi tutekranan reĝimon a montri taŭge ligilon/staton.">
+<!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
 <!ENTITY toolkit.classic.download.window.label "Uzi klasikan elŝutfenestron">

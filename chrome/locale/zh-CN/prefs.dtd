@@ -90,4 +90,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "尝试强制为地址栏绑定XBL">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "请仅在地址栏进度条或者状态文字显示有误的时候选中此项。这样做可能会导致其它扩展为地址栏绑定的XBL失效。">
 <!ENTITY status4evar.advanced.status.detectFullScreen "检测全屏模式并正确显示链接/状态.">
+<!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
 <!ENTITY toolkit.classic.download.window.label "使用经典下载窗口">

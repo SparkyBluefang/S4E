@@ -90,4 +90,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "ניסיון לאלץ XBL binding על סרגל המיקום.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "בחרו בזה רק אם ישנן בעיות עם התקדמות סרגל המיקום או עם טקסט המצב שמוצג נכונה. ישנה אפשרות שזה יגרום לשבירת הרחבות אחרות אשר מנסות לקבוע XBL binding על סרגל המיקום.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "זיהוי מצב מסך מלא והצגת קישורים/מצב כראוי.">
+<!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
 <!ENTITY toolkit.classic.download.window.label "שימוש בחלון ההורדות הקלאסי">
