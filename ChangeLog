@@ -1,4 +1,6 @@
 Version next
+
+Version 2014.01.29.16b
 * Add advanced option to hide status popup on fullscreen HTML5 video.
 * Fix JS Download API integration.
 * Fix status/add-on bar item placement regression from Australis support.
