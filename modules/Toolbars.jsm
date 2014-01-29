@@ -180,11 +180,6 @@ ClassicS4EToolbars.prototype =
 	setup: function(firstRun)
 	{
 		let document = this._window.document;
-		let status_bar = document.getElementById("status-bar");
-		if(status_bar)
-		{
-			status_bar.setAttribute("ordinal", "1");
-		}
 
 		let addon_bar = document.getElementById("addon-bar");
 		if(addon_bar)
