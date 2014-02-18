@@ -42,6 +42,9 @@ S4EStatusService.prototype =
 	_jsStatus:               { val: "", type: "" },
 	_defaultStatus:          { val: "", type: "" },
 
+	_isFullScreen:           false,
+	_isFullScreenVideo:      false,
+
 	_statusText:             { val: "", type: "" },
 	_noUpdate:               false,
 	_statusChromeTimeoutID:  0,
@@ -232,6 +235,23 @@ S4EStatusService.prototype =
 		}
 	},
 
+	updateFullScreen: function()
+	{
+		this._isFullScreen = this._window.fullScreen;
+		this._isFullScreenVideo = false;
+		if(this._isFullScreen)
+		{
+			let fsEl = this._window.content.document.mozFullScreenElement;
+			if(fsEl && (fsEl.nodeName == "VIDEO" || fsEl.getElementsByTagName("VIDEO").length > 0))
+			{
+				this._isFullScreenVideo = true;
+			}
+		}
+
+		this.clearStatusField();
+		this.updateStatusField(true);
+	},
+
 	setTimer: function(type)
 	{
 		let typeArgs = type.split(" ", 3);
@@ -302,9 +322,8 @@ S4EStatusService.prototype =
 		}
 
 		let label = null;
-		let isFullScreen = this._window.fullScreen;
 
-		if(isFullScreen && this._service.advancedStatusDetectFullScreen)
+		if(this._isFullScreen && this._service.advancedStatusDetectFullScreen)
 		{
 			switch(location)
 			{
@@ -335,8 +354,7 @@ S4EStatusService.prototype =
 				break;
 			case 3: // Popup
 			default:
-				let fsElement = ((isFullScreen) ? this._window.content.document.mozFullScreenElement : null);
-				if(fsElement && fsElement.nodeName == 'VIDEO' && this._service.advancedStatusDetectVideo)
+				if(this._isFullScreenVideo && this._service.advancedStatusDetectVideo)
 				{
 					return;
 				}

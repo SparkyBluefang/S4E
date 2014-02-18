@@ -287,8 +287,7 @@ SizeModeService.prototype =
 		if(this._window.fullScreen != this.lastFullScreen)
 		{
 			this.lastFullScreen = this._window.fullScreen;
-			this._s4e.statusService.clearStatusField();
-			this._s4e.statusService.updateStatusField(true);
+			this._s4e.statusService.updateFullScreen();
 		}
 
 		if(this._window.windowState != this.lastwindowState)
