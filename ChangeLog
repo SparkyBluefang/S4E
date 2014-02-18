@@ -1,6 +1,8 @@
 Version next
 * Improve fullscreen HTML5 video detection (fix on YouTube).
 * Update license to MPL 2.0.
+* Update locales for new strings.
+* Updated translations for: sr
 
 Version 2014.01.29.16b
 * Add advanced option to hide status popup on fullscreen HTML5 video.

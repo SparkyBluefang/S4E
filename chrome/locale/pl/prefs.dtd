@@ -90,5 +90,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Próbuj ustawić wiązania XBL w pasku adresu">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Włącz tę funkcję tylko, gdy masz problemy z paskiem postępu w pasku adresu lub z prawidłowym wyświetlaniem tekstu statusu. Funkcja ta może powodować konflikty z innymi rozszerzeniami, które próbują w pasku adresu ustawić wiązania XBL.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Wykryj tryb pełnoekranowy i wyświetl odpowiednio odnośniki/status/">
-<!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
+<!ENTITY status4evar.advanced.status.detectVideo "Nie wyświetlaj okna statusu, gdy wideo HTML5 jest w trybie pełnoekranowym.">
 <!ENTITY toolkit.classic.download.window.label "Stosuj klasyczne okno pobierania">

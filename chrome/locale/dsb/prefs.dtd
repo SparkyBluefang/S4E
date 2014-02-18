@@ -90,5 +90,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Wopyt XBL-zwězanje adresowego póla wunuźiś.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Wuběŕśo to jano, jolic maśo problemy z póstupom adresowego póla abo jolic statusowy tekst njezwobraznja se korektnje. To mógło snaź druge rozšyrjenja kazyś, kótarež wopytuju XBL-zwězanje na adresowem pólu stajiś.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Modus połneje wobrazowki namakaś a wótkaze/status pśigódnje pokazaś.">
-<!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
+<!ENTITY status4evar.advanced.status.detectVideo "Statusowe wuskokujuce wokno we wideo HTML5 w modusu połneje wobrazowki schowaś.">
 <!ENTITY toolkit.classic.download.window.label "Klasiske ześěgnjeńske wokno wužywaś">

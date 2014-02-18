@@ -90,5 +90,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Durum Çuğuğu XBL bağlamayı zorla.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Eğer konum çubuğunun ilerlemesinde veya durum metninin doğru gösterilmesinde bir sorun varsa bunu seçin. Durum çubuğundaki XBL bağlayıcı ayarlanırken diğer eklentiler duraklatılacaktır.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Tam ekran modunu algıla ve bağlantıları/durumu uygun şekilde göster.">
-<!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
+<!ENTITY status4evar.advanced.status.detectVideo "Tam ekranlı HTML5 videoda açılır pencereyi gizle.">
 <!ENTITY toolkit.classic.download.window.label "Klasik indirme pencersini kullan">

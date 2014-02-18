@@ -90,5 +90,5 @@
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Пробвай принудително XBL привързване на адресната лента.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Изберете тази настройка само ако имате проблеми с лентата за напредък, или ако текстът за състоянието не се показва правилно. Това може да спре други разширения, които се опитват да установят XBL привързване на адресната лента.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Разпознаване на пълноекранен режим и преоразмеряване на връзките/състоянието.">
-<!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
+<!ENTITY status4evar.advanced.status.detectVideo "Скриване на изскачащите прозорци при HTML5 видео на цял екран.">
 <!ENTITY toolkit.classic.download.window.label "Класически прозорец за изтеглянията">
