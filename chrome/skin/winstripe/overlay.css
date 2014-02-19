@@ -26,11 +26,6 @@
  * Download status
  */
 
-#status4evar-download-anchor
-{
-	position: relative;
-}
-
 #status4evar-download-progress-bar
 {
 	height: 4px;

@@ -5,9 +5,18 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  * 
+ * Original code copyright (C) Mozilla Foundation. All Rights Reserved.
+ * Original code copyright (C) 2013 Gijs Kruitbosch <gijskruitbosch@gmail.com>. All Rights Reserved.
  * Copyright (C) 2010-2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****
+ * 
+ * Download listener code based on Mozilla Foundation code:
+ * https://hg.mozilla.org/mozilla-central/file/eec9a82ad740/browser/base/content/browser.js#l7297
+ * 
+ * Original download notification code by Gijs Kruitbosch.
+ * Adapted from the check-in patch:
+ * https://hg.mozilla.org/mozilla-central/rev/8a1d8044a4c8
 */
 
 "use strict";
@@ -347,15 +356,31 @@ S4EDownloadService.prototype =
 	{
 		if(this._dlNotifyTimer == 0 && this._service.downloadNotifyAnimate)
 		{
-			let download_button = this._getters.downloadButton;
-			if(download_button)
+			let download_button_anchor = this._getters.downloadButtonAnchor;
+			let download_notify_anchor = this._getters.downloadNotifyAnchor;
+			if(download_button_anchor)
 			{
-				download_button.setAttribute("notification", "finish");
-				this._dlNotifyTimer = this._window.setTimeout(function(self, button)
+				if(!download_notify_anchor.style.transform)
+				{
+					let bAnchorRect = download_button_anchor.getBoundingClientRect();
+					let nAnchorRect = download_notify_anchor.getBoundingClientRect();
+
+					let translateX = bAnchorRect.left - nAnchorRect.left;
+					translateX += .5 * (bAnchorRect.width  - nAnchorRect.width);
+
+					let translateY = bAnchorRect.top  - nAnchorRect.top;
+					translateY += .5 * (bAnchorRect.height - nAnchorRect.height);
+
+					download_notify_anchor.style.transform = "translate(" +  translateX + "px, " + translateY + "px)";
+				}
+
+				download_notify_anchor.setAttribute("notification", "finish");
+				this._dlNotifyTimer = this._window.setTimeout(function(self, anchor)
 				{
 					self._dlNotifyTimer = 0;
-					button.removeAttribute("notification");
-				}, 1000, this, download_button);
+					anchor.removeAttribute("notification");
+					anchor.style.transform = "";
+				}, 1000, this, download_notify_anchor);
 			}
 		}
 	},

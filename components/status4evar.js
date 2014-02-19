@@ -208,6 +208,9 @@ Status_4_Evar.prototype =
 				{
 					this.setBoolElementAttribute(download_button, "forcevisible", this.downloadForce);
 				}
+
+				let download_notify_anchor = win.caligon.status4evar.getters.downloadNotifyAnchor;
+				this.setBoolElementAttribute(download_notify_anchor, "forcevisible", this.downloadForce);
 			}
 		},
 

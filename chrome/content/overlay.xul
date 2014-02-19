@@ -31,6 +31,14 @@
 		<command id="S4E:Options" oncommand="caligon.status4evar.launchOptions(window);"/>
 	</commandset>
 
+	<popupset id="mainPopupSet">
+		<hbox id="status4evar-download-notification-container" mousethrough="always">
+			<vbox id="status4evar-download-notification-anchor">
+				<vbox id="status4evar-download-notification-icon" />
+			</vbox>
+		</hbox>
+	</popupset>
+
 	<toolbarpalette id="BrowserToolbarPalette">
 		<toolbaritem id="status4evar-status-widget"
 		             title="&status4evar.status.widget.title;"
@@ -48,7 +56,6 @@
 				<vbox pack="end">
 					<progressmeter id="status4evar-download-progress-bar" mode="normal" value="0" collapsed="true" min="0" max="100" />
 				</vbox>
-				<vbox id="status4evar-download-notification-icon" />
 			</stack>
 			<tooltip id="status4evar-download-tooltip" />
 			<label id="status4evar-download-label" value="&status4evar.download.widget.title;" class="toolbarbutton-text" crop="right" flex="1" />

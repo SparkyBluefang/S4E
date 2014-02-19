@@ -181,6 +181,7 @@ S4EWindowGetters.prototype =
 			["downloadButtonProgress", "status4evar-download-progress-bar"],
 			["downloadButtonLabel",    "status4evar-download-label"],
 			["downloadButtonAnchor",   "status4evar-download-anchor"],
+			["downloadNotifyAnchor",   "status4evar-download-notification-anchor"],
 			["statusBar",              "status4evar-status-bar"],
 			["statusWidget",           "status4evar-status-widget"],
 			["statusWidgetLabel",      "status4evar-status-text"],

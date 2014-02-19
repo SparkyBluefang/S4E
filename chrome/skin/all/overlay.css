@@ -7,6 +7,8 @@
  * 
  * Original code copyright (C) 2010 Margaret Leibovic <margaret.leibovic@gmail.com>. All Rights Reserved.
  * Original code copyright (C) 2010 Drew Willcoxon <adw@mozilla.com>. All Rights Reserved.
+ * Original code copyright (C) 2013 Paolo Amadini <paolo.mozmail@amadzone.org>. All Rights Reserved.
+ * Original code copyright (C) 2013 Gijs Kruitbosch <gijskruitbosch@gmail.com>. All Rights Reserved.
  * Copyright (C) 2010-2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****
@@ -18,6 +20,14 @@
  * Original progress line code by Margaret Leibovic.
  * Adapted from the back-out patch:
  * https://hg.mozilla.org/mozilla-central/rev/42270894db65
+ * 
+ * Original download notification code by Paolo Amadini.
+ * Adapted from the check-in patch:
+ * https://hg.mozilla.org/mozilla-central/rev/9cb6dcfb0b85
+ * 
+ * Original download notification code by Gijs Kruitbosch.
+ * Adapted from the check-in patch:
+ * https://hg.mozilla.org/mozilla-central/rev/8a1d8044a4c8
 */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
@@ -99,25 +109,37 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
 	background-image: url("chrome://status4evar/skin/pulse.png");
 }
 
+#status4evar-download-notification-container
+{
+	min-height: 1px;
+	min-width: 1px;
+	height: 1px;
+	margin-bottom: -1px;
+	position: relative;
+	z-index: 5;
+}
+
 #status4evar-download-notification-icon
 {
 	opacity: 0;
 	background-size: 16px;
 	background-position: center;
 	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
 }
 
-@keyframes status4evar-download-button-finish
+@keyframes status4evar-download-notification-finish
 {
 	from { opacity: 0; transform: scale(1); }
 	20%  { opacity: .65; animation-timing-function: ease-in; }
 	to   { opacity: 0; transform: scale(8); }
 }
 
-#status4evar-download-button[notification="finish"][forcevisible="true"] #status4evar-download-notification-icon
+#status4evar-download-notification-anchor[notification="finish"][forcevisible="true"] #status4evar-download-notification-icon
 {
 	background-image: url("chrome://browser/skin/downloads/download-notification-finish.png");
-	animation-name: status4evar-download-button-finish;
+	animation-name: status4evar-download-notification-finish;
 	animation-duration: 1s;
 }
 
