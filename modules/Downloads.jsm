@@ -543,7 +543,7 @@ DownloadManagerHandler.prototype =
 	{
 		while(dls.hasMoreElements())
 		{
-			let dl = dls.getNext().QueryInterface(CI.nsIDownload);
+			let dl = dls.getNext();
 			yield { state: dl.state, size: dl.size, speed: dl.speed, transferred: dl.amountTransferred };
 		}
 	},
