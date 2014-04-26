@@ -317,11 +317,6 @@ splitter.status4evar-status-splitter:not(:hover)
 	border: none;
 }
 
-#urlbar .urlbar-origin-label
-{
-	-moz-padding-start: 1px;
-}
-
 #urlbar .urlbar-over-link-box:-moz-locale-dir(ltr)
 {
 	-moz-padding-start: 18px;
