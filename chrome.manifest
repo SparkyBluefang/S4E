@@ -8,61 +8,58 @@
 # 
 # ***** END LICENSE BLOCK *****
 
-# Content registration
-content	status4evar			chrome/content/
+# Paths
+content  status4evar chrome/content/
+resource status4evar modules/
 
-resource status4evar			modules/
+# Locales
+locale status4evar en-US chrome/locale/en-US/
+locale status4evar bg-BG chrome/locale/bg-BG/
+locale status4evar cs    chrome/locale/cs/
+locale status4evar da    chrome/locale/da/
+locale status4evar de    chrome/locale/de/
+locale status4evar dsb   chrome/locale/dsb/
+locale status4evar el    chrome/locale/el/
+locale status4evar eo    chrome/locale/eo/
+locale status4evar es-ES chrome/locale/es-ES/
+locale status4evar fr    chrome/locale/fr/
+locale status4evar he    chrome/locale/he/
+locale status4evar hsb   chrome/locale/hsb/
+locale status4evar hu    chrome/locale/hu/
+locale status4evar it-IT chrome/locale/it-IT/
+locale status4evar ja-JP chrome/locale/ja-JP/
+locale status4evar nb-NO chrome/locale/nb-NO/
+locale status4evar nl    chrome/locale/nl/
+locale status4evar pl    chrome/locale/pl/
+locale status4evar pt-BR chrome/locale/pt-BR/
+locale status4evar ro    chrome/locale/ro/
+locale status4evar ru    chrome/locale/ru/
+locale status4evar sr    chrome/locale/sr/
+locale status4evar sv-SE chrome/locale/sv-SE/
+locale status4evar tr    chrome/locale/tr/
+locale status4evar zh-CN chrome/locale/zh-CN/
+locale status4evar zh-TW chrome/locale/zh-TW/
 
-# Locale registration
-locale	status4evar	en-US		chrome/locale/en-US/
-locale	status4evar	bg-BG		chrome/locale/bg-BG/
-locale	status4evar	cs		chrome/locale/cs/
-locale	status4evar	da		chrome/locale/da/
-locale	status4evar	de		chrome/locale/de/
-locale	status4evar	dsb		chrome/locale/dsb/
-locale	status4evar	el		chrome/locale/el/
-locale	status4evar	eo		chrome/locale/eo/
-locale	status4evar	es-ES		chrome/locale/es-ES/
-locale	status4evar	fr		chrome/locale/fr/
-locale	status4evar	he		chrome/locale/he/
-locale	status4evar	hsb		chrome/locale/hsb/
-locale	status4evar	hu		chrome/locale/hu/
-locale	status4evar	it-IT		chrome/locale/it-IT/
-locale	status4evar	ja-JP		chrome/locale/ja-JP/
-locale	status4evar	nb-NO		chrome/locale/nb-NO/
-locale	status4evar	nl		chrome/locale/nl/
-locale	status4evar	pl		chrome/locale/pl/
-locale	status4evar	pt-BR		chrome/locale/pt-BR/
-locale	status4evar	ro		chrome/locale/ro/
-locale	status4evar	ru		chrome/locale/ru/
-locale	status4evar	sr		chrome/locale/sr/
-locale	status4evar	sv-SE		chrome/locale/sv-SE/
-locale	status4evar	tr		chrome/locale/tr/
-locale	status4evar	zh-CN		chrome/locale/zh-CN/
-locale	status4evar	zh-TW		chrome/locale/zh-TW/
+# Skin
+skin status4evar    classic/1.0 chrome/skin/all/
+skin status4evar-os classic/1.0 chrome/skin/gnomestripe/
+skin status4evar-os classic/1.0 chrome/skin/winstripe/   os=WINNT
+skin status4evar-os classic/1.0 chrome/skin/pinstripe/   os=Darwin
 
-# Skin registration
-skin	status4evar	classic/1.0	chrome/skin/all/
-skin	status4evar-os	classic/1.0	chrome/skin/gnomestripe/
-skin	status4evar-os	classic/1.0	chrome/skin/winstripe/		os=WINNT
-skin	status4evar-os	classic/1.0	chrome/skin/pinstripe/		os=Darwin
+# Overlays
+overlay chrome://browser/content/browser.xul chrome://status4evar/content/overlay.xul
+overlay chrome://browser/content/browser.xul chrome://status4evar/content/australis.xul appversion>=29.0a1
+overlay chrome://browser/content/browser.xul chrome://status4evar/content/legacy.xul    appversion<=28.*
 
-# Browser overlays
-overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/overlay.xul
-overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/australis.xul	appversion>=29.0a1
-overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/legacy.xul	        appversion<=28.*
+# Styles
+style   chrome://global/content/customizeToolbar.xul chrome://status4evar/content/overlay.css
+style   chrome://global/content/customizeToolbar.xul chrome://status4evar/skin/overlay.css
+style   chrome://global/content/customizeToolbar.xul chrome://status4evar-os/skin/overlay.css
+style   chrome://status4evar/content/prefs.xul       chrome://status4evar/skin/version/prefs26.css appversion>=26.0
 
-# Toolbar overlays
-style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/overlay.css
-style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/skin/overlay.css
-style	chrome://global/content/customizeToolbar.xul	chrome://status4evar-os/skin/overlay.css
-
-# Pref overlays
-style  chrome://status4evar/content/prefs.xul          chrome://status4evar/skin/version/prefs26.css   appversion>=26.0
-
-# XPCOM registration
-interfaces	components/status4evar.xpt
-component	{13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf}	components/status4evar.js
-contract	@caligonstudios.com/status4evar;1	{13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf}
-category	profile-after-change Status-4-Evar	@caligonstudios.com/status4evar;1
+# XPCOM
+interfaces components/status4evar.xpt
+component  {13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf} components/status4evar.js
+contract   @caligonstudios.com/status4evar;1      {13b3595e-7bb5-4cfe-bbfa-82c900a4d7bf}
+category   profile-after-change Status-4-Evar     @caligonstudios.com/status4evar;1
 
