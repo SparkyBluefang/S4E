@@ -51,7 +51,6 @@ skin	status4evar-os	classic/1.0	chrome/skin/pinstripe/		os=Darwin
 overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/overlay.xul
 overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/australis.xul	appversion>=29.0a1
 overlay	chrome://browser/content/browser.xul		chrome://status4evar/content/legacy.xul	        appversion<=28.*
-style	chrome://browser/content/browser.xul		chrome://status4evar/skin/version/overlay28.css appversion<=28.*
 
 # Toolbar overlays
 style	chrome://global/content/customizeToolbar.xul	chrome://status4evar/content/overlay.css
