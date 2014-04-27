@@ -26,12 +26,12 @@ function S4EToolbars(window, gBrowser, toolbox, service, getters)
 	this._service = service;
 	this._getters = getters;
 
-	try
+	if(Services.vc.compare("28.*", Services.appinfo.version) < 0)
 	{
 		this._handler = new AustralisS4EToolbars(this._window, gBrowser, this._getters);
 		Services.console.logStringMessage("S4EToolbars using AustralisS4EToolbars backend");
 	}
-	catch(e)
+	else
 	{
 		this._handler = new ClassicS4EToolbars(this._window, this._toolbox);
 		Services.console.logStringMessage("S4EToolbars using ClassicS4EToolbars backend");
@@ -51,7 +51,7 @@ S4EToolbars.prototype =
 	{
 		this.updateSplitters(false);
 		this.updateWindowGripper(false);
-		this._handler.setup(this._service.firstRun);
+		this._handler.setup(this._service.firstRun, this._service.firstRunAustralis);
 	},
 
 	destroy: function()
@@ -152,7 +152,7 @@ ClassicS4EToolbars.prototype =
 	_window:  null,
 	_toolbox: null,
 
-	setup: function(firstRun)
+	setup: function(firstRun, firstRunAustralis)
 	{
 		let document = this._window.document;
 
@@ -246,6 +246,8 @@ function AustralisS4EToolbars(window, gBrowser, getters)
 	this._getters = getters;
 
 	this.__bound_updateWindowResizers = this.updateWindowResizers.bind(this);
+
+	this._api = Components.utils.import("resource://status4evar/Australis.jsm", {}).AustralisTools;
 }
 
 AustralisS4EToolbars.prototype =
@@ -257,17 +259,24 @@ AustralisS4EToolbars.prototype =
 	__bound_updateWindowResizers: null,
 	__old_updateWindowResizers: null,
 
-	setup: function(firstRun)
+	_api: null,
+
+	setup: function(firstRun, firstRunAustralis)
 	{
 		this.__old_updateWindowResizers = this._gBrowser.updateWindowResizers;
 		this._gBrowser.updateWindowResizers = this.__bound_updateWindowResizers;
+
+		if(firstRunAustralis)
+		{
+			this._api.migrate();
+		}
 	},
 
 	destroy: function()
 	{
 		this._gBrowser.updateWindowResizers = this.__old_updateWindowResizers;
 
-		["_window", "_gBrowser", "_getters", "__bound_updateWindowResizers",
+		["_window", "_gBrowser", "_getters", "_api", "__bound_updateWindowResizers",
 		"__old_updateWindowResizers"].forEach(function(prop)
 		{
 			delete this[prop];
