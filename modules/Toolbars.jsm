@@ -28,7 +28,7 @@ function S4EToolbars(window, gBrowser, toolbox, service, getters)
 
 	try
 	{
-		this._handler = new AustralisS4EToolbars(this._window, gBrowser, this._toolbox, this._getters);
+		this._handler = new AustralisS4EToolbars(this._window, gBrowser, this._getters);
 		Services.console.logStringMessage("S4EToolbars using AustralisS4EToolbars backend");
 	}
 	catch(e)
@@ -239,29 +239,23 @@ ClassicS4EToolbars.prototype =
 	}
 };
 
-function AustralisS4EToolbars(window, gBrowser, toolbox, getters)
+function AustralisS4EToolbars(window, gBrowser, getters)
 {
 	this._window = window;
 	this._gBrowser = gBrowser;
-	this._toolbox = toolbox;
 	this._getters = getters;
 
 	this.__bound_updateWindowResizers = this.updateWindowResizers.bind(this);
-
-	this._api = CU.import("resource:///modules/CustomizableUI.jsm", {}).CustomizableUI;
 }
 
 AustralisS4EToolbars.prototype =
 {
 	_window:   null,
 	_gBrowser: null,
-	_toolbox:  null,
 	_getters:  null,
 
 	__bound_updateWindowResizers: null,
 	__old_updateWindowResizers: null,
-
-	_api: null,
 
 	setup: function(firstRun)
 	{
@@ -273,8 +267,8 @@ AustralisS4EToolbars.prototype =
 	{
 		this._gBrowser.updateWindowResizers = this.__old_updateWindowResizers;
 
-		["_window", "_gBrowser", "_toolbox", "_getters", "_api",
-		"__bound_updateWindowResizers", "__old_updateWindowResizers"].forEach(function(prop)
+		["_window", "_gBrowser", "_getters", "__bound_updateWindowResizers",
+		"__old_updateWindowResizers"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);

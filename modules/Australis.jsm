@@ -14,13 +14,36 @@
 
 const EXPORTED_SYMBOLS = [];
 
+const CC = Components.classes;
+const CI = Components.interfaces;
 const CU = Components.utils;
+
+const s4e_service = CC["@caligonstudios.com/status4evar;1"].getService(CI.nsIStatus4Evar);
+
+const STATUS_BAR_ID = "status4evar-status-bar";
+const DEFAULT_WIDGETS = ["status4evar-status-widget", "status4evar-download-button", "status4evar-progress-widget"];
+const DEFAULT_POSITIONS = [0, 1, 2];
 
 CU.import("resource:///modules/CustomizableUI.jsm");
 
-CustomizableUI.registerArea("status4evar-status-bar", {
+CustomizableUI.registerArea(STATUS_BAR_ID, {
 	type: CustomizableUI.TYPE_TOOLBAR,
 	legacy: true,
-	defaultPlacements: ["status4evar-status-widget", "status4evar-download-button", "status4evar-progress-widget"]
+	defaultPlacements: DEFAULT_WIDGETS
 });
+
+if(s4e_service.firstRunAustralis)
+{
+	DEFAULT_WIDGETS.forEach(function(id, index) {
+		let placement = CustomizableUI.getPlacementOfWidget(id);
+		if(!placement || placement.area === CustomizableUI.AREA_NAVBAR)
+		{
+			CustomizableUI.addWidgetToArea(id, STATUS_BAR_ID, DEFAULT_POSITIONS[index]);
+		}
+		else if(id === DEFAULT_WIDGETS[0])
+		{
+			CustomizableUI.addWidgetToArea("spring", STATUS_BAR_ID, DEFAULT_POSITIONS[index]);
+		}
+	});
+}
 

@@ -55,6 +55,7 @@ Status_4_Evar.prototype =
 	downloadTooltip:                1,
 
 	firstRun:                       true,
+	firstRunAustralis:              true,
 
 	progressToolbarCSS:             null,
 	progressToolbarForce:           false,
@@ -622,6 +623,12 @@ Status_4_Evar.prototype =
 		if(this.firstRun)
 		{
 			this.prefs.setBoolPref("firstRun", false);
+		}
+
+		this.firstRunAustralis = this.prefs.getBoolPref("firstRun.australis");
+		if(this.firstRunAustralis && Services.vc.compare("28.*", Services.appinfo.version) < 0)
+		{
+			this.prefs.setBoolPref("firstRun.australis", false);
 		}
 
 		this.migrate();

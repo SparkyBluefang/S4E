@@ -37,6 +37,7 @@ interface nsIStatus4Evar : nsISupports
 	readonly attribute long      downloadTooltip;
 
 	readonly attribute boolean   firstRun;
+	readonly attribute boolean   firstRunAustralis;
 
 	readonly attribute ACString  progressToolbarCSS;
 	readonly attribute boolean   progressToolbarForce;
