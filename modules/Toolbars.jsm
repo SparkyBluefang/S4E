@@ -19,7 +19,7 @@ const CU = Components.utils;
 
 CU.import("resource://gre/modules/Services.jsm");
 
-function S4EToolbars(window, toolbox, service, getters)
+function S4EToolbars(window, gBrowser, toolbox, service, getters)
 {
 	this._window = window;
 	this._toolbox = toolbox;
@@ -28,7 +28,7 @@ function S4EToolbars(window, toolbox, service, getters)
 
 	try
 	{
-		this._handler = new AustralisS4EToolbars(this._window, this._toolbox);
+		this._handler = new AustralisS4EToolbars(this._window, gBrowser, this._toolbox, this._getters);
 		Services.console.logStringMessage("S4EToolbars using AustralisS4EToolbars backend");
 	}
 	catch(e)
@@ -239,32 +239,58 @@ ClassicS4EToolbars.prototype =
 	}
 };
 
-function AustralisS4EToolbars(window, toolbox)
+function AustralisS4EToolbars(window, gBrowser, toolbox, getters)
 {
 	this._window = window;
+	this._gBrowser = gBrowser;
 	this._toolbox = toolbox;
+	this._getters = getters;
+
+	this.__bound_updateWindowResizers = this.updateWindowResizers.bind(this);
 
 	this._api = CU.import("resource:///modules/CustomizableUI.jsm", {}).CustomizableUI;
 }
 
 AustralisS4EToolbars.prototype =
 {
-	_window:  null,
-	_toolbox: null,
+	_window:   null,
+	_gBrowser: null,
+	_toolbox:  null,
+	_getters:  null,
+
+	__bound_updateWindowResizers: null,
+	__old_updateWindowResizers: null,
 
 	_api: null,
 
 	setup: function(firstRun)
 	{
-		
+		this.__old_updateWindowResizers = this._gBrowser.updateWindowResizers;
+		this._gBrowser.updateWindowResizers = this.__bound_updateWindowResizers;
 	},
 
 	destroy: function()
 	{
-		["_window", "_toolbox",  "_api"].forEach(function(prop)
+		this._gBrowser.updateWindowResizers = this.__old_updateWindowResizers;
+
+		["_window", "_gBrowser", "_toolbox", "_getters", "_api",
+		"__bound_updateWindowResizers", "__old_updateWindowResizers"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);
+	},
+
+	updateWindowResizers: function()
+	{
+		if(!this._window.gShowPageResizers) {
+			return;
+		}
+
+		let toolbar = this._getters.statusBar;
+		let show = this._window.windowState == this._window.STATE_NORMAL && (!toolbar || toolbar.collapsed);
+		this._gBrowser.browsers.forEach(function(browser) {
+			browser.showWindowResizer = show;
+		});
 	},
 
 	buildGripper: function(toolbar, container, id)

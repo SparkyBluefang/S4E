@@ -35,7 +35,7 @@ function Status4Evar(window, gBrowser, toolbox)
 	this._toolbox = toolbox;
 
 	this.getters = new S4EWindowGetters(this._window);
-	this.toolbars = new S4EToolbars(this._window, this._toolbox, s4e_service, this.getters);
+	this.toolbars = new S4EToolbars(this._window, gBrowser, this._toolbox, s4e_service, this.getters);
 	this.statusService = new S4EStatusService(this._window, s4e_service, this.getters);
 	this.progressMeter = new S4EProgressService(gBrowser, s4e_service, this.getters, this.statusService);
 	this.downloadStatus = new S4EDownloadService(this._window, s4e_service, this.getters);
