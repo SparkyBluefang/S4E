@@ -33,14 +33,8 @@
 
 #status4evar-download-button #status4evar-download-icon
 {
-	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 108, 18, 90) center no-repeat;
 	min-width: 18px;
 	min-height: 18px;
-}
-
-#status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon
-{
-	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 108, 18, 90) center no-repeat;
 }
 
 #status4evar-download-button[attention] #status4evar-download-icon

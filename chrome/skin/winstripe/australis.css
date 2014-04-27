@@ -28,3 +28,13 @@
 	background-repeat: no-repeat;
 }
 
+#status4evar-download-button #status4evar-download-icon
+{
+	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 198, 18, 180) center no-repeat;
+}
+
+#status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon
+{
+	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 198, 18, 180) center no-repeat;
+}
+
