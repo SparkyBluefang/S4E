@@ -41,23 +41,13 @@ function Status4Evar(window, gBrowser, toolbox)
 	this.downloadStatus = new S4EDownloadService(this._window, s4e_service, this.getters);
 	this.sizeModeService = new SizeModeService(this._window, this);
 
-	this.__bound_beforeCustomization = this.beforeCustomization.bind(this)
-	this.__bound_updateWindow = this.updateWindow.bind(this);
-	this.__bound_destroy = this.destroy.bind(this)
-
-	this._toolbox.addEventListener("beforecustomization", this.__bound_beforeCustomization, false);
-	this._toolbox.addEventListener("aftercustomization", this.__bound_updateWindow, false);
-	this._window.addEventListener("unload", this.__bound_destroy, false);
+	this._window.addEventListener("unload", this, false);
 }
 
 Status4Evar.prototype =
 {
 	_window:  null,
 	_toolbox: null,
-
-	__bound_beforeCustomization: null,
-	__bound_updateWindow:        null,
-	__bound_destroy:             null,
 
 	getters:         null,
 	toolbars:        null,
@@ -68,6 +58,9 @@ Status4Evar.prototype =
 
 	setup: function()
 	{
+		this._toolbox.addEventListener("beforecustomization", this, false);
+		this._toolbox.addEventListener("aftercustomization", this, false);
+
 		this.toolbars.setup();
 		this.updateWindow();
 
@@ -81,9 +74,9 @@ Status4Evar.prototype =
 
 	destroy: function()
 	{
-		this._window.removeEventListener("unload", this.__bound_destroy, false);
-		this._toolbox.removeEventListener("aftercustomization", this.__bound_updateWindow, false);
-		this._toolbox.removeEventListener("beforecustomization", this.__bound_beforeCustomization, false);
+		this._window.removeEventListener("unload", this, false);
+		this._toolbox.removeEventListener("aftercustomization", this, false);
+		this._toolbox.removeEventListener("beforecustomization", this, false);
 
 		this.getters.destroy();
 		this.statusService.destroy();
@@ -92,11 +85,27 @@ Status4Evar.prototype =
 		this.toolbars.destroy();
 		this.sizeModeService.destroy();
 
-		["_window", "_toolbox", "getters", "statusService", "downloadStatus", "progressMeter", "toolbars",
-		"sizeModeService", "__bound_beforeCustomization", "__bound_destroy", "__bound_updateWindow"].forEach(function(prop)
+		["_window", "_toolbox", "getters", "statusService", "downloadStatus",
+		"progressMeter", "toolbars", "sizeModeService"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);
+	},
+
+	handleEvent: function(aEvent)
+	{
+		switch(aEvent.type)
+		{
+			case "unload":
+				this.destroy();
+				break;
+			case "beforecustomization":
+				this.beforeCustomization();
+				break;
+			case "aftercustomization":
+				this.updateWindow();
+				break;
+		}
 	},
 
 	beforeCustomization: function()
