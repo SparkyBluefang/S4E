@@ -47,3 +47,49 @@ if(s4e_service.firstRunAustralis)
 	});
 }
 
+let statusBarHandler = {
+	getSpringId: function(aArea)
+	{
+		let springId = null;
+
+		let widgetIds = CustomizableUI.getWidgetIdsInArea(aArea);
+		if(widgetIds)
+		{
+			let widgetId = null;
+			for(let i = 0; i < widgetIds.length; i++)
+			{
+				widgetId = widgetIds[i];
+				if(CustomizableUI.isSpecialWidget(widgetId) && widgetId.indexOf('spring') > 0)
+				{
+					springId = widgetId;
+					break;
+				}
+			}
+		}
+
+		return springId;
+	},
+
+	onWidgetAdded: function(aWidgetId, aArea, aPosition)
+	{
+		if(aArea === STATUS_BAR_ID && aWidgetId === DEFAULT_WIDGETS[0])
+		{
+			let springId = this.getSpringId(aArea);
+			if(springId)
+			{
+				CustomizableUI.removeWidgetFromArea(springId, STATUS_BAR_ID, DEFAULT_POSITIONS[0]);
+			}
+		}
+	},
+
+	onWidgetRemoved: function(aWidgetId, aArea)
+	{
+		if(aArea === STATUS_BAR_ID && aWidgetId === DEFAULT_WIDGETS[0])
+		{
+			CustomizableUI.addWidgetToArea("spring", STATUS_BAR_ID, DEFAULT_POSITIONS[0]);
+		}
+	}
+}
+
+CustomizableUI.addListener(statusBarHandler);
+
