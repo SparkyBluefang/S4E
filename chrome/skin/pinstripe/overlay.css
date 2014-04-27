@@ -97,26 +97,3 @@ splitter.status4evar-status-splitter
 	background-color: white;
 }
 
-/*
- * Gripper
- */
-
-#status4evar-window-gripper
-{
-	display: none;
-}
-
-/*
- * Status bar
- */
-
-#status-bar
-{
-	padding-right: 0px;
-}
-
-#addon-bar
-{
-	padding-right: 16px;
-}
-

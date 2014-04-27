@@ -12,8 +12,18 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#status4evar-advanced-download
+#status4evar-window-gripper
 {
 	display: none;
+}
+
+#status-bar
+{
+	padding-right: 0px;
+}
+
+#addon-bar
+{
+	padding-right: 16px;
 }
 
