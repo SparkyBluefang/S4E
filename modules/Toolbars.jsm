@@ -266,7 +266,7 @@ AustralisS4EToolbars.prototype =
 		this.__old_updateWindowResizers = this._gBrowser.updateWindowResizers;
 		this._gBrowser.updateWindowResizers = this.__bound_updateWindowResizers;
 
-		if(firstRunAustralis)
+		if(!firstRun && firstRunAustralis)
 		{
 			this._api.migrate();
 		}

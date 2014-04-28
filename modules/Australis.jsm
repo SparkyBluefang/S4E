@@ -42,7 +42,7 @@ let AustralisTools = {
 
 		DEFAULT_WIDGETS.forEach(function(id, index) {
 			let placement = CustomizableUI.getPlacementOfWidget(id);
-			if(!placement || placement.area === CustomizableUI.AREA_NAVBAR)
+			if(!placement || placement.area === CustomizableUI.AREA_NAVBAR || placement.area === STATUS_BAR_ID)
 			{
 				Services.console.logStringMessage("Moving widget: " + id + " [" + CustomizableUI.isWidgetRemovable(id) + "]");
 				CustomizableUI.addWidgetToArea(id, STATUS_BAR_ID, DEFAULT_POSITIONS[index]);
