@@ -19,6 +19,7 @@ interface nsIStatus4Evar : nsISupports
 {
 	readonly attribute boolean   addonbarBorderStyle;
 	readonly attribute boolean   addonbarCloseButton;
+	readonly attribute boolean   addonbarLegacyShim;
 	readonly attribute boolean   addonbarWindowGripper;
 
 	readonly attribute boolean   advancedStatusDetectFullScreen;

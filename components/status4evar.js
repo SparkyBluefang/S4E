@@ -20,6 +20,12 @@ const CU = Components.utils;
 CU.import("resource://gre/modules/XPCOMUtils.jsm");
 CU.import("resource://gre/modules/Services.jsm");
 
+let AustralisTools = null;
+if(Services.vc.compare("28.*", Services.appinfo.version) < 0)
+{
+	AustralisTools = CU.import("resource://status4evar/Australis.jsm", {}).AustralisTools;
+}
+
 const CURRENT_MIGRATION = 7;
 
 function Status_4_Evar(){}
@@ -37,6 +43,7 @@ Status_4_Evar.prototype =
 
 	addonbarBorderStyle:            false,
 	addonbarCloseButton:            false,
+	addonbarLegacyShim:             true,
 	addonbarWindowGripper:          true,
 
 	advancedStatusDetectFullScreen: true,
@@ -113,6 +120,18 @@ Status_4_Evar.prototype =
 				{
 					addonbar_close_button.hidden = !this.addonbarCloseButton;
 				} 
+			}
+		},
+
+		"addonbar.legacyShim":
+		{
+			update: function()
+			{
+				this.addonbarLegacyShim = this.prefs.getBoolPref("addonbar.legacyShim");
+				if(AustralisTools)
+				{
+					AustralisTools.updateLegacyShim(this.addonbarLegacyShim);
+				}
 			}
 		},
 

@@ -17,15 +17,18 @@ const EXPORTED_SYMBOLS = ["AustralisTools"];
 const CU = Components.utils;
 
 const STATUS_BAR_ID = "status4evar-status-bar";
+const LEGACY_SHIM_ID = "status4evar-legacy-widget";
 const DEFAULT_WIDGETS = ["status4evar-status-widget", "status4evar-download-button", "status4evar-progress-widget"];
 const DEFAULT_POSITIONS = [0, 1, 2];
 
 CU.import("resource:///modules/CustomizableUI.jsm");
 CU.import("resource://gre/modules/Services.jsm");
+CU.import("resource://services-common/stringbundle.js");
+
+const strings = new StringBundle("chrome://status4evar/locale/overlay.properties");
 
 CustomizableUI.registerArea(STATUS_BAR_ID, {
 	type: CustomizableUI.TYPE_TOOLBAR,
-	legacy: true,
 	defaultPlacements: DEFAULT_WIDGETS
 });
 
@@ -55,6 +58,78 @@ let AustralisTools = {
 		});
 
 		CustomizableUI.setToolbarVisibility(STATUS_BAR_ID, true);
+	},
+
+	updateLegacyShim: function(action)
+	{
+		if(action)
+		{
+			this.initLegacyShim();
+
+			let placement = CustomizableUI.getPlacementOfWidget(LEGACY_SHIM_ID);
+			if(!placement) {
+				CustomizableUI.addWidgetToArea(LEGACY_SHIM_ID, STATUS_BAR_ID);
+				CustomizableUI.setToolbarVisibility(STATUS_BAR_ID, true);
+			}
+		}
+		else
+		{
+			this.destroyLegacyShim();
+		}
+	},
+
+	initLegacyShim: function()
+	{
+		CustomizableUI.createWidget({
+			id: LEGACY_SHIM_ID,
+			type: "custom",
+			defaultArea: STATUS_BAR_ID,
+			onBuild: function(doc)
+			{
+				let item = doc.createElement("toolbaritem");
+				item.id = LEGACY_SHIM_ID;
+				item.setAttribute("removable", true);
+				item.setAttribute("label", strings.get("legacyWidgetTitle"));
+				item.setAttribute("class", "panel-wide-item");
+				item.setAttribute("closemenu", "none");
+				item.appendChild(doc.getElementById("status-bar") || palette.querySelector("status-bar"));
+
+				item.watcher = new doc.defaultView.MutationObserver(function(mutations)
+				{
+					if(!item.hasChildNodes())
+					{
+						Services.console.logStringMessage("S4E Repairing widget: " + LEGACY_SHIM_ID);
+						item.appendChild(doc.getElementById("status-bar"));
+					}
+				});
+				item.watcher.observe(item, { childList: true });
+
+				return item;
+			}
+		});
+	},
+
+	destroyLegacyShim: function()
+	{
+		let widgetInfo = CustomizableUI.getWidget(LEGACY_SHIM_ID);
+		if(widgetInfo)
+		{
+			widgetInfo.disabled = true;
+
+			widgetInfo.instances.forEach(function(instance)
+			{
+				let item = instance.node;
+
+				item.watcher.disconnect();
+
+				if(item.firstChild && item.firstChild.id === "status-bar")
+				{
+					item.ownerDocument.getElementById("addon-bar").appendChild(item.firstChild);
+				}
+			});
+		}
+
+		CustomizableUI.destroyWidget(LEGACY_SHIM_ID);
 	}
 }
 

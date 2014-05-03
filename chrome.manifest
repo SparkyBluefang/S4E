@@ -57,6 +57,8 @@ style   chrome://global/content/customizeToolbar.xul chrome://status4evar/skin/o
 style   chrome://global/content/customizeToolbar.xul chrome://status4evar-os/skin/overlay.css      appversion<=28.*
 style   chrome://global/content/customizeToolbar.xul chrome://status4evar-os/skin/legacy.css       appversion<=28.*
 style   chrome://status4evar/content/prefs.xul       chrome://status4evar/skin/version/prefs26.css appversion>=26.0
+style   chrome://status4evar/content/prefs.xul       chrome://status4evar/skin/version/prefs28.css appversion<=28.*
+style   chrome://status4evar/content/prefs.xul       chrome://status4evar/skin/version/prefs29.css appversion>=29.0
 
 # XPCOM
 interfaces components/status4evar.xpt

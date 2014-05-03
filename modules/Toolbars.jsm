@@ -247,7 +247,7 @@ function AustralisS4EToolbars(window, gBrowser, getters)
 
 	this.__bound_updateWindowResizers = this.updateWindowResizers.bind(this);
 
-	this._api = Components.utils.import("resource://status4evar/Australis.jsm", {}).AustralisTools;
+	this._api = CU.import("resource://status4evar/Australis.jsm", {}).AustralisTools;
 }
 
 AustralisS4EToolbars.prototype =
