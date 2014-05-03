@@ -48,13 +48,14 @@ skin status4evar-os classic/1.0 chrome/skin/pinstripe/   os=Darwin
 
 # Overlays
 overlay chrome://browser/content/browser.xul chrome://status4evar/content/overlay.xul
-overlay chrome://browser/content/browser.xul chrome://status4evar/content/australis.xul appversion>=29.0a1
+overlay chrome://browser/content/browser.xul chrome://status4evar/content/australis.xul appversion>=29.0
 overlay chrome://browser/content/browser.xul chrome://status4evar/content/legacy.xul    appversion<=28.*
 
 # Styles
-style   chrome://global/content/customizeToolbar.xul chrome://status4evar/content/overlay.css
-style   chrome://global/content/customizeToolbar.xul chrome://status4evar/skin/overlay.css
-style   chrome://global/content/customizeToolbar.xul chrome://status4evar-os/skin/overlay.css
+style   chrome://global/content/customizeToolbar.xul chrome://status4evar/content/overlay.css      appversion<=28.*
+style   chrome://global/content/customizeToolbar.xul chrome://status4evar/skin/overlay.css         appversion<=28.*
+style   chrome://global/content/customizeToolbar.xul chrome://status4evar-os/skin/overlay.css      appversion<=28.*
+style   chrome://global/content/customizeToolbar.xul chrome://status4evar-os/skin/legacy.css       appversion<=28.*
 style   chrome://status4evar/content/prefs.xul       chrome://status4evar/skin/version/prefs26.css appversion>=26.0
 
 # XPCOM

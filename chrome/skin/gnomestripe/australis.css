@@ -23,3 +23,10 @@
 	min-height: 20px;
 }
 
+#status4evar-download-button #status4evar-download-icon
+{
+	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 198, 18, 180) center no-repeat;
+	min-width: 18px;
+	min-height: 18px;
+}
+
