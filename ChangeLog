@@ -1,4 +1,6 @@
 Version next
+
+Version 2014.05.03.06
 * Fix download button icon styles (Australis)
 * Fix Windows and Linux status bar styles. OS X Still needs work. (Australis)
 * Support legacy status bar panel (Australis)
