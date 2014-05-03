@@ -86,6 +86,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Použít alternativní ohraničení lišty">
 <!ENTITY status4evar.addonbar.windowGripper "Zobrazit chytač změny velikosti okna">
 <!ENTITY status4evar.addonbar.closeButton "Zobrazit tlačítko zavření">
+<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
 <!ENTITY status4evar.advanced.warning "Tyto rozšířené možnosti mohou způsobit problémy se S-4-E nebo jinými rozšířeními. Změny ne vlastní nebezpečí.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Pokusit se vynutit XBL vazby adresního řádku.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Zvolte pouze pokud máte problémy se zobrazením činnosti nebo stavu v adresním řádku. Toto může potenciálně poškodit jiné rozšíření, které nastavuje XBL vazby adresního řádku.">

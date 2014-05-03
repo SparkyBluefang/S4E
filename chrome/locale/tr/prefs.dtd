@@ -86,6 +86,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Alternatif araç çubuğu çerçevesi kullan">
 <!ENTITY status4evar.addonbar.windowGripper "Pencere yeniden boyutlandırıcıyı göster">
 <!ENTITY status4evar.addonbar.closeButton "Kapatma düğmesini göster">
+<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
 <!ENTITY status4evar.advanced.warning "Bu gelişmiş ayarlar Status-4-Evar veya diğer eklentilerle ilgili sorunlara neden olabilir. Değiştirmek kendi sorumluluğunuzdadır.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Durum Çuğuğu XBL bağlamayı zorla.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Eğer konum çubuğunun ilerlemesinde veya durum metninin doğru gösterilmesinde bir sorun varsa bunu seçin. Durum çubuğundaki XBL bağlayıcı ayarlanırken diğer eklentiler duraklatılacaktır.">

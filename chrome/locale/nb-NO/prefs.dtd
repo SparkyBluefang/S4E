@@ -86,6 +86,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Bruk alternative kanter for verktøylinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gripeområdet for endring av vindusstørrelse">
 <!ENTITY status4evar.addonbar.closeButton "Vis knappen lukk">
+<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
 <!ENTITY status4evar.advanced.warning "Disse avanserte innstillinger kan forårsake problemer med Status-4-Evar eller andre utvidelser. Endre på din egen risiko.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Forsøk å tvinge XBL-bindingen for adresselinjen.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Velg kun dette hvis du har problemer med at adresselinje-framdriftsviser eller statusteksten ikke blir vist riktig. Dette vil potensielt bryte andre utvidelser som forsøker å sette en XBL-binding på adresselinjen.">

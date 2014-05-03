@@ -86,6 +86,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Alternatieve werkbalkranden gebruiken">
 <!ENTITY status4evar.addonbar.windowGripper "Indicatie voor wijzigen venstergrootte tonen">
 <!ENTITY status4evar.addonbar.closeButton "Sluitknop tonen">
+<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
 <!ENTITY status4evar.advanced.warning "Deze geavanceerde instellingen kunnen problemen geven met Status-4-Evar of andere extensies. Wijzig ze op eigen risico.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Probeer de XBL-binding van de locatiebalk te forceren.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Selecteer dit alleen als u problemen heeft met de weergave van tekst in de voortgangs- of statusbalk. Dit kan problemen geven met andere extensies die een XBL-binding voor de locatiebalk proberen in te stellen.">

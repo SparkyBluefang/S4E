@@ -86,6 +86,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Користи алтернативне ивице трака с алаткама">
 <!ENTITY status4evar.addonbar.windowGripper "Прикажи простор за измену величине прозора">
 <!ENTITY status4evar.addonbar.closeButton "Дугме за затварање">
+<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
 <!ENTITY status4evar.advanced.warning "Ове напредне поставке могу да стварају проблеме с овим или другим додацима. Користите их на сопствени ризик.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Приморај XBL повезивање траке за путању.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Изаберите ово само ако имате проблема с напретком траке за путању или се текст стања не приказује исправно. Ово може да онеспособи друге додатке који покушају да користе XBL повезивање на траку за путању.">

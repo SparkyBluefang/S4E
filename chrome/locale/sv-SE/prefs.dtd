@@ -86,6 +86,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Använd alternativa verktygsfältskantlinjer">
 <!ENTITY status4evar.addonbar.windowGripper "Visa handtaget för fönsterstorleksändring">
 <!ENTITY status4evar.addonbar.closeButton "Visa stängknappen">
+<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
 <!ENTITY status4evar.advanced.warning "Dessa avancerade inställningar kan skapa problem med Status-4-Evar eller andra tillägg. Används på egen risk.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Försök att tvinga XBL-bindningen för adressfältet.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Aktivera detta endast om du har problem med adressfältet eller statustextvisningen. Funktionen kan skapa konflikter med andra tillägg som försöker att ange en XBL-bindning i adressfältet.">

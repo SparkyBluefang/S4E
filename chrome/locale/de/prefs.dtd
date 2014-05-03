@@ -86,6 +86,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Alternativen Symbolleisten-Rand verwenden">
 <!ENTITY status4evar.addonbar.windowGripper "Anfasser zur Fenstergrößenänderung anzeigen">
 <!ENTITY status4evar.addonbar.closeButton "Schließen-Schaltfläche anzeigen">
+<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
 <!ENTITY status4evar.advanced.warning "Diese erweiterten Einstellungen können Probleme mit Status-4-Evar oder anderen Erweiterungen verursachen. Änderungen nur auf eigene Gefahr!">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "XBL-Bindung der Adressleiste erzwingen.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Nur auswählen wenn Sie Probleme mit der Darstellung der Fortschrittsanzeige in der Adressleiste oder dem Statustext haben. Dies kann möglicherweise Probleme, mit anderen Erweiterungen die eine XBL-Bindung auf der Adressleiste setzen, verursachen.">

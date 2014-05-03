@@ -86,6 +86,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Использовать чередующиеся границы панелей инструментов">
 <!ENTITY status4evar.addonbar.windowGripper "Показать захват изменения размера окна">
 <!ENTITY status4evar.addonbar.closeButton "Показать кнопку «Закрыть»">
+<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
 <!ENTITY status4evar.advanced.warning "These advanced settings may cause issues with Status-4-Evar or other extensions. Modify at your own risk.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Attempt to force the the Location Bar XBL binding.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Only select this if you have problems with the Location Bar progress or status text being displaying correctly. This will potentially break other extensions that try to set an XBL binding on the Location Bar.">

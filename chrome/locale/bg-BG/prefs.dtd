@@ -86,6 +86,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Използване на алтернативни рамки за лентата с инструменти">
 <!ENTITY status4evar.addonbar.windowGripper "Показване на манипулатора за преоразмеряване на прозореца">
 <!ENTITY status4evar.addonbar.closeButton "Показване на бутона &quot;Затвори&quot;">
+<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
 <!ENTITY status4evar.advanced.warning "Разширените настройки може да създадат проблеми при работата на Status-4-Evar или на други добавки. Променяйте ги на Ваша отговорност.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Пробвай принудително XBL привързване на адресната лента.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Изберете тази настройка само ако имате проблеми с лентата за напредък, или ако текстът за състоянието не се показва правилно. Това може да спре други разширения, които се опитват да установят XBL привързване на адресната лента.">
