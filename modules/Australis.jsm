@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  * 
- * Copyright (C) 2013 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+ * Copyright (C) 2013-2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****
 */
@@ -44,15 +44,17 @@ let AustralisTools = {
 			let placement = CustomizableUI.getPlacementOfWidget(id);
 			if(!placement || placement.area === CustomizableUI.AREA_NAVBAR || placement.area === STATUS_BAR_ID)
 			{
-				Services.console.logStringMessage("Moving widget: " + id + " [" + CustomizableUI.isWidgetRemovable(id) + "]");
+				Services.console.logStringMessage("S4E Australis migration - moving widget: " + id + " [" + CustomizableUI.isWidgetRemovable(id) + "]");
 				CustomizableUI.addWidgetToArea(id, STATUS_BAR_ID, DEFAULT_POSITIONS[index]);
 			}
 			else if(id === DEFAULT_WIDGETS[0])
 			{
-				Services.console.logStringMessage("Adding spring");
+				Services.console.logStringMessage("S4E Australis migration - adding spring");
 				CustomizableUI.addWidgetToArea("spring", STATUS_BAR_ID, DEFAULT_POSITIONS[index]);
 			}
 		});
+
+		CustomizableUI.setToolbarVisibility(STATUS_BAR_ID, true);
 	}
 }
 
