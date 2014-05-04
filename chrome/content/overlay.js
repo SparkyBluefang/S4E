@@ -5,7 +5,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  * 
- * Original code copyright (C) Mozilla Foundation. All Rights Reserved.
  * Copyright (C) 2010, 2012, 2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****

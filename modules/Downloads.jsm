@@ -156,10 +156,10 @@ S4EDownloadService.prototype =
 
 		let db = this._window.DownloadsButton;
 
-		db._getAnchorInternal = db.getAnchor;
+		db._getAnchorS4EBackup = db.getAnchor;
 		db.getAnchor = this.getAnchor.bind(this);
 
-		db._releaseAnchorInternal = db.releaseAnchor;
+		db._releaseAnchorS4EBackup = db.releaseAnchor;
 		db.releaseAnchor = function() {};
 
 		this._binding = true;
@@ -174,8 +174,8 @@ S4EDownloadService.prototype =
 
 		let db = this._window.DownloadsButton;
 
-		db.getAnchor = db._getAnchorInternal;
-		db.releaseAnchor = db._releaseAnchorInternal;
+		db.getAnchor = db._getAnchorS4EBackup;
+		db.releaseAnchor = db._releaseAnchorS4EBackup;
 
 		this._binding = false;
 	},
