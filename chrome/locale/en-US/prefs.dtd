@@ -4,6 +4,7 @@
 <!ENTITY status4evar.pane.progress "Progress">
 <!ENTITY status4evar.pane.download "Download">
 <!ENTITY status4evar.pane.addonbar "Add-on Bar">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Advanced">
 
 <!ENTITY status4evar.tab.general "General">

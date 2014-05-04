@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE overlay>
+<!DOCTYPE overlay SYSTEM "chrome://status4evar/locale/overlay.dtd">
 
 <!--
    - ***** BEGIN LICENSE BLOCK *****
@@ -23,7 +23,7 @@
 
 	<vbox id="browser-bottombox">
 		<toolbar id="status4evar-status-bar"
-			toolbarname="Status Bar"
+			toolbarname="&status4evar.status.toolbar.title;"
 			accesskey="S"
 			customizable="true"
 			class="toolbar-primary"
