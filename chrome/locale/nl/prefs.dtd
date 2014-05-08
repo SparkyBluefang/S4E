@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Voortgang">
 <!ENTITY status4evar.pane.download "Downloaden">
 <!ENTITY status4evar.pane.addonbar "Add-onbalk">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Geavanceerd">
 <!ENTITY status4evar.tab.general "Algemeen">
 <!ENTITY status4evar.tab.toolbar "Werkbalk">
@@ -86,7 +87,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Alternatieve werkbalkranden gebruiken">
 <!ENTITY status4evar.addonbar.windowGripper "Indicatie voor wijzigen venstergrootte tonen">
 <!ENTITY status4evar.addonbar.closeButton "Sluitknop tonen">
-<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
+<!ENTITY status4evar.addonbar.legacyShim "Ondersteuning voor de oude statusbalk inschakelen">
 <!ENTITY status4evar.advanced.warning "Deze geavanceerde instellingen kunnen problemen geven met Status-4-Evar of andere extensies. Wijzig ze op eigen risico.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Probeer de XBL-binding van de locatiebalk te forceren.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Selecteer dit alleen als u problemen heeft met de weergave van tekst in de voortgangs- of statusbalk. Dit kan problemen geven met andere extensies die een XBL-binding voor de locatiebalk proberen in te stellen.">

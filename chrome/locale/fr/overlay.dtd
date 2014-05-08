@@ -1,3 +1,4 @@
+<!ENTITY status4evar.status.toolbar.title "Status Bar">
 <!ENTITY status4evar.status.widget.title "Texte d'état">
 <!ENTITY status4evar.progress.widget.title "Barre de progression">
 <!ENTITY status4evar.download.widget.title "État du téléchargement">

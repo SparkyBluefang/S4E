@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Betöltés">
 <!ENTITY status4evar.pane.download "Letöltés">
 <!ENTITY status4evar.pane.addonbar "Kiegészítősáv">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Haladó">
 <!ENTITY status4evar.tab.general "Általános">
 <!ENTITY status4evar.tab.toolbar "Eszköztár">

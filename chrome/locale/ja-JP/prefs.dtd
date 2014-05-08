@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "プログレス">
 <!ENTITY status4evar.pane.download "ダウンロード">
 <!ENTITY status4evar.pane.addonbar "アドオンバー">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "詳細">
 <!ENTITY status4evar.tab.general "基本">
 <!ENTITY status4evar.tab.toolbar "ツールバー">
@@ -86,7 +87,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "別のボーダースタイルを使用">
 <!ENTITY status4evar.addonbar.windowGripper "ウインドウをリサイズするグリップを表示">
 <!ENTITY status4evar.addonbar.closeButton "閉じるボタンを表示">
-<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
+<!ENTITY status4evar.addonbar.legacyShim "旧ステータスバーパネルのサポートを有効化">
 <!ENTITY status4evar.advanced.warning "詳細設定を誤ると、Status-4-Evar はもとより他の拡張機能に対しても問題を発生させることがあります。設定は自己責任で行うこと">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "ロケーションバーで強制的に XBL binding を試みる">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "ロケーションバーでのプログレス表示やテキスト表示に異常がある場合にだけ選択すること（他の拡張機能がロケーションバーで XBL Binding するのを妨げる恐れがあるため）">

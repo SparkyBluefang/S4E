@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Πρόοδος">
 <!ENTITY status4evar.pane.download "Λήψεις">
 <!ENTITY status4evar.pane.addonbar "Εργαλειοθήκη πρόσθετων">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Προηγμένες">
 <!ENTITY status4evar.tab.general "Γενικά">
 <!ENTITY status4evar.tab.toolbar "Εργαλειοθήκη">
@@ -86,7 +87,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Χρήση εναλλακτικού περιγράμματος εργαλειοθήκης">
 <!ENTITY status4evar.addonbar.windowGripper "Εμφάνιση της λαβής αλλαγής μεγέθους του παραθύρου">
 <!ENTITY status4evar.addonbar.closeButton "Εμφάνιση του κουμπιού κλεισίματος">
-<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
+<!ENTITY status4evar.addonbar.legacyShim "Ενεργοποίηση υποστήριξης πίνακα γραμμής κατάστασης παλαιού τύπου">
 <!ENTITY status4evar.advanced.warning "Αυτές οι προηγμένες ρυθμίσεις μπορεί να προκαλέσουν προβλήματα με την επέκταση 'Status-4-EVAR' ή άλλες επεκτάσεις. Τροποποιήστε τις με δικό σας ρίσκο.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Προσπάθεια επιβολής της διάδεσης XBL γραμμής τοποθεσιών.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Δοκιμάστε αυτήν την επιλογή μόνο εάν έχετε προβλήματα σωστής εμφάνισης της προόδου ή του κειμένου κατάστασης στη γραμμή τοποθεσιών. Αυτό εν δυνάμει διασπάει άλλες επεκτάσεις που προσπαθούν να θέσουν κάποια διάδεση XBL στη γραμμή τοποθεσιών.">

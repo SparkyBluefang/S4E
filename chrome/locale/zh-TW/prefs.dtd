@@ -3,16 +3,17 @@
 <!ENTITY status4evar.pane.progress "進度">
 <!ENTITY status4evar.pane.download "下載">
 <!ENTITY status4evar.pane.addonbar "附加元件列">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "進階">
 <!ENTITY status4evar.tab.general "一般">
 <!ENTITY status4evar.tab.toolbar "工具列">
-<!ENTITY status4evar.tab.urlbar "網址列">
+<!ENTITY status4evar.tab.urlbar "位址列">
 <!ENTITY status4evar.tab.popup "彈出視窗">
 <!ENTITY status4evar.tab.tabs "分頁">
 <!ENTITY status4evar.option.none "不顯示">
 <!ENTITY status4evar.option.nothing "無動作">
 <!ENTITY status4evar.option.toolbar "附加元件列">
-<!ENTITY status4evar.option.urlbar "網址列">
+<!ENTITY status4evar.option.urlbar "位址列">
 <!ENTITY status4evar.option.popup "彈出提示">
 <!ENTITY status4evar.option.tooltip "工具提示">
 <!ENTITY status4evar.option.bottom "下方">
@@ -48,7 +49,7 @@
 <!ENTITY toolkit.dom.status.change.label "允許網頁變更狀態文字">
 <!ENTITY status4evar.status.general.linkOver.caption "連結">
 <!ENTITY status4evar.status.linkOver.label "顯示連結內容於:">
-<!ENTITY status4evar.status.linkOver.delay.show.label "顯示連結前的延遲時間:">
+<!ENTITY status4evar.status.linkOver.delay.show.label "顯示連結之前的延遲時間:">
 <!ENTITY status4evar.status.linkOver.delay.hide.label "隱藏連結的延遲時間:">
 <!ENTITY status4evar.status.toolbar.maxLength.label "狀態文字最大長度:">
 <!ENTITY status4evar.status.urlbar.align.label "狀態對齊方式">
@@ -86,7 +87,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "使用替代的工具列邊框">
 <!ENTITY status4evar.addonbar.windowGripper "顯示視窗大小調整器">
 <!ENTITY status4evar.addonbar.closeButton "顯示關閉按鈕">
-<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
+<!ENTITY status4evar.addonbar.legacyShim "啟用傳統位址列面板支援">
 <!ENTITY status4evar.advanced.warning "進階設定可能會使 Status-4-Evar 或其他套件出問題。修改時請自負風險。">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "嘗試強制位址列 XBL binding。">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "只有在位址列進度條或狀態文字顯示有誤時才勾選此設定。另外這也有可能與其他試圖對位址列設定 XBL binding 的套件產生衝突。">

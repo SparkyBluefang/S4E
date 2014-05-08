@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Framdrift">
 <!ENTITY status4evar.pane.download "Nedlasting">
 <!ENTITY status4evar.pane.addonbar "Utvidelseslinje">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Avansert">
 <!ENTITY status4evar.tab.general "Generelt">
 <!ENTITY status4evar.tab.toolbar "Verktøylinje">

@@ -1,50 +1,51 @@
-<!ENTITY status4evar.window.title "Могућности">
+<!ENTITY status4evar.window.title "Status-4-Evar - опције">
 <!ENTITY status4evar.pane.status "Стање">
 <!ENTITY status4evar.pane.progress "Напредак">
 <!ENTITY status4evar.pane.download "Преузимање">
-<!ENTITY status4evar.pane.addonbar "Трака с језичцима">
+<!ENTITY status4evar.pane.addonbar "Трака са додацима">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Напредно">
 <!ENTITY status4evar.tab.general "Опште">
 <!ENTITY status4evar.tab.toolbar "Алатна трака">
-<!ENTITY status4evar.tab.urlbar "Трака за навигацију">
+<!ENTITY status4evar.tab.urlbar "Трака са адресом">
 <!ENTITY status4evar.tab.popup "Искачући">
 <!ENTITY status4evar.tab.tabs "Језичци">
 <!ENTITY status4evar.option.none "ништа">
 <!ENTITY status4evar.option.nothing "ништа">
-<!ENTITY status4evar.option.toolbar "Алатна трака">
-<!ENTITY status4evar.option.urlbar "траци за навигацију">
-<!ENTITY status4evar.option.popup "искачућем прозору">
+<!ENTITY status4evar.option.toolbar "Трака са алаткама">
+<!ENTITY status4evar.option.urlbar "Трака са адресом">
+<!ENTITY status4evar.option.popup "Искачући прозор">
 <!ENTITY status4evar.option.tooltip "Облачић">
 <!ENTITY status4evar.option.bottom "дно">
 <!ENTITY status4evar.option.top "врх">
-<!ENTITY status4evar.option.fill "попуњена">
-<!ENTITY status4evar.option.dlcount "број пријема">
-<!ENTITY status4evar.option.dltime "преостало време">
+<!ENTITY status4evar.option.fill "Попуна">
+<!ENTITY status4evar.option.dlcount "Број пријема">
+<!ENTITY status4evar.option.dltime "Преостало време">
 <!ENTITY status4evar.option.both "обоје">
 <!ENTITY status4evar.option.right "десно">
 <!ENTITY status4evar.option.left "лево">
-<!ENTITY status4evar.option.fixed "исправљено">
+<!ENTITY status4evar.option.fixed "фиксно">
 <!ENTITY status4evar.option.simple "једноставан">
 <!ENTITY status4evar.option.advanced "напредан">
 <!ENTITY status4evar.option.browse "Потражи…">
 <!ENTITY status4evar.option.clear "Очисти">
-<!ENTITY status4evar.option.center "Средина">
-<!ENTITY status4evar.option.offset "Одступање">
-<!ENTITY status4evar.option.repeat "Понављање">
-<!ENTITY status4evar.option.no-repeat "Без понављања">
+<!ENTITY status4evar.option.center "средина">
+<!ENTITY status4evar.option.offset "одступање">
+<!ENTITY status4evar.option.repeat "понављање">
+<!ENTITY status4evar.option.no-repeat "без понављања">
 <!ENTITY status4evar.option.space "Простор">
 <!ENTITY status4evar.option.round "Заобљеност">
 <!ENTITY status4evar.option.firefoxdefault "Подразумевано у Фајерфоксу">
 <!ENTITY status4evar.option.download.library "Библиотека">
 <!ENTITY status4evar.unit.milliseconds "милисекунди">
 <!ENTITY status4evar.unit.seconds "секунди">
-<!ENTITY status4evar.unit.px "тачака">
+<!ENTITY status4evar.unit.px "пиксела">
 <!ENTITY status4evar.status.general.status.caption "Текст стања">
-<!ENTITY status4evar.status.label "Прикажи статус у:">
+<!ENTITY status4evar.status.label "Прикажи стање у:">
 <!ENTITY status4evar.status.timeout.label "Пауза пре чишћења порука о стању:">
 <!ENTITY status4evar.status.default.label "Прикажи подразумевано стање">
-<!ENTITY status4evar.status.network.label "Прикажи мрежно стање">
-<!ENTITY status4evar.status.network.xhr.label "Прикажи позадинско мрежно стање">
+<!ENTITY status4evar.status.network.label "Прикажи стање мреже">
+<!ENTITY status4evar.status.network.xhr.label "Прикажи позадинско стање мреже">
 <!ENTITY toolkit.dom.status.change.label "Дозволи веб страницама да промене стање">
 <!ENTITY status4evar.status.general.linkOver.caption "Везе">
 <!ENTITY status4evar.status.linkOver.label "Прикажи везе у:">
@@ -86,7 +87,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Користи алтернативне ивице трака с алаткама">
 <!ENTITY status4evar.addonbar.windowGripper "Прикажи простор за измену величине прозора">
 <!ENTITY status4evar.addonbar.closeButton "Дугме за затварање">
-<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
+<!ENTITY status4evar.addonbar.legacyShim "Омогући подршку за траку стања">
 <!ENTITY status4evar.advanced.warning "Ове напредне поставке могу да стварају проблеме с овим или другим додацима. Користите их на сопствени ризик.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Приморај XBL повезивање траке за путању.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Изаберите ово само ако имате проблема с напретком траке за путању или се текст стања не приказује исправно. Ово може да онеспособи друге додатке који покушају да користе XBL повезивање на траку за путању.">

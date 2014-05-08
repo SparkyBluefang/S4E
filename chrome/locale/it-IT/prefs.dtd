@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Avanzamento">
 <!ENTITY status4evar.pane.download "Download">
 <!ENTITY status4evar.pane.addonbar "Barra dei componenti aggiuntivi">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Avanzate">
 <!ENTITY status4evar.tab.general "Generale">
 <!ENTITY status4evar.tab.toolbar "Barra degli strumenti">

@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "进度条">
 <!ENTITY status4evar.pane.download "下载">
 <!ENTITY status4evar.pane.addonbar "附加组件栏">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "高级">
 <!ENTITY status4evar.tab.general "常规">
 <!ENTITY status4evar.tab.toolbar "工具栏">
@@ -86,7 +87,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "使用备用的工具栏边框">
 <!ENTITY status4evar.addonbar.windowGripper "显示窗口大小调整控件">
 <!ENTITY status4evar.addonbar.closeButton "显示关闭按钮">
-<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
+<!ENTITY status4evar.addonbar.legacyShim "启用经典状态栏支持">
 <!ENTITY status4evar.advanced.warning "高级设置可能导致Status-4-Evar或者其它扩展出现问题。修改后出现问题后果自负。">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "尝试强制为地址栏绑定XBL">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "请仅在地址栏进度条或者状态文字显示有误的时候选中此项。这样做可能会导致其它扩展为地址栏绑定的XBL失效。">

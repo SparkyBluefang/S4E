@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Напредък">
 <!ENTITY status4evar.pane.download "Изтегляния">
 <!ENTITY status4evar.pane.addonbar "Лента на добавките">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Разширени">
 <!ENTITY status4evar.tab.general "Основни">
 <!ENTITY status4evar.tab.toolbar "Лента с инструменти">

@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Postup">
 <!ENTITY status4evar.pane.download "Sćehnjenje">
 <!ENTITY status4evar.pane.addonbar "Lajsta přidatkow">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Rozšěrjene">
 <!ENTITY status4evar.tab.general "Powšitkowne">
 <!ENTITY status4evar.tab.toolbar "Gratowa lajsta">

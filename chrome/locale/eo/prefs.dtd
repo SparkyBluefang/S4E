@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Plenumado">
 <!ENTITY status4evar.pane.download "Elŝuto">
 <!ENTITY status4evar.pane.addonbar "Breto de aldonaĵoj">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Detala">
 <!ENTITY status4evar.tab.general "Ĝenerala">
 <!ENTITY status4evar.tab.toolbar "Ilaro">

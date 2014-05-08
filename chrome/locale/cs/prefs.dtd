@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Činnost">
 <!ENTITY status4evar.pane.download "Stahování">
 <!ENTITY status4evar.pane.addonbar "Lišta doplňků">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Rozšířené">
 <!ENTITY status4evar.tab.general "Obecné">
 <!ENTITY status4evar.tab.toolbar "Nástrojová lišta">

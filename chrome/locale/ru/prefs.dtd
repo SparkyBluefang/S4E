@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "Индикатор">
 <!ENTITY status4evar.pane.download "Загрузки">
 <!ENTITY status4evar.pane.addonbar "Панель дополнений">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "Advanced">
 <!ENTITY status4evar.tab.general "Общие">
 <!ENTITY status4evar.tab.toolbar "Панель инструментов">

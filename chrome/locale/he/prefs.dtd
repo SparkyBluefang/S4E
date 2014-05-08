@@ -3,6 +3,7 @@
 <!ENTITY status4evar.pane.progress "התקדמות">
 <!ENTITY status4evar.pane.download "הורדה">
 <!ENTITY status4evar.pane.addonbar "שורת ההרחבות">
+<!ENTITY status4evar.pane.statusbar "Status Bar">
 <!ENTITY status4evar.pane.advanced "מתקדם">
 <!ENTITY status4evar.tab.general "כללי">
 <!ENTITY status4evar.tab.toolbar "סרגל כלים">

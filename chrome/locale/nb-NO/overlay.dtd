@@ -1,3 +1,4 @@
+<!ENTITY status4evar.status.toolbar.title "Status Bar">
 <!ENTITY status4evar.status.widget.title "Statustekst">
 <!ENTITY status4evar.progress.widget.title "Framdriftsviser">
 <!ENTITY status4evar.download.widget.title "Nedlastingsstatus">

@@ -1,3 +1,4 @@
+<!ENTITY status4evar.status.toolbar.title "Status Bar">
 <!ENTITY status4evar.status.widget.title "狀態文字">
 <!ENTITY status4evar.progress.widget.title "載入進度">
 <!ENTITY status4evar.download.widget.title "下載狀態">
