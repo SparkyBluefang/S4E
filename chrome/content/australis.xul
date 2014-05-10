@@ -24,7 +24,7 @@
 	<vbox id="browser-bottombox">
 		<toolbar id="status4evar-status-bar"
 			toolbarname="&status4evar.status.toolbar.title;"
-			accesskey="S"
+			accesskey="&status4evar.status.toolbar.accessKey;"
 			customizable="true"
 			class="toolbar-primary"
 			context="toolbar-context-menu"
