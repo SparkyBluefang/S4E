@@ -326,7 +326,10 @@
 		<handlers>
 			<handler event="focus" phase="capturing"><![CDATA[
 				this._hideOverLink();
-				this.setAttribute("pmpack", "end");
+				if(this._pmpack == "center")
+				{
+					this.setAttribute("pmpack", "end");
+				}
 			]]></handler>
 
 			<handler event="blur" phase="capturing"><![CDATA[
