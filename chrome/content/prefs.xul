@@ -306,6 +306,8 @@
 			<preference id="status4evar-pref-download-notify-timeout" name="status4evar.download.notify.timeout" type="int" />
 			<preference id="status4evar-pref-download-progress"       name="status4evar.download.progress"       type="int" />
 			<preference id="status4evar-pref-download-tooltip"        name="status4evar.download.tooltip"        type="int" />
+
+			<preference id="status4evar-pref-download-button-action-command" name="status4evar.download.button.action.command" type="string"/>
 		</preferences>
 
 		<commandset id="status4evar-commandset-download">
@@ -345,6 +347,8 @@
 					<menuitem value="0" label="&status4evar.option.nothing;" />
 					<menuitem value="1" label="&status4evar.option.firefoxdefault;" />
 					<menuitem value="2" label="&status4evar.option.download.library;" />
+					<menuitem value="3" label="&status4evar.option.download.tab;" />
+					<menuitem value="4" label="&status4evar.option.download.thirdparty;" id="status4evar-download-button-action-menu-thirdparty" />
 				</menupopup>
 			</menulist>
 		</hbox>

@@ -285,13 +285,15 @@ AustralisS4EToolbars.prototype =
 
 	updateWindowResizers: function()
 	{
-		if(!this._window.gShowPageResizers) {
+		if(!this._window.gShowPageResizers)
+		{
 			return;
 		}
 
 		let toolbar = this._getters.statusBar;
 		let show = this._window.windowState == this._window.STATE_NORMAL && (!toolbar || toolbar.collapsed);
-		this._gBrowser.browsers.forEach(function(browser) {
+		this._gBrowser.browsers.forEach(function(browser)
+		{
 			browser.showWindowResizer = show;
 		});
 	},

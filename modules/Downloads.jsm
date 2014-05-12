@@ -27,28 +27,27 @@ const CC = Components.classes;
 const CI = Components.interfaces;
 const CU = Components.utils;
 
-const DownloadManagerUIClassic = Components.classesByID["{7dfdf0d1-aff6-4a34-bad1-d0fe74601642}"].getService(CI.nsIDownloadManagerUI);
-
 CU.import("resource://gre/modules/Services.jsm");
 CU.import("resource://gre/modules/PluralForm.jsm");
 CU.import("resource://gre/modules/DownloadUtils.jsm");
 CU.import("resource://gre/modules/PrivateBrowsingUtils.jsm");
 CU.import("resource://gre/modules/XPCOMUtils.jsm");
 
-function S4EDownloadService(window, service, getters)
+function S4EDownloadService(window, gBrowser, service, getters)
 {
 	this._window = window;
+	this._gBrowser = gBrowser;
 	this._service = service;
 	this._getters = getters;
 
 	if(Services.vc.compare("26.0", Services.appinfo.version) <= 0)
 	{
-		this._handler = new JSTransferHandler(this);
+		this._handler = new JSTransferHandler(this._window, this);
 		Services.console.logStringMessage("S4EDownloadService using JSTransferHandler backend");
 	}
 	else
 	{
-		this._handler = new DownloadManagerHandler(this);
+		this._handler = new DownloadManagerHandler(this._window, this);
 		Services.console.logStringMessage("S4EDownloadService using DownloadManagerHandler backend");
 	}
 }
@@ -56,6 +55,7 @@ function S4EDownloadService(window, service, getters)
 S4EDownloadService.prototype =
 {
 	_window:              null,
+	_gBrowser:            null,
 	_service:             null,
 	_getters:             null,
 
@@ -122,7 +122,7 @@ S4EDownloadService.prototype =
 		this.uninit();
 		this._handler.destroy();
 
-		["_window", "_service", "_getters", "_handler"].forEach(function(prop)
+		["_window", "_gBrowser", "_service", "_getters", "_handler"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);
@@ -413,17 +413,32 @@ S4EDownloadService.prototype =
 		switch(this._service.downloadButtonAction)
 		{
 			case 1: // Firefox Default
-				if(this._window.DownloadsCommon.useToolkitUI)
-				{
-					DownloadManagerUIClassic.show(this._window);
-				}
-				else
-				{
-					this._window.DownloadsPanel.showPanel();
-				}
+				this._handler.openUINative();
 				break;
 			case 2: // Show Library
 				this._window.PlacesCommandHook.showPlacesOrganizer("Downloads");
+				break;
+			case 3: // Show Tab
+				let found = this._gBrowser.browsers.some(function(browser, index)
+				{
+					if("about:downloads" == browser.currentURI.spec)
+					{
+						this._gBrowser.selectedTab = this._gBrowser.tabContainer.childNodes[index];
+						return true;
+					}
+				}, this);
+
+				if(!found)
+				{
+					this._window.openUILinkIn("about:downloads", "tab");
+				}
+				break;
+			case 4: // External Command
+				let command = this._service.downloadButtonActionCommand;
+				if(commend)
+				{
+					this._window.goDoCommand(command);
+				}
 				break;
 			default: // Nothing
 				break;
@@ -442,14 +457,7 @@ S4EDownloadService.prototype =
 		switch(this._service.downloadButtonAction)
 		{
 			case 1: // Firefox Default
-				if(this._window.DownloadsCommon.useToolkitUI)
-				{
-					return DownloadManagerUIClassic.visible;
-				}
-				else
-				{
-					return this._window.DownloadsPanel.isPanelShowing;
-				}
+				return this._handler.isUIShowingNative;
 			case 2: // Show Library
 				var organizer = Services.wm.getMostRecentWindow("Places:Organizer");
 				if(organizer)
@@ -459,6 +467,9 @@ S4EDownloadService.prototype =
 					return selectedNode && selectedNode.itemId === downloadsItemId;
 				}
 				return false;
+			case 3: // Show tab
+				let currentURI = this._gBrowser.currentURI;
+				return currentURI && currentURI.spec == "about:downloads";
 			default: // Nothing
 				return false;
 		}
@@ -483,20 +494,23 @@ S4EDownloadService.prototype =
 	}
 };
 
-function DownloadManagerHandler(downloadService)
+function DownloadManagerHandler(window, downloadService)
 {
+	this._window = window;
 	this._downloadService = downloadService;
 	this._api = CC["@mozilla.org/download-manager;1"].getService(CI.nsIDownloadManager);
+	this._classicUI = Components.classesByID["{7dfdf0d1-aff6-4a34-bad1-d0fe74601642}"].getService(CI.nsIDownloadManagerUI);
 }
 
 DownloadManagerHandler.prototype =
 {
+	_window:          null,
 	_downloadService: null,
 	_api:             null,
 
 	destroy: function()
 	{
-		["_downloadService", "_api"].forEach(function(prop)
+		["_window", "_downloadService", "_api", "_classicUI"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);
@@ -527,6 +541,30 @@ DownloadManagerHandler.prototype =
 	get hasPBAPI()
 	{
 		return ('addPrivacyAwareListener' in this._api);
+	},
+
+	openUINative: function()
+	{
+		if(this._window.DownloadsCommon.useToolkitUI)
+		{
+			this._classicUI.show(this._window);
+		}
+		else
+		{
+			this._window.DownloadsPanel.showPanel();
+		}
+	},
+
+	get isUIShowingNative()
+	{
+		if(this._window.DownloadsCommon.useToolkitUI)
+		{
+			return this._classicUI.visible;
+		}
+		else
+		{
+			return this._window.DownloadsPanel.isPanelShowing;
+		}
 	},
 
 	activeEntries: function()
@@ -590,8 +628,10 @@ DownloadManagerHandler.prototype =
 	QueryInterface: XPCOMUtils.generateQI([ CI.nsIDownloadProgressListener, CI.nsISupportsWeakReference, CI.nsIObserver ])
 };
 
-function JSTransferHandler(downloadService)
+function JSTransferHandler(window, downloadService)
 {
+	this._window = window;
+
 	let api = CU.import("resource://gre/modules/Downloads.jsm", {}).Downloads;
 
 	this._activePublic = new JSTransferListener(downloadService, api.getList(api.PUBLIC), false);
@@ -600,6 +640,7 @@ function JSTransferHandler(downloadService)
 
 JSTransferHandler.prototype =
 {
+	_window:          null,
 	_activePublic:    null,
 	_activePrivate:   null,
 
@@ -607,6 +648,11 @@ JSTransferHandler.prototype =
 	{
 		this._activePublic.destroy();
 		this._activePrivate.destroy();
+
+		["_window", "_activePublic", "_activePrivate"].forEach(function(prop)
+		{
+			delete this[prop];
+		}, this);
 	},
 
 	start: function()
@@ -624,6 +670,16 @@ JSTransferHandler.prototype =
 	get hasPBAPI()
 	{
 		return true;
+	},
+
+	openUINative: function()
+	{
+		this._window.DownloadsPanel.showPanel();
+	},
+
+	get isUIShowingNative()
+	{
+		return this._window.DownloadsPanel.isPanelShowing;
 	},
 
 	activeEntries: function()

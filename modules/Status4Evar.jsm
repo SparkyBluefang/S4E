@@ -38,7 +38,7 @@ function Status4Evar(window, gBrowser, toolbox)
 	this.toolbars = new S4EToolbars(this._window, gBrowser, this._toolbox, s4e_service, this.getters);
 	this.statusService = new S4EStatusService(this._window, s4e_service, this.getters);
 	this.progressMeter = new S4EProgressService(gBrowser, s4e_service, this.getters, this.statusService);
-	this.downloadStatus = new S4EDownloadService(this._window, s4e_service, this.getters);
+	this.downloadStatus = new S4EDownloadService(this._window, gBrowser, s4e_service, this.getters);
 	this.sizeModeService = new SizeModeService(this._window, this);
 
 	this._window.addEventListener("unload", this, false);

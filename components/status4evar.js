@@ -51,6 +51,7 @@ Status_4_Evar.prototype =
 	advancedUrlbarForceBinding:     false,
 
 	downloadButtonAction:           1,
+	downloadButtonActionCommand:    "",
 	downloadColorActive:            null,
 	downloadColorPaused:            null,
 	downloadForce:                  false,
@@ -188,6 +189,14 @@ Status_4_Evar.prototype =
 			updateWindow: function(win)
 			{
 				win.caligon.status4evar.downloadStatus.updateBinding();
+			}
+		},
+
+		"download.button.action.command":
+		{
+			update: function()
+			{
+				this.downloadButtonActionCommand = this.prefs.getCharPref("download.button.action.command");
 			}
 		},
 

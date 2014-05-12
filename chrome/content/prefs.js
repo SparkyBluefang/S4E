@@ -436,6 +436,18 @@ var status4evarPrefs =
 		return this.statusUrlbarPositionValue = document.getElementById("status4evar-status-urlbar-position-value");
 	},
 
+	get downloadButtonActionCommandPref()
+	{
+		delete this.downloadButtonActionCommandPref;
+		return this.downloadButtonActionCommandPref = document.getElementById("status4evar-pref-download-button-action-command");
+	},
+
+	get downloadButtonActionThirdPartyItem()
+	{
+		delete this.downloadButtonActionThirdPartyItem;
+		return this.downloadButtonActionThirdPartyItem = document.getElementById("status4evar-download-button-action-menu-thirdparty");
+	},
+
 	onPrefWindowLoad: function()
 	{
 		let showWarning = this.advancedShowWarningPref.value;
@@ -448,6 +460,11 @@ var status4evarPrefs =
 		if(window.getComputedStyle(this.statusUrlbarPositionValue).direction == "ltr")
 		{
 			this.statusUrlbarPositionValue.setAttribute("dir", "reverse");
+		}
+
+		if(!this.downloadButtonActionCommandPref.value)
+		{
+			this.downloadButtonActionThirdPartyItem.disabled = true;
 		}
 	},
 

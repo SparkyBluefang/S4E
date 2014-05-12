@@ -27,6 +27,7 @@ interface nsIStatus4Evar : nsISupports
 	readonly attribute boolean   advancedUrlbarForceBinding;
 
 	readonly attribute long      downloadButtonAction;
+	readonly attribute ACString  downloadButtonActionCommand;
 	readonly attribute ACString  downloadColorActive;
 	readonly attribute ACString  downloadColorPaused;
 	readonly attribute boolean   downloadForce;

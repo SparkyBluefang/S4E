@@ -21,6 +21,7 @@ pref("status4evar.advanced.status.detectVideo", true);
 pref("status4evar.advanced.urlbar.forceBinding", false);
 
 pref("status4evar.download.button.action", 1);
+pref("status4evar.download.button.action.command", "");
 pref("status4evar.download.color.active", "#33FF33");
 pref("status4evar.download.color.paused", "#808080");
 pref("status4evar.download.force", true);

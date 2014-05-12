@@ -1,10 +1,14 @@
 Version next
+* Fix download status implementation to be compatible with Firefox 29.
+* Fix localization issues. (Australis)
+* Support opening download manager with in-tab UI.
+* Support 3rd Party download managers by exposing "status4evar.download.button.action.command" which defines a command name to execute.
 * Updated translations for: da, de, el, es-ES, fr, ja-JP, nl, pl, ro, sr, sv-SE, zh-CN, zh-TW
 
 Version 2014.05.03.06
-* Fix download button icon styles (Australis)
+* Fix download button icon styles. (Australis)
 * Fix Windows and Linux status bar styles. OS X Still needs work. (Australis)
-* Support legacy status bar panel (Australis)
+* Support legacy status bar panel. (Australis)
 
 Version 2014.04.27.21
 * Fix toolbars overlapping download finished animation.
