@@ -383,7 +383,7 @@ Status_4_Evar.prototype =
 				{
 					if(this.progressUrlbar)
 					{
-						urlbar.setAttribute("pmpack", this.progressUrlbar);
+						urlbar.pmpack = this.progressUrlbar;
 					}
 					urlbar_progress.hidden = !this.progressUrlbar;
 				}

@@ -116,6 +116,10 @@
 				null
 			]]></field>
 
+			<field name="_pmpack"><![CDATA[
+				null
+			]]></field>
+
 			<field name="_reOverLinkURL" readonly="true"><![CDATA[
 				/^((?:[a-z0-9+.-]+:\/\/)?[^\/]+\/?)(.*)$/
 			]]></field>
@@ -127,6 +131,17 @@
 				]]></setter>
 				<getter><![CDATA[
 					return this.getAttribute("s4esalign");
+				]]></getter>
+			</property>
+
+			<property name="pmpack">
+				<setter><![CDATA[
+					this.setAttribute("pmpack", val);
+					this._pmpack = val;
+					return val;
+				]]></setter>
+				<getter><![CDATA[
+					return this.getAttribute("pmpack");
 				]]></getter>
 			</property>
 
@@ -311,6 +326,11 @@
 		<handlers>
 			<handler event="focus" phase="capturing"><![CDATA[
 				this._hideOverLink();
+				this.setAttribute("pmpack", "end");
+			]]></handler>
+
+			<handler event="blur" phase="capturing"><![CDATA[
+				this.setAttribute("pmpack", this._pmpack);
 			]]></handler>
 
 			<handler event="ValueChange" phase="capturing"><![CDATA[
