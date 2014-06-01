@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "Πρόοδος">
 <!ENTITY status4evar.pane.download "Λήψεις">
 <!ENTITY status4evar.pane.addonbar "Εργαλειοθήκη πρόσθετων">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "Γραμμή κατάστασης">
 <!ENTITY status4evar.pane.advanced "Προηγμένες">
 <!ENTITY status4evar.tab.general "Γενικά">
 <!ENTITY status4evar.tab.toolbar "Εργαλειοθήκη">
@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "Προσαρμογή">
 <!ENTITY status4evar.option.firefoxdefault "Προεπιλεγμένη του Firefox">
 <!ENTITY status4evar.option.download.library "Βιβλιοθήκη">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "μιλιδευτερόλεπτα">
 <!ENTITY status4evar.unit.seconds "δευτερόλεπτα">
 <!ENTITY status4evar.unit.px "εικονοψηφίδες">

@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "Förlopp">
 <!ENTITY status4evar.pane.download "Filhämtning">
 <!ENTITY status4evar.pane.addonbar "Tilläggsfältet">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "Statusfält">
 <!ENTITY status4evar.pane.advanced "Avancerat">
 <!ENTITY status4evar.tab.general "Allmänt">
 <!ENTITY status4evar.tab.toolbar "Verktygsfält">
@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "Sida vid sida">
 <!ENTITY status4evar.option.firefoxdefault "Firefox standardval">
 <!ENTITY status4evar.option.download.library "Bibliotek">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "ms">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">

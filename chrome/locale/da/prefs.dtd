@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "Forløb">
 <!ENTITY status4evar.pane.download "Filhentning">
 <!ENTITY status4evar.pane.addonbar "Tilføjelseslinje">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "Statuslinje">
 <!ENTITY status4evar.pane.advanced "Avanceret">
 <!ENTITY status4evar.tab.general "Generelt">
 <!ENTITY status4evar.tab.toolbar "Værktøjslinje">
@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "Afrund">
 <!ENTITY status4evar.option.firefoxdefault "Firefox standard">
 <!ENTITY status4evar.option.download.library "Bogmærker og historik">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "millisekunder">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">

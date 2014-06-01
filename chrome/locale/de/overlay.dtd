@@ -1,4 +1,5 @@
-<!ENTITY status4evar.status.toolbar.title "Status Bar">
+<!ENTITY status4evar.status.toolbar.accessKey "S">
+<!ENTITY status4evar.status.toolbar.title "Status-Leiste">
 <!ENTITY status4evar.status.widget.title "Statustext">
 <!ENTITY status4evar.progress.widget.title "Fortschrittsanzeige">
 <!ENTITY status4evar.download.widget.title "Download-Status">

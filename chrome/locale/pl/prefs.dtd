@@ -3,16 +3,16 @@
 <!ENTITY status4evar.pane.progress "Postęp">
 <!ENTITY status4evar.pane.download "Pobieranie">
 <!ENTITY status4evar.pane.addonbar "Pasek dodatków">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "Pasek stanu">
 <!ENTITY status4evar.pane.advanced "Zaawansowane">
 <!ENTITY status4evar.tab.general "Ogólne">
-<!ENTITY status4evar.tab.toolbar "Pasek dodatków">
+<!ENTITY status4evar.tab.toolbar "Pasek narzędzi">
 <!ENTITY status4evar.tab.urlbar "Pasek adresu">
 <!ENTITY status4evar.tab.popup "Powiadomienie">
 <!ENTITY status4evar.tab.tabs "Karty">
 <!ENTITY status4evar.option.none "– nie wyświetlaj –">
 <!ENTITY status4evar.option.nothing "nic">
-<!ENTITY status4evar.option.toolbar "na pasku dodatków">
+<!ENTITY status4evar.option.toolbar "na pasku narzędzi">
 <!ENTITY status4evar.option.urlbar "w pasku adresu">
 <!ENTITY status4evar.option.popup "jako powiadomienie">
 <!ENTITY status4evar.option.tooltip "Podpowiedź">
@@ -30,13 +30,15 @@
 <!ENTITY status4evar.option.browse "Przeglądaj">
 <!ENTITY status4evar.option.clear "Wyczyść">
 <!ENTITY status4evar.option.center "Wyśrodkowanie">
-<!ENTITY status4evar.option.offset "Offset">
+<!ENTITY status4evar.option.offset "Ofset">
 <!ENTITY status4evar.option.repeat "Powtarzaj">
 <!ENTITY status4evar.option.no-repeat "Nie powtarzaj">
 <!ENTITY status4evar.option.space "Odstęp">
 <!ENTITY status4evar.option.round "Zaokrąglenie">
 <!ENTITY status4evar.option.firefoxdefault "domyślne Firefoksa">
 <!ENTITY status4evar.option.download.library "biblioteka">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "ms">
 <!ENTITY status4evar.unit.seconds "s">
 <!ENTITY status4evar.unit.px "px">
@@ -48,7 +50,7 @@
 <!ENTITY status4evar.status.network.xhr.label "Wyświetlaj żądania wykonywane w tle">
 <!ENTITY toolkit.dom.status.change.label "Zezwalaj witrynom na zmianę statusu">
 <!ENTITY status4evar.status.general.linkOver.caption "Adresy odnośników">
-<!ENTITY status4evar.status.linkOver.label "Wyświetlaj adresy odnośników">
+<!ENTITY status4evar.status.linkOver.label "Wyświetlaj adresy odnośników w:">
 <!ENTITY status4evar.status.linkOver.delay.show.label "Opóźnienie przed wyświetleniem odnośnika (ms):">
 <!ENTITY status4evar.status.linkOver.delay.hide.label "Czas wyświetlania odnośnika (ms):">
 <!ENTITY status4evar.status.toolbar.maxLength.label "Maksymalna długość wyświetlanego tekstu">
@@ -70,14 +72,14 @@
 <!ENTITY status4evar.editor.css.image.label "Obrazek:">
 <!ENTITY status4evar.editor.css.image.repeat "Powtarzanie">
 <!ENTITY status4evar.editor.css.image.position "Pozycja">
-<!ENTITY status4evar.editor.css.image.offset "Offset">
+<!ENTITY status4evar.editor.css.image.offset "Ofset">
 <!ENTITY status4evar.download.button.action.label "Czynności przycisku pobierania:">
 <!ENTITY status4evar.download.force.label "Wyświetlaj przycisk pobierania na pasku dodatków">
 <!ENTITY status4evar.download.label.force.label "Wyświetlaj opis przycisku tylko w trybie ikon">
 <!ENTITY status4evar.download.label.label "W opisie statusu pobierania wyświetlaj">
 <!ENTITY status4evar.download.tooltip.label "W podpowiedzi przycisku pobierania wyświetlaj">
 <!ENTITY status4evar.download.progress.label "Wyświetlaj postęp pobierania na przycisku">
-<!ENTITY status4evar.download.progress.average.label "Wyświetlaj średnio zaawansowane pobieranie">
+<!ENTITY status4evar.download.progress.average.label "Wyświetlaj średnią wszystkich pobrań">
 <!ENTITY status4evar.download.progress.max.label "Wyświetlaj najbardziej zaawansowane pobieranie">
 <!ENTITY status4evar.download.progress.min.label "Wyświetlaj najmniej zaawansowane pobieranie">
 <!ENTITY status4evar.download.color.active.label "Kolor paska postępu aktywnych pobrań:">

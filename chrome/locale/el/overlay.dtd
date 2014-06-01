@@ -1,4 +1,5 @@
-<!ENTITY status4evar.status.toolbar.title "Status Bar">
+<!ENTITY status4evar.status.toolbar.accessKey "S">
+<!ENTITY status4evar.status.toolbar.title "Γραμμή κατάστασης">
 <!ENTITY status4evar.status.widget.title "Κείμενο κατάστασης">
 <!ENTITY status4evar.progress.widget.title "Μετρητής προόδου">
 <!ENTITY status4evar.download.widget.title "Κατάσταση λήψεων">

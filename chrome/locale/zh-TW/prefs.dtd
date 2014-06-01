@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "進度">
 <!ENTITY status4evar.pane.download "下載">
 <!ENTITY status4evar.pane.addonbar "附加元件列">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "狀態列">
 <!ENTITY status4evar.pane.advanced "進階">
 <!ENTITY status4evar.tab.general "一般">
 <!ENTITY status4evar.tab.toolbar "工具列">
@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "圓角">
 <!ENTITY status4evar.option.firefoxdefault "Firefox 預設動作">
 <!ENTITY status4evar.option.download.library "打開收藏庫">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "毫秒">
 <!ENTITY status4evar.unit.seconds "秒後">
 <!ENTITY status4evar.unit.px "px">

@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "Progression">
 <!ENTITY status4evar.pane.download "Téléchargement">
 <!ENTITY status4evar.pane.addonbar "Barre des modules">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "Barre d'état">
 <!ENTITY status4evar.pane.advanced "Avancés">
 <!ENTITY status4evar.tab.general "Générales">
 <!ENTITY status4evar.tab.toolbar "Barre d'outils">
@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "Arrondi">
 <!ENTITY status4evar.option.firefoxdefault "Défaut Firefox">
 <!ENTITY status4evar.option.download.library "Bibliothèque">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "millisecondes">
 <!ENTITY status4evar.unit.seconds "secondes">
 <!ENTITY status4evar.unit.px "px">

@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "İlerleme">
 <!ENTITY status4evar.pane.download "İndir">
 <!ENTITY status4evar.pane.addonbar "Çubuğa ekle">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "Durum Çubuğu">
 <!ENTITY status4evar.pane.advanced "Gelişmiş">
 <!ENTITY status4evar.tab.general "Genel">
 <!ENTITY status4evar.tab.toolbar "Araç Çubuğu">
@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "Daire">
 <!ENTITY status4evar.option.firefoxdefault "Firefox varsayılan">
 <!ENTITY status4evar.option.download.library "Kütüphane">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "milisaniye">
 <!ENTITY status4evar.unit.seconds "saniyeler">
 <!ENTITY status4evar.unit.px "px">
@@ -87,7 +89,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Alternatif araç çubuğu çerçevesi kullan">
 <!ENTITY status4evar.addonbar.windowGripper "Pencere yeniden boyutlandırıcıyı göster">
 <!ENTITY status4evar.addonbar.closeButton "Kapatma düğmesini göster">
-<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
+<!ENTITY status4evar.addonbar.legacyShim "Yerleşik durum çubuğu panel desteğini etkinleştir">
 <!ENTITY status4evar.advanced.warning "Bu gelişmiş ayarlar Status-4-Evar veya diğer eklentilerle ilgili sorunlara neden olabilir. Değiştirmek kendi sorumluluğunuzdadır.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Durum Çuğuğu XBL bağlamayı zorla.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Eğer konum çubuğunun ilerlemesinde veya durum metninin doğru gösterilmesinde bir sorun varsa bunu seçin. Durum çubuğundaki XBL bağlayıcı ayarlanırken diğer eklentiler duraklatılacaktır.">

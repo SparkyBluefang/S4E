@@ -1,4 +1,5 @@
-<!ENTITY status4evar.status.toolbar.title "Status Bar">
+<!ENTITY status4evar.status.toolbar.accessKey "S">
+<!ENTITY status4evar.status.toolbar.title "Durum Çubuğu">
 <!ENTITY status4evar.status.widget.title "Durum Metni">
 <!ENTITY status4evar.progress.widget.title "İlerleme Sayacı">
 <!ENTITY status4evar.download.widget.title "İndirme Durumu">

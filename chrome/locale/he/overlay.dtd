@@ -1,4 +1,5 @@
-<!ENTITY status4evar.status.toolbar.title "Status Bar">
+<!ENTITY status4evar.status.toolbar.accessKey "S">
+<!ENTITY status4evar.status.toolbar.title "סרגל מצב">
 <!ENTITY status4evar.status.widget.title "טקסט מצב">
 <!ENTITY status4evar.progress.widget.title "סרגל התקדמות">
 <!ENTITY status4evar.download.widget.title "מצב הורדה">

@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "Fortschritt">
 <!ENTITY status4evar.pane.download "Download">
 <!ENTITY status4evar.pane.addonbar "Add-on-Leiste">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "Status-Leiste">
 <!ENTITY status4evar.pane.advanced "Erweitert">
 <!ENTITY status4evar.tab.general "Allgemein">
 <!ENTITY status4evar.tab.toolbar "Symbolleiste">
@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "gerundet">
 <!ENTITY status4evar.option.firefoxdefault "Firefox Standard">
 <!ENTITY status4evar.option.download.library "Bibliothek">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "Millisekunden">
 <!ENTITY status4evar.unit.seconds "Sekunden">
 <!ENTITY status4evar.unit.px "Pixel">

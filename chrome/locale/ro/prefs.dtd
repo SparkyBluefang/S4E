@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "Progres">
 <!ENTITY status4evar.pane.download "Descărcări">
 <!ENTITY status4evar.pane.addonbar "Bară de suplimente">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "Bară de stare">
 <!ENTITY status4evar.pane.advanced "Complex">
 <!ENTITY status4evar.tab.general "General">
 <!ENTITY status4evar.tab.toolbar "Bară de suplimente">
@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "Rotund">
 <!ENTITY status4evar.option.firefoxdefault "Acțiune predefinită a Firefox">
 <!ENTITY status4evar.option.download.library "Se deschide fereastra colecțiilor">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "milisecunde">
 <!ENTITY status4evar.unit.seconds "secunde">
 <!ENTITY status4evar.unit.px "pixeli">

@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "Arrotondato">
 <!ENTITY status4evar.option.firefoxdefault "Predefinita di Firefox">
 <!ENTITY status4evar.option.download.library "Libreria">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "millisecondi">
 <!ENTITY status4evar.unit.seconds "secondi">
 <!ENTITY status4evar.unit.px "px">

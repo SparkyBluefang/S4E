@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "Voortgang">
 <!ENTITY status4evar.pane.download "Downloaden">
 <!ENTITY status4evar.pane.addonbar "Add-onbalk">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "Statusbalk">
 <!ENTITY status4evar.pane.advanced "Geavanceerd">
 <!ENTITY status4evar.tab.general "Algemeen">
 <!ENTITY status4evar.tab.toolbar "Werkbalk">
@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "Rond">
 <!ENTITY status4evar.option.firefoxdefault "Standaard van Firefox">
 <!ENTITY status4evar.option.download.library "Bibliotheek">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "milliseconden">
 <!ENTITY status4evar.unit.seconds "seconden">
 <!ENTITY status4evar.unit.px "px">

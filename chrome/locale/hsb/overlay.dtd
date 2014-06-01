@@ -1,4 +1,5 @@
-<!ENTITY status4evar.status.toolbar.title "Status Bar">
+<!ENTITY status4evar.status.toolbar.accessKey "S">
+<!ENTITY status4evar.status.toolbar.title "Statusowa lajsta">
 <!ENTITY status4evar.status.widget.title "Statusowy tekst">
 <!ENTITY status4evar.progress.widget.title "Postupowa hrjada">
 <!ENTITY status4evar.download.widget.title "Status sćehnjenja">

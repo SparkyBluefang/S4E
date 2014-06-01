@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "プログレス">
 <!ENTITY status4evar.pane.download "ダウンロード">
 <!ENTITY status4evar.pane.addonbar "アドオンバー">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "ステータスバー">
 <!ENTITY status4evar.pane.advanced "詳細">
 <!ENTITY status4evar.tab.general "基本">
 <!ENTITY status4evar.tab.toolbar "ツールバー">
@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "丸">
 <!ENTITY status4evar.option.firefoxdefault "Firefox デフォルト">
 <!ENTITY status4evar.option.download.library "ライブラリ">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "ミリ秒">
 <!ENTITY status4evar.unit.seconds "秒">
 <!ENTITY status4evar.unit.px "ピクセル">

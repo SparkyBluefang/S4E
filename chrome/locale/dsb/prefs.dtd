@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "Póstup">
 <!ENTITY status4evar.pane.download "Ześěgnjenje">
 <!ENTITY status4evar.pane.addonbar "Kšoma dodankow">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "Statusowa rědka">
 <!ENTITY status4evar.pane.advanced "Rozšyrjone">
 <!ENTITY status4evar.tab.general "Powšykny">
 <!ENTITY status4evar.tab.toolbar "Rědowa kšoma">
@@ -37,6 +37,8 @@
 <!ENTITY status4evar.option.round "Wótrownaś">
 <!ENTITY status4evar.option.firefoxdefault "Firefox standard">
 <!ENTITY status4evar.option.download.library "Biblioteka">
+<!ENTITY status4evar.option.download.tab "Tab">
+<!ENTITY status4evar.option.download.thirdparty "3rd Party">
 <!ENTITY status4evar.unit.milliseconds "milisekundach">
 <!ENTITY status4evar.unit.seconds "sekundach">
 <!ENTITY status4evar.unit.px "px">
@@ -87,7 +89,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Alternatiwne ramiki rědoweje kšomy wužywaś">
 <!ENTITY status4evar.addonbar.windowGripper "Pśimk za změnjanje wjelikosći wokna pokazaś">
 <!ENTITY status4evar.addonbar.closeButton "Tłocašk &quot;Zacyniś&quot; pokazaś">
-<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
+<!ENTITY status4evar.addonbar.legacyShim "Pódpěru za staru statusowu rědku zmóžniś">
 <!ENTITY status4evar.advanced.warning "Toś te rozšyrjone nastajenja mógu problemy z Status-4-Evar abo drugimi rozšyrjenjami zawinowaś. Změńśo je na swójo riziko.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Wopyt XBL-zwězanje adresowego póla wunuźiś.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Wuběŕśo to jano, jolic maśo problemy z póstupom adresowego póla abo jolic statusowy tekst njezwobraznja se korektnje. To mógło snaź druge rozšyrjenja kazyś, kótarež wopytuju XBL-zwězanje na adresowem pólu stajiś.">
