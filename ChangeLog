@@ -1,6 +1,7 @@
 Version next
 * Fix download status implementation to be compatible with Firefox 29.
 * Fix localization issues. (Australis)
+* Improved customization event handling. (Australis)
 * Support opening download manager with in-tab UI.
 * Support 3rd Party download managers by exposing "status4evar.download.button.action.command" which defines a command name to execute.
 * Minimize location bar progress when the location bar is focused.

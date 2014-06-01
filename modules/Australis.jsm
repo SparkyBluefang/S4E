@@ -134,6 +134,9 @@ let AustralisTools = {
 }
 
 let statusBarHandler = {
+
+	customizing: false,
+
 	getSpringId: function(aArea)
 	{
 		let springId = null;
@@ -156,6 +159,14 @@ let statusBarHandler = {
 		return springId;
 	},
 
+	updateWindows: function()
+	{
+		for(let window of CustomizableUI.windows)
+		{
+			window.caligon.status4evar.updateWindow();
+		}
+	},
+
 	onWidgetAdded: function(aWidgetId, aArea, aPosition)
 	{
 		if(aArea === STATUS_BAR_ID && aWidgetId === DEFAULT_WIDGETS[0])
@@ -166,6 +177,11 @@ let statusBarHandler = {
 				CustomizableUI.removeWidgetFromArea(springId, STATUS_BAR_ID, DEFAULT_POSITIONS[0]);
 			}
 		}
+
+		if(!this.customizing && DEFAULT_WIDGETS.indexOf(aWidgetId))
+		{
+			this.updateWindows();
+		}
 	},
 
 	onWidgetRemoved: function(aWidgetId, aArea)
@@ -174,6 +190,23 @@ let statusBarHandler = {
 		{
 			CustomizableUI.addWidgetToArea("spring", STATUS_BAR_ID, DEFAULT_POSITIONS[0]);
 		}
+
+		if(!this.customizing && DEFAULT_WIDGETS.indexOf(aWidgetId))
+		{
+			this.updateWindows();
+		}
+	},
+
+	onCustomizeStart: function(aWindow)
+	{
+		this.customizing = true;
+		aWindow.caligon.status4evar.beforeCustomization();
+	},
+
+	onCustomizeEnd: function(aWindow)
+	{
+		this.customizing = false;
+		this.updateWindows();
 	}
 }
 
