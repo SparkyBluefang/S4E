@@ -1,4 +1,6 @@
 Version next
+
+Version 2014.06.01.03b
 * Fix download status implementation to be compatible with Firefox 29.
 * Fix localization issues. (Australis)
 * Improved customization event handling. (Australis)
