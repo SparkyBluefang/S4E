@@ -54,8 +54,8 @@
 									<xul:hbox class="urlbar-input-layer-children" xbl:inherits="overlinkstate">
 										<children/>
 									</xul:hbox>
-									<html:input anonid="input" class="autocomplete-textbox urlbar-input textbox-input uri-element-right-align" flex="1" allowevents="true"
-										    xbl:inherits="tooltiptext=inputtooltiptext,onfocus,onblur,value,type,maxlength,disabled,size,readonly,placeholder,tabindex,accesskey"/>
+									<html:input anonid="input" class="autocomplete-textbox urlbar-input textbox-input uri-element-right-align" allowevents="true"
+										    xbl:inherits="tooltiptext=inputtooltiptext,value,type,maxlength,disabled,size,readonly,placeholder,tabindex,accesskey"/>
 								</xul:hbox>
 								<xul:hbox class="urlbar-input-layer-children" xbl:inherits="overlinkstate">
 									<children includes="hbox"/>
