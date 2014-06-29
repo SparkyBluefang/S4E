@@ -26,6 +26,11 @@
 	-moz-appearance: statusbar;
 }
 
+#browser-bottombox > #status4evar-status-bar:last-child
+{
+	padding-right: 16px;
+}
+
 #status4evar-download-button #status4evar-download-icon
 {
 	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 198, 18, 180) center no-repeat;

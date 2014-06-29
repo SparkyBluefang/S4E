@@ -12,17 +12,12 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#status4evar-window-gripper
-{
-	display: none;
-}
-
 #status-bar
 {
 	padding-right: 0px;
 }
 
-#addon-bar
+#browser-bottombox > #addon-bar:last-child
 {
 	padding-right: 16px;
 }

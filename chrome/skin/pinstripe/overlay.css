@@ -76,3 +76,12 @@ splitter.status4evar-status-splitter
 	background-color: white;
 }
 
+/*
+ * Gripper
+ */
+
+#status4evar-window-gripper
+{
+	display: none;
+}
+
