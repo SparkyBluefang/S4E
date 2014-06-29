@@ -269,7 +269,7 @@ S4EStatusService.prototype =
 				self._statusChromeTimeoutID = 0;
 				if(isDefault)
 				{
-					self.clearStatusField();
+					self.setDefaultStatus("");
 				}
 				else
 				{
