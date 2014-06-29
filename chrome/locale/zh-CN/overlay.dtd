@@ -2,6 +2,7 @@
 <!ENTITY status4evar.status.toolbar.title "状态栏">
 <!ENTITY status4evar.status.widget.title "状态栏文本">
 <!ENTITY status4evar.progress.widget.title "进度条">
+<!ENTITY status4evar.throbber.widget.title "Activity Indicator">
 <!ENTITY status4evar.download.widget.title "下载状态">
 <!ENTITY status4evar.options.widget.title "Status-4-Evar 选项">
 <!ENTITY status4evar.options.widget.label "Status-4-Evar">

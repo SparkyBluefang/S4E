@@ -2,6 +2,7 @@
 <!ENTITY status4evar.status.toolbar.title "Status Bar">
 <!ENTITY status4evar.status.widget.title "Stavový text">
 <!ENTITY status4evar.progress.widget.title "Měřič činnosti">
+<!ENTITY status4evar.throbber.widget.title "Activity Indicator">
 <!ENTITY status4evar.download.widget.title "Průběh stahování">
 <!ENTITY status4evar.options.widget.title "Možnosti Status-4-Evar">
 <!ENTITY status4evar.options.widget.label "Status-4-Evar">

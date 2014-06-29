@@ -2,6 +2,7 @@
 <!ENTITY status4evar.status.toolbar.title "Barra de estado">
 <!ENTITY status4evar.status.widget.title "Mensaje de estado">
 <!ENTITY status4evar.progress.widget.title "Medidor de progreso">
+<!ENTITY status4evar.throbber.widget.title "Activity Indicator">
 <!ENTITY status4evar.download.widget.title "Estado de las descargas">
 <!ENTITY status4evar.options.widget.title "Opciones de Status-4-Evar">
 <!ENTITY status4evar.options.widget.label "Status-4-Evar">

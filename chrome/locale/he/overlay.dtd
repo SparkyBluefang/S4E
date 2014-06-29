@@ -2,6 +2,7 @@
 <!ENTITY status4evar.status.toolbar.title "סרגל מצב">
 <!ENTITY status4evar.status.widget.title "טקסט מצב">
 <!ENTITY status4evar.progress.widget.title "סרגל התקדמות">
+<!ENTITY status4evar.throbber.widget.title "Activity Indicator">
 <!ENTITY status4evar.download.widget.title "מצב הורדה">
 <!ENTITY status4evar.options.widget.title "אפשרויות Status-4-Evar">
 <!ENTITY status4evar.options.widget.label "Status-4-Evar">

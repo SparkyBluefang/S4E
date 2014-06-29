@@ -2,6 +2,7 @@
 <!ENTITY status4evar.status.toolbar.title "Durum Çubuğu">
 <!ENTITY status4evar.status.widget.title "Durum Metni">
 <!ENTITY status4evar.progress.widget.title "İlerleme Sayacı">
+<!ENTITY status4evar.throbber.widget.title "Activity Indicator">
 <!ENTITY status4evar.download.widget.title "İndirme Durumu">
 <!ENTITY status4evar.options.widget.title "Status-4-Evar Seçenekleri">
 <!ENTITY status4evar.options.widget.label "Status-4-Evar">

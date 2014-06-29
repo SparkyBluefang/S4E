@@ -2,6 +2,7 @@
 <!ENTITY status4evar.status.toolbar.title "Statuslinje">
 <!ENTITY status4evar.status.widget.title "Statustekst">
 <!ENTITY status4evar.progress.widget.title "Statusindikator">
+<!ENTITY status4evar.throbber.widget.title "Activity Indicator">
 <!ENTITY status4evar.download.widget.title "Filhentningsstatus">
 <!ENTITY status4evar.options.widget.title "Status-4-Evar indstillinger">
 <!ENTITY status4evar.options.widget.label "Status-4-Evar">

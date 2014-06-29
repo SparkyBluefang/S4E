@@ -2,6 +2,7 @@
 <!ENTITY status4evar.status.toolbar.title "Statusowa rědka">
 <!ENTITY status4evar.status.widget.title "Statusowy tekst">
 <!ENTITY status4evar.progress.widget.title "Póstupowe měridło">
+<!ENTITY status4evar.throbber.widget.title "Activity Indicator">
 <!ENTITY status4evar.download.widget.title "Ześěgnjeński status">
 <!ENTITY status4evar.options.widget.title "Status-4-Evar Opcije">
 <!ENTITY status4evar.options.widget.label "Status-4-Evar">

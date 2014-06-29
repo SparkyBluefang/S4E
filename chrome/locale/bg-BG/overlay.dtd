@@ -2,6 +2,7 @@
 <!ENTITY status4evar.status.toolbar.title "Лента на състоянието">
 <!ENTITY status4evar.status.widget.title "Текст за състоянието">
 <!ENTITY status4evar.progress.widget.title "Показване на напредъка">
+<!ENTITY status4evar.throbber.widget.title "Activity Indicator">
 <!ENTITY status4evar.download.widget.title "Състояние на изтеглянията">
 <!ENTITY status4evar.options.widget.title "Настройки на Status-4-Evar">
 <!ENTITY status4evar.options.widget.label "Status-4-Evar">
