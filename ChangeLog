@@ -1,4 +1,6 @@
 Version next
+
+Version 2014.06.29.16b
 * Fix gripper styling on OS X (Australis)
 * Fix Windows download button attention icon (Australis).
 * Add throbber toolbar item (Australis).
