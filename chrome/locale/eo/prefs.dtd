@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "Rondigi">
 <!ENTITY status4evar.option.firefoxdefault "Firefox defaŭlta">
 <!ENTITY status4evar.option.download.library "Biblioteko">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "Langeto">
+<!ENTITY status4evar.option.download.thirdparty "Tria ofertanto">
 <!ENTITY status4evar.unit.milliseconds "milisekundoj">
 <!ENTITY status4evar.unit.seconds "sekundoj">
 <!ENTITY status4evar.unit.px "rastrumeroj">

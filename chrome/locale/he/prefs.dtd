@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "עגול">
 <!ENTITY status4evar.option.firefoxdefault "ברירת מחדל Firefox">
 <!ENTITY status4evar.option.download.library "ספרייה">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "לשונית">
+<!ENTITY status4evar.option.download.thirdparty "צד שלישי">
 <!ENTITY status4evar.unit.milliseconds "מילישניות">
 <!ENTITY status4evar.unit.seconds "שניות">
 <!ENTITY status4evar.unit.px "פיקסל">
@@ -89,7 +89,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "שימוש בגבולות סרגל כלים חלופיים">
 <!ENTITY status4evar.addonbar.windowGripper "הצגת תפסן שינוי גודל החלון">
 <!ENTITY status4evar.addonbar.closeButton "הצגת כפתור הסגירה">
-<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
+<!ENTITY status4evar.addonbar.legacyShim "אפשור תמיכת לוח סרגל מצב חדש">
 <!ENTITY status4evar.advanced.warning "הגדרות מתקדמות אלו עלולות לגרום לבעיות עם Status-4-Evar או הרחבות אחרות. שינויים על אחריותכם בלבד.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "ניסיון לאלץ XBL binding על סרגל המיקום.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "בחרו בזה רק אם ישנן בעיות עם התקדמות סרגל המיקום או עם טקסט המצב שמוצג נכונה. ישנה אפשרות שזה יגרום לשבירת הרחבות אחרות אשר מנסות לקבוע XBL binding על סרגל המיקום.">

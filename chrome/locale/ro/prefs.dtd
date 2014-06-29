@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "Rotund">
 <!ENTITY status4evar.option.firefoxdefault "Acțiune predefinită a Firefox">
 <!ENTITY status4evar.option.download.library "Se deschide fereastra colecțiilor">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "Filă">
+<!ENTITY status4evar.option.download.thirdparty "Terți">
 <!ENTITY status4evar.unit.milliseconds "milisecunde">
 <!ENTITY status4evar.unit.seconds "secunde">
 <!ENTITY status4evar.unit.px "pixeli">

@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "Daire">
 <!ENTITY status4evar.option.firefoxdefault "Firefox varsayılan">
 <!ENTITY status4evar.option.download.library "Kütüphane">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "Sekme">
+<!ENTITY status4evar.option.download.thirdparty "3. Parti">
 <!ENTITY status4evar.unit.milliseconds "milisaniye">
 <!ENTITY status4evar.unit.seconds "saniyeler">
 <!ENTITY status4evar.unit.px "px">

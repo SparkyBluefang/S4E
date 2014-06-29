@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "Заобљеност">
 <!ENTITY status4evar.option.firefoxdefault "Подразумевано у Фајерфоксу">
 <!ENTITY status4evar.option.download.library "Библиотека">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "Језичак">
+<!ENTITY status4evar.option.download.thirdparty "независни">
 <!ENTITY status4evar.unit.milliseconds "милисекунди">
 <!ENTITY status4evar.unit.seconds "секунди">
 <!ENTITY status4evar.unit.px "пиксела">

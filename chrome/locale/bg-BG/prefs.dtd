@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "с мащабиране">
 <!ENTITY status4evar.option.firefoxdefault "По подразбиране">
 <!ENTITY status4evar.option.download.library "Библиотека">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "Подпрозорец">
+<!ENTITY status4evar.option.download.thirdparty "Външна приставка">
 <!ENTITY status4evar.unit.milliseconds "милисекунди">
 <!ENTITY status4evar.unit.seconds "секунди">
 <!ENTITY status4evar.unit.px "px">

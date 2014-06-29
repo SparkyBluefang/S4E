@@ -1,4 +1,5 @@
 Version next
+* Updated translations for: bg-BG, da, de, dsb, el, eo, es-ES, fr, he, hsb, ja-JP, nb-NO, nl, pl, ro, sr, sv-SE, tr, zh-CN, zh-TW
 
 Version 2014.06.01.03b
 * Fix download status implementation to be compatible with Firefox 29.

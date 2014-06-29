@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "圓角">
 <!ENTITY status4evar.option.firefoxdefault "Firefox 預設動作">
 <!ENTITY status4evar.option.download.library "打開收藏庫">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "在分頁打開下載清單">
+<!ENTITY status4evar.option.download.thirdparty "第三方下載工具">
 <!ENTITY status4evar.unit.milliseconds "毫秒">
 <!ENTITY status4evar.unit.seconds "秒後">
 <!ENTITY status4evar.unit.px "px">

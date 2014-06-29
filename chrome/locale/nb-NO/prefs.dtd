@@ -3,7 +3,7 @@
 <!ENTITY status4evar.pane.progress "Framdrift">
 <!ENTITY status4evar.pane.download "Nedlasting">
 <!ENTITY status4evar.pane.addonbar "Utvidelseslinje">
-<!ENTITY status4evar.pane.statusbar "Status Bar">
+<!ENTITY status4evar.pane.statusbar "Statuslinje">
 <!ENTITY status4evar.pane.advanced "Avansert">
 <!ENTITY status4evar.tab.general "Generelt">
 <!ENTITY status4evar.tab.toolbar "Verktøylinje">
@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "Avrund">
 <!ENTITY status4evar.option.firefoxdefault "Firefox standard">
 <!ENTITY status4evar.option.download.library "Bibliotek">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "Fane">
+<!ENTITY status4evar.option.download.thirdparty "Tredjepart">
 <!ENTITY status4evar.unit.milliseconds "millisekund">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">
@@ -89,7 +89,7 @@
 <!ENTITY status4evar.addonbar.borderStyle "Bruk alternative kanter for verktøylinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gripeområdet for endring av vindusstørrelse">
 <!ENTITY status4evar.addonbar.closeButton "Vis knappen lukk">
-<!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
+<!ENTITY status4evar.addonbar.legacyShim "Aktiver støtte for eldre statuslinjepanel">
 <!ENTITY status4evar.advanced.warning "Disse avanserte innstillinger kan forårsake problemer med Status-4-Evar eller andre utvidelser. Endre på din egen risiko.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Forsøk å tvinge XBL-bindingen for adresselinjen.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Velg kun dette hvis du har problemer med at adresselinje-framdriftsviser eller statusteksten ikke blir vist riktig. Dette vil potensielt bryte andre utvidelser som forsøker å sette en XBL-binding på adresselinjen.">

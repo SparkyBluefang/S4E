@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "丸">
 <!ENTITY status4evar.option.firefoxdefault "Firefox デフォルト">
 <!ENTITY status4evar.option.download.library "ライブラリ">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "タブ">
+<!ENTITY status4evar.option.download.thirdparty "サードパーティ">
 <!ENTITY status4evar.unit.milliseconds "ミリ秒">
 <!ENTITY status4evar.unit.seconds "秒">
 <!ENTITY status4evar.unit.px "ピクセル">

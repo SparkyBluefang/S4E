@@ -37,10 +37,10 @@
 <!ENTITY status4evar.option.round "圆角">
 <!ENTITY status4evar.option.firefoxdefault "Firefox默认">
 <!ENTITY status4evar.option.download.library "我的足迹">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "标签页">
+<!ENTITY status4evar.option.download.thirdparty "第3方">
 <!ENTITY status4evar.unit.milliseconds "毫秒">
-<!ENTITY status4evar.unit.seconds "秒后">
+<!ENTITY status4evar.unit.seconds "秒">
 <!ENTITY status4evar.unit.px "像素">
 <!ENTITY status4evar.status.general.status.caption "状态文本">
 <!ENTITY status4evar.status.label "显示状态于:">

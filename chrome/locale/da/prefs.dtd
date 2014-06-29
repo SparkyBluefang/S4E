@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "Afrund">
 <!ENTITY status4evar.option.firefoxdefault "Firefox standard">
 <!ENTITY status4evar.option.download.library "Bogmærker og historik">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "Faneblad">
+<!ENTITY status4evar.option.download.thirdparty "Tredjepart">
 <!ENTITY status4evar.unit.milliseconds "millisekunder">
 <!ENTITY status4evar.unit.seconds "sekunder">
 <!ENTITY status4evar.unit.px "px">

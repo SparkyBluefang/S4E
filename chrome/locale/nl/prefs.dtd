@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "Rond">
 <!ENTITY status4evar.option.firefoxdefault "Standaard van Firefox">
 <!ENTITY status4evar.option.download.library "Bibliotheek">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "Downloaden">
+<!ENTITY status4evar.option.download.thirdparty "Externe download-manager">
 <!ENTITY status4evar.unit.milliseconds "milliseconden">
 <!ENTITY status4evar.unit.seconds "seconden">
 <!ENTITY status4evar.unit.px "px">
@@ -80,7 +80,7 @@
 <!ENTITY status4evar.download.tooltip.label "Tooltip downloadstatus:">
 <!ENTITY status4evar.download.progress.label "Voortgang van downloads op de knop tonen">
 <!ENTITY status4evar.download.progress.average.label "Gemiddelde voortgang van downloads tonen">
-<!ENTITY status4evar.download.progress.max.label "De compleetste download tonen">
+<!ENTITY status4evar.download.progress.max.label "De meest complete download tonen">
 <!ENTITY status4evar.download.progress.min.label "De minst complete download tonen">
 <!ENTITY status4evar.download.color.active.label "Voortgangskleur voor actieve downloads:">
 <!ENTITY status4evar.download.color.paused.label "Voortgangskleur voor gepauzeerde downloads:">

@@ -37,8 +37,8 @@
 <!ENTITY status4evar.option.round "Skružić">
 <!ENTITY status4evar.option.firefoxdefault "Firefox standard">
 <!ENTITY status4evar.option.download.library "Biblioteka">
-<!ENTITY status4evar.option.download.tab "Tab">
-<!ENTITY status4evar.option.download.thirdparty "3rd Party">
+<!ENTITY status4evar.option.download.tab "Rajtark">
+<!ENTITY status4evar.option.download.thirdparty "Třeći poskićowar">
 <!ENTITY status4evar.unit.milliseconds "milisekundach">
 <!ENTITY status4evar.unit.seconds "sekundach">
 <!ENTITY status4evar.unit.px "pikselow">
