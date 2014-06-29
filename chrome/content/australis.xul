@@ -21,6 +21,16 @@
 
 	<script type="application/javascript" src="chrome://status4evar/content/australis.js"/>
 
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbaritem id="status4evar-throbber-widget"
+		             title="&status4evar.throbber.widget.title;"
+		             removable="true">
+			<vbox pack="center">
+				<image/>
+			</vbox>
+		</toolbaritem>
+	</toolbarpalette>
+
 	<vbox id="browser-bottombox">
 		<toolbar id="status4evar-status-bar"
 			toolbarname="&status4evar.status.toolbar.title;"

@@ -57,6 +57,19 @@ S4EProgressService.prototype =
 				urlbar_progress.value = val;
 			}
 		}
+
+		let throbber_progress = this._getters.throbberProgress;
+		if(throbber_progress)
+		{
+			if(val)
+			{
+				throbber_progress.setAttribute("progress", val);
+			}
+			else
+			{
+				throbber_progress.removeAttribute("progress");
+			}
+		}
 	},
 
 	set collapsed(val)
@@ -73,6 +86,19 @@ S4EProgressService.prototype =
 			if(urlbar_progress)
 			{
 				urlbar_progress.collapsed = val;
+			}
+		}
+
+		let throbber_progress = this._getters.throbberProgress;
+		if(throbber_progress)
+		{
+			if(val)
+			{
+				throbber_progress.removeAttribute("busy");
+			}
+			else
+			{
+				throbber_progress.setAttribute("busy", true);
 			}
 		}
 	},
