@@ -37,11 +37,6 @@
 	min-height: 18px;
 }
 
-#status4evar-download-button[attention] #status4evar-download-icon
-{
-	background-image: url("chrome://browser/skin/downloads/download-glow.png");
-}
-
 toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
 {
 	-moz-margin-start: 5px !important;

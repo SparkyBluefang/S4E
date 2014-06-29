@@ -58,3 +58,27 @@
 	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 198, 18, 180) center no-repeat;
 }
 
+#status4evar-download-button[attention] #status4evar-download-icon
+{
+	background-image: url("chrome://browser/skin/downloads/download-glow.png");
+}
+
+@media (-moz-windows-theme: aero)
+{
+	@media (-moz-os-version: windows-vista), (-moz-os-version: windows-win7)
+	{
+		#status4evar-download-button[attention] #status4evar-download-icon
+		{
+			background-image: url("chrome://browser/skin/downloads/download-glow-XPVista7.png");
+		}
+	}
+}
+
+@media (not (-moz-windows-theme: aero)), (-moz-os-version: windows-xp)
+{
+	#status4evar-download-button[attention] #status4evar-download-icon
+	{
+		background-image: url("chrome://browser/skin/downloads/download-glow-XPVista7.png");
+	}
+}
+
