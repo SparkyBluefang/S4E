@@ -164,7 +164,7 @@
 							}
 							break;
 						default:
-							this.__proto__.__proto__.handleEvent.call(this, aEvent);
+							Object.getPrototypeOf(Object.getPrototypeOf(this)).handleEvent.call(this, aEvent);
 							break;
 					}
 				]]></body>
@@ -318,7 +318,7 @@
 						return;
 					}
 
-					this.__proto__.__proto__.formatValue.call(this);
+					Object.getPrototypeOf(Object.getPrototypeOf(this)).formatValue.call(this);
 				]]></body>
 			</method>
 		</implementation>

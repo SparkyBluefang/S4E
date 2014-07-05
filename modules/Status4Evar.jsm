@@ -241,7 +241,7 @@ S4EWindowGetters.prototype =
 			{
 				if(!(func in ub))
 				{
-					ub.__proto__[func] = function() {};
+					ub[func] = function() {};
 				}
 			});
 
