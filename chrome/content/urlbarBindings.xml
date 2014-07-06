@@ -100,6 +100,11 @@
 				document.getAnonymousElementByAttribute(this, "anonid", "over-link-path-label");
 			]]></field>
 
+
+			<field name="_status"><![CDATA[
+				null
+			]]></field>
+
 			<field name="_overLinkHostValue"><![CDATA[
 				null
 			]]></field>
@@ -188,6 +193,8 @@
 					// while scrolling.  Therefore it's important that it be fast.  Don't
 					// regress performance when you modify it!
 
+					this._status = aURL;
+
 					// Hide the over-link immediately if necessary.
 					if((!aURL && (XULBrowserWindow.hideOverLinkImmediately
 					   || this._hideOverLinkImmediately)) || this.focused)
@@ -201,7 +208,7 @@
 						this._updateOverLink(aURL);
 						this._setOverLinkState("fade-in");
 					}
-					else
+					else if(this._overLinkState)
 					{
 						this._setOverLinkState("fade-out");
 					}
@@ -211,7 +218,7 @@
 			<method name="_hideOverLink">
 				<body><![CDATA[
 					this._hideOverLinkImmediately = true;
-					this.setStatus("");
+					this._setOverLinkState(null);
 					this._hideOverLinkImmediately = false;
 				]]></body>
 			</method>
@@ -246,7 +253,6 @@
 							this.setAttribute("overlinkstate", aVal);
 							break;
 						default:
-							aVal = null;
 							this.removeAttribute("overlinkstate");
 							this.formatValue();
 							break;
@@ -313,7 +319,7 @@
 
 			<method name="formatValue">
 				<body><![CDATA[
-					if(this._overLinkState != null)
+					if(this._overLinkState)
 					{
 						return;
 					}
@@ -334,6 +340,10 @@
 
 			<handler event="blur" phase="capturing"><![CDATA[
 				this.setAttribute("pmpack", this._pmpack);
+				if(this._status)
+				{
+					this._setOverLinkState("fade-in");
+				}
 			]]></handler>
 
 			<handler event="ValueChange" phase="capturing"><![CDATA[
