@@ -1,4 +1,6 @@
 Version next
+
+Version 2014.07.06.05
 * Fix location bar status interactions with domain highlighting.
 * Fix origin link shift in Firefox 32 location bar.
 
