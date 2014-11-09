@@ -19,7 +19,7 @@ iconURL=chrome://status4evar/skin/s4e32.png
 
 # App data
 defaultLocale=en-US
-Firefox=24.0|33.0a1
+Firefox=31.0|36.0a1
 
 # Build data
 name=status4evar

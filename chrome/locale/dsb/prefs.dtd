@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "Tłocašk wuzwignuś, gaž ześěgnjenje se kóńcy">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatiwne ramiki rědoweje kšomy wužywaś">
 <!ENTITY status4evar.addonbar.windowGripper "Pśimk za změnjanje wjelikosći wokna pokazaś">
-<!ENTITY status4evar.addonbar.closeButton "Tłocašk &quot;Zacyniś&quot; pokazaś">
 <!ENTITY status4evar.addonbar.legacyShim "Pódpěru za staru statusowu rědku zmóžniś">
 <!ENTITY status4evar.advanced.warning "Toś te rozšyrjone nastajenja mógu problemy z Status-4-Evar abo drugimi rozšyrjenjami zawinowaś. Změńśo je na swójo riziko.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Wopyt XBL-zwězanje adresowego póla wunuźiś.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Wuběŕśo to jano, jolic maśo problemy z póstupom adresowego póla abo jolic statusowy tekst njezwobraznja se korektnje. To mógło snaź druge rozšyrjenja kazyś, kótarež wopytuju XBL-zwězanje na adresowem pólu stajiś.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Modus połneje wobrazowki namakaś a wótkaze/status pśigódnje pokazaś.">
 <!ENTITY status4evar.advanced.status.detectVideo "Statusowe wuskokujuce wokno we wideo HTML5 w modusu połneje wobrazowki schowaś.">
-<!ENTITY toolkit.classic.download.window.label "Klasiske ześěgnjeńske wokno wužywaś">

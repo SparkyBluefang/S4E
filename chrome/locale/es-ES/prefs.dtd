@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "Mantener resaltado el botón después de completar las descargas durante:">
 <!ENTITY status4evar.addonbar.borderStyle "Usar un estilo visual alternativo para los bordes">
 <!ENTITY status4evar.addonbar.windowGripper "Mostrar el deslizador para redimensionar la ventana">
-<!ENTITY status4evar.addonbar.closeButton "Mostrar el botón «Cerrar»">
 <!ENTITY status4evar.addonbar.legacyShim "Habilitar soporte a la barra de estado heredada">
 <!ENTITY status4evar.advanced.warning "Cambiar estas opciones avanzadas puede causar problemas con Status-4-Evar u otras extensiones. Hágalo bajo su propia responsabilidad.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Forzar la vinculación («binding») XBL a la barra de direcciones">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Habilite esta opción sólo si el medidor de progreso o el mensaje de estado no son mostrados correctamente en la barra de direcciones. Esto causará problemas potencialmente a otras extensiones que asocian una vinculación XBL a la barra de direcciones.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Detectar el modo de pantalla completa y mostrar debidamente los enlaces y mensajes de estado.">
 <!ENTITY status4evar.advanced.status.detectVideo "Oculta el mensaje de estado emergente cuando se reproduce vídeo HTML5 a pantalla completa.">
-<!ENTITY toolkit.classic.download.window.label "Usar la ventana de descargas clásica">

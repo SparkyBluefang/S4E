@@ -42,7 +42,6 @@ Status_4_Evar.prototype =
 	prefs:          null,
 
 	addonbarBorderStyle:            false,
-	addonbarCloseButton:            false,
 	addonbarLegacyShim:             true,
 	addonbarWindowGripper:          true,
 
@@ -105,22 +104,6 @@ Status_4_Evar.prototype =
 				{
 					this.setBoolElementAttribute(browser_bottom_box, "s4eboarder", this.addonbarBorderStyle);
 				}
-			}
-		},
-
-		"addonbar.closeButton":
-		{
-			update: function()
-			{
-				this.addonbarCloseButton = this.prefs.getBoolPref("addonbar.closeButton");
-			},
-			updateWindow: function(win)
-			{
-				let addonbar_close_button = win.caligon.status4evar.getters.addonbarCloseButton;
-				if(addonbar_close_button)
-				{
-					addonbar_close_button.hidden = !this.addonbarCloseButton;
-				} 
 			}
 		},
 

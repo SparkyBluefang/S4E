@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "Timp de evidențiere a butonului de stare a descărcărilor după terminarea acestora:">
 <!ENTITY status4evar.addonbar.borderStyle "Se utilizează chenarul alternativ al barei de suplimente">
 <!ENTITY status4evar.addonbar.windowGripper "Se afișează glisorul de redimensionare a ferestrei navigatorului">
-<!ENTITY status4evar.addonbar.closeButton "Se afișează butonul de ascundere a barei de suplimente">
 <!ENTITY status4evar.addonbar.legacyShim "Se activează suportul pentru vechea bară de stare">
 <!ENTITY status4evar.advanced.warning "Aceste opțiuni complexe pot provoca unele probleme cu Status-4-Evar sau alte suplimentele. Modificați-le pe propriul risc.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Se încearcă forțarea conexiunii XBL cu bara de adrese">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Selectați această opțiune doar dacă aveţi probleme de afișare a progresului sau textului pe bara de adrese. Acest lucru poate bloca alte suplimente care încearcă să stabilească o conexiune XBL cu bara de adrese.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Se detectează modul ecran-complet și se afișează legăturile/starea corespunzătoare">
 <!ENTITY status4evar.advanced.status.detectVideo "Se ascunde mesajul instantaneu de stare la redarea videoclipurilor HTML5 în modul ecran-complet">
-<!ENTITY toolkit.classic.download.window.label "Se folosește fereastra clasică de descărcare">

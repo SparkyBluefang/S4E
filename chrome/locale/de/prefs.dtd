@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "Schaltfläche hervorheben, nach beendeten Download:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternativen Symbolleisten-Rand verwenden">
 <!ENTITY status4evar.addonbar.windowGripper "Anfasser zur Fenstergrößenänderung anzeigen">
-<!ENTITY status4evar.addonbar.closeButton "Schließen-Schaltfläche anzeigen">
 <!ENTITY status4evar.addonbar.legacyShim "Unterstützung für alte Statusleiste aktivieren">
 <!ENTITY status4evar.advanced.warning "Diese erweiterten Einstellungen können Probleme mit Status-4-Evar oder anderen Erweiterungen verursachen. Änderungen nur auf eigene Gefahr!">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "XBL-Bindung der Adressleiste erzwingen.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Nur auswählen wenn Sie Probleme mit der Darstellung der Fortschrittsanzeige in der Adressleiste oder dem Statustext haben. Dies kann möglicherweise Probleme, mit anderen Erweiterungen die eine XBL-Bindung auf der Adressleiste setzen, verursachen.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Vollbildmodus erkennen und Links bzw. Status entsprechend anzeigen.">
 <!ENTITY status4evar.advanced.status.detectVideo "Status Popup-Fenster bei HTML5 Videos ausblenden.">
-<!ENTITY toolkit.classic.download.window.label "Klassisches Download-Fenster verwenden">

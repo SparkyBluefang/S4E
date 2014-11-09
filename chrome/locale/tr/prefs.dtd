@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "İndirme tamamlandığında düğmeyi vurgula:">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatif araç çubuğu çerçevesi kullan">
 <!ENTITY status4evar.addonbar.windowGripper "Pencere yeniden boyutlandırıcıyı göster">
-<!ENTITY status4evar.addonbar.closeButton "Kapatma düğmesini göster">
 <!ENTITY status4evar.addonbar.legacyShim "Yerleşik durum çubuğu panel desteğini etkinleştir">
 <!ENTITY status4evar.advanced.warning "Bu gelişmiş ayarlar Status-4-Evar veya diğer eklentilerle ilgili sorunlara neden olabilir. Değiştirmek kendi sorumluluğunuzdadır.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Durum Çuğuğu XBL bağlamayı zorla.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Eğer konum çubuğunun ilerlemesinde veya durum metninin doğru gösterilmesinde bir sorun varsa bunu seçin. Durum çubuğundaki XBL bağlayıcı ayarlanırken diğer eklentiler duraklatılacaktır.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Tam ekran modunu algıla ve bağlantıları/durumu uygun şekilde göster.">
 <!ENTITY status4evar.advanced.status.detectVideo "Tam ekranlı HTML5 videoda açılır pencereyi gizle.">
-<!ENTITY toolkit.classic.download.window.label "Klasik indirme pencersini kullan">

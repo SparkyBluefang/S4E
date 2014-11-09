@@ -11,7 +11,6 @@
 */
 
 pref("status4evar.addonbar.borderStyle", false);
-pref("status4evar.addonbar.closeButton", false);
 pref("status4evar.addonbar.legacyShim", true);
 pref("status4evar.addonbar.windowGripper", true);
 

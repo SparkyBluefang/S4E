@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "Fremhæv knap når filhentning er færdig:">
 <!ENTITY status4evar.addonbar.borderStyle "Anvend alternative kanter til værktøjslinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gribelinjen til ændring af vinduesstørrelse">
-<!ENTITY status4evar.addonbar.closeButton "Vis knappen Luk">
 <!ENTITY status4evar.addonbar.legacyShim "Aktiver understøttelse af ældre statuslinjepanel">
 <!ENTITY status4evar.advanced.warning "Disse avancerede indstillinger kan forårsage problemer med Status-4-Evar eller andre udvidelser. Ændr på eget ansvar.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Forsøg af tvinge adresselinjen XBL-binding.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Vælg kun denne indstilling, hvis du har problemer med, at forløbet i adresselinjen eller statusteksten vises forkert. Den kan muligvis ødelægge andre udvidelser, som prøver at sætte en XBL-binding på adresselinjen.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Registrér fuldskærmstilstand og vis links/status korrekt.">
 <!ENTITY status4evar.advanced.status.detectVideo "Skjul status-pop op i fuldskærms-HTML-video.">
-<!ENTITY toolkit.classic.download.window.label "Brug klassisk filhentningsvindue">

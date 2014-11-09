@@ -25,17 +25,7 @@ function S4EToolbars(window, gBrowser, toolbox, service, getters)
 	this._toolbox = toolbox;
 	this._service = service;
 	this._getters = getters;
-
-	if(Services.vc.compare("28.*", Services.appinfo.version) < 0)
-	{
-		this._handler = new AustralisS4EToolbars(this._window, gBrowser, this._getters);
-		Services.console.logStringMessage("S4EToolbars using AustralisS4EToolbars backend");
-	}
-	else
-	{
-		this._handler = new ClassicS4EToolbars(this._window, this._toolbox);
-		Services.console.logStringMessage("S4EToolbars using ClassicS4EToolbars backend");
-	}
+	this._handler = new AustralisS4EToolbars(this._window, gBrowser, this._getters);
 }
 
 S4EToolbars.prototype =
@@ -138,104 +128,6 @@ S4EToolbars.prototype =
 		gripper = this._handler.buildGripper(toolbar, gripper, "status4evar-window-gripper");
 
 		toolbar.appendChild(gripper);
-	}
-};
-
-function ClassicS4EToolbars(window, toolbox)
-{
-	this._window = window;
-	this._toolbox = toolbox;
-}
-
-ClassicS4EToolbars.prototype =
-{
-	_window:  null,
-	_toolbox: null,
-
-	setup: function(firstRun, firstRunAustralis)
-	{
-		let document = this._window.document;
-
-		let addon_bar = document.getElementById("addon-bar");
-		if(addon_bar)
-		{
-			let baseSet = "addonbar-closebutton"
-				    + ",status4evar-status-widget"
-				    + ",status4evar-download-button"
-				    + ",status4evar-progress-widget";
-
-			// Update the defaultSet
-			let defaultSet = baseSet;
-			let defaultSetIgnore = ["addonbar-closebutton", "spring", "status-bar"];
-			addon_bar.getAttribute("defaultset").split(",").forEach(function(item)
-			{
-				if(defaultSetIgnore.indexOf(item) == -1)
-				{
-					defaultSet += "," + item;
-				}
-			});
-			defaultSet += ",status-bar"
-			addon_bar.setAttribute("defaultset", defaultSet);
-
-			// Update the currentSet
-			if(firstRun)
-			{
-				let isCustomizableToolbar = function(aElt)
-				{
-					return aElt.localName == "toolbar" && aElt.getAttribute("customizable") == "true";
-				}
-
-				let isCustomizedAlready = false;
-				let toolbars = Array.filter(this._toolbox.childNodes, isCustomizableToolbar).concat(
-					       Array.filter(this._toolbox.externalToolbars, isCustomizableToolbar));
-				toolbars.forEach(function(toolbar)
-				{
-					if(toolbar.currentSet.indexOf("status4evar") > -1)
-					{
-						isCustomizedAlready = true;
-					}
-				});
-
-				if(!isCustomizedAlready)
-				{
-					let currentSet = baseSet;
-					let currentSetIgnore = ["addonbar-closebutton", "spring"];
-					addon_bar.currentSet.split(",").forEach(function(item)
-					{
-						if(currentSetIgnore.indexOf(item) == -1)
-						{
-							currentSet += "," + item;
-						}
-					});
-					addon_bar.currentSet = currentSet;
-					addon_bar.setAttribute("currentset", currentSet);
-					document.persist(addon_bar.id, "currentset");
-					this._window.setToolbarVisibility(addon_bar, true);
-				}
-			}
-		}
-	},
-
-	destroy: function()
-	{
-		["_window", "_toolbox"].forEach(function(prop)
-		{
-			delete this[prop];
-		}, this);
-	},
-
-	buildGripper: function(toolbar, gripper, id)
-	{
-		if(!gripper)
-		{
-			let document = this._window.document;
-
-			gripper = document.createElement("resizer");
-			gripper.id = id;
-			gripper.dir = "bottomend";
-		}
-
-		return gripper;
 	}
 };
 

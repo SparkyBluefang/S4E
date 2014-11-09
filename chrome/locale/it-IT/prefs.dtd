@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "Colora il pulsante quando un download viene completato:">
 <!ENTITY status4evar.addonbar.borderStyle "Usa bordo alternativo per le barre degli strumenti">
 <!ENTITY status4evar.addonbar.windowGripper "Mostra la maniglia di ridimensionamento della finestra">
-<!ENTITY status4evar.addonbar.closeButton "Mostra il pulsante di chiusura">
 <!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
 <!ENTITY status4evar.advanced.warning "Queste impostazioni avanzate potrebbero causare problemi con Status-4-Evar o altre estensioni.  Modificatele a vostro rischio.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Tenta di forzare il binding XBL della barra degli indirizzi.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Selezionare questo solo se si verificano problemi nella visualizzazione della barra di avanzamento o dei messaggi di stato nella barra degli indirizzi.  Questo potrebbe causare il malfunzionamento di altre estensioni che tentano di effettuare un binding XBL con la barra degli indirizzi.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Rileva modalità a schermo intero e mostra indirizzi e informazioni di stato in modo appropriato.">
 <!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
-<!ENTITY toolkit.classic.download.window.label "Usa finestra di download classica">

@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "Fremhev knappen når nedlastingen er fullført:">
 <!ENTITY status4evar.addonbar.borderStyle "Bruk alternative kanter for verktøylinje">
 <!ENTITY status4evar.addonbar.windowGripper "Vis gripeområdet for endring av vindusstørrelse">
-<!ENTITY status4evar.addonbar.closeButton "Vis knappen lukk">
 <!ENTITY status4evar.addonbar.legacyShim "Aktiver støtte for eldre statuslinjepanel">
 <!ENTITY status4evar.advanced.warning "Disse avanserte innstillinger kan forårsake problemer med Status-4-Evar eller andre utvidelser. Endre på din egen risiko.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Forsøk å tvinge XBL-bindingen for adresselinjen.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Velg kun dette hvis du har problemer med at adresselinje-framdriftsviser eller statusteksten ikke blir vist riktig. Dette vil potensielt bryte andre utvidelser som forsøker å sette en XBL-binding på adresselinjen.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Oppdag fullskjermmodus og vis lenker/status riktig.">
 <!ENTITY status4evar.advanced.status.detectVideo "Skjul statussprettopp i fullskjerms-HTML5-video.">
-<!ENTITY toolkit.classic.download.window.label "Bruk klassisk nedlastingsvindu">

@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "Tłóčatko wuzběhnyć, hdyž so sćehnjenje kónči">
 <!ENTITY status4evar.addonbar.borderStyle "Alternatiwne ramiki za gratowe lajsty wužiwać">
 <!ENTITY status4evar.addonbar.windowGripper "Přimk za změnjenje wulkosće wokna pokazać">
-<!ENTITY status4evar.addonbar.closeButton "Tłóčatko 'Začinić' pokazać">
 <!ENTITY status4evar.addonbar.legacyShim "Podpěru za staru statusowu lajstu zmóžnić">
 <!ENTITY status4evar.advanced.warning "Tute rozšěrjene nastajenja móža problemy z Status-4-Evar abo druhimi rozšěrjenjemi zawinować. Změńće je na swoje riziko.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Pospyt XBL-zwjazanje adresoweho pola wunuzować.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Wubjerće to jenož, jeli maće problemy z postupom adresoweho pola abo jeli statusowy tekst so korektnje njezwobraznja. To móhło snano druhim rozšěrjenjam haćić, kotrež pospytuja XBL-zwjazanje na adresowym polu stajić.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Modus połneje wobrazowki namakać a wotkazy/status přihódnje pokazać.">
 <!ENTITY status4evar.advanced.status.detectVideo "Statusowe wuskakowace wokno we wideju HTML5 w modusu połneje wobrazowki schować.">
-<!ENTITY toolkit.classic.download.window.label "Klasiske sćehnjenske wokno wužiwać">

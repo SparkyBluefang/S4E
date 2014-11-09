@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "Истакни дугме када се преузимање заврши:">
 <!ENTITY status4evar.addonbar.borderStyle "Користи алтернативне ивице трака с алаткама">
 <!ENTITY status4evar.addonbar.windowGripper "Прикажи простор за измену величине прозора">
-<!ENTITY status4evar.addonbar.closeButton "Дугме за затварање">
 <!ENTITY status4evar.addonbar.legacyShim "Омогући подршку за траку стања">
 <!ENTITY status4evar.advanced.warning "Ове напредне поставке могу да стварају проблеме с овим или другим додацима. Користите их на сопствени ризик.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Приморај XBL повезивање траке за путању.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Изаберите ово само ако имате проблема с напретком траке за путању или се текст стања не приказује исправно. Ово може да онеспособи друге додатке који покушају да користе XBL повезивање на траку за путању.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Препознај када је прозор развучен преко целог екрана и прикажи одговарајуће везе/стања.">
 <!ENTITY status4evar.advanced.status.detectVideo "Сакриј искачући прозор стања приликом гледања HTML5 видео снимка преко целог екрана.">
-<!ENTITY toolkit.classic.download.window.label "Користи класични прозор са преузимањима">

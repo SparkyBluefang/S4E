@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "Wyróżniaj przycisk po zakończeniu pobierania przez">
 <!ENTITY status4evar.addonbar.borderStyle "Wyświetlaj obramowanie paska">
 <!ENTITY status4evar.addonbar.windowGripper "Wyświetlaj uchwyt zmiany rozmiaru okna">
-<!ENTITY status4evar.addonbar.closeButton "Wyświetlaj przycisk zamykania">
 <!ENTITY status4evar.addonbar.legacyShim "Włącz panel dziedziczonego paska stanu">
 <!ENTITY status4evar.advanced.warning "Te ustawienia mogą powodować problemy z rozszerzeniem Status-4-Evar lub innymi rozszerzeniami. Zmieniasz je na własną odpowiedzialność.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Próbuj ustawić wiązania XBL w pasku adresu">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Włącz tę funkcję tylko, gdy masz problemy z paskiem postępu w pasku adresu lub z prawidłowym wyświetlaniem tekstu statusu. Funkcja ta może powodować konflikty z innymi rozszerzeniami, które próbują w pasku adresu ustawić wiązania XBL.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Wykryj tryb pełnoekranowy i wyświetl odpowiednio odnośniki/status/">
 <!ENTITY status4evar.advanced.status.detectVideo "Nie wyświetlaj okna statusu, gdy wideo HTML5 jest w trybie pełnoekranowym.">
-<!ENTITY toolkit.classic.download.window.label "Stosuj klasyczne okno pobierania">

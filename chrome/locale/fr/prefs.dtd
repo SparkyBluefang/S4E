@@ -88,11 +88,9 @@
 <!ENTITY status4evar.download.notify.timeout.label "Mettre en évidence le bouton lorsque le téléchargement est terminé :">
 <!ENTITY status4evar.addonbar.borderStyle "Utiliser les bordures de barre d'outils alternatives">
 <!ENTITY status4evar.addonbar.windowGripper "Afficher le pointeur de redimensionnement de fenêtre">
-<!ENTITY status4evar.addonbar.closeButton "Afficher le bouton de fermeture">
 <!ENTITY status4evar.addonbar.legacyShim "Activer l'héritage de prise en charge du panneau de barre d'état">
 <!ENTITY status4evar.advanced.warning "Ces paramètres avancés peuvent entraîner des problèmes avec Status-4-Evar ou d'autres extensions. Modifications à vos propre risques.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding "Tentative de forcer le binding XBL de la barre de navigation.">
 <!ENTITY status4evar.advanced.urlbar.forceBinding.desc "Ne sélectionnez ceci que si vous avez des problèmes avec l'affichage du texte de progression ou d'état de la barre de navigation. Cela pourra potentiellement endommager d'autres extensions qui tentent de définir le binding XBL sur la barre de navigation.">
 <!ENTITY status4evar.advanced.status.detectFullScreen "Détecter le mode plein écran et afficher les liens et l'état appropriés.">
 <!ENTITY status4evar.advanced.status.detectVideo "Masquer la popup d'état pour une vidéo HTML5 en plein écran.">
-<!ENTITY toolkit.classic.download.window.label "Utiliser la fenêtre de téléchargements classique">

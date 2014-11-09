@@ -1,4 +1,5 @@
 Version next
+* Drop support for Firefox 30.0 and older.
 
 Version 2014.07.06.05
 * Fix location bar status interactions with domain highlighting.
