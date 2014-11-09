@@ -112,7 +112,6 @@
 
 <!ENTITY status4evar.addonbar.borderStyle "Use alternate toolbar borders">
 <!ENTITY status4evar.addonbar.windowGripper "Show the window re-size gripper">
-<!ENTITY status4evar.addonbar.closeButton "Show the close button">
 <!ENTITY status4evar.addonbar.legacyShim "Enable legacy status bar panel support">
 
 
@@ -124,6 +123,4 @@
 
 <!ENTITY status4evar.advanced.status.detectFullScreen "Detect full-screen mode and show links/status appropriately.">
 <!ENTITY status4evar.advanced.status.detectVideo "Hide status popup in full-screen HTML5 video.">
-
-<!ENTITY toolkit.classic.download.window.label "Use classic download window">
 
