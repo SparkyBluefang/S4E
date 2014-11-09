@@ -106,7 +106,7 @@ def processL10N(mode, tFile=None, tString=None):
 				cleanFile(os.path.join(root, filename))
 		elif mode == "remove":
 			for filename in files:
-				if filename == tFile:
+				if filename == tFile or tFile == '*':
 					removeString(os.path.join(root, filename), tString)
 
 #
