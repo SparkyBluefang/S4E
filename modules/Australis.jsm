@@ -18,8 +18,7 @@ const CU = Components.utils;
 
 const STATUS_BAR_ID = "status4evar-status-bar";
 const LEGACY_SHIM_ID = "status4evar-legacy-widget";
-const DEFAULT_WIDGETS = ["status4evar-status-widget", "status4evar-download-button", "status4evar-progress-widget"];
-const DEFAULT_POSITIONS = [0, 1, 2];
+const DEFAULT_WIDGETS = ["status4evar-status-widget", "status4evar-progress-widget", "status4evar-download-button"];
 
 CU.import("resource:///modules/CustomizableUI.jsm");
 CU.import("resource://gre/modules/Services.jsm");
@@ -48,12 +47,12 @@ let AustralisTools = {
 			if(!placement || placement.area === CustomizableUI.AREA_NAVBAR || placement.area === STATUS_BAR_ID)
 			{
 				Services.console.logStringMessage("S4E Australis migration - moving widget: " + id + " [" + CustomizableUI.isWidgetRemovable(id) + "]");
-				CustomizableUI.addWidgetToArea(id, STATUS_BAR_ID, DEFAULT_POSITIONS[index]);
+				CustomizableUI.addWidgetToArea(id, STATUS_BAR_ID, index);
 			}
 			else if(id === DEFAULT_WIDGETS[0])
 			{
 				Services.console.logStringMessage("S4E Australis migration - adding spring");
-				CustomizableUI.addWidgetToArea("spring", STATUS_BAR_ID, DEFAULT_POSITIONS[index]);
+				CustomizableUI.addWidgetToArea("spring", STATUS_BAR_ID, index);
 			}
 		});
 
@@ -174,7 +173,7 @@ let statusBarHandler = {
 			let springId = this.getSpringId(aArea);
 			if(springId)
 			{
-				CustomizableUI.removeWidgetFromArea(springId, STATUS_BAR_ID, DEFAULT_POSITIONS[0]);
+				CustomizableUI.removeWidgetFromArea(springId, STATUS_BAR_ID, 0);
 			}
 		}
 
@@ -188,7 +187,7 @@ let statusBarHandler = {
 	{
 		if(aArea === STATUS_BAR_ID && aWidgetId === DEFAULT_WIDGETS[0])
 		{
-			CustomizableUI.addWidgetToArea("spring", STATUS_BAR_ID, DEFAULT_POSITIONS[0]);
+			CustomizableUI.addWidgetToArea("spring", STATUS_BAR_ID, 0);
 		}
 
 		if(!this.customizing && DEFAULT_WIDGETS.indexOf(aWidgetId))
