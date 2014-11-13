@@ -42,8 +42,6 @@ function Status4Evar(window, gBrowser, toolbox)
 	this.progressMeter = new S4EProgressService(gBrowser, s4e_service, this.getters, this.statusService);
 	this.downloadStatus = new S4EDownloadService(this._window, gBrowser, s4e_service, this.getters);
 	this.sizeModeService = new SizeModeService(this._window, this);
-
-	this._window.addEventListener("unload", this, false);
 }
 
 Status4Evar.prototype =
@@ -61,11 +59,7 @@ Status4Evar.prototype =
 
 	setup: function()
 	{
-		if(Services.vc.compare("28.*", Services.appinfo.version) >= 0)
-		{
-			this._toolbox.addEventListener("beforecustomization", this, false);
-			this._toolbox.addEventListener("aftercustomization", this, false);
-		}
+		this._window.addEventListener("unload", this, false);
 
 		this.toolbars.setup();
 		this.updateWindow();
@@ -81,11 +75,6 @@ Status4Evar.prototype =
 	destroy: function()
 	{
 		this._window.removeEventListener("unload", this, false);
-		if(Services.vc.compare("28.*", Services.appinfo.version) >= 0)
-		{
-			this._toolbox.removeEventListener("aftercustomization", this, false);
-			this._toolbox.removeEventListener("beforecustomization", this, false);
-		}
 
 		this.getters.destroy();
 		this.statusService.destroy();
@@ -107,12 +96,6 @@ Status4Evar.prototype =
 		{
 			case "unload":
 				this.destroy();
-				break;
-			case "beforecustomization":
-				this.beforeCustomization();
-				break;
-			case "aftercustomization":
-				this.updateWindow();
 				break;
 		}
 	},
@@ -195,8 +178,6 @@ S4EWindowGetters.prototype =
 	_window:    null,
 	_getterMap:
 		[
-			["addonbar",               "addon-bar"],
-			["addonbarCloseButton",    "addonbar-closebutton"],
 			["browserBottomBox",       "browser-bottombox"],
 			["downloadButton",         "status4evar-download-button"],
 			["downloadButtonTooltip",  "status4evar-download-tooltip"],
@@ -271,7 +252,7 @@ S4EWindowGetters.prototype =
 			delete this[prop];
 		}, this);
 
-		["urlbar", "statusOverlay", "statusOverlay", "_window"].forEach(function(prop)
+		["urlbar", "statusOverlay", "_window"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);

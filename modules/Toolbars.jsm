@@ -22,33 +22,44 @@ CU.import("resource://gre/modules/Services.jsm");
 function S4EToolbars(window, gBrowser, toolbox, service, getters)
 {
 	this._window = window;
+	this._gBrowser = gBrowser;
 	this._toolbox = toolbox;
 	this._service = service;
 	this._getters = getters;
-	this._handler = new AustralisS4EToolbars(this._window, gBrowser, this._getters);
 }
 
 S4EToolbars.prototype =
 {
-	_window:  null,
-	_toolbox: null,
-	_service: null,
-	_getters: null,
+	_window:   null,
+	_gBrowser: null,
+	_toolbox:  null,
+	_service:  null,
+	_getters:  null,
 
-	_handler: null,
+	__bound_updateWindowResizers: null,
+	__old_updateWindowResizers:   null,
 
 	setup: function()
 	{
 		this.updateSplitters(false);
 		this.updateWindowGripper(false);
-		this._handler.setup(this._service.firstRun, this._service.firstRunAustralis);
+
+		this.__old_updateWindowResizers = this._gBrowser.updateWindowResizers;
+		this.__bound_updateWindowResizers = this.updateWindowResizers.bind(this);
+		this._gBrowser.updateWindowResizers = this.__bound_updateWindowResizers;
+
+		if(!this._service.firstRun && this._service.firstRunAustralis)
+		{
+			CU.import("resource://status4evar/Australis.jsm", {}).AustralisTools.migrate();
+		}
 	},
 
 	destroy: function()
 	{
-		this._handler.destroy();
+		this._gBrowser.updateWindowResizers = this.__old_updateWindowResizers;
 
-		["_window", "_toolbox",  "_service", "_getters", "_handler"].forEach(function(prop)
+		["_window", "_gBrowser", "_toolbox",  "_service", "_getters", "__bound_updateWindowResizers",
+		"__old_updateWindowResizers"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);
@@ -113,7 +124,7 @@ S4EToolbars.prototype =
 		let document = this._window.document;
 
 		let gripper = document.getElementById("status4evar-window-gripper");
-		let toolbar = this._getters.statusBar || this._getters.addonbar;
+		let toolbar = this._getters.statusBar;
 
 		if(!action || !toolbar || !this._service.addonbarWindowGripper
 		|| this._window.windowState != CI.nsIDOMChromeWindow.STATE_NORMAL || toolbar.toolbox.customizing)
@@ -125,54 +136,9 @@ S4EToolbars.prototype =
 			return;
 		}
 
-		gripper = this._handler.buildGripper(toolbar, gripper, "status4evar-window-gripper");
+		gripper = this.buildGripper(toolbar, gripper, "status4evar-window-gripper");
 
 		toolbar.appendChild(gripper);
-	}
-};
-
-function AustralisS4EToolbars(window, gBrowser, getters)
-{
-	this._window = window;
-	this._gBrowser = gBrowser;
-	this._getters = getters;
-
-	this.__bound_updateWindowResizers = this.updateWindowResizers.bind(this);
-
-	this._api = CU.import("resource://status4evar/Australis.jsm", {}).AustralisTools;
-}
-
-AustralisS4EToolbars.prototype =
-{
-	_window:   null,
-	_gBrowser: null,
-	_getters:  null,
-
-	__bound_updateWindowResizers: null,
-	__old_updateWindowResizers: null,
-
-	_api: null,
-
-	setup: function(firstRun, firstRunAustralis)
-	{
-		this.__old_updateWindowResizers = this._gBrowser.updateWindowResizers;
-		this._gBrowser.updateWindowResizers = this.__bound_updateWindowResizers;
-
-		if(!firstRun && firstRunAustralis)
-		{
-			this._api.migrate();
-		}
-	},
-
-	destroy: function()
-	{
-		this._gBrowser.updateWindowResizers = this.__old_updateWindowResizers;
-
-		["_window", "_gBrowser", "_getters", "_api", "__bound_updateWindowResizers",
-		"__old_updateWindowResizers"].forEach(function(prop)
-		{
-			delete this[prop];
-		}, this);
 	},
 
 	updateWindowResizers: function()

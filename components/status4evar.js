@@ -20,12 +20,6 @@ const CU = Components.utils;
 CU.import("resource://gre/modules/XPCOMUtils.jsm");
 CU.import("resource://gre/modules/Services.jsm");
 
-let AustralisTools = null;
-if(Services.vc.compare("28.*", Services.appinfo.version) < 0)
-{
-	AustralisTools = CU.import("resource://status4evar/Australis.jsm", {}).AustralisTools;
-}
-
 const CURRENT_MIGRATION = 7;
 
 function Status_4_Evar(){}
@@ -112,10 +106,8 @@ Status_4_Evar.prototype =
 			update: function()
 			{
 				this.addonbarLegacyShim = this.prefs.getBoolPref("addonbar.legacyShim");
-				if(AustralisTools)
-				{
-					AustralisTools.updateLegacyShim(this.addonbarLegacyShim);
-				}
+
+				CU.import("resource://status4evar/Australis.jsm", {}).AustralisTools.updateLegacyShim(this.addonbarLegacyShim);
 			}
 		},
 

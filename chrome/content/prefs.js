@@ -10,6 +10,8 @@
  * ***** END LICENSE BLOCK *****
 */
 
+"use strict";
+
 Components.utils.import("resource://gre/modules/Services.jsm");
 
 var status4evarPrefs =

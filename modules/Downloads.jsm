@@ -39,7 +39,11 @@ function S4EDownloadService(window, gBrowser, service, getters)
 	this._gBrowser = gBrowser;
 	this._service = service;
 	this._getters = getters;
-	this._handler = new JSTransferHandler(this._window, this);
+
+	let api = CU.import("resource://gre/modules/Downloads.jsm", {}).Downloads;
+
+	this._activePublic = new JSTransferListener(this, api.getList(api.PUBLIC), false);
+	this._activePrivate = new JSTransferListener(this, api.getList(api.PRIVATE), true);
 }
 
 S4EDownloadService.prototype =
@@ -49,7 +53,8 @@ S4EDownloadService.prototype =
 	_service:             null,
 	_getters:             null,
 
-	_handler:             null,
+	_activePublic:        null,
+	_activePrivate:       null,
 	_listening:           false,
 
 	_binding:             false,
@@ -85,7 +90,8 @@ S4EDownloadService.prototype =
 			return;
 		}
 
-		this._handler.start();
+		this._activePublic.start();
+		this._activePrivate.start();
 		this._listening = true;
 
 		this._lastTime = Infinity;
@@ -102,7 +108,8 @@ S4EDownloadService.prototype =
 		}
 
 		this._listening = false;
-		this._handler.stop();
+		this._activePublic.stop();
+		this._activePrivate.stop();
 
 		this.releaseBinding();
 	},
@@ -110,9 +117,10 @@ S4EDownloadService.prototype =
 	destroy: function()
 	{
 		this.uninit();
-		this._handler.destroy();
+		this._activePublic.destroy();
+		this._activePrivate.destroy();
 
-		["_window", "_gBrowser", "_service", "_getters", "_handler"].forEach(function(prop)
+		["_window", "_gBrowser", "_service", "_getters", "_activePublic", "_activePrivate"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);
@@ -195,7 +203,7 @@ S4EDownloadService.prototype =
 		let pausedMinProgress = Infinity;
 		let maxTime = -Infinity;
 
-		let dls = ((this.isPrivateWindow) ? this._handler.activePrivateEntries() : this._handler.activeEntries());
+		let dls = ((this.isPrivateWindow) ? this._activePrivate : this._activePublic).downloads();
 		for(let dl of dls)
 		{
 			if(dl.state == CI.nsIDownloadManager.DOWNLOAD_DOWNLOADING)
@@ -282,7 +290,7 @@ S4EDownloadService.prototype =
 			download_progress.collapsed = true;
 			download_progress.value = 0;
 
-			if(this._dlFinished && this._handler.hasPBAPI && !this.isUIShowing)
+			if(this._dlFinished && !this.isUIShowing)
 			{
 				this.callAttention(download_button);
 			}
@@ -437,9 +445,14 @@ S4EDownloadService.prototype =
 		aEvent.stopPropagation();
 	},
 
+	openUINative: function()
+	{
+		this._window.DownloadsPanel.showPanel();
+	},
+
 	get isPrivateWindow()
 	{
-		return this._handler.hasPBAPI && PrivateBrowsingUtils.isWindowPrivate(this._window);
+		return PrivateBrowsingUtils.isWindowPrivate(this._window);
 	},
 
 	get isUIShowing()
@@ -465,6 +478,11 @@ S4EDownloadService.prototype =
 		}
 	},
 
+	get isUIShowingNative()
+	{
+		return this._window.DownloadsPanel.isPanelShowing;
+	},
+
 	buildString: function(mode)
 	{
 		switch(mode)
@@ -481,71 +499,6 @@ S4EDownloadService.prototype =
 				}
 				return compStr;
 		}
-	}
-};
-
-function JSTransferHandler(window, downloadService)
-{
-	this._window = window;
-
-	let api = CU.import("resource://gre/modules/Downloads.jsm", {}).Downloads;
-
-	this._activePublic = new JSTransferListener(downloadService, api.getList(api.PUBLIC), false);
-	this._activePrivate = new JSTransferListener(downloadService, api.getList(api.PRIVATE), true);
-}
-
-JSTransferHandler.prototype =
-{
-	_window:          null,
-	_activePublic:    null,
-	_activePrivate:   null,
-
-	destroy: function()
-	{
-		this._activePublic.destroy();
-		this._activePrivate.destroy();
-
-		["_window", "_activePublic", "_activePrivate"].forEach(function(prop)
-		{
-			delete this[prop];
-		}, this);
-	},
-
-	start: function()
-	{
-		this._activePublic.start();
-		this._activePrivate.start();
-	},
-
-	stop: function()
-	{
-		this._activePublic.stop();
-		this._activePrivate.stop();
-	},
-
-	get hasPBAPI()
-	{
-		return true;
-	},
-
-	openUINative: function()
-	{
-		this._window.DownloadsPanel.showPanel();
-	},
-
-	get isUIShowingNative()
-	{
-		return this._window.DownloadsPanel.isPanelShowing;
-	},
-
-	activeEntries: function()
-	{
-		return this._activePublic.downloads();
-	},
-
-	activePrivateEntries: function()
-	{
-		return this._activePrivate.downloads();
 	}
 };
 

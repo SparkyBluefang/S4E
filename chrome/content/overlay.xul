@@ -8,7 +8,7 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    - 
-   - Copyright (C) 2010-2011, 2013 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+   - Copyright (C) 2010-2011, 2013-2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
    - 
    - ***** END LICENSE BLOCK *****
 -->
@@ -73,10 +73,32 @@
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
 		               label="&status4evar.options.widget.label;"
 		               removable="true" command="S4E:Options" tooltiptext="&status4evar.options.widget.title;" />
+
+		<toolbaritem id="status4evar-throbber-widget"
+		             title="&status4evar.throbber.widget.title;"
+		             removable="true">
+			<vbox pack="center">
+				<image/>
+			</vbox>
+		</toolbaritem>
 	</toolbarpalette>
 
 	<textbox id="urlbar" pmpack="end">
 		<progressmeter id="urlbar-progress-alt"  mode="normal" value="0" collapsed="true" />
 	</textbox>
+
+	<vbox id="browser-bottombox">
+		<toolbar id="status4evar-status-bar"
+			toolbarname="&status4evar.status.toolbar.title;"
+			accesskey="&status4evar.status.toolbar.accessKey;"
+			customizable="true"
+			class="toolbar-primary"
+			context="toolbar-context-menu"
+			mode="icons"
+			iconsize="small"
+			ordinal="100"
+			toolboxid="navigator-toolbox">
+		</toolbar>
+	</vbox>
 </overlay>
 
