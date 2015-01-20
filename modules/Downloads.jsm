@@ -289,7 +289,7 @@ S4EDownloadService.prototype =
 			{
 				download_button.collapsed = true;
 			}
-			download_label.value = download_tooltip.label = this._getters.strings.getString("noDownloads");
+			download_label.textContent = download_tooltip.label = this._getters.strings.getString("noDownloads");
 
 			download_progress.collapsed = true;
 			download_progress.value = 0;
@@ -316,7 +316,7 @@ S4EDownloadService.prototype =
 		download_progress.setAttribute("pmType", this._dlProgressType);
 		download_progress.collapsed = (this._service.downloadProgress == 0);
 
-		download_label.value = this.buildString(this._service.downloadLabel);
+		download_label.textContent = this.buildString(this._service.downloadLabel);
 		download_tooltip.label = this.buildString(this._service.downloadTooltip);
 
 		this.clearAttention(download_button);

@@ -58,7 +58,7 @@
 				</vbox>
 			</stack>
 			<tooltip id="status4evar-download-tooltip" />
-			<label id="status4evar-download-label" value="&status4evar.download.widget.title;" class="toolbarbutton-text" crop="right" flex="1" />
+			<label id="status4evar-download-label" class="toolbarbutton-multiline-text" wrap="true" flex="1" />
 		</toolbarbutton>
 
 		<toolbaritem id="status4evar-progress-widget"
