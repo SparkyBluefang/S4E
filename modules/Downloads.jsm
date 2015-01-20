@@ -366,9 +366,11 @@ S4EDownloadService.prototype =
 		if(this._dlNotifyTimer == 0 && this._service.downloadNotifyAnimate)
 		{
 			let download_notify_anchor = this._getters.downloadNotifyAnchor;
-			let button_anchor = (download_button.getAttribute("cui-areatype") == "toolbar")
-							? this._getters.downloadButtonAnchor
-							: this._getters.menuButton;
+			let button_anchor = ((download_button.getAttribute("cui-areatype") == "toolbar")
+							? ((download_button.hasAttribute("cui-anchorid"))
+								? this._getters.lazy(download_button.getAttribute("cui-anchorid"))
+								: this._getters.downloadButtonAnchor)
+							: this._getters.menuButton);
 			if(button_anchor)
 			{
 				if(!download_notify_anchor.style.transform)

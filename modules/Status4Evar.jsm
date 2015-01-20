@@ -195,6 +195,16 @@ S4EWindowGetters.prototype =
 			["urlbarProgress",         "urlbar-progress-alt"]
 		],
 
+	lazy: function(id)
+	{
+		if(this[id])
+		{
+			return this[id];
+		}
+
+		return this[id] = this._window.document.getElementById(id);
+	},
+
 	resetGetters: function()
 	{
 		let document = this._window.document;
