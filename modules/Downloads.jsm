@@ -421,7 +421,7 @@ S4EDownloadService.prototype =
 	{
 		this.clearFinished();
 
-		switch(this._service.downloadButtonAction)
+		switch(this.downloadButtonAction)
 		{
 			case 1: // Firefox Default
 				this._window.DownloadsPanel.showPanel();
@@ -465,7 +465,7 @@ S4EDownloadService.prototype =
 
 	get isUIShowing()
 	{
-		switch(this._service.downloadButtonAction)
+		switch(this.downloadButtonAction)
 		{
 			case 1: // Firefox Default
 				return this._window.DownloadsPanel.isPanelShowing;
@@ -484,6 +484,23 @@ S4EDownloadService.prototype =
 			default: // Nothing
 				return false;
 		}
+	},
+
+	get downloadButtonAction()
+	{
+		let action = this._service.downloadButtonAction;
+		// Firefox Default
+		if(action == 1)
+		{
+			let download_button = this._getters.downloadButton;
+			if(download_button && download_button.getAttribute("cui-areatype") != "toolbar")
+			{
+				// Show tab
+				action = 3;
+			}
+		}
+
+		return action;
 	},
 
 	buildString: function(mode)
