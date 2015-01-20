@@ -411,7 +411,7 @@ S4EDownloadService.prototype =
 		switch(this._service.downloadButtonAction)
 		{
 			case 1: // Firefox Default
-				this._handler.openUINative();
+				this._window.DownloadsPanel.showPanel();
 				break;
 			case 2: // Show Library
 				this._window.PlacesCommandHook.showPlacesOrganizer("Downloads");
@@ -445,11 +445,6 @@ S4EDownloadService.prototype =
 		aEvent.stopPropagation();
 	},
 
-	openUINative: function()
-	{
-		this._window.DownloadsPanel.showPanel();
-	},
-
 	get isPrivateWindow()
 	{
 		return PrivateBrowsingUtils.isWindowPrivate(this._window);
@@ -460,7 +455,7 @@ S4EDownloadService.prototype =
 		switch(this._service.downloadButtonAction)
 		{
 			case 1: // Firefox Default
-				return this._handler.isUIShowingNative;
+				return this._window.DownloadsPanel.isPanelShowing;
 			case 2: // Show Library
 				var organizer = Services.wm.getMostRecentWindow("Places:Organizer");
 				if(organizer)
@@ -476,11 +471,6 @@ S4EDownloadService.prototype =
 			default: // Nothing
 				return false;
 		}
-	},
-
-	get isUIShowingNative()
-	{
-		return this._window.DownloadsPanel.isPanelShowing;
 	},
 
 	buildString: function(mode)
