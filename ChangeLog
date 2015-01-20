@@ -1,5 +1,8 @@
 Version next
-* Drop support for Firefox 30.0 and older.
+* Drop support for Firefox 30.0 and older. Unify Australis integration.
+* Fix Downloads button icon in Firefox 35+.
+* Improve Downloads button integration in Menu Panel.
+* When the Downloads button is in the Menu panel, or overflow panel, show the download finished animation on the panel button.
 
 Version 2014.07.06.05
 * Fix location bar status interactions with domain highlighting.
