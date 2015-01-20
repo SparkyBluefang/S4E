@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  * 
- * Copyright (C) 2010-2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+ * Copyright (C) 2010-2015 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****
 */
@@ -185,6 +185,7 @@ S4EWindowGetters.prototype =
 			["downloadButtonLabel",    "status4evar-download-label"],
 			["downloadButtonAnchor",   "status4evar-download-anchor"],
 			["downloadNotifyAnchor",   "status4evar-download-notification-anchor"],
+			["menuButton",             "PanelUI-menu-button"],
 			["statusBar",              "status4evar-status-bar"],
 			["statusWidget",           "status4evar-status-widget"],
 			["statusWidgetLabel",      "status4evar-status-text"],

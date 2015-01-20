@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  * 
- * Copyright (C) 2010-2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+ * Copyright (C) 2010-2015 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****
  * 
@@ -35,27 +35,21 @@
 	height: 4px;
 }
 
-#status4evar-download-button[attention] #status4evar-download-icon
+#status4evar-download-button[cui-areatype="toolbar"] #status4evar-download-icon
 {
-	background-image: url("chrome://browser/skin/downloads/download-glow.png");
+	-moz-image-region: rect(0px, 198px, 18px, 180px);
 }
 
-@media (-moz-windows-theme: aero)
+#status4evar-download-button[cui-areatype="toolbar"][attention] #status4evar-download-icon
 {
-	@media (-moz-os-version: windows-vista), (-moz-os-version: windows-win7)
-	{
-		#status4evar-download-button[attention] #status4evar-download-icon
-		{
-			background-image: url("chrome://browser/skin/downloads/download-glow-XPVista7.png");
-		}
-	}
+	-moz-image-region: rect(18px, 198px, 36px, 180px);
 }
 
-@media (not (-moz-windows-theme: aero)), (-moz-os-version: windows-xp)
+@media (-moz-os-version: windows-xp), (-moz-os-version: windows-vista), (-moz-os-version: windows-win7)
 {
-	#status4evar-download-button[attention] #status4evar-download-icon
+	#status4evar-download-button[cui-areatype="menu-panel"][attention] #status4evar-download-icon
 	{
-		background-image: url("chrome://browser/skin/downloads/download-glow-XPVista7.png");
+		list-style-image: url("chrome://browser/skin/downloads/download-glow-menuPanel-XPVista7.png");
 	}
 }
 

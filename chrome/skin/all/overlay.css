@@ -113,16 +113,32 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
 	background-image: url("chrome://status4evar/skin/pulse.png");
 }
 
-#status4evar-download-button #status4evar-download-icon
+#status4evar-download-icon
 {
-	background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"), 0, 198, 18, 180) center no-repeat;
-	min-width: 18px;
-	min-height: 18px;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-width: 32px;
+	min-height: 32px;
+	list-style-image: url("chrome://browser/skin/menuPanel.png");
+	-moz-image-region: rect(0px, 256px, 32px, 224px);
 }
 
-#status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon
+#status4evar-download-button[cui-areatype="menu-panel"][attention] #status4evar-download-icon
 {
-	background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 198, 18, 180) center no-repeat;
+	list-style-image: url("chrome://browser/skin/downloads/download-glow-menuPanel.png");
+	-moz-image-region: auto;
+}
+
+#status4evar-download-button[cui-areatype="toolbar"] #status4evar-download-icon
+{
+	min-width: 18px;
+	min-height: 18px;
+	list-style-image: url("chrome://browser/skin/Toolbar.png");
+}
+
+toolbar[brighttext] #status4evar-download-button[cui-areatype="toolbar"] #status4evar-download-icon
+{
+	list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 }
 
 #status4evar-download-notification-container
@@ -152,7 +168,7 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label
 	to   { opacity: 0; transform: scale(8); }
 }
 
-#status4evar-download-notification-anchor[notification="finish"][forcevisible="true"] #status4evar-download-notification-icon
+#status4evar-download-notification-anchor[notification="finish"] #status4evar-download-notification-icon
 {
 	background-image: url("chrome://browser/skin/downloads/download-notification-finish.png");
 	animation-name: status4evar-download-notification-finish;

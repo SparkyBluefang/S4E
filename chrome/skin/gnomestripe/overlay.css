@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  * 
- * Copyright (C) 2010-2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+ * Copyright (C) 2010-2015 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****
  * 
@@ -35,9 +35,14 @@
 	height: 6px;
 }
 
-#status4evar-download-button[attention] #status4evar-download-icon
+#status4evar-download-button[cui-areatype="toolbar"] #status4evar-download-icon
 {
-	background-image: url("chrome://browser/skin/downloads/download-glow.png");
+	-moz-image-region: rect(0px, 198px, 18px, 180px);
+}
+
+#status4evar-download-button[cui-areatype="toolbar"][attention] #status4evar-download-icon
+{
+	-moz-image-region: rect(18px, 198px, 36px, 180px);
 }
 
 toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label

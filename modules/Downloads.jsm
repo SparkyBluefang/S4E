@@ -7,7 +7,7 @@
  * 
  * Original code copyright (C) Mozilla Foundation. All Rights Reserved.
  * Original code copyright (C) 2013 Gijs Kruitbosch <gijskruitbosch@gmail.com>. All Rights Reserved.
- * Copyright (C) 2010-2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+ * Copyright (C) 2010-2015 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****
  * 
@@ -274,17 +274,21 @@ S4EDownloadService.prototype =
 	updateButton: function()
 	{
 		let download_button = this._getters.downloadButton;
-		let download_tooltip = this._getters.downloadButtonTooltip;
-		let download_progress = this._getters.downloadButtonProgress;
-		let download_label = this._getters.downloadButtonLabel;
 		if(!download_button)
 		{
 			return;
 		}
 
+		let download_tooltip = this._getters.downloadButtonTooltip;
+		let download_progress = this._getters.downloadButtonProgress;
+		let download_label = this._getters.downloadButtonLabel;
+
 		if(!this._dlActive)
 		{
-			download_button.collapsed = true;
+			if(download_button.getAttribute("cui-areatype") == "toolbar")
+			{
+				download_button.collapsed = true;
+			}
 			download_label.value = download_tooltip.label = this._getters.strings.getString("noDownloads");
 
 			download_progress.collapsed = true;
@@ -352,15 +356,24 @@ S4EDownloadService.prototype =
 
 	notify: function()
 	{
+		let download_button = this._getters.downloadButton;
+		if(!download_button
+		|| (download_button.getAttribute("cui-areatype") == "toolbar" && !download_button.hasAttribute("forcevisible")))
+		{
+			return;
+		}
+
 		if(this._dlNotifyTimer == 0 && this._service.downloadNotifyAnimate)
 		{
-			let download_button_anchor = this._getters.downloadButtonAnchor;
 			let download_notify_anchor = this._getters.downloadNotifyAnchor;
-			if(download_button_anchor)
+			let button_anchor = (download_button.getAttribute("cui-areatype") == "toolbar")
+							? this._getters.downloadButtonAnchor
+							: this._getters.menuButton;
+			if(button_anchor)
 			{
 				if(!download_notify_anchor.style.transform)
 				{
-					let bAnchorRect = download_button_anchor.getBoundingClientRect();
+					let bAnchorRect = button_anchor.getBoundingClientRect();
 					let nAnchorRect = download_notify_anchor.getBoundingClientRect();
 
 					let translateX = bAnchorRect.left - nAnchorRect.left;

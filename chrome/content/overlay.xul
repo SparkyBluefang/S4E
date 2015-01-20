@@ -8,7 +8,7 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    - 
-   - Copyright (C) 2010-2011, 2013-2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+   - Copyright (C) 2010-2011, 2013-2015 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
    - 
    - ***** END LICENSE BLOCK *****
 -->
@@ -52,7 +52,7 @@
 		               removable="true" collapsed="true" tooltip="_child"
 		               oncommand="caligon.status4evar.downloadStatus.openUI(event)">
 			<stack id="status4evar-download-anchor" class="toolbarbutton-icon">
-				<vbox id="status4evar-download-icon" />
+				<image id="status4evar-download-icon" />
 				<vbox pack="end">
 					<progressmeter id="status4evar-download-progress-bar" mode="normal" value="0" collapsed="true" min="0" max="100" />
 				</vbox>
