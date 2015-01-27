@@ -21,11 +21,13 @@
 
 "use strict";
 
-const EXPORTED_SYMBOLS = ["S4EDownloadService"];
+const EXPORTED_SYMBOLS = ["S4EDownloadUI"];
 
 const CC = Components.classes;
 const CI = Components.interfaces;
 const CU = Components.utils;
+
+CU.import("resource://status4evar/DownloadService.jsm");
 
 CU.import("resource://gre/modules/Services.jsm");
 CU.import("resource://gre/modules/PluralForm.jsm");
@@ -33,46 +35,34 @@ CU.import("resource://gre/modules/DownloadUtils.jsm");
 CU.import("resource://gre/modules/PrivateBrowsingUtils.jsm");
 CU.import("resource://gre/modules/XPCOMUtils.jsm");
 
-function S4EDownloadService(window, gBrowser, service, getters)
+function S4EDownloadUI(window, gBrowser, service, getters)
 {
 	this._window = window;
 	this._gBrowser = gBrowser;
 	this._service = service;
 	this._getters = getters;
 
-	let api = CU.import("resource://gre/modules/Downloads.jsm", {}).Downloads;
-
-	this._activePublic = new JSTransferListener(this, api.getList(api.PUBLIC), false);
-	this._activePrivate = new JSTransferListener(this, api.getList(api.PRIVATE), true);
+	this._statePublic = this._statePrivate =
+	{
+		active: false,
+		notify: false
+	};
 }
 
-S4EDownloadService.prototype =
+S4EDownloadUI.prototype =
 {
 	_window:              null,
 	_gBrowser:            null,
 	_service:             null,
 	_getters:             null,
 
-	_activePublic:        null,
-	_activePrivate:       null,
 	_listening:           false,
 
 	_binding:             false,
 	_customizing:         false,
 
-	_lastTime:            Infinity,
-
-	_dlActive:            false,
-	_dlPaused:            false,
-	_dlFinished:          false,
-
-	_dlCountStr:          null,
-	_dlTimeStr:           null,
-
-	_dlProgressAvg:       0,
-	_dlProgressMax:       0,
-	_dlProgressMin:       0,
-	_dlProgressType:      "active",
+	_statePublic:         null,
+	_statePrivate:        null,
 
 	_dlNotifyTimer:       0,
 	_dlNotifyGlowTimer:   0,
@@ -90,14 +80,11 @@ S4EDownloadService.prototype =
 			return;
 		}
 
-		this._activePublic.start();
-		this._activePrivate.start();
-		this._listening = true;
-
 		this._lastTime = Infinity;
 
 		this.updateBinding();
-		this.updateStatus();
+		this.updateButton();
+		S4EDownloadService.addListener(this);
 	},
 
 	uninit: function()
@@ -107,20 +94,15 @@ S4EDownloadService.prototype =
 			return;
 		}
 
-		this._listening = false;
-		this._activePublic.stop();
-		this._activePrivate.stop();
-
+		S4EDownloadService.removeListener(this);
 		this.releaseBinding();
 	},
 
 	destroy: function()
 	{
 		this.uninit();
-		this._activePublic.destroy();
-		this._activePrivate.destroy();
 
-		["_window", "_gBrowser", "_service", "_getters", "_activePublic", "_activePrivate"].forEach(function(prop)
+		["_window", "_gBrowser", "_service", "_getters", "_statePublic", "_statePrivate"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);
@@ -134,7 +116,7 @@ S4EDownloadService.prototype =
 			return;
 		}
 
-		switch(this._service.downloadButtonAction)
+		switch(this.downloadButtonAction)
 		{
 			case 1: // Default
 				this.attachBinding();
@@ -183,95 +165,48 @@ S4EDownloadService.prototype =
 		this._customizing = val;
 	},
 
-	updateStatus: function(lastFinished)
+	updateState: function(event)
 	{
-		if(!this._getters.downloadButton)
+		let state = {}
+		Object.assign(state, event);
+		state.time = state.time || -1;
+
+		if(state.active)
 		{
-			this.uninit();
-			return;
+			state.lastTime     = (state.private ? this._statePrivate : this._statePublic).time || Infinity;
+			state.progressType = (state.paused ? "paused" : "active") + (state.totalSize == 0 ? "-unknown" : "");
+
+			let dlStatus = this._getters.strings.getString(state.paused ? "pausedDownloads" : "activeDownloads");
+			state.countStr = PluralForm.get(state.count, dlStatus).replace("#1", state.count);
+			[state.timeStr, state.time] = DownloadUtils.getTimeLeft(state.time, state.lastTime);
 		}
 
-		let numActive = 0;
-		let numPaused = 0;
-		let activeTotalSize = 0;
-		let activeTransferred = 0;
-		let activeMaxProgress = -Infinity;
-		let activeMinProgress = Infinity;
-		let pausedTotalSize = 0;
-		let pausedTransferred = 0;
-		let pausedMaxProgress = -Infinity;
-		let pausedMinProgress = Infinity;
-		let maxTime = -Infinity;
-
-		let dls = ((this.isPrivateWindow) ? this._activePrivate : this._activePublic).downloads();
-		for(let dl of dls)
+		if(state.private)
 		{
-			if(dl.state == CI.nsIDownloadManager.DOWNLOAD_DOWNLOADING)
+			this._statePrivate = state;
+		}
+		else
+		{
+			this._statePublic = state;
+		}
+
+		if(state.private == this.isPrivateWindow)
+		{
+			this.updateButton(state);
+			if(state.notify)
 			{
-				numActive++;
-				if(dl.size > 0)
-				{
-					if(dl.speed > 0)
-					{
-						maxTime = Math.max(maxTime, (dl.size - dl.transferred) / dl.speed);
-					}
-
-					activeTotalSize += dl.size;
-					activeTransferred += dl.transferred;
-
-					let currentProgress = ((dl.transferred * 100) / dl.size);
-					activeMaxProgress = Math.max(activeMaxProgress, currentProgress);
-					activeMinProgress = Math.min(activeMinProgress, currentProgress);
-				}
+				this.notify();
 			}
-			else if(dl.state == CI.nsIDownloadManager.DOWNLOAD_PAUSED)
-			{
-				numPaused++;
-				if(dl.size > 0)
-				{
-					pausedTotalSize += dl.size;
-					pausedTransferred += dl.transferred;
-
-					let currentProgress = ((dl.transferred * 100) / dl.size);
-					pausedMaxProgress = Math.max(pausedMaxProgress, currentProgress);
-					pausedMinProgress = Math.min(pausedMinProgress, currentProgress);
-				}
-			}
+			state.notify = false;
 		}
-
-		if((numActive + numPaused) == 0)
-		{
-			this._dlActive = false;
-			this._dlFinished = lastFinished;
-			this.updateButton();
-			this._lastTime = Infinity;
-			return;
-		}
-
-		let dlPaused =       (numActive == 0);
-		let dlStatus =       ((dlPaused) ? this._getters.strings.getString("pausedDownloads")
-		                                 : this._getters.strings.getString("activeDownloads"));
-		let dlCount =        ((dlPaused) ? numPaused         : numActive);
-		let dlTotalSize =    ((dlPaused) ? pausedTotalSize   : activeTotalSize);
-		let dlTransferred =  ((dlPaused) ? pausedTransferred : activeTransferred);
-		let dlMaxProgress =  ((dlPaused) ? pausedMaxProgress : activeMaxProgress);
-		let dlMinProgress =  ((dlPaused) ? pausedMinProgress : activeMinProgress);
-		let dlProgressType = ((dlPaused) ? "paused"          : "active");
-
-		[this._dlTimeStr, this._lastTime] = DownloadUtils.getTimeLeft(maxTime, this._lastTime);
-		this._dlCountStr =     PluralForm.get(dlCount, dlStatus).replace("#1", dlCount);
-		this._dlProgressAvg =  ((dlTotalSize == 0) ? 100 : ((dlTransferred * 100) / dlTotalSize));
-		this._dlProgressMax =  ((dlTotalSize == 0) ? 100 : dlMaxProgress);
-		this._dlProgressMin =  ((dlTotalSize == 0) ? 100 : dlMinProgress);
-		this._dlProgressType = dlProgressType + ((dlTotalSize == 0) ? "-unknown" : "");
-		this._dlPaused =       dlPaused;
-		this._dlActive =       true;
-		this._dlFinished =     false;
-
-		this.updateButton();
 	},
 
-	updateButton: function()
+	get state()
+	{
+		return this.isPrivateWindow ? this._statePrivate : this._statePublic;
+	},
+
+	updateButton: function(state)
 	{
 		let download_button = this._getters.downloadButton;
 		if(!download_button)
@@ -279,11 +214,18 @@ S4EDownloadService.prototype =
 			return;
 		}
 
+		state = state || this.state;
+
 		let download_tooltip = this._getters.downloadButtonTooltip;
 		let download_progress = this._getters.downloadButtonProgress;
 		let download_label = this._getters.downloadButtonLabel;
 
-		if(!this._dlActive)
+		if(state.notify && !this.isUIShowing)
+		{
+			this.callAttention(download_button);
+		}
+
+		if(!state.active)
 		{
 			if(download_button.getAttribute("cui-areatype") == "toolbar")
 			{
@@ -294,30 +236,26 @@ S4EDownloadService.prototype =
 			download_progress.collapsed = true;
 			download_progress.value = 0;
 
-			if(this._dlFinished && !this.isUIShowing)
-			{
-				this.callAttention(download_button);
-			}
 			return;
 		}
 
 		switch(this._service.downloadProgress)
 		{
 			case 2:
-				download_progress.value = this._dlProgressMax;
+				download_progress.value = state.progressMax;
 				break;
 			case 3:
-				download_progress.value = this._dlProgressMin;
+				download_progress.value = state.progressMin;
 				break;
 			default:
-				download_progress.value = this._dlProgressAvg;
+				download_progress.value = state.progressAvg;
 				break;
 		}
-		download_progress.setAttribute("pmType", this._dlProgressType);
+		download_progress.setAttribute("pmType", state.progressType);
 		download_progress.collapsed = (this._service.downloadProgress == 0);
 
-		download_label.textContent = this.buildString(this._service.downloadLabel);
-		download_tooltip.label = this.buildString(this._service.downloadTooltip);
+		download_label.textContent = this.buildString(this._service.downloadLabel, state.paused, state.countStr, state.timeStr);
+		download_tooltip.label = this.buildString(this._service.downloadTooltip, state.paused, state.countStr, state.timeStr);
 
 		this.clearAttention(download_button);
 		download_button.collapsed = false;
@@ -400,7 +338,6 @@ S4EDownloadService.prototype =
 
 	clearFinished: function()
 	{
-		this._dlFinished = false;
 		let download_button = this._getters.downloadButton;
 		if(download_button)
 		{
@@ -495,7 +432,7 @@ S4EDownloadService.prototype =
 		if(action == 1)
 		{
 			let download_button = this._getters.downloadButton;
-			if(download_button && download_button.getAttribute("cui-areatype") != "toolbar")
+			if(!download_button || download_button.getAttribute("cui-areatype") != "toolbar")
 			{
 				// Show tab
 				action = 3;
@@ -505,161 +442,22 @@ S4EDownloadService.prototype =
 		return action;
 	},
 
-	buildString: function(mode)
+	buildString: function(mode, paused, countStr, timeStr)
 	{
 		switch(mode)
 		{
 			case 0:
-				return this._dlCountStr;
+				return countStr;
 			case 1:
-				return ((this._dlPaused) ? this._dlCountStr : this._dlTimeStr);
+				return paused ? countStr : timeStr;
 			default:
-				let compStr = this._dlCountStr;
-				if(!this._dlPaused)
+				let compStr = countStr;
+				if(!paused)
 				{
-					compStr += " (" + this._dlTimeStr + ")";
+					compStr += " (" + timeStr + ")";
 				}
 				return compStr;
 		}
-	}
-};
-
-function JSTransferListener(downloadService, listPromise, isPrivate)
-{
-	this._downloadService = downloadService;
-	this._isPrivate = isPrivate;
-	this._downloads = new Map();
-
-	listPromise.then(this.initList.bind(this)).then(null, CU.reportError);
-}
-
-JSTransferListener.prototype =
-{
-	_downloadService: null,
-	_list:            null,
-	_downloads:       null,
-	_isPrivate:       false,
-	_wantsStart:      false,
-
-	initList: function(list)
-	{
-		this._list = list;
-		if(this._wantsStart) {
-			this.start();
-		}
-
-		this._list.getAll().then(this.initDownloads.bind(this)).then(null, CU.reportError);
-	},
-
-	initDownloads: function(downloads)
-	{
-		downloads.forEach(function(download)
-		{
-			this.onDownloadAdded(download);
-		}, this);
-	},
-
-	destroy: function()
-	{
-		this._downloads.clear();
-
-		["_downloadService", "_list", "_downloads"].forEach(function(prop)
-		{
-			delete this[prop];
-		}, this);
-	},
-
-	start: function()
-	{
-		if(!this._list)
-		{
-			this._wantsStart = true;
-			return;
-		}
-
-		this._list.addView(this);
-	},
-
-	stop: function()
-	{
-		if(!this._list)
-		{
-			this._wantsStart = false;
-			return;
-		}
-
-		this._list.removeView(this);
-	},
-
-	downloads: function()
-	{
-		return this._downloads.values();
-	},
-
-	convertToState: function(dl)
-	{
-		if(dl.succeeded)
-		{
-			return CI.nsIDownloadManager.DOWNLOAD_FINISHED;
-		}
-		if(dl.error && dl.error.becauseBlockedByParentalControls)
-		{
-			return CI.nsIDownloadManager.DOWNLOAD_BLOCKED_PARENTAL;
-		}
-		if(dl.error)
-		{
-			return CI.nsIDownloadManager.DOWNLOAD_FAILED;
-		}
-		if(dl.canceled && dl.hasPartialData)
-		{
-			return CI.nsIDownloadManager.DOWNLOAD_PAUSED;
-		}
-		if(dl.canceled)
-		{
-			return CI.nsIDownloadManager.DOWNLOAD_CANCELED;
-		}
-		if(dl.stopped)
-		{
-			return CI.nsIDownloadManager.DOWNLOAD_NOTSTARTED;
-		}
-		return CI.nsIDownloadManager.DOWNLOAD_DOWNLOADING;
-	},
-
-	onDownloadAdded: function(aDownload)
-	{
-		let dl = this._downloads.get(aDownload);
-		if(!dl)
-		{
-			dl = {};
-			this._downloads.set(aDownload, dl);
-		}
-
-		dl.state = this.convertToState(aDownload);
-		dl.size = aDownload.totalBytes;
-		dl.speed = aDownload.speed;
-		dl.transferred = aDownload.currentBytes;
-	},
-
-	onDownloadChanged: function(aDownload)
-	{
-		this.onDownloadAdded(aDownload);
-
-		if(this._isPrivate != this._downloadService.isPrivateWindow)
-		{
-			return;
-		}
-
-		this._downloadService.updateStatus(aDownload.succeeded);
-
-		if(aDownload.succeeded)
-		{
-			this._downloadService.notify()
-		}
-	},
-
-	onDownloadRemoved: function(aDownload)
-	{
-		this._downloads.delete(aDownload);
 	}
 };
 
