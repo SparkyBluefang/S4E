@@ -49,7 +49,7 @@
 		<toolbarbutton id="status4evar-download-button"
 		               title="&status4evar.download.widget.title;"
 		               class="toolbarbutton-1 chromeclass-toolbar-additional"
-		               removable="true" collapsed="true" tooltip="_child"
+		               removable="true" tooltip="_child"
 		               oncommand="caligon.status4evar.downloadStatus.openUI(event)">
 			<stack id="status4evar-download-anchor" class="toolbarbutton-icon">
 				<image id="status4evar-download-icon" />

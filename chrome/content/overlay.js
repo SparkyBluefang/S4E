@@ -65,7 +65,7 @@ window.addEventListener("load", function buildS4E()
 
 	Components.utils.import("resource://status4evar/Status4Evar.jsm");
 
-	caligon.status4evar = new Status4Evar(window, gBrowser, gNavToolbox);
+	caligon.status4evar = new Status4Evar(window, gBrowser, gNavToolbox, PanelUI);
 	caligon.status4evar.setup();
 }, false);
 

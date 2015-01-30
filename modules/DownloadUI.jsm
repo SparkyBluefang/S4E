@@ -28,6 +28,7 @@ const CI = Components.interfaces;
 const CU = Components.utils;
 
 CU.import("resource://status4evar/DownloadService.jsm");
+CU.import("resource://status4evar/Australis.jsm");
 
 CU.import("resource://gre/modules/Services.jsm");
 CU.import("resource://gre/modules/PluralForm.jsm");
@@ -69,7 +70,7 @@ S4EDownloadUI.prototype =
 
 	init: function()
 	{
-		if(!this._getters.downloadButton)
+		if(!AustralisTools.areaForWidget(AustralisTools.WIDGET_ID_DOWNLOAD))
 		{
 			this.uninit();
 			return;
@@ -79,8 +80,6 @@ S4EDownloadUI.prototype =
 		{
 			return;
 		}
-
-		this._lastTime = Infinity;
 
 		this.updateBinding();
 		this.updateButton();
@@ -165,6 +164,58 @@ S4EDownloadUI.prototype =
 		this._customizing = val;
 	},
 
+	get notifyAnchor()
+	{
+		let area = AustralisTools.areaForWidget(AustralisTools.WIDGET_ID_DOWNLOAD);
+
+		if(area === AustralisTools.TYPE_MENU_PANEL)
+		{
+			return this._getters.menuButton;
+		}
+
+		if(area === AustralisTools.TYPE_TOOLBAR)
+		{
+			let download_button = this._getters.downloadButton;
+			if(download_button.hasAttribute("cui-anchorid"))
+			{
+				return this._getters.lazy(download_button.getAttribute("cui-anchorid"));
+			}
+
+			return this._getters.downloadButtonAnchor;
+		}
+
+		return null;
+	},
+
+	get downloadButton()
+	{
+		let area = AustralisTools.areaForWidget(AustralisTools.WIDGET_ID_DOWNLOAD);
+
+		if(area)
+		{
+			return this._getters.downloadButton;
+		}
+
+		return null;
+	},
+
+	get downloadButtonAction()
+	{
+		let action = this._service.downloadButtonAction;
+		// Firefox Default
+		if(action == 1)
+		{
+			let area = AustralisTools.areaForWidget(AustralisTools.WIDGET_ID_DOWNLOAD);
+			if(area !== AustralisTools.TYPE_TOOLBAR)
+			{
+				// Show tab
+				action = 3;
+			}
+		}
+
+		return action;
+	},
+
 	updateState: function(event)
 	{
 		let state = {}
@@ -208,7 +259,7 @@ S4EDownloadUI.prototype =
 
 	updateButton: function(state)
 	{
-		let download_button = this._getters.downloadButton;
+		let download_button = this.downloadButton;
 		if(!download_button)
 		{
 			return;
@@ -227,7 +278,8 @@ S4EDownloadUI.prototype =
 
 		if(!state.active)
 		{
-			if(download_button.getAttribute("cui-areatype") == "toolbar")
+			let area = AustralisTools.areaForWidget(AustralisTools.WIDGET_ID_DOWNLOAD);
+			if(area === AustralisTools.TYPE_TOOLBAR)
 			{
 				download_button.collapsed = true;
 			}
@@ -257,7 +309,6 @@ S4EDownloadUI.prototype =
 		download_label.textContent = this.buildString(this._service.downloadLabel, state.paused, state.countStr, state.timeStr);
 		download_tooltip.label = this.buildString(this._service.downloadTooltip, state.paused, state.countStr, state.timeStr);
 
-		this.clearAttention(download_button);
 		download_button.collapsed = false;
 	},
 
@@ -294,9 +345,9 @@ S4EDownloadUI.prototype =
 
 	notify: function()
 	{
-		let download_button = this._getters.downloadButton;
-		if(!download_button
-		|| (download_button.getAttribute("cui-areatype") == "toolbar" && !download_button.hasAttribute("forcevisible")))
+		let area = AustralisTools.areaForWidget(AustralisTools.WIDGET_ID_DOWNLOAD);
+		let button_anchor = this.notifyAnchor;
+		if(!button_anchor || (area === AustralisTools.TYPE_TOOLBAR && !this._service.downloadForce))
 		{
 			return;
 		}
@@ -304,41 +355,33 @@ S4EDownloadUI.prototype =
 		if(this._dlNotifyTimer == 0 && this._service.downloadNotifyAnimate)
 		{
 			let download_notify_anchor = this._getters.downloadNotifyAnchor;
-			let button_anchor = ((download_button.getAttribute("cui-areatype") == "toolbar")
-							? ((download_button.hasAttribute("cui-anchorid"))
-								? this._getters.lazy(download_button.getAttribute("cui-anchorid"))
-								: this._getters.downloadButtonAnchor)
-							: this._getters.menuButton);
-			if(button_anchor)
+			if(!download_notify_anchor.style.transform)
 			{
-				if(!download_notify_anchor.style.transform)
-				{
-					let bAnchorRect = button_anchor.getBoundingClientRect();
-					let nAnchorRect = download_notify_anchor.getBoundingClientRect();
+				let bAnchorRect = button_anchor.getBoundingClientRect();
+				let nAnchorRect = download_notify_anchor.getBoundingClientRect();
 
-					let translateX = bAnchorRect.left - nAnchorRect.left;
-					translateX += .5 * (bAnchorRect.width  - nAnchorRect.width);
+				let translateX = bAnchorRect.left - nAnchorRect.left;
+				translateX += .5 * (bAnchorRect.width  - nAnchorRect.width);
 
-					let translateY = bAnchorRect.top  - nAnchorRect.top;
-					translateY += .5 * (bAnchorRect.height - nAnchorRect.height);
+				let translateY = bAnchorRect.top  - nAnchorRect.top;
+				translateY += .5 * (bAnchorRect.height - nAnchorRect.height);
 
-					download_notify_anchor.style.transform = "translate(" +  translateX + "px, " + translateY + "px)";
-				}
-
-				download_notify_anchor.setAttribute("notification", "finish");
-				this._dlNotifyTimer = this._window.setTimeout(function(self, anchor)
-				{
-					self._dlNotifyTimer = 0;
-					anchor.removeAttribute("notification");
-					anchor.style.transform = "";
-				}, 1000, this, download_notify_anchor);
+				download_notify_anchor.style.transform = "translate(" +  translateX + "px, " + translateY + "px)";
 			}
+
+			download_notify_anchor.setAttribute("notification", "finish");
+			this._dlNotifyTimer = this._window.setTimeout(function(self, anchor)
+			{
+				self._dlNotifyTimer = 0;
+				anchor.removeAttribute("notification");
+				anchor.style.transform = "";
+			}, 1000, this, download_notify_anchor);
 		}
 	},
 
 	clearFinished: function()
 	{
-		let download_button = this._getters.downloadButton;
+		let download_button = this.downloadButton;
 		if(download_button)
 		{
 			this.clearAttention(download_button);
@@ -423,23 +466,6 @@ S4EDownloadUI.prototype =
 			default: // Nothing
 				return false;
 		}
-	},
-
-	get downloadButtonAction()
-	{
-		let action = this._service.downloadButtonAction;
-		// Firefox Default
-		if(action == 1)
-		{
-			let download_button = this._getters.downloadButton;
-			if(!download_button || download_button.getAttribute("cui-areatype") != "toolbar")
-			{
-				// Show tab
-				action = 3;
-			}
-		}
-
-		return action;
 	},
 
 	buildString: function(mode, paused, countStr, timeStr)

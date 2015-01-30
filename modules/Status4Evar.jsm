@@ -25,37 +25,38 @@ CU.import("resource://gre/modules/Services.jsm");
 CU.import("resource://gre/modules/XPCOMUtils.jsm");
 CU.import("resource://gre/modules/AddonManager.jsm");
 
+CU.import("resource://status4evar/Australis.jsm");
 CU.import("resource://status4evar/Status.jsm");
 CU.import("resource://status4evar/Progress.jsm");
 CU.import("resource://status4evar/DownloadUI.jsm");
 CU.import("resource://status4evar/Toolbars.jsm");
 
-function Status4Evar(window, gBrowser, toolbox)
+function Status4Evar(window, gBrowser, toolbox, menuPanelUI)
 {
 	this._id = uuidService.generateUUID();
 	this._window = window;
-	this._toolbox = toolbox;
 
 	this.getters = new S4EWindowGetters(this._window);
-	this.toolbars = new S4EToolbars(this._window, gBrowser, this._toolbox, s4e_service, this.getters);
+	this.toolbars = new S4EToolbars(this._window, gBrowser, toolbox, s4e_service, this.getters);
 	this.statusService = new S4EStatusService(this._window, s4e_service, this.getters);
 	this.progressMeter = new S4EProgressService(gBrowser, s4e_service, this.getters, this.statusService);
 	this.downloadStatus = new S4EDownloadUI(this._window, gBrowser, s4e_service, this.getters);
 	this.sizeModeService = new SizeModeService(this._window, this);
+	this.menuPanelListener = new MenuPanelListener(menuPanelUI, this);
 }
 
 Status4Evar.prototype =
 {
 	_id: null,
 	_window:  null,
-	_toolbox: null,
 
-	getters:         null,
-	toolbars:        null,
-	statusService:   null,
-	progressMeter:   null,
-	downloadStatus:  null,
-	sizeModeService: null,
+	getters:           null,
+	toolbars:          null,
+	statusService:     null,
+	progressMeter:     null,
+	downloadStatus:    null,
+	sizeModeService:   null,
+	menuPanelListener: null,
 
 	setup: function()
 	{
@@ -82,9 +83,10 @@ Status4Evar.prototype =
 		this.progressMeter.destroy();
 		this.toolbars.destroy();
 		this.sizeModeService.destroy();
+		this.menuPanelListener.destroy();
 
-		["_window", "_toolbox", "getters", "statusService", "downloadStatus",
-		"progressMeter", "toolbars", "sizeModeService"].forEach(function(prop)
+		["_window", "getters", "statusService", "downloadStatus", "progressMeter",
+		"toolbars", "sizeModeService", "menuPanelListener"].forEach(function(prop)
 		{
 			delete this[prop];
 		}, this);
@@ -114,6 +116,7 @@ Status4Evar.prototype =
 			status_label.value = this.getters.strings.getString("statusText");
 		}
 
+		this.menuPanelListener.uninit();
 		this.downloadStatus.customizing(true);
 	},
 
@@ -127,6 +130,7 @@ Status4Evar.prototype =
 		this.statusService.buildBinding();
 		this.downloadStatus.init();
 		this.downloadStatus.customizing(false);
+		this.menuPanelListener.init();
 		this.toolbars.updateSplitters(true);
 
 		s4e_service.updateWindow(this._window);
@@ -134,6 +138,14 @@ Status4Evar.prototype =
 		// * buildTextOrder()
 		// * updateStatusField(true)
 		// * updateWindowGripper(true)
+	},
+
+	resetDownloadUI: function()
+	{
+		Services.console.logStringMessage("S4E Calling resetDownloadUI: " + this._id);
+
+		this.getters.resetGetters();
+		this.downloadStatus.updateButton();
 	},
 
 	launchOptions: function(currentWindow)
@@ -186,6 +198,7 @@ S4EWindowGetters.prototype =
 			["downloadButtonAnchor",   "status4evar-download-anchor"],
 			["downloadNotifyAnchor",   "status4evar-download-notification-anchor"],
 			["menuButton",             "PanelUI-menu-button"],
+			["menuPanel",              "PanelUI-popup"],
 			["statusBar",              "status4evar-status-bar"],
 			["statusWidget",           "status4evar-status-widget"],
 			["statusWidgetLabel",      "status4evar-status-text"],
@@ -314,5 +327,62 @@ SizeModeService.prototype =
 	},
 
 	QueryInterface: XPCOMUtils.generateQI([ CI.nsIDOMEventListener ])
+};
+
+function MenuPanelListener(menuPanelUI, s4e)
+{
+	this._menuPanelUI = menuPanelUI;
+	this._s4e = s4e;
+}
+
+MenuPanelListener.prototype =
+{
+	_menuPanelUI: null,
+	_s4e:         null,
+	_listening:   false,
+
+	init: function()
+	{
+		let area = AustralisTools.areaForWidget(AustralisTools.WIDGET_ID_DOWNLOAD);
+		if(this._listening || area !== AustralisTools.TYPE_MENU_PANEL || this._menuPanelUI.isReady)
+		{
+			return;
+		}
+
+		this._s4e.getters.menuPanel.addEventListener("popupshowing", this);
+		this._listening = true;
+	},
+
+	uninit: function()
+	{
+		if(!this._listening)
+		{
+			return;
+		}
+
+		this._s4e.getters.menuPanel.removeEventListener("popupshowing", this);
+		this._listening = false;
+	},
+
+	destroy: function()
+	{
+		this.uninit();
+
+		["_menuPanelUI", "_s4e"].forEach(function(prop)
+		{
+			delete this[prop];
+		}, this);
+	},
+
+	handleEvent: function(aEvent)
+	{
+		switch(aEvent.type)
+		{
+			case "popupshowing":
+				this._s4e.resetDownloadUI();
+				this.uninit();
+				break;
+		}
+	}
 };
 

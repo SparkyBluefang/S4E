@@ -18,7 +18,11 @@ const CU = Components.utils;
 
 const STATUS_BAR_ID = "status4evar-status-bar";
 const LEGACY_SHIM_ID = "status4evar-legacy-widget";
-const DEFAULT_WIDGETS = ["status4evar-status-widget", "status4evar-progress-widget", "status4evar-download-button"];
+const WIDGET_ID_STATUS = "status4evar-status-widget";
+const WIDGET_ID_PROGRESS = "status4evar-progress-widget";
+const WIDGET_ID_DOWNLOAD = "status4evar-download-button";
+
+const DEFAULT_WIDGETS = [WIDGET_ID_STATUS, WIDGET_ID_PROGRESS, WIDGET_ID_DOWNLOAD];
 
 CU.import("resource:///modules/CustomizableUI.jsm");
 CU.import("resource://gre/modules/Services.jsm");
@@ -129,6 +133,23 @@ let AustralisTools = {
 		}
 
 		CustomizableUI.destroyWidget(LEGACY_SHIM_ID);
+	},
+
+	get TYPE_MENU_PANEL() CustomizableUI.TYPE_MENU_PANEL,
+	get TYPE_TOOLBAR() CustomizableUI.TYPE_TOOLBAR,
+	get WIDGET_ID_STATUS() WIDGET_ID_STATUS,
+	get WIDGET_ID_PROGRESS() WIDGET_ID_PROGRESS,
+	get WIDGET_ID_DOWNLOAD() WIDGET_ID_DOWNLOAD,
+
+	areaForWidget: function(widgetId)
+	{
+		let placement = CustomizableUI.getPlacementOfWidget(widgetId);
+		if(placement)
+		{
+			return CustomizableUI.getAreaType(placement.area);
+		}
+
+		return null;
 	}
 }
 
