@@ -81,9 +81,11 @@ S4EDownloadUI.prototype =
 			return;
 		}
 
+		S4EDownloadService.addListener(this);
+		this._listening = true;
+
 		this.updateBinding();
 		this.updateButton();
-		S4EDownloadService.addListener(this);
 	},
 
 	uninit: function()
@@ -93,7 +95,9 @@ S4EDownloadUI.prototype =
 			return;
 		}
 
+		this._listening = false;
 		S4EDownloadService.removeListener(this);
+
 		this.releaseBinding();
 	},
 
