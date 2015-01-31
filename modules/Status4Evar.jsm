@@ -344,7 +344,8 @@ MenuPanelListener.prototype =
 	init: function()
 	{
 		let area = AustralisTools.areaForWidget(AustralisTools.WIDGET_ID_DOWNLOAD);
-		if(this._listening || area !== AustralisTools.TYPE_MENU_PANEL || this._menuPanelUI.isReady)
+		if(this._listening || area !== AustralisTools.TYPE_MENU_PANEL
+		|| ((typeof this._menuPanelUI.isReady === "boolean") ? this._menuPanelUI.isReady : this._menuPanelUI.isReady()))
 		{
 			return;
 		}
