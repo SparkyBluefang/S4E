@@ -1,4 +1,6 @@
 Version next
+
+Version 2015.02.06.23
 * Fix toolbar pop-up menu bugs by removing legacy Australis compatibility code that is no longer needed.
 * Fix location bar origin label offset in Firefox 31 ESR.
 
