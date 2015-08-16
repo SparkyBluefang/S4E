@@ -183,7 +183,9 @@ let statusBarHandler = {
 	{
 		for(let window of CustomizableUI.windows)
 		{
-			window.caligon.status4evar.updateWindow();
+			if(window.caligon && window.caligon.status4evar) {
+				window.caligon.status4evar.updateWindow();
+			}
 		}
 	},
 
@@ -220,7 +222,9 @@ let statusBarHandler = {
 	onCustomizeStart: function(aWindow)
 	{
 		this.customizing = true;
-		aWindow.caligon.status4evar.beforeCustomization();
+		if(aWindow.caligon && aWindow.caligon.status4evar) {
+			aWindow.caligon.status4evar.beforeCustomization();
+		}
 	},
 
 	onCustomizeEnd: function(aWindow)
