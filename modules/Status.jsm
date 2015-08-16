@@ -242,11 +242,17 @@ S4EStatusService.prototype =
 		if(this._isFullScreen)
 		{
 			let fsEl = this._window.content.document.mozFullScreenElement;
-			if(fsEl && (fsEl.nodeName == "VIDEO" || fsEl.getElementsByTagName("VIDEO").length > 0))
+			if(fsEl)
 			{
-				this._isFullScreenVideo = true;
+				this._isFullScreenVideo = (
+					fsEl.nodeName == "VIDEO"
+					|| (fsEl.nodeName == "IFRAME" && fsEl.contentDocument && fsEl.contentDocument.getElementsByTagName("VIDEO").length > 0)
+					|| fsEl.getElementsByTagName("VIDEO").length > 0
+				);
 			}
 		}
+
+		Services.console.logStringMessage("S4E Fullscreen Video: " + this._isFullScreenVideo);
 
 		this.clearStatusField();
 		this.updateStatusField(true);
