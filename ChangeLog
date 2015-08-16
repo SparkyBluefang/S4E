@@ -1,4 +1,5 @@
 Version next
+* Drop support for Firefox 37.0 and older.
 
 Version 2015.07.14.22b
 * Fix location bar formatting support in Firefox 42.
