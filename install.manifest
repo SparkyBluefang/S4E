@@ -12,6 +12,7 @@
 id=status4evar@caligonstudios.com
 version=2015.07.14.22b
 type=2
+multiprocessCompatible=true
 creator=Sparky Bluefang
 homepageURL=http://forums.mozillazine.org/viewtopic.php?f=48&t=2001965
 optionsURL=chrome://status4evar/content/prefs.xul
