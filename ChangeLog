@@ -1,4 +1,6 @@
 Version next
+
+Version 2015.08.19.02b
 * Drop support for Firefox 37.0 and older.
 * Fix window.caligon.status4evar is undefined bugs.
 * Improve fullscreen HTML5 video detection (fix on Google Drive). Support fullscreen iframe elements.
