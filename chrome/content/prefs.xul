@@ -41,24 +41,24 @@
  
 	<prefpane id="status4evar-pane-status" label="&status4evar.pane.status;">
 		<preferences>
-			<preference id="status4evar-pref-status"                     name="status4evar.status"                     type="int" />
-			<preference id="status4evar-pref-status-default"             name="status4evar.status.default"             type="bool" />
-			<preference id="status4evar-pref-status-network"             name="status4evar.status.network"             type="bool"
+			<preference id="status4evar-pref-status"                     name="extensions.caligon.s4e.status"                     type="int" />
+			<preference id="status4evar-pref-status-default"             name="extensions.caligon.s4e.status.default"             type="bool" />
+			<preference id="status4evar-pref-status-network"             name="extensions.caligon.s4e.status.network"             type="bool"
 			            onchange="status4evarPrefs.statusNetworkChanged();" />
-			<preference id="status4evar-pref-status-network-xhr"         name="status4evar.status.network.xhr"         type="bool" />
-			<preference id="status4evar-pref-status-timeout"             name="status4evar.status.timeout"             type="int"
+			<preference id="status4evar-pref-status-network-xhr"         name="extensions.caligon.s4e.status.network.xhr"         type="bool" />
+			<preference id="status4evar-pref-status-timeout"             name="extensions.caligon.s4e.status.timeout"             type="int"
 			            onchange="status4evarPrefs.statusTimeoutChanged();" />
-			<preference id="status4evar-pref-status-linkOver"            name="status4evar.status.linkOver"            type="int" />
-			<preference id="status4evar-pref-status-linkOver-delay-show" name="status4evar.status.linkOver.delay.show" type="int" />
-			<preference id="status4evar-pref-status-linkOver-delay-hide" name="status4evar.status.linkOver.delay.hide" type="int" />
-			<preference id="status4evar-pref-status-toolbar-maxLength"   name="status4evar.status.toolbar.maxLength"   type="int"
+			<preference id="status4evar-pref-status-linkOver"            name="extensions.caligon.s4e.status.linkOver"            type="int" />
+			<preference id="status4evar-pref-status-linkOver-delay-show" name="extensions.caligon.s4e.status.linkOver.delay.show" type="int" />
+			<preference id="status4evar-pref-status-linkOver-delay-hide" name="extensions.caligon.s4e.status.linkOver.delay.hide" type="int" />
+			<preference id="status4evar-pref-status-toolbar-maxLength"   name="extensions.caligon.s4e.status.toolbar.maxLength"   type="int"
 			            onchange="status4evarPrefs.textLengthChanged();" />
-			<preference id="status4evar-pref-status-urlbar-align"        name="status4evar.status.urlbar.align"        type="int"
+			<preference id="status4evar-pref-status-urlbar-align"        name="extensions.caligon.s4e.status.urlbar.align"        type="int"
 			            onchange="status4evarPrefs.urlbarAlignChanged();" />
-			<preference id="status4evar-pref-status-urlbar-color"        name="status4evar.status.urlbar.color"        type="string" />
-			<preference id="status4evar-pref-status-urlbar-position"     name="status4evar.status.urlbar.position"     type="int" />
-			<preference id="status4evar-pref-status-popup-invertMirror"  name="status4evar.status.popup.invertMirror"  type="bool" />
-			<preference id="status4evar-pref-status-popup-mouseMirror"   name="status4evar.status.popup.mouseMirror"   type="bool" />
+			<preference id="status4evar-pref-status-urlbar-color"        name="extensions.caligon.s4e.status.urlbar.color"        type="string" />
+			<preference id="status4evar-pref-status-urlbar-position"     name="extensions.caligon.s4e.status.urlbar.position"     type="int" />
+			<preference id="status4evar-pref-status-popup-invertMirror"  name="extensions.caligon.s4e.status.popup.invertMirror"  type="bool" />
+			<preference id="status4evar-pref-status-popup-mouseMirror"   name="extensions.caligon.s4e.status.popup.mouseMirror"   type="bool" />
 			<preference id="toolkit-pref-dom-status-change"              name="dom.disable_window_status_change"       type="bool" inverted="true" />
 			<preference id="browser-pref-urlbar-formatting-enabled"      name="browser.urlbar.formatting.enabled"      type="bool" />
 			<preference id="browser-pref-urlbar-trimming-enabled"        name="browser.urlbar.trimURLs"                type="bool" />
@@ -212,16 +212,16 @@
 
 	<prefpane id="status4evar-pane-progress" label="&status4evar.pane.progress;">
 		<preferences>
-			<preference id="status4evar-pref-progress-toolbar-force"          name="status4evar.progress.toolbar.force"          type="bool" />
-			<preference id="status4evar-pref-progress-toolbar-style"          name="status4evar.progress.toolbar.style"          type="bool"
+			<preference id="status4evar-pref-progress-toolbar-force"          name="extensions.caligon.s4e.progress.toolbar.force"          type="bool" />
+			<preference id="status4evar-pref-progress-toolbar-style"          name="extensions.caligon.s4e.progress.toolbar.style"          type="bool"
 			            onchange="status4evarPrefs.progressUrlbarStyleChanged();" />
-			<preference id="status4evar-pref-progress-toolbar-css"            name="status4evar.progress.toolbar.css"            type="string"
+			<preference id="status4evar-pref-progress-toolbar-css"            name="extensions.caligon.s4e.progress.toolbar.css"            type="string"
 			            onchange="status4evarPrefs.progressToolbarCSSChanged();" />
-			<preference id="status4evar-pref-progress-urlbar"                 name="status4evar.progress.urlbar"                 type="int"
+			<preference id="status4evar-pref-progress-urlbar"                 name="extensions.caligon.s4e.progress.urlbar"                 type="int"
 			            onchange="status4evarPrefs.progressUrlbarChanged();" />
-			<preference id="status4evar-pref-progress-urlbar-style"           name="status4evar.progress.urlbar.style"           type="bool"
+			<preference id="status4evar-pref-progress-urlbar-style"           name="extensions.caligon.s4e.progress.urlbar.style"           type="bool"
 			            onchange="status4evarPrefs.progressToolbarStyleChanged();" />
-			<preference id="status4evar-pref-progress-urlbar-css"             name="status4evar.progress.urlbar.css"             type="string"
+			<preference id="status4evar-pref-progress-urlbar-css"             name="extensions.caligon.s4e.progress.urlbar.css"             type="string"
 			            onchange="status4evarPrefs.progressUrlbarCSSChanged();" />
 		</preferences>
 
@@ -296,18 +296,18 @@
 
 	<prefpane id="status4evar-pane-download" label="&status4evar.pane.download;">
 		<preferences>
-			<preference id="status4evar-pref-download-button-action"  name="status4evar.download.button.action"  type="int" />
-			<preference id="status4evar-pref-download-color-active"   name="status4evar.download.color.active"   type="string" />
-			<preference id="status4evar-pref-download-color-paused"   name="status4evar.download.color.paused"   type="string" />
-			<preference id="status4evar-pref-download-force"          name="status4evar.download.force"          type="bool" />
-			<preference id="status4evar-pref-download-label"          name="status4evar.download.label"          type="int" />
-			<preference id="status4evar-pref-download-label-force"    name="status4evar.download.label.force"    type="bool" />
-			<preference id="status4evar-pref-download-notify-animate" name="status4evar.download.notify.animate" type="bool" />
-			<preference id="status4evar-pref-download-notify-timeout" name="status4evar.download.notify.timeout" type="int" />
-			<preference id="status4evar-pref-download-progress"       name="status4evar.download.progress"       type="int" />
-			<preference id="status4evar-pref-download-tooltip"        name="status4evar.download.tooltip"        type="int" />
+			<preference id="status4evar-pref-download-button-action"  name="extensions.caligon.s4e.download.button.action"  type="int" />
+			<preference id="status4evar-pref-download-color-active"   name="extensions.caligon.s4e.download.color.active"   type="string" />
+			<preference id="status4evar-pref-download-color-paused"   name="extensions.caligon.s4e.download.color.paused"   type="string" />
+			<preference id="status4evar-pref-download-force"          name="extensions.caligon.s4e.download.force"          type="bool" />
+			<preference id="status4evar-pref-download-label"          name="extensions.caligon.s4e.download.label"          type="int" />
+			<preference id="status4evar-pref-download-label-force"    name="extensions.caligon.s4e.download.label.force"    type="bool" />
+			<preference id="status4evar-pref-download-notify-animate" name="extensions.caligon.s4e.download.notify.animate" type="bool" />
+			<preference id="status4evar-pref-download-notify-timeout" name="extensions.caligon.s4e.download.notify.timeout" type="int" />
+			<preference id="status4evar-pref-download-progress"       name="extensions.caligon.s4e.download.progress"       type="int" />
+			<preference id="status4evar-pref-download-tooltip"        name="extensions.caligon.s4e.download.tooltip"        type="int" />
 
-			<preference id="status4evar-pref-download-button-action-command" name="status4evar.download.button.action.command" type="string"/>
+			<preference id="status4evar-pref-download-button-action-command" name="extensions.caligon.s4e.download.button.action.command" type="string"/>
 		</preferences>
 
 		<commandset id="status4evar-commandset-download">
@@ -387,9 +387,9 @@
 
 	<prefpane id="status4evar-pane-addonbar" label="&status4evar.pane.statusbar;">
 		<preferences>
-			<preference id="status4evar-pref-addonbar-borderStyle"   name="status4evar.addonbar.borderStyle"   type="bool" />
-			<preference id="status4evar-pref-addonbar-legacyShim"    name="status4evar.addonbar.legacyShim"    type="bool" />
-			<preference id="status4evar-pref-addonbar-windowGripper" name="status4evar.addonbar.windowGripper" type="bool" />
+			<preference id="status4evar-pref-addonbar-borderStyle"   name="extensions.caligon.s4e.addonbar.borderStyle"   type="bool" />
+			<preference id="status4evar-pref-addonbar-legacyShim"    name="extensions.caligon.s4e.addonbar.legacyShim"    type="bool" />
+			<preference id="status4evar-pref-addonbar-windowGripper" name="extensions.caligon.s4e.addonbar.windowGripper" type="bool" />
 		</preferences>
 
 		<checkbox id="status4evar-addonbar-borderStyle-check" preference="status4evar-pref-addonbar-borderStyle" label="&status4evar.addonbar.borderStyle;" />
@@ -401,10 +401,10 @@
 
 	<prefpane id="status4evar-pane-advanced" label="&status4evar.pane.advanced;">
 		<preferences>
-			<preference id="status4evar-pref-advanced-showWarning"             name="status4evar.advanced.showWarning"             type="bool" />
-			<preference id="status4evar-pref-advanced-status-detectFullScreen" name="status4evar.advanced.status.detectFullScreen" type="bool" />
-			<preference id="status4evar-pref-advanced-status-detectVideo"      name="status4evar.advanced.status.detectVideo"      type="bool" />
-			<preference id="status4evar-pref-advanced-urlbar-forceBinding"     name="status4evar.advanced.urlbar.forceBinding"     type="bool" />
+			<preference id="status4evar-pref-advanced-showWarning"             name="extensions.caligon.s4e.advanced.showWarning"             type="bool" />
+			<preference id="status4evar-pref-advanced-status-detectFullScreen" name="extensions.caligon.s4e.advanced.status.detectFullScreen" type="bool" />
+			<preference id="status4evar-pref-advanced-status-detectVideo"      name="extensions.caligon.s4e.advanced.status.detectVideo"      type="bool" />
+			<preference id="status4evar-pref-advanced-urlbar-forceBinding"     name="extensions.caligon.s4e.advanced.urlbar.forceBinding"     type="bool" />
 		</preferences>
 
 		<commandset id="status4evar-commandset-advanced">

@@ -617,7 +617,9 @@ Status_4_Evar.prototype =
 
 	startup: function()
 	{
-		this.prefs = Services.prefs.getBranch("status4evar.").QueryInterface(CI.nsIPrefBranch2);
+		this.prefs = Services.prefs.getBranch("extensions.caligon.s4e.").QueryInterface(CI.nsIPrefBranch2);
+
+		this.migratePrefsRoot();
 
 		this.firstRun = this.prefs.getBoolPref("firstRun");
 		if(this.firstRun)
@@ -665,6 +667,33 @@ Status_4_Evar.prototype =
 		}
 
 		this.prefs = null;
+	},
+
+	migratePrefsRoot: function()
+	{
+		let oldPrefs = Services.prefs.getBranch("status4evar.").QueryInterface(CI.nsIPrefBranch2);
+
+		let childPrefs = oldPrefs.getChildList("");
+		childPrefs.forEach(function(pref)
+		{
+			if(oldPrefs.prefHasUserValue(pref))
+			{
+				switch(oldPrefs.getPrefType(pref))
+				{
+					case CI.nsIPrefBranch2.PREF_STRING:
+						this.prefs.setCharPref(pref, oldPrefs.getCharPref(pref));
+						break;
+					case CI.nsIPrefBranch2.PREF_INT:
+						this.prefs.setIntPref(pref, oldPrefs.getIntPref(pref));
+						break;
+					case CI.nsIPrefBranch2.PREF_BOOL:
+						this.prefs.setBoolPref(pref, oldPrefs.getBoolPref(pref));
+						break;
+				}
+
+				oldPrefs.clearUserPref(pref);
+			}
+		}, this);
 	},
 
 	migrate: function()
