@@ -50,7 +50,7 @@ skin status4evar-os classic/1.0 chrome/skin/pinstripe/   os=Darwin
 overlay chrome://browser/content/browser.xul   chrome://status4evar/content/overlay.xul
 
 # Styles
-style   chrome://browser/content/browser.xul   chrome://status4evar/skin/version/overlay41.css appversion<=41.*
+style   chrome://browser/content/browser.xul   chrome://status4evar-os/skin/version/overlay41.css appversion<=41.*
 
 # XPCOM
 interfaces components/status4evar.xpt
