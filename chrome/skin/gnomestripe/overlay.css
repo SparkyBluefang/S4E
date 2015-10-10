@@ -63,26 +63,6 @@ splitter.status4evar-status-splitter
 }
 
 /*
- * Location bar
- */
-
-#urlbar-progress-alt
-{
-	margin: -1px;
-}
-
-#notification-popup-box
-{
-	-moz-margin-start: -1px;
-}
-
-#urlbar .urlbar-over-link-box
-{
-	margin-top: -1px;
-	margin-bottom: -1px;
-}
-
-/*
  * Status bar
  */
 
