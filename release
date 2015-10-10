@@ -83,6 +83,7 @@ if [ -n "${RELEASE}" ]; then
 	# Commit and tag the release
 	git commit -m "Release ${VERSION}"
 	git tag "${VERSION}"
+	git push --tags
 else
 	# Commit
 	git commit -m "Version bump ${VERSION}"
