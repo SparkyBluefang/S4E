@@ -138,6 +138,11 @@ S4EDownloadUI.prototype =
 		}
 
 		let db = this._window.DownloadsButton;
+		if(!db)
+		{
+			Services.console.logStringMessage("S4E: Unable to update download panel binding.");
+			return;
+		}
 
 		db._getAnchorS4EBackup = db.getAnchor;
 		db.getAnchor = this.getAnchor.bind(this);
