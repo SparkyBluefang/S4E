@@ -35,7 +35,7 @@ CustomizableUI.registerArea(STATUS_BAR_ID, {
 	defaultPlacements: DEFAULT_WIDGETS
 });
 
-let AustralisTools = {
+var AustralisTools = {
 	migrateOnce: false,
 
 	migrate: function()
@@ -153,7 +153,7 @@ let AustralisTools = {
 	}
 }
 
-let statusBarHandler = {
+var statusBarHandler = {
 
 	customizing: false,
 
