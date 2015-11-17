@@ -1,5 +1,7 @@
 Version next
 
+Version 2015.11.16.23
+
 Version 2015.10.10.15b
 * Fix non-compliant usage of 'let' in Firefox 44 (Bugs 589199, 1202902)
 * Rename preference names from status4evar.* to extensions.caligon.s4e.*
