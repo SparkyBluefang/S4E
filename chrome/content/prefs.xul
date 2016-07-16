@@ -421,7 +421,7 @@
 						<label id="warningText">&status4evar.advanced.warning;</label>
 						<checkbox id="showWarningNextTime" label="&aboutWarningCheckbox.label;" checked="true" />
 						<hbox pack="center">
-							<button id="warningButton" command="status4evar-command-advanced-continue" label="&aboutWarningButton.label;" />
+							<button id="warningButton" command="status4evar-command-advanced-continue" label="&aboutWarningButton2.label;" />
 						</hbox>
 					</vbox>
 				</hbox>
