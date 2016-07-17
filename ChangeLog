@@ -1,4 +1,6 @@
 Version next
+
+Version 2016.07.16.21b
 * Drop support for Firefox 44.0 and older.
 * Fix location bar formatting support in Firefox 50.
 
