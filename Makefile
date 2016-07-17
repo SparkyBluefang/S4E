@@ -4,7 +4,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 # 
-# Copyright (C) 2010-2013 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+# Copyright (C) 2010-2013, 2016 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
 # 
 # ***** END LICENSE BLOCK *****
 
@@ -20,7 +20,7 @@ ZIP        = zip
 ECHO       = echo
 PY         = env python2
 
-XRSDK      = $(shell $(LS) -d /opt/mozilla/xulrunner-sdk-* | $(SORT) -V | $(TAIL) -1)
+XRSDK      = $(shell $(LS) -d /opt/mozilla/firefox-sdk-* | $(SORT) -V | $(TAIL) -1)
 XRSDK_VERS = $(shell $(GREP) "^Milestone=" $(XRSDK)/bin/platform.ini | $(CUT) -d"=" -f2 | $(CUT) -d"." -f1)
 TLIB_CACHE = components/cache
 
