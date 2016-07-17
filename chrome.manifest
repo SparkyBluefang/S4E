@@ -51,7 +51,7 @@ overlay chrome://browser/content/browser.xul   chrome://status4evar/content/over
 overlay chrome://status4evar/content/prefs.xul chrome://status4evar/content/prefsLegacy.xul appversion<=49.*
 
 # Styles
-style   chrome://browser/content/browser.xul   chrome://status4evar-os/skin/version/overlay41.css appversion<=41.*
+style   chrome://browser/content/browser.xul   chrome://status4evar/skin/version/overlay49.css appversion<=49.*
 
 # XPCOM
 interfaces components/status4evar.xpt

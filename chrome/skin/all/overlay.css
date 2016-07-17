@@ -351,7 +351,7 @@ splitter.status4evar-status-splitter:not(:hover)
 
 #urlbar .urlbar-origin-label
 {
-	-moz-padding-start: 1px;
+	-moz-padding-start: 6px;
 }
 
 #urlbar .urlbar-over-link-box:-moz-locale-dir(ltr)
