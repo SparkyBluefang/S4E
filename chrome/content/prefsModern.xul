@@ -16,6 +16,6 @@
 <overlay id="status4evar-prefsLegacy-overlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<button id="warningButton" command="status4evar-command-advanced-continue" label="&aboutWarningButton.label;" />
+	<button id="warningButton" command="status4evar-command-advanced-continue" label="&aboutWarningButton2.label;" />
 
 </overlay>
