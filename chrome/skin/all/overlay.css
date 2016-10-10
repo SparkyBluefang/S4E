@@ -429,7 +429,7 @@ splitter.status4evar-status-splitter:not(:hover)
 
 #status4evar-throbber-widget[progress] image
 {
-	list-style-image: url("chrome://browser/skin/tabbrowser/loading.png");
+	list-style-image: url("chrome://global/skin/icons/loading.png");
 	animation-duration: 800ms;
 	animation-name: status4evar-throbber-widget-loading;
 }
