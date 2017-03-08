@@ -26,9 +26,8 @@ const DEFAULT_WIDGETS = [WIDGET_ID_STATUS, WIDGET_ID_PROGRESS, WIDGET_ID_DOWNLOA
 
 CU.import("resource:///modules/CustomizableUI.jsm");
 CU.import("resource://gre/modules/Services.jsm");
-CU.import("resource://services-common/stringbundle.js");
 
-const strings = new StringBundle("chrome://status4evar/locale/overlay.properties");
+const strings = Services.strings.createBundle("chrome://status4evar/locale/overlay.properties");
 
 CustomizableUI.registerArea(STATUS_BAR_ID, {
 	type: CustomizableUI.TYPE_TOOLBAR,
