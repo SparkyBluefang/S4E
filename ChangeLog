@@ -1,4 +1,5 @@
 Version next
+* Fix Firefox 54+ compatibility (Bug 1335877) by Jonas Jenwald.
 
 Version 2016.10.11.01
 
