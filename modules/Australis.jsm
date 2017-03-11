@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  * 
- * Copyright (C) 2013-2015 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+ * Copyright (C) 2013-2015, 2017 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****
 */
@@ -26,8 +26,7 @@ const DEFAULT_WIDGETS = [WIDGET_ID_STATUS, WIDGET_ID_PROGRESS, WIDGET_ID_DOWNLOA
 
 CU.import("resource:///modules/CustomizableUI.jsm");
 CU.import("resource://gre/modules/Services.jsm");
-
-const strings = Services.strings.createBundle("chrome://status4evar/locale/overlay.properties");
+CU.import("resource://status4evar/L10n.jsm");
 
 CustomizableUI.registerArea(STATUS_BAR_ID, {
 	type: CustomizableUI.TYPE_TOOLBAR,
@@ -91,7 +90,7 @@ var AustralisTools = {
 				let item = doc.createElement("toolbaritem");
 				item.id = LEGACY_SHIM_ID;
 				item.setAttribute("removable", true);
-				item.setAttribute("label", strings.get("legacyWidgetTitle"));
+				item.setAttribute("label", L10n.get("legacyWidgetTitle"));
 				item.setAttribute("class", "panel-wide-item");
 				item.setAttribute("closemenu", "none");
 				item.appendChild(doc.getElementById("status-bar") || palette.querySelector("status-bar"));

@@ -7,7 +7,7 @@
  * 
  * Original code copyright (C) Mozilla Foundation. All Rights Reserved.
  * Original code copyright (C) 2013 Gijs Kruitbosch <gijskruitbosch@gmail.com>. All Rights Reserved.
- * Copyright (C) 2010-2015 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+ * Copyright (C) 2010-2015, 2017 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****
  * 
@@ -29,6 +29,7 @@ const CU = Components.utils;
 
 CU.import("resource://status4evar/DownloadService.jsm");
 CU.import("resource://status4evar/Australis.jsm");
+CU.import("resource://status4evar/L10n.jsm");
 
 CU.import("resource://gre/modules/Services.jsm");
 CU.import("resource://gre/modules/PluralForm.jsm");
@@ -236,7 +237,7 @@ S4EDownloadUI.prototype =
 			state.lastTime     = (state.private ? this._statePrivate : this._statePublic).time || Infinity;
 			state.progressType = (state.paused ? "paused" : "active") + (state.totalSize == 0 ? "-unknown" : "");
 
-			let dlStatus = this._getters.strings.getString(state.paused ? "pausedDownloads" : "activeDownloads");
+			let dlStatus = L10n.get(state.paused ? "pausedDownloads" : "activeDownloads");
 			state.countStr = PluralForm.get(state.count, dlStatus).replace("#1", state.count);
 			[state.timeStr, state.time] = DownloadUtils.getTimeLeft(state.time, state.lastTime);
 		}
@@ -292,7 +293,7 @@ S4EDownloadUI.prototype =
 			{
 				download_button.collapsed = true;
 			}
-			download_label.textContent = download_tooltip.label = this._getters.strings.getString("noDownloads");
+			download_label.textContent = download_tooltip.label = L10n.get("noDownloads");
 
 			download_progress.collapsed = true;
 			download_progress.value = 0;
@@ -496,44 +497,3 @@ S4EDownloadUI.prototype =
 	}
 };
 
-// Firefox < 34 compatibility
-if(Services.vc.compare(Services.appinfo.version, "34.0") < 0 && !Object.assign)
-{
-	Object.defineProperty(Object, 'assign',
-	{
-		enumerable: false,
-		configurable: true,
-		writable: true,
-
-		value: function(target, firstSource)
-		{
-			'use strict';
-			if(target === undefined || target === null)
-			{
-				throw new TypeError('Cannot convert first argument to object');
-			}
-
-			var to = Object(target);
-			for(var i = 1; i < arguments.length; i++)
-			{
-				var nextSource = arguments[i];
-				if(nextSource === undefined || nextSource === null)
-				{
-					continue;
-				}
-
-				var keysArray = Object.keys(Object(nextSource));
-				for(var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++)
-				{
-					var nextKey = keysArray[nextIndex];
-					var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
-					if(desc !== undefined && desc.enumerable)
-					{
-						to[nextKey] = nextSource[nextKey];
-					}
-				}
-			}
-			return to;
-		}
-	});
-}

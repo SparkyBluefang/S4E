@@ -8,7 +8,7 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    - 
-   - Copyright (C) 2010-2011, 2013-2015 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+   - Copyright (C) 2010-2011, 2013-2015, 2017 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
    - 
    - ***** END LICENSE BLOCK *****
 -->
@@ -20,10 +20,6 @@
 
 <overlay id="status4evar-overlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-
-	<stringbundleset id="stringbundleset">
-		<stringbundle id="bundle_status4evar" src="chrome://status4evar/locale/overlay.properties" />
-	</stringbundleset>
 
 	<script type="application/javascript" src="chrome://status4evar/content/overlay.js" />
 

@@ -6,7 +6,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  * 
  * Original code copyright (C) Mozilla Foundation. All Rights Reserved.
- * Copyright (C) 2010-2013 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+ * Copyright (C) 2010-2013, 2017 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****
  *
@@ -22,6 +22,7 @@ const CI = Components.interfaces;
 const CU = Components.utils;
 
 CU.import("resource://gre/modules/XPCOMUtils.jsm");
+CU.import("resource://status4evar/L10n.jsm");
 
 function S4EProgressService(gBrowser, service, getters, statusService) {
 	this._gBrowser = gBrowser;
@@ -145,10 +146,10 @@ S4EProgressService.prototype =
 						switch (aStatus)
 						{
 							case Components.results.NS_BINDING_ABORTED:
-								msg = this._getters.strings.getString("nv_stopped");
+								msg = L10n.get("nv_stopped");
 								break;
 							case Components.results.NS_ERROR_NET_TIMEOUT:
-								msg = this._getters.strings.getString("nv_timeout");
+								msg = L10n.get("nv_timeout");
 								break;
 						}
 					}
@@ -156,7 +157,7 @@ S4EProgressService.prototype =
 
 				if(!msg && (!location || location.spec != "about:blank"))
 				{
-					msg = this._getters.strings.getString("nv_done");
+					msg = L10n.get("nv_done");
 				}
 
 				this._statusService.setDefaultStatus(msg);

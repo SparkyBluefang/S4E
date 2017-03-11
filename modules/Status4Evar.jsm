@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  * 
- * Copyright (C) 2010-2015 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+ * Copyright (C) 2010-2015, 2017 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
  * 
  * ***** END LICENSE BLOCK *****
 */
@@ -30,6 +30,7 @@ CU.import("resource://status4evar/Status.jsm");
 CU.import("resource://status4evar/Progress.jsm");
 CU.import("resource://status4evar/DownloadUI.jsm");
 CU.import("resource://status4evar/Toolbars.jsm");
+CU.import("resource://status4evar/L10n.jsm");
 
 function Status4Evar(window, gBrowser, toolbox, menuPanelUI)
 {
@@ -113,7 +114,7 @@ Status4Evar.prototype =
 		let status_label = this.getters.statusWidgetLabel;
 		if(status_label)
 		{
-			status_label.value = this.getters.strings.getString("statusText");
+			status_label.value = L10n.get("statusText");
 		}
 
 		this.menuPanelListener.uninit();
@@ -202,7 +203,6 @@ S4EWindowGetters.prototype =
 			["statusBar",              "status4evar-status-bar"],
 			["statusWidget",           "status4evar-status-widget"],
 			["statusWidgetLabel",      "status4evar-status-text"],
-			["strings",                "bundle_status4evar"],
 			["throbberProgress",       "status4evar-throbber-widget"],
 			["toolbarProgress",        "status4evar-progress-bar"],
 			["urlbarProgress",         "urlbar-progress-alt"]
