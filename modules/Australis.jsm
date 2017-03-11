@@ -133,11 +133,30 @@ var AustralisTools = {
 		CustomizableUI.destroyWidget(LEGACY_SHIM_ID);
 	},
 
-	get TYPE_MENU_PANEL() CustomizableUI.TYPE_MENU_PANEL,
-	get TYPE_TOOLBAR() CustomizableUI.TYPE_TOOLBAR,
-	get WIDGET_ID_STATUS() WIDGET_ID_STATUS,
-	get WIDGET_ID_PROGRESS() WIDGET_ID_PROGRESS,
-	get WIDGET_ID_DOWNLOAD() WIDGET_ID_DOWNLOAD,
+	get TYPE_MENU_PANEL()
+	{
+		return CustomizableUI.TYPE_MENU_PANEL;
+	},
+
+	get TYPE_TOOLBAR()
+	{
+		return CustomizableUI.TYPE_TOOLBAR;
+	},
+
+	get WIDGET_ID_STATUS()
+	{
+		return WIDGET_ID_STATUS;
+	},
+
+	get WIDGET_ID_PROGRESS()
+	{
+		return WIDGET_ID_PROGRESS;
+	},
+
+	get WIDGET_ID_DOWNLOAD()
+	{
+		return WIDGET_ID_DOWNLOAD;
+	},
 
 	areaForWidget: function(widgetId)
 	{
