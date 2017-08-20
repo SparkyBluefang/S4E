@@ -4,7 +4,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 # 
-# Copyright (C) 2010-2016 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+# Copyright (C) 2010-2017 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
 # 
 # ***** END LICENSE BLOCK *****
 
@@ -48,12 +48,8 @@ skin status4evar-os classic/1.0 chrome/skin/pinstripe/   os=Darwin
 
 # Overlays
 overlay chrome://browser/content/browser.xul   chrome://status4evar/content/overlay.xul
-overlay chrome://status4evar/content/prefs.xul chrome://status4evar/content/prefsLegacy.xul appversion<=48.*
-overlay chrome://status4evar/content/prefs.xul chrome://status4evar/content/prefsModern.xul appversion>48.*
 
 # Styles
-style   chrome://browser/content/browser.xul   chrome://status4evar/skin/versions/overlay47.css appversion<=47.*
-style   chrome://browser/content/browser.xul   chrome://status4evar/skin/versions/overlay49.css appversion<=49.*
 
 # XPCOM
 interfaces components/status4evar.xpt

@@ -1,6 +1,9 @@
 Version next
+* Drop support for Firefox 51.0 and older.
 
 Version 2017.08.20.15
+* Consolidate locale handling.
+* Replace deprecated syntax.
 
 Version 2017.03.19.12b
 * Fix Firefox 54+ compatibility (Bug 1335877) by Jonas Jenwald.
